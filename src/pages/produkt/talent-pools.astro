@@ -1,0 +1,69 @@
+---
+import ProduktLayout from '../../layouts/ProduktLayout.astro';
+
+const features = [
+  { title: "Pool-Erstellung", description: "Erstellen Sie thematische Pools nach Skills, Branche oder Rolle", icon: '<svg class="h-6 w-6 text-primary group-hover:text-white transition-colors" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 13v8"/><path d="M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242"/><path d="m8 17 4-4 4 4"/></svg>' },
+  { title: "Tagging & Bewertung", description: "Tags, Sterne und Notizen fuer jeden Kandidaten", icon: '<svg class="h-6 w-6 text-primary group-hover:text-white transition-colors" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2H2v10l9.29 9.29c.94.94 2.48.94 3.42 0l6.58-6.58c.94-.94.94-2.48 0-3.42L12 2Z"/><path d="M7 7h.01"/></svg>' },
+  { title: "Automatisches Nurturing", description: "Halten Sie den Kontakt mit automatischen E-Mails", icon: '<svg class="h-6 w-6 text-primary group-hover:text-white transition-colors" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.5 2v6h-6M2.5 22v-6h6M2 11.5a10 10 0 0 1 18.8-4.3M22 12.5a10 10 0 0 1-18.8 4.2"/></svg>' },
+  { title: "Schnelle Zuordnung", description: "Ein Klick: Kandidat aus Pool direkt in neue Stelle", icon: '<svg class="h-6 w-6 text-primary group-hover:text-white transition-colors" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg>' },
+  { title: "Suchfilter", description: "Durchsuchen Sie Ihren Pool nach Skills, Standort, Verfuegbarkeit", icon: '<svg class="h-6 w-6 text-primary group-hover:text-white transition-colors" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>' },
+  { title: "DSGVO-konform", description: "Automatische Loeschfristen und Einwilligungsmanagement", icon: '<svg class="h-6 w-6 text-primary group-hover:text-white transition-colors" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg>' },
+];
+---
+
+<ProduktLayout
+  title="Talent Pools – Kandidaten-Datenbank & Nurturing | ShortSelect"
+  description="Bauen Sie qualifizierte Talent Pools auf. Tagging, Bewertung, automatisches Nurturing und DSGVO-konforme Kandidatenverwaltung."
+  canonical="https://shortselect.com/produkt/talent-pools"
+  badgeText="Talent Management"
+  heroTitle="Talent Pools: Ihr"
+  heroHighlight="Kandidaten-Schatz"
+  heroSuffix="."
+  heroSubtitle="Bauen Sie einen Pool qualifizierter Talente auf -- und greifen Sie zu, wenn die perfekte Stelle kommt."
+  heroIcon='<svg class="h-4 w-4 text-primary animate-pulse" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5V19A9 3 0 0 0 21 19V5"/><path d="M3 12A9 3 0 0 0 21 12"/></svg>'
+  features={features}
+  featuresSectionTitle="Alles, was Ihr Talent Pool braucht"
+  featuresSectionSubtitle="Von der Erstellung bis zur Wiederansprache -- ShortSelect deckt den gesamten Talent-Lifecycle ab."
+  featuresBadge="Features"
+>
+  <Fragment slot="before-features">
+    <section class="py-20 md:py-28 bg-muted/30 relative overflow-hidden">
+      <div class="container mx-auto px-4">
+        <div data-reveal class="text-center max-w-3xl mx-auto mb-16">
+          <span class="inline-block mb-4 px-3 py-1 text-xs font-medium rounded-full border border-primary/20 text-primary">Das Problem</span>
+          <h2 class="text-3xl md:text-5xl font-display font-bold tracking-tight mb-4">Der perfekte Kandidat war da -- aber die Stelle noch nicht.</h2>
+          <p class="text-lg text-muted-foreground">Jeder Recruiter kennt es: Ein Talent passt heute nicht -- aber morgen waere es der Volltreffer. Ohne Talent Pools verlieren Sie diese Chancen fuer immer.</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          {[
+            { title: "Kandidaten vergessen", description: "Gute Bewerber landen in E-Mail-Archiven und Excel-Listen. Wenn die passende Stelle kommt, sind sie laengst nicht mehr auffindbar." },
+            { title: "Keine Wiederansprache", description: "Ohne System verlieren Sie den Kontakt zu Talenten, die heute nicht passen -- aber morgen perfekt waeren." },
+            { title: "Manuelle Listen", description: "Spreadsheets, Notizen, Post-its. Kein System, keine Struktur, keine Durchsuchbarkeit. Ein Albtraum bei wachsendem Volumen." },
+          ].map((pain, i) => (
+            <div data-reveal data-reveal-delay={`${i * 100}`} class="rounded-xl border bg-card p-8 hover:shadow-xl hover:border-primary/20 transition-all duration-300">
+              <h3 class="text-xl font-display font-bold mb-4">{pain.title}</h3>
+              <p class="text-sm text-muted-foreground leading-relaxed">{pain.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  </Fragment>
+
+  <section class="py-16 md:py-24 bg-gradient-to-br from-primary via-primary/90 to-accent text-white relative overflow-hidden">
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:24px_24px] opacity-30"></div>
+    <div class="container relative mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-12 text-center max-w-3xl mx-auto">
+        {[
+          { value: "2x", label: "Schnellere Besetzung mit Talent Pools" },
+          { value: "70%", label: "der Top-Kandidaten kommen aus Pools" },
+        ].map((stat, i) => (
+          <div data-reveal data-reveal-delay={`${i * 200}`} class="space-y-4">
+            <div class="text-5xl md:text-6xl font-display font-bold">{stat.value}</div>
+            <p class="text-lg text-white/80">{stat.label}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+</ProduktLayout>

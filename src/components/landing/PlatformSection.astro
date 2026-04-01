@@ -1,0 +1,64 @@
+---
+// PlatformSection - 6 platform feature cards
+import { platformFeatures } from '@/data/features';
+
+// Map icon names to inline SVG paths
+const iconMap: Record<string, string> = {
+  'layout-grid': '<rect width="7" height="7" x="3" y="3" rx="1"/><rect width="7" height="7" x="14" y="3" rx="1"/><rect width="7" height="7" x="14" y="14" rx="1"/><rect width="7" height="7" x="3" y="14" rx="1"/>',
+  calendar: '<path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/>',
+  users: '<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>',
+  'building-2': '<path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4"/><path d="M10 10h4"/><path d="M10 14h4"/><path d="M10 18h4"/>',
+  'bar-chart-3': '<path d="M3 3v16a2 2 0 0 0 2 2h16"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/>',
+  'file-text': '<path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/>',
+};
+---
+
+<section class="py-20 md:py-32 bg-muted/30 relative overflow-hidden">
+  <!-- Background decoration -->
+  <div class="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
+  <div class="absolute bottom-0 left-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl"></div>
+
+  <div class="container relative mx-auto px-4">
+    <!-- Header -->
+    <div data-reveal class="text-center space-y-4 mb-16">
+      <h2 class="text-3xl md:text-5xl font-display font-bold">
+        Alles was Sie für{" "}
+        <span class="text-accent">erfolgreiches Recruiting</span>{" "}
+        brauchen
+      </h2>
+      <p class="text-lg text-muted-foreground max-w-2xl mx-auto">
+        Eine zentrale Plattform für Ihren gesamten Recruiting-Prozess.
+      </p>
+    </div>
+
+    <!-- Feature Grid with staggered animation -->
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {platformFeatures.map((feature, i) => (
+        <div
+          data-reveal
+          data-reveal-delay={`${Math.min((i + 1) * 100, 500)}`}
+          class="relative bg-card rounded-lg border border-transparent p-0 group cursor-default transition-all duration-500 hover:shadow-lg hover:shadow-accent/5 hover:-translate-y-1 hover:border-accent/30 overflow-hidden"
+        >
+          <div class="p-6 pb-3">
+            <div class="flex items-center gap-3">
+              <div class="h-10 w-10 rounded-lg bg-accent/10 flex items-center justify-center transition-all duration-300 group-hover:bg-accent/20 group-hover:scale-110">
+                <svg class="h-5 w-5 text-accent transition-transform duration-300 group-hover:rotate-6" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" set:html={iconMap[feature.icon]} />
+              </div>
+              <h3 class="text-lg font-semibold group-hover:text-accent transition-colors">
+                {feature.title}
+              </h3>
+            </div>
+          </div>
+          <div class="p-6 pt-0">
+            <p class="text-sm text-muted-foreground leading-relaxed">
+              {feature.description}
+            </p>
+          </div>
+
+          <!-- Subtle gradient overlay on hover -->
+          <div class="absolute inset-0 rounded-lg bg-gradient-to-br from-accent/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,124 @@
+---
+import MarketingLayout from '../layouts/MarketingLayout.astro';
+import CTASection from '../components/landing/CTASection.astro';
+---
+
+<MarketingLayout
+  title="Warum ShortSelect? 5 Gruende fuer unser ATS | ShortSelect"
+  description="Spezialisiert auf Recruiting-Agenturen, KI-gestuetzt, einfaches Onboarding, faire Preise und DSGVO-konform. 5 Gruende, warum Teams auf ShortSelect setzen."
+>
+  <!-- Hero -->
+  <section class="relative overflow-hidden py-24 md:py-36">
+    <div class="absolute inset-0 bg-gradient-to-br from-[hsl(var(--primary)/0.1)] via-[hsl(var(--accent)/0.05)] to-[hsl(var(--background))]"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,hsl(var(--primary)/0.15),transparent_50%)]"></div>
+    <div class="absolute top-20 left-10 w-72 h-72 bg-[hsl(var(--primary)/0.1)] rounded-full blur-3xl animate-float-slow"></div>
+    <div class="absolute bottom-20 right-10 w-96 h-96 bg-[hsl(var(--accent)/0.1)] rounded-full blur-3xl animate-float-slow" style="animation-delay: -3s;"></div>
+    <div class="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.03)_1px,transparent_1px)] bg-[size:60px_60px] [mask-image:radial-gradient(ellipse_at_center,black_30%,transparent_70%)]"></div>
+
+    <div class="container relative mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center space-y-8">
+        <div data-reveal>
+          <span class="inline-block px-3 py-1 rounded-full bg-[hsl(var(--primary)/0.1)] text-[hsl(var(--primary))] border border-[hsl(var(--primary)/0.2)] text-sm font-medium">Die bessere Wahl</span>
+        </div>
+        <h1 data-reveal data-reveal-delay="100" class="text-4xl md:text-6xl lg:text-7xl font-display font-bold tracking-tight">
+          Warum <span class="text-[hsl(var(--primary))]">ShortSelect</span>?
+        </h1>
+        <p data-reveal data-reveal-delay="200" class="text-lg md:text-xl text-[hsl(var(--muted-foreground))] max-w-2xl mx-auto">
+          5 Gruende, warum Teams auf ShortSelect setzen.
+        </p>
+      </div>
+    </div>
+    <div class="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-[hsl(var(--background))] to-transparent"></div>
+  </section>
+
+  <!-- Reason 1: Spezialisiert -->
+  <section class="py-20 md:py-28 relative overflow-hidden">
+    <div class="container relative mx-auto px-4">
+      <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+        <div data-reveal class="flex justify-center">
+          <div class="h-32 w-32 rounded-2xl bg-[hsl(var(--primary)/0.1)] flex items-center justify-center">
+            <svg class="h-16 w-16 text-[hsl(var(--primary))]" xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+          </div>
+        </div>
+        <div data-reveal data-reveal-delay="100" class="space-y-6">
+          <span class="text-sm font-medium text-[hsl(var(--primary))] uppercase tracking-widest">Grund 1</span>
+          <h2 class="text-3xl md:text-4xl font-display font-bold tracking-tight">Spezialisiert auf Recruiting</h2>
+          <p class="text-[hsl(var(--muted-foreground))] leading-relaxed">Anders als generische HR-Tools ist ShortSelect speziell fuer Personalvermittler und Recruiting-Teams gebaut.</p>
+          <ul class="space-y-3">
+            <li class="flex items-start gap-3"><svg class="h-5 w-5 text-[hsl(var(--primary))] shrink-0 mt-0.5" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span class="text-[hsl(var(--muted-foreground))]">Spezielle Pipelines fuer Personalvermittler und HR-Teams</span></li>
+            <li class="flex items-start gap-3"><svg class="h-5 w-5 text-[hsl(var(--primary))] shrink-0 mt-0.5" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span class="text-[hsl(var(--muted-foreground))]">KI-Matching, das Recruiting-Logik versteht</span></li>
+            <li class="flex items-start gap-3"><svg class="h-5 w-5 text-[hsl(var(--primary))] shrink-0 mt-0.5" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span class="text-[hsl(var(--muted-foreground))]">Client Portal fuer transparente Kundenkommunikation</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reason 2: KI -->
+  <section class="py-20 md:py-28 bg-[hsl(var(--muted)/0.3)] relative overflow-hidden">
+    <div class="container relative mx-auto px-4">
+      <div data-reveal class="max-w-4xl mx-auto text-center space-y-6">
+        <span class="text-sm font-medium text-[hsl(var(--primary))] uppercase tracking-widest">Grund 2</span>
+        <h2 class="text-3xl md:text-4xl font-display font-bold tracking-tight">KI, die wirklich hilft</h2>
+        <p class="text-lg text-[hsl(var(--muted-foreground))] max-w-2xl mx-auto">
+          Kein KI-Buzzword. ShortSelect nutzt kuenstliche Intelligenz dort, wo sie echte Zeit spart: Matching, Screening und Ranking.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reason 3: Onboarding -->
+  <section class="py-20 md:py-28 relative overflow-hidden">
+    <div class="container relative mx-auto px-4">
+      <div data-reveal class="max-w-4xl mx-auto text-center space-y-6">
+        <span class="text-sm font-medium text-[hsl(var(--primary))] uppercase tracking-widest">Grund 3</span>
+        <h2 class="text-3xl md:text-4xl font-display font-bold tracking-tight">Setup in 5 Minuten</h2>
+        <p class="text-lg text-[hsl(var(--muted-foreground))] max-w-2xl mx-auto">
+          Registrieren, erste Stelle anlegen, Karriereseite aktivieren. Kein IT-Projekt, kein Implementierungsberater, keine Schulung.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reason 4: Preise -->
+  <section class="py-20 md:py-28 bg-[hsl(var(--muted)/0.3)] relative overflow-hidden">
+    <div class="container relative mx-auto px-4">
+      <div data-reveal class="max-w-4xl mx-auto text-center space-y-6">
+        <span class="text-sm font-medium text-[hsl(var(--primary))] uppercase tracking-widest">Grund 4</span>
+        <h2 class="text-3xl md:text-4xl font-display font-bold tracking-tight">Faire, transparente Preise</h2>
+        <p class="text-lg text-[hsl(var(--muted-foreground))] max-w-2xl mx-auto">
+          Ab 29 EUR/Monat. Keine versteckten Kosten, keine Mindestlaufzeit. 14 Tage kostenlos testen.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reason 5: Sicherheit -->
+  <section class="py-20 md:py-28 relative overflow-hidden">
+    <div class="container relative mx-auto px-4">
+      <div data-reveal class="max-w-4xl mx-auto text-center space-y-6">
+        <span class="text-sm font-medium text-[hsl(var(--primary))] uppercase tracking-widest">Grund 5</span>
+        <h2 class="text-3xl md:text-4xl font-display font-bold tracking-tight">DSGVO-konform & sicher</h2>
+        <p class="text-lg text-[hsl(var(--muted-foreground))] max-w-2xl mx-auto">
+          EU-Server, Row Level Security, Verschluesselung, Audit Logging. Ihre Daten sind bei uns sicher.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4 pt-4">
+          <div class="flex items-center gap-2 text-sm text-[hsl(var(--muted-foreground))]">
+            <svg class="h-5 w-5 text-[hsl(var(--primary))]" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M7 7h.01"/><path d="M17 7h.01"/><path d="M7 17h.01"/><path d="M17 17h.01"/></svg>
+            EU-Server
+          </div>
+          <div class="flex items-center gap-2 text-sm text-[hsl(var(--muted-foreground))]">
+            <svg class="h-5 w-5 text-[hsl(var(--primary))]" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            Row Level Security
+          </div>
+          <div class="flex items-center gap-2 text-sm text-[hsl(var(--muted-foreground))]">
+            <svg class="h-5 w-5 text-[hsl(var(--primary))]" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+            Audit Trail
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CTASection />
+</MarketingLayout>

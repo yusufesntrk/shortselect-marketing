@@ -1,0 +1,51 @@
+---
+import VergleichLayout from '../../layouts/VergleichLayout.astro';
+
+const comparisonData = [
+  { feature: "Fokus", ssStatus: "check" as const, ssLabel: "Reines ATS", compStatus: "warn" as const, compLabel: "HR-Suite (Recruiting + HR + TM)" },
+  { feature: "UI/UX", ssStatus: "check" as const, ssLabel: "Modern & intuitiv", compStatus: "warn" as const, compLabel: "Funktional / klassisch" },
+  { feature: "Preise", ssStatus: "check" as const, ssLabel: "Ab 0\u20AC/Monat", compStatus: "warn" as const, compLabel: "Auf Anfrage (ab ~300\u20AC/Monat)" },
+  { feature: "Setup-Zeit", ssStatus: "check" as const, ssLabel: "Minuten", compStatus: "warn" as const, compLabel: "Wochen" },
+  { feature: "KI-Features", ssStatus: "check" as const, ssLabel: "Integriert", compStatus: "warn" as const, compLabel: "Begrenzt" },
+  { feature: "Cloud", ssStatus: "check" as const, ssLabel: "100% Cloud", compStatus: "check" as const, compLabel: "Cloud + On-Premise" },
+  { feature: "Karriereseite", ssStatus: "check" as const, ssLabel: "Embeddable Widget", compStatus: "check" as const, compLabel: "Eigene Karriereseite" },
+  { feature: "Client Portal", ssStatus: "check" as const, ssLabel: "Integriert", compStatus: "warn" as const, compLabel: "Begrenzt" },
+  { feature: "Talent Management", ssStatus: "warn" as const, ssLabel: "Talent Pools", compStatus: "check" as const, compLabel: "Umfangreich" },
+  { feature: "API Zugang", ssStatus: "check" as const, ssLabel: "REST API", compStatus: "check" as const, compLabel: "REST API" },
+];
+---
+
+<VergleichLayout
+  title="ShortSelect vs. rexx systems - ATS Vergleich 2026"
+  description="Modularer Klassiker oder modernes ATS? rexx systems bietet HR-Software seit 20+ Jahren. Vergleich mit ShortSelect."
+  competitorName="rexx systems"
+  heroSubline="Modularer Klassiker oder modernes ATS? rexx systems bietet HR-Software seit 20+ Jahren. Wir vergleichen den etablierten Anbieter mit dem modernen Ansatz."
+  heroBadge="Vergleich"
+  ssDescription="Modernes ATS mit KI-Fokus"
+  ssHighlights={["KI-gestuetztes Kandidaten-Matching", "100% Cloud, sofort einsatzbereit", "Client Portal inklusive", "Kostenloser Einstieg"]}
+  compDescription="Modulare HR-Suite seit 20+ Jahren"
+  compHighlights={["Recruiting + HR + Talent Management", "Cloud- und On-Premise-Optionen", "Umfangreiches Talent Management", "Etablierter Anbieter im DACH-Raum"]}
+  comparisonData={comparisonData}
+  whenCompBetter={{
+    title: "Wann rexx systems besser passt",
+    intro: "rexx systems ist die richtige Wahl, wenn Sie eine umfassende HR-Suite mit modularem Aufbau benoetigen:",
+    items: [
+      "Umfangreiches Talent Management mit Nachfolgeplanung",
+      "On-Premise-Hosting aus Compliance-Gruenden noetig",
+      "Grosse HR-Abteilung mit vielen Modulen (HR + Recruiting + TM)",
+      "Etablierter Anbieter mit 20+ Jahren Erfahrung gewuenscht",
+      "Komplexe Enterprise-Anforderungen und Customizing",
+    ]
+  }}
+  whenSSBetter={{
+    title: "Wann ShortSelect besser passt",
+    intro: "ShortSelect ist ideal, wenn Recruiting Ihr Kerngeschaeft ist:",
+    items: [
+      "Personalberatungen und Recruiting-Agenturen",
+      "Teams, die KI-gestuetztes Matching brauchen",
+      "Schneller Start ohne wochenlange Implementierung",
+      "Client Portal fuer transparente Zusammenarbeit",
+      "Kostenloser Start ohne Mindestlaufzeit",
+    ]
+  }}
+/>

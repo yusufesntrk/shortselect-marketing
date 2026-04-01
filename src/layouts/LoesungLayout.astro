@@ -1,0 +1,196 @@
+---
+import MarketingLayout from './MarketingLayout.astro';
+import CTASection from '../components/landing/CTASection.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  badgeText: string;
+  badgeIcon: string;
+  headline: string;
+  highlightedWord: string;
+  headlineSuffix: string;
+  subline: string;
+  primaryCta?: string;
+  secondaryCta?: string;
+  secondaryCtaHref?: string;
+  painTitle: string;
+  painSubline?: string;
+  painHighlight?: string;
+  painPoints: { title: string; description: string; iconPath: string }[];
+  solutionBadge?: string;
+  solutionTitle: string;
+  solutionHighlight?: string;
+  solutions: { title: string; subtitle: string; description: string; iconPath: string }[];
+  extraSectionHtml?: string;
+}
+
+const {
+  title,
+  description,
+  badgeText,
+  badgeIcon,
+  headline,
+  highlightedWord,
+  headlineSuffix,
+  subline,
+  primaryCta = 'Jetzt kostenlos testen',
+  secondaryCta,
+  secondaryCtaHref = '#features',
+  painTitle,
+  painSubline,
+  painHighlight,
+  painPoints,
+  solutionBadge,
+  solutionTitle,
+  solutionHighlight,
+  solutions,
+} = Astro.props;
+---
+
+<MarketingLayout title={title} description={description}>
+  <!-- HERO -->
+  <section class="relative overflow-hidden py-20 md:py-32">
+    <div class="absolute inset-0 bg-gradient-to-br from-primary/10 via-accent/5 to-transparent"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,hsl(var(--primary)/0.15),transparent_50%)]"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,hsl(var(--accent)/0.1),transparent_50%)]"></div>
+    <div class="absolute top-20 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-float-slow"></div>
+    <div class="absolute bottom-20 right-10 w-96 h-96 bg-accent/10 rounded-full blur-3xl animate-float-slow" style="animation-delay: -3s;"></div>
+    <div class="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.03)_1px,transparent_1px)] bg-[size:60px_60px] [mask-image:radial-gradient(ellipse_at_center,black_30%,transparent_70%)]"></div>
+
+    <div class="container relative mx-auto px-4">
+      <div class="mx-auto max-w-4xl text-center space-y-8">
+        <div data-reveal class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20">
+          <svg class="h-4 w-4 text-primary animate-pulse" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><Fragment set:html={badgeIcon} /></svg>
+          <span class="text-sm font-medium">{badgeText}</span>
+        </div>
+
+        <h1 data-reveal data-reveal-delay="100" class="text-4xl md:text-6xl lg:text-7xl font-display font-bold tracking-tight">
+          {headline}{" "}
+          <span class="relative inline-block">
+            <span class="text-primary">{highlightedWord}</span>
+            <svg class="absolute -bottom-2 left-0 w-full" viewBox="0 0 300 12" fill="none">
+              <path d="M2 10C60 4 240 4 298 10" stroke="hsl(var(--primary))" stroke-width="4" stroke-linecap="round" class="cta-underline" style="stroke-dasharray: 300; stroke-dashoffset: 300;" />
+            </svg>
+          </span>{" "}
+          {headlineSuffix}
+        </h1>
+
+        <p data-reveal data-reveal-delay="200" class="text-lg md:text-xl text-[hsl(var(--muted-foreground))] max-w-2xl mx-auto">
+          {subline}
+        </p>
+
+        <div data-reveal data-reveal-delay="300" class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+          <a href="https://app.shortselect.com/signup" class="inline-flex items-center gap-2 px-8 py-3 bg-primary text-white font-semibold rounded-lg text-base group relative overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+            <svg class="h-5 w-5 animate-pulse" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/>
+            </svg>
+            {primaryCta}
+            <svg class="h-5 w-5 transition-transform group-hover:translate-x-1" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+          {secondaryCta && (
+            <a href={secondaryCtaHref} class="inline-flex items-center px-8 py-3 border border-[hsl(var(--border))] font-semibold rounded-lg text-base transition-all duration-300 hover:border-primary/50 hover:text-primary">
+              {secondaryCta}
+            </a>
+          )}
+        </div>
+      </div>
+    </div>
+    <div class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[hsl(var(--background))] to-transparent"></div>
+  </section>
+
+  <!-- PAIN POINTS -->
+  <section class="py-20 md:py-28 bg-[hsl(var(--muted)/0.3)]">
+    <div class="container mx-auto px-4">
+      <div class="max-w-3xl mx-auto text-center mb-16">
+        <h2 data-reveal class="text-3xl md:text-4xl lg:text-5xl font-display font-bold tracking-tight">
+          {painTitle}{" "}
+          {painHighlight && (
+            <span class="relative inline-block">
+              {painHighlight}
+              <svg class="absolute -bottom-2 left-0 w-full" viewBox="0 0 200 12" fill="none">
+                <path d="M2 10C40 4 160 4 198 10" stroke="hsl(var(--primary))" stroke-width="3" stroke-linecap="round" class="cta-underline" style="stroke-dasharray: 200; stroke-dashoffset: 200;" />
+              </svg>
+            </span>
+          )}
+        </h2>
+        {painSubline && (
+          <p data-reveal data-reveal-delay="100" class="text-lg text-[hsl(var(--muted-foreground))] mt-4">{painSubline}</p>
+        )}
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        {painPoints.map((point, index) => (
+          <div data-reveal data-reveal-delay={String(index * 150)} class="group rounded-xl border border-primary/10 bg-[hsl(var(--card))] p-6 hover:shadow-lg transition-all duration-500 hover:-translate-y-1 hover:border-primary/30">
+            <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
+              <svg class="h-6 w-6 text-primary" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><Fragment set:html={point.iconPath} /></svg>
+            </div>
+            <h3 class="text-xl font-display font-bold mb-2">{point.title}</h3>
+            <p class="text-[hsl(var(--muted-foreground))] leading-relaxed">{point.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- SOLUTIONS -->
+  <section class="py-20 md:py-28" id="features">
+    <div class="container mx-auto px-4">
+      <div class="max-w-3xl mx-auto text-center mb-20">
+        {solutionBadge && (
+          <span data-reveal class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold border border-primary/20 text-primary mb-4">{solutionBadge}</span>
+        )}
+        <h2 data-reveal class="text-3xl md:text-4xl lg:text-5xl font-display font-bold tracking-tight">
+          {solutionTitle}{" "}
+          {solutionHighlight && <span class="text-primary">{solutionHighlight}</span>}
+        </h2>
+      </div>
+
+      <div class="space-y-24 max-w-6xl mx-auto">
+        {solutions.map((solution, index) => (
+          <div data-reveal data-reveal-delay={String(index * 100)} class={`flex flex-col ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} items-center gap-12`}>
+            <div class="w-full md:w-1/2">
+              <div class="relative rounded-2xl bg-gradient-to-br from-primary/5 via-[hsl(var(--muted)/0.5)] to-accent/5 border border-primary/10 overflow-hidden aspect-[4/3] group">
+                <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,hsl(var(--primary)/0.08),transparent_70%)]"></div>
+                <div class="absolute inset-0 flex items-center justify-center">
+                  <div class="w-20 h-20 rounded-2xl bg-primary/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
+                    <svg class="h-10 w-10 text-primary" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><Fragment set:html={solution.iconPath} /></svg>
+                  </div>
+                </div>
+                <div class="absolute top-4 right-4 flex gap-1.5">
+                  <div class="w-2.5 h-2.5 rounded-full bg-primary/20"></div>
+                  <div class="w-2.5 h-2.5 rounded-full bg-primary/15"></div>
+                  <div class="w-2.5 h-2.5 rounded-full bg-primary/10"></div>
+                </div>
+              </div>
+            </div>
+            <div class="w-full md:w-1/2 space-y-4">
+              <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold border border-accent/30 text-accent">{solution.title}</span>
+              <h3 class="text-2xl md:text-3xl font-display font-bold tracking-tight">{solution.subtitle}</h3>
+              <p class="text-lg text-[hsl(var(--muted-foreground))] leading-relaxed">{solution.description}</p>
+              <div class="flex items-center gap-2 text-primary font-medium pt-2">
+                <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
+                <span>Sofort einsatzbereit</span>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Extra slot content -->
+  <slot />
+
+  <!-- CTA -->
+  <CTASection />
+</MarketingLayout>
+
+<style>
+  .cta-underline {
+    transition: stroke-dashoffset 1s ease-out 0.5s;
+  }
+  :global([data-reveal].revealed) .cta-underline {
+    stroke-dashoffset: 0;
+  }
+</style>

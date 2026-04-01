@@ -1,0 +1,140 @@
+---
+import MarketingLayout from '../../layouts/MarketingLayout.astro';
+import CTASection from '../../components/landing/CTASection.astro';
+
+const categories = [
+  {
+    title: "E-Mail & Kalender",
+    integrations: [
+      { name: "Gmail 2-Way-Sync", description: "Automatische E-Mail-Synchronisation. Alle Nachrichten direkt im ATS.", availability: "Verfuegbar", iconPath: '<rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>' },
+      { name: "Google Calendar", description: "Interview-Termine automatisch synchronisiert. Keine Doppelbuchungen.", availability: "Verfuegbar", iconPath: '<path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/>' },
+    ],
+  },
+  {
+    title: "Karriereseite",
+    integrations: [
+      { name: "Website Widget", description: "Einbettbares Job-Widget fuer jede Website. Ein Snippet, sofort live.", availability: "Verfuegbar", iconPath: '<polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>' },
+      { name: "Custom Career Site", description: "Vollstaendig anpassbare Karriereseite mit eigenem Branding.", availability: "Verfuegbar", iconPath: '<circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/>' },
+    ],
+  },
+  {
+    title: "Performance Marketing",
+    integrations: [
+      { name: "Meta/Facebook Ads", description: "Automatisierte Recruiting-Kampagnen direkt aus dem ATS starten.", availability: "Business Plan", iconPath: '<path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/>' },
+      { name: "Campaign Tracking", description: "ROI pro Kanal messen. Cost-per-Hire und Source Effectiveness.", availability: "Business Plan", iconPath: '<line x1="12" x2="12" y1="20" y2="10"/><line x1="18" x2="18" y1="20" y2="4"/><line x1="6" x2="6" y1="20" y2="16"/>' },
+    ],
+  },
+  {
+    title: "API & Webhooks",
+    integrations: [
+      { name: "REST API", description: "Vollstaendige REST API fuer Custom-Integrationen. Dokumentiert und versioniert.", availability: "Business Plan", iconPath: '<polyline points="4 17 10 11 4 5"/><line x1="12" x2="20" y1="19" y2="19"/>' },
+      { name: "Webhooks", description: "Echtzeit-Events fuer Pipeline-Aenderungen. Automatisieren Sie Ihre Workflows.", availability: "Business Plan", iconPath: '<path d="M18 16.98h-5.99c-1.1 0-1.95.94-2.48 1.9A4 4 0 0 1 2 17c.01-.7.2-1.4.57-2"/><path d="m6 17 3.13-5.78c.53-.97.1-2.18-.5-3.1a4 4 0 1 1 6.89-4.06"/><path d="m12 6 3.13 5.73C15.66 12.7 16.9 13 18 13a4 4 0 0 1 .8 7.93"/>' },
+    ],
+  },
+];
+
+const comingSoon = [
+  { name: "XING", letter: "X" },
+  { name: "LinkedIn Recruiter", letter: "Li" },
+  { name: "Indeed", letter: "In" },
+  { name: "StepStone", letter: "St" },
+];
+---
+
+<MarketingLayout
+  title="ShortSelect Integrationen | E-Mail, Kalender, API & mehr"
+  description="ShortSelect integriert sich nahtlos: Gmail, Google Calendar, Website Widget, REST API, Webhooks und mehr."
+>
+  <!-- HERO -->
+  <section class="relative overflow-hidden py-20 md:py-32">
+    <div class="absolute inset-0 bg-gradient-to-br from-primary/10 via-accent/5 to-transparent"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,hsl(var(--primary)/0.15),transparent_50%)]"></div>
+    <div class="absolute top-20 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-float-slow"></div>
+    <div class="absolute bottom-20 right-10 w-96 h-96 bg-accent/10 rounded-full blur-3xl animate-float-slow" style="animation-delay: -3s;"></div>
+    <div class="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.03)_1px,transparent_1px)] bg-[size:48px_48px] [mask-image:radial-gradient(ellipse_at_center,black_30%,transparent_70%)]"></div>
+    <div class="container relative mx-auto px-4">
+      <div class="mx-auto max-w-4xl text-center space-y-8">
+        <div data-reveal class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20">
+          <svg class="h-4 w-4 text-primary animate-pulse" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+          <span class="text-sm font-medium">Integrationen</span>
+        </div>
+        <h1 data-reveal data-reveal-delay="100" class="text-4xl md:text-6xl lg:text-7xl font-display font-bold tracking-tight">
+          Verbinden Sie ShortSelect mit Ihren <span class="text-primary">Tools</span>
+        </h1>
+        <p data-reveal data-reveal-delay="200" class="text-lg md:text-xl text-[hsl(var(--muted-foreground))] max-w-2xl mx-auto">
+          E-Mail, Kalender, Karriereseite, API — alles nahtlos integriert.
+        </p>
+      </div>
+    </div>
+    <div class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[hsl(var(--background))] to-transparent"></div>
+  </section>
+
+  <!-- INTEGRATION CATEGORIES -->
+  {categories.map((category, catIndex) => (
+    <section class={`py-16 md:py-20 ${catIndex % 2 === 1 ? 'bg-[hsl(var(--muted)/0.3)]' : ''}`}>
+      <div class="container mx-auto px-4">
+        <h2 data-reveal class="text-2xl md:text-3xl font-display font-bold tracking-tight mb-8">{category.title}</h2>
+        <div class="grid md:grid-cols-2 gap-6 max-w-4xl">
+          {category.integrations.map((integration, i) => (
+            <div data-reveal data-reveal-delay={String(i * 150)} class="group rounded-xl border border-primary/10 bg-[hsl(var(--card))] p-6 hover:shadow-lg transition-all duration-500 hover:-translate-y-1 hover:border-primary/30">
+              <div class="flex items-start gap-4">
+                <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center shrink-0 group-hover:bg-primary/20 transition-colors">
+                  <svg class="h-6 w-6 text-primary" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><Fragment set:html={integration.iconPath} /></svg>
+                </div>
+                <div class="flex-1">
+                  <div class="flex items-center gap-2 mb-1">
+                    <h3 class="text-lg font-display font-bold">{integration.name}</h3>
+                    <span class={`inline-flex items-center px-2 py-0.5 rounded text-[10px] font-semibold ${integration.availability === 'Verfuegbar' ? 'bg-green-100 text-green-700' : 'bg-primary/10 text-primary'}`}>{integration.availability}</span>
+                  </div>
+                  <p class="text-sm text-[hsl(var(--muted-foreground))] leading-relaxed">{integration.description}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  ))}
+
+  <!-- COMING SOON -->
+  <section class="py-16 md:py-20 bg-[hsl(var(--muted)/0.3)]">
+    <div class="container mx-auto px-4">
+      <div class="max-w-3xl mx-auto text-center mb-12">
+        <h2 data-reveal class="text-2xl md:text-3xl font-display font-bold tracking-tight mb-4">Bald verfuegbar</h2>
+        <p data-reveal data-reveal-delay="100" class="text-[hsl(var(--muted-foreground))]">Wir arbeiten an weiteren Integrationen.</p>
+      </div>
+      <div class="flex flex-wrap items-center justify-center gap-4 max-w-2xl mx-auto">
+        {comingSoon.map((item, i) => (
+          <div data-reveal data-reveal-delay={String(i * 100)} class="flex items-center gap-3 px-6 py-3 rounded-xl border border-[hsl(var(--border))] bg-[hsl(var(--card))]">
+            <div class="w-10 h-10 rounded-lg bg-[hsl(var(--muted))] flex items-center justify-center text-sm font-bold text-[hsl(var(--muted-foreground))]">{item.letter}</div>
+            <span class="text-sm font-medium">{item.name}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- INDIVIDUAL INTEGRATION LINKS -->
+  <section class="py-16 md:py-20">
+    <div class="container mx-auto px-4">
+      <div class="max-w-3xl mx-auto text-center mb-12">
+        <h2 data-reveal class="text-2xl md:text-3xl font-display font-bold tracking-tight mb-4">Mehr erfahren</h2>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4 max-w-4xl mx-auto">
+        {[
+          { name: "LinkedIn", href: "/integrationen/linkedin" },
+          { name: "Indeed", href: "/integrationen/indeed" },
+          { name: "StepStone", href: "/integrationen/stepstone" },
+          { name: "Outlook", href: "/integrationen/outlook" },
+        ].map((link, i) => (
+          <a data-reveal data-reveal-delay={String(i * 100)} href={link.href} class="flex items-center justify-between px-6 py-4 rounded-xl border border-primary/10 bg-[hsl(var(--card))] hover:border-primary/30 hover:shadow-md transition-all duration-300 group">
+            <span class="font-semibold">{link.name}</span>
+            <svg class="h-5 w-5 text-primary transition-transform group-hover:translate-x-1" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <CTASection />
+</MarketingLayout>

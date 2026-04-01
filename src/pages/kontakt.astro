@@ -1,0 +1,110 @@
+---
+import MarketingLayout from '../layouts/MarketingLayout.astro';
+import CTASection from '../components/landing/CTASection.astro';
+
+const contactOptions = [
+  {
+    title: "Demo buchen",
+    description: "Vereinbaren Sie eine persoenliche 15-Minuten Demo und sehen Sie ShortSelect live in Aktion.",
+    buttonText: "Demo buchen",
+    buttonHref: "https://app.shortselect.com/signup",
+    highlight: true,
+  },
+  {
+    title: "E-Mail",
+    description: "Schreiben Sie uns jederzeit. Wir antworten in der Regel innerhalb von 24 Stunden.",
+    buttonText: "hello@shortselect.com",
+    buttonHref: "mailto:hello@shortselect.com",
+    highlight: false,
+  },
+  {
+    title: "LinkedIn",
+    description: "Folgen Sie uns fuer Updates, Recruiting-Tipps und Einblicke hinter die Kulissen.",
+    buttonText: "Folgen",
+    buttonHref: "https://www.linkedin.com/company/shortselect",
+    highlight: false,
+  },
+];
+
+const faqItems = [
+  { question: "Ist ShortSelect wirklich kostenlos?", answer: "Ja, Sie koennen ShortSelect mit dem Free-Plan dauerhaft kostenlos nutzen. Fuer erweiterte Features gibt es faire Paid-Plaene." },
+  { question: "Wie lange dauert die Einrichtung?", answer: "In der Regel sind Sie in unter 5 Minuten startklar. Registrieren, erste Stelle anlegen, loslegen." },
+  { question: "Gibt es eine Vertragsbindung?", answer: "Nein, alle Plaene sind monatlich kuendbar. Keine versteckten Kosten, keine Mindestlaufzeit." },
+];
+---
+
+<MarketingLayout
+  title="Kontakt – Sprechen Sie mit uns | ShortSelect"
+  description="Demo buchen, E-Mail schreiben oder uns auf LinkedIn folgen. Wir sind fuer Sie da -- ob Fragen, Feedback oder Partnerschaft."
+>
+  <!-- Hero -->
+  <section class="relative overflow-hidden py-24 md:py-36">
+    <div class="absolute inset-0 bg-gradient-to-br from-[hsl(var(--primary)/0.1)] via-[hsl(var(--accent)/0.05)] to-[hsl(var(--background))]"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,hsl(var(--primary)/0.15),transparent_50%)]"></div>
+    <div class="absolute top-20 left-10 w-72 h-72 bg-[hsl(var(--primary)/0.1)] rounded-full blur-3xl animate-float-slow"></div>
+    <div class="absolute bottom-20 right-10 w-96 h-96 bg-[hsl(var(--accent)/0.1)] rounded-full blur-3xl animate-float-slow" style="animation-delay: -3s;"></div>
+    <div class="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.03)_1px,transparent_1px)] bg-[size:60px_60px] [mask-image:radial-gradient(ellipse_at_center,black_30%,transparent_70%)]"></div>
+
+    <div class="container relative mx-auto px-4">
+      <div class="max-w-3xl mx-auto text-center space-y-8">
+        <div data-reveal><span class="inline-block px-3 py-1 rounded-full bg-[hsl(var(--primary)/0.1)] text-[hsl(var(--primary))] border border-[hsl(var(--primary)/0.2)] text-sm font-medium">Kontakt</span></div>
+        <h1 data-reveal data-reveal-delay="100" class="text-4xl md:text-6xl lg:text-7xl font-display font-bold tracking-tight">
+          Sprechen Sie <span class="text-[hsl(var(--primary))]">mit uns.</span>
+        </h1>
+        <p data-reveal data-reveal-delay="200" class="text-lg md:text-xl text-[hsl(var(--muted-foreground))] max-w-2xl mx-auto">
+          Ob Fragen, Demo oder Feedback -- wir sind fuer Sie da.
+        </p>
+      </div>
+    </div>
+    <div class="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-[hsl(var(--background))] to-transparent"></div>
+  </section>
+
+  <!-- Contact Options -->
+  <section class="py-20 md:py-28 relative overflow-hidden">
+    <div class="container relative mx-auto px-4">
+      <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        {contactOptions.map((option, i) => (
+          <div data-reveal data-reveal-delay={`${i * 100}`} class={`rounded-xl border-2 ${option.highlight ? 'border-[hsl(var(--primary)/0.3)] shadow-lg' : 'border-[hsl(var(--border))]'} bg-[hsl(var(--card))] p-8 space-y-4`}>
+            <h3 class="text-xl font-display font-bold">{option.title}</h3>
+            <p class="text-sm text-[hsl(var(--muted-foreground))] leading-relaxed">{option.description}</p>
+            <a href={option.buttonHref} class={`inline-flex items-center gap-2 px-6 py-3 rounded-lg text-sm font-semibold transition-all ${option.highlight ? 'bg-[hsl(var(--primary))] text-white hover:opacity-90' : 'border border-[hsl(var(--border))] hover:border-[hsl(var(--primary)/0.3)] hover:bg-[hsl(var(--primary)/0.05)]'}`}>
+              {option.buttonText}
+              <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+            </a>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-20 md:py-28 bg-[hsl(var(--muted)/0.3)] relative overflow-hidden">
+    <div class="container mx-auto px-4">
+      <div data-reveal class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-3xl md:text-4xl font-display font-bold tracking-tight mb-4">Haeufige Fragen</h2>
+      </div>
+      <div class="max-w-2xl mx-auto space-y-0 rounded-xl border border-[hsl(var(--border))] bg-[hsl(var(--card))] overflow-hidden">
+        {faqItems.map((item) => (
+          <details data-reveal class="border-b border-[hsl(var(--border)/0.5)] last:border-0 group">
+            <summary class="flex items-center justify-between w-full py-5 px-6 text-left cursor-pointer font-display font-bold text-lg">
+              {item.question}
+              <svg class="h-5 w-5 text-[hsl(var(--muted-foreground))] shrink-0 transition-transform duration-300 group-open:rotate-180" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+            </summary>
+            <div class="px-6 pb-5 text-[hsl(var(--muted-foreground))] leading-relaxed">{item.answer}</div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Office Info -->
+  <section class="py-20 md:py-28">
+    <div class="container mx-auto px-4">
+      <div data-reveal class="max-w-2xl mx-auto text-center space-y-4">
+        <h2 class="text-2xl font-display font-bold">Unser Standort</h2>
+        <p class="text-[hsl(var(--muted-foreground))]">LeyalTech &middot; Deutschland</p>
+        <p class="text-sm text-[hsl(var(--muted-foreground))]">hello@shortselect.com</p>
+      </div>
+    </div>
+  </section>
+</MarketingLayout>

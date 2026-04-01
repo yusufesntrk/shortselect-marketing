@@ -1,0 +1,140 @@
+---
+import MarketingLayout from '../../layouts/MarketingLayout.astro';
+import CTASection from '../../components/landing/CTASection.astro';
+
+const benefits = [
+  { title: "Schnellere Besetzung", description: "Vakanzen kosten Umsatz. Jeder gesparte Tag zahlt.", iconPath: '<circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>' },
+  { title: "Geringere Kosten", description: "Weniger Headhunter. Weniger Jobportal-Gebuehren.", iconPath: '<path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/><rect width="20" height="16" x="2" y="4" rx="2"/>' },
+  { title: "Bessere Kandidaten", description: "KI-Matching liefert hoehere Quality of Hire.", iconPath: '<circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/>' },
+  { title: "Skalierbar", description: "Von 1 bis 100 Recruiter — ohne Systemwechsel.", iconPath: '<path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/>' },
+];
+
+const roiMetrics = [
+  { label: "Time-to-Hire", from: "45 Tage", to: "22 Tage", percent: "51%", sublabel: "schneller" },
+  { label: "Cost-per-Hire", from: "5.000\u20AC", to: "2.800\u20AC", percent: "44%", sublabel: "guenstiger" },
+  { label: "Recruiter-Produktivitaet", from: "Baseline", to: "+50%", percent: "50%", sublabel: "produktiver" },
+];
+
+const securityFeatures = ["DSGVO-konform", "EU-Server (Frankfurt)", "Row Level Security", "Mandantentrennung", "Automatische Backups", "Audit Logs"];
+---
+
+<MarketingLayout
+  title="ShortSelect fuer Geschaeftsfuehrer | Recruiting als Wettbewerbsvorteil"
+  description="Reduzieren Sie Time-to-Hire um 51%, senken Sie Kosten um 44%. Recruiting als Wettbewerbsvorteil fuer Ihr Unternehmen."
+>
+  <!-- HERO -->
+  <section class="relative overflow-hidden py-20 md:py-32">
+    <div class="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-primary/5"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_25%,hsl(var(--primary)/0.12),transparent_60%)]"></div>
+    <div class="absolute top-24 right-16 w-80 h-80 bg-primary/8 rounded-full blur-3xl animate-float-slow"></div>
+    <div class="absolute bottom-24 left-12 w-72 h-72 bg-accent/6 rounded-full blur-3xl animate-float-slow" style="animation-delay: -4s;"></div>
+    <div class="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.03)_1px,transparent_1px)] bg-[size:40px_40px] [mask-image:radial-gradient(ellipse_at_center,black_30%,transparent_70%)]"></div>
+    <div class="container relative mx-auto px-4">
+      <div class="mx-auto max-w-4xl text-center space-y-8">
+        <div data-reveal class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20">
+          <svg class="h-4 w-4 text-primary animate-pulse" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+          <span class="text-sm font-medium">Business Impact</span>
+        </div>
+        <h1 data-reveal data-reveal-delay="100" class="text-4xl md:text-6xl lg:text-7xl font-display font-bold tracking-tight">
+          Fuer Geschaeftsfuehrer: Recruiting als <span class="text-primary">Wettbewerbsvorteil</span>.
+        </h1>
+        <p data-reveal data-reveal-delay="200" class="text-lg md:text-xl text-[hsl(var(--muted-foreground))] max-w-2xl mx-auto">Reduzieren Sie die Time-to-Hire, senken Sie Kosten und gewinnen Sie den War for Talent.</p>
+        <div data-reveal data-reveal-delay="300" class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+          <a href="https://app.shortselect.com/signup" class="inline-flex items-center gap-2 px-8 py-3 bg-primary text-white font-semibold rounded-lg text-base group shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+            <svg class="h-5 w-5 animate-pulse" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/></svg>
+            Demo vereinbaren
+            <svg class="h-5 w-5 transition-transform group-hover:translate-x-1" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+          <a href="#roi" class="inline-flex items-center px-8 py-3 border border-[hsl(var(--border))] font-semibold rounded-lg text-base transition-all duration-300 hover:border-primary/50 hover:text-primary">ROI ansehen</a>
+        </div>
+      </div>
+    </div>
+    <div class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[hsl(var(--background))] to-transparent"></div>
+  </section>
+
+  <!-- ROI -->
+  <section id="roi" class="py-20 md:py-28 bg-[hsl(var(--muted)/0.3)]">
+    <div class="container mx-auto px-4">
+      <div class="max-w-3xl mx-auto text-center mb-16">
+        <span data-reveal class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold border border-primary/20 text-primary mb-4">ROI</span>
+        <h2 data-reveal class="text-3xl md:text-4xl lg:text-5xl font-display font-bold tracking-tight">Messbare <span class="text-primary">Ergebnisse</span></h2>
+        <p data-reveal data-reveal-delay="100" class="text-lg text-[hsl(var(--muted-foreground))] mt-4">So veraendert ShortSelect Ihre Recruiting-Kennzahlen.</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        {roiMetrics.map((m, i) => (
+          <div data-reveal data-reveal-delay={String(i * 200)} class="text-center">
+            <div class="rounded-xl border border-primary/10 bg-[hsl(var(--card))] p-6 hover:border-primary/30 hover:shadow-lg transition-all duration-300 space-y-4">
+              <p class="text-sm text-[hsl(var(--muted-foreground))] font-medium">{m.label}</p>
+              <div class="flex items-center justify-center gap-3">
+                <span class="text-lg text-[hsl(var(--muted-foreground))] line-through">{m.from}</span>
+                <svg class="h-4 w-4 text-primary" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                <span class="text-lg font-bold text-primary">{m.to}</span>
+              </div>
+              <div class="text-5xl md:text-6xl font-display font-bold text-primary">{m.percent}</div>
+              <p class="text-sm text-[hsl(var(--muted-foreground))]">{m.sublabel}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFITS -->
+  <section class="py-20 md:py-28">
+    <div class="container mx-auto px-4">
+      <div class="max-w-3xl mx-auto text-center mb-16">
+        <h2 data-reveal class="text-3xl md:text-4xl lg:text-5xl font-display font-bold tracking-tight">Der <span class="text-primary">Business Case</span></h2>
+        <p data-reveal data-reveal-delay="100" class="text-lg text-[hsl(var(--muted-foreground))] mt-4">Warum sich ShortSelect fuer Ihr Unternehmen rechnet.</p>
+      </div>
+      <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+        {benefits.map((b, i) => (
+          <div data-reveal data-reveal-delay={String(i * 150)} class="group rounded-xl border border-primary/10 bg-[hsl(var(--card))] p-6 hover:shadow-lg transition-all duration-500 hover:-translate-y-1 hover:border-primary/30">
+            <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 group-hover:scale-110 transition-all duration-300">
+              <svg class="h-6 w-6 text-primary" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><Fragment set:html={b.iconPath} /></svg>
+            </div>
+            <h3 class="text-xl font-display font-bold mb-2">{b.title}</h3>
+            <p class="text-[hsl(var(--muted-foreground))] leading-relaxed">{b.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- SECURITY -->
+  <section class="py-20 md:py-28 bg-gradient-to-br from-gray-900 via-gray-900 to-gray-800 text-white relative overflow-hidden">
+    <div class="absolute inset-0 overflow-hidden">
+      <div class="absolute top-0 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-float-slow"></div>
+      <div class="absolute bottom-0 right-1/4 w-80 h-80 bg-primary/5 rounded-full blur-3xl animate-float-slow" style="animation-delay: -3s;"></div>
+    </div>
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:32px_32px]"></div>
+    <div class="container relative mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <div class="flex flex-col md:flex-row items-center gap-12">
+          <div data-reveal class="shrink-0">
+            <div class="relative w-32 h-32 md:w-40 md:h-40">
+              <div class="absolute inset-0 rounded-full border-2 border-primary/30 animate-pulse"></div>
+              <div class="absolute inset-3 rounded-full border border-primary/20 animate-pulse" style="animation-delay: 0.5s;"></div>
+              <div class="absolute inset-6 rounded-full bg-primary/10 flex items-center justify-center">
+                <svg class="h-12 w-12 md:h-16 md:w-16 text-primary animate-float" xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg>
+              </div>
+            </div>
+          </div>
+          <div class="space-y-6">
+            <h2 data-reveal class="text-3xl md:text-4xl font-display font-bold tracking-tight">Sicherheit auf <span class="text-primary">Enterprise-Niveau</span></h2>
+            <p data-reveal data-reveal-delay="100" class="text-white/70 text-lg">DSGVO-konform, EU-Server, Row Level Security — Ihre Daten sind sicher.</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              {securityFeatures.map((f, i) => (
+                <div data-reveal data-reveal-delay={String(i * 100)} class="flex items-center gap-3">
+                  <svg class="h-5 w-5 text-primary shrink-0" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
+                  <span class="text-sm text-white/80">{f}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CTASection />
+</MarketingLayout>

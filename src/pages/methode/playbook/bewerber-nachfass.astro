@@ -1,0 +1,121 @@
+---
+import MarketingLayout from '../../../layouts/MarketingLayout.astro';
+import CTASection from '../../../components/landing/CTASection.astro';
+
+const timelineSteps = [
+  { time: "Sofort", title: "Automatische Eingangsbestaetigung", description: "Der Bewerber erhaelt sofort eine personalisierte E-Mail, die den Eingang bestaetigt und die naechsten Schritte erklaert." },
+  { time: "Tag 1-2", title: "Screening-Fragen versenden", description: "Automatisierte Screening-Fragen helfen, Kandidaten schnell vorzuqualifizieren -- ohne manuellen Aufwand." },
+  { time: "Tag 3", title: "Persoenliche Rueckmeldung zum Status", description: "Eine kurze, persoenliche Nachricht zum aktuellen Stand. Kandidaten wissen, wo sie stehen." },
+  { time: "Tag 5-7", title: "Interview-Einladung oder Absage", description: "Schnelle Entscheidung: Einladung zum Interview oder respektvolle Absage mit Begruendung." },
+  { time: "Tag 14", title: "Feedback-Umfrage nach Absage", description: "Auch abgelehnte Kandidaten verdienen Wertschaetzung. Eine kurze Umfrage verbessert Ihren Prozess." },
+  { time: "Tag 30+", title: "Talent Pool Einladung", description: "Gute Kandidaten, die heute nicht passen, sind morgen Ihre Top-Bewerber. Laden Sie sie in Ihren Talent Pool ein." },
+];
+
+const bestPractices = [
+  { title: "Antwortzeit < 24h", description: "Schnelle Reaktion = hoehere Conversion. Kandidaten, die innerhalb von 24 Stunden eine Antwort erhalten, bleiben 3x haeufiger im Prozess." },
+  { title: "Personalisierung", description: "Name und Stelle in jeder Kommunikation. Massenmail-Feeling ist der schnellste Weg, Top-Talente zu verlieren." },
+  { title: "Transparenz", description: "Klare Zeitangaben fuer naechste Schritte. Kandidaten wollen wissen, wann sie mit einer Antwort rechnen koennen." },
+  { title: "Absage mit Respekt", description: "Jede Absage verdient eine persoenliche Nachricht. Heute abgelehnte Kandidaten koennen morgen Ihre Empfehler sein." },
+];
+---
+
+<MarketingLayout title="Playbook: Der perfekte Nachfass-Workflow - ShortSelect" description="60% der Kandidaten springen ab, weil sie nichts hoeren. So halten Sie jeden Bewerber warm mit dem perfekten Nachfass-Workflow.">
+  <!-- Hero -->
+  <section class="relative overflow-hidden py-20 md:py-32">
+    <div class="absolute inset-0 bg-gradient-to-br from-primary/10 via-background to-accent/5"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_40%_20%,hsl(var(--primary)/0.12),transparent_50%)]"></div>
+    <div class="absolute top-24 left-16 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-float-slow"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,0,0,0.04)_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_at_center,black_40%,transparent_70%)]"></div>
+
+    <div class="container relative mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center space-y-8">
+        <div data-reveal class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20">
+          <svg class="h-4 w-4 text-primary animate-pulse" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.5 2v6h-6M2.5 22v-6h6M2 11.5a10 10 0 0 1 18.8-4.3M22 12.5a10 10 0 0 1-18.8 4.2"/></svg>
+          <span class="text-sm font-medium">Playbook</span>
+        </div>
+        <h1 data-reveal data-reveal-delay="100" class="text-4xl md:text-5xl lg:text-6xl font-display font-bold tracking-tight">
+          Playbook: Der perfekte{" "}
+          <span class="text-primary">Nachfass-Workflow</span>
+        </h1>
+        <p data-reveal data-reveal-delay="200" class="text-lg text-muted-foreground max-w-2xl mx-auto">60% der Kandidaten springen ab, weil sie nichts hoeren. So halten Sie jeden Bewerber warm.</p>
+        <div data-reveal data-reveal-delay="300" class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="https://app.shortselect.com/signup" class="inline-flex items-center gap-2 px-8 py-3 bg-primary text-primary-foreground font-semibold rounded-lg text-base group relative overflow-hidden shadow-lg hover:shadow-xl transition-all hover:scale-105">
+            <span class="relative z-10 flex items-center gap-2">
+              <svg class="h-5 w-5 animate-pulse" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/></svg>
+              Workflow automatisieren
+              <svg class="h-5 w-5 transition-transform group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent"></div>
+  </section>
+
+  <!-- Timeline -->
+  <section class="py-20 md:py-28 bg-muted/30">
+    <div class="container mx-auto px-4">
+      <div data-reveal class="text-center max-w-3xl mx-auto mb-16">
+        <span class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold border-primary/20 text-primary mb-4">Schritt fuer Schritt</span>
+        <h2 class="text-3xl md:text-5xl font-display font-bold tracking-tight mb-4">Der ideale <span class="text-primary">Nachfass-Ablauf</span></h2>
+        <p class="text-lg text-muted-foreground">Von der Bewerbung bis zum Talent Pool -- so sieht professionelle Kandidaten-Kommunikation aus.</p>
+      </div>
+      <div class="max-w-3xl mx-auto space-y-6">
+        {timelineSteps.map((step, i) => (
+          <div data-reveal data-reveal-delay={String(Math.min(i * 100, 500))} class="flex gap-4 md:gap-6">
+            <div class="flex-shrink-0 w-16 md:w-24 h-16 md:h-24 rounded-2xl bg-primary/10 border border-primary/20 flex items-center justify-center">
+              <span class="text-xs md:text-sm font-mono font-bold text-primary">{step.time}</span>
+            </div>
+            <div class="rounded-xl border p-5 md:p-6 flex-1 hover:border-primary/20 hover:shadow-lg transition-all bg-card">
+              <h3 class="text-lg font-display font-bold mb-1">{step.title}</h3>
+              <p class="text-sm text-muted-foreground leading-relaxed">{step.description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Best Practices -->
+  <section class="py-20 md:py-28">
+    <div class="container mx-auto px-4">
+      <div data-reveal class="text-center max-w-3xl mx-auto mb-16">
+        <span class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold border-primary/20 text-primary mb-4">Best Practices</span>
+        <h2 class="text-3xl md:text-5xl font-display font-bold tracking-tight mb-4">4 Regeln fuer <span class="text-primary">besseren Nachfass</span></h2>
+        <p class="text-lg text-muted-foreground">Diese Grundprinzipien entscheiden, ob Kandidaten bleiben oder abspringen.</p>
+      </div>
+      <div class="grid sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
+        {bestPractices.map((p, i) => (
+          <div data-reveal data-reveal-delay={String(i * 100)} class="rounded-xl border p-6 hover:shadow-lg hover:border-primary/20 transition-all duration-500 hover:-translate-y-1 bg-card">
+            <h3 class="text-lg font-display font-bold mb-1">{p.title}</h3>
+            <p class="text-sm text-muted-foreground leading-relaxed">{p.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section class="py-20 md:py-28 bg-gradient-to-br from-primary via-primary/90 to-accent text-white relative overflow-hidden">
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:24px_24px] opacity-30"></div>
+    <div class="container relative mx-auto px-4">
+      <div data-reveal class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-display font-bold tracking-tight">Was ein guter Nachfass-Workflow bewirkt</h2>
+      </div>
+      <div class="max-w-4xl mx-auto grid md:grid-cols-3 gap-8">
+        {[
+          { value: "60%", label: "weniger Abspruenge" },
+          { value: "<24h", label: "Antwortzeit" },
+          { value: "100%", label: "Follow-up-Rate" },
+        ].map((stat, i) => (
+          <div data-reveal data-reveal-delay={String(i * 200)} class="text-center space-y-3">
+            <div class="text-5xl md:text-6xl font-display font-bold">{stat.value}</div>
+            <p class="text-white/80 font-medium">{stat.label}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <CTASection />
+</MarketingLayout>

@@ -1,0 +1,38 @@
+---
+import MarketingLayout from './MarketingLayout.astro';
+import CTASection from '../components/landing/CTASection.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  phaseNumber?: number;
+  phaseTitle?: string;
+  phaseColor?: string;
+  heroSubline: string;
+  breadcrumbLabel?: string;
+  badge?: string;
+}
+
+const {
+  title,
+  description,
+  phaseNumber,
+  phaseTitle,
+  phaseColor = 'primary',
+  heroSubline,
+  breadcrumbLabel,
+  badge = 'Smart Recruiting',
+} = Astro.props;
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  name: title,
+  description: description,
+};
+---
+
+<MarketingLayout title={title} description={description} jsonLd={jsonLd}>
+  <slot />
+  <CTASection />
+</MarketingLayout>

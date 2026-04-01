@@ -1,0 +1,146 @@
+---
+import MarketingLayout from '../layouts/MarketingLayout.astro';
+import CTASection from '../components/landing/CTASection.astro';
+
+const caseStudies = [
+  {
+    company: "searched GmbH",
+    industry: "IT-Personalvermittlung",
+    teamSize: "8 Recruiter",
+    letter: "S",
+    letterBg: "bg-[hsl(var(--primary))]",
+    quote: "ShortSelect hat unsere Agentur auf ein neues Level gebracht. Die Multi-Tenancy ist genau das, was wir gebraucht haben.",
+    person: "Yasar Senturk",
+    role: "Geschaeftsfuehrer",
+    results: [
+      { metric: "40%", label: "schnellere Besetzung" },
+      { metric: "3x", label: "mehr Placements/Monat" },
+      { metric: "12h", label: "Zeitersparnis/Woche" },
+    ],
+  },
+  {
+    company: "VeraPartners",
+    industry: "Executive Search",
+    teamSize: "4 Berater",
+    letter: "V",
+    letterBg: "bg-[hsl(var(--accent))]",
+    quote: "Endlich ein ATS, das fuer Personalberater gebaut wurde. Das Client Portal ist ein Game-Changer.",
+    person: "Bahadir Battal",
+    role: "Gruender",
+    results: [
+      { metric: "60%", label: "weniger Admin-Aufwand" },
+      { metric: "2x", label: "schnelleres Feedback" },
+      { metric: "100%", label: "Kundenzufriedenheit" },
+    ],
+  },
+  {
+    company: "Experiton",
+    industry: "Personalberatung",
+    teamSize: "6 Consultants",
+    letter: "E",
+    letterBg: "bg-emerald-500",
+    quote: "Die KI-Features von ShortSelect sparen uns Stunden bei der Vorauswahl. Absolut empfehlenswert.",
+    person: "Alireza Nikjou",
+    role: "Geschaeftsfuehrer",
+    results: [
+      { metric: "80%", label: "schnellere Vorauswahl" },
+      { metric: "45%", label: "hoehere Match-Quote" },
+      { metric: "5h", label: "Zeitersparnis/Woche" },
+    ],
+  },
+  {
+    company: "SalesWorx",
+    industry: "Sales Recruiting",
+    teamSize: "3 Recruiter",
+    letter: "S",
+    letterBg: "bg-blue-500",
+    quote: "Von Excel zu ShortSelect in einem Tag. Die Karriereseite hat uns sofort neue Bewerber gebracht.",
+    person: "Nordin Begdouri",
+    role: "Geschaeftsfuehrer",
+    results: [
+      { metric: "200%", label: "mehr Bewerbungen" },
+      { metric: "1 Tag", label: "Setup-Zeit" },
+      { metric: "0 EUR", label: "Startkosten" },
+    ],
+  },
+];
+---
+
+<MarketingLayout
+  title="Kunden & Erfolgsgeschichten – Wer nutzt ShortSelect | ShortSelect"
+  description="Erfahren Sie, wie Recruiting-Agenturen und HR-Teams mit ShortSelect ihre Besetzungszeit halbieren und mehr Placements erzielen."
+>
+  <!-- Hero -->
+  <section class="relative overflow-hidden py-28 md:py-40 bg-gradient-to-br from-[hsl(var(--primary))] via-[hsl(var(--primary)/0.95)] to-[hsl(var(--accent))] text-white">
+    <div class="absolute top-10 left-[10%] w-72 h-72 bg-white/5 rounded-full blur-3xl animate-float-slow"></div>
+    <div class="absolute bottom-10 right-[10%] w-96 h-96 bg-white/5 rounded-full blur-3xl animate-float-slow" style="animation-delay: -3s;"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.08)_1px,transparent_1px)] bg-[size:32px_32px] opacity-40"></div>
+
+    <div class="container relative mx-auto px-4">
+      <div data-reveal class="max-w-3xl mx-auto text-center space-y-6">
+        <span class="inline-block px-3 py-1 rounded-full bg-white/10 text-white/90 border border-white/20 text-sm font-medium">Erfolgsgeschichten</span>
+        <h1 class="text-4xl md:text-6xl lg:text-7xl font-display font-bold tracking-tight leading-tight">
+          Teams, die mit ShortSelect gewinnen.
+        </h1>
+        <p class="text-lg md:text-xl text-white/80 max-w-2xl mx-auto">
+          Von der Ein-Mann-Agentur bis zum 8-koepfigen Recruiting-Team: So nutzen unsere Kunden ShortSelect.
+        </p>
+      </div>
+    </div>
+    <div class="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-[hsl(var(--background))] to-transparent"></div>
+  </section>
+
+  <!-- Stats -->
+  <section class="py-16 md:py-20 relative overflow-hidden">
+    <div class="container mx-auto px-4">
+      <div data-reveal class="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto text-center">
+        <div><div class="text-3xl md:text-4xl font-display font-bold text-[hsl(var(--primary))]">43+</div><p class="text-sm text-[hsl(var(--muted-foreground))] mt-1">Teams</p></div>
+        <div><div class="text-3xl md:text-4xl font-display font-bold text-[hsl(var(--primary))]">50%</div><p class="text-sm text-[hsl(var(--muted-foreground))] mt-1">schnellere Besetzung</p></div>
+        <div><div class="text-3xl md:text-4xl font-display font-bold text-[hsl(var(--primary))]">12h</div><p class="text-sm text-[hsl(var(--muted-foreground))] mt-1">Zeitersparnis/Woche</p></div>
+        <div><div class="text-3xl md:text-4xl font-display font-bold text-[hsl(var(--primary))]">4.8</div><p class="text-sm text-[hsl(var(--muted-foreground))] mt-1">Bewertung</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Case Studies -->
+  <section class="py-20 md:py-28 bg-[hsl(var(--muted)/0.3)] relative overflow-hidden">
+    <div class="container mx-auto px-4">
+      <div data-reveal class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-3xl md:text-4xl font-display font-bold tracking-tight mb-4">Erfolgsgeschichten</h2>
+        <p class="text-lg text-[hsl(var(--muted-foreground))]">Echte Ergebnisse, echte Teams.</p>
+      </div>
+
+      <div class="space-y-8 max-w-4xl mx-auto">
+        {caseStudies.map((cs, i) => (
+          <div data-reveal data-reveal-delay={`${i * 100}`} class="rounded-xl border border-[hsl(var(--border))] bg-[hsl(var(--card))] p-8 md:p-10">
+            <div class="flex flex-col md:flex-row md:items-start gap-6">
+              <div class={`h-16 w-16 rounded-xl ${cs.letterBg} text-white flex items-center justify-center text-2xl font-display font-bold shrink-0`}>
+                {cs.letter}
+              </div>
+              <div class="flex-1 space-y-4">
+                <div>
+                  <h3 class="text-xl font-display font-bold">{cs.company}</h3>
+                  <p class="text-sm text-[hsl(var(--muted-foreground))]">{cs.industry} &middot; {cs.teamSize}</p>
+                </div>
+                <blockquote class="text-lg text-[hsl(var(--muted-foreground))] italic border-l-4 border-[hsl(var(--primary)/0.3)] pl-4">
+                  "{cs.quote}"
+                </blockquote>
+                <p class="text-sm font-medium">{cs.person}, {cs.role}</p>
+                <div class="grid grid-cols-3 gap-4 pt-4 border-t border-[hsl(var(--border)/0.5)]">
+                  {cs.results.map((r) => (
+                    <div class="text-center">
+                      <div class="text-xl font-display font-bold text-[hsl(var(--primary))]">{r.metric}</div>
+                      <p class="text-xs text-[hsl(var(--muted-foreground))]">{r.label}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <CTASection />
+</MarketingLayout>

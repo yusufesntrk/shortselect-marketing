@@ -1,0 +1,51 @@
+---
+import VergleichLayout from '../../layouts/VergleichLayout.astro';
+
+const comparisonData = [
+  { feature: "Modell", ssStatus: "check" as const, ssLabel: "Pure SaaS", compStatus: "warn" as const, compLabel: "SaaS + Service-Hybrid" },
+  { feature: "Preise", ssStatus: "check" as const, ssLabel: "Ab 0\u20AC/Monat", compStatus: "warn" as const, compLabel: "15-25% des Jahresgehalts" },
+  { feature: "KI-Features", ssStatus: "check" as const, ssLabel: "Voll integriert", compStatus: "warn" as const, compLabel: "Begrenzt" },
+  { feature: "Kontrolle", ssStatus: "check" as const, ssLabel: "Volle Kontrolle", compStatus: "warn" as const, compLabel: "Workwise steuert teilweise" },
+  { feature: "Karriereseite", ssStatus: "check" as const, ssLabel: "Embeddable Widget", compStatus: "check" as const, compLabel: "Vorhanden" },
+  { feature: "Client Portal", ssStatus: "check" as const, ssLabel: "Integriert", compStatus: "x" as const, compLabel: "Nicht verfuegbar" },
+  { feature: "Multi-Tenancy", ssStatus: "check" as const, ssLabel: "Vollstaendig", compStatus: "x" as const, compLabel: "Nicht verfuegbar" },
+  { feature: "Pipeline", ssStatus: "check" as const, ssLabel: "Drag & Drop", compStatus: "check" as const, compLabel: "Vorhanden" },
+  { feature: "Talent Pool", ssStatus: "check" as const, ssLabel: "Unbegrenzt", compStatus: "warn" as const, compLabel: "Begrenzt" },
+  { feature: "API Zugang", ssStatus: "check" as const, ssLabel: "REST API", compStatus: "x" as const, compLabel: "Nicht verfuegbar" },
+];
+---
+
+<VergleichLayout
+  title="ShortSelect vs. Workwise - ATS Vergleich 2026"
+  description="ATS-Software oder Recruiting-Service? Workwise kombiniert Software mit Dienstleistung. Vergleich mit ShortSelect."
+  competitorName="Workwise"
+  heroSubline="Workwise kombiniert Software mit Recruiting-Dienstleistung. Wir zeigen die Unterschiede."
+  heroBadge="Vergleich"
+  ssDescription="Pure SaaS-Plattform mit voller Kontrolle"
+  ssHighlights={["KI-gestuetztes Kandidaten-Matching", "Volle Kontrolle ueber Prozesse", "Ab 0\u20AC/Monat starten", "Multi-Tenancy & Client Portal"]}
+  compDescription="Recruiting-Service mit Software-Komponente"
+  compHighlights={["Erfolgsbasierte Vermittlung", "Jobanzeigen-Schaltung inklusive", "Kandidaten-Sourcing durch Workwise", "Beratung im Recruiting-Prozess"]}
+  comparisonData={comparisonData}
+  whenCompBetter={{
+    title: "Wann Workwise besser passt",
+    intro: "Workwise ist die richtige Wahl, wenn Sie wenig Zeit haben und Budget fuer eine Dienstleistung mitbringen:",
+    items: [
+      "Sie moechten Recruiting komplett auslagern",
+      "Kein internes Recruiting-Team vorhanden",
+      "Schnelle Besetzung wichtiger als Prozessaufbau",
+      "Budget fuer erfolgsbasierte Vermittlung (15-25%)",
+      "Keine eigene Karriereseiten-Strategie geplant",
+    ]
+  }}
+  whenSSBetter={{
+    title: "Wann ShortSelect besser passt",
+    intro: "ShortSelect ist ideal, wenn Sie volle Kontrolle und eigene Prozesse wollen:",
+    items: [
+      "Eigene Recruiting-Prozesse aufbauen und steuern",
+      "KI-gestuetztes Matching ohne Abhaengigkeit",
+      "Multi-Mandanten-Verwaltung fuer Agenturen",
+      "Client Portal fuer transparente Zusammenarbeit",
+      "Kostenloser Start ohne erfolgsbasierte Gebuehren",
+    ]
+  }}
+/>

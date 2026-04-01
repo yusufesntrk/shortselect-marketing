@@ -1,0 +1,73 @@
+---
+import MarketingLayout from '../../layouts/MarketingLayout.astro';
+import CTASection from '../../components/landing/CTASection.astro';
+import { glossaryTerms } from '../../data/glossary';
+---
+
+<MarketingLayout
+  title="Recruiting Glossar – HR-Begriffe einfach erklaert | ShortSelect"
+  description="Die wichtigsten Begriffe aus Recruiting, HR und Bewerbermanagement -- von ATS bis Quality of Hire, einfach und verstaendlich erklaert."
+>
+  <!-- Hero -->
+  <section class="relative overflow-hidden py-20 md:py-32">
+    <div class="absolute inset-0 bg-gradient-to-br from-[hsl(var(--primary)/0.1)] via-[hsl(var(--accent)/0.05)] to-[hsl(var(--background))]"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,hsl(var(--primary)/0.15),transparent_50%)]"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,hsl(var(--accent)/0.1),transparent_50%)]"></div>
+    <div class="absolute top-20 left-10 w-72 h-72 bg-[hsl(var(--primary)/0.1)] rounded-full blur-3xl animate-float-slow"></div>
+    <div class="absolute bottom-20 right-10 w-96 h-96 bg-[hsl(var(--accent)/0.1)] rounded-full blur-3xl animate-float-slow" style="animation-delay: -3s;"></div>
+    <div class="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.03)_1px,transparent_1px)] bg-[size:60px_60px] [mask-image:radial-gradient(ellipse_at_center,black_30%,transparent_70%)]"></div>
+
+    <div class="container relative mx-auto px-4">
+      <div class="mx-auto max-w-4xl text-center space-y-8">
+        <div data-reveal class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[hsl(var(--primary)/0.1)] border border-[hsl(var(--primary)/0.2)]">
+          <svg class="h-4 w-4 text-[hsl(var(--primary))]" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+          <span class="text-sm font-medium">Wissen</span>
+        </div>
+
+        <h1 data-reveal data-reveal-delay="100" class="text-4xl md:text-6xl lg:text-7xl font-display font-bold tracking-tight">
+          Recruiting <span class="text-[hsl(var(--primary))]">Glossar</span>
+        </h1>
+
+        <p data-reveal data-reveal-delay="200" class="text-lg md:text-xl text-[hsl(var(--muted-foreground))] max-w-2xl mx-auto">
+          Die wichtigsten Begriffe aus Recruiting, HR und Bewerbermanagement -- einfach erklaert.
+        </p>
+      </div>
+    </div>
+
+    <div class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[hsl(var(--background))] to-transparent"></div>
+  </section>
+
+  <!-- Terms Grid -->
+  <section class="py-20 md:py-28 relative overflow-hidden">
+    <div class="absolute top-20 right-0 w-80 h-80 bg-[hsl(var(--accent)/0.05)] rounded-full blur-3xl"></div>
+    <div class="absolute bottom-20 left-0 w-64 h-64 bg-[hsl(var(--primary)/0.05)] rounded-full blur-3xl"></div>
+
+    <div class="container mx-auto px-4">
+      <div data-reveal class="text-center max-w-3xl mx-auto mb-16">
+        <span class="inline-block px-2.5 py-0.5 rounded-full border border-[hsl(var(--primary)/0.2)] text-[hsl(var(--primary))] text-xs font-medium mb-4">A-Z</span>
+        <h2 class="text-3xl md:text-5xl font-display font-bold tracking-tight mb-4">Alle Begriffe im Ueberblick</h2>
+        <p class="text-lg text-[hsl(var(--muted-foreground))]">Von ATS bis Quality of Hire -- Ihr Nachschlagewerk fuer modernes Recruiting.</p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        {glossaryTerms.map((term, i) => (
+          <a href={`/glossar/${term.slug}`} data-reveal data-reveal-delay={`${Math.min(i * 100, 500)}`}>
+            <article class="group h-full rounded-xl border border-[hsl(var(--border))] bg-[hsl(var(--card))] hover:shadow-lg hover:border-[hsl(var(--primary)/0.5)] hover:-translate-y-1 transition-all duration-500 cursor-pointer p-6 space-y-4">
+              <div class="h-12 w-12 rounded-xl bg-[hsl(var(--primary)/0.1)] flex items-center justify-center group-hover:bg-[hsl(var(--primary)/0.2)] transition-colors">
+                <svg class="h-6 w-6 text-[hsl(var(--primary))]" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+              </div>
+              <h3 class="text-lg font-display font-bold group-hover:text-[hsl(var(--primary))] transition-colors">{term.title}</h3>
+              <p class="text-sm text-[hsl(var(--muted-foreground))] leading-relaxed">{term.description}</p>
+              <div class="flex items-center gap-1 text-sm font-medium text-[hsl(var(--primary))] opacity-0 group-hover:opacity-100 transition-opacity">
+                Mehr erfahren
+                <svg class="h-4 w-4 transition-transform group-hover:translate-x-1" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </div>
+            </article>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <CTASection />
+</MarketingLayout>

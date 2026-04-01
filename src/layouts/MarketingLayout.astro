@@ -1,0 +1,81 @@
+---
+import SEOHead from '../components/seo/SEOHead.astro';
+import LandingNav from '../components/nav/LandingNav.astro';
+import LandingFooter from '../components/footer/LandingFooter.astro';
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+  canonical?: string;
+  ogImage?: string;
+  jsonLd?: object | object[];
+  noindex?: boolean;
+}
+
+const props = Astro.props;
+
+const orgSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://shortselect.com/#organization",
+  name: "ShortSelect",
+  url: "https://shortselect.com",
+  logo: { "@type": "ImageObject", url: "https://shortselect.com/logo.svg" },
+  description: "KI-gestützte Recruiting Software und ATS für moderne Teams",
+  contactPoint: {
+    "@type": "ContactPoint",
+    email: "hello@shortselect.com",
+    contactType: "Customer Service",
+    availableLanguage: ["German", "English"],
+  },
+};
+---
+
+<!doctype html>
+<html lang="de">
+  <head>
+    <SEOHead {...props} jsonLd={props.jsonLd ? [orgSchema, ...(Array.isArray(props.jsonLd) ? props.jsonLd : [props.jsonLd])] : orgSchema} />
+  </head>
+  <body class="min-h-screen bg-background text-foreground antialiased">
+    <LandingNav />
+    <main>
+      <slot />
+    </main>
+    <LandingFooter />
+
+    <!-- ScrollReveal: Native IntersectionObserver -->
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('revealed');
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.1, rootMargin: '0px' }
+        );
+        document.querySelectorAll('[data-reveal]').forEach((el) => observer.observe(el));
+      });
+    </script>
+    <style is:global>
+      [data-reveal] {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+      }
+      [data-reveal].revealed {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      [data-reveal-delay="100"] { transition-delay: 100ms; }
+      [data-reveal-delay="200"] { transition-delay: 200ms; }
+      [data-reveal-delay="300"] { transition-delay: 300ms; }
+      [data-reveal-delay="400"] { transition-delay: 400ms; }
+      [data-reveal-delay="500"] { transition-delay: 500ms; }
+    </style>
+  </body>
+</html>

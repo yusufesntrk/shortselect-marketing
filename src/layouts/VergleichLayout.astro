@@ -1,0 +1,275 @@
+---
+import MarketingLayout from './MarketingLayout.astro';
+import CTASection from '../components/landing/CTASection.astro';
+
+interface ComparisonRow {
+  feature: string;
+  ssStatus: 'check' | 'warn' | 'x';
+  ssLabel: string;
+  compStatus: 'check' | 'warn' | 'x';
+  compLabel: string;
+}
+
+interface Props {
+  title: string;
+  description: string;
+  competitorName: string;
+  heroSubline: string;
+  heroBadge: string;
+  ssDescription: string;
+  ssHighlights: string[];
+  compDescription: string;
+  compHighlights: string[];
+  comparisonData: ComparisonRow[];
+  whenCompBetter: { title: string; intro: string; items: string[] };
+  whenSSBetter: { title: string; intro: string; items: string[] };
+}
+
+const {
+  title,
+  description,
+  competitorName,
+  heroSubline,
+  heroBadge,
+  ssDescription,
+  ssHighlights,
+  compDescription,
+  compHighlights,
+  comparisonData,
+  whenCompBetter,
+  whenSSBetter,
+} = Astro.props;
+
+const migrationSteps = [
+  { step: "1", title: "Account erstellen", desc: "Kostenlos in unter 2 Minuten registrieren." },
+  { step: "2", title: "Daten importieren", desc: "Kandidaten und Jobs per CSV oder API uebertragen." },
+  { step: "3", title: "Team einladen", desc: "Recruiter und Hiring Manager hinzufuegen." },
+  { step: "4", title: "Loslegen", desc: "Sofort mit KI-gestuetztem Recruiting starten." },
+];
+
+function statusIcon(status: string) {
+  if (status === 'check') return { svg: '<svg class="h-5 w-5 text-green-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>', color: 'text-green-600' };
+  if (status === 'x') return { svg: '<svg class="h-5 w-5 text-red-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>', color: 'text-red-500' };
+  return { svg: '<svg class="h-5 w-5 text-yellow-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>', color: 'text-yellow-500' };
+}
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  name: title,
+  description: description,
+};
+---
+
+<MarketingLayout title={title} description={description} jsonLd={jsonLd}>
+  <!-- Hero Section -->
+  <section class="relative overflow-hidden py-20 md:py-32">
+    <div class="absolute inset-0 bg-gradient-to-br from-primary/10 via-accent/5 to-background"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,hsl(var(--primary)/0.15),transparent_50%)]"></div>
+    <div class="absolute top-20 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-float-slow"></div>
+    <div class="absolute bottom-20 right-10 w-96 h-96 bg-accent/10 rounded-full blur-3xl animate-float-slow" style="animation-delay: -3s;"></div>
+    <div class="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.03)_1px,transparent_1px)] bg-[size:60px_60px] [mask-image:radial-gradient(ellipse_at_center,black_30%,transparent_70%)]"></div>
+
+    <div class="container relative mx-auto px-4">
+      <div class="mx-auto max-w-4xl text-center space-y-8">
+        <div data-reveal class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20">
+          <svg class="h-4 w-4 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></svg>
+          <span class="text-sm font-medium">{heroBadge}</span>
+        </div>
+
+        <h1 data-reveal data-reveal-delay="100" class="text-4xl md:text-6xl lg:text-7xl font-display font-bold tracking-tight">
+          ShortSelect vs.{" "}
+          <span class="relative inline-block text-primary">
+            {competitorName}
+            <svg class="absolute -bottom-2 left-0 w-full" viewBox="0 0 300 12" fill="none">
+              <path d="M2 10C60 4 240 4 298 10" stroke="hsl(var(--primary))" stroke-width="4" stroke-linecap="round" class="underline-path" style="stroke-dasharray: 300; stroke-dashoffset: 300;"/>
+            </svg>
+          </span>
+        </h1>
+
+        <p data-reveal data-reveal-delay="200" class="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
+          {heroSubline}
+        </p>
+
+        <div data-reveal data-reveal-delay="300" class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+          <a href="https://app.shortselect.com/signup" class="inline-flex items-center gap-2 px-8 py-3 bg-primary text-primary-foreground font-semibold rounded-lg text-base group relative overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+            <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
+            <span class="relative z-10 flex items-center gap-2">
+              <svg class="h-5 w-5 animate-pulse" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/><path d="M20 3v4"/><path d="M22 5h-4"/></svg>
+              Jetzt kostenlos testen
+              <svg class="h-5 w-5 transition-transform group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Summary Cards -->
+  <section class="py-16 md:py-24 bg-muted/30">
+    <div class="container mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+        <div data-reveal class="rounded-xl border-2 border-primary/20 bg-primary/5 p-6">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center">
+              <svg class="h-5 w-5 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+            </div>
+            <h3 class="text-xl font-display font-bold">ShortSelect</h3>
+          </div>
+          <p class="text-base text-muted-foreground mb-4">{ssDescription}</p>
+          <ul class="space-y-3">
+            {ssHighlights.map((item) => (
+              <li class="flex items-center gap-2 text-sm">
+                <svg class="h-4 w-4 text-green-600 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div data-reveal data-reveal-delay="100" class="rounded-xl border p-6">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="h-10 w-10 rounded-lg bg-muted flex items-center justify-center">
+              <svg class="h-5 w-5 text-muted-foreground" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="20" x="4" y="2" rx="2" ry="2"/><path d="M9 22v-4h6v4"/><path d="M8 6h.01"/><path d="M16 6h.01"/><path d="M12 6h.01"/><path d="M12 10h.01"/><path d="M12 14h.01"/><path d="M16 10h.01"/><path d="M16 14h.01"/><path d="M8 10h.01"/><path d="M8 14h.01"/></svg>
+            </div>
+            <h3 class="text-xl font-display font-bold">{competitorName}</h3>
+          </div>
+          <p class="text-base text-muted-foreground mb-4">{compDescription}</p>
+          <ul class="space-y-3">
+            {compHighlights.map((item) => (
+              <li class="flex items-center gap-2 text-sm">
+                <svg class="h-4 w-4 text-muted-foreground shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                <span class="text-muted-foreground">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Feature Comparison Table -->
+  <section class="py-16 md:py-24">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <div data-reveal class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-display font-bold tracking-tight mb-4">Feature-Vergleich im Detail</h2>
+          <p class="text-muted-foreground text-lg">Ein ehrlicher Blick auf die Unterschiede.</p>
+        </div>
+
+        <div data-reveal data-reveal-delay="100" class="grid grid-cols-3 gap-4 px-4 py-3 rounded-t-lg bg-muted font-semibold text-sm">
+          <span>Feature</span>
+          <span class="text-center">ShortSelect</span>
+          <span class="text-center">{competitorName}</span>
+        </div>
+
+        {comparisonData.map((row, index) => (
+          <div data-reveal data-reveal-delay={String(Math.min((index + 2) * 100, 500))} class="grid grid-cols-3 gap-4 px-4 py-4 border-b last:border-b-0 items-center">
+            <span class="font-medium text-sm">{row.feature}</span>
+            <div class="flex items-center justify-center gap-2 bg-primary/5 rounded-lg py-2">
+              <Fragment set:html={statusIcon(row.ssStatus).svg} />
+              <span class="text-sm hidden sm:inline">{row.ssLabel}</span>
+            </div>
+            <div class="flex items-center justify-center gap-2 py-2">
+              <Fragment set:html={statusIcon(row.compStatus).svg} />
+              <span class="text-sm hidden sm:inline text-muted-foreground">{row.compLabel}</span>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- When Competitor / When ShortSelect -->
+  <section class="py-16 md:py-24 bg-muted/30">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-12">
+        <div data-reveal>
+          <span class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold bg-secondary text-secondary-foreground mb-4">Faire Einschaetzung</span>
+          <h2 class="text-2xl md:text-3xl font-display font-bold tracking-tight mb-4">{whenCompBetter.title}</h2>
+          <p class="text-muted-foreground mb-6">{whenCompBetter.intro}</p>
+          <ul class="space-y-3">
+            {whenCompBetter.items.map((item) => (
+              <li class="flex items-start gap-2 text-sm">
+                <svg class="h-4 w-4 text-muted-foreground shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+                <span class="text-muted-foreground">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div data-reveal data-reveal-delay="200">
+          <span class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold bg-primary/10 text-primary border-primary/20 mb-4">Empfehlung</span>
+          <h2 class="text-2xl md:text-3xl font-display font-bold tracking-tight mb-4">{whenSSBetter.title}</h2>
+          <p class="text-muted-foreground mb-6">{whenSSBetter.intro}</p>
+          <ul class="space-y-3">
+            {whenSSBetter.items.map((item) => (
+              <li class="flex items-start gap-2 text-sm">
+                <svg class="h-4 w-4 text-green-600 shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Extra slot for page-specific content -->
+  <slot />
+
+  <!-- Migration Section -->
+  <section class="py-16 md:py-24 relative overflow-hidden">
+    <div class="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl animate-float-slow"></div>
+    <div class="absolute bottom-0 left-0 w-48 h-48 bg-accent/5 rounded-full blur-3xl animate-float-slow" style="animation-delay: -2s;"></div>
+
+    <div class="container relative mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <div data-reveal class="text-center mb-12">
+          <span class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold bg-secondary text-secondary-foreground mb-4">Einfacher Wechsel</span>
+          <h2 class="text-3xl md:text-4xl font-display font-bold tracking-tight mb-4">
+            In 15 Minuten{" "}
+            <span class="relative inline-block text-primary">umgezogen</span>
+          </h2>
+          <p class="text-muted-foreground text-lg">Der Wechsel von {competitorName} zu ShortSelect ist einfacher als gedacht.</p>
+        </div>
+
+        <div class="relative">
+          <div class="absolute left-8 top-0 bottom-0 w-0.5 bg-border hidden md:block"></div>
+
+          <div class="space-y-8">
+            {migrationSteps.map((step, index) => (
+              <div data-reveal data-reveal-delay={String(Math.min((index + 1) * 100, 400))} class="flex items-start gap-6">
+                <div class="relative z-10 flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-primary text-white font-display font-bold text-lg shadow-lg">
+                  {step.step}
+                </div>
+                <div class="pt-3">
+                  <h3 class="text-lg font-display font-bold mb-1">{step.title}</h3>
+                  <p class="text-muted-foreground">{step.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div data-reveal data-reveal-delay="500" class="text-center mt-12">
+          <a href="https://app.shortselect.com/signup" class="inline-flex items-center gap-2 px-8 py-3 bg-primary text-primary-foreground font-semibold rounded-lg text-base group transition-all duration-300 hover:scale-105">
+            Jetzt wechseln
+            <svg class="h-5 w-5 transition-transform group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CTASection />
+</MarketingLayout>
+
+<style>
+  .underline-path {
+    transition: stroke-dashoffset 1s ease-out 0.5s;
+  }
+  :global([data-reveal].revealed) .underline-path {
+    stroke-dashoffset: 0;
+  }
+</style>

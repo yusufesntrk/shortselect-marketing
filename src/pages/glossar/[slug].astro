@@ -1,0 +1,134 @@
+---
+import MarketingLayout from '../../layouts/MarketingLayout.astro';
+import CTASection from '../../components/landing/CTASection.astro';
+import { glossaryData, allTermTitles } from '../../data/glossary';
+
+export function getStaticPaths() {
+  return Object.keys(glossaryData).map((slug) => ({
+    params: { slug },
+    props: { entry: glossaryData[slug], slug },
+  }));
+}
+
+const { entry, slug } = Astro.props;
+
+const relatedTerms = entry.relatedSlugs
+  .filter((s: string) => allTermTitles[s])
+  .map((s: string) => ({ slug: s, title: allTermTitles[s] }));
+
+const glossarySchema = {
+  "@context": "https://schema.org",
+  "@type": "DefinedTerm",
+  name: entry.title,
+  description: entry.shortDef,
+  inDefinedTermSet: {
+    "@type": "DefinedTermSet",
+    name: "ShortSelect Recruiting Glossar",
+    url: "https://shortselect.com/glossar",
+  },
+};
+---
+
+<MarketingLayout
+  title={`${entry.title} – Recruiting Glossar | ShortSelect`}
+  description={entry.shortDef}
+  jsonLd={glossarySchema}
+>
+  <!-- Hero -->
+  <section class="relative overflow-hidden py-20 md:py-28">
+    <div class="absolute inset-0 bg-gradient-to-br from-[hsl(var(--primary)/0.1)] via-[hsl(var(--accent)/0.05)] to-[hsl(var(--background))]"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,hsl(var(--primary)/0.15),transparent_50%)]"></div>
+    <div class="absolute top-20 left-10 w-72 h-72 bg-[hsl(var(--primary)/0.1)] rounded-full blur-3xl animate-float-slow"></div>
+    <div class="absolute bottom-20 right-10 w-96 h-96 bg-[hsl(var(--accent)/0.1)] rounded-full blur-3xl animate-float-slow" style="animation-delay: -3s;"></div>
+    <div class="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.03)_1px,transparent_1px)] bg-[size:60px_60px] [mask-image:radial-gradient(ellipse_at_center,black_30%,transparent_70%)]"></div>
+
+    <div class="container relative mx-auto px-4">
+      <div class="mx-auto max-w-3xl space-y-6">
+        <!-- Breadcrumb -->
+        <nav data-reveal class="flex items-center gap-1.5 text-sm text-[hsl(var(--muted-foreground))]">
+          <a href="/glossar" class="hover:text-[hsl(var(--foreground))] transition-colors">Glossar</a>
+          <svg class="h-3.5 w-3.5" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+          <span class="text-[hsl(var(--primary))]">{entry.title}</span>
+        </nav>
+
+        <h1 data-reveal data-reveal-delay="100" class="text-3xl md:text-4xl lg:text-5xl font-display font-bold tracking-tight leading-tight">
+          {entry.title}
+        </h1>
+
+        <p data-reveal data-reveal-delay="200" class="text-lg md:text-xl text-[hsl(var(--muted-foreground))] max-w-2xl">
+          {entry.shortDef}
+        </p>
+      </div>
+    </div>
+
+    <div class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[hsl(var(--background))] to-transparent"></div>
+  </section>
+
+  <!-- Definition -->
+  <section class="py-16 md:py-20 relative overflow-hidden">
+    <div class="container mx-auto px-4">
+      <div class="max-w-3xl mx-auto space-y-16">
+        <!-- Definition -->
+        <div data-reveal>
+          <h2 class="text-2xl font-display font-bold mb-4">Definition</h2>
+          <p class="text-[hsl(var(--muted-foreground))] leading-relaxed text-lg">{entry.definition}</p>
+        </div>
+
+        <!-- Importance -->
+        <div data-reveal>
+          <h2 class="text-2xl font-display font-bold mb-4">Warum ist das wichtig?</h2>
+          <p class="text-[hsl(var(--muted-foreground))] leading-relaxed text-lg">{entry.importance}</p>
+        </div>
+
+        <!-- Best Practices -->
+        <div data-reveal>
+          <h2 class="text-2xl font-display font-bold mb-6">Best Practices</h2>
+          <ul class="space-y-4">
+            {entry.bestPractices.map((practice: string) => (
+              <li class="flex gap-3">
+                <div class="h-6 w-6 rounded-full bg-[hsl(var(--primary)/0.1)] flex items-center justify-center shrink-0 mt-0.5">
+                  <svg class="h-3.5 w-3.5 text-[hsl(var(--primary))]" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <span class="text-[hsl(var(--muted-foreground))] leading-relaxed">{practice}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <!-- How ShortSelect Helps -->
+        <div data-reveal class="rounded-xl border border-[hsl(var(--primary)/0.2)] bg-[hsl(var(--primary)/0.05)] p-8">
+          <h2 class="text-2xl font-display font-bold mb-4">So hilft ShortSelect</h2>
+          <p class="text-[hsl(var(--muted-foreground))] leading-relaxed">{entry.howShortSelectHelps}</p>
+          <a href="https://app.shortselect.com/signup" class="inline-flex items-center gap-2 mt-6 px-6 py-3 bg-[hsl(var(--primary))] text-white font-semibold rounded-lg text-sm hover:opacity-90 transition-opacity">
+            Jetzt kostenlos testen
+            <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+        </div>
+
+        <!-- Related Terms -->
+        {relatedTerms.length > 0 && (
+          <div data-reveal>
+            <h2 class="text-2xl font-display font-bold mb-6">Verwandte Begriffe</h2>
+            <div class="flex flex-wrap gap-3">
+              {relatedTerms.map((term: { slug: string; title: string }) => (
+                <a href={`/glossar/${term.slug}`} class="px-4 py-2 rounded-lg border border-[hsl(var(--border))] bg-[hsl(var(--card))] hover:border-[hsl(var(--primary)/0.3)] hover:bg-[hsl(var(--primary)/0.05)] transition-all text-sm font-medium">
+                  {term.title}
+                </a>
+              ))}
+            </div>
+          </div>
+        )}
+
+        <!-- Back link -->
+        <div class="pt-8 border-t border-[hsl(var(--border))]">
+          <a href="/glossar" class="inline-flex items-center gap-2 text-sm text-[hsl(var(--muted-foreground))] hover:text-[hsl(var(--primary))] transition-colors group">
+            <svg class="h-4 w-4 transition-transform group-hover:-translate-x-1" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
+            Alle Begriffe anzeigen
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CTASection />
+</MarketingLayout>

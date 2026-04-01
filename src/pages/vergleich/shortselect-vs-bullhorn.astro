@@ -1,0 +1,51 @@
+---
+import VergleichLayout from '../../layouts/VergleichLayout.astro';
+
+const comparisonData = [
+  { feature: "Zielgruppe", ssStatus: "check" as const, ssLabel: "KMU bis Enterprise", compStatus: "check" as const, compLabel: "Enterprise Staffing" },
+  { feature: "Preise", ssStatus: "check" as const, ssLabel: "Ab 0\u20AC/Monat", compStatus: "warn" as const, compLabel: "Ab ~$99/User/Monat" },
+  { feature: "Setup-Zeit", ssStatus: "check" as const, ssLabel: "Minuten", compStatus: "warn" as const, compLabel: "Wochen-Monate" },
+  { feature: "UI / Design", ssStatus: "check" as const, ssLabel: "Modern (2024 Design)", compStatus: "warn" as const, compLabel: "Funktional (Legacy)" },
+  { feature: "KI-Matching", ssStatus: "check" as const, ssLabel: "Smart Matching", compStatus: "check" as const, compLabel: "Amplify AI" },
+  { feature: "DSGVO", ssStatus: "check" as const, ssLabel: "EU-nativ", compStatus: "warn" as const, compLabel: "Mit EU-Addon" },
+  { feature: "Client Portal", ssStatus: "check" as const, ssLabel: "Integriert", compStatus: "check" as const, compLabel: "Integriert" },
+  { feature: "Karriereseite", ssStatus: "check" as const, ssLabel: "Embeddable Widget", compStatus: "check" as const, compLabel: "CareerPortal" },
+  { feature: "Integrationen", ssStatus: "warn" as const, ssLabel: "API + wachsend", compStatus: "check" as const, compLabel: "300+ Marketplace" },
+  { feature: "Multi-Tenancy", ssStatus: "check" as const, ssLabel: "Vollstaendig", compStatus: "check" as const, compLabel: "Vollstaendig" },
+];
+---
+
+<VergleichLayout
+  title="ShortSelect vs. Bullhorn - ATS Vergleich 2026"
+  description="Enterprise-Gigant oder agile Innovation? Bullhorn ist der weltgroesste ATS-Anbieter fuer Personaldienstleister. Vergleich mit ShortSelect."
+  competitorName="Bullhorn"
+  heroSubline="Enterprise-Gigant oder agile Innovation? Bullhorn ist der weltgroesste ATS-Anbieter fuer Personaldienstleister. Aber ist groesser immer besser?"
+  heroBadge="Vergleich"
+  ssDescription="Agiles ATS mit modernem Design"
+  ssHighlights={["Kostenloser Einstieg ohne Risiko", "Setup in wenigen Minuten", "KI-gestuetztes Smart Matching", "DSGVO-konform ab Werk (EU-nativ)"]}
+  compDescription="Enterprise-ATS fuer globales Staffing"
+  compHighlights={["300+ Marketplace-Integrationen", "Amplify AI fuer Automatisierung", "Globale Enterprise-Skalierung", "Umfassende Staffing-Suite"]}
+  comparisonData={comparisonData}
+  whenCompBetter={{
+    title: "Wann Bullhorn besser passt",
+    intro: "Bullhorn ist die richtige Wahl fuer grosse Staffing-Unternehmen mit komplexen Anforderungen:",
+    items: [
+      "Enterprise mit 100+ Recruitern weltweit",
+      "Sie brauchen 300+ fertige Integrationen",
+      "Globales Staffing mit mehreren Laendern",
+      "Komplexe Compliance- und Reporting-Anforderungen",
+      "Dediziertes IT-Team fuer Setup und Wartung",
+    ]
+  }}
+  whenSSBetter={{
+    title: "Wann ShortSelect besser passt",
+    intro: "ShortSelect ist ideal, wenn Sie schnell und ohne Overhead starten wollen:",
+    items: [
+      "Schneller Start ohne IT-Team oder Berater",
+      "Faire Preise ohne versteckte Kosten",
+      "Modernes UI, das Recruiter lieben",
+      "KI-Matching ohne Enterprise-Preise",
+      "DSGVO-konform ohne zusaetzliche Add-ons",
+    ]
+  }}
+/>

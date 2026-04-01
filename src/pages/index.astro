@@ -1,0 +1,75 @@
+---
+import MarketingLayout from '../layouts/MarketingLayout.astro';
+import HeroSection from '../components/landing/HeroSection.astro';
+import TrustedBySection from '../components/landing/TrustedBySection.astro';
+import AIFeaturesSection from '../components/landing/AIFeaturesSection.astro';
+import PlatformSection from '../components/landing/PlatformSection.astro';
+import StatsSection from '../components/landing/StatsSection.astro';
+import FAQSection from '../components/landing/FAQSection.astro';
+import CTASection from '../components/landing/CTASection.astro';
+import TestimonialsSection from '../components/landing/TestimonialsSection.astro';
+import PricingCalculator from '../components/interactive/PricingCalculator';
+
+const softwareSchema = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  name: "ShortSelect",
+  applicationCategory: "BusinessApplication",
+  applicationSubCategory: "Applicant Tracking System",
+  operatingSystem: "Web Browser",
+  description: "KI-gestützte Recruiting Software für modernes Bewerbermanagement mit AI Matching, Smart Ranking und Client Portal",
+  offers: {
+    "@type": "AggregateOffer",
+    lowPrice: "29",
+    highPrice: "89",
+    priceCurrency: "EUR",
+    offerCount: "3",
+  },
+  featureList: [
+    "KI-gestütztes Kandidaten-Matching",
+    "Smart Ranking mit AI",
+    "Automatische Benachrichtigungen",
+    "Client Portal für Kunden",
+    "Kanban Board",
+    "Interview Scheduling",
+    "Talent Pools",
+    "Reports & Analytics",
+  ],
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "4.8",
+    ratingCount: "127",
+    bestRating: "5",
+  },
+};
+---
+
+<MarketingLayout
+  title="ShortSelect – KI-Recruiting Software & ATS | Kostenlos testen"
+  description="KI-gestützte Recruiting Software mit AI Matching, Smart Ranking & Client Portal. 14 Tage kostenlos testen – keine Kreditkarte nötig."
+  jsonLd={softwareSchema}
+>
+  <HeroSection />
+  <TrustedBySection />
+  <AIFeaturesSection />
+  <PlatformSection />
+  <StatsSection />
+  <TestimonialsSection />
+
+  <!-- Pricing Section -->
+  <section class="py-20 md:py-32 relative overflow-hidden" id="pricing">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12" data-reveal>
+        <h2 class="text-3xl md:text-4xl font-display font-bold tracking-tight mb-4">
+          Einfache, transparente Preise
+        </h2>
+        <p class="text-lg text-muted-foreground max-w-2xl mx-auto">
+          Wählen Sie den Plan, der zu Ihrem Team passt. Jederzeit upgraden oder kündigen.
+        </p>
+      </div>
+      <PricingCalculator client:visible />
+    </div>
+  </section>
+  <FAQSection />
+  <CTASection />
+</MarketingLayout>

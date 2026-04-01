@@ -1,0 +1,123 @@
+---
+import MarketingLayout from '../layouts/MarketingLayout.astro';
+import CTASection from '../components/landing/CTASection.astro';
+
+const securityPillars = [
+  { title: "DSGVO-Konformitaet", description: "Vollstaendig DSGVO-konform. Automatische Loeschfristen. Einwilligungsmanagement. Recht auf Vergessenwerden. Datenexport auf Knopfdruck." },
+  { title: "Verschluesselung", description: "AES-256 Verschluesselung at rest. TLS 1.3 in transit. Alle Daten werden verschluesselt gespeichert und uebertragen." },
+  { title: "Infrastruktur", description: "Gehostet auf Supabase in der EU (Frankfurt). Row Level Security auf Datenbankebene. Automatische Backups." },
+];
+
+const technicalDetails = [
+  { title: "Row Level Security", description: "Mandantentrennung auf Datenbankebene -- kein Mandant sieht Daten eines anderen." },
+  { title: "RBAC", description: "5 Rollen: Super Admin, Admin, Manager, Member, Readonly." },
+  { title: "Audit Logging", description: "Lueckenlose Protokollierung aller Datenaenderungen." },
+  { title: "PII Masking", description: "Kandidaten-Daten optional anonymisieren fuer Client Portal." },
+  { title: "Automatische Loeschung", description: "Konfigurierbare Aufbewahrungsfristen mit automatischer Loeschung." },
+  { title: "2FA", description: "Zwei-Faktor-Authentifizierung fuer zusaetzliche Kontosicherheit." },
+];
+
+const faqs = [
+  { question: "Wo werden meine Daten gespeichert?", answer: "Alle Daten werden in der EU (Frankfurt) auf der Supabase-Infrastruktur gespeichert. Es findet kein Datentransfer in Drittlaender statt." },
+  { question: "Wie wird Mandantentrennung sichergestellt?", answer: "Durch Row Level Security auf PostgreSQL-Ebene. Jede Datenbankabfrage wird automatisch nach Tenant gefiltert -- eine Umgehung ist technisch ausgeschlossen." },
+  { question: "Kann ich Daten exportieren?", answer: "Ja, ein vollstaendiger Datenexport ist jederzeit moeglich. Sie koennen alle Kandidaten-, Bewerbungs- und Unternehmensdaten als CSV oder JSON exportieren." },
+];
+---
+
+<MarketingLayout
+  title="Sicherheit & Datenschutz – DSGVO-konformes Recruiting | ShortSelect"
+  description="EU-Server, AES-256 Verschluesselung, Row Level Security, DSGVO-Konformitaet. So schuetzt ShortSelect Ihre Bewerberdaten."
+>
+  <!-- Hero (dark) -->
+  <section class="relative py-24 md:py-36 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white overflow-hidden">
+    <div class="absolute inset-0 overflow-hidden">
+      <div class="absolute top-0 left-1/4 w-96 h-96 bg-white/5 rounded-full blur-3xl animate-float-slow"></div>
+      <div class="absolute bottom-0 right-1/4 w-80 h-80 bg-white/5 rounded-full blur-3xl animate-float-slow" style="animation-delay: -3s;"></div>
+    </div>
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.04)_1px,transparent_1px)] bg-[size:32px_32px]"></div>
+
+    <div class="container relative mx-auto px-4">
+      <div data-reveal class="max-w-3xl mx-auto text-center space-y-8">
+        <span class="inline-block px-3 py-1 rounded-full bg-white/10 text-white/90 border border-white/20 text-sm font-medium">SOC 2 Ready</span>
+        <h1 class="text-4xl md:text-6xl lg:text-7xl font-display font-bold tracking-tight leading-tight">
+          Sicherheit & Datenschutz
+        </h1>
+        <p class="text-lg md:text-xl text-white/70 max-w-2xl mx-auto">
+          Ihre Bewerberdaten verdienen den hoechsten Schutz. So stellen wir ihn sicher.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4 pt-4">
+          <span class="flex items-center gap-2 text-sm text-white/60">
+            <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 17 2 2 4-4"/><path d="m3 7 2 2 4-4"/><path d="M13 6h8"/><path d="M13 12h8"/><path d="M13 18h8"/></svg>
+            DSGVO
+          </span>
+          <span class="flex items-center gap-2 text-sm text-white/60">
+            <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M7 7h.01"/><path d="M17 7h.01"/><path d="M7 17h.01"/><path d="M17 17h.01"/></svg>
+            EU-Server
+          </span>
+          <span class="flex items-center gap-2 text-sm text-white/60">
+            <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            SSL/TLS
+          </span>
+          <span class="flex items-center gap-2 text-sm text-white/60">
+            <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>
+            Verschluesselt
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pillars -->
+  <section class="py-20 md:py-28 relative overflow-hidden">
+    <div class="container mx-auto px-4">
+      <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        {securityPillars.map((pillar, i) => (
+          <div data-reveal data-reveal-delay={`${i * 100}`} class="rounded-xl border border-[hsl(var(--border))] bg-[hsl(var(--card))] p-8 space-y-4">
+            <h3 class="text-xl font-display font-bold">{pillar.title}</h3>
+            <p class="text-sm text-[hsl(var(--muted-foreground))] leading-relaxed">{pillar.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Technical Details -->
+  <section class="py-20 md:py-28 bg-[hsl(var(--muted)/0.3)] relative overflow-hidden">
+    <div class="container mx-auto px-4">
+      <div data-reveal class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-3xl md:text-4xl font-display font-bold tracking-tight mb-4">Technische Details</h2>
+        <p class="text-lg text-[hsl(var(--muted-foreground))]">Sicherheit ist kein Feature -- es ist die Grundlage.</p>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        {technicalDetails.map((detail, i) => (
+          <div data-reveal data-reveal-delay={`${i * 100}`} class="rounded-xl border border-[hsl(var(--border))] bg-[hsl(var(--card))] p-6 space-y-3">
+            <h3 class="font-display font-bold">{detail.title}</h3>
+            <p class="text-sm text-[hsl(var(--muted-foreground))] leading-relaxed">{detail.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-20 md:py-28 relative overflow-hidden">
+    <div class="container mx-auto px-4">
+      <div data-reveal class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-3xl md:text-4xl font-display font-bold tracking-tight mb-4">Haeufige Fragen zur Sicherheit</h2>
+      </div>
+      <div class="max-w-2xl mx-auto space-y-0 rounded-xl border border-[hsl(var(--border))] bg-[hsl(var(--card))] overflow-hidden">
+        {faqs.map((item) => (
+          <details data-reveal class="border-b border-[hsl(var(--border)/0.5)] last:border-0 group">
+            <summary class="flex items-center justify-between w-full py-5 px-6 text-left cursor-pointer font-display font-bold text-lg">
+              {item.question}
+              <svg class="h-5 w-5 text-[hsl(var(--muted-foreground))] shrink-0 transition-transform duration-300 group-open:rotate-180" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+            </summary>
+            <div class="px-6 pb-5 text-[hsl(var(--muted-foreground))] leading-relaxed">{item.answer}</div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <CTASection />
+</MarketingLayout>

@@ -1,0 +1,46 @@
+---
+import BrancheLayout from '../../layouts/BrancheLayout.astro';
+
+const painPoints = [
+  { title: "Handwerker bewerben sich nicht online", description: "Lange Formulare schrecken ab. Mobile-first ist Pflicht.", iconPath: '<rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/>' },
+  { title: "Kein HR-Team", description: "Meister und Geschaeftsfuehrer in Personalunion.", iconPath: '<path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>' },
+  { title: "Regionale Suche", description: "Fachkraefte muessen aus der Region kommen.", iconPath: '<path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/>' },
+];
+
+const features = [
+  { title: "Mobile-optimierte Bewerbung", description: "Bewerbung in 60 Sekunden — direkt vom Handy.", iconPath: '<rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/>' },
+  { title: "Einfache Karriereseite", description: "Professionelle Karriereseite ohne IT-Kenntnisse.", iconPath: '<circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/>' },
+  { title: "Schnell-Screening", description: "3 Fragen statt Anschreiben: Fuehrerschein? Erfahrung? Verfuegbar?", iconPath: '<path d="M11 18H3"/><path d="m15 18 2 2 4-4"/><path d="M16 12H3"/><path d="M16 6H3"/>' },
+  { title: "Kostenlos starten", description: "Starter Plan ab 29 EUR/User — perfekt fuer kleine Betriebe.", iconPath: '<path d="M20 12V8H6a2 2 0 0 1-2-2c0-1.1.9-2 2-2h12v4"/><path d="M4 6v12c0 1.1.9 2 2 2h14v-4"/><path d="M18 12a2 2 0 0 0 0 4h4v-4Z"/>' },
+  { title: "E-Mail Benachrichtigungen", description: "Kandidaten per E-Mail benachrichtigen, einfach und direkt.", iconPath: '<path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/>' },
+  { title: "Uebersichtlich", description: "Kanban-Board: Wer hat sich beworben? Wer ist eingeladen?", iconPath: '<rect width="7" height="7" x="3" y="3" rx="1"/><rect width="7" height="7" x="14" y="3" rx="1"/><rect width="7" height="7" x="14" y="14" rx="1"/><rect width="7" height="7" x="3" y="14" rx="1"/>' },
+];
+
+const steps = [
+  { step: "1", title: "Stelle anlegen", description: "In 2 Minuten eine Stellenanzeige erstellen — mit Vorlage oder frei." },
+  { step: "2", title: "Link teilen", description: "Per WhatsApp, Social Media oder Aushang — ein Link reicht." },
+  { step: "3", title: "Bewerbungen erhalten", description: "Kandidaten bewerben sich mobil in unter 60 Sekunden." },
+  { step: "4", title: "Einstellen", description: "Uebersicht behalten, Gespraeche fuehren, Vertrag machen." },
+];
+---
+
+<BrancheLayout
+  title="Recruiting Software fuer Handwerk & Gewerbe | ShortSelect"
+  description="Fachkraefte im Handwerk finden: Mobile Bewerbung in 60 Sekunden, einfache Karriereseite, Kanban-Board. Ab 29 EUR/User."
+  badgeText="Handwerk & Bau"
+  badgeIcon='<path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>'
+  headline="Handwerk & Gewerbe:"
+  highlightedWord="Fachkraefte"
+  headlineSuffix="dort finden, wo sie sind."
+  subline="Elektriker, Installateure, Mechaniker — mit einem einfachen Bewerbungsprozess, der auf dem Handy funktioniert."
+  primaryCta="Jetzt kostenlos starten"
+  painBadge="Die Realitaet"
+  painTitle="Warum klassisches Recruiting im"
+  painHighlight="Handwerk"
+  painPoints={painPoints}
+  steps={steps}
+  stepsSubline="4 Schritte von der Stellenanzeige bis zur Einstellung."
+  featuresTitle="Gemacht fuers"
+  featuresHighlight="Handwerk"
+  features={features}
+/>

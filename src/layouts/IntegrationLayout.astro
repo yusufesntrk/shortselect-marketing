@@ -1,0 +1,175 @@
+---
+import MarketingLayout from './MarketingLayout.astro';
+import CTASection from '../components/landing/CTASection.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  badgeText: string;
+  badgeIcon: string;
+  headline: string;
+  highlightedWord: string;
+  headlineSuffix?: string;
+  subline: string;
+  primaryCta?: string;
+  benefits: { title: string; description: string; iconPath: string }[];
+  benefitsTitle: string;
+  benefitsHighlight?: string;
+  howItWorks: { step: string; title: string; description: string }[];
+  howItWorksTitle?: string;
+  howItWorksSubline?: string;
+  trustItems?: string[];
+}
+
+const {
+  title,
+  description,
+  badgeText,
+  badgeIcon,
+  headline,
+  highlightedWord,
+  headlineSuffix = '',
+  subline,
+  primaryCta = 'Jetzt kostenlos testen',
+  benefits,
+  benefitsTitle,
+  benefitsHighlight,
+  howItWorks,
+  howItWorksTitle = 'So funktioniert die Integration',
+  howItWorksSubline,
+  trustItems,
+} = Astro.props;
+---
+
+<MarketingLayout title={title} description={description}>
+  <!-- HERO -->
+  <section class="relative overflow-hidden py-20 md:py-32">
+    <div class="absolute inset-0 bg-gradient-to-br from-primary/10 via-accent/5 to-transparent"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,hsl(var(--primary)/0.15),transparent_50%)]"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,hsl(var(--accent)/0.1),transparent_50%)]"></div>
+    <div class="absolute top-20 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-float-slow"></div>
+    <div class="absolute bottom-20 right-10 w-96 h-96 bg-accent/10 rounded-full blur-3xl animate-float-slow" style="animation-delay: -3s;"></div>
+    <div class="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.03)_1px,transparent_1px)] bg-[size:48px_48px] [mask-image:radial-gradient(ellipse_at_center,black_30%,transparent_70%)]"></div>
+
+    <div class="container relative mx-auto px-4">
+      <div class="mx-auto max-w-4xl text-center space-y-8">
+        <div data-reveal class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20">
+          <svg class="h-4 w-4 text-primary animate-pulse" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><Fragment set:html={badgeIcon} /></svg>
+          <span class="text-sm font-medium">{badgeText}</span>
+        </div>
+
+        <h1 data-reveal data-reveal-delay="100" class="text-4xl md:text-6xl lg:text-7xl font-display font-bold tracking-tight">
+          {headline}{" "}
+          <span class="relative inline-block">
+            <span class="text-primary">{highlightedWord}</span>
+            <svg class="absolute -bottom-2 left-0 w-full" viewBox="0 0 300 12" fill="none">
+              <path d="M2 10C60 4 240 4 298 10" stroke="hsl(var(--primary))" stroke-width="4" stroke-linecap="round" class="cta-underline" style="stroke-dasharray: 300; stroke-dashoffset: 300;" />
+            </svg>
+          </span>
+          {headlineSuffix && ` ${headlineSuffix}`}
+        </h1>
+
+        <p data-reveal data-reveal-delay="200" class="text-lg md:text-xl text-[hsl(var(--muted-foreground))] max-w-2xl mx-auto">{subline}</p>
+
+        <div data-reveal data-reveal-delay="300" class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+          <a href="https://app.shortselect.com/signup" class="inline-flex items-center gap-2 px-8 py-3 bg-primary text-white font-semibold rounded-lg text-base group relative overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+            <svg class="h-5 w-5 animate-pulse" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/></svg>
+            {primaryCta}
+            <svg class="h-5 w-5 transition-transform group-hover:translate-x-1" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+          <a href="#benefits" class="inline-flex items-center px-8 py-3 border border-[hsl(var(--border))] font-semibold rounded-lg text-base transition-all duration-300 hover:border-primary/50 hover:text-primary">
+            Vorteile entdecken
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[hsl(var(--background))] to-transparent"></div>
+  </section>
+
+  <!-- Extra slot content (e.g., mockups) -->
+  <slot />
+
+  <!-- HOW IT WORKS -->
+  <section class="py-20 md:py-28 bg-[hsl(var(--muted)/0.3)]">
+    <div class="container mx-auto px-4">
+      <div class="max-w-3xl mx-auto text-center mb-16">
+        <h2 data-reveal class="text-3xl md:text-4xl lg:text-5xl font-display font-bold tracking-tight">{howItWorksTitle}</h2>
+        {howItWorksSubline && <p data-reveal data-reveal-delay="100" class="text-lg text-[hsl(var(--muted-foreground))] mt-4">{howItWorksSubline}</p>}
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
+        {howItWorks.map((step, index) => (
+          <div data-reveal data-reveal-delay={String(index * 150)} class="relative text-center space-y-4">
+            <div class="inline-flex items-center justify-center w-14 h-14 rounded-full bg-primary text-white text-xl font-display font-bold shadow-lg">
+              {step.step}
+            </div>
+            {index < howItWorks.length - 1 && (
+              <div class="hidden lg:block absolute top-7 left-[calc(50%+28px)] w-[calc(100%-56px)] h-0.5 bg-gradient-to-r from-primary/40 to-primary/10"></div>
+            )}
+            <h3 class="text-lg font-display font-bold">{step.title}</h3>
+            <p class="text-sm text-[hsl(var(--muted-foreground))] leading-relaxed">{step.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFITS -->
+  <section class="py-20 md:py-28" id="benefits">
+    <div class="container mx-auto px-4">
+      <div class="max-w-3xl mx-auto text-center mb-16">
+        <h2 data-reveal class="text-3xl md:text-4xl lg:text-5xl font-display font-bold tracking-tight">
+          {benefitsTitle}{" "}
+          {benefitsHighlight && <span class="text-primary">{benefitsHighlight}</span>}
+        </h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        {benefits.map((benefit, index) => (
+          <div data-reveal data-reveal-delay={String(index * 100)} class="group rounded-xl border border-primary/10 bg-[hsl(var(--card))] p-6 hover:shadow-lg transition-all duration-500 hover:-translate-y-1 hover:border-primary/30">
+            <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 group-hover:scale-110 transition-all duration-300">
+              <svg class="h-6 w-6 text-primary" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><Fragment set:html={benefit.iconPath} /></svg>
+            </div>
+            <h3 class="text-lg font-display font-bold mb-2">{benefit.title}</h3>
+            <p class="text-sm text-[hsl(var(--muted-foreground))] leading-relaxed">{benefit.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST SECTION -->
+  {trustItems && trustItems.length > 0 && (
+    <section class="py-20 md:py-28 bg-gradient-to-br from-primary via-primary/95 to-accent text-white relative overflow-hidden">
+      <div class="absolute inset-0 overflow-hidden">
+        <div class="absolute top-0 left-1/4 w-96 h-96 bg-white/5 rounded-full blur-3xl animate-float-slow"></div>
+        <div class="absolute bottom-0 right-1/4 w-80 h-80 bg-white/5 rounded-full blur-3xl animate-float-slow" style="animation-delay: -3s;"></div>
+      </div>
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.06)_1px,transparent_1px)] bg-[size:32px_32px] opacity-50"></div>
+      <div class="container relative mx-auto px-4">
+        <div data-reveal class="max-w-3xl mx-auto text-center">
+          <div class="flex flex-wrap items-center justify-center gap-6 text-white/90">
+            {trustItems.map((item) => (
+              <span class="flex items-center gap-2">
+                <svg class="h-5 w-5 text-white/70" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
+                <span class="text-sm font-medium">{item}</span>
+              </span>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- CTA -->
+  <CTASection />
+</MarketingLayout>
+
+<style>
+  .cta-underline {
+    transition: stroke-dashoffset 1s ease-out 0.5s;
+  }
+  :global([data-reveal].revealed) .cta-underline {
+    stroke-dashoffset: 0;
+  }
+</style>

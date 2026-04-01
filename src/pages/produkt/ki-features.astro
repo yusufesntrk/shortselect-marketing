@@ -1,0 +1,117 @@
+---
+import ProduktLayout from '../../layouts/ProduktLayout.astro';
+
+const features = [
+  {
+    title: "Komplettes Screening",
+    description: "Die KI uebernimmt das komplette Bewerber-Screening end-to-end. Von CV-Analyse ueber Knockout-Fragen bis zur finalen Bewertung -- automatisch und in Sekunden.",
+    icon: '<svg class="h-6 w-6 text-primary group-hover:text-white transition-colors" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg>',
+  },
+  {
+    title: "Komplettes Matching",
+    description: "Faehigkeiten, Erfahrung und Kulturfit werden intelligent abgeglichen. Jeder Kandidat erhaelt einen praezisen Match-Score von 0 bis 100.",
+    icon: '<svg class="h-6 w-6 text-primary group-hover:text-white transition-colors" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"/><path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4"/><path d="M17.599 6.5a3 3 0 0 0 .399-1.375"/><path d="M6.003 5.125A3 3 0 0 0 6.401 6.5"/><path d="M3.477 10.896a4 4 0 0 1 .585-.396"/><path d="M19.938 10.5a4 4 0 0 1 .585.396"/><path d="M6 18a4 4 0 0 1-1.967-.516"/><path d="M19.967 17.484A4 4 0 0 1 18 18"/></svg>',
+  },
+  {
+    title: "Kandidaten-Nurturing",
+    description: "Automatische Nurturing-Workflows: Nachfass-E-Mails, Statusupdates, Gespraechserinnerungen. Kein Kandidat wird je vergessen.",
+    icon: '<svg class="h-6 w-6 text-primary group-hover:text-white transition-colors" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>',
+  },
+  {
+    title: "Candidate Sourcing",
+    description: "KI-gestuetztes Sourcing durchsucht Ihre Talent-Pools, gleicht Profile ab und schlaegt proaktiv passende Kandidaten fuer offene Stellen vor.",
+    icon: '<svg class="h-6 w-6 text-primary group-hover:text-white transition-colors" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>',
+  },
+  {
+    title: "Bestes CV Parsing",
+    description: "Branchenfuehrendes CV-Parsing: PDFs, Word-Dokumente und E-Mails werden in strukturierte Kandidatendaten umgewandelt -- in unter 2 Sekunden.",
+    icon: '<svg class="h-6 w-6 text-primary group-hover:text-white transition-colors" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/></svg>',
+  },
+  {
+    title: "Lebenslauf-Anonymisierung",
+    description: "Bias-freies Recruiting durch automatische Anonymisierung: Name, Alter, Geschlecht und Foto werden entfernt. Nur Qualifikation zaehlt.",
+    icon: '<svg class="h-6 w-6 text-primary group-hover:text-white transition-colors" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/><line x1="1" x2="23" y1="1" y2="23"/></svg>',
+  },
+  {
+    title: "Predictive Analytics",
+    description: "Vorhersage der Einstellungswahrscheinlichkeit. Erkennen Sie fruehzeitig, welche Kandidaten zusagen und welche abspringen werden.",
+    icon: '<svg class="h-6 w-6 text-primary group-hover:text-white transition-colors" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>',
+  },
+  {
+    title: "Auto-Ranking",
+    description: "Kandidaten werden automatisch nach Relevanz sortiert. Die besten Talente erscheinen immer oben -- basierend auf Ihren individuellen Kriterien.",
+    icon: '<svg class="h-6 w-6 text-primary group-hover:text-white transition-colors" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>',
+  },
+  {
+    title: "Custom KI-Agenten",
+    description: "Wir entwickeln individuelle KI-Agenten fuer Ihren spezifischen Recruiting-Prozess. Massgeschneidert, nicht von der Stange.",
+    icon: '<svg class="h-6 w-6 text-primary group-hover:text-white transition-colors" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>',
+  },
+];
+---
+
+<ProduktLayout
+  title="KI-Features – AI Matching, Smart Ranking & CV Parsing | ShortSelect"
+  description="KI-gestuetzte Recruiting-Features: AI Matching, Smart Ranking, CV Parsing, Lebenslauf-Anonymisierung und Predictive Analytics. Automatisieren Sie Ihr Screening."
+  canonical="https://shortselect.com/produkt/ki-features"
+  badgeText="Kuenstliche Intelligenz"
+  heroTitle="KI-Agenten, die Ihr Recruiting"
+  heroHighlight="revolutionieren"
+  heroSuffix="."
+  heroSubtitle="Nicht nur Features -- echte KI-Agenten die autonom screenen, matchen, ranken und nurturing betreiben. Von CV-Parsing bis Predictive Analytics."
+  heroIcon='<svg class="h-4 w-4 text-primary animate-pulse" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"/></svg>'
+  features={features}
+  featuresSectionTitle="11 KI-Features, die den Unterschied machen"
+  featuresSectionSubtitle="Echte KI-Agenten -- keine simplen Automatisierungen. ShortSelect denkt mit, lernt dazu und arbeitet autonom."
+  featuresBadge="KI-Agenten"
+>
+  <!-- Stats -->
+  <section class="py-16 md:py-24 bg-gradient-to-br from-primary via-primary/90 to-accent text-white relative overflow-hidden">
+    <div class="absolute inset-0 overflow-hidden">
+      <div class="absolute top-10 left-10 w-64 h-64 bg-white/5 rounded-full blur-3xl animate-float-slow"></div>
+      <div class="absolute bottom-10 right-10 w-80 h-80 bg-white/5 rounded-full blur-3xl animate-float-slow" style="animation-delay: -3s;"></div>
+    </div>
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:24px_24px] opacity-30"></div>
+    <div class="container relative mx-auto px-4">
+      <div class="grid md:grid-cols-4 gap-12 text-center">
+        {[
+          { value: "80%", label: "weniger manuelles Screening" },
+          { value: "95%", label: "Match-Genauigkeit" },
+          { value: "<2s", label: "pro CV Parsing" },
+          { value: "3x", label: "mehr qualifizierte Kandidaten" },
+        ].map((stat, i) => (
+          <div data-reveal data-reveal-delay={`${i * 100}`} class="space-y-2">
+            <div class="text-4xl md:text-5xl lg:text-6xl font-display font-bold">{stat.value}</div>
+            <p class="text-base text-white/80">{stat.label}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- DSGVO Trust -->
+  <section class="py-20 md:py-28 bg-muted/30 relative overflow-hidden">
+    <div class="container mx-auto px-4">
+      <div data-reveal class="text-center max-w-3xl mx-auto mb-16">
+        <span class="inline-block mb-4 px-3 py-1 text-xs font-medium rounded-full border border-primary/20 text-primary">Datenschutz</span>
+        <h2 class="text-3xl md:text-5xl font-display font-bold tracking-tight mb-4">DSGVO-konforme KI</h2>
+        <p class="text-lg text-muted-foreground">Unsere KI arbeitet nach hoechsten Datenschutz-Standards. Alle Daten bleiben in der EU.</p>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        {[
+          "KI-Daten auf EU-Servern",
+          "Kein Training auf Kundendaten",
+          "PII Masking aktiviert",
+          "Audit-Trail fuer KI-Entscheidungen",
+          "Anonymisierung by Default",
+          "AV-Vertrag vorhanden",
+        ].map((item, i) => (
+          <div data-reveal data-reveal-delay={`${(i % 3) * 100}`} class="flex items-center gap-3 p-4 rounded-lg bg-green-500/5 border border-green-500/10">
+            <svg class="h-5 w-5 text-green-500 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
+            <span class="text-sm font-medium">{item}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+</ProduktLayout>

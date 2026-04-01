@@ -1,0 +1,108 @@
+---
+import MarketingLayout from '../../layouts/MarketingLayout.astro';
+import CTASection from '../../components/landing/CTASection.astro';
+
+const features = [
+  { title: "Talent Pools", description: "Qualifizierte Kandidaten fuer zukuenftige Stellen speichern" },
+  { title: "Automatisches Nurturing", description: "Regelmaessige Check-ins per automatisierter E-Mail" },
+  { title: "Candidate Experience", description: "Jeder Bewerber geht mit einem positiven Eindruck" },
+  { title: "Alumni-Netzwerk", description: "Ehemalige Kandidaten als Botschafter gewinnen" },
+  { title: "Re-Engagement", description: "Passende Stellen automatisch an Pool-Kandidaten senden" },
+];
+
+const cyclePhases = [
+  { title: "Anziehen", link: "/methode/anziehen" },
+  { title: "Auswaehlen", link: "/methode/auswaehlen" },
+  { title: "Einstellen", link: "/methode/einstellen" },
+  { title: "Binden", link: "/methode/binden" },
+];
+---
+
+<MarketingLayout title="Phase 4: Binden - Smart Recruiting Methode" description="Talente langfristig binden mit Talent Pools, automatischem Nurturing und systematischer Wiederansprache.">
+  <!-- Hero -->
+  <section class="relative overflow-hidden py-24 md:py-36">
+    <div class="absolute inset-0 bg-gradient-to-br from-primary/10 via-primary/5 to-background"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_60%_30%,hsl(var(--primary)/0.12),transparent_50%)]"></div>
+    <div class="absolute top-20 right-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-float-slow"></div>
+    <div class="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.03)_1px,transparent_1px)] bg-[size:60px_60px] [mask-image:radial-gradient(ellipse_at_center,black_30%,transparent_70%)]"></div>
+
+    <div class="container relative mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center space-y-8">
+        <nav data-reveal class="flex items-center justify-center gap-2 text-sm text-muted-foreground">
+          <a href="/methode/smart-recruiting" class="hover:text-primary transition-colors">Smart Recruiting</a>
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
+          <span class="text-primary font-medium">Binden</span>
+        </nav>
+        <div data-reveal data-reveal-delay="100">
+          <span class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold bg-primary/10 text-primary border-primary/20">Smart Recruiting</span>
+        </div>
+        <h1 data-reveal data-reveal-delay="200" class="text-4xl md:text-6xl lg:text-7xl font-display font-bold tracking-tight">Phase 4: <span class="text-primary">Binden</span></h1>
+        <p data-reveal data-reveal-delay="300" class="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">Die besten Kandidaten kommen wieder. Wenn Sie den Kontakt halten.</p>
+      </div>
+    </div>
+    <div class="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-background to-transparent"></div>
+  </section>
+
+  <!-- Features -->
+  <section class="py-20 md:py-28">
+    <div class="container mx-auto px-4">
+      <div data-reveal class="text-center space-y-4 mb-16">
+        <h2 class="text-3xl md:text-4xl font-display font-bold tracking-tight">Was zu dieser Phase gehoert</h2>
+        <p class="text-lg text-muted-foreground max-w-xl mx-auto">Werkzeuge, um Talente langfristig an sich zu binden.</p>
+      </div>
+      <div class="max-w-4xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {features.map((f, i) => (
+          <div data-reveal data-reveal-delay={String(Math.min(i * 100, 400))} class="rounded-xl border p-6 hover:border-primary/20 hover:shadow-lg transition-all duration-500 hover:-translate-y-1 bg-card">
+            <h3 class="font-display font-bold text-lg">{f.title}</h3>
+            <p class="text-sm text-muted-foreground mt-1">{f.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Cycle Closes -->
+  <section class="py-20 md:py-28 bg-gradient-to-br from-primary via-primary/90 to-accent text-white relative overflow-hidden">
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:24px_24px] opacity-30"></div>
+    <div class="container relative mx-auto px-4">
+      <div data-reveal class="max-w-3xl mx-auto text-center space-y-10">
+        <div class="space-y-4">
+          <h2 class="text-3xl md:text-5xl font-display font-bold">Und damit beginnt der Kreislauf von vorn.</h2>
+          <p class="text-lg text-white/80 max-w-xl mx-auto">Gebundene Talente werden zu Botschaftern. Sie empfehlen, sie kehren zurueck, sie ziehen neue Talente an.</p>
+        </div>
+        <div class="flex items-center justify-center gap-2 md:gap-4 flex-wrap">
+          {cyclePhases.map((phase, i) => (
+            <div class="flex items-center gap-2 md:gap-4">
+              <a href={phase.link} class="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 hover:bg-white/20 transition-all duration-300">
+                <span class="text-sm font-medium">{phase.title}</span>
+              </a>
+              {i < cyclePhases.length - 1 && (
+                <svg class="w-4 h-4 text-white/40 hidden md:block" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              )}
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Back to Overview -->
+  <section class="py-16 md:py-20">
+    <div class="container mx-auto px-4">
+      <div data-reveal class="max-w-2xl mx-auto">
+        <a href="/methode/smart-recruiting" class="group flex items-center justify-between p-6 rounded-2xl border-2 border-primary/20 hover:border-primary/40 bg-primary/5 hover:bg-primary/10 transition-all duration-300">
+          <div class="flex items-center gap-4">
+            <svg class="w-6 h-6 text-primary group-hover:-translate-x-2 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+            <div class="space-y-1">
+              <p class="text-sm text-primary font-medium uppercase tracking-wider">Uebersicht</p>
+              <p class="text-xl font-display font-bold tracking-tight">Smart Recruiting Methode</p>
+              <p class="text-sm text-muted-foreground">Alle 4 Phasen im Ueberblick.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <CTASection />
+</MarketingLayout>

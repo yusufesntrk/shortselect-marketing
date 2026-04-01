@@ -1,0 +1,258 @@
+---
+import MarketingLayout from '../../layouts/MarketingLayout.astro';
+import CTASection from '../../components/landing/CTASection.astro';
+import { blogPosts } from '../../data/blog/posts';
+
+export function getStaticPaths() {
+  return blogPosts.map((post) => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+
+const formattedDate = new Date(post.date).toLocaleDateString("de-DE", {
+  day: "numeric",
+  month: "long",
+  year: "numeric",
+});
+
+// Related posts: same category first, then recent
+const relatedPosts = blogPosts
+  .filter((p) => p.slug !== post.slug)
+  .sort((a, b) => {
+    if (a.category === post.category && b.category !== post.category) return -1;
+    if (b.category === post.category && a.category !== post.category) return 1;
+    return new Date(b.date).getTime() - new Date(a.date).getTime();
+  })
+  .slice(0, 3);
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: post.title,
+  datePublished: post.date,
+  author: { "@type": "Person", name: post.author },
+  publisher: {
+    "@type": "Organization",
+    name: "ShortSelect",
+    logo: { "@type": "ImageObject", url: "https://shortselect.com/logo.svg" },
+  },
+  description: post.excerpt,
+  articleSection: post.category,
+  keywords: post.tags.join(", "),
+};
+---
+
+<MarketingLayout
+  title={`${post.title} | ShortSelect Blog`}
+  description={post.excerpt}
+  jsonLd={articleSchema}
+>
+  <!-- Hero / Article Header -->
+  <section class="relative overflow-hidden py-20 md:py-28">
+    <div class="absolute inset-0 bg-gradient-to-br from-[hsl(var(--primary)/0.1)] via-[hsl(var(--accent)/0.05)] to-[hsl(var(--background))]"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,hsl(var(--primary)/0.15),transparent_50%)]"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,hsl(var(--accent)/0.1),transparent_50%)]"></div>
+    <div class="absolute top-20 left-10 w-72 h-72 bg-[hsl(var(--primary)/0.1)] rounded-full blur-3xl animate-float-slow"></div>
+    <div class="absolute bottom-20 right-10 w-96 h-96 bg-[hsl(var(--accent)/0.1)] rounded-full blur-3xl animate-float-slow" style="animation-delay: -3s;"></div>
+    <div class="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.03)_1px,transparent_1px)] bg-[size:60px_60px] [mask-image:radial-gradient(ellipse_at_center,black_30%,transparent_70%)]"></div>
+
+    <div class="container relative mx-auto px-4">
+      <div class="mx-auto max-w-3xl space-y-6">
+        <!-- Breadcrumb -->
+        <nav data-reveal class="flex items-center gap-1.5 text-sm text-[hsl(var(--muted-foreground))]">
+          <a href="/blog" class="hover:text-[hsl(var(--foreground))] transition-colors">Blog</a>
+          <svg class="h-3.5 w-3.5" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+          <span class="text-[hsl(var(--primary))]">{post.category}</span>
+        </nav>
+
+        <!-- Category badge -->
+        <div data-reveal data-reveal-delay="100">
+          <span class="px-2.5 py-0.5 rounded-full border border-[hsl(var(--primary)/0.2)] text-[hsl(var(--primary))] text-xs font-medium">
+            {post.category}
+          </span>
+        </div>
+
+        <!-- Title -->
+        <h1 data-reveal data-reveal-delay="200" class="text-3xl md:text-4xl lg:text-5xl font-display font-bold tracking-tight leading-tight">
+          {post.title}
+        </h1>
+
+        <!-- Meta row -->
+        <div data-reveal data-reveal-delay="300" class="flex flex-wrap items-center gap-4 text-sm text-[hsl(var(--muted-foreground))]">
+          <span class="inline-flex items-center gap-1.5">
+            <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
+            {formattedDate}
+          </span>
+          <span class="inline-flex items-center gap-1.5">
+            <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            {post.author} &middot; {post.authorRole}
+          </span>
+          <span class="inline-flex items-center gap-1.5">
+            <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            {post.readTime}
+          </span>
+        </div>
+
+        <!-- Tags -->
+        {post.tags.length > 0 && (
+          <div data-reveal data-reveal-delay="400" class="flex flex-wrap gap-2">
+            {post.tags.map((tag: string) => (
+              <span class="px-3 py-1 rounded-full bg-[hsl(var(--muted)/0.6)] text-xs text-[hsl(var(--muted-foreground))]">
+                {tag}
+              </span>
+            ))}
+          </div>
+        )}
+      </div>
+    </div>
+
+    <div class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[hsl(var(--background))] to-transparent"></div>
+  </section>
+
+  <!-- Article Content -->
+  <section class="py-12 md:py-20 relative overflow-hidden">
+    <div class="absolute top-40 right-0 w-80 h-80 bg-[hsl(var(--accent)/0.05)] rounded-full blur-3xl"></div>
+    <div class="absolute bottom-40 left-0 w-64 h-64 bg-[hsl(var(--primary)/0.05)] rounded-full blur-3xl"></div>
+
+    <div class="container mx-auto px-4">
+      <div class="max-w-3xl mx-auto">
+        <article data-reveal class="prose-content" set:html={post.content} />
+
+        <!-- Back to blog -->
+        <div class="mt-16 pt-8 border-t border-[hsl(var(--border))]">
+          <a href="/blog" class="inline-flex items-center gap-2 text-sm text-[hsl(var(--muted-foreground))] hover:text-[hsl(var(--primary))] transition-colors group">
+            <svg class="h-4 w-4 transition-transform group-hover:-translate-x-1" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
+            Alle Artikel anzeigen
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Posts -->
+  {relatedPosts.length > 0 && (
+    <section class="py-20 md:py-28 bg-[hsl(var(--muted)/0.3)] relative overflow-hidden">
+      <div class="absolute -top-32 -right-32 w-96 h-96 bg-[hsl(var(--primary)/0.05)] rounded-full blur-3xl"></div>
+      <div class="absolute -bottom-32 -left-32 w-80 h-80 bg-[hsl(var(--accent)/0.05)] rounded-full blur-3xl"></div>
+
+      <div class="container mx-auto px-4">
+        <div data-reveal class="text-center max-w-3xl mx-auto mb-16">
+          <span class="inline-block px-2.5 py-0.5 rounded-full border border-[hsl(var(--primary)/0.2)] text-[hsl(var(--primary))] text-xs font-medium mb-4">Weiterlesen</span>
+          <h2 class="text-3xl md:text-4xl font-display font-bold tracking-tight mb-4">Weitere Artikel</h2>
+          <p class="text-lg text-[hsl(var(--muted-foreground))]">Entdecken Sie mehr zum Thema Recruiting und HR.</p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          {relatedPosts.map((related, i) => (
+            <a href={`/blog/${related.slug}`} data-reveal data-reveal-delay={`${i * 100}`}>
+              <article class="group h-full rounded-xl border border-[hsl(var(--border))] bg-[hsl(var(--card))] hover:shadow-lg hover:border-[hsl(var(--primary)/0.2)] hover:-translate-y-1 transition-all duration-500 cursor-pointer">
+                <div class="p-6 flex flex-col h-full space-y-4">
+                  <span class="self-start px-2.5 py-0.5 rounded-full border border-[hsl(var(--primary)/0.2)] text-[hsl(var(--primary))] text-xs font-medium">{related.category}</span>
+                  <h3 class="text-lg font-display font-bold leading-snug group-hover:text-[hsl(var(--primary))] transition-colors line-clamp-2">{related.title}</h3>
+                  <p class="text-sm text-[hsl(var(--muted-foreground))] leading-relaxed line-clamp-3 flex-1">{related.excerpt}</p>
+                  <div class="flex items-center justify-between text-xs text-[hsl(var(--muted-foreground))] pt-2 border-t border-[hsl(var(--border)/0.5)]">
+                    <span>{new Date(related.date).toLocaleDateString("de-DE", { day: "numeric", month: "short", year: "numeric" })}</span>
+                    <span class="inline-flex items-center gap-1 text-[hsl(var(--primary))]">
+                      Lesen
+                      <svg class="h-3 w-3" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                    </span>
+                  </div>
+                </div>
+              </article>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <CTASection />
+</MarketingLayout>
+
+<style is:global>
+  .prose-content h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    color: hsl(var(--foreground));
+  }
+  .prose-content h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+    color: hsl(var(--foreground));
+  }
+  .prose-content h4 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: hsl(var(--foreground));
+  }
+  .prose-content p {
+    font-size: 1rem;
+    color: hsl(var(--muted-foreground));
+    line-height: 1.75;
+    margin-bottom: 1rem;
+  }
+  .prose-content ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  .prose-content ol {
+    list-style-type: decimal;
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  .prose-content li {
+    color: hsl(var(--muted-foreground));
+    line-height: 1.75;
+    margin-bottom: 0.5rem;
+  }
+  .prose-content blockquote {
+    border-left: 4px solid hsl(var(--primary) / 0.3);
+    padding-left: 1rem;
+    font-style: italic;
+    margin: 1.5rem 0;
+    color: hsl(var(--muted-foreground));
+  }
+  .prose-content strong {
+    font-weight: 600;
+    color: hsl(var(--foreground));
+  }
+  .prose-content a {
+    color: hsl(var(--primary));
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  .prose-content a:hover {
+    opacity: 0.8;
+  }
+  .prose-content table {
+    width: 100%;
+    margin: 1.5rem 0;
+    border-collapse: collapse;
+  }
+  .prose-content th {
+    text-align: left;
+    font-weight: 600;
+    color: hsl(var(--foreground));
+    padding: 0.75rem;
+    border-bottom: 1px solid hsl(var(--border));
+  }
+  .prose-content td {
+    padding: 0.75rem;
+    border-bottom: 1px solid hsl(var(--border) / 0.5);
+    color: hsl(var(--muted-foreground));
+  }
+  .prose-content hr {
+    margin: 2rem 0;
+    border-color: hsl(var(--border));
+  }
+</style>

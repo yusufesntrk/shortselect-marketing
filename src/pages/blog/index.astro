@@ -1,0 +1,105 @@
+---
+import MarketingLayout from '../../layouts/MarketingLayout.astro';
+import CTASection from '../../components/landing/CTASection.astro';
+import { blogPosts, blogCategories } from '../../data/blog/posts';
+
+const sortedPosts = [...blogPosts].sort(
+  (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+);
+
+const categories = blogCategories.filter((c) => c !== "Alle");
+---
+
+<MarketingLayout
+  title="Blog – Recruiting Tipps & News | ShortSelect"
+  description="Recruiting-Wissen, Praxis-Guides, KI-Trends und DSGVO-Tipps. Der ShortSelect Blog fuer HR-Teams und Personalvermittler."
+>
+  <!-- Hero -->
+  <section class="relative overflow-hidden py-20 md:py-32">
+    <div class="absolute inset-0 bg-gradient-to-br from-[hsl(var(--primary)/0.1)] via-[hsl(var(--accent)/0.05)] to-[hsl(var(--background))]"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,hsl(var(--primary)/0.15),transparent_50%)]"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,hsl(var(--accent)/0.1),transparent_50%)]"></div>
+    <div class="absolute top-20 left-10 w-72 h-72 bg-[hsl(var(--primary)/0.1)] rounded-full blur-3xl animate-float-slow"></div>
+    <div class="absolute bottom-20 right-10 w-96 h-96 bg-[hsl(var(--accent)/0.1)] rounded-full blur-3xl animate-float-slow" style="animation-delay: -3s;"></div>
+    <div class="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.03)_1px,transparent_1px)] bg-[size:60px_60px] [mask-image:radial-gradient(ellipse_at_center,black_30%,transparent_70%)]"></div>
+
+    <div class="container relative mx-auto px-4">
+      <div class="mx-auto max-w-4xl text-center space-y-8">
+        <div data-reveal class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[hsl(var(--primary)/0.1)] border border-[hsl(var(--primary)/0.2)]">
+          <svg class="h-4 w-4 text-[hsl(var(--primary))]" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+          <span class="text-sm font-medium">Blog</span>
+        </div>
+
+        <h1 data-reveal data-reveal-delay="100" class="text-4xl md:text-6xl lg:text-7xl font-display font-bold tracking-tight">
+          ShortSelect <span class="text-[hsl(var(--primary))]">Blog</span>
+        </h1>
+
+        <p data-reveal data-reveal-delay="200" class="text-lg md:text-xl text-[hsl(var(--muted-foreground))] max-w-2xl mx-auto">
+          Recruiting-Wissen, Praxis-Guides und Trends -- von unserem Team fuer Ihres.
+        </p>
+      </div>
+    </div>
+
+    <div class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[hsl(var(--background))] to-transparent"></div>
+  </section>
+
+  <!-- Category Filter + Post Grid -->
+  <section class="py-20 md:py-28 relative overflow-hidden">
+    <div class="absolute top-20 right-0 w-80 h-80 bg-[hsl(var(--accent)/0.05)] rounded-full blur-3xl"></div>
+    <div class="absolute bottom-20 left-0 w-64 h-64 bg-[hsl(var(--primary)/0.05)] rounded-full blur-3xl"></div>
+
+    <div class="container mx-auto px-4">
+      <!-- Category filter bar -->
+      <div data-reveal class="flex flex-wrap justify-center gap-2 mb-16">
+        <a href="/blog" class="px-4 py-2 rounded-full text-sm font-medium bg-[hsl(var(--primary))] text-white shadow-md">Alle</a>
+        {categories.map((cat) => (
+          <span class="px-4 py-2 rounded-full text-sm font-medium bg-[hsl(var(--muted)/0.6)] text-[hsl(var(--muted-foreground))]">{cat}</span>
+        ))}
+      </div>
+
+      <!-- Posts grid -->
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        {sortedPosts.map((post, i) => (
+          <a href={`/blog/${post.slug}`} data-reveal data-reveal-delay={`${Math.min(i * 50, 500)}`}>
+            <article class="group h-full rounded-xl border border-[hsl(var(--border))] bg-[hsl(var(--card))] hover:shadow-lg hover:border-[hsl(var(--primary)/0.2)] hover:-translate-y-1 transition-all duration-500 cursor-pointer">
+              <div class="p-6 flex flex-col h-full space-y-4">
+                <!-- Category badge -->
+                <span class="self-start px-2.5 py-0.5 rounded-full border border-[hsl(var(--primary)/0.2)] text-[hsl(var(--primary))] text-xs font-medium">
+                  {post.category}
+                </span>
+
+                <!-- Title -->
+                <h3 class="text-lg font-display font-bold leading-snug group-hover:text-[hsl(var(--primary))] transition-colors line-clamp-2">
+                  {post.title}
+                </h3>
+
+                <!-- Excerpt -->
+                <p class="text-sm text-[hsl(var(--muted-foreground))] leading-relaxed line-clamp-3 flex-1">
+                  {post.excerpt}
+                </p>
+
+                <!-- Footer -->
+                <div class="flex items-center gap-3 text-xs text-[hsl(var(--muted-foreground))] pt-2 border-t border-[hsl(var(--border)/0.5)]">
+                  <span class="inline-flex items-center gap-1">
+                    <svg class="h-3 w-3" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
+                    {new Date(post.date).toLocaleDateString("de-DE", { day: "numeric", month: "short", year: "numeric" })}
+                  </span>
+                  <span class="inline-flex items-center gap-1">
+                    <svg class="h-3 w-3" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                    {post.author}
+                  </span>
+                  <span class="inline-flex items-center gap-1 ml-auto">
+                    <svg class="h-3 w-3" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    {post.readTime}
+                  </span>
+                </div>
+              </div>
+            </article>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <CTASection />
+</MarketingLayout>

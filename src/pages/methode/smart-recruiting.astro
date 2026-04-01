@@ -1,0 +1,144 @@
+---
+import MarketingLayout from '../../layouts/MarketingLayout.astro';
+import CTASection from '../../components/landing/CTASection.astro';
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  name: "Smart Recruiting Methode - ShortSelect",
+  description: "Die Smart Recruiting Methode: 4 Phasen fuer bessere Einstellungen. Anziehen, Auswaehlen, Einstellen, Binden.",
+};
+
+const phases = [
+  { number: 1, title: "Anziehen", description: "Talente auf sich aufmerksam machen -- mit der richtigen Karriereseite, den richtigen Kanaelen und einer starken Arbeitgebermarke.", link: "/methode/anziehen", color: "primary" },
+  { number: 2, title: "Auswaehlen", description: "Die Nadel im Heuhaufen finden -- mit KI-Matching, strukturiertem Screening und datenbasierten Entscheidungen.", link: "/methode/auswaehlen", color: "accent" },
+  { number: 3, title: "Einstellen", description: "Vom Interview zum Vertrag -- schnell, professionell und ohne Flaschenhaeulse.", link: "/methode/einstellen", color: "emerald" },
+  { number: 4, title: "Binden", description: "Talente langfristig an sich binden -- mit Talent Pools, Nurturing und systematischer Wiederansprache.", link: "/methode/binden", color: "primary" },
+];
+---
+
+<MarketingLayout title="Smart Recruiting Methode - ShortSelect" description="Die Smart Recruiting Methode: 4 Phasen fuer bessere Einstellungen. Anziehen, Auswaehlen, Einstellen, Binden. Ein System fuer moderne Teams." jsonLd={jsonLd}>
+  <!-- Hero -->
+  <section class="relative overflow-hidden py-28 md:py-40 bg-gradient-to-br from-primary via-primary/95 to-accent text-white">
+    <div class="absolute inset-0 overflow-hidden">
+      <div class="absolute top-10 left-1/4 w-[500px] h-[500px] bg-white/5 rounded-full blur-3xl animate-float-slow"></div>
+      <div class="absolute bottom-10 right-1/4 w-96 h-96 bg-white/5 rounded-full blur-3xl animate-float-slow" style="animation-delay: -3s;"></div>
+    </div>
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.08)_1px,transparent_1px)] bg-[size:40px_40px] opacity-30"></div>
+
+    <div class="container relative mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center space-y-8">
+        <h1 data-reveal class="text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-display font-bold tracking-tight leading-tight">Smart Recruiting</h1>
+        <p data-reveal data-reveal-delay="200" class="text-xl md:text-2xl lg:text-3xl font-display font-bold text-white/90">Die Methode fuer moderne Teams.</p>
+        <p data-reveal data-reveal-delay="400" class="text-lg md:text-xl text-white/70 max-w-2xl mx-auto">4 Phasen. Ein System. Bessere Einstellungen.</p>
+      </div>
+    </div>
+    <div class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent"></div>
+  </section>
+
+  <!-- The Problem -->
+  <section class="py-20 md:py-28 relative overflow-hidden">
+    <div class="absolute top-1/3 right-0 w-80 h-80 bg-primary/5 rounded-full blur-3xl animate-float-slow"></div>
+    <div class="container relative mx-auto px-4">
+      <div class="max-w-3xl mx-auto space-y-8">
+        <div data-reveal class="space-y-6">
+          <h2 class="text-3xl md:text-5xl font-display font-bold tracking-tight">
+            Recruiting ist{" "}
+            <span class="relative inline-block">kaputt<svg class="absolute -bottom-2 left-0 w-full" viewBox="0 0 300 12" fill="none"><path d="M2 10C60 4 240 4 298 10" stroke="hsl(var(--primary))" stroke-width="4" stroke-linecap="round" class="underline-anim" style="stroke-dasharray: 300; stroke-dashoffset: 300;"/></svg></span>.
+          </h2>
+        </div>
+        <p data-reveal data-reveal-delay="200" class="text-lg text-muted-foreground leading-relaxed">
+          Recruiter verbringen 80% ihrer Zeit mit Admin statt mit Menschen. Kandidaten warten wochenlang auf Antworten. Und die besten Talente sind weg, bevor der Prozess ueberhaupt beginnt.
+        </p>
+        <p data-reveal data-reveal-delay="400" class="text-2xl md:text-3xl font-display font-bold tracking-tight text-primary">Smart Recruiting aendert das.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- The 4 Phases -->
+  <section class="py-20 md:py-28 bg-muted/30 relative overflow-hidden">
+    <div class="absolute top-10 left-0 w-72 h-72 bg-primary/5 rounded-full blur-3xl animate-float-slow"></div>
+    <div class="container relative mx-auto px-4">
+      <div data-reveal class="text-center space-y-4 mb-16">
+        <h2 class="text-3xl md:text-5xl font-display font-bold tracking-tight">Die 4 Phasen</h2>
+        <p class="text-lg text-muted-foreground max-w-2xl mx-auto">Ein Kreislauf, der sich selbst verstaerkt. Jede Phase baut auf der vorherigen auf.</p>
+      </div>
+
+      <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-8">
+        {phases.map((phase, index) => (
+          <a href={phase.link} data-reveal data-reveal-delay={String(Math.min(index * 100, 300))} class="group block rounded-xl border-2 border-primary/20 p-8 hover:shadow-xl transition-all duration-500 hover:-translate-y-1 bg-card">
+            <div class="flex items-start justify-between mb-6">
+              <div class="flex items-center gap-4">
+                <div class="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center">
+                  <span class="text-2xl font-display font-bold text-primary">{phase.number}</span>
+                </div>
+                <div>
+                  <p class="text-sm font-medium text-primary uppercase tracking-wider">Phase {phase.number}</p>
+                  <h3 class="text-2xl font-display font-bold tracking-tight">{phase.title}</h3>
+                </div>
+              </div>
+              <svg class="w-5 h-5 text-primary opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </div>
+            <p class="text-muted-foreground leading-relaxed">{phase.description}</p>
+            <div class="flex items-center gap-2 text-sm font-medium text-primary mt-4">
+              <span>Mehr erfahren</span>
+              <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- KPIs -->
+  <section class="py-20 md:py-28 relative overflow-hidden">
+    <div class="container relative mx-auto px-4">
+      <div data-reveal class="text-center space-y-4 mb-16">
+        <h2 class="text-3xl md:text-5xl font-display font-bold tracking-tight">Was Smart Recruiting erreicht</h2>
+        <p class="text-lg text-muted-foreground max-w-xl mx-auto">Messbare Ergebnisse, keine leeren Versprechen.</p>
+      </div>
+      <div class="max-w-4xl mx-auto grid md:grid-cols-3 gap-8">
+        {[
+          { value: "50%", label: "kuerzere Time-to-Hire", color: "text-primary" },
+          { value: "3x", label: "bessere Match-Qualitaet", color: "text-accent" },
+          { value: "60%", label: "weniger Admin-Aufwand", color: "text-emerald-500" },
+        ].map((kpi, index) => (
+          <div data-reveal data-reveal-delay={String(index * 200)} class="text-center space-y-3">
+            <div class:list={["text-5xl md:text-6xl font-display font-bold", kpi.color]}>{kpi.value}</div>
+            <p class="text-muted-foreground font-medium">{kpi.label}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Start Now -->
+  <section class="py-20 md:py-28 bg-muted/30 relative overflow-hidden">
+    <div class="container relative mx-auto px-4">
+      <div data-reveal class="max-w-3xl mx-auto text-center space-y-8">
+        <h2 class="text-3xl md:text-5xl font-display font-bold tracking-tight">
+          Smart Recruiting ist keine Theorie --{" "}
+          <span class="text-primary">es ist Software.</span>
+        </h2>
+        <p class="text-lg text-muted-foreground max-w-xl mx-auto">ShortSelect macht die Smart Recruiting Methode umsetzbar. In Minuten statt Monaten.</p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+          <a href="https://app.shortselect.com/signup" class="inline-flex items-center gap-2 px-8 py-3 bg-primary text-primary-foreground font-semibold rounded-lg text-base group relative overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+            <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
+            <span class="relative z-10 flex items-center gap-2">
+              <svg class="h-5 w-5 animate-pulse" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/></svg>
+              Jetzt kostenlos starten
+              <svg class="h-5 w-5 transition-transform group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CTASection />
+</MarketingLayout>
+
+<style>
+  .underline-anim { transition: stroke-dashoffset 1s ease-out 0.5s; }
+  :global([data-reveal].revealed) .underline-anim { stroke-dashoffset: 0; }
+</style>

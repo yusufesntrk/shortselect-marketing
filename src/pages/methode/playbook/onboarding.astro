@@ -1,0 +1,156 @@
+---
+import MarketingLayout from '../../../layouts/MarketingLayout.astro';
+import CTASection from '../../../components/landing/CTASection.astro';
+
+const phases = [
+  {
+    number: 1, title: "Pre-Boarding", subtitle: "Vertragsunterschrift bis Tag 1", color: "blue",
+    items: [
+      { title: "Willkommens-E-Mail", description: "Mit Infos zum ersten Tag, Anfahrt und Dresscode" },
+      { title: "Dokumente digital unterschreiben", description: "Vertrag, NDA und Formulare vorab erledigen" },
+      { title: "Team vorstellen", description: "Foto + Kurzvorstellung der direkten Kollegen" },
+      { title: "IT-Setup vorbereiten", description: "Laptop, Zugaenge und Arbeitsplatz rechtzeitig einrichten" },
+    ]
+  },
+  {
+    number: 2, title: "Erste Woche", subtitle: "Ankommen und Orientierung", color: "amber",
+    items: [
+      { title: "Buddy-System", description: "Einen erfahrenen Mentor als Ansprechpartner zuweisen" },
+      { title: "Strukturierter Einarbeitungsplan", description: "Klare Aufgaben und Lernziele fuer jeden Tag" },
+      { title: "Taegliches 15-Min Check-in", description: "Kurzes Gespraech: Was lief gut? Wo gibt es Fragen?" },
+      { title: "Zugaenge und Tools bereitstellen", description: "Alle noetigen Software-Zugaenge am ersten Tag aktiv" },
+    ]
+  },
+  {
+    number: 3, title: "Erste 90 Tage", subtitle: "Integration und Entwicklung", color: "emerald",
+    items: [
+      { title: "30/60/90-Tage Gespraeche", description: "Strukturierte Meilenstein-Gespraeche mit der Fuehrungskraft" },
+      { title: "Feedback einholen", description: "Regelmaessig fragen: Wie laeuft es? Was brauchen Sie?" },
+      { title: "Ziele definieren", description: "Gemeinsam realistische Ziele fuer die ersten Monate setzen" },
+      { title: "Probezeit-Review", description: "Transparente Bewertung und Perspektiven-Gespraech" },
+    ]
+  },
+];
+
+const checklistItems = [
+  "Willkommens-E-Mail versendet", "Arbeitsvertrag unterschrieben", "IT-Equipment bestellt", "Team informiert", "Buddy zugewiesen",
+  "Einarbeitungsplan erstellt", "30-Tage-Gespraech terminiert", "60-Tage-Gespraech terminiert", "90-Tage-Gespraech terminiert", "Probezeit-Review geplant",
+];
+
+const stats = [
+  { value: "33%", label: "weniger Fruehfluktuation" },
+  { value: "2x", label: "schnellere Produktivitaet" },
+  { value: "87%", label: "Mitarbeiterzufriedenheit" },
+];
+---
+
+<MarketingLayout title="Playbook: Vom Angebot zum ersten Arbeitstag - ShortSelect" description="33% der Neuen kuendigen in den ersten 6 Monaten. Ein strukturierter Onboarding-Prozess verhindert das. Pre-Boarding, erste Woche, erste 90 Tage.">
+  <!-- Hero -->
+  <section class="relative overflow-hidden py-20 md:py-32">
+    <div class="absolute inset-0 bg-gradient-to-br from-primary/10 via-background to-accent/5"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_40%_20%,hsl(var(--primary)/0.12),transparent_50%)]"></div>
+    <div class="absolute top-24 left-16 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-float-slow"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,0,0,0.04)_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_at_center,black_40%,transparent_70%)]"></div>
+
+    <div class="container relative mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center space-y-8">
+        <div data-reveal class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20">
+          <svg class="h-4 w-4 text-primary animate-pulse" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="19" x2="19" y1="8" y2="14"/><line x1="22" x2="16" y1="11" y2="11"/></svg>
+          <span class="text-sm font-medium">Playbook</span>
+        </div>
+        <h1 data-reveal data-reveal-delay="100" class="text-4xl md:text-5xl lg:text-6xl font-display font-bold tracking-tight">
+          Playbook: Vom Angebot zum <span class="text-primary">ersten Arbeitstag</span>.
+        </h1>
+        <p data-reveal data-reveal-delay="200" class="text-lg text-muted-foreground max-w-2xl mx-auto">33% der Neuen kuendigen in den ersten 6 Monaten. Ein strukturierter Onboarding-Prozess verhindert das.</p>
+        <div data-reveal data-reveal-delay="300" class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="https://app.shortselect.com/signup" class="inline-flex items-center gap-2 px-8 py-3 bg-primary text-primary-foreground font-semibold rounded-lg text-base group relative overflow-hidden shadow-lg hover:shadow-xl transition-all hover:scale-105">
+            <span class="relative z-10 flex items-center gap-2">
+              <svg class="h-5 w-5 animate-pulse" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/></svg>
+              Jetzt starten
+              <svg class="h-5 w-5 transition-transform group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent"></div>
+  </section>
+
+  <!-- Phases -->
+  <section class="py-20 md:py-28">
+    <div class="container mx-auto px-4">
+      <div data-reveal class="text-center max-w-3xl mx-auto mb-16">
+        <span class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold border-primary/20 text-primary mb-4">3 Phasen</span>
+        <h2 class="text-3xl md:text-5xl font-display font-bold tracking-tight mb-4">Der Onboarding-Workflow</h2>
+        <p class="text-lg text-muted-foreground">Von der Vertragsunterschrift bis zum Ende der Probezeit -- strukturiert und messbar.</p>
+      </div>
+      <div class="max-w-5xl mx-auto space-y-16">
+        {phases.map((phase, pi) => (
+          <div data-reveal data-reveal-delay={String(pi * 200)}>
+            <div class="flex items-center gap-4 mb-8">
+              <div class="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center">
+                <span class="text-xl font-display font-bold text-primary">{phase.number}</span>
+              </div>
+              <div>
+                <h3 class="text-2xl md:text-3xl font-display font-bold text-primary">{phase.title}</h3>
+                <p class="text-sm text-muted-foreground">{phase.subtitle}</p>
+              </div>
+            </div>
+            <div class="grid md:grid-cols-2 gap-4">
+              {phase.items.map((item, ii) => (
+                <div data-reveal data-reveal-delay={String(Math.min(pi * 200 + ii * 100 + 200, 500))} class="rounded-xl border p-6 hover:shadow-lg hover:border-primary/20 transition-all duration-500 hover:-translate-y-1 bg-card">
+                  <h4 class="text-lg font-display font-bold mb-1">{item.title}</h4>
+                  <p class="text-sm text-muted-foreground leading-relaxed">{item.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Checklist -->
+  <section class="py-20 md:py-28 bg-muted/30">
+    <div class="container mx-auto px-4">
+      <div data-reveal class="text-center max-w-3xl mx-auto mb-16">
+        <span class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold border-primary/20 text-primary mb-4">Checkliste</span>
+        <h2 class="text-3xl md:text-5xl font-display font-bold tracking-tight mb-4">Onboarding-Checkliste</h2>
+        <p class="text-lg text-muted-foreground">Nichts vergessen -- mit dieser Checkliste stellen Sie sicher, dass jeder Schritt erledigt wird.</p>
+      </div>
+      <div class="max-w-3xl mx-auto grid sm:grid-cols-2 gap-4">
+        {checklistItems.map((item, i) => (
+          <div data-reveal data-reveal-delay={String(Math.min(i * 80, 500))} class="rounded-xl border p-4 hover:shadow-md hover:border-primary/20 transition-all bg-card">
+            <div class="flex items-center gap-3">
+              <div class="h-8 w-8 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
+                <svg class="h-4 w-4 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="m9 12 2 2 4-4"/></svg>
+              </div>
+              <span class="text-sm font-medium">{item}</span>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section class="py-20 md:py-28 bg-gradient-to-br from-primary via-primary/90 to-accent text-white relative overflow-hidden">
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:24px_24px] opacity-30"></div>
+    <div class="container relative mx-auto px-4">
+      <div data-reveal class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-3xl md:text-5xl font-display font-bold mb-4">Die Zahlen sprechen fuer sich</h2>
+        <p class="text-lg text-white/80">Unternehmen mit strukturiertem Onboarding erzielen messbar bessere Ergebnisse.</p>
+      </div>
+      <div class="max-w-4xl mx-auto grid md:grid-cols-3 gap-8">
+        {stats.map((stat, i) => (
+          <div data-reveal data-reveal-delay={String(i * 150)} class="text-center space-y-4">
+            <div class="text-4xl md:text-5xl font-display font-bold">{stat.value}</div>
+            <p class="text-white/80 text-lg">{stat.label}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <CTASection />
+</MarketingLayout>

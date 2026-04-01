@@ -1,0 +1,45 @@
+---
+import BrancheLayout from '../../layouts/BrancheLayout.astro';
+
+const painPoints = [
+  { title: "Saisonale Spitzen", description: "Black Friday, Weihnachten, Sommer — Bedarf schwankt stark.", iconPath: '<path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/>' },
+  { title: "Gewerbliche & kaufmaennische Rollen", description: "Von Lagerhelfer bis Supply Chain Director — ein System fuer alle.", iconPath: '<path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m6.08 9.5-3.5 1.6a1 1 0 0 0 0 1.81l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9a1 1 0 0 0 0-1.83l-3.5-1.59"/><path d="m6.08 14.5-3.5 1.6a1 1 0 0 0 0 1.81l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9a1 1 0 0 0 0-1.83l-3.5-1.59"/>' },
+  { title: "Schnelle Verfuegbarkeit", description: "Positionen muessen oft innerhalb von Tagen besetzt werden.", iconPath: '<circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>' },
+];
+
+const features = [
+  { title: "Massen-Recruiting", description: "Dutzende Stellen gleichzeitig ausschreiben und verwalten.", iconPath: '<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>' },
+  { title: "Mobile Bewerbung", description: "Lageristen bewerben sich in 60 Sekunden — direkt vom Handy.", iconPath: '<rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/>' },
+  { title: "Schichtplanung-Info", description: "Verfuegbarkeit und Schichtbereitschaft direkt abfragen.", iconPath: '<path d="M5 22h14"/><path d="M5 2h14"/><path d="M17 22v-4.172a2 2 0 0 0-.586-1.414L12 12l-4.414 4.414A2 2 0 0 0 7 17.828V22"/><path d="M7 2v4.172a2 2 0 0 0 .586 1.414L12 12l4.414-4.414A2 2 0 0 0 17 6.172V2"/>' },
+  { title: "Standort-Filter", description: "Kandidaten nach Lager-Standort und Einzugsgebiet filtern.", iconPath: '<path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/>' },
+  { title: "Schnell-Pipeline", description: "Von Bewerbung bis Vertrag in Tagen statt Wochen.", iconPath: '<path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/>' },
+  { title: "Bulk Actions", description: "Mehrere Kandidaten gleichzeitig verschieben, einladen oder absagen.", iconPath: '<path d="M11 18H3"/><path d="m15 18 2 2 4-4"/><path d="M16 12H3"/><path d="M16 6H3"/>' },
+];
+
+const steps = [
+  { step: "1", title: "Bedarf melden", description: "Offene Positionen erfassen — mit Standort, Schichtmodell und Anforderungen." },
+  { step: "2", title: "Multi-Channel posten", description: "Stellenanzeigen auf Jobboersen, Social Media und intern gleichzeitig veroeffentlichen." },
+  { step: "3", title: "Schnell-Screening", description: "Fuehrerschein, Staplerschein, Verfuegbarkeit — die wichtigsten Fragen zuerst." },
+  { step: "4", title: "Sofort einstellen", description: "Kandidaten bewerten, einladen und den Vertrag innerhalb weniger Tage abschliessen." },
+];
+---
+
+<BrancheLayout
+  title="Logistik Recruiting Software | Lagerpersonal & Supply Chain"
+  description="Logistik-Recruiting: Massen-Recruiting, mobile Bewerbung, Schichtplanung. Von Lagerhelfer bis Supply Chain Director."
+  badgeText="Logistik & Supply Chain"
+  badgeIcon='<path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/>'
+  headline="Logistik & Supply Chain:"
+  highlightedWord="Schnell"
+  headlineSuffix="besetzen, wenn es zaehlt."
+  subline="Lageristen, Disponenten, Supply Chain Manager — Positionen in Tagen statt Wochen besetzen."
+  painBadge="Die Realitaet"
+  painTitle="Warum Logistik-Recruiting"
+  painHighlight="anders"
+  painPoints={painPoints}
+  steps={steps}
+  stepsSubline="4 Schritte von der offenen Stelle bis zur schnellen Einstellung."
+  featuresTitle="Gemacht fuer"
+  featuresHighlight="Logistik"
+  features={features}
+/>

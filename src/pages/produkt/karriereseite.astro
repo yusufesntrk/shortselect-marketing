@@ -1,0 +1,116 @@
+---
+import ProduktLayout from '../../layouts/ProduktLayout.astro';
+
+const features = [
+  {
+    title: "Eigenes Branding",
+    description: "Logo, Farben und Schriftarten Ihres Unternehmens. Ihre Karriereseite sieht aus wie Ihre Website.",
+    icon: '<svg class="h-6 w-6 text-primary group-hover:text-white transition-colors" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20a7 7 0 1 0 0-14 7 7 0 0 0 0 14Z"/><path d="M12 20a7 7 0 1 0 0-14 7 7 0 0 0 0 14Z"/><path d="M12 12m-2 0a2 2 0 1 0 4 0a2 2 0 1 0-4 0"/></svg>',
+  },
+  {
+    title: "Embed Widget",
+    description: "Ein einziges Code-Snippet -- und Ihre offenen Stellen erscheinen auf Ihrer eigenen Website.",
+    icon: '<svg class="h-6 w-6 text-primary group-hover:text-white transition-colors" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>',
+  },
+  {
+    title: "Mobile-optimiert",
+    description: "Perfekte Darstellung auf jedem Geraet. 60% der Bewerber kommen ueber Smartphones.",
+    icon: '<svg class="h-6 w-6 text-primary group-hover:text-white transition-colors" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg>',
+  },
+  {
+    title: "SEO-optimiert",
+    description: "Strukturierte Daten und optimale Meta-Tags. Ihre Stellen werden von Google gefunden.",
+    icon: '<svg class="h-6 w-6 text-primary group-hover:text-white transition-colors" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>',
+  },
+  {
+    title: "Bewerbungsformular",
+    description: "Individuell konfigurierbare Formulare. CV-Upload, Screening-Fragen und DSGVO-konform.",
+    icon: '<svg class="h-6 w-6 text-primary group-hover:text-white transition-colors" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/></svg>',
+  },
+  {
+    title: "Multi-Tenant",
+    description: "Jeder Mandant hat eine eigene Karriereseite. Perfekt fuer Personaldienstleister mit mehreren Kunden.",
+    icon: '<svg class="h-6 w-6 text-primary group-hover:text-white transition-colors" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/></svg>',
+  },
+];
+---
+
+<ProduktLayout
+  title="Karriereseite & Embed Widget – Branded Career Pages | ShortSelect"
+  description="Erstellen Sie Karriereseiten mit Ihrem Branding. Embed Widget fuer Ihre Website, SEO-optimiert, mobile-first und DSGVO-konform."
+  canonical="https://shortselect.com/produkt/karriereseite"
+  badgeText="Karriereseite & Embed Widget"
+  heroTitle="Karriereseiten, die"
+  heroHighlight="Talente anziehen"
+  heroSuffix="."
+  heroSubtitle="Verwandeln Sie langweilige Stellenanzeigen in eine beeindruckende Karriereseite mit Ihrem Branding. Einbetten, veroeffentlichen, Bewerbungen erhalten -- so einfach ist das."
+  heroIcon='<svg class="h-4 w-4 text-primary animate-pulse" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/><path d="M20 3v4"/><path d="M22 5h-4"/><path d="M4 17v2"/><path d="M5 18H3"/></svg>'
+  features={features}
+  featuresSectionTitle="Ihre Karriereseite, Ihre Regeln"
+  featuresSectionSubtitle="Sechs Features, die Ihre Karriereseite von einer simplen Stellenliste in einen Talent-Magneten verwandeln."
+  featuresBadge="Features"
+>
+  <!-- Before/After Section -->
+  <Fragment slot="before-features">
+    <section class="py-20 md:py-28 bg-muted/30 relative overflow-hidden">
+      <div class="absolute -top-32 -left-32 w-96 h-96 bg-accent/5 rounded-full blur-3xl"></div>
+      <div class="container mx-auto px-4">
+        <div data-reveal class="text-center max-w-3xl mx-auto mb-16">
+          <span class="inline-block mb-4 px-3 py-1 text-xs font-medium rounded-full border border-primary/20 text-primary">Der Unterschied</span>
+          <h2 class="text-3xl md:text-5xl font-display font-bold tracking-tight mb-4">Der erste Eindruck zaehlt</h2>
+          <p class="text-lg text-muted-foreground">Ihre Karriereseite ist oft der erste Kontaktpunkt mit Talenten. Machen Sie ihn unvergesslich.</p>
+        </div>
+        <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          <div data-reveal class="rounded-xl border border-destructive/20 bg-destructive/5 p-8">
+            <h3 class="text-xl font-display font-bold text-destructive mb-4">Generisches Jobportal</h3>
+            <div class="space-y-3">
+              {["Kein eigenes Branding", "Standard-Stellenanzeigen ohne Persoenlichkeit", "Keine mobile Optimierung", "Umstaendliche Bewerbungsprozesse", "Kandidaten landen auf fremden Plattformen"].map((item) => (
+                <div class="flex items-start gap-3">
+                  <svg class="h-4 w-4 text-destructive mt-0.5 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+                  <span class="text-sm text-muted-foreground">{item}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div data-reveal data-reveal-delay="200" class="rounded-xl border border-primary/20 bg-primary/5 p-8">
+            <h3 class="text-xl font-display font-bold text-primary mb-4">ShortSelect Karriereseite</h3>
+            <div class="space-y-3">
+              {["Ihr Logo, Ihre Farben, Ihr Branding", "Ansprechende Stellenbeschreibungen mit Medien", "Perfekt auf jedem Geraet", "Ein-Klick-Bewerbung mit CV-Upload", "Bewerber bleiben auf Ihrer Domain"].map((item) => (
+                <div class="flex items-start gap-3">
+                  <svg class="h-4 w-4 text-primary mt-0.5 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
+                  <span class="text-sm font-medium">{item}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </Fragment>
+
+  <!-- How it works -->
+  <section class="py-20 md:py-28 bg-muted/30 relative overflow-hidden">
+    <div class="container mx-auto px-4">
+      <div data-reveal class="text-center max-w-3xl mx-auto mb-16">
+        <span class="inline-block mb-4 px-3 py-1 text-xs font-medium rounded-full border border-primary/20 text-primary">So funktioniert's</span>
+        <h2 class="text-3xl md:text-5xl font-display font-bold tracking-tight mb-4">In 3 Schritten live</h2>
+        <p class="text-lg text-muted-foreground">Kein Entwickler noetig. Kein kompliziertes Setup. Einfach einbetten und loslegen.</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+        {[
+          { number: "01", title: "Widget einbetten", description: "Kopieren Sie den Code-Snippet und fuegen Sie ihn auf Ihrer Website ein. Das war's." },
+          { number: "02", title: "Stellen veroeffentlichen", description: "Erstellen Sie Jobs in ShortSelect -- sie erscheinen automatisch auf Ihrer Karriereseite." },
+          { number: "03", title: "Bewerbungen erhalten", description: "Bewerber fuellen das Formular aus und landen direkt in Ihrer Recruiting-Pipeline." },
+        ].map((step, i) => (
+          <div data-reveal data-reveal-delay={`${i * 100}`} class="text-center">
+            <div class="h-24 w-24 rounded-full bg-primary text-white shadow-lg shadow-primary/30 flex items-center justify-center mx-auto mb-6">
+              <span class="text-2xl font-display font-bold">{step.number}</span>
+            </div>
+            <h3 class="text-xl font-display font-bold mb-2">{step.title}</h3>
+            <p class="text-sm text-muted-foreground leading-relaxed">{step.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+</ProduktLayout>

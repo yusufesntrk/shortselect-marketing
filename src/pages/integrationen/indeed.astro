@@ -1,0 +1,35 @@
+---
+import IntegrationLayout from '../../layouts/IntegrationLayout.astro';
+
+const benefits = [
+  { title: "Job-Posting", description: "Stellen direkt aus ShortSelect auf Indeed veroeffentlichen.", iconPath: '<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" x2="12" y1="3" y2="15"/>' },
+  { title: "Bewerbungen importieren", description: "Indeed-Bewerbungen automatisch ins ATS uebernehmen.", iconPath: '<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>' },
+  { title: "Sponsored Jobs", description: "Reichweite mit Sponsored Jobs erhoehen — Budget im ATS verwalten.", iconPath: '<circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/>' },
+  { title: "Performance Tracking", description: "Views, Bewerbungen und Cost-per-Apply in Echtzeit.", iconPath: '<path d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2"/>' },
+  { title: "Schnelle Pipeline", description: "Von Indeed-Bewerbung bis Einladung in wenigen Klicks.", iconPath: '<path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/>' },
+  { title: "Analytics pro Kanal", description: "Vergleichen Sie Indeed mit anderen Quellen in einem Dashboard.", iconPath: '<line x1="12" x2="12" y1="20" y2="10"/><line x1="18" x2="18" y1="20" y2="4"/><line x1="6" x2="6" y1="20" y2="16"/>' },
+];
+
+const howItWorks = [
+  { step: "1", title: "Verbinden", description: "Indeed-Konto in den Integrationseinstellungen verknuepfen." },
+  { step: "2", title: "Jobs posten", description: "Stellen direkt aus ShortSelect auf Indeed veroeffentlichen." },
+  { step: "3", title: "Bewerbungen sammeln", description: "Alle Bewerbungen landen automatisch in Ihrer Pipeline." },
+  { step: "4", title: "Analysieren", description: "Performance pro Stellenanzeige in Echtzeit verfolgen." },
+];
+---
+
+<IntegrationLayout
+  title="Indeed Integration | ShortSelect ATS"
+  description="Indeed-Jobs direkt aus ShortSelect posten, Bewerbungen automatisch importieren und Performance tracken."
+  badgeText="Indeed"
+  badgeIcon='<path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/><rect width="20" height="14" x="2" y="6" rx="2"/>'
+  headline="Indeed +"
+  highlightedWord="ShortSelect"
+  subline="Stellen auf Indeed posten, Bewerbungen automatisch importieren und Performance in Echtzeit verfolgen."
+  benefitsTitle="Ihre Vorteile mit der"
+  benefitsHighlight="Indeed-Integration"
+  benefits={benefits}
+  howItWorks={howItWorks}
+  howItWorksSubline="In 4 Schritten von der Stellenanzeige zum Kandidaten."
+  trustItems={["Multi-Channel Posting", "Automatischer Import", "Performance Analytics"]}
+/>

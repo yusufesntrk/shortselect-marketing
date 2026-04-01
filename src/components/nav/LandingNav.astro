@@ -1,0 +1,171 @@
+---
+// Navigation data
+const produktLinks = [
+  { href: '/produkt/ats-crm', label: 'ATS & CRM', desc: 'Bewerbermanagement-Plattform' },
+  { href: '/produkt/karriereseite', label: 'Karriereseite', desc: 'Branded Career Pages & Widget' },
+  { href: '/produkt/ki-features', label: 'KI-Features', desc: 'DSGVO-konforme Enterprise-KI' },
+  { href: '/produkt/automatisierung', label: 'Automatisierung', desc: 'Workflows & Auto-E-Mails' },
+  { href: '/produkt/multiposting', label: 'Multiposting', desc: 'Alle Jobbörsen, ein Klick' },
+  { href: '/produkt/compliance', label: 'DSGVO & Compliance', desc: 'Datenschutz by Design' },
+];
+
+const loesungenLinks = [
+  { href: '/fuer/personalvermittlung', label: 'Personalvermittlung', desc: 'Multi-Mandanten für Agenturen' },
+  { href: '/fuer/startups', label: 'Startups', desc: 'Kostenlos starten, smart wachsen' },
+  { href: '/fuer/enterprise', label: 'Enterprise', desc: 'Skalierbar mit RBAC & SSO' },
+  { href: '/branchen/it-recruiting', label: 'IT-Recruiting', desc: 'Tech-Talente finden' },
+  { href: '/branchen/finance', label: 'Finance & Banking', desc: 'Diskret & compliant' },
+  { href: '/branchen/healthcare', label: 'Healthcare', desc: 'Medizin & Pflege' },
+];
+
+const vergleichLinks = [
+  { href: '/vergleich/shortselect-vs-personio', label: 'vs. Personio', desc: 'Spezialisiertes ATS vs. HR-Suite' },
+  { href: '/vergleich/shortselect-vs-softgarden', label: 'vs. Softgarden', desc: 'Moderne KI vs. Legacy' },
+  { href: '/vergleich/shortselect-vs-bullhorn', label: 'vs. Bullhorn', desc: 'Agil vs. Enterprise-Gigant' },
+  { href: '/vergleich/shortselect-vs-greenhouse', label: 'vs. Greenhouse', desc: 'DACH vs. US-Enterprise' },
+  { href: '/vergleich/beste-ats-software', label: 'Beste ATS 2026', desc: 'Der große Vergleich' },
+];
+
+const simpleLinks = [
+  { href: '/preise', label: 'Preise' },
+  { href: '/kunden', label: 'Kunden' },
+  { href: '/blog', label: 'Blog' },
+  { href: '/ressourcen', label: 'Ressourcen' },
+];
+---
+
+<nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-border/50 transition-all duration-300" id="landing-nav">
+  <div class="container mx-auto px-4 flex items-center justify-between h-16">
+    <!-- Logo -->
+    <a href="/" class="flex items-center gap-2">
+      <img src="/logo.svg" alt="ShortSelect" class="h-8" />
+    </a>
+
+    <!-- Desktop Navigation -->
+    <div class="hidden lg:flex items-center gap-1">
+      <!-- Produkt Dropdown -->
+      <div class="nav-dropdown group relative">
+        <button class="flex items-center gap-1 px-3 py-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors">
+          Produkt
+          <svg class="h-4 w-4 transition-transform group-hover:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+        </button>
+        <div class="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+          <div class="bg-white rounded-xl shadow-xl border border-border/50 p-4 min-w-[320px]">
+            {produktLinks.map((link) => (
+              <a href={link.href} class="flex flex-col gap-0.5 px-3 py-2.5 rounded-lg hover:bg-muted transition-colors">
+                <span class="text-sm font-medium text-foreground">{link.label}</span>
+                <span class="text-xs text-muted-foreground">{link.desc}</span>
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <!-- Loesungen Dropdown -->
+      <div class="nav-dropdown group relative">
+        <button class="flex items-center gap-1 px-3 py-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors">
+          Loesungen
+          <svg class="h-4 w-4 transition-transform group-hover:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+        </button>
+        <div class="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+          <div class="bg-white rounded-xl shadow-xl border border-border/50 p-4 min-w-[320px]">
+            {loesungenLinks.map((link) => (
+              <a href={link.href} class="flex flex-col gap-0.5 px-3 py-2.5 rounded-lg hover:bg-muted transition-colors">
+                <span class="text-sm font-medium text-foreground">{link.label}</span>
+                <span class="text-xs text-muted-foreground">{link.desc}</span>
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <!-- Vergleich Dropdown -->
+      <div class="nav-dropdown group relative">
+        <button class="flex items-center gap-1 px-3 py-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors">
+          Vergleich
+          <svg class="h-4 w-4 transition-transform group-hover:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+        </button>
+        <div class="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+          <div class="bg-white rounded-xl shadow-xl border border-border/50 p-4 min-w-[320px]">
+            {vergleichLinks.map((link) => (
+              <a href={link.href} class="flex flex-col gap-0.5 px-3 py-2.5 rounded-lg hover:bg-muted transition-colors">
+                <span class="text-sm font-medium text-foreground">{link.label}</span>
+                <span class="text-xs text-muted-foreground">{link.desc}</span>
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <!-- Simple Links -->
+      {simpleLinks.map((link) => (
+        <a href={link.href} class="px-3 py-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors">
+          {link.label}
+        </a>
+      ))}
+    </div>
+
+    <!-- Desktop CTAs -->
+    <div class="hidden lg:flex items-center gap-3">
+      <a href="https://app.shortselect.com/login" class="px-4 py-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors">
+        Login
+      </a>
+      <a href="/demo" class="px-5 py-2.5 bg-primary text-primary-foreground text-sm font-semibold rounded-lg hover:bg-primary/90 transition-colors shadow-sm">
+        Demo buchen
+      </a>
+    </div>
+
+    <!-- Mobile Menu Button -->
+    <button class="lg:hidden p-2" id="mobile-menu-btn" aria-label="Menu oeffnen">
+      <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div class="lg:hidden hidden bg-white border-t border-border/50 max-h-[80vh] overflow-y-auto" id="mobile-menu">
+    <div class="container mx-auto px-4 py-4 space-y-4">
+      <details class="group">
+        <summary class="flex items-center justify-between py-2 text-sm font-medium cursor-pointer">Produkt <svg class="h-4 w-4 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg></summary>
+        <div class="pl-4 space-y-2 mt-2">
+          {produktLinks.map((link) => <a href={link.href} class="block py-1.5 text-sm text-muted-foreground hover:text-foreground">{link.label}</a>)}
+        </div>
+      </details>
+      <details class="group">
+        <summary class="flex items-center justify-between py-2 text-sm font-medium cursor-pointer">Loesungen <svg class="h-4 w-4 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg></summary>
+        <div class="pl-4 space-y-2 mt-2">
+          {loesungenLinks.map((link) => <a href={link.href} class="block py-1.5 text-sm text-muted-foreground hover:text-foreground">{link.label}</a>)}
+        </div>
+      </details>
+      <details class="group">
+        <summary class="flex items-center justify-between py-2 text-sm font-medium cursor-pointer">Vergleich <svg class="h-4 w-4 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg></summary>
+        <div class="pl-4 space-y-2 mt-2">
+          {vergleichLinks.map((link) => <a href={link.href} class="block py-1.5 text-sm text-muted-foreground hover:text-foreground">{link.label}</a>)}
+        </div>
+      </details>
+      {simpleLinks.map((link) => <a href={link.href} class="block py-2 text-sm font-medium">{link.label}</a>)}
+      <div class="pt-4 border-t border-border/50 space-y-2">
+        <a href="https://app.shortselect.com/login" class="block py-2 text-sm font-medium text-center">Login</a>
+        <a href="/demo" class="block py-2.5 bg-primary text-primary-foreground text-sm font-semibold rounded-lg text-center">Demo buchen</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<script>
+  const btn = document.getElementById('mobile-menu-btn');
+  const menu = document.getElementById('mobile-menu');
+  btn?.addEventListener('click', () => menu?.classList.toggle('hidden'));
+</script>
+
+<style>
+  /* Sticky nav shrink on scroll */
+  nav.scrolled { box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1); }
+</style>
+
+<script>
+  const nav = document.getElementById('landing-nav');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) nav?.classList.add('scrolled');
+    else nav?.classList.remove('scrolled');
+  });
+</script>

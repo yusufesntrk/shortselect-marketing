@@ -1,0 +1,122 @@
+---
+import MarketingLayout from '../layouts/MarketingLayout.astro';
+import CTASection from '../components/landing/CTASection.astro';
+
+const steps = [
+  { title: "Registrieren", description: "Kostenloses Konto in 30 Sekunden erstellen. Keine Kreditkarte noetig." },
+  { title: "Erkunden", description: "Alle Features 14 Tage unverbindlich testen. Voller Funktionsumfang." },
+  { title: "Entscheiden", description: "Plan waehlen oder einfach kostenlos weitermachen." },
+];
+
+const benefits = ["14 Tage kostenlos", "Keine Kreditkarte", "Persoenliches Onboarding", "Alle Features inklusive"];
+
+const faqs = [
+  { question: "Wie lange dauert die Einrichtung?", answer: "5 Minuten. Account erstellen, erstes Job-Posting anlegen und Karriereseite aktivieren." },
+  { question: "Muss ich eine Kreditkarte angeben?", answer: "Nein. Die 14-taegige Testphase ist komplett kostenlos und erfordert keine Zahlungsdaten." },
+  { question: "Kann ich jederzeit kuendigen?", answer: "Ja, monatlich kuendbar. Keine Mindestlaufzeit, keine versteckten Kosten." },
+];
+---
+
+<MarketingLayout
+  title="Demo buchen – ShortSelect kostenlos testen | ShortSelect"
+  description="Sehen Sie ShortSelect in Aktion. 15 Minuten Demo, keine Verpflichtung. Oder starten Sie sofort mit der kostenlosen 14-Tage-Testversion."
+>
+  <!-- Hero (Split) -->
+  <section class="relative py-20 md:py-32 overflow-hidden">
+    <div class="absolute inset-0 overflow-hidden pointer-events-none">
+      <div class="absolute top-20 left-10 w-64 h-64 bg-[hsl(var(--primary)/0.05)] rounded-full blur-3xl animate-float-slow"></div>
+      <div class="absolute bottom-10 right-20 w-80 h-80 bg-[hsl(var(--accent)/0.05)] rounded-full blur-3xl animate-float-slow" style="animation-delay: -3s;"></div>
+    </div>
+
+    <div class="container relative mx-auto px-4">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <!-- Left: Text -->
+        <div data-reveal class="space-y-6">
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-display font-bold tracking-tight leading-tight">
+            Sehen Sie ShortSelect <span class="text-[hsl(var(--primary))]">in Aktion</span>.
+          </h1>
+          <p class="text-lg md:text-xl text-[hsl(var(--muted-foreground))] max-w-lg">
+            15 Minuten. Keine Verpflichtung. Alle Fragen beantwortet.
+          </p>
+          <div class="flex flex-wrap gap-4 pt-2">
+            <div class="flex items-center gap-2 text-sm text-[hsl(var(--muted-foreground))]">
+              <svg class="h-4 w-4 text-[hsl(var(--primary))]" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              43+ Teams
+            </div>
+            <div class="flex items-center gap-2 text-sm text-[hsl(var(--muted-foreground))]">
+              <svg class="h-4 w-4 text-[hsl(var(--primary))]" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg>
+              DSGVO-konform
+            </div>
+            <div class="flex items-center gap-2 text-sm text-[hsl(var(--muted-foreground))]">
+              <svg class="h-4 w-4 text-[hsl(var(--primary))]" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" x2="22" y1="10" y2="10"/></svg>
+              Keine Kreditkarte
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: CTA Card -->
+        <div data-reveal data-reveal-delay="200">
+          <div class="rounded-xl border-2 border-[hsl(var(--primary)/0.2)] shadow-xl bg-[hsl(var(--card))] overflow-hidden">
+            <div class="p-8 space-y-6">
+              <div class="space-y-2">
+                <h2 class="text-2xl font-display font-bold">Kostenlos starten</h2>
+                <p class="text-[hsl(var(--muted-foreground))] text-sm">Erstellen Sie Ihr Konto und testen Sie alle Features.</p>
+              </div>
+              <div class="space-y-3">
+                {benefits.map((benefit) => (
+                  <div class="flex items-center gap-3">
+                    <div class="h-5 w-5 rounded-full bg-green-100 flex items-center justify-center shrink-0">
+                      <svg class="h-3 w-3 text-green-600" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    </div>
+                    <span class="text-sm font-medium">{benefit}</span>
+                  </div>
+                ))}
+              </div>
+              <a href="https://app.shortselect.com/signup" class="block w-full text-center px-6 py-3 bg-[hsl(var(--primary))] text-white font-semibold rounded-lg hover:opacity-90 transition-opacity">
+                Jetzt kostenlos starten
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Steps -->
+  <section class="py-20 md:py-28 bg-[hsl(var(--muted)/0.3)]">
+    <div class="container mx-auto px-4">
+      <div data-reveal class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-display font-bold tracking-tight mb-4">So einfach geht's</h2>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+        {steps.map((step, i) => (
+          <div data-reveal data-reveal-delay={`${i * 100}`} class="text-center space-y-4">
+            <div class="h-12 w-12 rounded-full bg-[hsl(var(--primary))] text-white flex items-center justify-center text-lg font-bold mx-auto">{i + 1}</div>
+            <h3 class="text-xl font-display font-bold">{step.title}</h3>
+            <p class="text-sm text-[hsl(var(--muted-foreground))]">{step.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-20 md:py-28">
+    <div class="container mx-auto px-4">
+      <div data-reveal class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-3xl md:text-4xl font-display font-bold tracking-tight mb-4">Haeufige Fragen</h2>
+      </div>
+      <div class="max-w-2xl mx-auto space-y-0 rounded-xl border border-[hsl(var(--border))] bg-[hsl(var(--card))] overflow-hidden">
+        {faqs.map((item) => (
+          <details data-reveal class="border-b border-[hsl(var(--border)/0.5)] last:border-0 group">
+            <summary class="flex items-center justify-between w-full py-5 px-6 text-left cursor-pointer font-display font-bold text-lg">
+              {item.question}
+              <svg class="h-5 w-5 text-[hsl(var(--muted-foreground))] shrink-0 transition-transform duration-300 group-open:rotate-180" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+            </summary>
+            <div class="px-6 pb-5 text-[hsl(var(--muted-foreground))] leading-relaxed">{item.answer}</div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+</MarketingLayout>

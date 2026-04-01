@@ -1,0 +1,62 @@
+---
+import MarketingLayout from '../layouts/MarketingLayout.astro';
+import PricingCalculator from '../components/interactive/PricingCalculator';
+import FAQSection from '../components/landing/FAQSection.astro';
+import CTASection from '../components/landing/CTASection.astro';
+
+const pricingSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  name: "Preise & Pakete – ShortSelect ATS",
+  description: "ShortSelect Pricing: Starter ab 29 Euro, Professional ab 49 Euro, Business ab 69 Euro pro User/Monat. 14 Tage kostenlos testen.",
+  mainEntity: {
+    "@type": "Product",
+    name: "ShortSelect ATS",
+    offers: [
+      {
+        "@type": "Offer",
+        name: "Starter",
+        price: "29",
+        priceCurrency: "EUR",
+        priceSpecification: { "@type": "UnitPriceSpecification", billingDuration: "P1M", unitText: "User" },
+      },
+      {
+        "@type": "Offer",
+        name: "Professional",
+        price: "49",
+        priceCurrency: "EUR",
+        priceSpecification: { "@type": "UnitPriceSpecification", billingDuration: "P1M", unitText: "User" },
+      },
+      {
+        "@type": "Offer",
+        name: "Business",
+        price: "69",
+        priceCurrency: "EUR",
+        priceSpecification: { "@type": "UnitPriceSpecification", billingDuration: "P1M", unitText: "User" },
+      },
+    ],
+  },
+};
+---
+
+<MarketingLayout
+  title="Preise & Pakete – ShortSelect ATS | Ab 29€/Monat"
+  description="ShortSelect Pricing: Starter ab 29€, Professional ab 49€, Business ab 69€ pro User/Monat. 14 Tage kostenlos testen."
+  jsonLd={pricingSchema}
+>
+  <section class="pt-32 pb-20">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12" data-reveal>
+        <h1 class="text-4xl md:text-5xl font-bold tracking-tight mb-4">
+          Einfache, transparente Preise
+        </h1>
+        <p class="text-lg text-[hsl(var(--muted-foreground))] max-w-2xl mx-auto">
+          Waehlen Sie den Plan, der zu Ihrem Team passt. Jederzeit upgraden oder kuendigen.
+        </p>
+      </div>
+      <PricingCalculator client:load />
+    </div>
+  </section>
+  <FAQSection />
+  <CTASection />
+</MarketingLayout>

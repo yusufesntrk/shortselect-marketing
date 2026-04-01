@@ -1,0 +1,49 @@
+---
+import VergleichLayout from '../../layouts/VergleichLayout.astro';
+
+const comparisonData = [
+  { feature: "KI-Matching", ssStatus: "check" as const, ssLabel: "Integriert", compStatus: "x" as const, compLabel: "Nicht verfuegbar" },
+  { feature: "Kanban Pipeline", ssStatus: "check" as const, ssLabel: "Drag & Drop", compStatus: "check" as const, compLabel: "Drag & Drop" },
+  { feature: "Multi-Tenancy", ssStatus: "check" as const, ssLabel: "Vollstaendig", compStatus: "x" as const, compLabel: "Nicht verfuegbar" },
+  { feature: "Client Portal", ssStatus: "check" as const, ssLabel: "Integriert", compStatus: "x" as const, compLabel: "Nicht verfuegbar" },
+  { feature: "Talent Pools", ssStatus: "check" as const, ssLabel: "Unbegrenzt", compStatus: "warn" as const, compLabel: "Eingeschraenkt" },
+  { feature: "Analytics", ssStatus: "check" as const, ssLabel: "Umfassend", compStatus: "check" as const, compLabel: "Standard" },
+  { feature: "Embed Widget", ssStatus: "check" as const, ssLabel: "Frei gestaltbar", compStatus: "warn" as const, compLabel: "Eingeschraenkt" },
+  { feature: "API Zugang", ssStatus: "check" as const, ssLabel: "REST API", compStatus: "check" as const, compLabel: "REST API" },
+  { feature: "Preis", ssStatus: "check" as const, ssLabel: "Ab 0\u20AC/Monat", compStatus: "warn" as const, compLabel: "Auf Anfrage" },
+];
+---
+
+<VergleichLayout
+  title="ShortSelect vs. Softgarden - ATS Vergleich 2026"
+  description="Modernes ATS mit KI-Power statt Legacy-Software. Vergleichen Sie ShortSelect und Softgarden in Features, Preisen und Usability."
+  competitorName="Softgarden"
+  heroSubline="Modernes ATS mit KI-Power statt Legacy-Software."
+  heroBadge="Feature-Vergleich"
+  ssDescription="KI-gestuetztes ATS fuer Recruiter & Agenturen"
+  ssHighlights={["KI-gestuetztes Kandidaten-Matching", "Multi-Mandanten fuer Agenturen", "Client Portal inklusive", "Kostenloser Einstieg"]}
+  compDescription="Etabliertes ATS fuer den Mittelstand"
+  compHighlights={["Kanban Board", "Karriereseite", "Analytics", "Auf Anfrage"]}
+  comparisonData={comparisonData}
+  whenCompBetter={{
+    title: "Wann Softgarden passt",
+    intro: "Softgarden kann die richtige Wahl sein, wenn:",
+    items: [
+      "Sie ein etabliertes ATS ohne KI-Features suchen",
+      "Sie bereits in das Softgarden-Oekosystem integriert sind",
+      "Ihre Recruiting-Prozesse einfach und standardisiert sind",
+      "Sie kein Multi-Mandanten-Management brauchen",
+    ]
+  }}
+  whenSSBetter={{
+    title: "Wann ShortSelect besser passt",
+    intro: "ShortSelect ist die bessere Wahl, wenn:",
+    items: [
+      "Sie KI-gestuetztes Matching und Automatisierung wollen",
+      "Sie als Agentur mehrere Mandanten verwalten",
+      "Sie ein Client Portal fuer Ihre Kunden brauchen",
+      "Sie kostenlos starten und flexibel skalieren wollen",
+      "Sie ein modernes, schnelles Interface bevorzugen",
+    ]
+  }}
+/>
