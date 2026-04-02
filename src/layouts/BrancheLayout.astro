@@ -51,7 +51,7 @@ const {
 
 <MarketingLayout title={title} description={description}>
   <!-- HERO -->
-  <section class="relative overflow-hidden py-20 md:py-32">
+  <section id="branche-hero" class="relative overflow-hidden py-20 md:py-32">
     <div class="absolute inset-0 bg-gradient-to-br from-accent/10 via-primary/5 to-transparent"></div>
     <div class="absolute inset-0 bg-[radial-gradient(circle_at_20%_40%,hsl(var(--accent)/0.12),transparent_50%)]"></div>
     <div class="absolute inset-0 bg-[radial-gradient(circle_at_80%_60%,hsl(var(--primary)/0.08),transparent_50%)]"></div>
@@ -61,12 +61,12 @@ const {
 
     <div class="container relative mx-auto px-4">
       <div class="mx-auto max-w-4xl text-center space-y-8">
-        <div data-reveal class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 border border-accent/20">
+        <div id="branche-hero-badge" class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 border border-accent/20 opacity-0 translate-y-8 transition-all duration-700">
           <svg class="h-4 w-4 text-accent animate-pulse" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><Fragment set:html={badgeIcon} /></svg>
           <span class="text-sm font-medium">{badgeText}</span>
         </div>
 
-        <h1 data-reveal data-reveal-delay="100" class="text-4xl md:text-6xl lg:text-7xl font-display font-bold tracking-tight">
+        <h1 id="branche-hero-title" class="text-4xl md:text-6xl lg:text-7xl font-display font-bold tracking-tight opacity-0 translate-y-8 transition-all duration-700" style="transition-delay: 100ms;">
           {headline}{" "}
           <span class="relative inline-block">
             <span class="text-primary">{highlightedWord}</span>
@@ -77,9 +77,9 @@ const {
           {headlineSuffix && ` ${headlineSuffix}`}
         </h1>
 
-        <p data-reveal data-reveal-delay="200" class="text-lg md:text-xl text-[hsl(var(--muted-foreground))] max-w-2xl mx-auto">{subline}</p>
+        <p id="branche-hero-sub" class="text-lg md:text-xl text-[hsl(var(--muted-foreground))] max-w-2xl mx-auto opacity-0 translate-y-8 transition-all duration-700" style="transition-delay: 200ms;">{subline}</p>
 
-        <div data-reveal data-reveal-delay="300" class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+        <div id="branche-hero-cta" class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4 opacity-0 translate-y-8 transition-all duration-700" style="transition-delay: 300ms;">
           <a href="https://app.shortselect.com/signup" class="inline-flex items-center gap-2 px-8 py-3 bg-primary text-white font-semibold rounded-lg text-base group relative overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
             <svg class="h-5 w-5 animate-pulse" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/></svg>
             {primaryCta}
@@ -95,13 +95,13 @@ const {
   </section>
 
   <!-- PAIN POINTS -->
-  <section class="py-20 md:py-28 bg-[hsl(var(--muted)/0.3)]">
+  <section id="branche-painpoints" class="py-20 md:py-28 bg-[hsl(var(--muted)/0.3)]">
     <div class="container mx-auto px-4">
       <div class="max-w-3xl mx-auto text-center mb-16">
         {painBadge && (
-          <span data-reveal class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold border border-primary/20 text-primary mb-4">{painBadge}</span>
+          <span id="branche-painpoints-badge" class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold border border-primary/20 text-primary mb-4 opacity-0 translate-y-8 transition-all duration-700">{painBadge}</span>
         )}
-        <h2 data-reveal class="text-3xl md:text-4xl lg:text-5xl font-display font-bold tracking-tight">
+        <h2 id="branche-painpoints-title" class="text-3xl md:text-4xl lg:text-5xl font-display font-bold tracking-tight opacity-0 translate-y-8 transition-all duration-700">
           {painTitle}{" "}
           {painHighlight && (
             <span class="relative inline-block">
@@ -116,7 +116,7 @@ const {
 
       <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
         {painPoints.map((point, index) => (
-          <div data-reveal data-reveal-delay={String(index * 150)} class="group rounded-xl border border-destructive/10 bg-[hsl(var(--card))] p-6 hover:shadow-lg transition-all duration-500 hover:-translate-y-1 hover:border-destructive/30">
+          <div class="branche-pain-card group rounded-xl border border-destructive/10 bg-[hsl(var(--card))] p-6 hover:shadow-lg transition-all duration-500 hover:-translate-y-1 hover:border-destructive/30 opacity-0 translate-y-12" style={`transition-delay: ${index * 150}ms;`}>
             <div class="w-12 h-12 rounded-xl bg-destructive/10 flex items-center justify-center mb-4 group-hover:bg-destructive/20 transition-colors">
               <svg class="h-6 w-6 text-destructive" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><Fragment set:html={point.iconPath} /></svg>
             </div>
@@ -130,18 +130,18 @@ const {
 
   <!-- HOW IT WORKS (optional steps) -->
   {steps && steps.length > 0 && (
-    <section class="py-20 md:py-28 relative overflow-hidden">
+    <section id="branche-steps" class="py-20 md:py-28 relative overflow-hidden">
       <div class="container mx-auto px-4">
         <div class="max-w-3xl mx-auto text-center mb-16">
-          <h2 data-reveal class="text-3xl md:text-4xl lg:text-5xl font-display font-bold tracking-tight">
+          <h2 id="branche-steps-title" class="text-3xl md:text-4xl lg:text-5xl font-display font-bold tracking-tight opacity-0 translate-y-8 transition-all duration-700">
             {stepsTitle || (<Fragment>So <span class="text-primary">einfach</span> geht's</Fragment>)}
           </h2>
-          {stepsSubline && <p data-reveal data-reveal-delay="100" class="text-lg text-[hsl(var(--muted-foreground))] mt-4">{stepsSubline}</p>}
+          {stepsSubline && <p id="branche-steps-sub" class="text-lg text-[hsl(var(--muted-foreground))] mt-4 opacity-0 translate-y-8 transition-all duration-700" style="transition-delay: 100ms;">{stepsSubline}</p>}
         </div>
 
         <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
           {steps.map((step, index) => (
-            <div data-reveal data-reveal-delay={String(index * 150)} class="relative text-center space-y-4">
+            <div class="branche-step-card relative text-center space-y-4 opacity-0 translate-y-12 transition-all duration-500" style={`transition-delay: ${index * 150}ms;`}>
               <div class="inline-flex items-center justify-center w-14 h-14 rounded-full bg-primary text-white text-xl font-display font-bold shadow-lg">
                 {step.step}
               </div>
@@ -158,11 +158,11 @@ const {
   )}
 
   <!-- FEATURES -->
-  <section class={`py-20 md:py-28 ${steps && steps.length > 0 ? 'bg-[hsl(var(--muted)/0.3)]' : ''}`} id="features">
+  <section id="features" class={`py-20 md:py-28 ${steps && steps.length > 0 ? 'bg-[hsl(var(--muted)/0.3)]' : ''}`}>
     <div class="container mx-auto px-4">
       <div class="max-w-3xl mx-auto text-center mb-16">
-        <span data-reveal class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold border border-accent/20 text-accent mb-4">{featuresBadge}</span>
-        <h2 data-reveal class="text-3xl md:text-4xl lg:text-5xl font-display font-bold tracking-tight">
+        <span id="features-badge" class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold border border-accent/20 text-accent mb-4 opacity-0 translate-y-8 transition-all duration-700">{featuresBadge}</span>
+        <h2 id="features-title" class="text-3xl md:text-4xl lg:text-5xl font-display font-bold tracking-tight opacity-0 translate-y-8 transition-all duration-700">
           {featuresTitle}{" "}
           {featuresHighlight && (
             <span class="relative inline-block">
@@ -177,7 +177,7 @@ const {
 
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
         {features.map((feature, index) => (
-          <div data-reveal data-reveal-delay={String(index * 100)} class="group rounded-xl border border-primary/10 bg-[hsl(var(--card))] p-6 hover:shadow-lg transition-all duration-500 hover:-translate-y-1 hover:border-primary/30">
+          <div class="branche-feature-card group rounded-xl border border-primary/10 bg-[hsl(var(--card))] p-6 hover:shadow-lg transition-all duration-500 hover:-translate-y-1 hover:border-primary/30 opacity-0 translate-y-12" style={`transition-delay: ${index * 100}ms;`}>
             <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 group-hover:scale-110 transition-all duration-300">
               <svg class="h-6 w-6 text-primary" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><Fragment set:html={feature.iconPath} /></svg>
             </div>
@@ -200,7 +200,92 @@ const {
   .cta-underline {
     transition: stroke-dashoffset 1s ease-out 0.5s;
   }
-  :global([data-reveal].revealed) .cta-underline {
+  .cta-underline.revealed {
     stroke-dashoffset: 0;
   }
 </style>
+
+<script is:inline>
+(function() {
+  // HERO — above fold, use requestAnimationFrame
+  var heroSection = document.getElementById('branche-hero');
+  if (heroSection) {
+    var heroEls = [
+      document.getElementById('branche-hero-badge'),
+      document.getElementById('branche-hero-title'),
+      document.getElementById('branche-hero-sub'),
+      document.getElementById('branche-hero-cta')
+    ];
+    requestAnimationFrame(function() {
+      requestAnimationFrame(function() {
+        heroEls.forEach(function(el) {
+          if (el) { el.style.opacity = '1'; el.style.transform = 'translateY(0)'; }
+        });
+        var heroUnderlines = heroSection.querySelectorAll('.cta-underline');
+        heroUnderlines.forEach(function(u) { u.classList.add('revealed'); });
+      });
+    });
+  }
+
+  // PAIN POINTS — scroll reveal
+  var painSection = document.getElementById('branche-painpoints');
+  if (painSection) {
+    var painBadge = document.getElementById('branche-painpoints-badge');
+    var painTitle = document.getElementById('branche-painpoints-title');
+    var painCards = painSection.querySelectorAll('.branche-pain-card');
+    var painObserver = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          if (painBadge) { painBadge.style.opacity = '1'; painBadge.style.transform = 'translateY(0)'; }
+          if (painTitle) { painTitle.style.opacity = '1'; painTitle.style.transform = 'translateY(0)'; }
+          painCards.forEach(function(card) { card.style.opacity = '1'; card.style.transform = 'translateY(0)'; });
+          var underlines = painSection.querySelectorAll('.cta-underline');
+          underlines.forEach(function(u) { u.classList.add('revealed'); });
+          painObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    painObserver.observe(painSection);
+  }
+
+  // STEPS — scroll reveal (optional section)
+  var stepsSection = document.getElementById('branche-steps');
+  if (stepsSection) {
+    var stepsTitle = document.getElementById('branche-steps-title');
+    var stepsSub = document.getElementById('branche-steps-sub');
+    var stepCards = stepsSection.querySelectorAll('.branche-step-card');
+    var stepsObserver = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          if (stepsTitle) { stepsTitle.style.opacity = '1'; stepsTitle.style.transform = 'translateY(0)'; }
+          if (stepsSub) { stepsSub.style.opacity = '1'; stepsSub.style.transform = 'translateY(0)'; }
+          stepCards.forEach(function(card) { card.style.opacity = '1'; card.style.transform = 'translateY(0)'; });
+          stepsObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    stepsObserver.observe(stepsSection);
+  }
+
+  // FEATURES — scroll reveal
+  var featSection = document.getElementById('features');
+  if (featSection) {
+    var featBadge = document.getElementById('features-badge');
+    var featTitle = document.getElementById('features-title');
+    var featCards = featSection.querySelectorAll('.branche-feature-card');
+    var featObserver = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          if (featBadge) { featBadge.style.opacity = '1'; featBadge.style.transform = 'translateY(0)'; }
+          if (featTitle) { featTitle.style.opacity = '1'; featTitle.style.transform = 'translateY(0)'; }
+          featCards.forEach(function(card) { card.style.opacity = '1'; card.style.transform = 'translateY(0)'; });
+          var underlines = featSection.querySelectorAll('.cta-underline');
+          underlines.forEach(function(u) { u.classList.add('revealed'); });
+          featObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    featObserver.observe(featSection);
+  }
+})();
+</script>

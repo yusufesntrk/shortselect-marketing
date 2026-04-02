@@ -19,16 +19,16 @@ import { glossaryTerms } from '../../data/glossary';
 
     <div class="container relative mx-auto px-4">
       <div class="mx-auto max-w-4xl text-center space-y-8">
-        <div data-reveal class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[hsl(var(--primary)/0.1)] border border-[hsl(var(--primary)/0.2)]">
+        <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[hsl(var(--primary)/0.1)] border border-[hsl(var(--primary)/0.2)]">
           <svg class="h-4 w-4 text-[hsl(var(--primary))]" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
           <span class="text-sm font-medium">Wissen</span>
         </div>
 
-        <h1 data-reveal data-reveal-delay="100" class="text-4xl md:text-6xl lg:text-7xl font-display font-bold tracking-tight">
+        <h1 class="reveal-item opacity-0 translate-y-8 transition-all duration-500 text-4xl md:text-6xl lg:text-7xl font-display font-bold tracking-tight" style="transition-delay: 100ms;">
           Recruiting <span class="text-[hsl(var(--primary))]">Glossar</span>
         </h1>
 
-        <p data-reveal data-reveal-delay="200" class="text-lg md:text-xl text-[hsl(var(--muted-foreground))] max-w-2xl mx-auto">
+        <p class="reveal-item opacity-0 translate-y-8 transition-all duration-500 text-lg md:text-xl text-[hsl(var(--muted-foreground))] max-w-2xl mx-auto" style="transition-delay: 200ms;">
           Die wichtigsten Begriffe aus Recruiting, HR und Bewerbermanagement -- einfach erklaert.
         </p>
       </div>
@@ -43,7 +43,7 @@ import { glossaryTerms } from '../../data/glossary';
     <div class="absolute bottom-20 left-0 w-64 h-64 bg-[hsl(var(--primary)/0.05)] rounded-full blur-3xl"></div>
 
     <div class="container mx-auto px-4">
-      <div data-reveal class="text-center max-w-3xl mx-auto mb-16">
+      <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700 text-center max-w-3xl mx-auto mb-16">
         <span class="inline-block px-2.5 py-0.5 rounded-full border border-[hsl(var(--primary)/0.2)] text-[hsl(var(--primary))] text-xs font-medium mb-4">A-Z</span>
         <h2 class="text-3xl md:text-5xl font-display font-bold tracking-tight mb-4">Alle Begriffe im Ueberblick</h2>
         <p class="text-lg text-[hsl(var(--muted-foreground))]">Von ATS bis Quality of Hire -- Ihr Nachschlagewerk fuer modernes Recruiting.</p>
@@ -51,7 +51,7 @@ import { glossaryTerms } from '../../data/glossary';
 
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
         {glossaryTerms.map((term, i) => (
-          <a href={`/glossar/${term.slug}`} data-reveal data-reveal-delay={`${Math.min(i * 100, 500)}`}>
+          <a class="reveal-item opacity-0 translate-y-8 transition-all duration-500" style={`transition-delay: ${Math.min(i * 100, 500)}ms;`} href={`/glossar/${term.slug}`}>
             <article class="group h-full rounded-xl border border-[hsl(var(--border))] bg-[hsl(var(--card))] hover:shadow-lg hover:border-[hsl(var(--primary)/0.5)] hover:-translate-y-1 transition-all duration-500 cursor-pointer p-6 space-y-4">
               <div class="h-12 w-12 rounded-xl bg-[hsl(var(--primary)/0.1)] flex items-center justify-center group-hover:bg-[hsl(var(--primary)/0.2)] transition-colors">
                 <svg class="h-6 w-6 text-[hsl(var(--primary))]" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
@@ -70,4 +70,21 @@ import { glossaryTerms } from '../../data/glossary';
   </section>
 
   <CTASection />
+
+  <script is:inline>
+  (function() {
+    var items = document.querySelectorAll('.reveal-item');
+    if (!items.length) return;
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    items.forEach(function(item) { observer.observe(item); });
+  })();
+  </script>
 </MarketingLayout>

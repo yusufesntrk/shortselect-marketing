@@ -66,7 +66,7 @@ const features = [
   featuresBadge="KI-Agenten"
 >
   <!-- Stats -->
-  <section class="py-16 md:py-24 bg-gradient-to-br from-primary via-primary/90 to-accent text-white relative overflow-hidden">
+  <section class="py-16 md:py-24 text-white relative overflow-hidden" style="background: linear-gradient(to bottom right, hsl(var(--primary)), hsl(var(--primary) / 0.9), hsl(var(--accent)));">
     <div class="absolute inset-0 overflow-hidden">
       <div class="absolute top-10 left-10 w-64 h-64 bg-white/5 rounded-full blur-3xl animate-float-slow"></div>
       <div class="absolute bottom-10 right-10 w-80 h-80 bg-white/5 rounded-full blur-3xl animate-float-slow" style="animation-delay: -3s;"></div>
@@ -80,7 +80,7 @@ const features = [
           { value: "<2s", label: "pro CV Parsing" },
           { value: "3x", label: "mehr qualifizierte Kandidaten" },
         ].map((stat, i) => (
-          <div data-reveal data-reveal-delay={`${i * 100}`} class="space-y-2">
+          <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700 space-y-2" style={`transition-delay: ${i * 100}ms;`}>
             <div class="text-4xl md:text-5xl lg:text-6xl font-display font-bold">{stat.value}</div>
             <p class="text-base text-white/80">{stat.label}</p>
           </div>
@@ -92,7 +92,7 @@ const features = [
   <!-- DSGVO Trust -->
   <section class="py-20 md:py-28 bg-muted/30 relative overflow-hidden">
     <div class="container mx-auto px-4">
-      <div data-reveal class="text-center max-w-3xl mx-auto mb-16">
+      <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700 text-center max-w-3xl mx-auto mb-16">
         <span class="inline-block mb-4 px-3 py-1 text-xs font-medium rounded-full border border-primary/20 text-primary">Datenschutz</span>
         <h2 class="text-3xl md:text-5xl font-display font-bold tracking-tight mb-4">DSGVO-konforme KI</h2>
         <p class="text-lg text-muted-foreground">Unsere KI arbeitet nach hoechsten Datenschutz-Standards. Alle Daten bleiben in der EU.</p>
@@ -106,7 +106,7 @@ const features = [
           "Anonymisierung by Default",
           "AV-Vertrag vorhanden",
         ].map((item, i) => (
-          <div data-reveal data-reveal-delay={`${(i % 3) * 100}`} class="flex items-center gap-3 p-4 rounded-lg bg-green-500/5 border border-green-500/10">
+          <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700 flex items-center gap-3 p-4 rounded-lg bg-green-500/5 border border-green-500/10" style={`transition-delay: ${(i % 3) * 100}ms;`}>
             <svg class="h-5 w-5 text-green-500 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
             <span class="text-sm font-medium">{item}</span>
           </div>
@@ -115,3 +115,20 @@ const features = [
     </div>
   </section>
 </ProduktLayout>
+
+<script is:inline>
+(function() {
+  var items = document.querySelectorAll('.reveal-item');
+  if (!items.length) return;
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  items.forEach(function(item) { observer.observe(item); });
+})();
+</script>

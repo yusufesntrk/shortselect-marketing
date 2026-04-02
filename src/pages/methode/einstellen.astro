@@ -20,16 +20,16 @@ const features = [
 
     <div class="container relative mx-auto px-4">
       <div class="max-w-4xl mx-auto text-center space-y-8">
-        <nav data-reveal class="flex items-center justify-center gap-2 text-sm text-muted-foreground">
+        <nav class="reveal-item opacity-0 translate-y-8 transition-all duration-700 flex items-center justify-center gap-2 text-sm text-muted-foreground">
           <a href="/methode/smart-recruiting" class="hover:text-primary transition-colors">Smart Recruiting</a>
           <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
           <span class="text-emerald-500 font-medium">Einstellen</span>
         </nav>
-        <div data-reveal data-reveal-delay="100">
+        <div class="reveal-item opacity-0 translate-y-8 transition-all duration-500" style="transition-delay: 100ms;">
           <span class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold bg-emerald-500/10 text-emerald-500 border-emerald-500/20">Smart Recruiting</span>
         </div>
-        <h1 data-reveal data-reveal-delay="200" class="text-4xl md:text-6xl lg:text-7xl font-display font-bold tracking-tight">Phase 3: <span class="text-emerald-500">Einstellen</span></h1>
-        <p data-reveal data-reveal-delay="300" class="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">Interviews koordinieren, Angebote machen, Vertraege abschliessen -- ohne Reibungsverluste.</p>
+        <h1 class="reveal-item opacity-0 translate-y-8 transition-all duration-500 text-4xl md:text-6xl lg:text-7xl font-display font-bold tracking-tight" style="transition-delay: 200ms;">Phase 3: <span class="text-emerald-500">Einstellen</span></h1>
+        <p class="reveal-item opacity-0 translate-y-8 transition-all duration-500 text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto" style="transition-delay: 300ms;">Interviews koordinieren, Angebote machen, Vertraege abschliessen -- ohne Reibungsverluste.</p>
       </div>
     </div>
     <div class="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-background to-transparent"></div>
@@ -38,13 +38,13 @@ const features = [
   <!-- Features -->
   <section class="py-20 md:py-28">
     <div class="container mx-auto px-4">
-      <div data-reveal class="text-center space-y-4 mb-16">
+      <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700 text-center space-y-4 mb-16">
         <h2 class="text-3xl md:text-4xl font-display font-bold tracking-tight">Was zu dieser Phase gehoert</h2>
         <p class="text-lg text-muted-foreground max-w-xl mx-auto">Alle Werkzeuge fuer einen reibungslosen Einstellungsprozess.</p>
       </div>
       <div class="max-w-4xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         {features.map((f, i) => (
-          <div data-reveal data-reveal-delay={String(Math.min(i * 100, 400))} class="rounded-xl border p-6 hover:border-emerald-500/20 hover:shadow-lg transition-all duration-500 hover:-translate-y-1 bg-card">
+          <div class="reveal-item opacity-0 translate-y-8 transition-all duration-500 rounded-xl border p-6 hover:border-emerald-500/20 hover:shadow-lg hover:-translate-y-1 bg-card" style={`transition-delay: ${Math.min(i * 100, 400)}ms;`}>
             <h3 class="font-display font-bold text-lg">{f.title}</h3>
             <p class="text-sm text-muted-foreground mt-1">{f.description}</p>
           </div>
@@ -56,7 +56,7 @@ const features = [
   <!-- Timeline -->
   <section class="py-20 md:py-28 bg-muted/30">
     <div class="container mx-auto px-4">
-      <div data-reveal class="max-w-3xl mx-auto text-center space-y-10">
+      <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700 max-w-3xl mx-auto text-center space-y-10">
         <div class="space-y-4">
           <h2 class="text-3xl md:text-4xl font-display font-bold tracking-tight">Von Bewerbung bis Vertrag</h2>
           <p class="text-lg text-muted-foreground">Durchschnittlich 22 Tage -- statt branchenueblicher 42.</p>
@@ -79,7 +79,7 @@ const features = [
   <!-- Next Phase -->
   <section class="py-16 md:py-20">
     <div class="container mx-auto px-4">
-      <div data-reveal class="max-w-2xl mx-auto">
+      <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700 max-w-2xl mx-auto">
         <a href="/methode/binden" class="group flex items-center justify-between p-6 rounded-2xl border-2 border-primary/20 hover:border-primary/40 bg-primary/5 hover:bg-primary/10 transition-all duration-300">
           <div class="space-y-1">
             <p class="text-sm text-primary font-medium uppercase tracking-wider">Weiter zu Phase 4</p>
@@ -93,4 +93,21 @@ const features = [
   </section>
 
   <CTASection />
+
+  <script is:inline>
+  (function() {
+    var items = document.querySelectorAll('.reveal-item');
+    if (!items.length) return;
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    items.forEach(function(item) { observer.observe(item); });
+  })();
+  </script>
 </MarketingLayout>

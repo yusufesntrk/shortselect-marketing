@@ -37,9 +37,9 @@ const solutions = [
   secondaryCtaHref="https://app.shortselect.com/signup"
 >
   <!-- TESTIMONIAL -->
-  <section class="py-20 md:py-28">
+  <section id="pv-testimonial" class="py-20 md:py-28">
     <div class="container mx-auto px-4">
-      <div data-reveal class="max-w-3xl mx-auto text-center">
+      <div id="pv-testimonial-content" class="max-w-3xl mx-auto text-center opacity-0 translate-y-8 transition-all duration-700">
         <svg class="h-12 w-12 text-primary/20 mx-auto mb-6" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V21c0 1 0 1 1 1z"/><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"/></svg>
         <blockquote class="text-2xl md:text-3xl font-display font-bold tracking-tight leading-snug mb-8">
           &ldquo;ShortSelect hat unsere Agentur auf ein neues Level gebracht. Endlich haben wir alle Mandanten, Kandidaten und Pipelines an einem Ort.&rdquo;
@@ -58,9 +58,9 @@ const solutions = [
   </section>
 
   <!-- PRICING TEASER -->
-  <section class="py-20 md:py-28 bg-[hsl(var(--muted)/0.3)]">
+  <section id="pv-pricing" class="py-20 md:py-28 bg-[hsl(var(--muted)/0.3)]">
     <div class="container mx-auto px-4">
-      <div data-reveal class="max-w-2xl mx-auto text-center space-y-6">
+      <div id="pv-pricing-content" class="max-w-2xl mx-auto text-center space-y-6 opacity-0 translate-y-8 transition-all duration-700">
         <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold border border-primary/20 text-primary">Preise</span>
         <h2 class="text-3xl md:text-4xl lg:text-5xl font-display font-bold tracking-tight">
           Ab <span class="text-primary">0 EUR/Monat</span> starten
@@ -77,4 +77,27 @@ const solutions = [
       </div>
     </div>
   </section>
+<script is:inline>
+(function() {
+  var sections = [
+    { sectionId: 'pv-testimonial', contentId: 'pv-testimonial-content' },
+    { sectionId: 'pv-pricing', contentId: 'pv-pricing-content' }
+  ];
+  sections.forEach(function(s) {
+    var section = document.getElementById(s.sectionId);
+    var content = document.getElementById(s.contentId);
+    if (!section || !content) return;
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          content.style.opacity = '1';
+          content.style.transform = 'translateY(0)';
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    observer.observe(section);
+  });
+})();
+</script>
 </LoesungLayout>

@@ -36,14 +36,14 @@ const steps = [
   <Fragment slot="before-features">
     <section class="py-20 md:py-28 bg-muted/30 relative overflow-hidden">
       <div class="container mx-auto px-4">
-        <div data-reveal class="text-center max-w-3xl mx-auto mb-16">
+        <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700 text-center max-w-3xl mx-auto mb-16">
           <span class="inline-block mb-4 px-3 py-1 text-xs font-medium rounded-full border border-primary/20 text-primary">Workflow</span>
           <h2 class="text-3xl md:text-5xl font-display font-bold tracking-tight mb-4">In 4 Schritten zum Placement</h2>
           <p class="text-lg text-muted-foreground">Vom Einladen bis zum Placement -- transparent und effizient.</p>
         </div>
         <div class="grid md:grid-cols-4 gap-8 max-w-5xl mx-auto">
           {steps.map((step, i) => (
-            <div data-reveal data-reveal-delay={`${i * 100}`} class="text-center">
+            <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700 text-center" style={`transition-delay: ${i * 100}ms;`}>
               <div class="relative mx-auto mb-6 w-24 h-24 rounded-full bg-background border-2 border-primary/20 flex items-center justify-center shadow-lg">
                 <span class="text-2xl font-display font-bold text-primary">{i + 1}</span>
               </div>
@@ -56,3 +56,20 @@ const steps = [
     </section>
   </Fragment>
 </ProduktLayout>
+
+<script is:inline>
+(function() {
+  var items = document.querySelectorAll('.reveal-item');
+  if (!items.length) return;
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  items.forEach(function(item) { observer.observe(item); });
+})();
+</script>

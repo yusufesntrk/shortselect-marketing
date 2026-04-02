@@ -36,7 +36,7 @@ const supportFeatures = [
     </div>
 
     <div class="container relative mx-auto px-4">
-      <div data-reveal class="max-w-3xl mx-auto text-center space-y-6">
+      <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700 max-w-3xl mx-auto text-center space-y-6">
         <span class="inline-block px-3 py-1 rounded-full bg-[hsl(var(--primary)/0.1)] text-[hsl(var(--primary))] border border-[hsl(var(--primary)/0.2)] text-sm font-medium">Einfacher Wechsel</span>
         <h1 class="text-4xl md:text-5xl lg:text-6xl font-display font-bold tracking-tight leading-tight">
           Wechseln Sie zu ShortSelect -- <span class="text-[hsl(var(--primary))]">in 15 Minuten</span>.
@@ -51,14 +51,14 @@ const supportFeatures = [
   <!-- Migration Steps (Timeline) -->
   <section class="py-20 md:py-28 bg-[hsl(var(--muted)/0.3)]">
     <div class="container mx-auto px-4">
-      <div data-reveal class="text-center mb-16">
+      <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700 text-center mb-16">
         <h2 class="text-3xl md:text-4xl font-display font-bold tracking-tight">In 6 Schritten zum neuen ATS</h2>
         <p class="text-[hsl(var(--muted-foreground))] mt-4 max-w-2xl mx-auto">Der Wechsel ist strukturiert und begleitet. Kein Schritt wird uebersprungen.</p>
       </div>
 
       <div class="max-w-2xl mx-auto">
         {migrationSteps.map((step, i) => (
-          <div data-reveal data-reveal-delay={`${i * 80}`} class="relative flex gap-6">
+          <div class="reveal-item opacity-0 translate-y-8 transition-all duration-500 relative flex gap-6" style={`transition-delay: ${i * 80}ms;`}>
             <div class="flex flex-col items-center">
               <div class="h-10 w-10 rounded-full bg-[hsl(var(--primary))] text-white flex items-center justify-center text-sm font-bold shrink-0">{i + 1}</div>
               {i < migrationSteps.length - 1 && <div class="w-0.5 flex-1 bg-[hsl(var(--primary)/0.2)] my-2"></div>}
@@ -76,14 +76,14 @@ const supportFeatures = [
   <!-- Migration Sources -->
   <section class="py-20 md:py-28 relative overflow-hidden">
     <div class="container mx-auto px-4">
-      <div data-reveal class="text-center max-w-3xl mx-auto mb-16">
+      <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700 text-center max-w-3xl mx-auto mb-16">
         <h2 class="text-3xl md:text-4xl font-display font-bold tracking-tight mb-4">Woher kommen Sie?</h2>
         <p class="text-lg text-[hsl(var(--muted-foreground))]">Egal von welchem System -- wir machen den Wechsel einfach.</p>
       </div>
 
       <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
         {migrationSources.map((source, i) => (
-          <div data-reveal data-reveal-delay={`${i * 100}`} class="rounded-xl border border-[hsl(var(--border))] bg-[hsl(var(--card))] p-8 space-y-4">
+          <div class="reveal-item opacity-0 translate-y-8 transition-all duration-500 rounded-xl border border-[hsl(var(--border))] bg-[hsl(var(--card))] p-8 space-y-4" style={`transition-delay: ${i * 100}ms;`}>
             <h3 class="text-xl font-display font-bold">{source.title}</h3>
             <p class="text-sm text-[hsl(var(--muted-foreground))] leading-relaxed">{source.description}</p>
           </div>
@@ -95,14 +95,14 @@ const supportFeatures = [
   <!-- Support -->
   <section class="py-20 md:py-28 bg-[hsl(var(--muted)/0.3)]">
     <div class="container mx-auto px-4">
-      <div data-reveal class="text-center max-w-3xl mx-auto mb-16">
+      <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700 text-center max-w-3xl mx-auto mb-16">
         <h2 class="text-3xl md:text-4xl font-display font-bold tracking-tight mb-4">Wir lassen Sie nicht allein</h2>
         <p class="text-lg text-[hsl(var(--muted-foreground))]">Persoenlicher Support bei jedem Schritt.</p>
       </div>
 
       <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
         {supportFeatures.map((feature, i) => (
-          <div data-reveal data-reveal-delay={`${i * 100}`} class="rounded-xl border border-[hsl(var(--border))] bg-[hsl(var(--card))] p-8 space-y-4">
+          <div class="reveal-item opacity-0 translate-y-8 transition-all duration-500 rounded-xl border border-[hsl(var(--border))] bg-[hsl(var(--card))] p-8 space-y-4" style={`transition-delay: ${i * 100}ms;`}>
             <h3 class="text-xl font-display font-bold">{feature.title}</h3>
             <p class="text-sm text-[hsl(var(--muted-foreground))] leading-relaxed">{feature.description}</p>
           </div>
@@ -114,7 +114,7 @@ const supportFeatures = [
   <!-- Stats -->
   <section class="py-16 md:py-20">
     <div class="container mx-auto px-4">
-      <div data-reveal class="grid grid-cols-3 gap-8 max-w-3xl mx-auto text-center">
+      <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700 grid grid-cols-3 gap-8 max-w-3xl mx-auto text-center">
         <div><div class="text-3xl md:text-4xl font-display font-bold text-[hsl(var(--primary))]">15 min</div><p class="text-sm text-[hsl(var(--muted-foreground))] mt-1">Setup-Zeit</p></div>
         <div><div class="text-3xl md:text-4xl font-display font-bold text-[hsl(var(--primary))]">0 EUR</div><p class="text-sm text-[hsl(var(--muted-foreground))] mt-1">Migrationskosten</p></div>
         <div><div class="text-3xl md:text-4xl font-display font-bold text-[hsl(var(--primary))]">100%</div><p class="text-sm text-[hsl(var(--muted-foreground))] mt-1">Datenuebernahme</p></div>
@@ -123,4 +123,21 @@ const supportFeatures = [
   </section>
 
   <CTASection />
+
+  <script is:inline>
+  (function() {
+    var items = document.querySelectorAll('.reveal-item');
+    if (!items.length) return;
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    items.forEach(function(item) { observer.observe(item); });
+  })();
+  </script>
 </MarketingLayout>

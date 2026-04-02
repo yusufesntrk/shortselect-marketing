@@ -29,7 +29,7 @@ const features = [
   <Fragment slot="before-features">
     <section class="py-20 md:py-28 bg-muted/30 relative overflow-hidden">
       <div class="container mx-auto px-4">
-        <div data-reveal class="text-center max-w-3xl mx-auto mb-16">
+        <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700 text-center max-w-3xl mx-auto mb-16">
           <span class="inline-block mb-4 px-3 py-1 text-xs font-medium rounded-full border border-primary/20 text-primary">Das Problem</span>
           <h2 class="text-3xl md:text-5xl font-display font-bold tracking-tight mb-4">Der perfekte Kandidat war da -- aber die Stelle noch nicht.</h2>
           <p class="text-lg text-muted-foreground">Jeder Recruiter kennt es: Ein Talent passt heute nicht -- aber morgen waere es der Volltreffer. Ohne Talent Pools verlieren Sie diese Chancen fuer immer.</p>
@@ -40,7 +40,7 @@ const features = [
             { title: "Keine Wiederansprache", description: "Ohne System verlieren Sie den Kontakt zu Talenten, die heute nicht passen -- aber morgen perfekt waeren." },
             { title: "Manuelle Listen", description: "Spreadsheets, Notizen, Post-its. Kein System, keine Struktur, keine Durchsuchbarkeit. Ein Albtraum bei wachsendem Volumen." },
           ].map((pain, i) => (
-            <div data-reveal data-reveal-delay={`${i * 100}`} class="rounded-xl border bg-card p-8 hover:shadow-xl hover:border-primary/20 transition-all duration-300">
+            <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700 rounded-xl border bg-card p-8 hover:shadow-xl hover:border-primary/20 transition-all duration-300" style={`transition-delay: ${i * 100}ms;`}>
               <h3 class="text-xl font-display font-bold mb-4">{pain.title}</h3>
               <p class="text-sm text-muted-foreground leading-relaxed">{pain.description}</p>
             </div>
@@ -50,7 +50,7 @@ const features = [
     </section>
   </Fragment>
 
-  <section class="py-16 md:py-24 bg-gradient-to-br from-primary via-primary/90 to-accent text-white relative overflow-hidden">
+  <section class="py-16 md:py-24 text-white relative overflow-hidden" style="background: linear-gradient(to bottom right, hsl(var(--primary)), hsl(var(--primary) / 0.9), hsl(var(--accent)));">
     <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:24px_24px] opacity-30"></div>
     <div class="container relative mx-auto px-4">
       <div class="grid md:grid-cols-2 gap-12 text-center max-w-3xl mx-auto">
@@ -58,7 +58,7 @@ const features = [
           { value: "2x", label: "Schnellere Besetzung mit Talent Pools" },
           { value: "70%", label: "der Top-Kandidaten kommen aus Pools" },
         ].map((stat, i) => (
-          <div data-reveal data-reveal-delay={`${i * 200}`} class="space-y-4">
+          <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700 space-y-4" style={`transition-delay: ${i * 200}ms;`}>
             <div class="text-5xl md:text-6xl font-display font-bold">{stat.value}</div>
             <p class="text-lg text-white/80">{stat.label}</p>
           </div>
@@ -67,3 +67,20 @@ const features = [
     </div>
   </section>
 </ProduktLayout>
+
+<script is:inline>
+(function() {
+  var items = document.querySelectorAll('.reveal-item');
+  if (!items.length) return;
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  items.forEach(function(item) { observer.observe(item); });
+})();
+</script>

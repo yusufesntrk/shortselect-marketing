@@ -43,7 +43,7 @@ const {
 
 <MarketingLayout title={title} description={description} canonical={canonical}>
   <!-- HERO -->
-  <section class="relative overflow-hidden py-20 md:py-32">
+  <section id="produkt-hero" class="relative overflow-hidden py-20 md:py-32">
     <div class="absolute inset-0 bg-gradient-to-br from-primary/10 via-background to-accent/5"></div>
     <div class="absolute inset-0 bg-[radial-gradient(circle_at_40%_20%,hsl(var(--primary)/0.12),transparent_50%)]"></div>
     <div class="absolute inset-0 bg-[radial-gradient(circle_at_60%_80%,hsl(var(--accent)/0.08),transparent_50%)]"></div>
@@ -57,29 +57,29 @@ const {
     <div class="container relative mx-auto px-4">
       <div class="max-w-4xl mx-auto text-center space-y-8">
         <!-- Badge -->
-        <div data-reveal class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20">
+        <div id="produkt-hero-badge" class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 transition-all duration-700" style="opacity: 0; transform: translateY(2rem);">
           <Fragment set:html={heroIcon} />
           <span class="text-sm font-medium">{badgeText}</span>
         </div>
 
         <!-- Headline -->
-        <h1 data-reveal data-reveal-delay="100" class="text-4xl md:text-5xl lg:text-6xl font-display font-bold tracking-tight">
+        <h1 id="produkt-hero-title" class="text-4xl md:text-5xl lg:text-6xl font-display font-bold tracking-tight transition-all duration-700" style="opacity: 0; transform: translateY(2rem);">
           {heroTitle}{' '}
           <span class="relative inline-block text-primary">
             {heroHighlight}
             <svg class="absolute -bottom-2 left-0 w-full" viewBox="0 0 300 12" fill="none">
-              <path d="M2 10C60 4 240 4 298 10" stroke="hsl(var(--primary))" stroke-width="4" stroke-linecap="round" class="hero-underline" style="stroke-dasharray: 300; stroke-dashoffset: 300;" />
+              <path d="M2 10C60 4 240 4 298 10" stroke="hsl(var(--primary))" stroke-width="4" stroke-linecap="round" id="produkt-hero-underline" style="stroke-dasharray: 300; stroke-dashoffset: 300; transition: stroke-dashoffset 1s ease-out;" />
             </svg>
           </span>{heroSuffix}
         </h1>
 
         <!-- Subline -->
-        <p data-reveal data-reveal-delay="200" class="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
+        <p id="produkt-hero-subtitle" class="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto transition-all duration-700" style="opacity: 0; transform: translateY(2rem);">
           {heroSubtitle}
         </p>
 
         <!-- CTA -->
-        <div data-reveal data-reveal-delay="300" class="flex flex-col sm:flex-row gap-4 justify-center">
+        <div id="produkt-hero-cta" class="flex flex-col sm:flex-row gap-4 justify-center transition-all duration-700" style="opacity: 0; transform: translateY(2rem);">
           <a href="https://app.shortselect.com/signup" class="inline-flex items-center gap-2 px-8 py-3 bg-primary text-white font-semibold rounded-lg text-base group relative overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
             <span class="relative z-10 flex items-center gap-2">
               <svg class="h-5 w-5 animate-pulse" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/><path d="M20 3v4"/><path d="M22 5h-4"/><path d="M4 17v2"/><path d="M5 18H3"/></svg>
@@ -99,12 +99,12 @@ const {
   <slot name="before-features" />
 
   <!-- FEATURES -->
-  <section class="py-20 md:py-28 relative overflow-hidden">
+  <section id="produkt-features" class="py-20 md:py-28 relative overflow-hidden">
     <div class="absolute top-20 right-0 w-80 h-80 bg-accent/5 rounded-full blur-3xl"></div>
     <div class="absolute bottom-20 left-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
 
     <div class="container mx-auto px-4">
-      <div data-reveal class="text-center max-w-3xl mx-auto mb-16">
+      <div id="produkt-features-header" class="text-center max-w-3xl mx-auto mb-16 transition-all duration-700" style="opacity: 0; transform: translateY(2rem);">
         <span class="inline-block mb-4 px-3 py-1 text-xs font-medium rounded-full border border-primary/20 text-primary">{featuresBadge}</span>
         <h2 class="text-3xl md:text-5xl font-display font-bold tracking-tight mb-4">
           {featuresSectionTitle}
@@ -117,9 +117,8 @@ const {
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
         {features.map((feature, i) => (
           <div
-            data-reveal
-            data-reveal-delay={`${(i % 3) * 100}`}
-            class="group rounded-xl border border-border bg-card p-6 space-y-4 hover:shadow-lg hover:border-primary/20 transition-all duration-300"
+            class="produkt-feature-card group rounded-xl border border-border bg-card p-6 space-y-4 hover:shadow-lg hover:border-primary/20 transition-all duration-500"
+            style={`opacity: 0; transform: translateY(3rem); transition-delay: ${150 + i * 100}ms;`}
           >
             <div class="h-12 w-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all duration-300">
               <Fragment set:html={feature.icon} />
@@ -142,11 +141,55 @@ const {
   <CTASection />
 </MarketingLayout>
 
-<style>
-  .hero-underline {
-    transition: stroke-dashoffset 1s ease-out 0.5s;
+<script is:inline>
+(function() {
+  // --- Hero: above the fold, use requestAnimationFrame ---
+  var heroEls = [
+    { id: 'produkt-hero-badge', delay: 0 },
+    { id: 'produkt-hero-title', delay: 100 },
+    { id: 'produkt-hero-subtitle', delay: 200 },
+    { id: 'produkt-hero-cta', delay: 300 }
+  ];
+  requestAnimationFrame(function() {
+    heroEls.forEach(function(item) {
+      var el = document.getElementById(item.id);
+      if (el) {
+        setTimeout(function() {
+          el.style.opacity = '1';
+          el.style.transform = 'translateY(0)';
+        }, item.delay);
+      }
+    });
+    // SVG underline after title reveals
+    setTimeout(function() {
+      var underline = document.getElementById('produkt-hero-underline');
+      if (underline) {
+        underline.style.strokeDashoffset = '0';
+      }
+    }, 600);
+  });
+
+  // --- Features section: IntersectionObserver ---
+  var featuresSection = document.getElementById('produkt-features');
+  if (featuresSection) {
+    var featuresHeader = document.getElementById('produkt-features-header');
+    var featureCards = featuresSection.querySelectorAll('.produkt-feature-card');
+    var featuresObserver = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          if (featuresHeader) {
+            featuresHeader.style.opacity = '1';
+            featuresHeader.style.transform = 'translateY(0)';
+          }
+          featureCards.forEach(function(card) {
+            card.style.opacity = '1';
+            card.style.transform = 'translateY(0)';
+          });
+          featuresObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    featuresObserver.observe(featuresSection);
   }
-  :global([data-reveal].revealed) .hero-underline {
-    stroke-dashoffset: 0;
-  }
-</style>
+})();
+</script>

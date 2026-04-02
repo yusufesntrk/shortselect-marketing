@@ -29,7 +29,7 @@ const features = [
   <Fragment slot="before-features">
     <section class="py-20 md:py-28 bg-muted/30 relative overflow-hidden">
       <div class="container mx-auto px-4">
-        <div data-reveal class="text-center max-w-3xl mx-auto mb-16">
+        <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700 text-center max-w-3xl mx-auto mb-16">
           <span class="inline-block mb-4 px-3 py-1 text-xs font-medium rounded-full border border-primary/20 text-primary">KPIs</span>
           <h2 class="text-3xl md:text-5xl font-display font-bold tracking-tight mb-4">Die wichtigsten Recruiting-Metriken</h2>
           <p class="text-lg text-muted-foreground">Messen Sie, was zaehlt -- und optimieren Sie Ihren Recruiting-Prozess kontinuierlich.</p>
@@ -41,7 +41,7 @@ const features = [
             { title: "Pipeline-Conversion", value: "67%", description: "Anteil der Bewerber, die erfolgreich eingestellt werden", color: "text-primary bg-primary/10" },
             { title: "Source-Performance", value: "5 Kanaele", description: "Performance-Vergleich Ihrer Recruiting-Kanaele", color: "text-accent bg-accent/10" },
           ].map((kpi, i) => (
-            <div data-reveal data-reveal-delay={`${i * 100}`} class="rounded-xl border bg-card p-8 hover:shadow-xl hover:border-primary/20 transition-all duration-300">
+            <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700 rounded-xl border bg-card p-8 hover:shadow-xl hover:border-primary/20 transition-all duration-300" style={`transition-delay: ${i * 100}ms;`}>
               <div class="flex items-center gap-4 mb-4">
                 <div class={`h-14 w-14 rounded-xl ${kpi.color} flex items-center justify-center`}>
                   <span class="text-lg font-bold">{kpi.value.split(' ')[0]}</span>
@@ -59,3 +59,20 @@ const features = [
     </section>
   </Fragment>
 </ProduktLayout>
+
+<script is:inline>
+(function() {
+  var items = document.querySelectorAll('.reveal-item');
+  if (!items.length) return;
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  items.forEach(function(item) { observer.observe(item); });
+})();
+</script>

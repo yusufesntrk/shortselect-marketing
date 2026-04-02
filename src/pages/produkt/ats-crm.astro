@@ -59,10 +59,10 @@ const timelineSteps = [
 >
   <!-- Problem Section -->
   <Fragment slot="before-features">
-    <section class="py-20 md:py-28 bg-muted/30 relative overflow-hidden">
+    <section id="atscrm-problem" class="py-20 md:py-28 bg-muted/30 relative overflow-hidden">
       <div class="absolute -top-32 -right-32 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
       <div class="container mx-auto px-4">
-        <div data-reveal class="text-center max-w-3xl mx-auto mb-16">
+        <div id="atscrm-problem-header" class="text-center max-w-3xl mx-auto mb-16 transition-all duration-700" style="opacity: 0; transform: translateY(2rem);">
           <span class="inline-block mb-4 px-3 py-1 text-xs font-medium rounded-full border border-primary/20 text-primary">Das Problem</span>
           <h2 class="text-3xl md:text-5xl font-display font-bold tracking-tight mb-4">
             Recruiting-Chaos kostet Sie Talente
@@ -74,7 +74,7 @@ const timelineSteps = [
 
         <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           <!-- BEFORE -->
-          <div data-reveal class="rounded-xl border border-destructive/20 bg-destructive/5 p-8">
+          <div class="atscrm-problem-card rounded-xl border border-destructive/20 bg-destructive/5 p-8 transition-all duration-500" style="opacity: 0; transform: translateY(3rem); transition-delay: 150ms;">
             <div class="flex items-center gap-3 mb-6">
               <div class="h-10 w-10 rounded-full bg-destructive/10 flex items-center justify-center">
                 <svg class="h-5 w-5 text-destructive" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
@@ -94,7 +94,7 @@ const timelineSteps = [
           </div>
 
           <!-- AFTER -->
-          <div data-reveal data-reveal-delay="200" class="rounded-xl border border-primary/20 bg-primary/5 p-8">
+          <div class="atscrm-problem-card rounded-xl border border-primary/20 bg-primary/5 p-8 transition-all duration-500" style="opacity: 0; transform: translateY(3rem); transition-delay: 300ms;">
             <div class="flex items-center gap-3 mb-6">
               <div class="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center">
                 <svg class="h-5 w-5 text-primary" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
@@ -119,10 +119,10 @@ const timelineSteps = [
   </Fragment>
 
   <!-- Timeline Section -->
-  <section class="py-20 md:py-28 bg-muted/30 relative overflow-hidden">
+  <section id="atscrm-timeline" class="py-20 md:py-28 bg-muted/30 relative overflow-hidden">
     <div class="absolute -bottom-32 -left-32 w-96 h-96 bg-accent/5 rounded-full blur-3xl"></div>
     <div class="container mx-auto px-4">
-      <div data-reveal class="text-center max-w-3xl mx-auto mb-16">
+      <div id="atscrm-timeline-header" class="text-center max-w-3xl mx-auto mb-16 transition-all duration-700" style="opacity: 0; transform: translateY(2rem);">
         <span class="inline-block mb-4 px-3 py-1 text-xs font-medium rounded-full border border-primary/20 text-primary">Prozess</span>
         <h2 class="text-3xl md:text-5xl font-display font-bold tracking-tight mb-4">
           Von der Ausschreibung zur Einstellung
@@ -134,7 +134,7 @@ const timelineSteps = [
 
       <div class="max-w-2xl mx-auto space-y-12">
         {timelineSteps.map((step, i) => (
-          <div data-reveal data-reveal-delay={`${i * 100}`} class="relative flex items-start gap-6 md:gap-8">
+          <div class="atscrm-timeline-step relative flex items-start gap-6 md:gap-8 transition-all duration-500" style={`opacity: 0; transform: translateY(3rem); transition-delay: ${150 + i * 100}ms;`}
             <div class="relative z-10 flex-shrink-0">
               <div class="h-12 w-12 md:h-16 md:w-16 rounded-full bg-primary text-white shadow-lg shadow-primary/30 flex items-center justify-center font-display font-bold text-lg">
                 {i + 1}
@@ -152,7 +152,7 @@ const timelineSteps = [
   </section>
 
   <!-- Stats -->
-  <section class="py-16 md:py-24 bg-gradient-to-br from-primary via-primary/90 to-accent text-white relative overflow-hidden">
+  <section id="atscrm-stats" class="py-16 md:py-24 text-white relative overflow-hidden" style="background: linear-gradient(to bottom right, hsl(var(--primary)), hsl(var(--primary) / 0.9), hsl(var(--accent)));">
     <div class="absolute inset-0 overflow-hidden">
       <div class="absolute top-10 left-10 w-64 h-64 bg-white/5 rounded-full blur-3xl animate-float-slow"></div>
       <div class="absolute bottom-10 right-10 w-80 h-80 bg-white/5 rounded-full blur-3xl animate-float-slow" style="animation-delay: -3s;"></div>
@@ -166,7 +166,7 @@ const timelineSteps = [
           { value: "50%", label: "Zeitersparnis" },
           { value: "500+", label: "Erfolgreiche Placements" },
         ].map((stat, i) => (
-          <div data-reveal data-reveal-delay={`${i * 100}`} class="space-y-2">
+          <div class="atscrm-stat-item space-y-2 transition-all duration-500" style={`opacity: 0; transform: translateY(3rem); transition-delay: ${150 + i * 100}ms;`}
             <div class="text-5xl md:text-6xl lg:text-7xl font-display font-bold">{stat.value}</div>
             <p class="text-lg text-white/80">{stat.label}</p>
           </div>
@@ -175,3 +175,28 @@ const timelineSteps = [
     </div>
   </section>
 </ProduktLayout>
+
+<script is:inline>
+(function() {
+  function observeSection(sectionId, headerId, cardSelector) {
+    var section = document.getElementById(sectionId);
+    if (!section) return;
+    var header = headerId ? document.getElementById(headerId) : null;
+    var cards = cardSelector ? section.querySelectorAll(cardSelector) : [];
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          if (header) { header.style.opacity = '1'; header.style.transform = 'translateY(0)'; }
+          cards.forEach(function(card) { card.style.opacity = '1'; card.style.transform = 'translateY(0)'; });
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    observer.observe(section);
+  }
+
+  observeSection('atscrm-problem', 'atscrm-problem-header', '.atscrm-problem-card');
+  observeSection('atscrm-timeline', 'atscrm-timeline-header', '.atscrm-timeline-step');
+  observeSection('atscrm-stats', null, '.atscrm-stat-item');
+})();
+</script>

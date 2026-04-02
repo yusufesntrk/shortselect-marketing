@@ -31,7 +31,7 @@ const faqs = [
     <div class="container relative mx-auto px-4">
       <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
         <!-- Left: Text -->
-        <div data-reveal class="space-y-6">
+        <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700 space-y-6">
           <h1 class="text-4xl md:text-5xl lg:text-6xl font-display font-bold tracking-tight leading-tight">
             Sehen Sie ShortSelect <span class="text-[hsl(var(--primary))]">in Aktion</span>.
           </h1>
@@ -55,7 +55,7 @@ const faqs = [
         </div>
 
         <!-- Right: CTA Card -->
-        <div data-reveal data-reveal-delay="200">
+        <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700" style="transition-delay: 200ms;">
           <div class="rounded-xl border-2 border-[hsl(var(--primary)/0.2)] shadow-xl bg-[hsl(var(--card))] overflow-hidden">
             <div class="p-8 space-y-6">
               <div class="space-y-2">
@@ -85,12 +85,12 @@ const faqs = [
   <!-- Steps -->
   <section class="py-20 md:py-28 bg-[hsl(var(--muted)/0.3)]">
     <div class="container mx-auto px-4">
-      <div data-reveal class="text-center mb-16">
+      <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700 text-center mb-16">
         <h2 class="text-3xl md:text-4xl font-display font-bold tracking-tight mb-4">So einfach geht's</h2>
       </div>
       <div class="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
         {steps.map((step, i) => (
-          <div data-reveal data-reveal-delay={`${i * 100}`} class="text-center space-y-4">
+          <div class="reveal-item opacity-0 translate-y-8 transition-all duration-500 text-center space-y-4" style={`transition-delay: ${i * 100}ms;`}>
             <div class="h-12 w-12 rounded-full bg-[hsl(var(--primary))] text-white flex items-center justify-center text-lg font-bold mx-auto">{i + 1}</div>
             <h3 class="text-xl font-display font-bold">{step.title}</h3>
             <p class="text-sm text-[hsl(var(--muted-foreground))]">{step.description}</p>
@@ -103,12 +103,12 @@ const faqs = [
   <!-- FAQ -->
   <section class="py-20 md:py-28">
     <div class="container mx-auto px-4">
-      <div data-reveal class="text-center max-w-3xl mx-auto mb-16">
+      <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700 text-center max-w-3xl mx-auto mb-16">
         <h2 class="text-3xl md:text-4xl font-display font-bold tracking-tight mb-4">Haeufige Fragen</h2>
       </div>
       <div class="max-w-2xl mx-auto space-y-0 rounded-xl border border-[hsl(var(--border))] bg-[hsl(var(--card))] overflow-hidden">
         {faqs.map((item) => (
-          <details data-reveal class="border-b border-[hsl(var(--border)/0.5)] last:border-0 group">
+          <details class="reveal-item opacity-0 translate-y-8 transition-all duration-500 border-b border-[hsl(var(--border)/0.5)] last:border-0 group">
             <summary class="flex items-center justify-between w-full py-5 px-6 text-left cursor-pointer font-display font-bold text-lg">
               {item.question}
               <svg class="h-5 w-5 text-[hsl(var(--muted-foreground))] shrink-0 transition-transform duration-300 group-open:rotate-180" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
@@ -119,4 +119,20 @@ const faqs = [
       </div>
     </div>
   </section>
+  <script is:inline>
+  (function() {
+    var items = document.querySelectorAll('.reveal-item');
+    if (!items.length) return;
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    items.forEach(function(item) { observer.observe(item); });
+  })();
+  </script>
 </MarketingLayout>
