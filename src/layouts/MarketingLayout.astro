@@ -44,7 +44,8 @@ const orgSchema = {
     </main>
     <LandingFooter />
 
-    <!-- ScrollReveal: Native IntersectionObserver -->
+    <!-- Landing sections handle their own IntersectionObserver reveal animations -->
+    <!-- Global data-reveal observer for non-landing pages (blog, produkt, etc.) -->
     <script is:inline>
       (function() {
         var observer = new IntersectionObserver(
@@ -72,6 +73,5 @@ const orgSchema = {
         }
       })();
     </script>
-    <!-- Reveal CSS is in global.css -->
   </body>
 </html>

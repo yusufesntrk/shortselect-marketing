@@ -5,7 +5,7 @@ import TestimonialsCarousel from '../interactive/TestimonialsCarousel';
 <section class="py-20 md:py-32 overflow-hidden" id="testimonials">
   <div class="container mx-auto px-4">
     <!-- Header -->
-    <div data-reveal class="text-center space-y-4 mb-16">
+    <div id="testimonials-header" class="text-center space-y-4 mb-16 opacity-0 translate-y-8 transition-all duration-700">
       <h2 class="text-3xl md:text-5xl font-display font-bold">
         Was unsere Kunden{" "}
         <span class="text-primary">über uns sagen</span>
@@ -14,8 +14,37 @@ import TestimonialsCarousel from '../interactive/TestimonialsCarousel';
         Hunderte Recruiting-Teams vertrauen auf ShortSelect.
       </p>
     </div>
-    <div data-reveal data-reveal-delay="200">
+    <div id="testimonials-carousel" class="opacity-0 transition-opacity duration-700" style="transition-delay: 200ms;">
       <TestimonialsCarousel client:visible />
     </div>
   </div>
 </section>
+
+<script is:inline>
+(function() {
+  var section = document.getElementById('testimonials');
+  if (!section) return;
+
+  var header = document.getElementById('testimonials-header');
+  var carousel = document.getElementById('testimonials-carousel');
+
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        // Reveal header
+        if (header) {
+          header.style.opacity = '1';
+          header.style.transform = 'translateY(0)';
+        }
+        // Reveal carousel (with CSS transition-delay)
+        if (carousel) {
+          carousel.style.opacity = '1';
+        }
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  observer.observe(section);
+})();
+</script>

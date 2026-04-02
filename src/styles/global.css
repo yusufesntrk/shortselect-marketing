@@ -49,7 +49,8 @@ h1, h2, h3, h4, h5, h6 {
 .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
 .scrollbar-hide::-webkit-scrollbar { display: none; }
 
-/* Scroll Reveal Animations */
+/* Global scroll reveal for non-landing pages (blog, produkt, etc.) */
+/* Landing sections use their own inline IntersectionObserver scripts instead */
 [data-reveal] {
   opacity: 0;
   transform: translateY(30px);

@@ -1,8 +1,8 @@
 ---
 // AIFeaturesSection - 5 AI feature cards with scroll reveal
+// Matched 1:1 to React source at project-spark/src/components/landing/AIFeaturesSection.tsx
 import { aiFeatures } from '@/data/features';
 
-// Map icon names to inline SVG paths
 const iconMap: Record<string, string> = {
   brain: '<path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"/><path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4"/><path d="M17.599 6.5a3 3 0 0 0 .399-1.375"/><path d="M6.003 5.125A3 3 0 0 0 6.401 6.5"/><path d="M3.477 10.896a4 4 0 0 1 .585-.396"/><path d="M19.938 10.5a4 4 0 0 1 .585.396"/><path d="M6 18a4 4 0 0 1-1.967-.516"/><path d="M19.967 17.484A4 4 0 0 1 18 18"/>',
   zap: '<path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/>',
@@ -12,13 +12,13 @@ const iconMap: Record<string, string> = {
 };
 ---
 
-<section id="features" class="py-20 md:py-32">
+<section id="ai-features" class="py-20 md:py-32">
   <div class="container mx-auto px-4">
-    <!-- Header with reveal animation -->
-    <div data-reveal class="ai-header text-center space-y-4 mb-16">
+    <!-- Header -->
+    <div id="ai-header" class="text-center space-y-4 mb-16 opacity-0 translate-y-8 transition-all duration-700">
       <h2 class="text-3xl md:text-5xl font-display font-bold">
         KI-gestützte Intelligenz in{" "}
-        <span class="text-primary relative">
+        <span class="text-primary relative inline-block">
           jedem Schritt
           <svg
             class="absolute -bottom-2 left-0 w-full"
@@ -27,12 +27,12 @@ const iconMap: Record<string, string> = {
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
+              id="ai-underline-path"
               d="M2 6C50 2 150 2 198 6"
-              stroke="hsl(var(--primary))"
+              stroke="currentColor"
               stroke-width="3"
               stroke-linecap="round"
-              class="ai-underline"
-              style="stroke-dasharray: 200; stroke-dashoffset: 200;"
+              style="stroke-dasharray: 200; stroke-dashoffset: 200; transition: stroke-dashoffset 1s ease-out;"
             />
           </svg>
         </span>
@@ -42,16 +42,15 @@ const iconMap: Record<string, string> = {
       </p>
     </div>
 
-    <!-- Feature Cards with staggered animation -->
+    <!-- Feature Cards -->
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
       {aiFeatures.map((feature, i) => (
         <div
-          data-reveal
-          data-reveal-delay={`${150 + i * 100}`}
-          class="ai-card relative border-2 rounded-lg bg-card p-0 group cursor-default transition-all duration-500 hover:border-primary/50 hover:shadow-xl hover:shadow-primary/5 hover:-translate-y-2 overflow-hidden"
+          class="ai-feature-card relative border-2 rounded-lg bg-card p-0 group cursor-default transition-all duration-500 hover:border-[hsl(var(--primary)/0.5)] hover:shadow-xl hover:-translate-y-2 overflow-hidden opacity-0 translate-y-12"
+          style={`transition-delay: ${150 + i * 100}ms;`}
         >
           <div class="p-6 pb-0">
-            <div class="h-14 w-14 rounded-xl bg-primary/10 flex items-center justify-center mb-4 transition-all duration-300 group-hover:bg-primary/20 group-hover:scale-110 group-hover:rotate-3">
+            <div class="h-14 w-14 rounded-xl bg-[hsl(var(--primary)/0.1)] flex items-center justify-center mb-4 transition-all duration-300 group-hover:bg-[hsl(var(--primary)/0.2)] group-hover:scale-110 group-hover:rotate-3">
               <svg class="h-7 w-7 text-primary transition-transform duration-300 group-hover:scale-110" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" set:html={iconMap[feature.icon]} />
             </div>
             <h3 class="text-xl font-semibold group-hover:text-primary transition-colors">
@@ -63,14 +62,13 @@ const iconMap: Record<string, string> = {
               {feature.description}
             </p>
           </div>
-
-          <!-- Hover glow effect -->
-          <div class="absolute inset-0 rounded-lg bg-gradient-to-br from-primary/5 to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+          <div class="absolute inset-0 rounded-lg bg-gradient-to-br from-[hsl(var(--primary)/0.05)] to-[hsl(var(--accent)/0.05)] opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
         </div>
       ))}
     </div>
 
-    <div data-reveal data-reveal-delay="500" class="ai-bottom-link text-center mt-8">
+    <!-- Bottom link -->
+    <div id="ai-bottom-link" class="text-center mt-8 opacity-0 translate-y-4 transition-all duration-700" style="transition-delay: 500ms;">
       <a href="/produkt/ki-features" class="inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline">
         Alle 11 KI-Features entdecken
         <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -82,37 +80,45 @@ const iconMap: Record<string, string> = {
   </div>
 </section>
 
-<style>
-  /* Header: match React's transition-all duration-700 */
-  .ai-header[data-reveal] {
-    transition: all 700ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
+<script is:inline>
+(function() {
+  var section = document.getElementById('ai-features');
+  if (!section) return;
 
-  /* Cards: match React's opacity-0 translate-y-12 (48px) with duration-500 */
-  .ai-card[data-reveal] {
-    transform: translateY(48px);
-    transition: all 500ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  .ai-card[data-reveal].revealed {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  var header = document.getElementById('ai-header');
+  var underline = document.getElementById('ai-underline-path');
+  var bottomLink = document.getElementById('ai-bottom-link');
+  var cards = section.querySelectorAll('.ai-feature-card');
 
-  /* Bottom link: match React's transition-all duration-700 delay-500 and translate-y-4 (16px) */
-  .ai-bottom-link[data-reveal] {
-    transform: translateY(16px);
-    transition: all 700ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  .ai-bottom-link[data-reveal].revealed {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        // Reveal header
+        if (header) {
+          header.style.opacity = '1';
+          header.style.transform = 'translateY(0)';
+        }
+        // Draw underline
+        if (underline) {
+          setTimeout(function() {
+            underline.style.strokeDashoffset = '0';
+          }, 300);
+        }
+        // Reveal cards with stagger
+        cards.forEach(function(card) {
+          card.style.opacity = '1';
+          card.style.transform = 'translateY(0)';
+        });
+        // Reveal bottom link
+        if (bottomLink) {
+          bottomLink.style.opacity = '1';
+          bottomLink.style.transform = 'translateY(0)';
+        }
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
 
-  /* SVG underline: match React's transition-all duration-1000 */
-  .ai-underline {
-    transition: stroke-dashoffset 1s ease-out;
-  }
-  :global([data-reveal].revealed) .ai-underline {
-    stroke-dashoffset: 0;
-  }
-</style>
+  observer.observe(section);
+})();
+</script>
