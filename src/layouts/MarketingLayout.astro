@@ -45,11 +45,11 @@ const orgSchema = {
     <LandingFooter />
 
     <!-- ScrollReveal: Native IntersectionObserver -->
-    <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        const observer = new IntersectionObserver(
-          (entries) => {
-            entries.forEach((entry) => {
+    <script is:inline>
+      (function() {
+        var observer = new IntersectionObserver(
+          function(entries) {
+            entries.forEach(function(entry) {
               if (entry.isIntersecting) {
                 entry.target.classList.add('revealed');
                 observer.unobserve(entry.target);
@@ -58,8 +58,15 @@ const orgSchema = {
           },
           { threshold: 0.1, rootMargin: '0px' }
         );
-        document.querySelectorAll('[data-reveal]').forEach((el) => observer.observe(el));
-      });
+        function init() {
+          document.querySelectorAll('[data-reveal]').forEach(function(el) { observer.observe(el); });
+        }
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', init);
+        } else {
+          init();
+        }
+      })();
     </script>
     <style is:global>
       [data-reveal] {
