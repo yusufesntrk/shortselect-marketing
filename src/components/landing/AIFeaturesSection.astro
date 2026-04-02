@@ -47,7 +47,7 @@ const iconMap: Record<string, string> = {
       {aiFeatures.map((feature, i) => (
         <div
           data-reveal
-          data-reveal-delay={`${Math.min((i + 1) * 100, 500)}`}
+          data-reveal-delay={`${150 + i * 100}`}
           class="relative border-2 rounded-lg bg-card p-0 group cursor-default transition-all duration-500 hover:border-primary/50 hover:shadow-xl hover:shadow-primary/5 hover:-translate-y-2 overflow-hidden"
         >
           <div class="p-6 pb-0">

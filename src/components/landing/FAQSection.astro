@@ -36,7 +36,7 @@ const faqSchema = {
       {faqs.map((faq, i) => (
         <details
           data-reveal
-          data-reveal-delay={`${Math.min((i + 1) * 100, 500)}`}
+          data-reveal-delay={`${i * 50}`}
           class="group border rounded-lg px-6 transition-all duration-200 hover:border-primary/30"
         >
           <summary class="flex items-center justify-between py-4 cursor-pointer text-left font-semibold list-none [&::-webkit-details-marker]:hidden">

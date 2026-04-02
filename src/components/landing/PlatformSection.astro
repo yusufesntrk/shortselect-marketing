@@ -33,10 +33,15 @@ const iconMap: Record<string, string> = {
 
     <!-- Feature Grid with staggered animation -->
     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      {platformFeatures.map((feature, i) => (
+      {platformFeatures.map((feature, i) => {
+        const isLeftColumn = i % 3 === 0;
+        const isRightColumn = i % 3 === 2;
+        const direction = isLeftColumn ? 'left' : isRightColumn ? 'right' : undefined;
+        return (
         <div
           data-reveal
-          data-reveal-delay={`${Math.min((i + 1) * 100, 500)}`}
+          data-reveal-delay={`${100 + i * 75}`}
+          {...(direction ? { 'data-reveal-direction': direction } : {})}
           class="relative bg-card rounded-lg border border-transparent p-0 group cursor-default transition-all duration-500 hover:shadow-lg hover:shadow-accent/5 hover:-translate-y-1 hover:border-accent/30 overflow-hidden"
         >
           <div class="p-6 pb-3">
@@ -58,7 +63,7 @@ const iconMap: Record<string, string> = {
           <!-- Subtle gradient overlay on hover -->
           <div class="absolute inset-0 rounded-lg bg-gradient-to-br from-accent/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
         </div>
-      ))}
+      ); })}
     </div>
   </div>
 </section>

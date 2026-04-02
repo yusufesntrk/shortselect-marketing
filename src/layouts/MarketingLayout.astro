@@ -51,6 +51,10 @@ const orgSchema = {
           function(entries) {
             entries.forEach(function(entry) {
               if (entry.isIntersecting) {
+                var delay = entry.target.getAttribute('data-reveal-delay');
+                if (delay) {
+                  entry.target.style.transitionDelay = delay + 'ms';
+                }
                 entry.target.classList.add('revealed');
                 observer.unobserve(entry.target);
               }
@@ -78,11 +82,24 @@ const orgSchema = {
         opacity: 1;
         transform: translateY(0);
       }
-      [data-reveal-delay="100"] { transition-delay: 100ms; }
-      [data-reveal-delay="200"] { transition-delay: 200ms; }
-      [data-reveal-delay="300"] { transition-delay: 300ms; }
-      [data-reveal-delay="400"] { transition-delay: 400ms; }
-      [data-reveal-delay="500"] { transition-delay: 500ms; }
+      /* Directional reveal variants */
+      [data-reveal-direction="left"] {
+        transform: translateX(-30px);
+      }
+      [data-reveal-direction="right"] {
+        transform: translateX(30px);
+      }
+      [data-reveal-direction="left"].revealed,
+      [data-reveal-direction="right"].revealed {
+        transform: translateX(0);
+      }
+      /* Scale reveal variant */
+      [data-reveal-scale] {
+        transform: translateY(30px) scale(0.95);
+      }
+      [data-reveal-scale].revealed {
+        transform: translateY(0) scale(1);
+      }
     </style>
   </body>
 </html>
