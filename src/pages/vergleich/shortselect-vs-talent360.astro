@@ -2,7 +2,7 @@
 import VergleichLayout from '../../layouts/VergleichLayout.astro';
 
 const comparisonData = [
-  { feature: "KI-Agenten", ssStatus: "check" as const, ssLabel: "11 AgentBurst-Agenten", compStatus: "x" as const, compLabel: "Keine" },
+  { feature: "KI-Agenten", ssStatus: "check" as const, ssLabel: "AgentBurst-Agenten", compStatus: "x" as const, compLabel: "Keine" },
   { feature: "Matching-Typ", ssStatus: "check" as const, ssLabel: "Autonomes KI-Matching", compStatus: "warn" as const, compLabel: "Regelbasiert (kein ML)" },
   { feature: "CV Parsing", ssStatus: "check" as const, ssLabel: "AgentBurst Parse (<2s)", compStatus: "x" as const, compLabel: "Nicht verfuegbar" },
   { feature: "KI-Screening", ssStatus: "check" as const, ssLabel: "AgentBurst Screen", compStatus: "x" as const, compLabel: "Manuell" },
@@ -17,12 +17,12 @@ const comparisonData = [
 
 <VergleichLayout
   title="ShortSelect vs. Talent360 - ATS Vergleich 2026"
-  description="Talent360 nutzt regelbasiertes Matching ohne echte KI und kein CV Parsing. ShortSelect bietet 11 autonome AgentBurst-Agenten."
+  description="Talent360 nutzt regelbasiertes Matching ohne echte KI und kein CV Parsing. ShortSelect bietet Autonome AgentBurst-Agenten."
   competitorName="Talent360"
   heroSubline="Talent360 ist ein DACH-ATS mit soliden Grundfunktionen. Aber: Regelbasiertes Matching statt echter KI, kein CV Parsing und ein sehr kleines Entwicklerteam."
   heroBadge="Vergleich"
-  ssDescription="KI-Agent-ATS mit 11 autonomen AgentBurst-Agenten"
-  ssHighlights={["11 AgentBurst-Agenten arbeiten 24/7", "Echtes KI-Matching statt Regelwerke", "Blitzschnelles CV Parsing (<2s)", "Predictive Analytics und Auto-Nurturing"]}
+  ssDescription="KI-Agent-ATS mit autonomen AgentBurst-Agenten"
+  ssHighlights={["AgentBurst-Agenten arbeiten 24/7", "Echtes KI-Matching statt Regelwerke", "Blitzschnelles CV Parsing (<2s)", "Predictive Analytics und Auto-Nurturing"]}
   compDescription="DACH-ATS fuer Personaldienstleister"
   compHighlights={["DACH-basierter Anbieter", "WhatsApp-Integration", "Multiposting-Anbindungen", "DSGVO-konform"]}
   comparisonData={comparisonData}
@@ -40,7 +40,7 @@ const comparisonData = [
     title: "Wann ShortSelect besser passt",
     intro: "ShortSelect ist ideal, wenn Sie echte KI und Automatisierung wollen:",
     items: [
-      "11 autonome AgentBurst-Agenten statt regelbasierter Workflows",
+      "Autonome AgentBurst-Agenten statt regelbasierter Workflows",
       "Blitzschnelles CV Parsing in unter 2 Sekunden",
       "Predictive Analytics fuer datengetriebene Entscheidungen",
       "Wachsendes Produkt mit aktivem Entwicklerteam",
