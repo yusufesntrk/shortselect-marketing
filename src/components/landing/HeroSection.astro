@@ -19,7 +19,7 @@
   <div class="container relative mx-auto px-4">
     <div class="hero-container mx-auto max-w-4xl text-center space-y-8">
       <!-- Animated Badge -->
-      <div class="hero-animate inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20">
+      <div class="hero-animate hero-badge inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20">
         <svg class="h-4 w-4 text-primary animate-pulse" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/>
           <path d="M20 3v4"/>
@@ -32,25 +32,25 @@
 
       <!-- Animated Headline -->
       <h1 class="text-4xl md:text-6xl lg:text-7xl font-display font-bold tracking-tight">
-        <span class="hero-animate hero-delay-100 inline-block">
+        <span class="hero-animate hero-headline hero-delay-100 inline-block">
           KI-Recruiting Software.
         </span>{" "}
-        <span class="hero-animate hero-delay-200 inline-block text-primary">
+        <span class="hero-animate hero-headline hero-delay-200 inline-block text-primary">
           Smarter.
         </span>{" "}
-        <span class="hero-animate hero-delay-300 inline-block text-accent">
+        <span class="hero-animate hero-headline hero-delay-300 inline-block text-accent">
           Schneller.
         </span>
       </h1>
 
       <!-- Subline -->
-      <p class="hero-animate hero-delay-400 text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
+      <p class="hero-animate hero-headline hero-delay-400 text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
         KI-gestütztes Bewerbermanagement für moderne Recruiting-Teams.
         Automatisieren Sie Ihren Prozess und finden Sie die besten Talente – in der Hälfte der Zeit.
       </p>
 
       <!-- Animated CTAs -->
-      <div class="hero-animate hero-delay-500 flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+      <div class="hero-animate hero-headline hero-delay-500 flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
         <a href="https://app.shortselect.com/signup" class="inline-flex items-center gap-2 px-8 py-3 bg-primary text-primary-foreground font-semibold rounded-lg text-base group relative overflow-hidden hover:shadow-lg transition-shadow">
           <span class="relative z-10 flex items-center gap-2">
             Demo buchen
@@ -67,7 +67,7 @@
       </div>
 
       <!-- Social Proof -->
-      <div class="hero-animate hero-delay-600 text-sm text-muted-foreground pt-8">
+      <div class="hero-animate hero-social hero-delay-600 text-sm text-muted-foreground pt-8">
         <span class="inline-flex items-center gap-2">
           <span class="flex -space-x-2">
             <img src="/testimonials/yasar-sentuerk.png" alt="Yasar Sentürk, Geschäftsführer searched GmbH" class="w-6 h-6 rounded-full object-cover object-top border-2 border-background" style="animation-delay: 0ms;" />
@@ -86,15 +86,38 @@
 </section>
 
 <style>
-  .hero-container .hero-animate {
+  /* Badge: opacity + translateY(-16px) matching React's -translate-y-4 */
+  .hero-container .hero-badge {
     opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    transform: translateY(-16px);
+    transition: all 700ms cubic-bezier(0.4, 0, 0.2, 1);
   }
-  .hero-container.mounted .hero-animate {
+  .hero-container.mounted .hero-badge {
     opacity: 1;
     transform: translateY(0);
   }
+
+  /* Headlines & subline & CTAs: opacity + translateY(32px) matching React's translate-y-8 */
+  .hero-container .hero-headline {
+    opacity: 0;
+    transform: translateY(32px);
+    transition: all 700ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .hero-container.mounted .hero-headline {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Social proof: only opacity, no translateY — matching React which only uses opacity-100/opacity-0 */
+  .hero-container .hero-social {
+    opacity: 0;
+    transition: all 700ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .hero-container.mounted .hero-social {
+    opacity: 1;
+  }
+
+  /* Delays matching React's delay-100 through delay-600 */
   .hero-container.mounted .hero-delay-100 { transition-delay: 100ms; }
   .hero-container.mounted .hero-delay-200 { transition-delay: 200ms; }
   .hero-container.mounted .hero-delay-300 { transition-delay: 300ms; }

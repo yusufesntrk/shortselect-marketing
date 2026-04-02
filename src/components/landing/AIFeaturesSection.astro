@@ -15,7 +15,7 @@ const iconMap: Record<string, string> = {
 <section id="features" class="py-20 md:py-32">
   <div class="container mx-auto px-4">
     <!-- Header with reveal animation -->
-    <div data-reveal class="text-center space-y-4 mb-16">
+    <div data-reveal class="ai-header text-center space-y-4 mb-16">
       <h2 class="text-3xl md:text-5xl font-display font-bold">
         KI-gestützte Intelligenz in{" "}
         <span class="text-primary relative">
@@ -31,7 +31,7 @@ const iconMap: Record<string, string> = {
               stroke="hsl(var(--primary))"
               stroke-width="3"
               stroke-linecap="round"
-              class="hero-underline"
+              class="ai-underline"
               style="stroke-dasharray: 200; stroke-dashoffset: 200;"
             />
           </svg>
@@ -48,7 +48,7 @@ const iconMap: Record<string, string> = {
         <div
           data-reveal
           data-reveal-delay={`${150 + i * 100}`}
-          class="relative border-2 rounded-lg bg-card p-0 group cursor-default transition-all duration-500 hover:border-primary/50 hover:shadow-xl hover:shadow-primary/5 hover:-translate-y-2 overflow-hidden"
+          class="ai-card relative border-2 rounded-lg bg-card p-0 group cursor-default transition-all duration-500 hover:border-primary/50 hover:shadow-xl hover:shadow-primary/5 hover:-translate-y-2 overflow-hidden"
         >
           <div class="p-6 pb-0">
             <div class="h-14 w-14 rounded-xl bg-primary/10 flex items-center justify-center mb-4 transition-all duration-300 group-hover:bg-primary/20 group-hover:scale-110 group-hover:rotate-3">
@@ -70,7 +70,7 @@ const iconMap: Record<string, string> = {
       ))}
     </div>
 
-    <div data-reveal data-reveal-delay="500" class="text-center mt-8">
+    <div data-reveal data-reveal-delay="500" class="ai-bottom-link text-center mt-8">
       <a href="/produkt/ki-features" class="inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline">
         Alle 11 KI-Features entdecken
         <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -83,10 +83,36 @@ const iconMap: Record<string, string> = {
 </section>
 
 <style>
-  .hero-underline {
+  /* Header: match React's transition-all duration-700 */
+  .ai-header[data-reveal] {
+    transition: all 700ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Cards: match React's opacity-0 translate-y-12 (48px) with duration-500 */
+  .ai-card[data-reveal] {
+    transform: translateY(48px);
+    transition: all 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .ai-card[data-reveal].revealed {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Bottom link: match React's transition-all duration-700 delay-500 and translate-y-4 (16px) */
+  .ai-bottom-link[data-reveal] {
+    transform: translateY(16px);
+    transition: all 700ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .ai-bottom-link[data-reveal].revealed {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* SVG underline: match React's transition-all duration-1000 */
+  .ai-underline {
     transition: stroke-dashoffset 1s ease-out;
   }
-  :global([data-reveal].revealed) .hero-underline {
+  :global([data-reveal].revealed) .ai-underline {
     stroke-dashoffset: 0;
   }
 </style>

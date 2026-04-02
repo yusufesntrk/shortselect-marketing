@@ -20,7 +20,7 @@ const iconMap: Record<string, string> = {
 
   <div class="container relative mx-auto px-4">
     <!-- Header -->
-    <div data-reveal class="text-center space-y-4 mb-16">
+    <div data-reveal class="platform-header text-center space-y-4 mb-16">
       <h2 class="text-3xl md:text-5xl font-display font-bold">
         Alles was Sie für{" "}
         <span class="text-accent">erfolgreiches Recruiting</span>{" "}
@@ -42,7 +42,7 @@ const iconMap: Record<string, string> = {
           data-reveal
           data-reveal-delay={`${100 + i * 75}`}
           {...(direction ? { 'data-reveal-direction': direction } : {})}
-          class="relative bg-card rounded-lg border border-transparent p-0 group cursor-default transition-all duration-500 hover:shadow-lg hover:shadow-accent/5 hover:-translate-y-1 hover:border-accent/30 overflow-hidden"
+          class="platform-card relative bg-card rounded-lg border border-transparent p-0 group cursor-default transition-all duration-500 hover:shadow-lg hover:shadow-accent/5 hover:-translate-y-1 hover:border-accent/30 overflow-hidden"
         >
           <div class="p-6 pb-3">
             <div class="flex items-center gap-3">
@@ -67,3 +67,24 @@ const iconMap: Record<string, string> = {
     </div>
   </div>
 </section>
+
+<style>
+  /* Header: match React's transition-all duration-700 with translate-y-8 (32px) */
+  .platform-header[data-reveal] {
+    transform: translateY(32px);
+    transition: all 700ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .platform-header[data-reveal].revealed {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Cards: match React's transition-all duration-500 */
+  .platform-card[data-reveal] {
+    transition: all 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .platform-card[data-reveal].revealed {
+    opacity: 1;
+    transform: translateX(0) translateY(0);
+  }
+</style>

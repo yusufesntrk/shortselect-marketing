@@ -2,16 +2,20 @@
 import TestimonialsCarousel from '../interactive/TestimonialsCarousel';
 ---
 
-<section class="py-20 md:py-32 bg-[hsl(var(--muted)/0.3)] relative overflow-hidden" id="testimonials">
+<section class="py-20 md:py-32 overflow-hidden" id="testimonials">
   <div class="container mx-auto px-4">
-    <div class="text-center mb-12" data-reveal>
-      <h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-4">
-        Was unsere Kunden sagen
+    <!-- Header -->
+    <div data-reveal class="text-center space-y-4 mb-16">
+      <h2 class="text-3xl md:text-5xl font-display font-bold">
+        Was unsere Kunden{" "}
+        <span class="text-primary">über uns sagen</span>
       </h2>
-      <p class="text-lg text-[hsl(var(--muted-foreground))] max-w-2xl mx-auto">
-        Recruiting-Teams weltweit vertrauen auf ShortSelect.
+      <p class="text-lg text-muted-foreground max-w-2xl mx-auto">
+        Hunderte Recruiting-Teams vertrauen auf ShortSelect.
       </p>
     </div>
-    <TestimonialsCarousel client:visible />
+    <div data-reveal data-reveal-delay="200">
+      <TestimonialsCarousel client:visible />
+    </div>
   </div>
 </section>

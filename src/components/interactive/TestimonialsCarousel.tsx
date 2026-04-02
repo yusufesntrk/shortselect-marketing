@@ -64,7 +64,10 @@ export default function TestimonialsCarousel() {
                     {[...Array(5)].map((_, j) => (
                       <Star
                         key={j}
-                        className="h-5 w-5 fill-[hsl(var(--primary))] text-[hsl(var(--primary))]"
+                        className={`h-5 w-5 fill-[hsl(var(--primary))] text-[hsl(var(--primary))] transition-all duration-300 ${
+                          isActive ? "animate-bounce-subtle" : ""
+                        }`}
+                        style={{ animationDelay: `${j * 100}ms` }}
                       />
                     ))}
                   </div>
