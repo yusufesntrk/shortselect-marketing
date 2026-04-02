@@ -11,10 +11,15 @@
       </div>
       <h2 class="text-3xl md:text-5xl font-display font-bold">
         KI-Features vs.{" "}
-        <span class="text-primary">KI-Agenten</span>
+        <span class="text-primary relative inline-block">
+          KI-Agenten
+          <svg class="absolute -bottom-2 left-0 w-full" viewBox="0 0 200 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path id="avf-underline-path" d="M2 6C50 2 150 2 198 6" stroke="currentColor" stroke-width="3" stroke-linecap="round" style="stroke-dasharray: 200; stroke-dashoffset: 200; transition: stroke-dashoffset 1s ease-out;" />
+          </svg>
+        </span>
       </h2>
       <p class="text-lg text-muted-foreground max-w-2xl mx-auto">
-        Andere Tools haben KI-Features. ShortSelect hat autonome KI-Agenten, die eigenständig handeln — ohne dass ein Recruiter auf "Start" klicken muss.
+        Andere Tools haben KI-Features. ShortSelect hat KI-Agenten, die eigenständig handeln — ohne dass ein Recruiter auf "Start" klicken muss.
       </p>
     </div>
 
@@ -91,7 +96,7 @@
             <svg class="h-5 w-5 text-primary mt-0.5 shrink-0" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M20 6 9 17l-5-5"/>
             </svg>
-            <span>Autonom: Agenten starten selbst, ohne Klick</span>
+            <span>Selbstständig: Agenten starten von allein, ohne Klick</span>
           </li>
           <li class="flex items-start gap-3">
             <svg class="h-5 w-5 text-primary mt-0.5 shrink-0" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -129,6 +134,7 @@
   if (!section) return;
 
   var header = document.getElementById('avf-header');
+  var underline = document.getElementById('avf-underline-path');
   var cardLeft = document.getElementById('avf-card-left');
   var cardRight = document.getElementById('avf-card-right');
 
@@ -139,6 +145,10 @@
         if (header) {
           header.style.opacity = '1';
           header.style.transform = 'translateY(0)';
+        }
+        // Draw underline
+        if (underline) {
+          setTimeout(function() { underline.style.strokeDashoffset = '0'; }, 300);
         }
         // Reveal cards with stagger
         if (cardLeft) {
