@@ -15,9 +15,9 @@ export const batch17: BlogPost[] = [
     content: `
 <h2>Was ist Lead-Generierung für Personalvermittler?</h2>
 
-<p>Lead-Generierung im Recruiting-Kontext bedeutet: Unternehmen mit akutem oder absehbarem Personalbedarf systematisch identifizieren, ansprechen und als Kunden gewinnen. Während die meisten Personalvermittler auf eingehende Anfragen warten — also reaktiv arbeiten —, bauen die erfolgreichsten Agenturen aktiv eine Pipeline potenzieller Auftraggeber auf.</p>
+<p>Lead-Generierung im Recruiting-Kontext bedeutet: Unternehmen mit akutem oder absehbarem Personalbedarf systematisch identifizieren, ansprechen und als Kunden gewinnen. Während die meisten Personalvermittler auf eingehende Anfragen warten, also reaktiv arbeiten —, bauen die erfolgreichsten Agenturen aktiv eine Pipeline potenzieller Auftraggeber auf.</p>
 
-<p>Der Unterschied ist fundamental. Wer nur auf Empfehlungen und Inbound-Anfragen setzt, ist vom Zufall abhängig. Wer Lead-Generierung als Prozess versteht, hat planbare Umsätze und kann sein Wachstum steuern. Im B2B-Dienstleistungsbereich — und Personalvermittlung ist genau das — entscheidet die Fähigkeit zur systematischen Neukundengewinnung über Erfolg und Stagnation.</p>
+<p>Der Unterschied ist fundamental. Wer nur auf Empfehlungen und Inbound-Anfragen setzt, ist vom Zufall abhängig. Wer Lead-Generierung als Prozess versteht, hat planbare Umsätze und kann sein Wachstum steuern. Im B2B-Dienstleistungsbereich, und Personalvermittlung ist genau das, entscheidet die Fähigkeit zur systematischen Neukundengewinnung über Erfolg und Stagnation.</p>
 
 <blockquote>
   <strong>Realität:</strong> Über 70 Prozent der Personalvermittler geben an, dass Neukundengewinnung ihre größte Herausforderung ist. Gleichzeitig haben weniger als 20 Prozent einen strukturierten Prozess dafür.
@@ -33,7 +33,7 @@ export const batch17: BlogPost[] = [
 
 <h3>Firmen-Expansionen und Standorteröffnungen</h3>
 
-<p>Neue Büros, neue Niederlassungen, neue Märkte — all das bedeutet Personalbedarf. Pressemitteilungen, LinkedIn-Unternehmensseiten und Handelsregister-Einträge sind Ihre Quellen. Wenn ein mittelständisches IT-Unternehmen eine neue Niederlassung in München ankündigt, braucht es dort Entwickler, Projektmanager und Vertriebsmitarbeiter.</p>
+<p>Neue Büros, neue Niederlassungen, neue Märkte, all das bedeutet Personalbedarf. Pressemitteilungen, LinkedIn-Unternehmensseiten und Handelsregister-Einträge sind Ihre Quellen. Wenn ein mittelständisches IT-Unternehmen eine neue Niederlassung in München ankündigt, braucht es dort Entwickler, Projektmanager und Vertriebsmitarbeiter.</p>
 
 <h3>Funding-Rounds und Investitionen</h3>
 
@@ -41,7 +41,7 @@ export const batch17: BlogPost[] = [
 
 <h3>Personalveränderungen im Management</h3>
 
-<p>Ein neuer VP Engineering, ein neuer Head of Sales — Führungswechsel ziehen fast immer Umstrukturierungen und neue Einstellungen nach sich. LinkedIn-Benachrichtigungen für Führungspositionen bei Ihren Zielunternehmen liefern diese Information automatisch.</p>
+<p>Ein neuer VP Engineering, ein neuer Head of Sales, Führungswechsel ziehen fast immer Umstrukturierungen und neue Einstellungen nach sich. LinkedIn-Benachrichtigungen für Führungspositionen bei Ihren Zielunternehmen liefern diese Information automatisch.</p>
 
 <h3>Branchenwachstum und Markttrends</h3>
 
@@ -54,20 +54,20 @@ export const batch17: BlogPost[] = [
 <p>LinkedIn ist für Personalvermittler im B2B-Bereich der wichtigste Kanal. Aber Social Selling bedeutet nicht, wahllos Kontaktanfragen mit Verkaufspitches zu versenden. Effektives LinkedIn Social Selling funktioniert in drei Phasen:</p>
 
 <ol>
-  <li><strong>Präsenz aufbauen:</strong> Regelmäßig relevante Inhalte teilen — Marktinsights, Gehaltstrends, Recruiting-Tipps. Damit positionieren Sie sich als Experte, bevor Sie den ersten Kontakt aufnehmen.</li>
-  <li><strong>Gezielt vernetzen:</strong> HR-Leiter, Geschäftsführer und Hiring Manager Ihrer Zielunternehmen als Kontakte hinzufügen. Personalisierte Nachrichten, die auf ihr Unternehmen oder ihre Branche Bezug nehmen — keine generischen Templates.</li>
+  <li><strong>Präsenz aufbauen:</strong> Regelmäßig relevante Inhalte teilen, Marktinsights, Gehaltstrends, Recruiting-Tipps. Damit positionieren Sie sich als Experte, bevor Sie den ersten Kontakt aufnehmen.</li>
+  <li><strong>Gezielt vernetzen:</strong> HR-Leiter, Geschäftsführer und Hiring Manager Ihrer Zielunternehmen als Kontakte hinzufügen. Personalisierte Nachrichten, die auf ihr Unternehmen oder ihre Branche Bezug nehmen, keine generischen Templates.</li>
   <li><strong>Mehrwert liefern:</strong> Bevor Sie Ihre Dienstleistung anbieten, liefern Sie kostenlos Wert. Ein Gehaltsbenchmark für ihre Branche, ein Marktüberblick zu verfügbaren Kandidaten, eine Einschätzung zur aktuellen Arbeitsmarktsituation in ihrer Region.</li>
 </ol>
 
 <h3>Kaltakquise am Telefon</h3>
 
-<p>Kaltakquise hat einen schlechten Ruf — zu Unrecht. Richtig gemacht, ist ein Telefonat nach wie vor einer der schnellsten Wege zum Entscheider. Der Schlüssel liegt in der Vorbereitung: Rufen Sie nicht blind an, sondern haben Sie ein konkretes Signal als Gesprächseinstieg.</p>
+<p>Kaltakquise hat einen schlechten Ruf, zu Unrecht. Richtig gemacht, ist ein Telefonat nach wie vor einer der schnellsten Wege zum Entscheider. Der Schlüssel liegt in der Vorbereitung: Rufen Sie nicht blind an, sondern haben Sie ein konkretes Signal als Gesprächseinstieg.</p>
 
-<p>Beispiel: „Frau Müller, ich habe gesehen, dass Sie seit drei Monaten einen Senior Java-Entwickler suchen. Wir haben gerade zwei Kandidaten mit genau diesem Profil verfügbar — darf ich Ihnen die Profile kurz vorstellen?" Das ist kein kalter Anruf. Das ist ein relevantes Angebot, basierend auf einem konkreten Bedarf.</p>
+<p>Beispiel: „Frau Müller, ich habe gesehen, dass Sie seit drei Monaten einen Senior Java-Entwickler suchen. Wir haben gerade zwei Kandidaten mit genau diesem Profil verfügbar, darf ich Ihnen die Profile kurz vorstellen?" Das ist kein kalter Anruf. Das ist ein relevantes Angebot, basierend auf einem konkreten Bedarf.</p>
 
 <h3>E-Mail-Sequenzen</h3>
 
-<p>Eine einzelne E-Mail wird selten beantwortet. Studien zeigen, dass die meisten Antworten erst nach dem dritten bis fünften Kontaktversuch kommen. Bauen Sie deshalb E-Mail-Sequenzen auf — typischerweise drei bis fünf E-Mails über zwei bis drei Wochen, die aufeinander aufbauen und verschiedene Mehrwerte bieten.</p>
+<p>Eine einzelne E-Mail wird selten beantwortet. Studien zeigen, dass die meisten Antworten erst nach dem dritten bis fünften Kontaktversuch kommen. Bauen Sie deshalb E-Mail-Sequenzen auf, typischerweise drei bis fünf E-Mails über zwei bis drei Wochen, die aufeinander aufbauen und verschiedene Mehrwerte bieten.</p>
 
 <ul>
   <li><strong>E-Mail 1:</strong> Konkretes Signal + kurzes Angebot</li>
@@ -85,11 +85,11 @@ export const batch17: BlogPost[] = [
 
 <h3>Case Studies und Erfolgsgeschichten</h3>
 
-<p>Nichts überzeugt einen potenziellen Kunden stärker als ein nachweisbarer Erfolg bei einem vergleichbaren Unternehmen. Dokumentieren Sie Ihre besten Vermittlungen als Case Studies: Ausgangssituation, Herausforderung, Lösung, Ergebnis. Konkrete Zahlen — Time-to-Hire, Anzahl präsentierter Kandidaten, Besetzungsquote — machen den Unterschied.</p>
+<p>Nichts überzeugt einen potenziellen Kunden stärker als ein nachweisbarer Erfolg bei einem vergleichbaren Unternehmen. Dokumentieren Sie Ihre besten Vermittlungen als Case Studies: Ausgangssituation, Herausforderung, Lösung, Ergebnis. Konkrete Zahlen, Time-to-Hire, Anzahl präsentierter Kandidaten, Besetzungsquote, machen den Unterschied.</p>
 
 <h3>Webinare und Events</h3>
 
-<p>Ein monatliches Webinar zu einem relevanten Thema — etwa „Gehaltstrends 2025 in der IT-Branche" oder „Recruiting-Strategien bei Fachkräftemangel" — generiert qualifizierte Leads mit minimalem Aufwand. Teilnehmer geben ihre Kontaktdaten freiwillig und signalisieren Interesse an Ihrem Fachgebiet. Die Conversion Rate von Webinar-Teilnehmern zu Kunden liegt branchenübergreifend bei 20 bis 40 Prozent.</p>
+<p>Ein monatliches Webinar zu einem relevanten Thema, etwa „Gehaltstrends 2025 in der IT-Branche" oder „Recruiting-Strategien bei Fachkräftemangel", generiert qualifizierte Leads mit minimalem Aufwand. Teilnehmer geben ihre Kontaktdaten freiwillig und signalisieren Interesse an Ihrem Fachgebiet. Die Conversion Rate von Webinar-Teilnehmern zu Kunden liegt branchenübergreifend bei 20 bis 40 Prozent.</p>
 
 <h2>Lead Scoring: Welche Leads sind die wertvollsten?</h2>
 
@@ -97,7 +97,7 @@ export const batch17: BlogPost[] = [
 
 <ul>
   <li><strong>Engagement (0–30 Punkte):</strong> Hat der Lead Ihre E-Mail geöffnet? Ihre Website besucht? Ein Whitepaper heruntergeladen? Auf LinkedIn interagiert? Jede Interaktion erhöht den Score.</li>
-  <li><strong>Firmengröße (0–20 Punkte):</strong> Größere Unternehmen haben typischerweise höheren und wiederkehrenden Bedarf. Ein DAX-Konzern bekommt mehr Punkte als ein 10-Personen-Startup — aber nur, wenn Ihre Dienstleistung zu dieser Größe passt.</li>
+  <li><strong>Firmengröße (0–20 Punkte):</strong> Größere Unternehmen haben typischerweise höheren und wiederkehrenden Bedarf. Ein DAX-Konzern bekommt mehr Punkte als ein 10-Personen-Startup, aber nur, wenn Ihre Dienstleistung zu dieser Größe passt.</li>
   <li><strong>Branche (0–20 Punkte):</strong> Leads aus Branchen, in denen Sie nachweisliche Expertise haben, erhalten höhere Scores. Ein IT-spezialisierter Personalvermittler bewertet IT-Unternehmen höher als Einzelhandelsunternehmen.</li>
   <li><strong>Budget-Indikatoren (0–15 Punkte):</strong> Unternehmen, die bereits mit Personalvermittlern arbeiten, haben Budget dafür. Unternehmen, die ausschließlich intern rekrutieren, müssen erst vom Konzept überzeugt werden.</li>
   <li><strong>Timing (0–15 Punkte):</strong> Aktive Vakanzen bedeuten akuten Bedarf. Ein Unternehmen, das gerade fünf offene Stellen hat, ist wertvoller als eines ohne sichtbaren Hiring-Bedarf.</li>
@@ -137,7 +137,7 @@ export const batch17: BlogPost[] = [
   <li><strong>Integration:</strong> Verknüpfung mit LinkedIn, E-Mail und Telefonie</li>
 </ul>
 
-<p>Moderne ATS-Systeme wie ShortSelect bieten diese Funktionen bereits integriert — Ihre Kandidatenpipeline und Ihre Kundenpipeline in einem einzigen System. Das spart nicht nur Kosten für separate Tools, sondern verhindert auch Datensilos zwischen Recruiting und Vertrieb.</p>
+<p>Moderne ATS-Systeme wie ShortSelect bieten diese Funktionen bereits integriert, Ihre Kandidatenpipeline und Ihre Kundenpipeline in einem einzigen System. Das spart nicht nur Kosten für separate Tools, sondern verhindert auch Datensilos zwischen Recruiting und Vertrieb.</p>
 
 <h2>KPIs messen: Was funktioniert wirklich?</h2>
 
@@ -193,7 +193,7 @@ export const batch17: BlogPost[] = [
 
 <h2>Fazit</h2>
 
-<p>Lead-Generierung ist keine Raketenwissenschaft — aber es ist ein Handwerk, das gelernt und systematisch betrieben werden muss. Die erfolgreichsten Personalvermittler unterscheiden sich von der Masse nicht durch bessere Kandidaten oder niedrigere Preise, sondern durch ihre Fähigkeit, planbar neue Kunden zu gewinnen. Bauen Sie Ihren Lead-Generierungs-Prozess Schritt für Schritt auf, messen Sie konsequent und optimieren Sie kontinuierlich. In sechs Monaten werden Sie sich fragen, warum Sie nicht früher damit angefangen haben.</p>
+<p>Lead-Generierung ist keine Raketenwissenschaft, aber es ist ein Handwerk, das gelernt und systematisch betrieben werden muss. Die erfolgreichsten Personalvermittler unterscheiden sich von der Masse nicht durch bessere Kandidaten oder niedrigere Preise, sondern durch ihre Fähigkeit, planbar neue Kunden zu gewinnen. Bauen Sie Ihren Lead-Generierungs-Prozess Schritt für Schritt auf, messen Sie konsequent und optimieren Sie kontinuierlich. In sechs Monaten werden Sie sich fragen, warum Sie nicht früher damit angefangen haben.</p>
 `,
   },
   {
@@ -210,21 +210,21 @@ export const batch17: BlogPost[] = [
     content: `
 <h2>Was ist Programmatic Job Advertising?</h2>
 
-<p>Programmatic Job Advertising bezeichnet die automatisierte, datengesteuerte Ausspielung von Stellenanzeigen auf Jobbörsen, Social-Media-Plattformen und anderen digitalen Kanälen. Statt manuell auf einzelnen Plattformen zu buchen und Budgets statisch zu verteilen, übernimmt ein Algorithmus die Entscheidung, wo, wann und an wen eine Stellenanzeige ausgespielt wird — in Echtzeit und optimiert auf definierte Zielkennzahlen.</p>
+<p>Programmatic Job Advertising bezeichnet die automatisierte, datengesteuerte Ausspielung von Stellenanzeigen auf Jobbörsen, Social-Media-Plattformen und anderen digitalen Kanälen. Statt manuell auf einzelnen Plattformen zu buchen und Budgets statisch zu verteilen, übernimmt ein Algorithmus die Entscheidung, wo, wann und an wen eine Stellenanzeige ausgespielt wird, in Echtzeit und optimiert auf definierte Zielkennzahlen.</p>
 
 <p>Das Prinzip stammt aus dem digitalen Marketing. Dort ist Programmatic Advertising seit Jahren Standard: Displayanzeigen, Social Ads und Suchmaschinenwerbung werden längst algorithmisch gesteuert. Die Recruiting-Branche hat diesen Ansatz adaptiert und auf die Besonderheiten von Stellenanzeigen zugeschnitten.</p>
 
 <h3>Abgrenzung zu Multiposting</h3>
 
-<p>Multiposting und Programmatic Job Advertising werden häufig verwechselt — sind aber grundlegend verschieden:</p>
+<p>Multiposting und Programmatic Job Advertising werden häufig verwechselt, sind aber grundlegend verschieden:</p>
 
 <ul>
-  <li><strong>Multiposting:</strong> Eine Stellenanzeige wird gleichzeitig auf mehreren Jobbörsen veröffentlicht. Die Verteilung ist manuell oder halbautomatisch. Das Budget wird vorab pro Kanal festgelegt und ändert sich während der Laufzeit nicht. Sie bezahlen pro Anzeige oder pro Laufzeit — unabhängig davon, wie viele Bewerbungen eingehen.</li>
-  <li><strong>Programmatic:</strong> Die Stellenanzeige wird algorithmisch auf den Kanälen ausgespielt, die die besten Ergebnisse liefern. Das Budget wird dynamisch verteilt — performante Kanäle bekommen mehr, schwache weniger. Sie bezahlen pro Klick, pro Bewerbung oder pro qualifizierter Bewerbung.</li>
+  <li><strong>Multiposting:</strong> Eine Stellenanzeige wird gleichzeitig auf mehreren Jobbörsen veröffentlicht. Die Verteilung ist manuell oder halbautomatisch. Das Budget wird vorab pro Kanal festgelegt und ändert sich während der Laufzeit nicht. Sie bezahlen pro Anzeige oder pro Laufzeit, unabhängig davon, wie viele Bewerbungen eingehen.</li>
+  <li><strong>Programmatic:</strong> Die Stellenanzeige wird algorithmisch auf den Kanälen ausgespielt, die die besten Ergebnisse liefern. Das Budget wird dynamisch verteilt, performante Kanäle bekommen mehr, schwache weniger. Sie bezahlen pro Klick, pro Bewerbung oder pro qualifizierter Bewerbung.</li>
 </ul>
 
 <blockquote>
-  <strong>Analogie:</strong> Multiposting ist wie ein Flyer, den Sie in zehn Briefkästen werfen. Programmatic ist wie ein GPS-gesteuerter Kurier, der den Flyer genau dorthin bringt, wo jemand ihn lesen will — und nur dann bezahlt wird, wenn er gelesen wird.
+  <strong>Analogie:</strong> Multiposting ist wie ein Flyer, den Sie in zehn Briefkästen werfen. Programmatic ist wie ein GPS-gesteuerter Kurier, der den Flyer genau dorthin bringt, wo jemand ihn lesen will, und nur dann bezahlt wird, wenn er gelesen wird.
 </blockquote>
 
 <h2>Wie funktioniert Real-Time Bidding bei Stellenanzeigen?</h2>
@@ -232,13 +232,13 @@ export const batch17: BlogPost[] = [
 <p>Das technische Herzstück von Programmatic Job Advertising ist Real-Time Bidding (RTB). Vereinfacht funktioniert es so:</p>
 
 <ol>
-  <li><strong>Ein Kandidat besucht eine Jobbörse oder eine Website:</strong> In dem Moment, in dem die Seite lädt, wird eine Auktion gestartet — in Millisekunden.</li>
+  <li><strong>Ein Kandidat besucht eine Jobbörse oder eine Website:</strong> In dem Moment, in dem die Seite lädt, wird eine Auktion gestartet, in Millisekunden.</li>
   <li><strong>Algorithmen bewerten den Kandidaten:</strong> Basierend auf demografischen Daten, Suchhistorie, Standort, Erfahrungslevel und weiteren Signalen wird entschieden, ob dieser Kandidat zur offenen Stelle passt.</li>
-  <li><strong>Gebote werden abgegeben:</strong> Mehrere Arbeitgeber oder Agenturen bieten gleichzeitig um die Aufmerksamkeit dieses Kandidaten. Der Algorithmus entscheidet, welche Anzeige angezeigt wird — basierend auf dem Gebot, der Relevanz und der historischen Performance.</li>
+  <li><strong>Gebote werden abgegeben:</strong> Mehrere Arbeitgeber oder Agenturen bieten gleichzeitig um die Aufmerksamkeit dieses Kandidaten. Der Algorithmus entscheidet, welche Anzeige angezeigt wird, basierend auf dem Gebot, der Relevanz und der historischen Performance.</li>
   <li><strong>Die Anzeige wird ausgespielt:</strong> Der Kandidat sieht die Stellenanzeige. Ob er klickt, wird getrackt und fließt in die Optimierung zukünftiger Auktionen ein.</li>
 </ol>
 
-<p>Dieser gesamte Prozess dauert weniger als 100 Millisekunden — schneller als ein Wimpernschlag. Pro Tag finden auf großen Plattformen Millionen solcher Auktionen statt.</p>
+<p>Dieser gesamte Prozess dauert weniger als 100 Millisekunden, schneller als ein Wimpernschlag. Pro Tag finden auf großen Plattformen Millionen solcher Auktionen statt.</p>
 
 <h2>Vorteile von Programmatic Job Advertising</h2>
 
@@ -251,7 +251,7 @@ export const batch17: BlogPost[] = [
 <p>Programmatic ermöglicht eine Präzision beim Targeting, die beim manuellen Posten unmöglich ist:</p>
 
 <ul>
-  <li><strong>Demografisches Targeting:</strong> Alter, Geschlecht, Bildungsniveau — angepasst an die Stelle</li>
+  <li><strong>Demografisches Targeting:</strong> Alter, Geschlecht, Bildungsniveau, angepasst an die Stelle</li>
   <li><strong>Skill-basiertes Targeting:</strong> Kandidaten mit bestimmten Fähigkeiten oder Zertifizierungen</li>
   <li><strong>Regionales Targeting:</strong> Umkreissuche um den Arbeitsort, Pendlerbereitschaft</li>
   <li><strong>Verhaltens-Targeting:</strong> Kandidaten, die aktiv nach Jobs suchen vs. passive Kandidaten</li>
@@ -260,25 +260,25 @@ export const batch17: BlogPost[] = [
 
 <h3>Echtzeit-Analytics</h3>
 
-<p>Während beim klassischen Multiposting der Recruiting-Report am Monatsende kommt, liefert Programmatic Advertising Daten in Echtzeit. Sie sehen jederzeit: Wie viele Impressionen hat Ihre Anzeige? Wie hoch ist die Klickrate? Wie viele Bewerbungen sind eingegangen? Was kostet eine Bewerbung? Diese Transparenz ermöglicht sofortige Korrekturen — nicht erst nach vier Wochen.</p>
+<p>Während beim klassischen Multiposting der Recruiting-Report am Monatsende kommt, liefert Programmatic Advertising Daten in Echtzeit. Sie sehen jederzeit: Wie viele Impressionen hat Ihre Anzeige? Wie hoch ist die Klickrate? Wie viele Bewerbungen sind eingegangen? Was kostet eine Bewerbung? Diese Transparenz ermöglicht sofortige Korrekturen, nicht erst nach vier Wochen.</p>
 
 <h2>Wann ist Programmatic Job Advertising sinnvoll?</h2>
 
-<p>Programmatic ist kein Allheilmittel. Es entfaltet seinen Wert in bestimmten Szenarien besonders gut — und ist in anderen Situationen schlicht überdimensioniert.</p>
+<p>Programmatic ist kein Allheilmittel. Es entfaltet seinen Wert in bestimmten Szenarien besonders gut, und ist in anderen Situationen schlicht überdimensioniert.</p>
 
 <h3>Ideal geeignet für</h3>
 
 <ul>
   <li><strong>High-Volume-Recruiting (20+ offene Stellen):</strong> Je mehr Stellen gleichzeitig offen sind, desto größer der Optimierungshebel. Bei 50 offenen Stellen manuell den Überblick über Budget und Performance zu behalten, ist praktisch unmöglich. Programmatic übernimmt diese Komplexität.</li>
   <li><strong>Unternehmen mit mehreren Standorten:</strong> Wenn Sie in München, Hamburg und Berlin gleichzeitig suchen, brauchen Sie regionales Targeting. Programmatic passt die Ausspielung automatisch an die lokalen Arbeitsmärkte an.</li>
-  <li><strong>Wiederkehrende Positionen:</strong> Callcenter-Agenten, Pflegekräfte, Fahrer — Positionen, die ständig nachbesetzt werden müssen, profitieren enorm von algorithmischer Optimierung. Der Algorithmus lernt mit jeder Kampagne dazu.</li>
-  <li><strong>Zeitkritische Besetzungen:</strong> Wenn eine Position schnell besetzt werden muss, maximiert Programmatic die Reichweite in kürzester Zeit — ohne manuellen Aufwand für die Kanalauswahl.</li>
+  <li><strong>Wiederkehrende Positionen:</strong> Callcenter-Agenten, Pflegekräfte, Fahrer, Positionen, die ständig nachbesetzt werden müssen, profitieren enorm von algorithmischer Optimierung. Der Algorithmus lernt mit jeder Kampagne dazu.</li>
+  <li><strong>Zeitkritische Besetzungen:</strong> Wenn eine Position schnell besetzt werden muss, maximiert Programmatic die Reichweite in kürzester Zeit, ohne manuellen Aufwand für die Kanalauswahl.</li>
 </ul>
 
 <h3>Weniger geeignet für</h3>
 
 <ul>
-  <li><strong>Executive Search:</strong> Für C-Level-Positionen oder hochspezialisierte Führungsrollen ist Direktansprache effektiver als Stellenanzeigen — egal ob manuell oder programmatisch.</li>
+  <li><strong>Executive Search:</strong> Für C-Level-Positionen oder hochspezialisierte Führungsrollen ist Direktansprache effektiver als Stellenanzeigen, egal ob manuell oder programmatisch.</li>
   <li><strong>Nischen-Positionen:</strong> Wenn es weltweit nur 50 Personen mit dem gesuchten Profil gibt, hilft kein Algorithmus. Hier ist Active Sourcing der einzige Weg.</li>
   <li><strong>Weniger als fünf offene Stellen:</strong> Der Overhead für Setup und Management von Programmatic-Kampagnen rechnet sich erst ab einer gewissen Mindestmenge. Bei drei offenen Stellen ist Multiposting in der Regel ausreichend.</li>
   <li><strong>Sehr kleine Budgets:</strong> Programmatic braucht Daten, um zu optimieren. Bei einem Budget von 200 Euro pro Monat reicht das Volumen nicht für sinnvolle algorithmische Optimierung.</li>
@@ -290,13 +290,13 @@ export const batch17: BlogPost[] = [
 
 <ul>
   <li><strong>CPA (Cost per Application):</strong> Was kostet Sie eine einzelne Bewerbung? Je nach Branche und Seniorität liegt der CPA zwischen 5 und 80 Euro. Für eine Pflegekraft zahlen Sie typischerweise 15 bis 25 Euro, für einen Senior-Entwickler 50 bis 80 Euro.</li>
-  <li><strong>CPI (Cost per Interview):</strong> Was kostet es, einen Kandidaten bis zum Interview zu bringen? Da nicht jede Bewerbung zu einem Interview führt, liegt der CPI deutlich über dem CPA — typischerweise beim Drei- bis Fünffachen.</li>
+  <li><strong>CPI (Cost per Interview):</strong> Was kostet es, einen Kandidaten bis zum Interview zu bringen? Da nicht jede Bewerbung zu einem Interview führt, liegt der CPI deutlich über dem CPA, typischerweise beim Drei- bis Fünffachen.</li>
   <li><strong>CPH (Cost per Hire):</strong> Die Gesamtkosten pro Einstellung über den Programmatic-Kanal. Hier fließen alle Werbekosten, Tool-Kosten und anteilige Personalkosten ein.</li>
   <li><strong>CPQA (Cost per Qualified Application):</strong> Die aussagekräftigste Kennzahl. Sie misst, was eine Bewerbung kostet, die tatsächlich den Mindestanforderungen der Stelle entspricht. Der CPQA eliminiert unqualifizierte Bewerbungen aus der Berechnung und gibt ein realistisches Bild der tatsächlichen Recruiting-Kosten.</li>
 </ul>
 
 <blockquote>
-  <strong>Wichtig:</strong> Fokussieren Sie sich auf CPQA, nicht auf CPA. Ein CPA von 10 Euro klingt günstig — aber wenn 80 Prozent der Bewerbungen unqualifiziert sind, liegt Ihr CPQA bei 50 Euro. Ein CPA von 30 Euro mit 70 Prozent qualifizierten Bewerbungen ergibt einen CPQA von nur 43 Euro — und deutlich weniger Zeitverschwendung beim Screening.
+  <strong>Wichtig:</strong> Fokussieren Sie sich auf CPQA, nicht auf CPA. Ein CPA von 10 Euro klingt günstig, aber wenn 80 Prozent der Bewerbungen unqualifiziert sind, liegt Ihr CPQA bei 50 Euro. Ein CPA von 30 Euro mit 70 Prozent qualifizierten Bewerbungen ergibt einen CPQA von nur 43 Euro, und deutlich weniger Zeitverschwendung beim Screening.
 </blockquote>
 
 <h2>Plattformen und Tools</h2>
@@ -349,7 +349,7 @@ export const batch17: BlogPost[] = [
   <li><strong>Budget-Synchronisation:</strong> Änderungen am Budget oder an der Priorität einer Stelle im ATS werden direkt an die Programmatic-Plattform weitergegeben.</li>
 </ul>
 
-<p>Moderne ATS-Systeme wie ShortSelect bieten Schnittstellen zu den gängigen Programmatic-Plattformen und ermöglichen diesen Datenaustausch automatisiert — ohne manuelle Exporte oder Importe.</p>
+<p>Moderne ATS-Systeme wie ShortSelect bieten Schnittstellen zu den gängigen Programmatic-Plattformen und ermöglichen diesen Datenaustausch automatisiert, ohne manuelle Exporte oder Importe.</p>
 
 <h2>Der Weg von Multiposting zu Programmatic</h2>
 
@@ -369,7 +369,7 @@ export const batch17: BlogPost[] = [
 
 <h3>Phase 4: Programmatic Job Advertising</h3>
 
-<p>Die algorithmische Optimierung übernimmt die Budget-Verteilung und das Targeting automatisch. Sie definieren Ziele und Budget — der Algorithmus findet den effizientesten Weg dorthin. Echtzeit-Reporting gibt Ihnen jederzeit volle Transparenz.</p>
+<p>Die algorithmische Optimierung übernimmt die Budget-Verteilung und das Targeting automatisch. Sie definieren Ziele und Budget, der Algorithmus findet den effizientesten Weg dorthin. Echtzeit-Reporting gibt Ihnen jederzeit volle Transparenz.</p>
 
 <blockquote>
   <strong>Empfehlung:</strong> Überspringen Sie keine Phase. Die Daten, die Sie in Phase 2 und 3 sammeln, sind die Grundlage für erfolgreiches Programmatic Advertising. Ohne historische Performance-Daten fehlt dem Algorithmus die Basis für sinnvolle Optimierung.
@@ -377,7 +377,7 @@ export const batch17: BlogPost[] = [
 
 <h2>Fazit</h2>
 
-<p>Programmatic Job Advertising ist kein Hype, sondern die logische Weiterentwicklung der Stellenanzeige im digitalen Zeitalter. Für Unternehmen mit hohem Besetzungsvolumen, mehreren Standorten oder wiederkehrenden Positionen bietet es einen messbaren Vorteil gegenüber manuellem Multiposting: niedrigere Kosten pro qualifizierter Bewerbung, besseres Targeting und vollständige Transparenz über die Werbeausgaben. Der Einstieg muss nicht auf einen Schlag passieren — beginnen Sie mit datengetriebenem Multiposting, sammeln Sie Erfahrungen und wachsen Sie in die algorithmische Optimierung hinein. Ihr Recruiting-Budget wird es Ihnen danken.</p>
+<p>Programmatic Job Advertising ist kein Hype, sondern die logische Weiterentwicklung der Stellenanzeige im digitalen Zeitalter. Für Unternehmen mit hohem Besetzungsvolumen, mehreren Standorten oder wiederkehrenden Positionen bietet es einen messbaren Vorteil gegenüber manuellem Multiposting: niedrigere Kosten pro qualifizierter Bewerbung, besseres Targeting und vollständige Transparenz über die Werbeausgaben. Der Einstieg muss nicht auf einen Schlag passieren, beginnen Sie mit datengetriebenem Multiposting, sammeln Sie Erfahrungen und wachsen Sie in die algorithmische Optimierung hinein. Ihr Recruiting-Budget wird es Ihnen danken.</p>
 `,
   },
 ];

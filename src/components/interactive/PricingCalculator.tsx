@@ -151,7 +151,7 @@ export default function PricingCalculator() {
             <div>
               <h3 className="text-xl font-bold">Enterprise</h3>
               <p className="text-[hsl(var(--muted-foreground))] text-sm mt-1">
-                Individuelle Loesung? SSO/SAML, SLA, dedizierter Account
+                Individuelle Lösung? SSO/SAML, SLA, dedizierter Account
                 Manager, Custom Integrations &mdash; alles individuell.
               </p>
             </div>

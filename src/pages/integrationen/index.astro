@@ -6,15 +6,15 @@ const categories = [
   {
     title: "E-Mail & Kalender",
     integrations: [
-      { name: "Gmail 2-Way-Sync", description: "Automatische E-Mail-Synchronisation. Alle Nachrichten direkt im ATS.", availability: "Verfuegbar", iconPath: '<rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>' },
-      { name: "Google Calendar", description: "Interview-Termine automatisch synchronisiert. Keine Doppelbuchungen.", availability: "Verfuegbar", iconPath: '<path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/>' },
+      { name: "Gmail 2-Way-Sync", description: "Automatische E-Mail-Synchronisation. Alle Nachrichten direkt im ATS.", availability: "Verfügbar", iconPath: '<rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>' },
+      { name: "Google Calendar", description: "Interview-Termine automatisch synchronisiert. Keine Doppelbuchungen.", availability: "Verfügbar", iconPath: '<path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/>' },
     ],
   },
   {
     title: "Karriereseite",
     integrations: [
-      { name: "Website Widget", description: "Einbettbares Job-Widget fuer jede Website. Ein Snippet, sofort live.", availability: "Verfuegbar", iconPath: '<polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>' },
-      { name: "Custom Career Site", description: "Vollstaendig anpassbare Karriereseite mit eigenem Branding.", availability: "Verfuegbar", iconPath: '<circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/>' },
+      { name: "Website Widget", description: "Einbettbares Job-Widget für jede Website. Ein Snippet, sofort live.", availability: "Verfügbar", iconPath: '<polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>' },
+      { name: "Custom Career Site", description: "Vollständig anpassbare Karriereseite mit eigenem Branding.", availability: "Verfügbar", iconPath: '<circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/>' },
     ],
   },
   {
@@ -27,8 +27,8 @@ const categories = [
   {
     title: "API & Webhooks",
     integrations: [
-      { name: "REST API", description: "Vollstaendige REST API fuer Custom-Integrationen. Dokumentiert und versioniert.", availability: "Business Plan", iconPath: '<polyline points="4 17 10 11 4 5"/><line x1="12" x2="20" y1="19" y2="19"/>' },
-      { name: "Webhooks", description: "Echtzeit-Events fuer Pipeline-Aenderungen. Automatisieren Sie Ihre Workflows.", availability: "Business Plan", iconPath: '<path d="M18 16.98h-5.99c-1.1 0-1.95.94-2.48 1.9A4 4 0 0 1 2 17c.01-.7.2-1.4.57-2"/><path d="m6 17 3.13-5.78c.53-.97.1-2.18-.5-3.1a4 4 0 1 1 6.89-4.06"/><path d="m12 6 3.13 5.73C15.66 12.7 16.9 13 18 13a4 4 0 0 1 .8 7.93"/>' },
+      { name: "REST API", description: "Vollständige REST API für Custom-Integrationen. Dokumentiert und versioniert.", availability: "Business Plan", iconPath: '<polyline points="4 17 10 11 4 5"/><line x1="12" x2="20" y1="19" y2="19"/>' },
+      { name: "Webhooks", description: "Echtzeit-Events für Pipeline-Änderungen. Automatisieren Sie Ihre Workflows.", availability: "Business Plan", iconPath: '<path d="M18 16.98h-5.99c-1.1 0-1.95.94-2.48 1.9A4 4 0 0 1 2 17c.01-.7.2-1.4.57-2"/><path d="m6 17 3.13-5.78c.53-.97.1-2.18-.5-3.1a4 4 0 1 1 6.89-4.06"/><path d="m12 6 3.13 5.73C15.66 12.7 16.9 13 18 13a4 4 0 0 1 .8 7.93"/>' },
     ],
   },
 ];
@@ -62,7 +62,7 @@ const comingSoon = [
           Verbinden Sie ShortSelect mit Ihren <span class="text-primary">Tools</span>
         </h1>
         <p class="reveal-item opacity-0 translate-y-8 transition-all duration-500 text-lg md:text-xl text-[hsl(var(--muted-foreground))] max-w-2xl mx-auto" style="transition-delay: 200ms;">
-          E-Mail, Kalender, Karriereseite, API — alles nahtlos integriert.
+          E-Mail, Kalender, Karriereseite, API, alles nahtlos integriert.
         </p>
       </div>
     </div>
@@ -84,7 +84,7 @@ const comingSoon = [
                 <div class="flex-1">
                   <div class="flex items-center gap-2 mb-1">
                     <h3 class="text-lg font-display font-bold">{integration.name}</h3>
-                    <span class={`inline-flex items-center px-2 py-0.5 rounded text-[10px] font-semibold ${integration.availability === 'Verfuegbar' ? 'bg-green-100 text-green-700' : 'bg-primary/10 text-primary'}`}>{integration.availability}</span>
+                    <span class={`inline-flex items-center px-2 py-0.5 rounded text-[10px] font-semibold ${integration.availability === 'Verfügbar' ? 'bg-green-100 text-green-700' : 'bg-primary/10 text-primary'}`}>{integration.availability}</span>
                   </div>
                   <p class="text-sm text-[hsl(var(--muted-foreground))] leading-relaxed">{integration.description}</p>
                 </div>
@@ -100,7 +100,7 @@ const comingSoon = [
   <section class="py-16 md:py-20 bg-[hsl(var(--muted)/0.3)]">
     <div class="container mx-auto px-4">
       <div class="max-w-3xl mx-auto text-center mb-12">
-        <h2 class="reveal-item opacity-0 translate-y-8 transition-all duration-700 text-2xl md:text-3xl font-display font-bold tracking-tight mb-4">Bald verfuegbar</h2>
+        <h2 class="reveal-item opacity-0 translate-y-8 transition-all duration-700 text-2xl md:text-3xl font-display font-bold tracking-tight mb-4">Bald verfügbar</h2>
         <p class="reveal-item opacity-0 translate-y-8 transition-all duration-500 text-[hsl(var(--muted-foreground))]" style="transition-delay: 100ms;">Wir arbeiten an weiteren Integrationen.</p>
       </div>
       <div class="flex flex-wrap items-center justify-center gap-4 max-w-2xl mx-auto">

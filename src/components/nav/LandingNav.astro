@@ -65,10 +65,10 @@ const simpleLinks = [
         </div>
       </div>
 
-      <!-- Loesungen Dropdown -->
+      <!-- Lösungen Dropdown -->
       <div class="nav-dropdown group relative">
         <button class="flex items-center gap-1 px-3 py-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors">
-          Loesungen
+          Lösungen
           <svg class="h-4 w-4 transition-transform group-hover:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
         </button>
         <div class="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
@@ -120,7 +120,7 @@ const simpleLinks = [
     </div>
 
     <!-- Mobile Menu Button -->
-    <button class="lg:hidden p-2" id="mobile-menu-btn" aria-label="Menu oeffnen">
+    <button class="lg:hidden p-2" id="mobile-menu-btn" aria-label="Menu öffnen">
       <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
     </button>
   </div>
@@ -135,7 +135,7 @@ const simpleLinks = [
         </div>
       </details>
       <details class="group">
-        <summary class="flex items-center justify-between py-2 text-sm font-medium cursor-pointer">Loesungen <svg class="h-4 w-4 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg></summary>
+        <summary class="flex items-center justify-between py-2 text-sm font-medium cursor-pointer">Lösungen <svg class="h-4 w-4 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg></summary>
         <div class="pl-4 space-y-2 mt-2">
           {loesungenLinks.map((link) => <a href={link.href} class="block py-1.5 text-sm text-muted-foreground hover:text-foreground">{link.label}</a>)}
         </div>

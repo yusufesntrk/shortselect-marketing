@@ -3,31 +3,31 @@ import LoesungLayout from '../../layouts/LoesungLayout.astro';
 
 const painPoints = [
   { title: "RBAC & Berechtigungen", description: "5 granulare Rollen: Super Admin, Admin, Recruiter, Hiring Manager und Readonly. Volle Kontrolle ueber Zugriffsrechte.", iconPath: '<path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/>' },
-  { title: "Row Level Security", description: "Mandantentrennung auf Datenbankebene. Jeder Tenant sieht ausschliesslich seine eigenen Daten — garantiert durch Supabase RLS.", iconPath: '<rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>' },
-  { title: "SSO Integration", description: "Single Sign-On fuer nahtlose Authentifizierung. Integrieren Sie Ihren bestehenden Identity Provider fuer ein einheitliches Login.", iconPath: '<path d="m15.5 7.5 2.3 2.3a1 1 0 0 0 1.4 0l2.1-2.1a1 1 0 0 0 0-1.4L19 4"/><path d="m21 2-9.6 9.6"/><circle cx="7.5" cy="15.5" r="5.5"/>' },
+  { title: "Row Level Security", description: "Mandantentrennung auf Datenbankebene. Jeder Tenant sieht ausschließlich seine eigenen Daten, garantiert durch Supabase RLS.", iconPath: '<rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>' },
+  { title: "SSO Integration", description: "Single Sign-On für nahtlose Authentifizierung. Integrieren Sie Ihren bestehenden Identity Provider für ein einheitliches Login.", iconPath: '<path d="m15.5 7.5 2.3 2.3a1 1 0 0 0 1.4 0l2.1-2.1a1 1 0 0 0 0-1.4L19 4"/><path d="m21 2-9.6 9.6"/><circle cx="7.5" cy="15.5" r="5.5"/>' },
 ];
 
 const solutions = [
-  { title: "API & Webhooks", subtitle: "RESTful API fuer Custom-Integrationen.", description: "Verbinden Sie ShortSelect mit Ihrem bestehenden Tech-Stack ueber Webhooks und eine vollstaendig dokumentierte REST API.", iconPath: '<polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>' },
-  { title: "Custom Pipelines", subtitle: "Individuelle Workflows pro Abteilung.", description: "Jedes Team definiert eigene Stages, Trigger und Automatisierungen. Flexible Workflows fuer jede Anforderung.", iconPath: '<line x1="6" x2="6" y1="3" y2="15"/><circle cx="18" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M18 9a9 9 0 0 1-9 9"/>' },
-  { title: "Advanced Analytics", subtitle: "C-Level Reports auf Knopfdruck.", description: "Time-to-Hire, Source Effectiveness, Pipeline Velocity und mehr. Professionelle Berichte fuer die Geschaeftsfuehrung.", iconPath: '<path d="M21.21 15.89A10 10 0 1 1 8 2.83"/><path d="M22 12A10 10 0 0 0 12 2v10z"/>' },
-  { title: "Enterprise-KI", subtitle: "Custom KI-Agenten fuer Ihren Prozess.", description: "Wir entwickeln individuelle KI-Agenten speziell fuer Ihren Recruiting-Prozess. DSGVO-konform, auf EU-Servern, ohne Kompromisse.", iconPath: '<path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"/><path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4"/>' },
+  { title: "API & Webhooks", subtitle: "RESTful API für Custom-Integrationen.", description: "Verbinden Sie ShortSelect mit Ihrem bestehenden Tech-Stack ueber Webhooks und eine vollständig dokumentierte REST API.", iconPath: '<polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>' },
+  { title: "Custom Pipelines", subtitle: "Individuelle Workflows pro Abteilung.", description: "Jedes Team definiert eigene Stages, Trigger und Automatisierungen. Flexible Workflows für jede Anforderung.", iconPath: '<line x1="6" x2="6" y1="3" y2="15"/><circle cx="18" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M18 9a9 9 0 0 1-9 9"/>' },
+  { title: "Advanced Analytics", subtitle: "C-Level Reports auf Knopfdruck.", description: "Time-to-Hire, Source Effectiveness, Pipeline Velocity und mehr. Professionelle Berichte für die Geschaeftsfuehrung.", iconPath: '<path d="M21.21 15.89A10 10 0 1 1 8 2.83"/><path d="M22 12A10 10 0 0 0 12 2v10z"/>' },
+  { title: "Enterprise-KI", subtitle: "Custom KI-Agenten für Ihren Prozess.", description: "Wir entwickeln individuelle KI-Agenten speziell für Ihren Recruiting-Prozess. DSGVO-konform, auf EU-Servern, ohne Kompromisse.", iconPath: '<path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"/><path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4"/>' },
 ];
 ---
 
 <LoesungLayout
   title="ShortSelect Enterprise | Skalierbare Recruiting-Plattform"
-  description="Enterprise-Recruiting mit RBAC, SSO, Row Level Security und Advanced Analytics. Skalierbare Infrastruktur fuer grosse Teams."
+  description="Enterprise-Recruiting mit RBAC, SSO, Row Level Security und Advanced Analytics. Skalierbare Infrastruktur für große Teams."
   badgeText="Enterprise Ready"
   badgeIcon='<path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/>'
   headline="Enterprise-Recruiting."
   highlightedWord="Einfach"
   headlineSuffix="gemacht."
-  subline="Skalierbare Infrastruktur, granulare Berechtigungen, vollstaendige Compliance — ohne die Komplexitaet."
+  subline="Skalierbare Infrastruktur, granulare Berechtigungen, vollständige Compliance, ohne die Komplexität."
   primaryCta="Enterprise Demo buchen"
   secondaryCta="Features ansehen"
   painTitle="Enterprise-Anforderungen"
-  painSubline="Sicherheit, Compliance und Kontrolle — alles was grosse Unternehmen brauchen."
+  painSubline="Sicherheit, Compliance und Kontrolle, alles was große Unternehmen brauchen."
   painPoints={painPoints}
   solutionBadge="Enterprise Features"
   solutionTitle="Alles, was Ihr Enterprise"
@@ -56,11 +56,11 @@ const solutions = [
             </div>
             <div class="space-y-6">
               <h2 id="ent-security-title" class="text-3xl md:text-4xl font-display font-bold tracking-tight opacity-0 translate-y-8 transition-all duration-700">
-                Sicherheit, der Sie <span class="text-primary">vertrauen</span> koennen
+                Sicherheit, der Sie <span class="text-primary">vertrauen</span> können
               </h2>
-              <p id="ent-security-sub" class="text-white/70 text-lg opacity-0 translate-y-8 transition-all duration-700" style="transition-delay: 100ms;">Ihre Daten sind bei uns sicher. Enterprise-grade Security ist kein Upgrade — sie ist Standard.</p>
+              <p id="ent-security-sub" class="text-white/70 text-lg opacity-0 translate-y-8 transition-all duration-700" style="transition-delay: 100ms;">Ihre Daten sind bei uns sicher. Enterprise-grade Security ist kein Upgrade. sie ist Standard.</p>
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                {["Ende-zu-Ende Verschluesselung", "DSGVO-konform & EU-Hosting", "SOC 2 Type II konform", "Automatische Backups", "Audit Logs fuer alle Aktionen", "Zwei-Faktor-Authentifizierung", "DSGVO-konforme KI-Verarbeitung"].map((feature, index) => (
+                {["Ende-zu-Ende Verschlüsselung", "DSGVO-konform & EU-Hosting", "SOC 2 Type II konform", "Automatische Backups", "Audit Logs für alle Aktionen", "Zwei-Faktor-Authentifizierung", "DSGVO-konforme KI-Verarbeitung"].map((feature, index) => (
                   <div class="ent-security-item flex items-center gap-3 opacity-0 translate-y-8 transition-all duration-500" style={`transition-delay: ${index * 100}ms;`}>
                     <svg class="h-5 w-5 text-primary shrink-0" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
                     <span class="text-sm text-white/80">{feature}</span>

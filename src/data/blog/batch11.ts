@@ -66,10 +66,10 @@ export const batch11: BlogPost[] = [
 <h3>Praxis-Beispiele</h3>
 
 <ul>
-  <li><strong>Familienplanung:</strong> "Sind Sie schwanger?" oder "Planen Sie Kinder?" — absolut unzulässig, unabhängig vom Geschlecht des Bewerbers</li>
-  <li><strong>Religion:</strong> "Welcher Konfession gehören Sie an?" — unzulässig, außer bei Tendenzbetrieben (Kirchen, konfessionelle Einrichtungen)</li>
-  <li><strong>Gesundheit:</strong> "Haben Sie chronische Erkrankungen?" — nur zulässig, wenn die Gesundheit unmittelbar für die Tätigkeit relevant ist (z. B. Piloten)</li>
-  <li><strong>Gewerkschaftszugehörigkeit:</strong> "Sind Sie Mitglied einer Gewerkschaft?" — grundsätzlich unzulässig</li>
+  <li><strong>Familienplanung:</strong> "Sind Sie schwanger?" oder "Planen Sie Kinder?", absolut unzulässig, unabhängig vom Geschlecht des Bewerbers</li>
+  <li><strong>Religion:</strong> "Welcher Konfession gehören Sie an?", unzulässig, außer bei Tendenzbetrieben (Kirchen, konfessionelle Einrichtungen)</li>
+  <li><strong>Gesundheit:</strong> "Haben Sie chronische Erkrankungen?", nur zulässig, wenn die Gesundheit unmittelbar für die Tätigkeit relevant ist (z. B. Piloten)</li>
+  <li><strong>Gewerkschaftszugehörigkeit:</strong> "Sind Sie Mitglied einer Gewerkschaft?", grundsätzlich unzulässig</li>
   <li><strong>Vorstrafen:</strong> Nur zulässig, wenn ein direkter Bezug zur Tätigkeit besteht (z. B. Vermögensdelikte bei Kassiertätigkeiten)</li>
 </ul>
 
@@ -103,9 +103,9 @@ export const batch11: BlogPost[] = [
 <h3>Wie Sie es richtig machen</h3>
 
 <ul>
-  <li>Senden Sie innerhalb von zwei Wochen eine Absage — automatisiert über Ihr ATS</li>
+  <li>Senden Sie innerhalb von zwei Wochen eine Absage, automatisiert über Ihr ATS</li>
   <li>Formulieren Sie Absagen neutral: "Wir haben uns für einen Kandidaten entschieden, dessen Profil noch besser zu den Anforderungen passt"</li>
-  <li>Dokumentieren Sie die Absagegründe intern — sachlich und nachvollziehbar</li>
+  <li>Dokumentieren Sie die Absagegründe intern, sachlich und nachvollziehbar</li>
   <li>Nennen Sie niemals AGG-relevante Gründe in der Absage</li>
 </ul>
 
@@ -119,7 +119,7 @@ export const batch11: BlogPost[] = [
 
 <ul>
   <li><strong>Social-Media-Screening:</strong> Das systematische Durchsuchen privater Social-Media-Profile (Facebook, Instagram) ohne Einwilligung ist unzulässig. Berufliche Netzwerke wie LinkedIn oder Xing sind ein Graubereich, da die Informationen öffentlich zugänglich sind.</li>
-  <li><strong>Schufa-Anfragen:</strong> Eine Bonitätsprüfung ist nur bei Positionen mit finanzieller Verantwortung zulässig — und erfordert eine Einwilligung des Bewerbers.</li>
+  <li><strong>Schufa-Anfragen:</strong> Eine Bonitätsprüfung ist nur bei Positionen mit finanzieller Verantwortung zulässig, und erfordert eine Einwilligung des Bewerbers.</li>
   <li><strong>Referenz-Checks:</strong> Beim aktuellen Arbeitgeber dürfen ohne Einwilligung des Bewerbers keine Auskünfte eingeholt werden. Das gilt auch für informelle Anrufe.</li>
   <li><strong>Polizeiliches Führungszeugnis:</strong> Darf nur verlangt werden, wenn eine gesetzliche Grundlage besteht oder die Art der Tätigkeit es rechtfertigt.</li>
 </ul>
@@ -154,18 +154,18 @@ export const batch11: BlogPost[] = [
 
 <h3>Konsequenzen</h3>
 
-<p>Eine unwirksame Befristung führt automatisch zu einem unbefristeten Arbeitsverhältnis (§ 16 TzBfG). Der Arbeitgeber kann dann nur noch ordentlich kündigen — mit allen Konsequenzen des Kündigungsschutzgesetzes. Bei Betrieben ab 10 Mitarbeitern bedeutet das: Sozialauswahl, Kündigungsgründe und unter Umständen Abfindungszahlungen.</p>
+<p>Eine unwirksame Befristung führt automatisch zu einem unbefristeten Arbeitsverhältnis (§ 16 TzBfG). Der Arbeitgeber kann dann nur noch ordentlich kündigen, mit allen Konsequenzen des Kündigungsschutzgesetzes. Bei Betrieben ab 10 Mitarbeitern bedeutet das: Sozialauswahl, Kündigungsgründe und unter Umständen Abfindungszahlungen.</p>
 
 <h3>Wie Sie es richtig machen</h3>
 
 <ul>
   <li>Prüfen Sie vor jeder Befristung die Vorbeschäftigung des Kandidaten</li>
   <li>Stellen Sie sicher, dass der befristete Vertrag vor dem ersten Arbeitstag unterschrieben wird</li>
-  <li>Dokumentieren Sie den Sachgrund bei sachgrundloser Befristung nicht — es sei denn, es liegt tatsächlich einer vor</li>
+  <li>Dokumentieren Sie den Sachgrund bei sachgrundloser Befristung nicht, es sei denn, es liegt tatsächlich einer vor</li>
   <li>Lassen Sie Befristungsklauseln von einem Arbeitsrechtler prüfen</li>
 </ul>
 
-<h2>Fehler 6: Unvollständige Stellenanzeigen — Entgelttransparenzgesetz</h2>
+<h2>Fehler 6: Unvollständige Stellenanzeigen, Entgelttransparenzgesetz</h2>
 
 <h3>Gesetzliche Grundlage</h3>
 
@@ -173,7 +173,7 @@ export const batch11: BlogPost[] = [
 
 <h3>Praxis-Beispiel</h3>
 
-<p>Ein mittelständisches Unternehmen mit 80 Mitarbeitern veröffentlicht eine Stellenanzeige für einen Marketing Manager ohne Gehaltsangabe. Ab Mitte 2026 ist das ein Rechtsverstoß. Der Bewerber hat Anspruch auf Auskunft über die Gehaltsspanne — und das Unternehmen riskiert Bußgelder und Reputationsschäden.</p>
+<p>Ein mittelständisches Unternehmen mit 80 Mitarbeitern veröffentlicht eine Stellenanzeige für einen Marketing Manager ohne Gehaltsangabe. Ab Mitte 2026 ist das ein Rechtsverstoß. Der Bewerber hat Anspruch auf Auskunft über die Gehaltsspanne, und das Unternehmen riskiert Bußgelder und Reputationsschäden.</p>
 
 <blockquote>
   <strong>Wichtig:</strong> Auch wenn die Pflicht erst ab 2026 greift, sollten Sie bereits jetzt Gehaltsbänder in Ihre Anzeigen aufnehmen. Studien zeigen, dass Stellenanzeigen mit Gehaltsangabe 30 Prozent mehr qualifizierte Bewerbungen generieren.
@@ -188,7 +188,7 @@ export const batch11: BlogPost[] = [
 <ul>
   <li>Definieren Sie Gehaltsbänder für jede Position</li>
   <li>Geben Sie die Spanne in der Stellenanzeige an (z. B. "55.000 bis 70.000 Euro brutto/Jahr")</li>
-  <li>Bereiten Sie sich jetzt auf die Transparenzpflicht vor — warten Sie nicht bis 2026</li>
+  <li>Bereiten Sie sich jetzt auf die Transparenzpflicht vor, warten Sie nicht bis 2026</li>
   <li>Nutzen Sie ein ATS, das Gehaltsfelder in Stellenanzeigen unterstützt</li>
 </ul>
 
@@ -196,14 +196,14 @@ export const batch11: BlogPost[] = [
 
 <h3>Gesetzliche Grundlage</h3>
 
-<p>Die Probezeit wird durch § 622 Abs. 3 BGB geregelt. Sie darf maximal sechs Monate betragen. Während der Probezeit gilt eine verkürzte Kündigungsfrist von zwei Wochen (ohne festen Termin). Ein häufiger Irrtum: Die Probezeit ist kein rechtsfreier Raum. Auch während der Probezeit gelten Kündigungsschutzvorschriften — insbesondere der besondere Kündigungsschutz für Schwangere (§ 17 MuSchG), Schwerbehinderte (§ 168 SGB IX) und Betriebsratsmitglieder (§ 15 KSchG).</p>
+<p>Die Probezeit wird durch § 622 Abs. 3 BGB geregelt. Sie darf maximal sechs Monate betragen. Während der Probezeit gilt eine verkürzte Kündigungsfrist von zwei Wochen (ohne festen Termin). Ein häufiger Irrtum: Die Probezeit ist kein rechtsfreier Raum. Auch während der Probezeit gelten Kündigungsschutzvorschriften, insbesondere der besondere Kündigungsschutz für Schwangere (§ 17 MuSchG), Schwerbehinderte (§ 168 SGB IX) und Betriebsratsmitglieder (§ 15 KSchG).</p>
 
 <h3>Praxis-Beispiele</h3>
 
 <ul>
   <li><strong>Probezeit über 6 Monate:</strong> Eine vertraglich vereinbarte Probezeit von 9 Monaten ist unwirksam. Es gelten dann die regulären Kündigungsfristen.</li>
   <li><strong>Probezeit bei Befristung:</strong> Bei befristeten Verträgen muss die Probezeit in einem angemessenen Verhältnis zur Vertragsdauer stehen. Bei einem 12-Monats-Vertrag sind 6 Monate Probezeit noch zulässig, bei einem 6-Monats-Vertrag dagegen nicht mehr.</li>
-  <li><strong>Kündigung in der Probezeit ohne Grund:</strong> Grundsätzlich kann in der Probezeit ohne Angabe von Gründen gekündigt werden — aber nicht wegen eines AGG-Merkmals. Wird eine schwangere Mitarbeiterin in der Probezeit gekündigt, ist die Kündigung regelmäßig unwirksam.</li>
+  <li><strong>Kündigung in der Probezeit ohne Grund:</strong> Grundsätzlich kann in der Probezeit ohne Angabe von Gründen gekündigt werden, aber nicht wegen eines AGG-Merkmals. Wird eine schwangere Mitarbeiterin in der Probezeit gekündigt, ist die Kündigung regelmäßig unwirksam.</li>
   <li><strong>Verlängerung der Probezeit:</strong> Eine nachträgliche Verlängerung über sechs Monate hinaus ist unwirksam, selbst wenn beide Seiten zustimmen.</li>
 </ul>
 
@@ -217,7 +217,7 @@ export const batch11: BlogPost[] = [
   <li>Begrenzen Sie die Probezeit auf maximal 6 Monate</li>
   <li>Passen Sie die Probezeit bei kurzen Befristungen an</li>
   <li>Prüfen Sie vor jeder Probezeit-Kündigung, ob besonderer Kündigungsschutz besteht</li>
-  <li>Dokumentieren Sie Leistungsprobleme von Anfang an — auch in der Probezeit</li>
+  <li>Dokumentieren Sie Leistungsprobleme von Anfang an, auch in der Probezeit</li>
   <li>Nutzen Sie strukturierte Onboarding-Pläne mit festen Feedback-Terminen</li>
 </ul>
 
@@ -237,7 +237,7 @@ export const batch11: BlogPost[] = [
 
 <h2>Fazit: Compliance ist kein Hindernis, sondern ein Wettbewerbsvorteil</h2>
 
-<p>Arbeitsrechtliche Compliance im Recruiting wird oft als bürokratische Last empfunden. In Wahrheit ist sie ein Wettbewerbsvorteil. Unternehmen, die ihre Stellenanzeigen AGG-konform formulieren, strukturierte Interviews führen und transparente Prozesse haben, gewinnen nicht nur rechtliche Sicherheit — sie gewinnen bessere Kandidaten. Denn Professionalität im Bewerbungsprozess ist das erste Signal, das Sie als Arbeitgeber senden.</p>
+<p>Arbeitsrechtliche Compliance im Recruiting wird oft als bürokratische Last empfunden. In Wahrheit ist sie ein Wettbewerbsvorteil. Unternehmen, die ihre Stellenanzeigen AGG-konform formulieren, strukturierte Interviews führen und transparente Prozesse haben, gewinnen nicht nur rechtliche Sicherheit, sie gewinnen bessere Kandidaten. Denn Professionalität im Bewerbungsprozess ist das erste Signal, das Sie als Arbeitgeber senden.</p>
 
 <p>Ein modernes ATS wie ShortSelect hilft Ihnen dabei, diese Compliance-Anforderungen systematisch umzusetzen: automatisierte Absagen, dokumentierte Prozesse, DSGVO-konforme Datenhaltung und standardisierte Bewertungskriterien. So schützen Sie sich vor rechtlichen Risiken und bieten gleichzeitig eine professionelle Candidate Experience.</p>
 `,
@@ -257,9 +257,9 @@ export const batch11: BlogPost[] = [
     content: `
 <h2>Warum eine eigene Karriereseite unverzichtbar ist</h2>
 
-<p>67 Prozent der Bewerber besuchen die Karriereseite eines Unternehmens, bevor sie sich bewerben. Nicht die LinkedIn-Seite, nicht das StepStone-Profil — die Karriereseite auf Ihrer eigenen Website. Sie ist das digitale Schaufenster Ihres Recruitings und oft der erste ausführliche Kontakt, den ein Kandidat mit Ihrem Unternehmen hat. Und genau hier entscheidet sich, ob er sich bewirbt oder weiterklickt.</p>
+<p>67 Prozent der Bewerber besuchen die Karriereseite eines Unternehmens, bevor sie sich bewerben. Nicht die LinkedIn-Seite, nicht das StepStone-Profil, die Karriereseite auf Ihrer eigenen Website. Sie ist das digitale Schaufenster Ihres Recruitings und oft der erste ausführliche Kontakt, den ein Kandidat mit Ihrem Unternehmen hat. Und genau hier entscheidet sich, ob er sich bewirbt oder weiterklickt.</p>
 
-<p>Trotzdem behandeln viele Unternehmen ihre Karriereseite als Nebenprojekt. Eine Liste offener Stellen, ein generisches Foto vom Bürogebäude, ein Kontaktformular — fertig. Das reicht nicht. In einem Markt, in dem Fachkräfte sich ihren Arbeitgeber aussuchen können, ist Ihre Karriereseite ein strategisches Werkzeug. Und wie jedes Werkzeug muss es richtig eingesetzt werden.</p>
+<p>Trotzdem behandeln viele Unternehmen ihre Karriereseite als Nebenprojekt. Eine Liste offener Stellen, ein generisches Foto vom Bürogebäude, ein Kontaktformular, fertig. Das reicht nicht. In einem Markt, in dem Fachkräfte sich ihren Arbeitgeber aussuchen können, ist Ihre Karriereseite ein strategisches Werkzeug. Und wie jedes Werkzeug muss es richtig eingesetzt werden.</p>
 
 <h3>Karriereseite vs. Jobbörsen: Warum nicht nur auf externe Plattformen setzen?</h3>
 
@@ -287,12 +287,12 @@ export const batch11: BlogPost[] = [
   <li>Stellen nach Abteilung, Standort und Beschäftigungsart filterbar machen</li>
   <li>Suchfunktion anbieten</li>
   <li>Gehaltsangabe integrieren (ab 2026 Pflicht, aber schon jetzt ein Wettbewerbsvorteil)</li>
-  <li>Stellen automatisch synchronisieren — manuelles Kopieren von Anzeigen führt zu Fehlern</li>
+  <li>Stellen automatisch synchronisieren, manuelles Kopieren von Anzeigen führt zu Fehlern</li>
 </ul>
 
 <h3>2. Über uns: Wer Sie sind und wofür Sie stehen</h3>
 
-<p>Bewerber wollen wissen, bei wem sie sich bewerben. Ein kurzer Abschnitt über Ihre Unternehmensgeschichte, Mission und Werte ist Pflicht. Aber bitte authentisch — generische Sätze wie "Wir sind ein innovatives Unternehmen mit flachen Hierarchien" sagen nichts aus. Zeigen Sie konkret, was Sie anders machen.</p>
+<p>Bewerber wollen wissen, bei wem sie sich bewerben. Ein kurzer Abschnitt über Ihre Unternehmensgeschichte, Mission und Werte ist Pflicht. Aber bitte authentisch, generische Sätze wie "Wir sind ein innovatives Unternehmen mit flachen Hierarchien" sagen nichts aus. Zeigen Sie konkret, was Sie anders machen.</p>
 
 <h3>3. Team und Kultur</h3>
 
@@ -325,7 +325,7 @@ export const batch11: BlogPost[] = [
 
 <h3>Google for Jobs</h3>
 
-<p>Seit 2019 zeigt Google Stellenanzeigen direkt in den Suchergebnissen an — in einem eigenen Widget oberhalb der organischen Ergebnisse. Um dort zu erscheinen, müssen Ihre Stellenanzeigen strukturierte Daten im JSON-LD-Format enthalten. Die wichtigsten Felder:</p>
+<p>Seit 2019 zeigt Google Stellenanzeigen direkt in den Suchergebnissen an, in einem eigenen Widget oberhalb der organischen Ergebnisse. Um dort zu erscheinen, müssen Ihre Stellenanzeigen strukturierte Daten im JSON-LD-Format enthalten. Die wichtigsten Felder:</p>
 
 <ul>
   <li><strong>title:</strong> Jobtitel</li>
@@ -402,7 +402,7 @@ export const batch11: BlogPost[] = [
 
 <h3>Echte Fotos statt Stock-Bilder</h3>
 
-<p>Bewerber erkennen Stock-Bilder sofort. Ein lächelndes Team vor einem MacBook in einem lichtdurchfluteten Büro — das wirkt nicht authentisch, das wirkt austauschbar. Investieren Sie einen halben Tag in ein professionelles Fotoshooting. Zeigen Sie echte Arbeitsplätze, echte Kollegen, echte Situationen. Auch Smartphone-Fotos können funktionieren, wenn sie authentisch sind.</p>
+<p>Bewerber erkennen Stock-Bilder sofort. Ein lächelndes Team vor einem MacBook in einem lichtdurchfluteten Büro, das wirkt nicht authentisch, das wirkt austauschbar. Investieren Sie einen halben Tag in ein professionelles Fotoshooting. Zeigen Sie echte Arbeitsplätze, echte Kollegen, echte Situationen. Auch Smartphone-Fotos können funktionieren, wenn sie authentisch sind.</p>
 
 <h3>Mitarbeiterstimmen und Testimonials</h3>
 
@@ -445,27 +445,27 @@ export const batch11: BlogPost[] = [
   <li>Kurznachricht (optional)</li>
 </ul>
 
-<p>Verzichten Sie auf Anschreiben-Pflicht. 78 Prozent der Bewerber empfinden Anschreiben als überflüssig, und immer mehr Unternehmen — darunter die Deutsche Bahn und Siemens — haben sie abgeschafft.</p>
+<p>Verzichten Sie auf Anschreiben-Pflicht. 78 Prozent der Bewerber empfinden Anschreiben als überflüssig, und immer mehr Unternehmen, darunter die Deutsche Bahn und Siemens, haben sie abgeschafft.</p>
 
 <h3>One-Click-Bewerbung</h3>
 
-<p>Die Zukunft der Bewerbung ist der One-Click-Apply: Der Bewerber verbindet sein LinkedIn- oder Xing-Profil, die Daten werden automatisch übernommen, und mit einem Klick ist die Bewerbung abgeschickt. Das reduziert die Abbruchrate drastisch — besonders auf dem Smartphone, wo das Ausfüllen langer Formulare eine Qual ist.</p>
+<p>Die Zukunft der Bewerbung ist der One-Click-Apply: Der Bewerber verbindet sein LinkedIn- oder Xing-Profil, die Daten werden automatisch übernommen, und mit einem Klick ist die Bewerbung abgeschickt. Das reduziert die Abbruchrate drastisch, besonders auf dem Smartphone, wo das Ausfüllen langer Formulare eine Qual ist.</p>
 
 <h3>Weitere Conversion-Hebel</h3>
 
 <ul>
-  <li><strong>Prominenter CTA:</strong> Der "Jetzt bewerben"-Button muss auf jeder Stellenanzeige sofort sichtbar sein — ohne Scrollen</li>
+  <li><strong>Prominenter CTA:</strong> Der "Jetzt bewerben"-Button muss auf jeder Stellenanzeige sofort sichtbar sein, ohne Scrollen</li>
   <li><strong>Ladezeit:</strong> Jede Sekunde Verzögerung kostet 7 Prozent Conversion</li>
   <li><strong>Social Proof:</strong> Bewertungen auf kununu oder Glassdoor verlinken, Auszeichnungen anzeigen</li>
   <li><strong>Jobagent:</strong> Besucher, die keine passende Stelle finden, können sich für einen Job-Alert registrieren</li>
-  <li><strong>Initiativbewerbung:</strong> Bieten Sie immer die Möglichkeit einer Initiativbewerbung an — so verlieren Sie keine Talente, nur weil gerade keine passende Stelle offen ist</li>
+  <li><strong>Initiativbewerbung:</strong> Bieten Sie immer die Möglichkeit einer Initiativbewerbung an, so verlieren Sie keine Talente, nur weil gerade keine passende Stelle offen ist</li>
 </ul>
 
 <h2>Fazit: Ihre Karriereseite als strategisches Recruiting-Tool</h2>
 
 <p>Eine professionelle Karriereseite ist kein Nice-to-have, sondern ein strategisches Werkzeug im Recruiting. Sie gibt Ihnen die Kontrolle über Ihre Arbeitgebermarke, senkt die Abhängigkeit von teuren Jobbörsen und bietet Bewerbern ein Erlebnis, das Vertrauen schafft. Die Investition lohnt sich: Unternehmen mit optimierten Karriereseiten berichten von 40 Prozent mehr qualifizierten Bewerbungen und einer um 25 Prozent kürzeren Time-to-Hire.</p>
 
-<p>Beginnen Sie mit den Grundlagen — aktuelle Stellen, echte Fotos, mobiles Design — und optimieren Sie dann schrittweise: SEO, strukturierte Daten, Conversion-Optimierung. Mit einem ATS wie ShortSelect können Sie Ihre Karriereseite über ein einfaches Job-Widget einbinden und alle Bewerbungen zentral verwalten. So wird Ihre Website zum stärksten Recruiting-Kanal.</p>
+<p>Beginnen Sie mit den Grundlagen, aktuelle Stellen, echte Fotos, mobiles Design, und optimieren Sie dann schrittweise: SEO, strukturierte Daten, Conversion-Optimierung. Mit einem ATS wie ShortSelect können Sie Ihre Karriereseite über ein einfaches Job-Widget einbinden und alle Bewerbungen zentral verwalten. So wird Ihre Website zum stärksten Recruiting-Kanal.</p>
 `,
   },
 ];

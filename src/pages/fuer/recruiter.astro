@@ -5,25 +5,25 @@ import CTASection from '../../components/landing/CTASection.astro';
 const features = [
   { title: "Kanban Pipeline", description: "Drag & Drop durch alle Stages. Visuell, intuitiv, effizient.", iconPath: '<rect width="7" height="7" x="3" y="3" rx="1"/><rect width="7" height="7" x="14" y="3" rx="1"/><rect width="7" height="7" x="14" y="14" rx="1"/><rect width="7" height="7" x="3" y="14" rx="1"/>' },
   { title: "KI-Matching", description: "Automatischer Abgleich von Skills, Erfahrung und Anforderungen.", iconPath: '<path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"/><path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4"/>' },
-  { title: "E-Mail Templates", description: "Personalisierte Vorlagen fuer jeden Schritt im Prozess.", iconPath: '<rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>' },
-  { title: "Interview Scheduling", description: "Kandidaten buchen selbst — kein Hin-und-Her per E-Mail.", iconPath: '<path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/>' },
-  { title: "Talent Pools", description: "Kandidaten fuer spaeter speichern und segmentieren.", iconPath: '<path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>' },
-  { title: "Quick Actions", description: "Absagen, Einladen, Weiterleiten — alles mit einem Klick.", iconPath: '<path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/>' },
+  { title: "E-Mail Templates", description: "Personalisierte Vorlagen für jeden Schritt im Prozess.", iconPath: '<rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>' },
+  { title: "Interview Scheduling", description: "Kandidaten buchen selbst, kein Hin-und-Her per E-Mail.", iconPath: '<path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/>' },
+  { title: "Talent Pools", description: "Kandidaten für spaeter speichern und segmentieren.", iconPath: '<path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>' },
+  { title: "Quick Actions", description: "Absagen, Einladen, Weiterleiten, alles mit einem Klick.", iconPath: '<path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/>' },
 ];
 
 const timeline = [
   { time: "08:00", title: "Dashboard checken", description: "Neue Bewerbungen, heute anstehende Interviews" },
-  { time: "09:00", title: "KI-Matches pruefen", description: "Top 5 Kandidaten fuer neue Stelle sofort sichtbar" },
+  { time: "09:00", title: "KI-Matches prüfen", description: "Top 5 Kandidaten für neue Stelle sofort sichtbar" },
   { time: "10:00", title: "Pipeline updaten", description: "Drag & Drop, automatische Status-Mails" },
   { time: "11:00", title: "Interview", description: "Kandidat hat selbst gebucht, kein E-Mail-Chaos" },
   { time: "14:00", title: "Client Shortlist", description: "Per Klick dem Kunden freigeben" },
-  { time: "16:00", title: "Talent Pool pflegen", description: "Gute Kandidaten fuer spaeter speichern" },
+  { time: "16:00", title: "Talent Pool pflegen", description: "Gute Kandidaten für spaeter speichern" },
 ];
 ---
 
 <MarketingLayout
-  title="ShortSelect fuer Recruiter | Ihr perfekter Arbeitstag"
-  description="Weniger Admin, mehr Gespraeche, bessere Placements. Kanban Pipeline, KI-Matching, Interview Scheduling — alles fuer Recruiter."
+  title="ShortSelect für Recruiter | Ihr perfekter Arbeitstag"
+  description="Weniger Admin, mehr Gespräche, bessere Placements. Kanban Pipeline, KI-Matching, Interview Scheduling, alles für Recruiter."
 >
   <!-- HERO -->
   <section class="relative overflow-hidden py-20 md:py-32">
@@ -39,9 +39,9 @@ const timeline = [
           <span class="text-sm font-medium">Daily Workflow</span>
         </div>
         <h1 class="reveal-item opacity-0 translate-y-8 transition-all duration-700 text-4xl md:text-6xl lg:text-7xl font-display font-bold tracking-tight" style="transition-delay: 100ms;">
-          Fuer Recruiter: Ihr perfekter <span class="text-primary">Arbeitstag</span>.
+          Für Recruiter: Ihr perfekter <span class="text-primary">Arbeitstag</span>.
         </h1>
-        <p class="reveal-item opacity-0 translate-y-8 transition-all duration-700 text-lg md:text-xl text-[hsl(var(--muted-foreground))] max-w-2xl mx-auto" style="transition-delay: 200ms;">Weniger Admin. Mehr Gespraeche. Bessere Placements.</p>
+        <p class="reveal-item opacity-0 translate-y-8 transition-all duration-700 text-lg md:text-xl text-[hsl(var(--muted-foreground))] max-w-2xl mx-auto" style="transition-delay: 200ms;">Weniger Admin. Mehr Gespräche. Bessere Placements.</p>
         <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700 flex flex-col sm:flex-row items-center justify-center gap-4 pt-4" style="transition-delay: 300ms;">
           <a href="https://app.shortselect.com/signup" class="inline-flex items-center gap-2 px-8 py-3 bg-primary text-white font-semibold rounded-lg text-base group shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
             <svg class="h-5 w-5 animate-pulse" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/></svg>
@@ -86,8 +86,8 @@ const timeline = [
     <div class="container mx-auto px-4">
       <div class="max-w-3xl mx-auto text-center mb-16">
         <span class="reveal-item opacity-0 translate-y-8 transition-all duration-700 inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold border border-accent/20 text-accent mb-4">Top Features</span>
-        <h2 class="reveal-item opacity-0 translate-y-8 transition-all duration-700 text-3xl md:text-4xl lg:text-5xl font-display font-bold tracking-tight">Ihre <span class="text-primary">Werkzeuge</span> fuer den Erfolg</h2>
-        <p class="reveal-item opacity-0 translate-y-8 transition-all duration-700 text-lg text-[hsl(var(--muted-foreground))] mt-4" style="transition-delay: 100ms;">Alles, was ein moderner Recruiter braucht — an einem Ort.</p>
+        <h2 class="reveal-item opacity-0 translate-y-8 transition-all duration-700 text-3xl md:text-4xl lg:text-5xl font-display font-bold tracking-tight">Ihre <span class="text-primary">Werkzeuge</span> für den Erfolg</h2>
+        <p class="reveal-item opacity-0 translate-y-8 transition-all duration-700 text-lg text-[hsl(var(--muted-foreground))] mt-4" style="transition-delay: 100ms;">Alles, was ein moderner Recruiter braucht. an einem Ort.</p>
       </div>
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
         {features.map((f, i) => (

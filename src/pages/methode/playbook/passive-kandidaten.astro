@@ -4,22 +4,22 @@ import CTASection from '../../../components/landing/CTASection.astro';
 
 const steps = [
   { number: 1, title: "Talent Pool aufbauen", description: "Systematisch Profile sammeln, auch ohne aktuelle Vakanz. Nutzen Sie ShortSelect Talent Pools, um vielversprechende Kandidaten langfristig zu erfassen und zu segmentieren.", tips: ["LinkedIn-Recherche mit gezielten Suchfiltern", "Branchenevents und Konferenzen als Quelle nutzen", "Interne Empfehlungen systematisch erfassen"] },
-  { number: 2, title: "Personalisierte Ansprache", description: "Individuelle Nachrichten statt Massenmail. Nennen Sie den Namen, die aktuelle Firma und einen konkreten Bezug zur Person.", tips: ["Bezug auf aktuelle Projekte oder Erfolge nehmen", "Gemeinsame Kontakte oder Interessen erwaehnen", "Kurz und praegnant -- max. 5 Saetze in der Erstansprache"] },
+  { number: 2, title: "Personalisierte Ansprache", description: "Individuelle Nachrichten statt Massenmail. Nennen Sie den Namen, die aktuelle Firma und einen konkreten Bezug zur Person.", tips: ["Bezug auf aktuelle Projekte oder Erfolge nehmen", "Gemeinsame Kontakte oder Interessen erwaehnen", "Kurz und praegnant -- max. 5 Sätze in der Erstansprache"] },
   { number: 3, title: "Timing ist alles", description: "Die beste Nachricht bringt nichts, wenn sie zum falschen Zeitpunkt kommt. Dienstag bis Donnerstag, zwischen 9 und 11 Uhr, erzielen Sie die hoechsten Antwortraten.", tips: ["Montag und Freitag vermeiden", "Follow-up freundlich formulieren, nicht draengend", "Maximal 3 Kontaktversuche pro Kandidat"] },
   { number: 4, title: "Mehrwert bieten", description: "Nicht nur einen Job anbieten, sondern eine echte Karrierechance aufzeigen. Passive Kandidaten brauchen einen Grund, ihren sicheren Hafen zu verlassen.", tips: ["Konkrete Wachstumsperspektiven benennen", "Teamkultur und Arbeitsweise beschreiben", "Gehaltsrahmen fruehzeitig kommunizieren"] },
-  { number: 5, title: "Beziehung pflegen", description: "Auch bei einer Absage: Bleiben Sie in Kontakt. Senden Sie regelmaessige Updates aus Ihrem Talent Pool.", tips: ["Quartalweise Talent-Pool-Updates versenden", "Branchenrelevante Inhalte teilen", "Bei Absagen immer die Tuer offen halten"] },
+  { number: 5, title: "Beziehung pflegen", description: "Auch bei einer Absage: Bleiben Sie in Kontakt. Senden Sie regelmäßige Updates aus Ihrem Talent Pool.", tips: ["Quartalweise Talent-Pool-Updates versenden", "Branchenrelevante Inhalte teilen", "Bei Absagen immer die Tuer offen halten"] },
 ];
 
 const quickTips = [
-  { title: "Betreffzeile entscheidet", description: "Die ersten 6 Worte bestimmen, ob Ihre Nachricht geoeffnet wird. Machen Sie sie persoenlich und neugierig." },
-  { title: "Warm Intros nutzen", description: "Eine Vorstellung ueber gemeinsame Kontakte erzielt 5x hoehere Antwortraten als Cold Outreach." },
+  { title: "Betreffzeile entscheidet", description: "Die ersten 6 Worte bestimmen, ob Ihre Nachricht geoeffnet wird. Machen Sie sie persönlich und neugierig." },
+  { title: "Warm Intros nutzen", description: "Eine Vorstellung ueber gemeinsame Kontakte erzielt 5x höhere Antwortraten als Cold Outreach." },
   { title: "Kein Copy-Paste", description: "Kandidaten erkennen Massenmails sofort. Jede Nachricht sollte mindestens einen individuellen Satz enthalten." },
   { title: "Schnell reagieren", description: "Wenn ein passiver Kandidat antwortet, reagieren Sie innerhalb von 24 Stunden." },
-  { title: "Erst geben, dann nehmen", description: "Teilen Sie einen relevanten Artikel oder Insight, bevor Sie nach einem Gespraech fragen." },
+  { title: "Erst geben, dann nehmen", description: "Teilen Sie einen relevanten Artikel oder Insight, bevor Sie nach einem Gespräch fragen." },
 ];
 ---
 
-<MarketingLayout title="Playbook: Passive Kandidaten aktivieren - ShortSelect" description="80% der besten Talente suchen nicht aktiv. So erreichen und ueberzeugen Sie passive Kandidaten mit systematischem Active Sourcing.">
+<MarketingLayout title="Playbook: Passive Kandidaten aktivieren - ShortSelect" description="80% der besten Talente suchen nicht aktiv. So erreichen und überzeugen Sie passive Kandidaten mit systematischem Active Sourcing.">
   <!-- Hero -->
   <section class="relative overflow-hidden py-24 md:py-36">
     <div class="absolute inset-0 bg-gradient-to-br from-primary/10 via-primary/5 to-background"></div>
@@ -38,7 +38,7 @@ const quickTips = [
           <span class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold bg-primary/10 text-primary border-primary/20 gap-1.5">Playbook</span>
         </div>
         <h1 class="reveal-item opacity-0 translate-y-8 transition-all duration-500 text-4xl md:text-6xl lg:text-7xl font-display font-bold tracking-tight" style="transition-delay: 200ms;">Passive Kandidaten <span class="text-primary">aktivieren</span></h1>
-        <p class="reveal-item opacity-0 translate-y-8 transition-all duration-500 text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto" style="transition-delay: 300ms;">80% der besten Talente suchen nicht aktiv. So erreichen und ueberzeugen Sie sie trotzdem.</p>
+        <p class="reveal-item opacity-0 translate-y-8 transition-all duration-500 text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto" style="transition-delay: 300ms;">80% der besten Talente suchen nicht aktiv. So erreichen und überzeugen Sie sie trotzdem.</p>
       </div>
     </div>
     <div class="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-background to-transparent"></div>
@@ -51,7 +51,7 @@ const quickTips = [
       <div class="max-w-4xl mx-auto grid md:grid-cols-3 gap-8">
         {[
           { value: "80%", label: "passive Kandidaten" },
-          { value: "3x", label: "hoehere Qualitaet" },
+          { value: "3x", label: "höhere Qualität" },
           { value: "5-7 Tage", label: "optimales Follow-up" },
         ].map((stat, i) => (
           <div class="reveal-item opacity-0 translate-y-8 transition-all duration-500 text-center space-y-3" style={`transition-delay: ${i * 200}ms;`}>
@@ -68,7 +68,7 @@ const quickTips = [
     <div class="container relative mx-auto px-4">
       <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700 text-center space-y-4 mb-16">
         <h2 class="text-3xl md:text-5xl font-display font-bold tracking-tight">5 Schritte zum Erfolg</h2>
-        <p class="text-lg text-muted-foreground max-w-2xl mx-auto">Ein erprobter Prozess, um passive Kandidaten systematisch zu erreichen und fuer sich zu gewinnen.</p>
+        <p class="text-lg text-muted-foreground max-w-2xl mx-auto">Ein erprobter Prozess, um passive Kandidaten systematisch zu erreichen und für sich zu gewinnen.</p>
       </div>
       <div class="max-w-3xl mx-auto space-y-8">
         {steps.map((step, i) => (
@@ -106,7 +106,7 @@ const quickTips = [
     <div class="container mx-auto px-4">
       <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700 text-center space-y-4 mb-16">
         <h2 class="text-3xl md:text-4xl font-display font-bold tracking-tight">Quick Tips</h2>
-        <p class="text-lg text-muted-foreground max-w-xl mx-auto">Konkrete Tipps fuer den Alltag im Active Sourcing.</p>
+        <p class="text-lg text-muted-foreground max-w-xl mx-auto">Konkrete Tipps für den Alltag im Active Sourcing.</p>
       </div>
       <div class="max-w-5xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         {quickTips.map((tip, i) => (

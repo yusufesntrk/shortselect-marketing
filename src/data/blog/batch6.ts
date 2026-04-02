@@ -10,14 +10,14 @@ export const batch6: BlogPost[] = [
     category: "KI & Automatisierung",
     tags: ["KI", "Künstliche Intelligenz", "AI", "Smart Matching", "DACH"],
     excerpt:
-      "KI im Recruiting ist kein Hype mehr — sondern Wettbewerbsvorteil. Welche Use Cases funktionieren wirklich und worauf Sie achten müssen.",
+      "KI im Recruiting ist kein Hype mehr, sondern Wettbewerbsvorteil. Welche Use Cases funktionieren wirklich und worauf Sie achten müssen.",
     readTime: "10 Min.",
     content: `
 <h2>Künstliche Intelligenz im Recruiting: Wo stehen wir 2025?</h2>
 
-<p>Vor wenigen Jahren war „KI im Recruiting" noch ein Buzzword, das auf HR-Konferenzen für ungläubiges Stirnrunzeln sorgte. Heute ist Künstliche Intelligenz in der Personalgewinnung angekommen — nicht als Science-Fiction, sondern als handfestes Werkzeug, das Recruiter im DACH-Raum täglich einsetzen. Laut einer Studie von Bitkom nutzen bereits 28 % der deutschen Unternehmen KI-basierte Tools im HR-Bereich. Tendenz: stark steigend.</p>
+<p>Vor wenigen Jahren war „KI im Recruiting" noch ein Buzzword, das auf HR-Konferenzen für ungläubiges Stirnrunzeln sorgte. Heute ist Künstliche Intelligenz in der Personalgewinnung angekommen, nicht als Science-Fiction, sondern als handfestes Werkzeug, das Recruiter im DACH-Raum täglich einsetzen. Laut einer Studie von Bitkom nutzen bereits 28 % der deutschen Unternehmen KI-basierte Tools im HR-Bereich. Tendenz: stark steigend.</p>
 
-<p>Doch zwischen dem, was versprochen wird, und dem, was tatsächlich funktioniert, klafft oft eine Lücke. Dieser Praxisguide räumt mit Mythen auf, zeigt bewährte Use Cases und gibt Ihnen einen konkreten Fahrplan für die Einführung von KI in Ihrem Recruiting-Prozess — datenschutzkonform und praxisnah.</p>
+<p>Doch zwischen dem, was versprochen wird, und dem, was tatsächlich funktioniert, klafft oft eine Lücke. Dieser Praxisguide räumt mit Mythen auf, zeigt bewährte Use Cases und gibt Ihnen einen konkreten Fahrplan für die Einführung von KI in Ihrem Recruiting-Prozess, datenschutzkonform und praxisnah.</p>
 
 <h2>Use Cases, die heute funktionieren</h2>
 
@@ -25,7 +25,7 @@ export const batch6: BlogPost[] = [
 
 <p>Die automatische Extraktion von Lebensläufen ist einer der ausgereiftesten KI-Anwendungsfälle im Recruiting. Moderne Parser erkennen nicht nur Name, Adresse und Berufserfahrung, sondern verstehen auch unstrukturierte Freitexte, verschiedene Dateiformate und sogar handschriftliche Notizen in eingescannten Dokumenten.</p>
 
-<p><strong>Praxisbeispiel:</strong> Ein mittelständischer Personaldienstleister reduzierte die manuelle Dateneingabe pro Bewerbung von durchschnittlich 12 Minuten auf unter 2 Minuten — bei gleichzeitig höherer Datenqualität.</p>
+<p><strong>Praxisbeispiel:</strong> Ein mittelständischer Personaldienstleister reduzierte die manuelle Dateneingabe pro Bewerbung von durchschnittlich 12 Minuten auf unter 2 Minuten, bei gleichzeitig höherer Datenqualität.</p>
 
 <ul>
   <li><strong>Zeitersparnis:</strong> 70–85 % weniger manuelle Eingabe</li>
@@ -39,7 +39,7 @@ export const batch6: BlogPost[] = [
 
 <p>Ein „Java-Entwickler mit Spring-Erfahrung" wird auch dann als relevant erkannt, wenn im Lebenslauf „Spring Boot" oder „Java EE" steht. Der Algorithmus versteht den Kontext, nicht nur die Wörter.</p>
 
-<blockquote>„Das Matching hat unsere Time-to-Shortlist von 5 Tagen auf unter 24 Stunden reduziert. Unsere Hiring Manager bekommen jetzt innerhalb eines Tages eine qualifizierte Vorauswahl — statt nach einer Woche." — HR-Leiter eines Technologieunternehmens aus München</blockquote>
+<blockquote>„Das Matching hat unsere Time-to-Shortlist von 5 Tagen auf unter 24 Stunden reduziert. Unsere Hiring Manager bekommen jetzt innerhalb eines Tages eine qualifizierte Vorauswahl, statt nach einer Woche.", HR-Leiter eines Technologieunternehmens aus München</blockquote>
 
 <h3>3. Chatbots für Bewerberkommunikation</h3>
 
@@ -68,7 +68,7 @@ export const batch6: BlogPost[] = [
 
 <h3>Vollautomatische Einstellungsentscheidungen</h3>
 
-<p>Die Idee, dass eine KI eigenständig entscheidet, wer eingestellt wird, ist nicht nur ethisch bedenklich, sondern auch rechtlich problematisch. KI sollte immer als Unterstützungswerkzeug verstanden werden — der Mensch trifft die Entscheidung. Die besten Ergebnisse entstehen durch die Kombination von KI-Effizienz und menschlichem Urteilsvermögen.</p>
+<p>Die Idee, dass eine KI eigenständig entscheidet, wer eingestellt wird, ist nicht nur ethisch bedenklich, sondern auch rechtlich problematisch. KI sollte immer als Unterstützungswerkzeug verstanden werden, der Mensch trifft die Entscheidung. Die besten Ergebnisse entstehen durch die Kombination von KI-Effizienz und menschlichem Urteilsvermögen.</p>
 
 <h3>Predictive Analytics für Mitarbeiterbindung</h3>
 
@@ -96,7 +96,7 @@ export const batch6: BlogPost[] = [
 
 <h3>Datensparsamkeit und Zweckbindung</h3>
 
-<p>KI-Systeme benötigen Daten — aber nur die notwendigen. Vermeiden Sie es, Daten zu erheben oder zu speichern, die für den Bewerbungsprozess nicht relevant sind. Insbesondere bei Self-Learning-Systemen, die kontinuierlich aus Daten lernen, ist Vorsicht geboten: Werden hier Bewerberdaten zum Training genutzt, liegt eine Zweckänderung vor, die einer separaten Einwilligung bedarf.</p>
+<p>KI-Systeme benötigen Daten, aber nur die notwendigen. Vermeiden Sie es, Daten zu erheben oder zu speichern, die für den Bewerbungsprozess nicht relevant sind. Insbesondere bei Self-Learning-Systemen, die kontinuierlich aus Daten lernen, ist Vorsicht geboten: Werden hier Bewerberdaten zum Training genutzt, liegt eine Zweckänderung vor, die einer separaten Einwilligung bedarf.</p>
 
 <h2>ROI berechnen: Lohnt sich KI im Recruiting?</h2>
 
@@ -118,7 +118,7 @@ export const batch6: BlogPost[] = [
   <li>Chatbot-Entlastung: 30 % weniger Routine-E-Mails = ca. 15 Stunden/Monat</li>
 </ul>
 
-<p>In Summe sprechen wir schnell von Einsparungen im fünfstelligen Bereich — bei gleichzeitig besserer Bewerber-Erfahrung und höherer Datenqualität.</p>
+<p>In Summe sprechen wir schnell von Einsparungen im fünfstelligen Bereich, bei gleichzeitig besserer Bewerber-Erfahrung und höherer Datenqualität.</p>
 
 <h2>Implementierung Schritt für Schritt</h2>
 
@@ -134,7 +134,7 @@ export const batch6: BlogPost[] = [
 <p>Prüfen Sie Anbieter nach diesen Kriterien: DSGVO-Konformität, Server-Standort in der EU, Integration in Ihr bestehendes ATS, Transparenz des Algorithmus und Support-Qualität. Lassen Sie sich Live-Demos zeigen und testen Sie mit echten Daten.</p>
 
 <h3>Schritt 4: Pilotprojekt starten (Woche 7–12)</h3>
-<p>Führen Sie das Tool zunächst in einem begrenzten Bereich ein — z. B. für eine Abteilung oder eine bestimmte Stellenkategorie. Sammeln Sie Feedback vom Team und messen Sie die Ergebnisse gegen Ihre definierten KPIs.</p>
+<p>Führen Sie das Tool zunächst in einem begrenzten Bereich ein, z. B, für eine Abteilung oder eine bestimmte Stellenkategorie. Sammeln Sie Feedback vom Team und messen Sie die Ergebnisse gegen Ihre definierten KPIs.</p>
 
 <h3>Schritt 5: Skalieren und optimieren (ab Woche 13)</h3>
 <p>Nach einem erfolgreichen Pilot können Sie den Einsatz ausweiten. Nutzen Sie die gewonnenen Erkenntnisse, um Konfigurationen zu optimieren und weitere Use Cases zu erschließen.</p>
@@ -144,13 +144,13 @@ export const batch6: BlogPost[] = [
 <p>Die KI-Entwicklung im Recruiting steht nicht still. Diese Trends zeichnen sich für die nahe Zukunft ab:</p>
 
 <ul>
-  <li><strong>Multimodale KI:</strong> Systeme, die Text, Bild und Audio gleichzeitig verstehen — etwa um Portfolios, Arbeitsproben und Video-Bewerbungen ganzheitlich zu analysieren</li>
-  <li><strong>Agentic AI:</strong> KI-Agenten, die eigenständig mehrstufige Aufgaben ausführen — z. B. passende Kandidaten finden, ansprechen und Termine vereinbaren</li>
+  <li><strong>Multimodale KI:</strong> Systeme, die Text, Bild und Audio gleichzeitig verstehen, etwa um Portfolios, Arbeitsproben und Video-Bewerbungen ganzheitlich zu analysieren</li>
+  <li><strong>Agentic AI:</strong> KI-Agenten, die eigenständig mehrstufige Aufgaben ausführen, z. B. passende Kandidaten finden, ansprechen und Termine vereinbaren</li>
   <li><strong>EU AI Act:</strong> Die europäische KI-Verordnung wird klare Regeln für Hochrisiko-Anwendungen im HR-Bereich schaffen und für mehr Rechtssicherheit sorgen</li>
   <li><strong>Personalisierte Candidate Journeys:</strong> KI wird individuelle Bewerbungserlebnisse ermöglichen, die sich in Echtzeit an die Bedürfnisse und Präferenzen des Kandidaten anpassen</li>
 </ul>
 
-<p><strong>Das Fazit:</strong> KI im Recruiting ist kein Alles-oder-Nichts. Starten Sie klein, messen Sie konsequent und skalieren Sie, was funktioniert. Die Unternehmen, die heute die Grundlagen legen, werden morgen die besten Talente gewinnen — effizienter, fairer und schneller als der Wettbewerb.</p>
+<p><strong>Das Fazit:</strong> KI im Recruiting ist kein Alles-oder-Nichts. Starten Sie klein, messen Sie konsequent und skalieren Sie, was funktioniert. Die Unternehmen, die heute die Grundlagen legen, werden morgen die besten Talente gewinnen, effizienter, fairer und schneller als der Wettbewerb.</p>
 `,
   },
   {
@@ -167,24 +167,24 @@ export const batch6: BlogPost[] = [
     content: `
 <h2>Warum Employer Branding für KMU wichtiger ist als für Konzerne</h2>
 
-<p>Wenn der Name allein nicht reicht, muss die Geschichte überzeugen. Genau das ist die Situation, in der sich kleine und mittlere Unternehmen im DACH-Raum befinden. Während Konzerne wie SAP, Siemens oder BMW allein durch ihren Markennamen Bewerbungen anziehen, müssen KMU aktiv um Aufmerksamkeit kämpfen — und das mit deutlich geringeren Budgets.</p>
+<p>Wenn der Name allein nicht reicht, muss die Geschichte überzeugen. Genau das ist die Situation, in der sich kleine und mittlere Unternehmen im DACH-Raum befinden. Während Konzerne wie SAP, Siemens oder BMW allein durch ihren Markennamen Bewerbungen anziehen, müssen KMU aktiv um Aufmerksamkeit kämpfen, und das mit deutlich geringeren Budgets.</p>
 
-<p>Paradoxerweise ist genau das ein Vorteil. Denn während Konzerne oft austauschbare Employer-Branding-Kampagnen fahren, können KMU mit Authentizität und Nähe punkten. Eine Studie der Universität Bamberg zeigt: 67 % der Bewerber bevorzugen Unternehmen, deren Arbeitgebermarke authentisch wirkt — unabhängig von der Unternehmensgröße.</p>
+<p>Paradoxerweise ist genau das ein Vorteil. Denn während Konzerne oft austauschbare Employer-Branding-Kampagnen fahren, können KMU mit Authentizität und Nähe punkten. Eine Studie der Universität Bamberg zeigt: 67 % der Bewerber bevorzugen Unternehmen, deren Arbeitgebermarke authentisch wirkt, unabhängig von der Unternehmensgröße.</p>
 
-<blockquote>„Wir hatten null Budget für Employer Branding. Also haben wir einfach angefangen, echte Geschichten aus unserem Alltag zu erzählen. Das hat besser funktioniert als jede Hochglanz-Kampagne." — Geschäftsführerin eines IT-Unternehmens mit 35 Mitarbeitern aus Stuttgart</blockquote>
+<blockquote>„Wir hatten null Budget für Employer Branding. Also haben wir einfach angefangen, echte Geschichten aus unserem Alltag zu erzählen. Das hat besser funktioniert als jede Hochglanz-Kampagne.", Geschäftsführerin eines IT-Unternehmens mit 35 Mitarbeitern aus Stuttgart</blockquote>
 
-<p>Employer Branding ist für KMU kein Nice-to-have — es ist Überlebensstrategie. In einem Arbeitsmarkt, in dem Fachkräfte den Arbeitgeber wählen und nicht umgekehrt, entscheidet die Arbeitgebermarke über den Recruiting-Erfolg.</p>
+<p>Employer Branding ist für KMU kein Nice-to-have, es ist Überlebensstrategie. In einem Arbeitsmarkt, in dem Fachkräfte den Arbeitgeber wählen und nicht umgekehrt, entscheidet die Arbeitgebermarke über den Recruiting-Erfolg.</p>
 
 <h2>Die Employer Value Proposition (EVP) entwickeln</h2>
 
-<p>Bevor Sie irgendetwas kommunizieren, müssen Sie wissen, was Sie ausmacht. Die Employer Value Proposition ist das Versprechen, das Sie als Arbeitgeber geben — und das Sie auch einhalten müssen.</p>
+<p>Bevor Sie irgendetwas kommunizieren, müssen Sie wissen, was Sie ausmacht. Die Employer Value Proposition ist das Versprechen, das Sie als Arbeitgeber geben, und das Sie auch einhalten müssen.</p>
 
 <h3>So finden Sie Ihre EVP</h3>
 
 <p>Starten Sie nicht mit einem Workshop auf dem Whiteboard, sondern mit echten Gesprächen. Stellen Sie Ihren Mitarbeitern drei einfache Fragen:</p>
 
 <ol>
-  <li><strong>Warum arbeitest du hier — und nicht woanders?</strong></li>
+  <li><strong>Warum arbeitest du hier, und nicht woanders?</strong></li>
   <li><strong>Was würdest du einem Freund über uns als Arbeitgeber erzählen?</strong></li>
   <li><strong>Was ist der eine Grund, warum du bleibst?</strong></li>
 </ol>
@@ -195,7 +195,7 @@ export const batch6: BlogPost[] = [
 
 <ul>
   <li><strong>Gestaltungsfreiheit:</strong> In kleinen Teams hat jeder Einzelne mehr Einfluss als in einer Konzernstruktur</li>
-  <li><strong>Sichtbarkeit:</strong> Ihre Arbeit verschwindet nicht in der Masse — sie wird gesehen und geschätzt</li>
+  <li><strong>Sichtbarkeit:</strong> Ihre Arbeit verschwindet nicht in der Masse, sie wird gesehen und geschätzt</li>
   <li><strong>Lernkurve:</strong> Wer verschiedene Aufgaben übernimmt, lernt schneller als im spezialisierten Konzern-Silo</li>
   <li><strong>Menschlichkeit:</strong> Der Chef kennt Ihren Namen, Ihre Familie, Ihre Ziele</li>
   <li><strong>Regionalität:</strong> Kurze Wege, lokale Verwurzelung, Verbundenheit mit der Region</li>
@@ -205,13 +205,13 @@ export const batch6: BlogPost[] = [
 
 <h2>Die Karriereseite: Herzstück Ihres Employer Brandings</h2>
 
-<p>82 % der Bewerber besuchen vor einer Bewerbung die Karriereseite des Unternehmens. Wenn Sie dort nicht überzeugen, verlieren Sie Kandidaten — bevor Sie überhaupt von ihnen erfahren.</p>
+<p>82 % der Bewerber besuchen vor einer Bewerbung die Karriereseite des Unternehmens. Wenn Sie dort nicht überzeugen, verlieren Sie Kandidaten, bevor Sie überhaupt von ihnen erfahren.</p>
 
 <h3>Was eine gute KMU-Karriereseite braucht</h3>
 
 <ul>
   <li><strong>Echte Fotos:</strong> Keine Stockfotos von lachenden Business-Menschen. Zeigen Sie Ihr Team, Ihr Büro, Ihren Alltag. Ein Smartphone-Foto aus der Mittagspause ist authentischer als ein professionelles Shooting mit Models.</li>
-  <li><strong>Mitarbeiter-Zitate:</strong> Lassen Sie Ihre Mitarbeiter in eigenen Worten erzählen, warum sie gerne bei Ihnen arbeiten. Keine PR-Texte — echte Stimmen.</li>
+  <li><strong>Mitarbeiter-Zitate:</strong> Lassen Sie Ihre Mitarbeiter in eigenen Worten erzählen, warum sie gerne bei Ihnen arbeiten. Keine PR-Texte, echte Stimmen.</li>
   <li><strong>Klare Informationen:</strong> Benefits, Arbeitszeiten, Remote-Optionen, Entwicklungsmöglichkeiten. Bewerber wollen Fakten, keine Floskeln.</li>
   <li><strong>Einfacher Bewerbungsprozess:</strong> Maximal drei Klicks bis zur Bewerbung. Kein Login-Zwang, keine 20-Felder-Formulare. Lebenslauf hochladen und fertig.</li>
   <li><strong>Mobile-Optimierung:</strong> Über 60 % der Jobsuchen finden mobil statt. Wenn Ihre Karriereseite auf dem Smartphone nicht funktioniert, haben Sie ein Problem.</li>
@@ -219,7 +219,7 @@ export const batch6: BlogPost[] = [
 
 <h3>Kosten: nahezu null</h3>
 
-<p>Eine überzeugende Karriereseite muss nicht teuer sein. Die meisten Website-Baukästen und Content-Management-Systeme bieten die nötigen Funktionen. Investieren Sie Zeit statt Geld: Gute Texte und authentische Fotos kosten nichts — außer ein paar Stunden Aufwand.</p>
+<p>Eine überzeugende Karriereseite muss nicht teuer sein. Die meisten Website-Baukästen und Content-Management-Systeme bieten die nötigen Funktionen. Investieren Sie Zeit statt Geld: Gute Texte und authentische Fotos kosten nichts, außer ein paar Stunden Aufwand.</p>
 
 <h2>Social Media: LinkedIn und Instagram richtig nutzen</h2>
 
@@ -231,14 +231,14 @@ export const batch6: BlogPost[] = [
 
 <ul>
   <li><strong>Behind-the-Scenes:</strong> Ein Foto vom Teamfrühstück erzielt oft mehr Engagement als eine polierte Unternehmensmeldung</li>
-  <li><strong>Learnings teilen:</strong> „Wir haben X ausprobiert und das ist passiert..." — ehrliche Einblicke in Erfolge und Misserfolge</li>
-  <li><strong>Mitarbeiter-Spotlights:</strong> Stellen Sie einzelne Teammitglieder vor — mit ihrer Geschichte, ihren Hobbys, ihrem Werdegang</li>
+  <li><strong>Learnings teilen:</strong> „Wir haben X ausprobiert und das ist passiert...", ehrliche Einblicke in Erfolge und Misserfolge</li>
+  <li><strong>Mitarbeiter-Spotlights:</strong> Stellen Sie einzelne Teammitglieder vor, mit ihrer Geschichte, ihren Hobbys, ihrem Werdegang</li>
   <li><strong>Stellenanzeigen mit Kontext:</strong> Nicht nur „Wir suchen...", sondern „Warum diese Stelle bei uns anders ist als bei anderen"</li>
 </ul>
 
 <h3>Instagram: Visuelles Storytelling</h3>
 
-<p>Instagram eignet sich besonders für Unternehmen, die visuell ansprechende Arbeitsumgebungen haben — aber auch ein Büro mit Charakter kann Instagram-tauglich sein, wenn die Geschichte stimmt.</p>
+<p>Instagram eignet sich besonders für Unternehmen, die visuell ansprechende Arbeitsumgebungen haben, aber auch ein Büro mit Charakter kann Instagram-tauglich sein, wenn die Geschichte stimmt.</p>
 
 <p><strong>Content-Ideen für Instagram:</strong></p>
 
@@ -258,7 +258,7 @@ export const batch6: BlogPost[] = [
 <h3>So aktivieren Sie Ihr Team</h3>
 
 <ol>
-  <li><strong>Freiwilligkeit:</strong> Zwingen Sie niemanden. Fragen Sie, wer Lust hat mitzumachen — es werden sich immer Freiwillige finden.</li>
+  <li><strong>Freiwilligkeit:</strong> Zwingen Sie niemanden. Fragen Sie, wer Lust hat mitzumachen, es werden sich immer Freiwillige finden.</li>
   <li><strong>Unterstützung bieten:</strong> Nicht jeder ist ein geborener Content-Creator. Bieten Sie Hilfe an: Texte gemeinsam formulieren, Foto-Tipps geben, Ideen brainstormen.</li>
   <li><strong>Wertschätzung zeigen:</strong> Ein einfaches „Danke" oder die Erwähnung im nächsten Team-Meeting wirkt Wunder.</li>
   <li><strong>Keine Kontrolle:</strong> Lassen Sie Mitarbeitern die Freiheit, in ihren eigenen Worten zu schreiben. Authentizität entsteht durch Freiheit, nicht durch Vorgaben.</li>
@@ -268,7 +268,7 @@ export const batch6: BlogPost[] = [
 
 <h2>Bewertungsportale: Kununu und Glassdoor aktiv managen</h2>
 
-<p>Ob Sie es wollen oder nicht: Bewerber lesen Ihre Bewertungen auf Kununu und Glassdoor. Im DACH-Raum ist Kununu mit über 5 Millionen Bewertungen die relevanteste Plattform. Ignorieren Sie diese Kanäle nicht — managen Sie sie aktiv.</p>
+<p>Ob Sie es wollen oder nicht: Bewerber lesen Ihre Bewertungen auf Kununu und Glassdoor. Im DACH-Raum ist Kununu mit über 5 Millionen Bewertungen die relevanteste Plattform. Ignorieren Sie diese Kanäle nicht, managen Sie sie aktiv.</p>
 
 <h3>Die wichtigsten Regeln</h3>
 
@@ -283,7 +283,7 @@ export const batch6: BlogPost[] = [
 
 <h2>Quick Wins: In unter einer Stunde umsetzbar</h2>
 
-<p>Nicht alles muss ein Projekt sein. Diese Maßnahmen setzen Sie in weniger als 60 Minuten um — und spüren sofort Wirkung:</p>
+<p>Nicht alles muss ein Projekt sein. Diese Maßnahmen setzen Sie in weniger als 60 Minuten um, und spüren sofort Wirkung:</p>
 
 <ol>
   <li><strong>E-Mail-Signatur aktualisieren (10 Min.):</strong> Fügen Sie einen Link zu Ihrer Karriereseite oder aktuellen Stellenanzeigen in die E-Mail-Signatur aller Mitarbeiter ein.</li>
@@ -319,7 +319,7 @@ export const batch6: BlogPost[] = [
 
 <p><strong>Empfehlung:</strong> Messen Sie monatlich und vergleichen Sie quartalsweise. Employer Branding ist ein Marathon, kein Sprint. Erste signifikante Ergebnisse zeigen sich in der Regel nach drei bis sechs Monaten konsequenter Arbeit.</p>
 
-<p>Der wichtigste Rat zum Schluss: Fangen Sie an. Employer Branding für KMU muss nicht perfekt sein — es muss echt sein. Erzählen Sie Ihre Geschichte, zeigen Sie Ihr Team und machen Sie es Bewerbern leicht, sich für Sie zu entscheiden. Das kostet kein Vermögen. Es kostet nur den Mut, sich zu zeigen.</p>
+<p>Der wichtigste Rat zum Schluss: Fangen Sie an. Employer Branding für KMU muss nicht perfekt sein, es muss echt sein. Erzählen Sie Ihre Geschichte, zeigen Sie Ihr Team und machen Sie es Bewerbern leicht, sich für Sie zu entscheiden. Das kostet kein Vermögen. Es kostet nur den Mut, sich zu zeigen.</p>
 `,
   },
 ];

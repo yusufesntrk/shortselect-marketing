@@ -1,17 +1,17 @@
 export const aiFeatures = [
   {
     title: "AgentBurst Match",
-    description: "Gleicht Skills, Erfahrung und Kulturfit ab und vergibt präzise Match-Scores von 0-100. Läuft im Hintergrund, rund um die Uhr — DSGVO-konform.",
+    description: "Gleicht Skills, Erfahrung und Kulturfit ab und vergibt präzise Match-Scores von 0-100. Läuft im Hintergrund, rund um die Uhr, DSGVO-konform.",
     icon: "brain",
   },
   {
     title: "AgentBurst Rank",
-    description: "Die besten Talente erscheinen immer oben — basierend auf Ihren individuellen Kriterien. Priorisiert selbstständig, ohne manuelles Sortieren.",
+    description: "Die besten Talente erscheinen immer oben, basierend auf Ihren individuellen Kriterien. Priorisiert selbstständig, ohne manuelles Sortieren.",
     icon: "zap",
   },
   {
     title: "AgentBurst Screen",
-    description: "Bewerber-Screening in Sekunden. Prüft Qualifikationen, bewertet Knockout-Kriterien und filtert — end-to-end, ohne einen Klick.",
+    description: "Bewerber-Screening in Sekunden. Prüft Qualifikationen, bewertet Knockout-Kriterien und filtert, end-to-end, ohne einen Klick.",
     icon: "bot",
   },
   {
@@ -21,7 +21,7 @@ export const aiFeatures = [
   },
   {
     title: "AgentBurst Nurture",
-    description: "Nachfass-E-Mails, Statusupdates und Erinnerungen — alles läuft im Hintergrund. Kein Kandidat wird vergessen.",
+    description: "Nachfass-E-Mails, Statusupdates und Erinnerungen, alles läuft im Hintergrund. Kein Kandidat wird vergessen.",
     icon: "mail",
   },
 ];

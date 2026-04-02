@@ -17,13 +17,13 @@ export const batch18: BlogPost[] = [
 
 <p>Die meisten Recruiting-Teams arbeiten noch immer mit monatlichen Excel-Auswertungen. Am Ende des Monats werden Daten zusammengetragen, Pivot-Tabellen erstellt, Diagramme gebaut und ein Report an die Geschäftsführung geschickt. Das Problem: Wenn der Report fertig ist, sind die Daten bereits veraltet. Entscheidungen werden auf Basis von Zahlen getroffen, die die aktuelle Realität nicht mehr widerspiegeln.</p>
 
-<p>Ein Recruiting-Dashboard ändert diese Dynamik grundlegend. Statt rückblickender Berichte liefert es Echtzeitdaten, die sofortige Reaktionen ermöglichen. Wenn die Pipeline für eine kritische Position plötzlich leer läuft, sehen Sie das nicht erst in vier Wochen — sondern heute. Wenn eine Quelle signifikant mehr qualifizierte Bewerbungen liefert als andere, können Sie Budgets sofort umschichten.</p>
+<p>Ein Recruiting-Dashboard ändert diese Dynamik grundlegend. Statt rückblickender Berichte liefert es Echtzeitdaten, die sofortige Reaktionen ermöglichen. Wenn die Pipeline für eine kritische Position plötzlich leer läuft, sehen Sie das nicht erst in vier Wochen, sondern heute. Wenn eine Quelle signifikant mehr qualifizierte Bewerbungen liefert als andere, können Sie Budgets sofort umschichten.</p>
 
 <blockquote>
   <strong>Der zentrale Unterschied:</strong> Ein Excel-Report dokumentiert die Vergangenheit. Ein Dashboard steuert die Gegenwart und ermöglicht vorausschauende Entscheidungen.
 </blockquote>
 
-<p>Darüber hinaus löst ein Dashboard ein kulturelles Problem: Recruiting wird messbar. Statt über Bauchgefühl und subjektive Einschätzungen zu diskutieren, sprechen alle Beteiligten — vom Recruiter bis zur Geschäftsführung — über dieselben Zahlen. Das schafft Transparenz, Vertrauen und eine gemeinsame Entscheidungsgrundlage.</p>
+<p>Darüber hinaus löst ein Dashboard ein kulturelles Problem: Recruiting wird messbar. Statt über Bauchgefühl und subjektive Einschätzungen zu diskutieren, sprechen alle Beteiligten, vom Recruiter bis zur Geschäftsführung, über dieselben Zahlen. Das schafft Transparenz, Vertrauen und eine gemeinsame Entscheidungsgrundlage.</p>
 
 <h2>Die 8 wichtigsten Dashboard-KPIs</h2>
 
@@ -37,11 +37,11 @@ export const batch18: BlogPost[] = [
 
 <h3>3. Pipeline Velocity</h3>
 
-<p>Pipeline Velocity misst, wie schnell Kandidaten durch die einzelnen Stufen Ihres Recruiting-Prozesses wandern. Diese Kennzahl macht Engpässe sichtbar: Wenn Kandidaten im Durchschnitt 12 Tage im Status "Hiring-Manager-Review" verweilen, aber nur 2 Tage in der Telefoninterview-Phase, wissen Sie genau, wo Sie ansetzen müssen. Pipeline Velocity ist die diagnostische KPI schlechthin — sie zeigt nicht nur, dass etwas langsam ist, sondern wo genau.</p>
+<p>Pipeline Velocity misst, wie schnell Kandidaten durch die einzelnen Stufen Ihres Recruiting-Prozesses wandern. Diese Kennzahl macht Engpässe sichtbar: Wenn Kandidaten im Durchschnitt 12 Tage im Status "Hiring-Manager-Review" verweilen, aber nur 2 Tage in der Telefoninterview-Phase, wissen Sie genau, wo Sie ansetzen müssen. Pipeline Velocity ist die diagnostische KPI schlechthin, sie zeigt nicht nur, dass etwas langsam ist, sondern wo genau.</p>
 
 <h3>4. Cost per Qualified Application (CPQ)</h3>
 
-<p>CPQ geht über den klassischen Cost-per-Application hinaus und misst, was eine qualifizierte Bewerbung tatsächlich kostet. Nicht jede Bewerbung ist wertvoll — und die reine Anzahl sagt wenig über die Qualität aus. CPQ berücksichtigt nur Bewerbungen, die mindestens die Mindestanforderungen erfüllen und in die engere Auswahl kommen. Wir betrachten diese Kennzahl weiter unten als potenzielle neue Leitkennzahl im Recruiting.</p>
+<p>CPQ geht über den klassischen Cost-per-Application hinaus und misst, was eine qualifizierte Bewerbung tatsächlich kostet. Nicht jede Bewerbung ist wertvoll, und die reine Anzahl sagt wenig über die Qualität aus. CPQ berücksichtigt nur Bewerbungen, die mindestens die Mindestanforderungen erfüllen und in die engere Auswahl kommen. Wir betrachten diese Kennzahl weiter unten als potenzielle neue Leitkennzahl im Recruiting.</p>
 
 <h3>5. Offer Acceptance Rate</h3>
 
@@ -53,11 +53,11 @@ export const batch18: BlogPost[] = [
 
 <h3>7. Hiring Manager Satisfaction</h3>
 
-<p>Ein oft vernachlässigter, aber entscheidender KPI: Wie zufrieden sind Ihre Hiring Manager mit dem Recruiting-Prozess? Diese Kennzahl lässt sich über kurze Surveys nach jeder Einstellung erheben (3 bis 5 Fragen genügen). Hiring Manager Satisfaction korreliert stark mit der Qualität der Zusammenarbeit und der langfristigen Retention — denn unzufriedene Hiring Manager setzen sich weniger ein, geben schlechteres Feedback und verzögern Prozesse.</p>
+<p>Ein oft vernachlässigter, aber entscheidender KPI: Wie zufrieden sind Ihre Hiring Manager mit dem Recruiting-Prozess? Diese Kennzahl lässt sich über kurze Surveys nach jeder Einstellung erheben (3 bis 5 Fragen genügen). Hiring Manager Satisfaction korreliert stark mit der Qualität der Zusammenarbeit und der langfristigen Retention, denn unzufriedene Hiring Manager setzen sich weniger ein, geben schlechteres Feedback und verzögern Prozesse.</p>
 
 <h3>8. Open Positions Aging</h3>
 
-<p>Wie lange sind Ihre offenen Stellen bereits unbesetzt? Open Positions Aging segmentiert Ihre offenen Vakanzen nach Alter: 0 bis 30 Tage, 30 bis 60 Tage, 60 bis 90 Tage und über 90 Tage. Positionen, die länger als 60 Tage offen sind, brauchen eine andere Strategie — mehr Budget, andere Kanäle oder eine Anpassung des Anforderungsprofils. Diese KPI verhindert, dass problematische Stellen in der Masse untergehen.</p>
+<p>Wie lange sind Ihre offenen Stellen bereits unbesetzt? Open Positions Aging segmentiert Ihre offenen Vakanzen nach Alter: 0 bis 30 Tage, 30 bis 60 Tage, 60 bis 90 Tage und über 90 Tage. Positionen, die länger als 60 Tage offen sind, brauchen eine andere Strategie, mehr Budget, andere Kanäle oder eine Anpassung des Anforderungsprofils. Diese KPI verhindert, dass problematische Stellen in der Masse untergehen.</p>
 
 <h2>Dashboard für verschiedene Rollen</h2>
 
@@ -77,7 +77,7 @@ export const batch18: BlogPost[] = [
 
 <h3>Geschäftsführung: Cost-per-Hire, Open Positions und Hiring Plan vs. Actual</h3>
 
-<p>Die Geschäftsführung braucht die verdichtete Perspektive: Was kostet eine Einstellung durchschnittlich? Wie viele Positionen sind aktuell offen und seit wann? Und vor allem: Liegt das Recruiting im Plan? Der Vergleich zwischen geplantem Headcount und tatsächlichen Einstellungen (Hiring Plan vs. Actual) ist die wichtigste KPI auf dieser Ebene — sie zeigt, ob die Personalplanung Realität wird oder hinterherhinkt.</p>
+<p>Die Geschäftsführung braucht die verdichtete Perspektive: Was kostet eine Einstellung durchschnittlich? Wie viele Positionen sind aktuell offen und seit wann? Und vor allem: Liegt das Recruiting im Plan? Der Vergleich zwischen geplantem Headcount und tatsächlichen Einstellungen (Hiring Plan vs. Actual) ist die wichtigste KPI auf dieser Ebene, sie zeigt, ob die Personalplanung Realität wird oder hinterherhinkt.</p>
 
 <h2>Echtzeit vs. Monatlich: Welche KPIs brauchen welche Frequenz?</h2>
 
@@ -94,7 +94,7 @@ export const batch18: BlogPost[] = [
   <strong>Faustregel:</strong> Operative KPIs in Echtzeit, taktische KPIs täglich bis wöchentlich, strategische KPIs monatlich. Entscheidend ist: Je höher die Managementebene, desto niedriger die sinnvolle Aktualisierungsfrequenz.
 </blockquote>
 
-<h2>BI-Integration: Power BI, Tableau, Looker — wann sinnvoll, wann Overkill?</h2>
+<h2>BI-Integration: Power BI, Tableau, Looker, wann sinnvoll, wann Overkill?</h2>
 
 <p>Viele Unternehmen fragen sich, ob sie ihre Recruiting-Daten in ein externes BI-Tool wie Power BI, Tableau oder Looker Studio überführen sollten. Die Antwort hängt von der Unternehmensgröße und dem Reifegrad des Reportings ab:</p>
 
@@ -104,13 +104,13 @@ export const batch18: BlogPost[] = [
   <li><strong>Über 50 Recruiter oder Multi-Länder-Setup:</strong> Hier sind BI-Tools nahezu unverzichtbar. Konsolidierte Dashboards über mehrere ATS-Instanzen, Währungen und Länder erfordern eine zentrale Datenschicht, die nur ein BI-Tool liefern kann.</li>
 </ul>
 
-<p>Wichtig: Ein BI-Tool ersetzt nicht das ATS-Dashboard — es ergänzt es. Recruiter arbeiten im ATS-Dashboard, die Geschäftsführung schaut ins BI-Dashboard. Beide Systeme haben unterschiedliche Zielgruppen und Funktionen.</p>
+<p>Wichtig: Ein BI-Tool ersetzt nicht das ATS-Dashboard, es ergänzt es. Recruiter arbeiten im ATS-Dashboard, die Geschäftsführung schaut ins BI-Dashboard. Beide Systeme haben unterschiedliche Zielgruppen und Funktionen.</p>
 
 <h2>CPQ als neue Leitkennzahl im Recruiting</h2>
 
-<p>Cost per Qualified Application (CPQ) verdient besondere Aufmerksamkeit, denn sie könnte den klassischen Cost-per-Hire als primäre Kostenkennzahl ablösen. Warum? Cost-per-Hire ist eine nachgelagerte Kennzahl — Sie erfahren erst nach der Einstellung, was sie gekostet hat. CPQ hingegen liefert Feedback in Echtzeit: Schon nach wenigen Tagen sehen Sie, welche Kanäle qualifizierte Bewerbungen liefern und zu welchem Preis.</p>
+<p>Cost per Qualified Application (CPQ) verdient besondere Aufmerksamkeit, denn sie könnte den klassischen Cost-per-Hire als primäre Kostenkennzahl ablösen. Warum? Cost-per-Hire ist eine nachgelagerte Kennzahl, Sie erfahren erst nach der Einstellung, was sie gekostet hat. CPQ hingegen liefert Feedback in Echtzeit: Schon nach wenigen Tagen sehen Sie, welche Kanäle qualifizierte Bewerbungen liefern und zu welchem Preis.</p>
 
-<p>Die Berechnung ist einfach: Gesamtkosten eines Kanals geteilt durch die Anzahl qualifizierter Bewerbungen aus diesem Kanal. "Qualifiziert" definieren Sie selbst — typischerweise Kandidaten, die mindestens die zweite Pipeline-Stufe erreichen. CPQ macht Budgetentscheidungen sofort handlungsfähig: Wenn LinkedIn-Anzeigen einen CPQ von 120 Euro haben und Indeed-Anzeigen einen CPQ von 45 Euro, wissen Sie genau, wo Ihr nächster Euro am effektivsten eingesetzt ist.</p>
+<p>Die Berechnung ist einfach: Gesamtkosten eines Kanals geteilt durch die Anzahl qualifizierter Bewerbungen aus diesem Kanal. "Qualifiziert" definieren Sie selbst, typischerweise Kandidaten, die mindestens die zweite Pipeline-Stufe erreichen. CPQ macht Budgetentscheidungen sofort handlungsfähig: Wenn LinkedIn-Anzeigen einen CPQ von 120 Euro haben und Indeed-Anzeigen einen CPQ von 45 Euro, wissen Sie genau, wo Ihr nächster Euro am effektivsten eingesetzt ist.</p>
 
 <h2>Dashboard im ATS vs. eigene Lösung</h2>
 
@@ -119,19 +119,19 @@ export const batch18: BlogPost[] = [
 <ul>
   <li><strong>Datenqualität:</strong> Ein ATS-Dashboard greift direkt auf die Quelldaten zu. Es gibt keine Synchronisierungsprobleme, keine veralteten Daten und keine Transformationsfehler. Das ist ein enormer Vorteil gegenüber selbstgebauten Lösungen, die Daten erst exportieren, transformieren und laden müssen.</li>
   <li><strong>Anpassbarkeit:</strong> Eigene Lösungen bieten maximale Flexibilität bei der Darstellung. Wenn Ihr ATS-Dashboard die gewünschten KPIs nicht abbildet oder die Visualisierung nicht Ihren Anforderungen entspricht, kann eine eigene Lösung sinnvoll sein.</li>
-  <li><strong>Wartungsaufwand:</strong> Jede eigene Lösung muss gepflegt werden — bei ATS-Updates, Schemaänderungen oder neuen Anforderungen. Ein ATS-Dashboard wird vom Anbieter gewartet und aktualisiert. Dieser Unterschied wird langfristig oft unterschätzt.</li>
+  <li><strong>Wartungsaufwand:</strong> Jede eigene Lösung muss gepflegt werden, bei ATS-Updates, Schemaänderungen oder neuen Anforderungen. Ein ATS-Dashboard wird vom Anbieter gewartet und aktualisiert. Dieser Unterschied wird langfristig oft unterschätzt.</li>
 </ul>
 
-<p>Für die meisten Unternehmen ist die pragmatische Empfehlung: Starten Sie mit dem ATS-Dashboard. Erweitern Sie erst dann um externe BI-Tools, wenn Sie konkrete Anforderungen haben, die das ATS-Dashboard nicht erfüllen kann — zum Beispiel die Verknüpfung mit Finanzdaten oder Multi-System-Konsolidierung.</p>
+<p>Für die meisten Unternehmen ist die pragmatische Empfehlung: Starten Sie mit dem ATS-Dashboard. Erweitern Sie erst dann um externe BI-Tools, wenn Sie konkrete Anforderungen haben, die das ATS-Dashboard nicht erfüllen kann, zum Beispiel die Verknüpfung mit Finanzdaten oder Multi-System-Konsolidierung.</p>
 
 <h2>Quick Start: 3 KPIs die Sie morgen einführen können</h2>
 
 <p>Sie müssen nicht alle acht KPIs gleichzeitig einführen. Beginnen Sie mit diesen drei, die sofort Wirkung zeigen und in jedem ATS verfügbar sind:</p>
 
 <ol>
-  <li><strong>Time-to-Hire pro Stelle:</strong> Messen Sie ab sofort, wie lange jede Besetzung dauert. Schon nach zwei bis drei Monaten haben Sie Benchmarks, gegen die Sie sich selbst messen können. Keine Konfiguration nötig — die Daten liegen bereits in Ihrem ATS vor.</li>
+  <li><strong>Time-to-Hire pro Stelle:</strong> Messen Sie ab sofort, wie lange jede Besetzung dauert. Schon nach zwei bis drei Monaten haben Sie Benchmarks, gegen die Sie sich selbst messen können. Keine Konfiguration nötig, die Daten liegen bereits in Ihrem ATS vor.</li>
   <li><strong>Source of Hire:</strong> Stellen Sie sicher, dass jede Bewerbung eine Quellenangabe hat. Dann können Sie in wenigen Wochen sehen, welche Kanäle tatsächlich Einstellungen liefern und Ihr Budget gezielt umschichten.</li>
-  <li><strong>Candidate Drop-off pro Stage:</strong> Schauen Sie sich an, an welcher Stelle in Ihrem Prozess die meisten Kandidaten abspringen. Dieser eine Datenpunkt zeigt Ihnen oft sofort den größten Hebel für Verbesserungen — sei es ein zu langsamer Prozessschritt, ein fehlendes Feedback oder ein überflüssiger Test.</li>
+  <li><strong>Candidate Drop-off pro Stage:</strong> Schauen Sie sich an, an welcher Stelle in Ihrem Prozess die meisten Kandidaten abspringen. Dieser eine Datenpunkt zeigt Ihnen oft sofort den größten Hebel für Verbesserungen, sei es ein zu langsamer Prozessschritt, ein fehlendes Feedback oder ein überflüssiger Test.</li>
 </ol>
 
 <blockquote>
@@ -149,7 +149,7 @@ export const batch18: BlogPost[] = [
     category: "KI & Automatisierung",
     tags: ["ROI", "Automatisierung", "Kosten", "Effizienz", "Business Case"],
     excerpt:
-      "Automatisierung spart Zeit — das wissen alle. Aber wie viel Euro spart sie konkret? So berechnen Sie den ROI.",
+      "Automatisierung spart Zeit, das wissen alle. Aber wie viel Euro spart sie konkret? So berechnen Sie den ROI.",
     readTime: "7 Min.",
     content: `
 <h2>Warum Sie den ROI berechnen sollten</h2>
@@ -160,7 +160,7 @@ export const batch18: BlogPost[] = [
 
 <ul>
   <li><strong>Management überzeugen:</strong> Investitionen in HR-Technologie konkurrieren mit Investitionen in Vertrieb, Produkt und Marketing. Ohne belastbare ROI-Zahlen verliert Recruiting diesen Wettbewerb regelmäßig. Ein fundierter Business Case verändert die Gesprächsdynamik grundlegend.</li>
-  <li><strong>Budget rechtfertigen:</strong> Bestehende Tools müssen ihre Existenzberechtigung nachweisen — besonders in wirtschaftlich angespannten Zeiten. Wer den ROI seiner Automatisierung beziffern kann, schützt sein Budget vor Kürzungen.</li>
+  <li><strong>Budget rechtfertigen:</strong> Bestehende Tools müssen ihre Existenzberechtigung nachweisen, besonders in wirtschaftlich angespannten Zeiten. Wer den ROI seiner Automatisierung beziffern kann, schützt sein Budget vor Kürzungen.</li>
   <li><strong>Priorisierung:</strong> Nicht jede Automatisierung bringt denselben Nutzen. Die ROI-Berechnung zeigt Ihnen, welche Automatisierungen den größten Hebel haben und wo Sie als Nächstes investieren sollten.</li>
 </ul>
 
@@ -197,11 +197,11 @@ export const batch18: BlogPost[] = [
 
 <p><strong>Gesamtersparnis:</strong> 120.000 + 240.000 + 60.000 − 40.000 = <strong>380.000 Euro pro Jahr</strong></p>
 
-<p>Das entspricht einem ROI von circa 850 Prozent. Selbst wenn Sie konservativ rechnen und nur die Zeitersparnis berücksichtigen, liegt der ROI bei 200 Prozent — ein Wert, der in den meisten Unternehmen jede Investition rechtfertigt.</p>
+<p>Das entspricht einem ROI von circa 850 Prozent. Selbst wenn Sie konservativ rechnen und nur die Zeitersparnis berücksichtigen, liegt der ROI bei 200 Prozent, ein Wert, der in den meisten Unternehmen jede Investition rechtfertigt.</p>
 
 <h2>Harte Zahlen aus der Praxis</h2>
 
-<p>Die Beispielrechnung klingt beeindruckend — aber wie sieht es in der Realität aus? Aktuelle Studien und Kundendaten liefern belastbare Benchmarks:</p>
+<p>Die Beispielrechnung klingt beeindruckend, aber wie sieht es in der Realität aus? Aktuelle Studien und Kundendaten liefern belastbare Benchmarks:</p>
 
 <ul>
   <li><strong>38 Prozent schnellere Besetzung:</strong> Unternehmen, die ein ATS mit Automatisierung nutzen, besetzen offene Stellen im Schnitt 38 Prozent schneller als Unternehmen ohne strukturierte Prozesse. Das bedeutet: Weniger Produktivitätsverlust, weniger Überstunden im bestehenden Team und schnellerer Umsatzbeitrag neuer Mitarbeiter.</li>
@@ -214,8 +214,8 @@ export const batch18: BlogPost[] = [
 <p>Neben den messbaren finanziellen Vorteilen gibt es eine Reihe von Benefits, die sich schwer in Euro beziffern lassen, aber erheblichen Einfluss auf den langfristigen Recruiting-Erfolg haben:</p>
 
 <ul>
-  <li><strong>Markenkonsistenz:</strong> Automatisierte Kommunikation stellt sicher, dass jeder Kandidat dieselbe professionelle Erfahrung macht — unabhängig davon, welcher Recruiter die Stelle betreut. Das stärkt Ihre Employer Brand konsistent über alle Touchpoints hinweg.</li>
-  <li><strong>Weniger Ghosting:</strong> Automatisierte Status-Updates und Follow-ups reduzieren Candidate Ghosting erheblich. Kandidaten, die regelmäßig informiert werden, brechen seltener ab — selbst wenn der Prozess länger dauert.</li>
+  <li><strong>Markenkonsistenz:</strong> Automatisierte Kommunikation stellt sicher, dass jeder Kandidat dieselbe professionelle Erfahrung macht, unabhängig davon, welcher Recruiter die Stelle betreut. Das stärkt Ihre Employer Brand konsistent über alle Touchpoints hinweg.</li>
+  <li><strong>Weniger Ghosting:</strong> Automatisierte Status-Updates und Follow-ups reduzieren Candidate Ghosting erheblich. Kandidaten, die regelmäßig informiert werden, brechen seltener ab, selbst wenn der Prozess länger dauert.</li>
   <li><strong>Boomerang-Kandidaten:</strong> Abgelehnte Kandidaten, die eine gute Erfahrung gemacht haben, bewerben sich später erneut oder empfehlen Ihr Unternehmen weiter. Automatisierte Absagen mit wertschätzender Kommunikation und Talent-Pool-Einladungen bauen einen langfristigen Kandidatenpool auf, der künftige Stellenbesetzungen beschleunigt.</li>
   <li><strong>Compliance-Risikoreduktion:</strong> DSGVO-konforme Löschfristen, dokumentierte Absagegründe und nachvollziehbare Prozesse reduzieren das Risiko von AGG-Klagen und Datenschutzverstößen. Die Kosten einer einzigen Klage oder eines Datenschutzvorfalls können den ROI eines ATS allein rechtfertigen.</li>
   <li><strong>Hiring Manager Satisfaction:</strong> Hiring Manager, die über ein ATS-Portal den Status ihrer Stellen in Echtzeit sehen können, sind nachweislich zufriedener. Weniger Nachfragen, weniger Eskalationen und eine produktivere Zusammenarbeit zwischen Recruiting und Fachabteilungen.</li>
@@ -230,7 +230,7 @@ export const batch18: BlogPost[] = [
 <ul>
   <li><strong>Eingangsbestätigung:</strong> Jede Bewerbung erhält innerhalb von Minuten eine professionelle Bestätigung. Klingt trivial, wird aber von über 50 Prozent der Unternehmen nicht umgesetzt. Automatische Eingangsbestätigungen verbessern die Candidate Experience sofort und messbar.</li>
   <li><strong>Screening:</strong> Automatisierte Vorauswahl anhand definierter Kriterien (Erfahrung, Qualifikationen, Standort) spart pro Stelle mehrere Stunden manuelles Sichten. Recruiter sehen nur noch vorab qualifizierte Kandidaten.</li>
-  <li><strong>Scheduling:</strong> Interview-Terminierung per Self-Service-Link statt E-Mail-Ping-Pong. Eine einzige automatisierte Terminbuchung spart durchschnittlich 30 Minuten an Koordinationsaufwand — pro Interview.</li>
+  <li><strong>Scheduling:</strong> Interview-Terminierung per Self-Service-Link statt E-Mail-Ping-Pong. Eine einzige automatisierte Terminbuchung spart durchschnittlich 30 Minuten an Koordinationsaufwand, pro Interview.</li>
   <li><strong>Follow-ups:</strong> Automatische Erinnerungen an Hiring Manager für ausstehende Bewertungen, automatische Nachfass-E-Mails an Kandidaten nach Interviews und automatische Eskalationen bei überschrittenen SLAs. Follow-ups sind der unsichtbare Motor eines schnellen Prozesses.</li>
 </ul>
 
@@ -247,7 +247,7 @@ export const batch18: BlogPost[] = [
 
 <ul>
   <li><strong>1 bis 2 offene Stellen gleichzeitig:</strong> Bei sehr geringem Stellenvolumen ist ein ATS schwer zu rechtfertigen. Der Implementierungsaufwand und die monatlichen Kosten übersteigen die Zeitersparnis. Excel und E-Mail können hier noch ausreichen.</li>
-  <li><strong>3 bis 5 offene Stellen gleichzeitig:</strong> Der typische Break-Even-Punkt. Ab drei gleichzeitig offenen Stellen beginnt der Koordinationsaufwand exponentiell zu steigen. Ein ATS amortisiert sich hier innerhalb von 3 bis 6 Monaten — vorausgesetzt, die Kernfunktionen (Pipeline-Management, Kommunikation, Terminierung) werden tatsächlich genutzt.</li>
+  <li><strong>3 bis 5 offene Stellen gleichzeitig:</strong> Der typische Break-Even-Punkt. Ab drei gleichzeitig offenen Stellen beginnt der Koordinationsaufwand exponentiell zu steigen. Ein ATS amortisiert sich hier innerhalb von 3 bis 6 Monaten, vorausgesetzt, die Kernfunktionen (Pipeline-Management, Kommunikation, Terminierung) werden tatsächlich genutzt.</li>
   <li><strong>Über 5 offene Stellen gleichzeitig:</strong> Hier ist ein ATS keine Option mehr, sondern eine Notwendigkeit. Ohne strukturiertes System entstehen Fehler, Kandidaten gehen verloren und die Qualität der Einstellungen sinkt messbar. Der ROI ist in dieser Kategorie fast immer dreistellig.</li>
 </ul>
 
@@ -262,13 +262,13 @@ export const batch18: BlogPost[] = [
 <ol>
   <li><strong>Ausgangslage beschreiben:</strong> Wie viele Recruiter arbeiten in Ihrem Team? Wie viele Stellen besetzen Sie pro Jahr? Wie lang ist Ihre durchschnittliche Time-to-Hire? Welche Tools nutzen Sie aktuell? Benennen Sie die konkreten Pain Points: zu langsam, zu teuer, zu fehleranfällig, nicht skalierbar.</li>
   <li><strong>Kosten des Status Quo berechnen:</strong> Was kostet Sie der aktuelle Zustand? Rechnen Sie die Stunden zusammen, die für manuelle Tätigkeiten aufgewendet werden. Multiplizieren Sie mit dem Vollkostenstundensatz. Addieren Sie die Kosten von Fehlbesetzungen und verlorenen Kandidaten. Diese Zahl ist Ihre Baseline.</li>
-  <li><strong>Erwartete Verbesserungen quantifizieren:</strong> Nutzen Sie die Benchmarks aus diesem Artikel als Orientierung. Seien Sie konservativ — rechnen Sie lieber mit 20 Prozent Zeitersparnis als mit 50 Prozent. Konservative Schätzungen sind glaubwürdiger und werden seltener hinterfragt.</li>
+  <li><strong>Erwartete Verbesserungen quantifizieren:</strong> Nutzen Sie die Benchmarks aus diesem Artikel als Orientierung. Seien Sie konservativ, rechnen Sie lieber mit 20 Prozent Zeitersparnis als mit 50 Prozent. Konservative Schätzungen sind glaubwürdiger und werden seltener hinterfragt.</li>
   <li><strong>Kosten der Lösung aufstellen:</strong> Lizenzkosten, Implementierung, Schulung, laufende Wartung und interne Personalkosten für das Projektmanagement. Vergessen Sie nicht die Opportunitätskosten der Einführungsphase, in der die Produktivität vorübergehend sinken kann.</li>
-  <li><strong>ROI und Break-Even darstellen:</strong> Stellen Sie den Gesamtnutzen den Gesamtkosten gegenüber. Berechnen Sie den Break-Even-Zeitpunkt in Monaten. Visualisieren Sie den kumulierten Nutzen über 12, 24 und 36 Monate. Ein guter Business Case zeigt: Die Investition zahlt sich nicht nur aus — sie zahlt sich schnell aus.</li>
+  <li><strong>ROI und Break-Even darstellen:</strong> Stellen Sie den Gesamtnutzen den Gesamtkosten gegenüber. Berechnen Sie den Break-Even-Zeitpunkt in Monaten. Visualisieren Sie den kumulierten Nutzen über 12, 24 und 36 Monate. Ein guter Business Case zeigt: Die Investition zahlt sich nicht nur aus, sie zahlt sich schnell aus.</li>
 </ol>
 
 <blockquote>
-  <strong>Hinweis:</strong> Der effektivste Business Case enthält nicht nur Zahlen, sondern auch ein bis zwei konkrete Beispiele aus dem Arbeitsalltag. "Letzte Woche haben wir einen Top-Kandidaten verloren, weil die Terminkoordination drei Tage gedauert hat" wirkt stärker als jede Statistik. Kombinieren Sie harte Daten mit greifbaren Geschichten — so überzeugen Sie sowohl analytische als auch intuitive Entscheider.
+  <strong>Hinweis:</strong> Der effektivste Business Case enthält nicht nur Zahlen, sondern auch ein bis zwei konkrete Beispiele aus dem Arbeitsalltag. "Letzte Woche haben wir einen Top-Kandidaten verloren, weil die Terminkoordination drei Tage gedauert hat" wirkt stärker als jede Statistik. Kombinieren Sie harte Daten mit greifbaren Geschichten, so überzeugen Sie sowohl analytische als auch intuitive Entscheider.
 </blockquote>
 `,
   },

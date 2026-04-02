@@ -124,7 +124,7 @@ export const batch12: BlogPost[] = [
     category: "Praxis-Guides",
     tags: ["Gehalt", "Vorstellungsgespräch", "Verhandlung", "Entgelttransparenz"],
     excerpt:
-      "40% der Einstellungen scheitern am Gehalt — weil die Frage zu spät kommt. So sprechen Sie Gehalt richtig an.",
+      "40% der Einstellungen scheitern am Gehalt, weil die Frage zu spät kommt. So sprechen Sie Gehalt richtig an.",
     readTime: "6 Min.",
     content: `
 <h2>Warum die Gehaltsfrage zu spät kommt</h2>

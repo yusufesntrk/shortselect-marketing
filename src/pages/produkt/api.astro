@@ -2,10 +2,10 @@
 import ProduktLayout from '../../layouts/ProduktLayout.astro';
 
 const features = [
-  { title: "REST API", description: "Vollstaendige REST API fuer Jobs, Kandidaten, Bewerbungen und Pipeline", icon: '<svg class="h-6 w-6 text-primary group-hover:text-white transition-colors" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>' },
+  { title: "REST API", description: "Vollständige REST API für Jobs, Kandidaten, Bewerbungen und Pipeline", icon: '<svg class="h-6 w-6 text-primary group-hover:text-white transition-colors" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>' },
   { title: "Webhooks", description: "Echtzeit-Events bei Statusaenderungen, neuen Bewerbungen und mehr", icon: '<svg class="h-6 w-6 text-primary group-hover:text-white transition-colors" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 16.98h-5.99c-1.1 0-1.95.94-2.48 1.9A4 4 0 0 1 2 17c.01-.7.2-1.4.57-2"/><path d="m6 17 3.13-5.78c.53-.97.1-2.18-.5-3.1a4 4 0 1 1 6.89-4.06"/><path d="m12 6 3.13 5.73C15.66 12.7 16.9 13 18 13a4 4 0 0 1 0 8H12"/></svg>' },
   { title: "OAuth 2.0", description: "Sichere Authentifizierung mit API-Keys und OAuth 2.0", icon: '<svg class="h-6 w-6 text-primary group-hover:text-white transition-colors" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>' },
-  { title: "SDK & Libraries", description: "JavaScript/TypeScript SDK fuer schnelle Integration", icon: '<svg class="h-6 w-6 text-primary group-hover:text-white transition-colors" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m7.5 4.27 9 5.15"/><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg>' },
+  { title: "SDK & Libraries", description: "JavaScript/TypeScript SDK für schnelle Integration", icon: '<svg class="h-6 w-6 text-primary group-hover:text-white transition-colors" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m7.5 4.27 9 5.15"/><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg>' },
   { title: "Rate Limiting", description: "Fair-Use-Limits mit transparentem Quota-Management", icon: '<svg class="h-6 w-6 text-primary group-hover:text-white transition-colors" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg>' },
   { title: "API Docs", description: "Interaktive API-Dokumentation mit Beispielen und Sandbox", icon: '<svg class="h-6 w-6 text-primary group-hover:text-white transition-colors" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></svg>' },
 ];
@@ -21,16 +21,16 @@ const integrations = [
 
 <ProduktLayout
   title="API & Integrationen – REST API, Webhooks & SDKs | ShortSelect"
-  description="RESTful API mit vollstaendiger Dokumentation. Webhooks, OAuth 2.0, JavaScript SDK und Integrationen mit Zapier, Make und n8n."
+  description="RESTful API mit vollständiger Dokumentation. Webhooks, OAuth 2.0, JavaScript SDK und Integrationen mit Zapier, Make und n8n."
   canonical="https://shortselect.com/produkt/api"
   badgeText="API"
   heroTitle="Ihre Recruiting-API. Grenzenlos"
   heroHighlight="integrierbar"
   heroSuffix="."
-  heroSubtitle="RESTful API mit vollstaendiger Dokumentation -- verbinden Sie ShortSelect mit Ihren bestehenden Tools."
+  heroSubtitle="RESTful API mit vollständiger Dokumentation -- verbinden Sie ShortSelect mit Ihren bestehenden Tools."
   heroIcon='<svg class="h-4 w-4 text-primary animate-pulse" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>'
   features={features}
-  featuresSectionTitle="Gebaut fuer Entwickler"
+  featuresSectionTitle="Gebaut für Entwickler"
   featuresSectionSubtitle="Alles, was Sie brauchen, um ShortSelect in Ihre Systeme zu integrieren -- sicher, schnell und dokumentiert."
   featuresBadge="Entwickler"
 >

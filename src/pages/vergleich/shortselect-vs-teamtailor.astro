@@ -4,8 +4,8 @@ import VergleichLayout from '../../layouts/VergleichLayout.astro';
 const comparisonData = [
   { feature: "Zielgruppe", ssStatus: "check" as const, ssLabel: "Recruiting-Agenturen", compStatus: "warn" as const, compLabel: "Inhouse-HR-Teams" },
   { feature: "KI-Agenten", ssStatus: "check" as const, ssLabel: "AgentBurst-Agenten", compStatus: "x" as const, compLabel: "Keine" },
-  { feature: "Multi-Tenancy", ssStatus: "check" as const, ssLabel: "Vollstaendig", compStatus: "x" as const, compLabel: "Nicht verfuegbar" },
-  { feature: "Client Portal", ssStatus: "check" as const, ssLabel: "Integriert", compStatus: "x" as const, compLabel: "Nicht verfuegbar" },
+  { feature: "Multi-Tenancy", ssStatus: "check" as const, ssLabel: "Vollständig", compStatus: "x" as const, compLabel: "Nicht verfügbar" },
+  { feature: "Client Portal", ssStatus: "check" as const, ssLabel: "Integriert", compStatus: "x" as const, compLabel: "Nicht verfügbar" },
   { feature: "KI-Matching", ssStatus: "check" as const, ssLabel: "AgentBurst Match", compStatus: "warn" as const, compLabel: "Basis-KI" },
   { feature: "Karriereseite", ssStatus: "check" as const, ssLabel: "Widget + Seite", compStatus: "check" as const, compLabel: "Stark" },
   { feature: "Agentur-Features", ssStatus: "check" as const, ssLabel: "Komplett", compStatus: "x" as const, compLabel: "Null" },
@@ -17,34 +17,34 @@ const comparisonData = [
 
 <VergleichLayout
   title="ShortSelect vs. Teamtailor - ATS Vergleich 2026"
-  description="Teamtailor ist ein Employer-Branding-Tool — kein Agentur-ATS. Null Multi-Tenancy, kein Client Portal, keine autonomen KI-Agenten."
+  description="Teamtailor ist ein Employer-Branding-Tool, kein Agentur-ATS. Null Multi-Tenancy, kein Client Portal, keine autonomen KI-Agenten."
   competitorName="Teamtailor"
-  heroSubline="Teamtailor glaenzt beim Employer Branding — aber fuer Recruiting-Agenturen fehlt alles: Kein Multi-Tenancy, kein Client Portal, keine autonomen KI-Agenten."
+  heroSubline="Teamtailor glänzt beim Employer Branding. aber für Recruiting-Agenturen fehlt alles: Kein Multi-Tenancy, kein Client Portal, keine autonomen KI-Agenten."
   heroBadge="Vergleich"
-  ssDescription="KI-Agent-ATS fuer Recruiting-Agenturen"
-  ssHighlights={["AgentBurst-Agenten arbeiten autonom", "Multi-Tenancy fuer Agenturen", "Client Portal fuer Ihre Kunden", "Autonomes Matching, Screening und Ranking"]}
-  compDescription="Employer-Branding-Plattform fuer Inhouse-HR"
+  ssDescription="KI-Agent-ATS für Recruiting-Agenturen"
+  ssHighlights={["AgentBurst-Agenten arbeiten autonom", "Multi-Tenancy für Agenturen", "Client Portal für Ihre Kunden", "Autonomes Matching, Screening und Ranking"]}
+  compDescription="Employer-Branding-Plattform für Inhouse-HR"
   compHighlights={["Starke Karriereseite und Employer Branding", "Moderne Oberflaeche", "Gute Integrationen", "EU-basiert (Schweden)"]}
   comparisonData={comparisonData}
   whenCompBetter={{
     title: "Wann Teamtailor besser passt",
-    intro: "Teamtailor ist die richtige Wahl fuer Inhouse-HR-Teams mit Employer-Branding-Fokus:",
+    intro: "Teamtailor ist die richtige Wahl für Inhouse-HR-Teams mit Employer-Branding-Fokus:",
     items: [
       "Inhouse-HR-Team ohne Agentur-Anforderungen",
       "Employer Branding und Karriereseite haben hoechste Prioritaet",
-      "Kein Multi-Tenancy oder Client Portal benoetigt",
-      "Keine autonomen KI-Agenten benoetigt",
+      "Kein Multi-Tenancy oder Client Portal benötigt",
+      "Keine autonomen KI-Agenten benötigt",
     ]
   }}
   whenSSBetter={{
     title: "Wann ShortSelect besser passt",
-    intro: "ShortSelect ist ideal fuer Recruiting-Agenturen mit mehreren Mandanten:",
+    intro: "ShortSelect ist ideal für Recruiting-Agenturen mit mehreren Mandanten:",
     items: [
       "Agentur mit mehreren Mandanten und Multi-Tenancy-Bedarf",
       "Autonome AgentBurst-Agenten statt manueller Prozesse",
-      "Client Portal fuer transparente Zusammenarbeit mit Kunden",
+      "Client Portal für transparente Zusammenarbeit mit Kunden",
       "Faire Preise ab 0\u20AC statt 2.400\u20AC/Jahr",
-      "DSGVO-konforme KI fuer autonomes Matching und Screening",
+      "DSGVO-konforme KI für autonomes Matching und Screening",
     ]
   }}
 />

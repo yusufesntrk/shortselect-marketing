@@ -10,12 +10,12 @@ export const batch15: BlogPost[] = [
     category: "Recruiting-Wissen",
     tags: ["Gründung", "Personalvermittlung", "Selbstständigkeit", "Business"],
     excerpt:
-      "25% des Jahresgehalts pro Vermittlung — ein lukratives Geschäft. So gründen Sie Ihre eigene Personalvermittlung.",
+      "25% des Jahresgehalts pro Vermittlung, ein lukratives Geschäft. So gründen Sie Ihre eigene Personalvermittlung.",
     readTime: "10 Min.",
     content: `
 <h2>Der Markt: Warum sich eine Personalvermittlung lohnt</h2>
 
-<p>In Deutschland gibt es rund 40.000 Personaldienstleister — und die Zahl wächst stetig. Der Fachkräftemangel hat den Recruiting-Markt in den letzten Jahren regelrecht explodieren lassen. Unternehmen suchen verzweifelt nach qualifizierten Mitarbeitern und sind bereit, dafür zu zahlen. Die durchschnittliche Vermittlungsprovision liegt bei 25 bis 30 Prozent des Bruttojahresgehalts des vermittelten Kandidaten. Bei einer Fachkraft mit 60.000 Euro Jahresgehalt sind das 15.000 bis 18.000 Euro — pro erfolgreicher Vermittlung.</p>
+<p>In Deutschland gibt es rund 40.000 Personaldienstleister, und die Zahl wächst stetig. Der Fachkräftemangel hat den Recruiting-Markt in den letzten Jahren regelrecht explodieren lassen. Unternehmen suchen verzweifelt nach qualifizierten Mitarbeitern und sind bereit, dafür zu zahlen. Die durchschnittliche Vermittlungsprovision liegt bei 25 bis 30 Prozent des Bruttojahresgehalts des vermittelten Kandidaten. Bei einer Fachkraft mit 60.000 Euro Jahresgehalt sind das 15.000 bis 18.000 Euro, pro erfolgreicher Vermittlung.</p>
 
 <p>Der Markt für Personalvermittlung in Deutschland wird auf über 14 Milliarden Euro geschätzt. Besonders gefragt sind Spezialisten in IT, Engineering, Healthcare und Finance. In diesen Bereichen übersteigt die Nachfrage das Angebot bei weitem, was die Verhandlungsposition von Personalvermittlern stärkt.</p>
 
@@ -25,7 +25,7 @@ export const batch15: BlogPost[] = [
 
 <h2>Rechtsform wählen: GmbH, UG oder Einzelunternehmen?</h2>
 
-<p>Die Wahl der Rechtsform ist eine der ersten und wichtigsten Entscheidungen bei der Gründung. Jede Variante hat ihre Vor- und Nachteile — besonders im Hinblick auf Haftung, Kosten und Außenwirkung.</p>
+<p>Die Wahl der Rechtsform ist eine der ersten und wichtigsten Entscheidungen bei der Gründung. Jede Variante hat ihre Vor- und Nachteile, besonders im Hinblick auf Haftung, Kosten und Außenwirkung.</p>
 
 <h3>Einzelunternehmen</h3>
 
@@ -146,7 +146,7 @@ export const batch15: BlogPost[] = [
 </ul>
 
 <blockquote>
-  <strong>Wichtig:</strong> Planen Sie ein finanzielles Polster für mindestens 6 Monate ohne Einkommen. Die Anlaufphase ist die kritischste Zeit — wer hier durchhält, hat gute Chancen auf langfristigen Erfolg.
+  <strong>Wichtig:</strong> Planen Sie ein finanzielles Polster für mindestens 6 Monate ohne Einkommen. Die Anlaufphase ist die kritischste Zeit, wer hier durchhält, hat gute Chancen auf langfristigen Erfolg.
 </blockquote>
 
 <h2>Häufige Fehler bei der Gründung</h2>
@@ -162,7 +162,7 @@ export const batch15: BlogPost[] = [
 
 <h2>Fazit: Jetzt starten oder warten?</h2>
 
-<p>Der Markt für Personalvermittlung wächst, der Fachkräftemangel verschärft sich und Unternehmen sind bereit, für gute Recruiting-Dienstleistungen zu zahlen. Die Einstiegshürden sind niedrig: Keine besondere Erlaubnis (bei reiner Vermittlung), überschaubare Startkosten und ein skalierbares Geschäftsmodell. Wer Branchenwissen, ein Netzwerk und den Willen zum Vertrieb mitbringt, hat beste Chancen. Entscheidend ist, dass Sie von Anfang an auf professionelle Tools setzen — ein ATS wie ShortSelect gibt Ihnen die Struktur, die Sie brauchen, um vom ersten Tag an professionell zu arbeiten und skalierbar zu wachsen.</p>
+<p>Der Markt für Personalvermittlung wächst, der Fachkräftemangel verschärft sich und Unternehmen sind bereit, für gute Recruiting-Dienstleistungen zu zahlen. Die Einstiegshürden sind niedrig: Keine besondere Erlaubnis (bei reiner Vermittlung), überschaubare Startkosten und ein skalierbares Geschäftsmodell. Wer Branchenwissen, ein Netzwerk und den Willen zum Vertrieb mitbringt, hat beste Chancen. Entscheidend ist, dass Sie von Anfang an auf professionelle Tools setzen, ein ATS wie ShortSelect gibt Ihnen die Struktur, die Sie brauchen, um vom ersten Tag an professionell zu arbeiten und skalierbar zu wachsen.</p>
 `,
   },
   {
@@ -180,15 +180,15 @@ export const batch15: BlogPost[] = [
     content: `
 <h2>Warum Diversity Recruiting kein Nice-to-have ist</h2>
 
-<p>Diversity Recruiting wird oft als rein ethisches Thema betrachtet — als nette Geste, die ins Employer Branding passt. Die Datenlage erzählt eine andere Geschichte. Die McKinsey-Studie „Diversity Wins" aus 2020 zeigt, dass Unternehmen im oberen Quartil ethnischer Diversität eine 36 Prozent höhere Wahrscheinlichkeit haben, überdurchschnittlich profitabel zu sein. Bei Geschlechterdiversität in Führungsteams liegt der Wert bei 25 Prozent. Die Boston Consulting Group ergänzt: Unternehmen mit überdurchschnittlicher Diversität im Management erzielen 19 Prozent mehr Umsatz durch Innovation.</p>
+<p>Diversity Recruiting wird oft als rein ethisches Thema betrachtet, als nette Geste, die ins Employer Branding passt. Die Datenlage erzählt eine andere Geschichte. Die McKinsey-Studie „Diversity Wins" aus 2020 zeigt, dass Unternehmen im oberen Quartil ethnischer Diversität eine 36 Prozent höhere Wahrscheinlichkeit haben, überdurchschnittlich profitabel zu sein. Bei Geschlechterdiversität in Führungsteams liegt der Wert bei 25 Prozent. Die Boston Consulting Group ergänzt: Unternehmen mit überdurchschnittlicher Diversität im Management erzielen 19 Prozent mehr Umsatz durch Innovation.</p>
 
-<p>Das ist kein Zufall. Diverse Teams bringen unterschiedliche Perspektiven, Erfahrungen und Denkweisen ein. Sie erkennen blinde Flecken, hinterfragen Annahmen und entwickeln Produkte, die ein breiteres Publikum ansprechen. Homogene Teams dagegen neigen zum Gruppendenken — sie bestätigen einander und übersehen systematisch Risiken und Chancen.</p>
+<p>Das ist kein Zufall. Diverse Teams bringen unterschiedliche Perspektiven, Erfahrungen und Denkweisen ein. Sie erkennen blinde Flecken, hinterfragen Annahmen und entwickeln Produkte, die ein breiteres Publikum ansprechen. Homogene Teams dagegen neigen zum Gruppendenken, sie bestätigen einander und übersehen systematisch Risiken und Chancen.</p>
 
 <blockquote>
   <strong>Kernerkenntnis:</strong> Diversity ist kein Wohlfühl-Programm. Es ist ein messbarer Wettbewerbsvorteil, der sich direkt in Profitabilität, Innovation und Mitarbeiterbindung niederschlägt.
 </blockquote>
 
-<p>Trotzdem scheitern die meisten Unternehmen an der Umsetzung. Der Grund: Gute Absichten reichen nicht. Diversity Recruiting erfordert systematische Veränderungen im gesamten Recruiting-Prozess — von der Stellenanzeige bis zur Einstellungsentscheidung.</p>
+<p>Trotzdem scheitern die meisten Unternehmen an der Umsetzung. Der Grund: Gute Absichten reichen nicht. Diversity Recruiting erfordert systematische Veränderungen im gesamten Recruiting-Prozess, von der Stellenanzeige bis zur Einstellungsentscheidung.</p>
 
 <h2>AGG-Grundlagen: Der rechtliche Rahmen</h2>
 
@@ -218,21 +218,21 @@ export const batch15: BlogPost[] = [
 
 <h2>Inklusive Stellenanzeigen schreiben</h2>
 
-<p>Die Stellenanzeige ist der erste Kontaktpunkt zwischen Ihrem Unternehmen und potenziellen Bewerbern. Und genau hier beginnt die Selektion — oft unbeabsichtigt. Studien zeigen, dass Frauen sich im Durchschnitt erst bewerben, wenn sie 100 Prozent der Anforderungen erfüllen, während Männer sich bereits bei 60 Prozent bewerben. Das bedeutet: Jede überflüssige Anforderung in Ihrer Stellenanzeige reduziert Ihren Bewerberpool — und zwar nicht gleichmäßig.</p>
+<p>Die Stellenanzeige ist der erste Kontaktpunkt zwischen Ihrem Unternehmen und potenziellen Bewerbern. Und genau hier beginnt die Selektion, oft unbeabsichtigt. Studien zeigen, dass Frauen sich im Durchschnitt erst bewerben, wenn sie 100 Prozent der Anforderungen erfüllen, während Männer sich bereits bei 60 Prozent bewerben. Das bedeutet: Jede überflüssige Anforderung in Ihrer Stellenanzeige reduziert Ihren Bewerberpool, und zwar nicht gleichmäßig.</p>
 
 <h3>Geschlechtsneutrale Sprache</h3>
 
 <p>Bestimmte Wörter wirken auf verschiedene Geschlechter unterschiedlich. Forschungen der Technischen Universität München zeigen, dass Begriffe wie „durchsetzungsstark", „dominant" und „analytisch" überwiegend männlich konnotiert sind und weibliche Bewerberinnen abschrecken. Inklusivere Alternativen wären „überzeugend", „entscheidungsfreudig" und „strukturiert".</p>
 
 <ul>
-  <li><strong>Vermeiden:</strong> „Wir suchen einen erfahrenen Manager" — „Manager/in (m/w/d)" oder geschlechtsneutrale Titel verwenden</li>
-  <li><strong>Vermeiden:</strong> „Belastbarkeit" — stattdessen „Fähigkeit, mit wechselnden Anforderungen umzugehen"</li>
-  <li><strong>Vermeiden:</strong> „junges Team" — stattdessen „engagiertes Team"</li>
+  <li><strong>Vermeiden:</strong> „Wir suchen einen erfahrenen Manager", „Manager/in (m/w/d)" oder geschlechtsneutrale Titel verwenden</li>
+  <li><strong>Vermeiden:</strong> „Belastbarkeit", stattdessen „Fähigkeit, mit wechselnden Anforderungen umzugehen"</li>
+  <li><strong>Vermeiden:</strong> „junges Team", stattdessen „engagiertes Team"</li>
 </ul>
 
 <h3>Culture Add statt Culture Fit</h3>
 
-<p>Der Begriff „Culture Fit" klingt harmlos, führt aber in der Praxis häufig dazu, dass Teams sich selbst reproduzieren. Wer „zu uns passen" muss, gleicht den bestehenden Mitarbeitern — in Hintergrund, Denkweise und Persönlichkeit. „Culture Add" dreht die Perspektive um: Welche neuen Perspektiven, Erfahrungen und Fähigkeiten bringt diese Person mit, die unser Team bereichern?</p>
+<p>Der Begriff „Culture Fit" klingt harmlos, führt aber in der Praxis häufig dazu, dass Teams sich selbst reproduzieren. Wer „zu uns passen" muss, gleicht den bestehenden Mitarbeitern, in Hintergrund, Denkweise und Persönlichkeit. „Culture Add" dreht die Perspektive um: Welche neuen Perspektiven, Erfahrungen und Fähigkeiten bringt diese Person mit, die unser Team bereichern?</p>
 
 <h3>Anforderungen realistisch halten</h3>
 
@@ -258,11 +258,11 @@ export const batch15: BlogPost[] = [
 
 <h2>Unconscious Bias im Interview reduzieren</h2>
 
-<p>Unbewusste Vorurteile beeinflussen jeden von uns — unabhängig von Bildung, Erfahrung oder guten Absichten. Im Recruiting-Interview zeigen sich diese Biases besonders deutlich. Der „Halo-Effekt" führt dazu, dass ein positiver erster Eindruck (z.B. gleiche Alma Mater, ähnliches Hobby) alle folgenden Bewertungen positiv einfärbt. Der „Affinity Bias" sorgt dafür, dass wir Menschen bevorzugen, die uns ähnlich sind.</p>
+<p>Unbewusste Vorurteile beeinflussen jeden von uns, unabhängig von Bildung, Erfahrung oder guten Absichten. Im Recruiting-Interview zeigen sich diese Biases besonders deutlich. Der „Halo-Effekt" führt dazu, dass ein positiver erster Eindruck (z.B. gleiche Alma Mater, ähnliches Hobby) alle folgenden Bewertungen positiv einfärbt. Der „Affinity Bias" sorgt dafür, dass wir Menschen bevorzugen, die uns ähnlich sind.</p>
 
 <h3>Structured Interviews als Lösung</h3>
 
-<p>Unstrukturierte Interviews sind nachweislich die schlechtesten Prädiktoren für späteren Joberfolg. Ihre Vorhersagekraft liegt bei gerade einmal 14 Prozent. Strukturierte Interviews dagegen erreichen 51 Prozent — und sie reduzieren gleichzeitig den Einfluss von Unconscious Bias erheblich.</p>
+<p>Unstrukturierte Interviews sind nachweislich die schlechtesten Prädiktoren für späteren Joberfolg. Ihre Vorhersagekraft liegt bei gerade einmal 14 Prozent. Strukturierte Interviews dagegen erreichen 51 Prozent, und sie reduzieren gleichzeitig den Einfluss von Unconscious Bias erheblich.</p>
 
 <ul>
   <li><strong>Gleiche Fragen für alle:</strong> Jeder Kandidat bekommt exakt die gleichen Fragen in der gleichen Reihenfolge.</li>
@@ -273,7 +273,7 @@ export const batch15: BlogPost[] = [
 
 <h2>Diverse Sourcing-Kanäle nutzen</h2>
 
-<p>Wenn Sie immer auf den gleichen Kanälen suchen, finden Sie immer die gleichen Profile. LinkedIn ist hervorragend — aber es bildet nicht die gesamte Arbeitswelt ab. Um einen diverseren Kandidatenpool aufzubauen, müssen Sie Ihre Sourcing-Strategie bewusst erweitern.</p>
+<p>Wenn Sie immer auf den gleichen Kanälen suchen, finden Sie immer die gleichen Profile. LinkedIn ist hervorragend, aber es bildet nicht die gesamte Arbeitswelt ab. Um einen diverseren Kandidatenpool aufzubauen, müssen Sie Ihre Sourcing-Strategie bewusst erweitern.</p>
 
 <h3>Spezialisierte Plattformen und Netzwerke</h3>
 
@@ -295,7 +295,7 @@ export const batch15: BlogPost[] = [
 <h3>Die wichtigsten Diversity-Kennzahlen</h3>
 
 <ul>
-  <li><strong>Pipeline Diversity:</strong> Wie divers ist Ihr Bewerberpool in jeder Phase des Funnels? Wenn 40 Prozent der Bewerber weiblich sind, aber nur 10 Prozent der Einstellungen — dann haben Sie ein Problem im Prozess, nicht im Sourcing.</li>
+  <li><strong>Pipeline Diversity:</strong> Wie divers ist Ihr Bewerberpool in jeder Phase des Funnels? Wenn 40 Prozent der Bewerber weiblich sind, aber nur 10 Prozent der Einstellungen, dann haben Sie ein Problem im Prozess, nicht im Sourcing.</li>
   <li><strong>Diversity Ratio:</strong> Anteil unterrepräsentierter Gruppen in der Belegschaft, nach Abteilung und Hierarchieebene aufgeschlüsselt.</li>
   <li><strong>Offer Gap:</strong> Gibt es systematische Unterschiede bei Gehaltsangeboten? Erhalten Frauen oder Minderheiten niedrigere Einstiegsgehälter bei gleicher Qualifikation?</li>
   <li><strong>Time-to-Hire nach Gruppe:</strong> Dauert der Einstellungsprozess für bestimmte Gruppen systematisch länger?</li>
@@ -318,12 +318,12 @@ export const batch15: BlogPost[] = [
 </ol>
 
 <blockquote>
-  <strong>Merke:</strong> Diversity Recruiting ist kein einmaliges Projekt, sondern ein fortlaufender Prozess. Jeder dieser Quick Wins ist ein Schritt in die richtige Richtung — und jeder Schritt zählt.
+  <strong>Merke:</strong> Diversity Recruiting ist kein einmaliges Projekt, sondern ein fortlaufender Prozess. Jeder dieser Quick Wins ist ein Schritt in die richtige Richtung, und jeder Schritt zählt.
 </blockquote>
 
 <h2>Fazit: Diversität als strategischer Vorteil</h2>
 
-<p>Diversity Recruiting ist keine Compliance-Übung und kein Marketing-Gag. Es ist eine strategische Entscheidung, die sich in harten Zahlen auszahlt — mehr Innovation, höhere Profitabilität, bessere Mitarbeiterbindung. Der Schlüssel liegt in der systematischen Umsetzung: inklusive Stellenanzeigen, anonymisierte Vorauswahl, strukturierte Interviews und diverse Sourcing-Kanäle. Mit den richtigen Tools und Prozessen — wie einem ATS, das Blind Hiring und Diversity-Kennzahlen unterstützt — können Sie Ihren Recruiting-Prozess Schritt für Schritt inklusiver gestalten. Beginnen Sie heute mit einem Quick Win und bauen Sie von dort aus weiter.</p>
+<p>Diversity Recruiting ist keine Compliance-Übung und kein Marketing-Gag. Es ist eine strategische Entscheidung, die sich in harten Zahlen auszahlt, mehr Innovation, höhere Profitabilität, bessere Mitarbeiterbindung. Der Schlüssel liegt in der systematischen Umsetzung: inklusive Stellenanzeigen, anonymisierte Vorauswahl, strukturierte Interviews und diverse Sourcing-Kanäle. Mit den richtigen Tools und Prozessen, wie einem ATS, das Blind Hiring und Diversity-Kennzahlen unterstützt, können Sie Ihren Recruiting-Prozess Schritt für Schritt inklusiver gestalten. Beginnen Sie heute mit einem Quick Win und bauen Sie von dort aus weiter.</p>
 `,
   },
 ];

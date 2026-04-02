@@ -10,12 +10,12 @@ export const batch3: BlogPost[] = [
     category: "Praxis-Guides",
     tags: ["Active Sourcing", "Passive Kandidaten", "LinkedIn", "Talent Pool"],
     excerpt:
-      "80% der besten Talente suchen nicht aktiv. Active Sourcing ist der Schlüssel — wenn man es richtig macht.",
+      "80% der besten Talente suchen nicht aktiv. Active Sourcing ist der Schlüssel, wenn man es richtig macht.",
     readTime: "8 Min.",
     content: `
 <h2>Was ist Active Sourcing?</h2>
 
-<p>Der Arbeitsmarkt hat sich grundlegend verändert. Während Unternehmen früher Stellenanzeigen schalten konnten und sich die Bewerbungen stapelten, sieht die Realität heute anders aus: <strong>80 % der besten Talente suchen nicht aktiv nach einem neuen Job.</strong> Diese sogenannten passiven Kandidaten sind in festen Anstellungen, zufrieden — aber durchaus offen für spannende Angebote, wenn diese richtig an sie herangetragen werden.</p>
+<p>Der Arbeitsmarkt hat sich grundlegend verändert. Während Unternehmen früher Stellenanzeigen schalten konnten und sich die Bewerbungen stapelten, sieht die Realität heute anders aus: <strong>80 % der besten Talente suchen nicht aktiv nach einem neuen Job.</strong> Diese sogenannten passiven Kandidaten sind in festen Anstellungen, zufrieden, aber durchaus offen für spannende Angebote, wenn diese richtig an sie herangetragen werden.</p>
 
 <p>Active Sourcing beschreibt die proaktive Suche und Direktansprache von Kandidaten durch Recruiter. Statt auf eingehende Bewerbungen zu warten, gehen Sie aktiv auf potenzielle Talente zu. Das erfordert Strategie, die richtigen Kanäle und vor allem eine überzeugende Ansprache.</p>
 
@@ -39,7 +39,7 @@ export const batch3: BlogPost[] = [
 <p>XING verliert zwar an Bedeutung, ist aber im deutschen Mittelstand nach wie vor relevant. Besonders in Branchen wie Finanzen, Versicherungen, Ingenieurwesen und im öffentlichen Sektor finden sich hier Profile, die auf LinkedIn nicht vertreten sind. Der XING TalentManager bietet ähnliche Funktionen wie der LinkedIn Recruiter.</p>
 
 <h3>GitHub &amp; Stack Overflow</h3>
-<p>Für Tech-Recruiting sind diese Plattformen Gold wert. Auf GitHub können Sie die tatsächlichen Coding-Fähigkeiten eines Kandidaten einschätzen — Repositories, Contributions, verwendete Technologien. Stack Overflow zeigt Expertise durch beantwortete Fragen und Reputation. Die Ansprache muss hier besonders authentisch und fachlich fundiert sein.</p>
+<p>Für Tech-Recruiting sind diese Plattformen Gold wert. Auf GitHub können Sie die tatsächlichen Coding-Fähigkeiten eines Kandidaten einschätzen, Repositories, Contributions, verwendete Technologien. Stack Overflow zeigt Expertise durch beantwortete Fragen und Reputation. Die Ansprache muss hier besonders authentisch und fachlich fundiert sein.</p>
 
 <h3>Fachforen und Communities</h3>
 <p>Branchenspezifische Foren, Slack-Communities, Discord-Server und Fachgruppen sind oft unterschätzte Sourcing-Kanäle. Hier finden Sie hochspezialisierte Fachkräfte in ihrem natürlichen Umfeld. Der Schlüssel: Erst Mehrwert bieten, dann anschreiben. Wer in einer Community nur recruitet, ohne beizutragen, wird schnell ignoriert.</p>
@@ -50,11 +50,11 @@ export const batch3: BlogPost[] = [
 
 <h3>Die wichtigsten Operatoren</h3>
 <ul>
-  <li><strong>AND</strong> — Alle Begriffe müssen vorkommen: <em>"Java AND Spring AND Microservices"</em></li>
-  <li><strong>OR</strong> — Mindestens ein Begriff muss vorkommen: <em>"Recruiter OR Talent Acquisition OR Personalberater"</em></li>
-  <li><strong>NOT</strong> — Begriff ausschließen: <em>"Developer NOT Junior NOT Intern"</em></li>
-  <li><strong>Anführungszeichen ""</strong> — Exakte Phrase: <em>"Product Manager"</em></li>
-  <li><strong>Klammern ()</strong> — Gruppierung: <em>(Java OR Python) AND (Senior OR Lead)</em></li>
+  <li><strong>AND</strong>, Alle Begriffe müssen vorkommen: <em>"Java AND Spring AND Microservices"</em></li>
+  <li><strong>OR</strong>, Mindestens ein Begriff muss vorkommen: <em>"Recruiter OR Talent Acquisition OR Personalberater"</em></li>
+  <li><strong>NOT</strong>, Begriff ausschließen: <em>"Developer NOT Junior NOT Intern"</em></li>
+  <li><strong>Anführungszeichen ""</strong>, Exakte Phrase: <em>"Product Manager"</em></li>
+  <li><strong>Klammern ()</strong>, Gruppierung: <em>(Java OR Python) AND (Senior OR Lead)</em></li>
 </ul>
 
 <h3>Beispiel-Suchstrings</h3>
@@ -72,7 +72,7 @@ export const batch3: BlogPost[] = [
 <p>Was daran schlecht ist: Keine Personalisierung, keine konkrete Begründung warum gerade dieser Kandidat, kein Bezug zum Profil, Massen-Mail-Charakter, zu viel über den Arbeitgeber und zu wenig über den Kandidaten.</p>
 
 <h3>So geht es besser</h3>
-<blockquote>Hallo Max, ich habe Ihren Vortrag zur Event-Driven Architecture beim JUG Hamburg gesehen — die Lösung mit Kafka Streams für das Ordering-Problem war elegant. Wir bauen gerade bei [Firma] ein neues Plattform-Team auf, das genau solche Herausforderungen löst: verteilte Systeme, hohe Verfügbarkeit, 50.000+ Events/Sekunde. Das Team ist 6 Leute stark, arbeitet remote-first und setzt auf Kotlin + Kafka. Darf ich Ihnen mehr erzählen? Beste Grüße, Lisa</blockquote>
+<blockquote>Hallo Max, ich habe Ihren Vortrag zur Event-Driven Architecture beim JUG Hamburg gesehen, die Lösung mit Kafka Streams für das Ordering-Problem war elegant. Wir bauen gerade bei [Firma] ein neues Plattform-Team auf, das genau solche Herausforderungen löst: verteilte Systeme, hohe Verfügbarkeit, 50.000+ Events/Sekunde. Das Team ist 6 Leute stark, arbeitet remote-first und setzt auf Kotlin + Kafka. Darf ich Ihnen mehr erzählen? Beste Grüße, Lisa</blockquote>
 <p>Was daran gut ist: <strong>Konkreter Bezug zum Kandidaten</strong> (Vortrag), technische Tiefe, klare Information über die Rolle, kein Druck, offene Frage am Ende.</p>
 
 <h3>5 Regeln für gute Ansprache-Nachrichten</h3>
@@ -91,9 +91,9 @@ export const batch3: BlogPost[] = [
 <h3>Der ideale Follow-up-Rhythmus</h3>
 <ol>
   <li><strong>Erstansprache:</strong> Personalisierte Nachricht (Tag 0)</li>
-  <li><strong>1. Follow-up:</strong> Nach 5-7 Tagen — kurz, freundlich, neuer Aspekt oder Information</li>
-  <li><strong>2. Follow-up:</strong> Nach weiteren 7-10 Tagen — anderer Kanal (z. B. E-Mail statt LinkedIn) oder Mehrwert-Content</li>
-  <li><strong>3. Follow-up:</strong> Nach 2-3 Wochen — letzter Versuch, klar kommunizieren dass Sie nicht weiter stören</li>
+  <li><strong>1. Follow-up:</strong> Nach 5-7 Tagen, kurz, freundlich, neuer Aspekt oder Information</li>
+  <li><strong>2. Follow-up:</strong> Nach weiteren 7-10 Tagen, anderer Kanal (z. B. E-Mail statt LinkedIn) oder Mehrwert-Content</li>
+  <li><strong>3. Follow-up:</strong> Nach 2-3 Wochen, letzter Versuch, klar kommunizieren dass Sie nicht weiter stören</li>
 </ol>
 
 <p>Wichtig: Jedes Follow-up muss einen neuen Aspekt bringen. Einfach "Haben Sie meine Nachricht gesehen?" zu schreiben, ist kontraproduktiv. Teilen Sie stattdessen einen relevanten Blogartikel, eine Firmenneuigkeit oder eine Einladung zu einem Event.</p>
@@ -122,15 +122,15 @@ export const batch3: BlogPost[] = [
 
 <h2>Tools und Automatisierung</h2>
 
-<p>Active Sourcing lässt sich an vielen Stellen durch Tools effizienter gestalten — ohne die persönliche Note zu verlieren.</p>
+<p>Active Sourcing lässt sich an vielen Stellen durch Tools effizienter gestalten, ohne die persönliche Note zu verlieren.</p>
 
 <h3>Hilfreiche Tool-Kategorien</h3>
 <ul>
-  <li><strong>Sourcing-Tools:</strong> LinkedIn Recruiter, XING TalentManager, Hiretual, AmazingHiring — für die Kandidatensuche</li>
-  <li><strong>E-Mail-Finder:</strong> Hunter.io, Lusha, ContactOut — für Kontaktdaten außerhalb von LinkedIn</li>
-  <li><strong>Sequencing-Tools:</strong> Lemlist, Woodpecker — für automatisierte Follow-up-Sequenzen</li>
+  <li><strong>Sourcing-Tools:</strong> LinkedIn Recruiter, XING TalentManager, Hiretual, AmazingHiring, für die Kandidatensuche</li>
+  <li><strong>E-Mail-Finder:</strong> Hunter.io, Lusha, ContactOut, für Kontaktdaten außerhalb von LinkedIn</li>
+  <li><strong>Sequencing-Tools:</strong> Lemlist, Woodpecker, für automatisierte Follow-up-Sequenzen</li>
   <li><strong>ATS-Integration:</strong> Kandidaten direkt aus dem Sourcing ins ATS überführen, Pipeline tracken</li>
-  <li><strong>Chrome Extensions:</strong> Instant Data Scraper, Octopus CRM — für Profilnummern und Export</li>
+  <li><strong>Chrome Extensions:</strong> Instant Data Scraper, Octopus CRM, für Profilnummern und Export</li>
 </ul>
 
 <p>Die Automatisierung sollte sich auf repetitive Aufgaben beschränken: Kontaktdaten finden, Follow-ups planen, Pipeline-Status aktualisieren. <strong>Die eigentliche Ansprache muss immer individuell bleiben.</strong></p>
@@ -159,7 +159,7 @@ export const batch3: BlogPost[] = [
 
 <h2>Fazit</h2>
 
-<p>Active Sourcing ist keine Option mehr — es ist eine Notwendigkeit. In einem Markt, in dem die besten Talente nicht aktiv suchen, müssen Recruiter selbst den ersten Schritt machen. Der Schlüssel zum Erfolg liegt in drei Dingen: den richtigen Kanälen, einer personalisierten Ansprache und einem langfristigen Talent Pool. <strong>Wer Active Sourcing als Beziehungsaufbau versteht statt als Massen-Outreach, wird die besten Kandidaten für sich gewinnen.</strong></p>
+<p>Active Sourcing ist keine Option mehr, es ist eine Notwendigkeit. In einem Markt, in dem die besten Talente nicht aktiv suchen, müssen Recruiter selbst den ersten Schritt machen. Der Schlüssel zum Erfolg liegt in drei Dingen: den richtigen Kanälen, einer personalisierten Ansprache und einem langfristigen Talent Pool. <strong>Wer Active Sourcing als Beziehungsaufbau versteht statt als Massen-Outreach, wird die besten Kandidaten für sich gewinnen.</strong></p>
 `,
   },
   {
@@ -176,7 +176,7 @@ export const batch3: BlogPost[] = [
     content: `
 <h2>Was ist Candidate Experience?</h2>
 
-<p>Candidate Experience beschreibt die Gesamtheit aller Erfahrungen, die ein Kandidat während des Bewerbungsprozesses mit Ihrem Unternehmen macht. Vom ersten Kontakt mit der Stellenanzeige bis zum Onboarding — oder bis zur Absage. <strong>Jeder Touchpoint formt das Bild, das sich ein Kandidat von Ihrem Unternehmen macht.</strong></p>
+<p>Candidate Experience beschreibt die Gesamtheit aller Erfahrungen, die ein Kandidat während des Bewerbungsprozesses mit Ihrem Unternehmen macht. Vom ersten Kontakt mit der Stellenanzeige bis zum Onboarding, oder bis zur Absage. <strong>Jeder Touchpoint formt das Bild, das sich ein Kandidat von Ihrem Unternehmen macht.</strong></p>
 
 <p>Warum ist das wichtig? Die Zahlen sprechen eine deutliche Sprache:</p>
 <ul>
@@ -199,7 +199,7 @@ export const batch3: BlogPost[] = [
 <p><strong>Typische Pain Points:</strong></p>
 <ul>
   <li>Stellenanzeigen mit vagen Formulierungen ("dynamisches Umfeld", "flache Hierarchien") ohne konkrete Informationen</li>
-  <li>Keine Gehaltsangabe — in vielen europäischen Ländern inzwischen gesetzlich vorgeschrieben</li>
+  <li>Keine Gehaltsangabe, in vielen europäischen Ländern inzwischen gesetzlich vorgeschrieben</li>
   <li>Karriereseite veraltet, nicht mobiloptimiert oder schwer zu finden</li>
   <li>Keine Einblicke in Teamkultur, Arbeitsalltag oder Benefits</li>
 </ul>
@@ -207,15 +207,15 @@ export const batch3: BlogPost[] = [
 <p><strong>Konkrete Verbesserungen:</strong></p>
 <ul>
   <li>Klare, ehrliche Stellenbeschreibungen mit konkreten Aufgaben und Tech-Stack</li>
-  <li>Gehaltsspanne angeben — das spart beiden Seiten Zeit</li>
+  <li>Gehaltsspanne angeben, das spart beiden Seiten Zeit</li>
   <li>Karriereseite mit echten Team-Fotos, Mitarbeiter-Stimmen und konkreten Benefits</li>
   <li>Bewerbungsprozess transparent darstellen: Welche Schritte gibt es? Wie lange dauert es?</li>
-  <li>Mobile-optimiertes Design — über 60 % der Kandidaten suchen mobil</li>
+  <li>Mobile-optimiertes Design, über 60 % der Kandidaten suchen mobil</li>
 </ul>
 
 <h3>Phase 2: Bewerbung einreichen</h3>
 
-<p>Hier passiert der größte Drop-off. Wenn die Bewerbung zu kompliziert ist, springen Kandidaten ab — besonders die guten, die genug Alternativen haben.</p>
+<p>Hier passiert der größte Drop-off. Wenn die Bewerbung zu kompliziert ist, springen Kandidaten ab, besonders die guten, die genug Alternativen haben.</p>
 
 <p><strong>Typische Pain Points:</strong></p>
 <ul>
@@ -232,18 +232,18 @@ export const batch3: BlogPost[] = [
   <li>Maximal 5-7 Pflichtfelder im Bewerbungsformular</li>
   <li>CV-Parsing: Lebenslauf hochladen, Felder werden automatisch befüllt</li>
   <li>Sofortige Bestätigungs-E-Mail mit nächsten Schritten und Zeitrahmen</li>
-  <li>Mobile-freundliches Formular — keine Desktop-only-Lösung</li>
+  <li>Mobile-freundliches Formular, keine Desktop-only-Lösung</li>
 </ul>
 
 <blockquote>Jedes zusätzliche Feld im Bewerbungsformular reduziert die Conversion Rate um durchschnittlich 5 %. Fragen Sie nur, was Sie wirklich in dieser Phase brauchen.</blockquote>
 
 <h3>Phase 3: Screening &amp; Vorauswahl</h3>
 
-<p>Zwischen Bewerbungseingang und erster Rückmeldung liegt oft ein schwarzes Loch. Der Kandidat hat keine Ahnung, was passiert — und das Vertrauen schwindet mit jedem Tag.</p>
+<p>Zwischen Bewerbungseingang und erster Rückmeldung liegt oft ein schwarzes Loch. Der Kandidat hat keine Ahnung, was passiert, und das Vertrauen schwindet mit jedem Tag.</p>
 
 <p><strong>Typische Pain Points:</strong></p>
 <ul>
-  <li>Keine Rückmeldung nach der Bewerbung — tagelang, wochenlang, manchmal nie</li>
+  <li>Keine Rückmeldung nach der Bewerbung, tagelang, wochenlang, manchmal nie</li>
   <li>Automatische Absagen ohne Personalisierung</li>
   <li>Unklarer Status: "Wo steht meine Bewerbung?"</li>
   <li>Ghosting: Einfach nichts mehr hören</li>
@@ -259,7 +259,7 @@ export const batch3: BlogPost[] = [
 
 <h3>Phase 4: Interview &amp; Auswahlverfahren</h3>
 
-<p>Das Interview ist der intensivste Touchpoint. Hier erlebt der Kandidat Ihr Unternehmen direkt — durch die Menschen, die Atmosphäre und den Prozess.</p>
+<p>Das Interview ist der intensivste Touchpoint. Hier erlebt der Kandidat Ihr Unternehmen direkt, durch die Menschen, die Atmosphäre und den Prozess.</p>
 
 <p><strong>Typische Pain Points:</strong></p>
 <ul>
@@ -286,7 +286,7 @@ export const batch3: BlogPost[] = [
 
 <p><strong>Typische Pain Points:</strong></p>
 <ul>
-  <li>Entscheidung dauert zu lange — der Kandidat hat längst ein anderes Angebot</li>
+  <li>Entscheidung dauert zu lange, der Kandidat hat längst ein anderes Angebot</li>
   <li>Angebot kommt per Post statt digital</li>
   <li>Keine Verhandlungsbereitschaft signalisiert</li>
   <li>Absage nach langer Wartezeit ohne Begründung</li>
@@ -295,7 +295,7 @@ export const batch3: BlogPost[] = [
 <p><strong>Konkrete Verbesserungen:</strong></p>
 <ul>
   <li>Entscheidung innerhalb von 5 Werktagen nach dem letzten Interview</li>
-  <li>Telefonisches Angebot vor dem schriftlichen — persönlicher und wertschätzender</li>
+  <li>Telefonisches Angebot vor dem schriftlichen, persönlicher und wertschätzender</li>
   <li>Digitaler Vertrag mit E-Signatur für schnelle Abwicklung</li>
   <li>Bei Absagen: Persönliches Telefonat mit konkretem Feedback</li>
   <li>Talent Pool anbieten: "Aktuell passt es nicht, aber dürfen wir Sie für zukünftige Positionen vormerken?"</li>
@@ -303,7 +303,7 @@ export const batch3: BlogPost[] = [
 
 <h3>Phase 6: Pre-Boarding &amp; Onboarding</h3>
 
-<p>Die Candidate Experience endet nicht mit der Vertragsunterschrift. Die Zeit zwischen Zusage und erstem Arbeitstag ist kritisch — hier springen noch 20-30 % der Kandidaten ab, wenn sie sich nicht wertgeschätzt fühlen.</p>
+<p>Die Candidate Experience endet nicht mit der Vertragsunterschrift. Die Zeit zwischen Zusage und erstem Arbeitstag ist kritisch, hier springen noch 20-30 % der Kandidaten ab, wenn sie sich nicht wertgeschätzt fühlen.</p>
 
 <p><strong>Konkrete Verbesserungen:</strong></p>
 <ul>
@@ -334,7 +334,7 @@ export const batch3: BlogPost[] = [
 <p>Monitoring der Bewertungen auf Arbeitgeberbewertungsportalen. Achten Sie besonders auf Kommentare zum Bewerbungsprozess. Negative Erfahrungen tauchen hier zuverlässig auf.</p>
 
 <h3>Candidate Experience Survey</h3>
-<p>Ein kurzer Fragebogen (5-7 Fragen) nach Abschluss des Prozesses — sowohl an eingestellte als auch an abgelehnte Kandidaten. Fragen Sie nach Kommunikation, Geschwindigkeit, Transparenz und Wertschätzung.</p>
+<p>Ein kurzer Fragebogen (5-7 Fragen) nach Abschluss des Prozesses, sowohl an eingestellte als auch an abgelehnte Kandidaten. Fragen Sie nach Kommunikation, Geschwindigkeit, Transparenz und Wertschätzung.</p>
 
 <h2>Automatisierung als Hebel</h2>
 
@@ -385,7 +385,7 @@ export const batch3: BlogPost[] = [
 
 <h2>Fazit</h2>
 
-<p>Candidate Experience ist kein Luxus und kein HR-Trend — es ist ein Wettbewerbsvorteil. In einem Markt, in dem Kandidaten die Wahl haben, entscheidet die Erfahrung im Bewerbungsprozess oft darüber, ob Sie die besten Talente gewinnen oder verlieren. <strong>Die gute Nachricht: Schon kleine Verbesserungen in Kommunikation, Geschwindigkeit und Transparenz können Ihre Besetzungsquote signifikant steigern.</strong> Messen Sie, optimieren Sie, und machen Sie den Bewerbungsprozess zu dem, was er sein sollte: eine positive Erfahrung für alle Beteiligten.</p>
+<p>Candidate Experience ist kein Luxus und kein HR-Trend, es ist ein Wettbewerbsvorteil. In einem Markt, in dem Kandidaten die Wahl haben, entscheidet die Erfahrung im Bewerbungsprozess oft darüber, ob Sie die besten Talente gewinnen oder verlieren. <strong>Die gute Nachricht: Schon kleine Verbesserungen in Kommunikation, Geschwindigkeit und Transparenz können Ihre Besetzungsquote signifikant steigern.</strong> Messen Sie, optimieren Sie, und machen Sie den Bewerbungsprozess zu dem, was er sein sollte: eine positive Erfahrung für alle Beteiligten.</p>
 `,
   },
 ];

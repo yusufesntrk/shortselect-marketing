@@ -2,18 +2,18 @@
 import BrancheLayout from '../../layouts/BrancheLayout.astro';
 
 const painPoints = [
-  { title: "Fachkraeftemangel", description: "87% der IT-Stellen bleiben laenger als 3 Monate unbesetzt.", iconPath: '<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="17" x2="22" y1="11" y2="11"/>' },
+  { title: "Fachkräftemangel", description: "87% der IT-Stellen bleiben länger als 3 Monate unbesetzt.", iconPath: '<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="17" x2="22" y1="11" y2="11"/>' },
   { title: "Passive Kandidaten", description: "Die besten Entwickler suchen nicht aktiv.", iconPath: '<path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/><line x1="1" x2="23" y1="1" y2="23"/>' },
   { title: "Technische Bewertung", description: "Wie bewerten Sie Skills, die Sie selbst nicht haben?", iconPath: '<polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>' },
 ];
 
 const features = [
-  { title: "KI-Skills-Matching", description: "Automatischer Abgleich: Java, Python, React, AWS — bis auf Framework-Level.", iconPath: '<path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"/><path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4"/>' },
-  { title: "Talent Pools nach Tech Stack", description: "Pools fuer Frontend, Backend, DevOps, Data.", iconPath: '<path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m6.08 9.5-3.5 1.6a1 1 0 0 0 0 1.81l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9a1 1 0 0 0 0-1.83l-3.5-1.59"/><path d="m6.08 14.5-3.5 1.6a1 1 0 0 0 0 1.81l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9a1 1 0 0 0 0-1.83l-3.5-1.59"/>' },
+  { title: "KI-Skills-Matching", description: "Automatischer Abgleich: Java, Python, React, AWS. bis auf Framework-Level.", iconPath: '<path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"/><path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4"/>' },
+  { title: "Talent Pools nach Tech Stack", description: "Pools für Frontend, Backend, DevOps, Data.", iconPath: '<path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m6.08 9.5-3.5 1.6a1 1 0 0 0 0 1.81l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9a1 1 0 0 0 0-1.83l-3.5-1.59"/><path d="m6.08 14.5-3.5 1.6a1 1 0 0 0 0 1.81l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9a1 1 0 0 0 0-1.83l-3.5-1.59"/>' },
   { title: "Schnelle Bewerbung", description: "Entwickler hassen lange Formulare. Ein-Klick-Bewerbung.", iconPath: '<path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/>' },
   { title: "GitHub/LinkedIn Import", description: "CV-Upload aus allen Formaten, auch LinkedIn-PDFs.", iconPath: '<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/>' },
   { title: "Screening Fragen", description: "Technische Screening-Fragen vor dem Erstgespraech.", iconPath: '<path d="M9 11 5 15l4 4"/><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>' },
-  { title: "Analytics pro Tech-Rolle", description: "Time-to-Hire Benchmarks fuer jede Tech-Rolle.", iconPath: '<line x1="12" x2="12" y1="20" y2="10"/><line x1="18" x2="18" y1="20" y2="4"/><line x1="6" x2="6" y1="20" y2="16"/>' },
+  { title: "Analytics pro Tech-Rolle", description: "Time-to-Hire Benchmarks für jede Tech-Rolle.", iconPath: '<line x1="12" x2="12" y1="20" y2="10"/><line x1="18" x2="18" y1="20" y2="4"/><line x1="6" x2="6" y1="20" y2="16"/>' },
 ];
 ---
 
@@ -25,12 +25,12 @@ const features = [
   headline="IT-Recruiting: Die besten"
   highlightedWord="Entwickler"
   headlineSuffix="finden."
-  subline="Software Engineers, DevOps, Data Scientists — mit ShortSelect finden Sie Tech-Talente schneller."
+  subline="Software Engineers, DevOps, Data Scientists, mit ShortSelect finden Sie Tech-Talente schneller."
   painBadge="Die Herausforderung"
   painTitle="Warum IT-Recruiting so"
   painHighlight="schwer"
   painPoints={painPoints}
-  featuresTitle="Features fuer"
+  featuresTitle="Features für"
   featuresHighlight="IT-Recruiting"
   features={features}
 />

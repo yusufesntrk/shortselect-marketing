@@ -3,30 +3,30 @@ import MarketingLayout from '../layouts/MarketingLayout.astro';
 import CTASection from '../components/landing/CTASection.astro';
 
 const securityPillars = [
-  { title: "DSGVO-Konformitaet", description: "Vollstaendig DSGVO-konform. Automatische Loeschfristen. Einwilligungsmanagement. Recht auf Vergessenwerden. Datenexport auf Knopfdruck." },
-  { title: "Verschluesselung", description: "AES-256 Verschluesselung at rest. TLS 1.3 in transit. Alle Daten werden verschluesselt gespeichert und uebertragen." },
+  { title: "DSGVO-Konformität", description: "Vollständig DSGVO-konform. Automatische Löschfristen. Einwilligungsmanagement. Recht auf Vergessenwerden. Datenexport auf Knopfdruck." },
+  { title: "Verschlüsselung", description: "AES-256 Verschlüsselung at rest. TLS 1.3 in transit. Alle Daten werden verschlüsselt gespeichert und übertragen." },
   { title: "Infrastruktur", description: "Gehostet auf Supabase in der EU (Frankfurt). Row Level Security auf Datenbankebene. Automatische Backups." },
 ];
 
 const technicalDetails = [
   { title: "Row Level Security", description: "Mandantentrennung auf Datenbankebene -- kein Mandant sieht Daten eines anderen." },
   { title: "RBAC", description: "5 Rollen: Super Admin, Admin, Manager, Member, Readonly." },
-  { title: "Audit Logging", description: "Lueckenlose Protokollierung aller Datenaenderungen." },
-  { title: "PII Masking", description: "Kandidaten-Daten optional anonymisieren fuer Client Portal." },
-  { title: "Automatische Loeschung", description: "Konfigurierbare Aufbewahrungsfristen mit automatischer Loeschung." },
-  { title: "2FA", description: "Zwei-Faktor-Authentifizierung fuer zusaetzliche Kontosicherheit." },
+  { title: "Audit Logging", description: "Lückenlose Protokollierung aller Datenänderungen." },
+  { title: "PII Masking", description: "Kandidaten-Daten optional anonymisieren für Client Portal." },
+  { title: "Automatische Löschung", description: "Konfigurierbare Aufbewahrungsfristen mit automatischer Löschung." },
+  { title: "2FA", description: "Zwei-Faktor-Authentifizierung für zusätzliche Kontosicherheit." },
 ];
 
 const faqs = [
-  { question: "Wo werden meine Daten gespeichert?", answer: "Alle Daten werden in der EU (Frankfurt) auf der Supabase-Infrastruktur gespeichert. Es findet kein Datentransfer in Drittlaender statt." },
+  { question: "Wo werden meine Daten gespeichert?", answer: "Alle Daten werden in der EU (Frankfurt) auf der Supabase-Infrastruktur gespeichert. Es findet kein Datentransfer in Drittländer statt." },
   { question: "Wie wird Mandantentrennung sichergestellt?", answer: "Durch Row Level Security auf PostgreSQL-Ebene. Jede Datenbankabfrage wird automatisch nach Tenant gefiltert -- eine Umgehung ist technisch ausgeschlossen." },
-  { question: "Kann ich Daten exportieren?", answer: "Ja, ein vollstaendiger Datenexport ist jederzeit moeglich. Sie koennen alle Kandidaten-, Bewerbungs- und Unternehmensdaten als CSV oder JSON exportieren." },
+  { question: "Kann ich Daten exportieren?", answer: "Ja, ein vollständiger Datenexport ist jederzeit möglich. Sie können alle Kandidaten-, Bewerbungs- und Unternehmensdaten als CSV oder JSON exportieren." },
 ];
 ---
 
 <MarketingLayout
   title="Sicherheit & Datenschutz – DSGVO-konformes Recruiting | ShortSelect"
-  description="EU-Server, AES-256 Verschluesselung, Row Level Security, DSGVO-Konformitaet. So schuetzt ShortSelect Ihre Bewerberdaten."
+  description="EU-Server, AES-256 Verschlüsselung, Row Level Security, DSGVO-Konformität. So schuetzt ShortSelect Ihre Bewerberdaten."
 >
   <!-- Hero (dark) -->
   <section class="relative py-24 md:py-36 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white overflow-hidden">
