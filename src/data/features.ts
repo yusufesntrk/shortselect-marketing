@@ -1,27 +1,27 @@
 export const aiFeatures = [
   {
-    title: "KI-Matching",
-    description: "Intelligenter Skills-Abgleich mit Match-Scores von 0-100. Fähigkeiten, Erfahrung und Kulturfit werden automatisch analysiert - DSGVO-konform.",
+    title: "AgentBurst Match",
+    description: "Autonomer Matching-Agent: Gleicht Skills, Erfahrung und Kulturfit ab und vergibt präzise Match-Scores von 0-100. Läuft rund um die Uhr — DSGVO-konform.",
     icon: "brain",
   },
   {
-    title: "Smart Ranking",
-    description: "KI-basierte Kandidaten-Priorisierung. Die besten Talente erscheinen immer oben - basierend auf Ihren individuellen Kriterien.",
+    title: "AgentBurst Rank",
+    description: "KI-Agent für automatische Priorisierung. Die besten Talente erscheinen immer oben — basierend auf Ihren individuellen Kriterien. Autonom, nicht manuell.",
     icon: "zap",
   },
   {
-    title: "KI-Screening",
-    description: "Automatisches Bewerber-Screening in Sekunden. Die KI prüft Qualifikationen, bewertet Knockout-Kriterien und filtert - end-to-end.",
+    title: "AgentBurst Screen",
+    description: "Autonomes Bewerber-Screening in Sekunden. Der Agent prüft Qualifikationen, bewertet Knockout-Kriterien und filtert — end-to-end ohne Klick.",
     icon: "bot",
   },
   {
-    title: "CV-Anonymisierung",
-    description: "Bias-freies Recruiting: Name, Alter, Geschlecht und Foto werden automatisch entfernt. Nur Qualifikation zählt.",
+    title: "AgentBurst Anon",
+    description: "Bias-freies Recruiting: Name, Alter, Geschlecht und Foto werden automatisch entfernt. Der Agent anonymisiert jeden Lebenslauf sofort.",
     icon: "eye-off",
   },
   {
-    title: "Auto-Nurturing",
-    description: "Automatische Nachfass-E-Mails, Statusupdates und Erinnerungen. Kein Kandidat wird vergessen - die KI hält alle warm.",
+    title: "AgentBurst Nurture",
+    description: "Autonomer Nurturing-Agent: Nachfass-E-Mails, Statusupdates und Erinnerungen werden automatisch verschickt. Kein Kandidat wird vergessen.",
     icon: "mail",
   },
 ];

@@ -1,0 +1,50 @@
+---
+import VergleichLayout from '../../layouts/VergleichLayout.astro';
+
+const comparisonData = [
+  { feature: "KI-Agenten", ssStatus: "check" as const, ssLabel: "11 AgentBurst-Agenten", compStatus: "x" as const, compLabel: "Keine" },
+  { feature: "Preis/User", ssStatus: "check" as const, ssLabel: "Ab 0\u20AC/Monat", compStatus: "x" as const, compLabel: "Ab \u00A3120+/User/Monat" },
+  { feature: "Bewertungen", ssStatus: "check" as const, ssLabel: "4.8/5 (127+ Reviews)", compStatus: "warn" as const, compLabel: "Nur 4 Reviews" },
+  { feature: "KI-Matching", ssStatus: "check" as const, ssLabel: "AgentBurst Match", compStatus: "x" as const, compLabel: "Kein KI-Matching" },
+  { feature: "CV Parsing", ssStatus: "check" as const, ssLabel: "AgentBurst Parse", compStatus: "warn" as const, compLabel: "Basis" },
+  { feature: "Setup-Zeit", ssStatus: "check" as const, ssLabel: "Minuten", compStatus: "warn" as const, compLabel: "Tage-Wochen" },
+  { feature: "DSGVO", ssStatus: "check" as const, ssLabel: "EU-nativ", compStatus: "check" as const, compLabel: "UK-basiert" },
+  { feature: "Client Portal", ssStatus: "check" as const, ssLabel: "Integriert", compStatus: "check" as const, compLabel: "Integriert" },
+  { feature: "Autonomes Screening", ssStatus: "check" as const, ssLabel: "AgentBurst Screen", compStatus: "x" as const, compLabel: "Kein Screening" },
+  { feature: "Marktpraesenz", ssStatus: "check" as const, ssLabel: "Wachsend", compStatus: "warn" as const, compLabel: "Nische" },
+];
+---
+
+<VergleichLayout
+  title="ShortSelect vs. Ezekia - ATS Vergleich 2026"
+  description="Ezekia kostet \u00A3120+ pro User und hat nur 4 Bewertungen. ShortSelect bietet 11 autonome KI-Agenten zum Bruchteil des Preises."
+  competitorName="Ezekia"
+  heroSubline="Ezekia positioniert sich als Premium-ATS fuer Executive Search. Aber: \u00A3120+ pro User, nur 4 oeffentliche Bewertungen und kein KI-Matching. Lohnt sich das?"
+  heroBadge="Vergleich"
+  ssDescription="KI-Agent-ATS mit 11 autonomen AgentBurst-Agenten"
+  ssHighlights={["11 AgentBurst-Agenten arbeiten autonom", "Transparente Preise ab 0\u20AC", "Ueber 127 verifizierte Bewertungen", "Autonomes KI-Matching, Screening und Ranking"]}
+  compDescription="Executive-Search-ATS aus UK"
+  compHighlights={["Spezialisiert auf Executive Search", "Integriertes Client Portal", "DSGVO-konform", "Long-List Management"]}
+  comparisonData={comparisonData}
+  whenCompBetter={{
+    title: "Wann Ezekia besser passt",
+    intro: "Ezekia kann sinnvoll sein, wenn Executive Search Ihr einziger Fokus ist:",
+    items: [
+      "Ausschliesslich Executive Search ohne andere Recruiting-Bereiche",
+      "Budget spielt keine Rolle",
+      "Keine autonomen KI-Agenten benoetigt",
+      "Bereits Ezekia im Einsatz mit bestehenden Workflows",
+    ]
+  }}
+  whenSSBetter={{
+    title: "Wann ShortSelect besser passt",
+    intro: "ShortSelect ist ideal, wenn Sie autonome KI und Social Proof wollen:",
+    items: [
+      "11 autonome AgentBurst-Agenten statt manueller Prozesse",
+      "Faire Preise statt \u00A3120+ pro User pro Monat",
+      "Ueber 127 verifizierte Bewertungen als Social Proof",
+      "Autonomes KI-Matching und Screening ohne Aufpreis",
+      "Skalierung ueber Executive Search hinaus moeglich",
+    ]
+  }}
+/>

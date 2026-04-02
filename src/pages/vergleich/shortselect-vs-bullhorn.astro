@@ -2,11 +2,12 @@
 import VergleichLayout from '../../layouts/VergleichLayout.astro';
 
 const comparisonData = [
+  { feature: "Autonome KI-Agenten", ssStatus: "check" as const, ssLabel: "11 AgentBurst-Agenten, 24/7", compStatus: "x" as const, compLabel: "Keine autonomen Agenten" },
   { feature: "Zielgruppe", ssStatus: "check" as const, ssLabel: "KMU bis Enterprise", compStatus: "check" as const, compLabel: "Enterprise Staffing" },
   { feature: "Preise", ssStatus: "check" as const, ssLabel: "Ab 0\u20AC/Monat", compStatus: "warn" as const, compLabel: "Ab ~$99/User/Monat" },
   { feature: "Setup-Zeit", ssStatus: "check" as const, ssLabel: "Minuten", compStatus: "warn" as const, compLabel: "Wochen-Monate" },
   { feature: "UI / Design", ssStatus: "check" as const, ssLabel: "Modern (2024 Design)", compStatus: "warn" as const, compLabel: "Funktional (Legacy)" },
-  { feature: "KI-Matching", ssStatus: "check" as const, ssLabel: "Smart Matching", compStatus: "check" as const, compLabel: "Amplify AI" },
+  { feature: "KI-Matching", ssStatus: "check" as const, ssLabel: "AgentBurst Match (autonom)", compStatus: "check" as const, compLabel: "Amplify AI" },
   { feature: "DSGVO", ssStatus: "check" as const, ssLabel: "EU-nativ", compStatus: "warn" as const, compLabel: "Mit EU-Addon" },
   { feature: "Client Portal", ssStatus: "check" as const, ssLabel: "Integriert", compStatus: "check" as const, compLabel: "Integriert" },
   { feature: "Karriereseite", ssStatus: "check" as const, ssLabel: "Embeddable Widget", compStatus: "check" as const, compLabel: "CareerPortal" },
@@ -21,8 +22,8 @@ const comparisonData = [
   competitorName="Bullhorn"
   heroSubline="Enterprise-Gigant oder agile Innovation? Bullhorn ist der weltgroesste ATS-Anbieter fuer Personaldienstleister. Aber ist groesser immer besser?"
   heroBadge="Vergleich"
-  ssDescription="Agiles ATS mit modernem Design"
-  ssHighlights={["Kostenloser Einstieg ohne Risiko", "Setup in wenigen Minuten", "KI-gestuetztes Smart Matching", "DSGVO-konform ab Werk (EU-nativ)"]}
+  ssDescription="KI-Agent-ATS mit 11 autonomen AgentBurst-Agenten"
+  ssHighlights={["11 AgentBurst-Agenten arbeiten 24/7", "Setup in wenigen Minuten", "DSGVO-konform ab Werk (EU-nativ)", "Kostenloser Einstieg ohne Risiko"]}
   compDescription="Enterprise-ATS fuer globales Staffing"
   compHighlights={["300+ Marketplace-Integrationen", "Amplify AI fuer Automatisierung", "Globale Enterprise-Skalierung", "Umfassende Staffing-Suite"]}
   comparisonData={comparisonData}
@@ -41,7 +42,7 @@ const comparisonData = [
     title: "Wann ShortSelect besser passt",
     intro: "ShortSelect ist ideal, wenn Sie schnell und ohne Overhead starten wollen:",
     items: [
-      "Schneller Start ohne IT-Team oder Berater",
+      "Autonome KI-Agenten statt manuelle Features",
       "Faire Preise ohne versteckte Kosten",
       "Modernes UI, das Recruiter lieben",
       "KI-Matching ohne Enterprise-Preise",

@@ -2,8 +2,9 @@
 import VergleichLayout from '../../layouts/VergleichLayout.astro';
 
 const comparisonData = [
+  { feature: "Autonome KI-Agenten", ssStatus: "check" as const, ssLabel: "11 AgentBurst-Agenten, always-on", compStatus: "x" as const, compLabel: "Keine KI-Agenten" },
   { feature: "UI/UX", ssStatus: "check" as const, ssLabel: "Modern, Kanban", compStatus: "warn" as const, compLabel: "Funktional, klassisch" },
-  { feature: "KI-Features", ssStatus: "check" as const, ssLabel: "Smart Matching", compStatus: "warn" as const, compLabel: "Begrenzt" },
+  { feature: "KI-Features", ssStatus: "check" as const, ssLabel: "AgentBurst (11 Agenten)", compStatus: "warn" as const, compLabel: "Begrenzt" },
   { feature: "Preise", ssStatus: "check" as const, ssLabel: "Ab 0\u20AC/Monat", compStatus: "warn" as const, compLabel: "Auf Anfrage" },
   { feature: "Cloud", ssStatus: "check" as const, ssLabel: "100% Cloud", compStatus: "check" as const, compLabel: "Cloud + On-Premise" },
   { feature: "Karriereseite", ssStatus: "check" as const, ssLabel: "Widget + Seite", compStatus: "check" as const, compLabel: "Verfuegbar" },
@@ -21,8 +22,8 @@ const comparisonData = [
   competitorName="coveto"
   heroSubline="Modernes ATS oder etablierter Klassiker? coveto ist seit Jahren im DACH-Markt etabliert. Wir vergleichen mit dem modernen Ansatz von ShortSelect."
   heroBadge="Vergleich"
-  ssDescription="Modernes ATS mit KI und Kanban"
-  ssHighlights={["KI-gestuetztes Kandidaten-Matching", "Moderne Kanban-Pipeline", "Transparente Preise ab 0\u20AC", "100% Cloud, sofort einsatzbereit"]}
+  ssDescription="KI-Agent-ATS mit 11 autonomen AgentBurst-Agenten"
+  ssHighlights={["11 autonome AgentBurst-Agenten", "Moderne Kanban-Pipeline", "Transparente Preise ab 0€", "100% Cloud, sofort einsatzbereit"]}
   compDescription="Etabliertes ATS mit breitem Funktionsumfang"
   compHighlights={["Starkes Multiposting-Netzwerk", "On-Premise und Cloud verfuegbar", "Umfangreiche Integrationen", "Langjaehrige DACH-Erfahrung"]}
   comparisonData={comparisonData}
@@ -41,7 +42,7 @@ const comparisonData = [
     title: "Wann ShortSelect besser passt",
     intro: "ShortSelect ist ideal, wenn Sie ein modernes, KI-gestuetztes ATS suchen:",
     items: [
-      "Modernes UI/UX mit Kanban-Pipeline und Drag & Drop",
+      "Autonome KI-Agenten statt manuelle Workflows",
       "KI-gestuetztes Smart Matching fuer bessere Kandidatenauswahl",
       "Transparente Preise mit kostenlosem Einstieg",
       "100% Cloud ohne Installations- oder Wartungsaufwand",
