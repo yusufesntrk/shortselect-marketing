@@ -1,0 +1,902 @@
+---
+import MarketingLayout from '../layouts/MarketingLayout.astro';
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  name: "Sell the Job – Die neue Ära des Recruitings",
+  description: "Post & Pray ist tot. Entdecken Sie, wie Sie Jobs aktiv vermarkten und A-Player gewinnen.",
+  url: "https://shortselect.com/job-selling",
+};
+---
+
+<MarketingLayout
+  title="Sell the Job – Die neue Ära des Recruitings | ShortSelect"
+  description="Post & Pray ist tot. Entdecken Sie, wie Sie Jobs aktiv vermarkten und A-Player gewinnen. ShortSelect ist das erste ATS mit Job Selling Engine."
+  jsonLd={jsonLd}
+>
+
+  <!-- ═══════════════════════════════════════════════════════════════════
+       SECTION 1: CINEMATIC HERO — Dark, full-screen, provocative
+       ═══════════════════════════════════════════════════════════════════ -->
+  <section id="js-hero" class="relative min-h-screen flex items-center justify-center bg-gray-950 text-white overflow-hidden">
+    <!-- Subtle radial glow -->
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,hsl(0_72%_50%/0.12),transparent_70%)]"></div>
+    <!-- Fine grid pattern -->
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.04)_1px,transparent_1px)] bg-[size:32px_32px] opacity-30"></div>
+    <!-- Floating glow orbs -->
+    <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/8 rounded-full blur-3xl animate-float-slow"></div>
+    <div class="absolute bottom-1/4 right-1/4 w-80 h-80 bg-accent/6 rounded-full blur-3xl animate-float-slow" style="animation-delay: -3s;"></div>
+
+    <div class="container relative mx-auto px-4 text-center space-y-10">
+      <!-- Badge -->
+      <div id="js-hero-badge" class="opacity-0 -translate-y-4 transition-all duration-700">
+        <span class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/10 border border-white/20 text-sm font-medium text-white/90 backdrop-blur-sm">
+          <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+          Die Ära von Post & Pray ist vorbei
+        </span>
+      </div>
+
+      <!-- Headline -->
+      <h1 class="space-y-2">
+        <span id="js-hero-line1" class="block text-4xl md:text-6xl lg:text-7xl font-display font-extrabold tracking-tight leading-[1.1] opacity-0 translate-y-8 transition-all duration-700" style="transition-delay: 150ms;">
+          Hören Sie auf, Stellen zu posten.
+        </span>
+        <span id="js-hero-line2" class="block text-4xl md:text-6xl lg:text-7xl font-display font-extrabold tracking-tight leading-[1.1] text-primary opacity-0 translate-y-8 transition-all duration-700 relative inline-block" style="transition-delay: 300ms;">
+          Fangen Sie an, Jobs zu verkaufen.
+          <svg class="absolute -bottom-3 left-0 w-full" viewBox="0 0 580 12" fill="none">
+            <path id="js-hero-underline" d="M2 10C145 4 435 4 578 10" stroke="hsl(0 72% 50%)" stroke-width="4" stroke-linecap="round" style="stroke-dasharray: 580; stroke-dashoffset: 580; transition: stroke-dashoffset 1.2s ease-out;" />
+          </svg>
+        </span>
+      </h1>
+
+      <!-- Animated Counter -->
+      <div id="js-hero-counter" class="opacity-0 scale-95 transition-all duration-800" style="transition-delay: 600ms;">
+        <div class="relative inline-block">
+          <span class="text-6xl md:text-8xl lg:text-9xl font-display font-extrabold tabular-nums js-counter" data-target="147000">0</span>
+          <span class="text-5xl md:text-7xl lg:text-8xl font-display font-extrabold text-white/70">+</span>
+          <div class="absolute inset-0 blur-3xl bg-primary/20 -z-10 scale-150 animate-pulse"></div>
+        </div>
+        <p class="text-lg md:text-xl text-white/50 mt-4 max-w-xl mx-auto">
+          unbesetzte Stellen allein in Deutschland — jetzt gerade.
+        </p>
+      </div>
+
+      <!-- Subline -->
+      <p id="js-hero-sub" class="text-lg md:text-xl text-white/40 max-w-2xl mx-auto opacity-0 translate-y-8 transition-all duration-700" style="transition-delay: 900ms;">
+        Während Sie hier lesen, verlieren Unternehmen die besten Kandidaten. Nicht weil es keine gibt. Sondern weil Recruiting noch immer wie 2005 funktioniert.
+      </p>
+
+      <!-- Scroll CTA -->
+      <div id="js-hero-scroll" class="opacity-0 transition-opacity duration-1000" style="transition-delay: 1300ms;">
+        <a href="#js-problem" class="inline-flex flex-col items-center gap-2 text-white/30 hover:text-white/60 transition-colors duration-300">
+          <span class="text-sm font-medium tracking-wide uppercase">Die Wahrheit erfahren</span>
+          <svg class="w-5 h-5 animate-bounce" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m6 9 6 6 6-6"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- Bottom fade to next section -->
+    <div class="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-gray-900 to-transparent"></div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════════════════════════
+       SECTION 2: THE PROBLEM — Dark, pain points, statistics
+       ═══════════════════════════════════════════════════════════════════ -->
+  <section id="js-problem" class="py-24 md:py-36 bg-gray-900 text-white relative overflow-hidden">
+    <!-- Destructive glow -->
+    <div class="absolute top-0 right-0 w-96 h-96 bg-red-500/8 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-0 left-0 w-72 h-72 bg-red-500/5 rounded-full blur-3xl"></div>
+
+    <div class="container relative mx-auto px-4">
+      <!-- Header -->
+      <div id="js-problem-header" class="text-center space-y-4 mb-20 opacity-0 translate-y-8 transition-all duration-700">
+        <span class="inline-block px-4 py-1.5 text-xs font-semibold rounded-full border border-red-500/30 text-red-400 bg-red-500/10 uppercase tracking-wider">Das Problem</span>
+        <h2 class="text-4xl md:text-6xl lg:text-7xl font-display font-extrabold tracking-tight">
+          Recruiting ist <span class="text-red-400">kaputt</span>.
+        </h2>
+      </div>
+
+      <!-- Stats Grid -->
+      <div class="grid md:grid-cols-3 gap-8 lg:gap-12 max-w-4xl mx-auto mb-20">
+        <div class="js-problem-stat text-center space-y-3 opacity-0 translate-y-12 transition-all duration-600" style="transition-delay: 150ms;">
+          <div class="text-5xl md:text-6xl font-display font-extrabold text-red-400">73%</div>
+          <p class="text-white/50 text-sm leading-relaxed">aller Stellenanzeigen erreichen die falschen Kandidaten</p>
+        </div>
+        <div class="js-problem-stat text-center space-y-3 opacity-0 translate-y-12 transition-all duration-600" style="transition-delay: 300ms;">
+          <div class="text-5xl md:text-6xl font-display font-extrabold text-red-400">42 Tage</div>
+          <p class="text-white/50 text-sm leading-relaxed">durchschnittliche Time-to-Hire in Deutschland</p>
+        </div>
+        <div class="js-problem-stat text-center space-y-3 opacity-0 translate-y-12 transition-all duration-600" style="transition-delay: 450ms;">
+          <div class="text-5xl md:text-6xl font-display font-extrabold text-red-400">4.700 €</div>
+          <p class="text-white/50 text-sm leading-relaxed">Kosten pro Fehlbesetzung — im Durchschnitt</p>
+        </div>
+      </div>
+
+      <!-- Pain Points -->
+      <div id="js-problem-list" class="max-w-2xl mx-auto opacity-0 translate-y-8 transition-all duration-700" style="transition-delay: 600ms;">
+        <h3 class="text-xl font-display font-bold mb-8 text-white/70 text-center">So sieht Post & Pray heute aus:</h3>
+        <div class="space-y-5">
+          <div class="flex items-start gap-4">
+            <div class="w-8 h-8 rounded-full bg-red-500/15 flex items-center justify-center shrink-0 mt-0.5">
+              <svg class="w-4 h-4 text-red-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+            </div>
+            <p class="text-white/60">Stellenanzeige online stellen und hoffen, dass sich jemand bewirbt</p>
+          </div>
+          <div class="flex items-start gap-4">
+            <div class="w-8 h-8 rounded-full bg-red-500/15 flex items-center justify-center shrink-0 mt-0.5">
+              <svg class="w-4 h-4 text-red-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+            </div>
+            <p class="text-white/60">Wochen warten, bis sich überhaupt jemand meldet</p>
+          </div>
+          <div class="flex items-start gap-4">
+            <div class="w-8 h-8 rounded-full bg-red-500/15 flex items-center justify-center shrink-0 mt-0.5">
+              <svg class="w-4 h-4 text-red-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+            </div>
+            <p class="text-white/60">90% unqualifizierte Bewerbungen manuell aussortieren</p>
+          </div>
+          <div class="flex items-start gap-4">
+            <div class="w-8 h-8 rounded-full bg-red-500/15 flex items-center justify-center shrink-0 mt-0.5">
+              <svg class="w-4 h-4 text-red-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+            </div>
+            <p class="text-white/60">Top-Kandidaten an die Konkurrenz verlieren — weil man zu langsam war</p>
+          </div>
+          <div class="flex items-start gap-4">
+            <div class="w-8 h-8 rounded-full bg-red-500/15 flex items-center justify-center shrink-0 mt-0.5">
+              <svg class="w-4 h-4 text-red-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+            </div>
+            <p class="text-white/60">Am Ende: Kompromisse statt A-Player einstellen</p>
+          </div>
+        </div>
+
+        <!-- Emotional closer -->
+        <blockquote class="mt-16 text-center">
+          <p class="text-xl md:text-2xl italic text-white/30 leading-relaxed">
+            „Wir haben die Stelle seit 6 Monaten offen."
+          </p>
+          <p class="text-sm text-white/20 mt-3">— Kommt Ihnen das bekannt vor?</p>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════════════════════════
+       SECTION 3: THE MANIFESTO — Gradient dark→white, emotional peak
+       ═══════════════════════════════════════════════════════════════════ -->
+  <section id="js-manifesto" class="relative overflow-hidden">
+    <div class="bg-gradient-to-b from-gray-900 via-gray-800/80 to-white py-32 md:py-48 lg:py-56">
+
+      <!-- Intro text on dark bg -->
+      <div id="js-manifesto-intro" class="container mx-auto px-4 text-center mb-20 md:mb-28 opacity-0 translate-y-8 transition-all duration-700">
+        <p class="text-2xl md:text-3xl text-white/50 font-medium">Es gibt einen besseren Weg.</p>
+      </div>
+
+      <!-- The Manifesto: Three massive lines -->
+      <div class="container mx-auto px-4 text-center space-y-6 md:space-y-10">
+        <h2 id="js-manifesto-l1" class="text-4xl md:text-6xl lg:text-8xl font-display font-extrabold tracking-tight text-white/80 opacity-0 translate-y-12 transition-all duration-800" style="transition-delay: 200ms;">
+          Jobs sind Produkte.
+        </h2>
+        <h2 id="js-manifesto-l2" class="text-4xl md:text-6xl lg:text-8xl font-display font-extrabold tracking-tight text-white/60 opacity-0 translate-y-12 transition-all duration-800" style="transition-delay: 450ms;">
+          Kandidaten sind Kunden.
+        </h2>
+        <h2 id="js-manifesto-l3" class="text-4xl md:text-6xl lg:text-8xl font-display font-extrabold tracking-tight opacity-0 translate-y-12 transition-all duration-800" style="transition-delay: 700ms;">
+          <span class="text-primary">Recruiting ist Marketing.</span>
+        </h2>
+      </div>
+
+      <!-- Closing line on lighter bg -->
+      <div id="js-manifesto-close" class="container mx-auto px-4 text-center mt-20 md:mt-28 opacity-0 transition-opacity duration-1000" style="transition-delay: 1100ms;">
+        <p class="text-xl md:text-2xl font-display font-bold text-foreground/70">
+          Willkommen in der Ära von{" "}
+          <span class="text-primary relative inline-block">
+            Sell the Job
+            <svg class="absolute -bottom-1.5 left-0 w-full" viewBox="0 0 200 8" fill="none">
+              <path id="js-manifesto-underline" d="M2 6C50 2 150 2 198 6" stroke="currentColor" stroke-width="3" stroke-linecap="round" style="stroke-dasharray: 200; stroke-dashoffset: 200; transition: stroke-dashoffset 1s ease-out;" />
+            </svg>
+          </span>.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════════════════════════
+       SECTION 4: HOW IT WORKS — 3-Step Process, clean & bright
+       ═══════════════════════════════════════════════════════════════════ -->
+  <section id="js-process" class="py-24 md:py-36 relative overflow-hidden">
+    <!-- Subtle decoration -->
+    <div class="absolute top-20 right-0 w-72 h-72 bg-primary/5 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-20 left-0 w-64 h-64 bg-accent/5 rounded-full blur-3xl"></div>
+
+    <div class="container relative mx-auto px-4">
+      <!-- Header -->
+      <div id="js-process-header" class="text-center space-y-4 mb-20 opacity-0 translate-y-8 transition-all duration-700">
+        <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-sm font-medium text-primary">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="m9 12 2 2 4-4"/></svg>
+          So funktioniert's
+        </span>
+        <h2 class="text-3xl md:text-5xl lg:text-6xl font-display font-bold tracking-tight">
+          Von der Stelle zum{" "}
+          <span class="text-primary relative inline-block">
+            A-Player
+            <svg class="absolute -bottom-2 left-0 w-full" viewBox="0 0 180 8" fill="none">
+              <path id="js-process-underline" d="M2 6C45 2 135 2 178 6" stroke="currentColor" stroke-width="3" stroke-linecap="round" style="stroke-dasharray: 180; stroke-dashoffset: 180; transition: stroke-dashoffset 1s ease-out;" />
+            </svg>
+          </span>{" "}in 3 Schritten.
+        </h2>
+        <p class="text-lg text-muted-foreground max-w-2xl mx-auto">
+          ShortSelect automatisiert den gesamten Job-Selling-Prozess — von der Anzeige bis zur Einstellung.
+        </p>
+      </div>
+
+      <!-- 3-Step Grid -->
+      <div class="grid lg:grid-cols-3 gap-8 lg:gap-12 max-w-5xl mx-auto relative">
+        <!-- Connecting line (lg only) -->
+        <div class="hidden lg:block absolute top-20 left-[20%] right-[20%] h-px bg-gradient-to-r from-primary/30 via-accent/30 to-green-500/30"></div>
+
+        <!-- Step 1: Create -->
+        <div class="js-process-step text-center space-y-6 opacity-0 translate-y-12 transition-all duration-600" style="transition-delay: 200ms;">
+          <div class="relative mx-auto w-28 h-28 md:w-32 md:h-32">
+            <div class="w-full h-full rounded-2xl bg-primary/10 border-2 border-primary/20 flex items-center justify-center transition-all duration-500 hover:shadow-xl hover:shadow-primary/10 hover:scale-105">
+              <span class="text-4xl md:text-5xl font-display font-extrabold text-primary">1</span>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-2xl font-display font-bold">Create</h3>
+            <p class="text-sm text-primary font-medium mt-1">KI generiert optimierte Stellenanzeigen</p>
+          </div>
+          <p class="text-muted-foreground text-sm leading-relaxed max-w-xs mx-auto">
+            Unser KI-Agent analysiert Ihre Anforderungen und erstellt hochkonvertierende Stellenanzeigen und Ad Creatives — in Sekunden statt Stunden.
+          </p>
+        </div>
+
+        <!-- Step 2: Sell -->
+        <div class="js-process-step text-center space-y-6 opacity-0 translate-y-12 transition-all duration-600" style="transition-delay: 400ms;">
+          <div class="relative mx-auto w-28 h-28 md:w-32 md:h-32">
+            <div class="w-full h-full rounded-2xl bg-accent/10 border-2 border-accent/20 flex items-center justify-center transition-all duration-500 hover:shadow-xl hover:shadow-accent/10 hover:scale-105">
+              <span class="text-4xl md:text-5xl font-display font-extrabold text-accent">2</span>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-2xl font-display font-bold">Sell</h3>
+            <p class="text-sm text-accent font-medium mt-1">Multi-Channel Distribution</p>
+          </div>
+          <p class="text-muted-foreground text-sm leading-relaxed max-w-xs mx-auto">
+            Ihre Jobs werden aktiv vermarktet: Social Media Ads, Jobbörsen, Google, Karriereseiten. Nicht posten und hoffen — gezielt platzieren.
+          </p>
+        </div>
+
+        <!-- Step 3: Hire -->
+        <div class="js-process-step text-center space-y-6 opacity-0 translate-y-12 transition-all duration-600" style="transition-delay: 600ms;">
+          <div class="relative mx-auto w-28 h-28 md:w-32 md:h-32">
+            <div class="w-full h-full rounded-2xl bg-green-500/10 border-2 border-green-500/20 flex items-center justify-center transition-all duration-500 hover:shadow-xl hover:shadow-green-500/10 hover:scale-105">
+              <span class="text-4xl md:text-5xl font-display font-extrabold text-green-600">3</span>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-2xl font-display font-bold">Hire</h3>
+            <p class="text-sm text-green-600 font-medium mt-1">A-Player bewerben sich</p>
+          </div>
+          <p class="text-muted-foreground text-sm leading-relaxed max-w-xs mx-auto">
+            Die besten Kandidaten kommen zu Ihnen. KI filtert, rankt und priorisiert automatisch. Sie konzentrieren sich nur noch auf die Top 5.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════════════════════════
+       SECTION 5: THE DIFFERENCE — Comparison cards + metrics
+       ═══════════════════════════════════════════════════════════════════ -->
+  <section id="js-comparison" class="py-24 md:py-36 bg-muted/30 relative overflow-hidden">
+    <div class="container mx-auto px-4">
+      <!-- Header -->
+      <div id="js-comp-header" class="text-center space-y-4 mb-16 opacity-0 translate-y-8 transition-all duration-700">
+        <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-sm font-medium text-primary">Der Unterschied</span>
+        <h2 class="text-3xl md:text-5xl font-display font-bold tracking-tight">
+          Post & Pray vs.{" "}
+          <span class="text-primary relative inline-block">
+            Sell the Job
+            <svg class="absolute -bottom-2 left-0 w-full" viewBox="0 0 220 8" fill="none">
+              <path id="js-comp-underline" d="M2 6C55 2 165 2 218 6" stroke="currentColor" stroke-width="3" stroke-linecap="round" style="stroke-dasharray: 220; stroke-dashoffset: 220; transition: stroke-dashoffset 1s ease-out;" />
+            </svg>
+          </span>
+        </h2>
+      </div>
+
+      <!-- Comparison Cards -->
+      <div class="grid md:grid-cols-2 gap-6 lg:gap-8 max-w-5xl mx-auto">
+        <!-- Left: Post & Pray (old way) -->
+        <div id="js-comp-left" class="rounded-xl border border-red-200 bg-red-50/50 p-8 opacity-0 translate-y-12 transition-all duration-700" style="transition-delay: 150ms;">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="h-12 w-12 rounded-lg bg-red-100 flex items-center justify-center">
+              <svg class="h-6 w-6 text-red-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+            </div>
+            <div>
+              <h3 class="text-lg font-semibold text-red-900">Post & Pray</h3>
+              <p class="text-sm text-red-500/70">Der alte Weg</p>
+            </div>
+          </div>
+          <ul class="space-y-4">
+            <li class="flex items-start gap-3">
+              <svg class="h-5 w-5 text-red-400 mt-0.5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/></svg>
+              <span class="text-red-900/70">Stellenanzeige hochladen und warten</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="h-5 w-5 text-red-400 mt-0.5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/></svg>
+              <span class="text-red-900/70">Passive Verbreitung auf 1–2 Kanälen</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="h-5 w-5 text-red-400 mt-0.5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/></svg>
+              <span class="text-red-900/70">Hoffen auf den richtigen Kandidaten</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="h-5 w-5 text-red-400 mt-0.5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/></svg>
+              <span class="text-red-900/70">90% unqualifizierte Bewerbungen</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="h-5 w-5 text-red-400 mt-0.5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/></svg>
+              <span class="text-red-900/70">Durchschnittlich 42 Tage Time-to-Hire</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Right: Sell the Job (new way) -->
+        <div id="js-comp-right" class="rounded-xl border-2 border-primary/20 bg-primary/5 p-8 opacity-0 translate-y-12 transition-all duration-700" style="transition-delay: 300ms;">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center">
+              <svg class="h-6 w-6 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                <path d="m9 11 3 3L22 4"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-lg font-semibold">Sell the Job</h3>
+              <p class="text-sm text-primary">Der neue Weg mit ShortSelect</p>
+            </div>
+          </div>
+          <ul class="space-y-4">
+            <li class="flex items-start gap-3">
+              <svg class="h-5 w-5 text-primary mt-0.5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+              <span>KI-optimierte Anzeigen, die konvertieren</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="h-5 w-5 text-primary mt-0.5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+              <span>Aktive Vermarktung auf 10+ Kanälen</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="h-5 w-5 text-primary mt-0.5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+              <span>Gezielte Ansprache der richtigen Zielgruppe</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="h-5 w-5 text-primary mt-0.5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+              <span>80% qualifiziertere Bewerbungen</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="h-5 w-5 text-primary mt-0.5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+              <span>Durchschnittlich 18 Tage Time-to-Hire</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Metrics row -->
+      <div class="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto mt-12">
+        <div class="js-comp-metric rounded-xl border bg-card p-6 text-center opacity-0 translate-y-8 transition-all duration-600" style="transition-delay: 500ms;">
+          <p class="text-sm text-muted-foreground mb-2">Time-to-Hire</p>
+          <div class="flex items-center justify-center gap-3">
+            <span class="text-2xl font-display font-bold text-red-400 line-through">42 Tage</span>
+            <svg class="w-5 h-5 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            <span class="text-2xl font-display font-bold text-primary">18 Tage</span>
+          </div>
+        </div>
+        <div class="js-comp-metric rounded-xl border bg-card p-6 text-center opacity-0 translate-y-8 transition-all duration-600" style="transition-delay: 650ms;">
+          <p class="text-sm text-muted-foreground mb-2">Candidate Quality</p>
+          <div class="flex items-center justify-center gap-3">
+            <span class="text-2xl font-display font-bold text-red-400 line-through">2 / 10</span>
+            <svg class="w-5 h-5 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            <span class="text-2xl font-display font-bold text-primary">8 / 10</span>
+          </div>
+        </div>
+        <div class="js-comp-metric rounded-xl border bg-card p-6 text-center opacity-0 translate-y-8 transition-all duration-600" style="transition-delay: 800ms;">
+          <p class="text-sm text-muted-foreground mb-2">Cost-per-Hire</p>
+          <div class="text-3xl font-display font-bold text-primary">-60%</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════════════════════════
+       SECTION 6: SOCIAL PROOF — Gradient stats + testimonial
+       ═══════════════════════════════════════════════════════════════════ -->
+  <section
+    id="js-stats"
+    class="py-20 md:py-32 text-white relative overflow-hidden"
+    style="background: linear-gradient(to bottom right, hsl(0 72% 50%), hsl(0 72% 52%), hsl(12 76% 61%));"
+  >
+    <!-- Background effects -->
+    <div class="absolute inset-0 overflow-hidden">
+      <div class="absolute top-10 left-10 w-64 h-64 bg-white/5 rounded-full blur-3xl animate-float-slow"></div>
+      <div class="absolute bottom-10 right-10 w-80 h-80 bg-white/5 rounded-full blur-3xl animate-float-slow" style="animation-delay: -3s;"></div>
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-white/[0.03] rounded-full blur-3xl animate-pulse"></div>
+    </div>
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:24px_24px] opacity-30"></div>
+
+    <!-- Particles -->
+    <div class="absolute inset-0 overflow-hidden pointer-events-none">
+      <div class="absolute w-1 h-1 bg-white/30 rounded-full animate-float" style="left: 10%; top: 20%; animation-delay: 0.5s; animation-duration: 4s;"></div>
+      <div class="absolute w-1 h-1 bg-white/30 rounded-full animate-float" style="left: 25%; top: 60%; animation-delay: 1.2s; animation-duration: 5s;"></div>
+      <div class="absolute w-1 h-1 bg-white/30 rounded-full animate-float" style="left: 40%; top: 30%; animation-delay: 2.1s; animation-duration: 3.5s;"></div>
+      <div class="absolute w-1 h-1 bg-white/30 rounded-full animate-float" style="left: 55%; top: 70%; animation-delay: 0.8s; animation-duration: 6s;"></div>
+      <div class="absolute w-1 h-1 bg-white/30 rounded-full animate-float" style="left: 70%; top: 15%; animation-delay: 3.5s; animation-duration: 4.5s;"></div>
+      <div class="absolute w-1 h-1 bg-white/30 rounded-full animate-float" style="left: 85%; top: 50%; animation-delay: 1.8s; animation-duration: 5.5s;"></div>
+      <div class="absolute w-1 h-1 bg-white/30 rounded-full animate-float" style="left: 15%; top: 80%; animation-delay: 4.2s; animation-duration: 3.8s;"></div>
+      <div class="absolute w-1 h-1 bg-white/30 rounded-full animate-float" style="left: 50%; top: 10%; animation-delay: 2.5s; animation-duration: 4.2s;"></div>
+      <div class="absolute w-1 h-1 bg-white/30 rounded-full animate-float" style="left: 90%; top: 40%; animation-delay: 0.3s; animation-duration: 6.5s;"></div>
+      <div class="absolute w-1 h-1 bg-white/30 rounded-full animate-float" style="left: 35%; top: 90%; animation-delay: 3.1s; animation-duration: 4.8s;"></div>
+    </div>
+
+    <div class="container relative mx-auto px-4">
+      <!-- Badge -->
+      <div class="text-center mb-12">
+        <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 text-sm font-medium">
+          Bereits 43+ Teams nutzen Sell the Job
+        </span>
+      </div>
+
+      <!-- Stats Grid -->
+      <div class="grid md:grid-cols-3 gap-12 text-center mb-16">
+        <div class="js-stats-item space-y-2 opacity-0 scale-95 transition-all duration-700" style="transition-delay: 0ms;">
+          <div class="text-5xl md:text-6xl lg:text-7xl font-display font-bold relative">
+            <span class="js-stat-counter" data-target="3" data-suffix="x">0</span><span class="text-white/90">x</span>
+            <div class="absolute inset-0 blur-2xl bg-white/20 -z-10 scale-150 animate-pulse"></div>
+          </div>
+          <p class="text-lg text-white/80">schnellere Besetzung</p>
+        </div>
+        <div class="js-stats-item space-y-2 opacity-0 scale-95 transition-all duration-700" style="transition-delay: 150ms;">
+          <div class="text-5xl md:text-6xl lg:text-7xl font-display font-bold relative">
+            <span class="js-stat-counter" data-target="89">0</span><span class="text-white/90">%</span>
+            <div class="absolute inset-0 blur-2xl bg-white/20 -z-10 scale-150 animate-pulse" style="animation-delay: 0.3s;"></div>
+          </div>
+          <p class="text-lg text-white/80">qualifiziertere Bewerbungen</p>
+        </div>
+        <div class="js-stats-item space-y-2 opacity-0 scale-95 transition-all duration-700" style="transition-delay: 300ms;">
+          <div class="text-5xl md:text-6xl lg:text-7xl font-display font-bold relative">
+            <span class="js-stat-counter" data-target="60">0</span><span class="text-white/90">%</span>
+            <div class="absolute inset-0 blur-2xl bg-white/20 -z-10 scale-150 animate-pulse" style="animation-delay: 0.6s;"></div>
+          </div>
+          <p class="text-lg text-white/80">geringere Cost-per-Hire</p>
+        </div>
+      </div>
+
+      <!-- Testimonial -->
+      <div id="js-stats-quote" class="text-center opacity-0 transition-opacity duration-700" style="transition-delay: 600ms;">
+        <blockquote class="text-xl md:text-2xl font-medium text-white/90 max-w-2xl mx-auto italic leading-relaxed">
+          „Seit wir Jobs aktiv vermarkten statt nur zu posten, hat sich unsere Candidate Quality verdreifacht."
+        </blockquote>
+        <div class="mt-6 flex items-center justify-center gap-3">
+          <img src="/testimonials/yasar-sentuerk.png" alt="Yasar Sentürk" class="w-12 h-12 rounded-full object-cover border-2 border-white/20" loading="lazy" />
+          <div class="text-left">
+            <p class="text-sm font-semibold text-white">Yasar Sentürk</p>
+            <p class="text-xs text-white/60">Geschäftsführer, searched GmbH</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════════════════════════
+       SECTION 7: VISION — Timeline pointing to the future
+       ═══════════════════════════════════════════════════════════════════ -->
+  <section id="js-vision" class="py-24 md:py-36 relative overflow-hidden">
+    <div class="container mx-auto px-4">
+      <!-- Header -->
+      <div id="js-vision-header" class="text-center space-y-4 mb-20 opacity-0 translate-y-8 transition-all duration-700">
+        <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-sm font-medium text-primary">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          Die Zukunft
+        </span>
+        <h2 class="text-3xl md:text-5xl lg:text-6xl font-display font-bold tracking-tight">
+          Recruiting wird nie wieder so sein{" "}
+          <span class="text-primary">wie gestern</span>.
+        </h2>
+      </div>
+
+      <!-- Timeline -->
+      <div class="max-w-2xl mx-auto relative">
+        <!-- Vertical line -->
+        <div class="absolute left-6 md:left-8 top-0 bottom-0 w-px bg-gradient-to-b from-muted-foreground/20 via-primary/40 to-primary"></div>
+
+        <!-- Point 1: Heute -->
+        <div class="js-vision-item flex gap-6 md:gap-8 mb-16 opacity-0 translate-y-8 transition-all duration-700" style="transition-delay: 200ms;">
+          <div class="relative shrink-0">
+            <div class="w-12 h-12 md:w-16 md:h-16 rounded-full bg-muted border-4 border-background flex items-center justify-center z-10 relative">
+              <span class="text-xs md:text-sm font-bold text-muted-foreground">Heute</span>
+            </div>
+          </div>
+          <div class="pt-2 md:pt-3">
+            <h3 class="text-xl md:text-2xl font-display font-bold mb-2">Der Status Quo</h3>
+            <p class="text-muted-foreground leading-relaxed">
+              95% aller Unternehmen nutzen noch Post & Pray. Sie posten Stellenanzeigen auf den gleichen Plattformen wie alle anderen — und wundern sich, warum nur Durchschnitt kommt.
+            </p>
+          </div>
+        </div>
+
+        <!-- Point 2: Morgen -->
+        <div class="js-vision-item flex gap-6 md:gap-8 mb-16 opacity-0 translate-y-8 transition-all duration-700" style="transition-delay: 400ms;">
+          <div class="relative shrink-0">
+            <div class="w-12 h-12 md:w-16 md:h-16 rounded-full bg-primary/20 border-4 border-background flex items-center justify-center z-10 relative">
+              <span class="text-xs md:text-sm font-bold text-primary">Morgen</span>
+            </div>
+          </div>
+          <div class="pt-2 md:pt-3">
+            <h3 class="text-xl md:text-2xl font-display font-bold mb-2">Der neue Standard</h3>
+            <p class="text-muted-foreground leading-relaxed">
+              Sell the Job wird zum Standard. Unternehmen, die Jobs nicht aktiv vermarkten, werden die besten Talente verlieren — an die, die es tun.
+            </p>
+          </div>
+        </div>
+
+        <!-- Point 3: Ihre Chance -->
+        <div class="js-vision-item flex gap-6 md:gap-8 opacity-0 translate-y-8 transition-all duration-700" style="transition-delay: 600ms;">
+          <div class="relative shrink-0">
+            <div class="w-12 h-12 md:w-16 md:h-16 rounded-full bg-primary border-4 border-background flex items-center justify-center z-10 relative shadow-lg shadow-primary/30">
+              <svg class="w-5 h-5 md:w-6 md:h-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg>
+            </div>
+          </div>
+          <div class="pt-2 md:pt-3">
+            <h3 class="text-xl md:text-2xl font-display font-bold mb-2">Ihre Chance — jetzt</h3>
+            <p class="text-muted-foreground leading-relaxed">
+              First Mover haben den größten Vorteil. Die Frage ist nicht, <em>ob</em> sich Recruiting verändert. Die Frage ist, ob Sie vorne dabei sind — oder zusehen.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Closing statement -->
+      <div id="js-vision-close" class="text-center mt-20 opacity-0 transition-opacity duration-700" style="transition-delay: 900ms;">
+        <p class="text-xl md:text-2xl font-display font-bold text-foreground/70 max-w-2xl mx-auto">
+          Die Frage ist nicht ob — sondern <span class="text-primary">wann</span>.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════════════════════════
+       SECTION 8: CTA — Gradient + particles, strong close
+       ═══════════════════════════════════════════════════════════════════ -->
+  <section
+    id="js-cta"
+    class="py-20 md:py-32 text-white relative overflow-hidden"
+    style="background: linear-gradient(to bottom right, hsl(0 72% 50%), hsl(0 72% 52%), hsl(12 76% 61%));"
+  >
+    <!-- Background shapes -->
+    <div class="absolute inset-0 overflow-hidden">
+      <div class="absolute top-0 left-1/4 w-96 h-96 bg-white/5 rounded-full blur-3xl animate-float-slow"></div>
+      <div class="absolute bottom-0 right-1/4 w-80 h-80 bg-white/5 rounded-full blur-3xl animate-float-slow" style="animation-delay: -3s;"></div>
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-white/[0.03] rounded-full blur-3xl animate-pulse"></div>
+    </div>
+
+    <!-- Particles -->
+    <div class="absolute inset-0 overflow-hidden pointer-events-none">
+      <div class="absolute w-1 h-1 bg-white/30 rounded-full animate-float" style="left: 10%; top: 20%; animation-delay: 0.5s; animation-duration: 4s;"></div>
+      <div class="absolute w-1 h-1 bg-white/30 rounded-full animate-float" style="left: 25%; top: 60%; animation-delay: 1.2s; animation-duration: 5s;"></div>
+      <div class="absolute w-1 h-1 bg-white/30 rounded-full animate-float" style="left: 40%; top: 30%; animation-delay: 2.1s; animation-duration: 3.5s;"></div>
+      <div class="absolute w-1 h-1 bg-white/30 rounded-full animate-float" style="left: 55%; top: 70%; animation-delay: 0.8s; animation-duration: 6s;"></div>
+      <div class="absolute w-1 h-1 bg-white/30 rounded-full animate-float" style="left: 70%; top: 15%; animation-delay: 3.5s; animation-duration: 4.5s;"></div>
+      <div class="absolute w-1 h-1 bg-white/30 rounded-full animate-float" style="left: 85%; top: 50%; animation-delay: 1.8s; animation-duration: 5.5s;"></div>
+      <div class="absolute w-1 h-1 bg-white/30 rounded-full animate-float" style="left: 15%; top: 80%; animation-delay: 4.2s; animation-duration: 3.8s;"></div>
+      <div class="absolute w-1 h-1 bg-white/30 rounded-full animate-float" style="left: 50%; top: 10%; animation-delay: 2.5s; animation-duration: 4.2s;"></div>
+      <div class="absolute w-1 h-1 bg-white/30 rounded-full animate-float" style="left: 90%; top: 40%; animation-delay: 0.3s; animation-duration: 6.5s;"></div>
+      <div class="absolute w-1 h-1 bg-white/30 rounded-full animate-float" style="left: 35%; top: 90%; animation-delay: 3.1s; animation-duration: 4.8s;"></div>
+      <div class="absolute w-1 h-1 bg-white/30 rounded-full animate-float" style="left: 60%; top: 45%; animation-delay: 1.5s; animation-duration: 5.2s;"></div>
+      <div class="absolute w-1 h-1 bg-white/30 rounded-full animate-float" style="left: 5%; top: 55%; animation-delay: 4.8s; animation-duration: 3.3s;"></div>
+      <div class="absolute w-1 h-1 bg-white/30 rounded-full animate-float" style="left: 78%; top: 85%; animation-delay: 2.8s; animation-duration: 5.8s;"></div>
+      <div class="absolute w-1 h-1 bg-white/30 rounded-full animate-float" style="left: 45%; top: 5%; animation-delay: 0.1s; animation-duration: 4.6s;"></div>
+      <div class="absolute w-1 h-1 bg-white/30 rounded-full animate-float" style="left: 20%; top: 35%; animation-delay: 3.8s; animation-duration: 6.2s;"></div>
+    </div>
+
+    <!-- Grid pattern -->
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.08)_1px,transparent_1px)] bg-[size:32px_32px] opacity-40"></div>
+
+    <div class="container relative mx-auto px-4">
+      <div id="js-cta-content" class="max-w-3xl mx-auto text-center space-y-8 opacity-0 translate-y-8 transition-all duration-1000">
+        <!-- Headline -->
+        <h2 id="js-cta-headline" class="text-3xl md:text-5xl lg:text-6xl font-display font-bold leading-tight opacity-0 transition-opacity duration-700">
+          Werden Sie{" "}
+          <span class="relative inline-block">
+            First Mover
+            <svg class="absolute -bottom-2 left-0 w-full" viewBox="0 0 240 12" fill="none">
+              <path id="js-cta-underline" d="M2 10C60 4 180 4 238 10" stroke="rgba(255,255,255,0.5)" stroke-width="4" stroke-linecap="round" style="stroke-dasharray: 240; stroke-dashoffset: 240; transition: stroke-dashoffset 1s ease-out;" />
+            </svg>
+          </span>.
+        </h2>
+
+        <!-- Subtext -->
+        <p id="js-cta-sub" class="text-lg md:text-xl text-white/90 opacity-0 transition-opacity duration-700">
+          Starten Sie jetzt mit Sell the Job — und gewinnen Sie die besten Kandidaten, bevor es Ihre Konkurrenz tut.
+        </p>
+
+        <!-- CTA Buttons -->
+        <div id="js-cta-buttons" class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4 opacity-0 translate-y-8 transition-all duration-700">
+          <a href="https://app.shortselect.com/signup" class="inline-flex items-center gap-2 px-8 py-3 bg-white text-primary font-semibold rounded-lg text-base group relative overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
+            <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
+            <span class="relative z-10 flex items-center gap-2">
+              <svg class="h-5 w-5 animate-pulse" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/>
+                <path d="M20 3v4"/><path d="M22 5h-4"/>
+              </svg>
+              14 Tage kostenlos testen
+              <svg class="h-5 w-5 transition-transform group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </span>
+          </a>
+          <a href="https://app.shortselect.com/signup" class="inline-flex items-center px-8 py-3 bg-transparent text-white border-2 border-white/50 font-semibold rounded-lg text-base transition-all duration-300 hover:bg-white/10 hover:border-white hover:scale-105">
+            Demo buchen
+          </a>
+        </div>
+
+        <!-- Trust indicators -->
+        <div id="js-cta-trust" class="flex flex-wrap items-center justify-center gap-6 pt-8 text-sm text-white/70 opacity-0 transition-opacity duration-700">
+          <span class="flex items-center gap-2">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+            14 Tage kostenlos
+          </span>
+          <span class="flex items-center gap-2">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+            Keine Kreditkarte
+          </span>
+          <span class="flex items-center gap-2">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+            Setup in 5 Minuten
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</MarketingLayout>
+
+
+<!-- ═══════════════════════════════════════════════════════════════════
+     ALL ANIMATIONS — Single script block
+     ═══════════════════════════════════════════════════════════════════ -->
+<script is:inline>
+(function() {
+  // ─── Utility: easeOutExpo ───
+  function easeOutExpo(t) {
+    return t === 1 ? 1 : 1 - Math.pow(2, -10 * t);
+  }
+
+  // ─── Utility: animateCounter ───
+  function animateCounter(el, end, duration) {
+    var dur = duration || 2500;
+    var startTime = performance.now();
+    function animate(currentTime) {
+      var elapsed = currentTime - startTime;
+      var progress = Math.min(elapsed / dur, 1);
+      var current = Math.floor(easeOutExpo(progress) * end);
+      el.textContent = current.toLocaleString('de-DE');
+      if (progress < 1) {
+        requestAnimationFrame(animate);
+      } else {
+        el.textContent = end.toLocaleString('de-DE');
+      }
+    }
+    requestAnimationFrame(animate);
+  }
+
+  // ─── Utility: reveal elements ───
+  function reveal(el) {
+    if (el) { el.style.opacity = '1'; el.style.transform = 'translateY(0) scale(1)'; }
+  }
+  function revealOpacity(el) {
+    if (el) { el.style.opacity = '1'; }
+  }
+
+  // ═══════════════════════════════════════════════════════
+  // SECTION 1: HERO — Mount immediately on page load
+  // ═══════════════════════════════════════════════════════
+  requestAnimationFrame(function() {
+    reveal(document.getElementById('js-hero-badge'));
+    reveal(document.getElementById('js-hero-line1'));
+    reveal(document.getElementById('js-hero-line2'));
+    reveal(document.getElementById('js-hero-counter'));
+    reveal(document.getElementById('js-hero-sub'));
+    revealOpacity(document.getElementById('js-hero-scroll'));
+
+    // SVG underline draws after headline appears
+    var underline = document.getElementById('js-hero-underline');
+    if (underline) {
+      setTimeout(function() { underline.style.strokeDashoffset = '0'; }, 800);
+    }
+
+    // Counter starts after delay
+    var counterEl = document.querySelector('.js-counter');
+    if (counterEl) {
+      setTimeout(function() {
+        animateCounter(counterEl, 147000, 3000);
+      }, 900);
+    }
+  });
+
+  // ═══════════════════════════════════════════════════════
+  // SECTION 2: PROBLEM — Scroll reveal
+  // ═══════════════════════════════════════════════════════
+  (function() {
+    var section = document.getElementById('js-problem');
+    if (!section) return;
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          reveal(document.getElementById('js-problem-header'));
+          section.querySelectorAll('.js-problem-stat').forEach(function(el) { reveal(el); });
+          reveal(document.getElementById('js-problem-list'));
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    observer.observe(section);
+  })();
+
+  // ═══════════════════════════════════════════════════════
+  // SECTION 3: MANIFESTO — Scroll reveal with stagger
+  // ═══════════════════════════════════════════════════════
+  (function() {
+    var section = document.getElementById('js-manifesto');
+    if (!section) return;
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          reveal(document.getElementById('js-manifesto-intro'));
+          reveal(document.getElementById('js-manifesto-l1'));
+          reveal(document.getElementById('js-manifesto-l2'));
+          reveal(document.getElementById('js-manifesto-l3'));
+          revealOpacity(document.getElementById('js-manifesto-close'));
+          var underline = document.getElementById('js-manifesto-underline');
+          if (underline) {
+            setTimeout(function() { underline.style.strokeDashoffset = '0'; }, 1200);
+          }
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    observer.observe(section);
+  })();
+
+  // ═══════════════════════════════════════════════════════
+  // SECTION 4: PROCESS — Scroll reveal
+  // ═══════════════════════════════════════════════════════
+  (function() {
+    var section = document.getElementById('js-process');
+    if (!section) return;
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          reveal(document.getElementById('js-process-header'));
+          section.querySelectorAll('.js-process-step').forEach(function(el) { reveal(el); });
+          var underline = document.getElementById('js-process-underline');
+          if (underline) {
+            setTimeout(function() { underline.style.strokeDashoffset = '0'; }, 300);
+          }
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    observer.observe(section);
+  })();
+
+  // ═══════════════════════════════════════════════════════
+  // SECTION 5: COMPARISON — Scroll reveal
+  // ═══════════════════════════════════════════════════════
+  (function() {
+    var section = document.getElementById('js-comparison');
+    if (!section) return;
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          reveal(document.getElementById('js-comp-header'));
+          reveal(document.getElementById('js-comp-left'));
+          reveal(document.getElementById('js-comp-right'));
+          section.querySelectorAll('.js-comp-metric').forEach(function(el) { reveal(el); });
+          var underline = document.getElementById('js-comp-underline');
+          if (underline) {
+            setTimeout(function() { underline.style.strokeDashoffset = '0'; }, 300);
+          }
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    observer.observe(section);
+  })();
+
+  // ═══════════════════════════════════════════════════════
+  // SECTION 6: STATS — Scroll reveal + animated counters
+  // ═══════════════════════════════════════════════════════
+  (function() {
+    var section = document.getElementById('js-stats');
+    if (!section) return;
+    var animated = false;
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting && !animated) {
+          animated = true;
+          section.querySelectorAll('.js-stats-item').forEach(function(el) {
+            el.style.opacity = '1';
+            el.style.transform = 'scale(1)';
+          });
+          section.querySelectorAll('.js-stat-counter').forEach(function(counter) {
+            var target = parseInt(counter.getAttribute('data-target') || '0', 10);
+            animateCounter(counter, target);
+          });
+          revealOpacity(document.getElementById('js-stats-quote'));
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.3 });
+    observer.observe(section);
+  })();
+
+  // ═══════════════════════════════════════════════════════
+  // SECTION 7: VISION — Scroll reveal
+  // ═══════════════════════════════════════════════════════
+  (function() {
+    var section = document.getElementById('js-vision');
+    if (!section) return;
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          reveal(document.getElementById('js-vision-header'));
+          section.querySelectorAll('.js-vision-item').forEach(function(el) { reveal(el); });
+          revealOpacity(document.getElementById('js-vision-close'));
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    observer.observe(section);
+  })();
+
+  // ═══════════════════════════════════════════════════════
+  // SECTION 8: CTA — Scroll reveal with stagger
+  // ═══════════════════════════════════════════════════════
+  (function() {
+    var section = document.getElementById('js-cta');
+    if (!section) return;
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          reveal(document.getElementById('js-cta-content'));
+          revealOpacity(document.getElementById('js-cta-headline'));
+          var underline = document.getElementById('js-cta-underline');
+          if (underline) {
+            setTimeout(function() { underline.style.strokeDashoffset = '0'; }, 500);
+          }
+          setTimeout(function() { revealOpacity(document.getElementById('js-cta-sub')); }, 200);
+          setTimeout(function() { reveal(document.getElementById('js-cta-buttons')); }, 400);
+          setTimeout(function() { revealOpacity(document.getElementById('js-cta-trust')); }, 600);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 });
+    observer.observe(section);
+  })();
+
+  // ─── Smooth scroll for anchor links ───
+  document.querySelectorAll('a[href^="#"]').forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      var target = document.querySelector(a.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+})();
+</script>
