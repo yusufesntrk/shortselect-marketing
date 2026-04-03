@@ -272,7 +272,7 @@ export const batch23: BlogPost[] = [
 
 <h3>False Negatives: KI-Texte nicht erkannt</h3>
 
-<p>Von den 25 perfekt prompteten Bewerbungen wurden nur <strong>31 Prozent</strong> von den Tools als KI-generiert identifiziert. Wer ChatGPT mit personlichen Details futtert und den Text anschliessend leicht uberarbeitet, ein Wort hier andern, einen Satz umstellen, fliegt unter dem Radar.</p>
+<p>Von den 25 perfekt prompteten Bewerbungen wurden nur <strong>31 Prozent</strong> von den Tools als KI-generiert identifiziert. Wer ChatGPT mit personlichen Details futtert und den Text anschließend leicht uberarbeitet, ein Wort hier andern, einen Satz umstellen, fliegt unter dem Radar.</p>
 
 <h3>Das grundsatzliche Problem</h3>
 

@@ -3,23 +3,23 @@ import MarketingLayout from '../../../layouts/MarketingLayout.astro';
 import CTASection from '../../../components/landing/CTASection.astro';
 
 const timelineSteps = [
-  { time: "Sofort", title: "Automatische Eingangsbestaetigung", description: "Der Bewerber erhält sofort eine personalisierte E-Mail, die den Eingang bestätigt und die nächsten Schritte erklaert." },
+  { time: "Sofort", title: "Automatische Eingangsbestätigung", description: "Der Bewerber erhält sofort eine personalisierte E-Mail, die den Eingang bestätigt und die nächsten Schritte erklärt." },
   { time: "Tag 1-2", title: "Screening-Fragen versenden", description: "Automatisierte Screening-Fragen helfen, Kandidaten schnell vorzuqualifizieren -- ohne manuellen Aufwand." },
-  { time: "Tag 3", title: "Persoenliche Rueckmeldung zum Status", description: "Eine kurze, persönliche Nachricht zum aktuellen Stand. Kandidaten wissen, wo sie stehen." },
+  { time: "Tag 3", title: "Persönliche Rückmeldung zum Status", description: "Eine kurze, persönliche Nachricht zum aktuellen Stand. Kandidaten wissen, wo sie stehen." },
   { time: "Tag 5-7", title: "Interview-Einladung oder Absage", description: "Schnelle Entscheidung: Einladung zum Interview oder respektvolle Absage mit Begründung." },
-  { time: "Tag 14", title: "Feedback-Umfrage nach Absage", description: "Auch abgelehnte Kandidaten verdienen Wertschaetzung. Eine kurze Umfrage verbessert Ihren Prozess." },
+  { time: "Tag 14", title: "Feedback-Umfrage nach Absage", description: "Auch abgelehnte Kandidaten verdienen Wertschätzung. Eine kurze Umfrage verbessert Ihren Prozess." },
   { time: "Tag 30+", title: "Talent Pool Einladung", description: "Gute Kandidaten, die heute nicht passen, sind morgen Ihre Top-Bewerber. Laden Sie sie in Ihren Talent Pool ein." },
 ];
 
 const bestPractices = [
-  { title: "Antwortzeit < 24h", description: "Schnelle Reaktion = höhere Conversion. Kandidaten, die innerhalb von 24 Stunden eine Antwort erhalten, bleiben 3x haeufiger im Prozess." },
+  { title: "Antwortzeit < 24h", description: "Schnelle Reaktion = höhere Conversion. Kandidaten, die innerhalb von 24 Stunden eine Antwort erhalten, bleiben 3x häufiger im Prozess." },
   { title: "Personalisierung", description: "Name und Stelle in jeder Kommunikation. Massenmail-Feeling ist der schnellste Weg, Top-Talente zu verlieren." },
-  { title: "Transparenz", description: "Klare Zeitangaben für naechste Schritte. Kandidaten wollen wissen, wann sie mit einer Antwort rechnen können." },
+  { title: "Transparenz", description: "Klare Zeitangaben für nächste Schritte. Kandidaten wollen wissen, wann sie mit einer Antwort rechnen können." },
   { title: "Absage mit Respekt", description: "Jede Absage verdient eine persönliche Nachricht. Heute abgelehnte Kandidaten können morgen Ihre Empfehler sein." },
 ];
 ---
 
-<MarketingLayout title="Playbook: Der perfekte Nachfass-Workflow - ShortSelect" description="60% der Kandidaten springen ab, weil sie nichts hoeren. So halten Sie jeden Bewerber warm mit dem perfekten Nachfass-Workflow.">
+<MarketingLayout title="Playbook: Der perfekte Nachfass-Workflow - ShortSelect" description="60% der Kandidaten springen ab, weil sie nichts hören. So halten Sie jeden Bewerber warm mit dem perfekten Nachfass-Workflow.">
   <!-- Hero -->
   <section class="relative overflow-hidden py-20 md:py-32">
     <div class="absolute inset-0 bg-gradient-to-br from-primary/10 via-background to-accent/5"></div>
@@ -37,7 +37,7 @@ const bestPractices = [
           Playbook: Der perfekte{" "}
           <span class="text-primary">Nachfass-Workflow</span>
         </h1>
-        <p class="reveal-item opacity-0 translate-y-8 transition-all duration-500 text-lg text-muted-foreground max-w-2xl mx-auto" style="transition-delay: 200ms;">60% der Kandidaten springen ab, weil sie nichts hoeren. So halten Sie jeden Bewerber warm.</p>
+        <p class="reveal-item opacity-0 translate-y-8 transition-all duration-500 text-lg text-muted-foreground max-w-2xl mx-auto" style="transition-delay: 200ms;">60% der Kandidaten springen ab, weil sie nichts hören. So halten Sie jeden Bewerber warm.</p>
         <div class="reveal-item opacity-0 translate-y-8 transition-all duration-500 flex flex-col sm:flex-row gap-4 justify-center" style="transition-delay: 300ms;">
           <a href="https://app.shortselect.com/signup" class="inline-flex items-center gap-2 px-8 py-3 bg-primary text-primary-foreground font-semibold rounded-lg text-base group relative overflow-hidden shadow-lg hover:shadow-xl transition-all hover:scale-105">
             <span class="relative z-10 flex items-center gap-2">
@@ -104,7 +104,7 @@ const bestPractices = [
       </div>
       <div class="max-w-4xl mx-auto grid md:grid-cols-3 gap-8">
         {[
-          { value: "60%", label: "weniger Abspruenge" },
+          { value: "60%", label: "weniger Absprünge" },
           { value: "<24h", label: "Antwortzeit" },
           { value: "100%", label: "Follow-up-Rate" },
         ].map((stat, i) => (

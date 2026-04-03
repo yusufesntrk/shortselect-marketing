@@ -40,7 +40,7 @@ export default function PricingCalculator() {
               : "text-[hsl(var(--muted-foreground))]"
           }`}
         >
-          Jaehrlich
+          Jährlich
         </span>
         {isYearly && (
           <span className="text-xs font-semibold text-[hsl(var(--primary))] bg-[hsl(var(--primary)/0.1)] px-2 py-0.5 rounded-full">
@@ -94,7 +94,7 @@ export default function PricingCalculator() {
                   </div>
                   {isYearly && savings > 0 && (
                     <p className="text-xs text-[hsl(var(--primary))] font-medium mt-1">
-                      {savings}% guenstiger als monatlich
+                      {savings}% günstiger als monatlich
                     </p>
                   )}
                 </div>
@@ -168,7 +168,7 @@ export default function PricingCalculator() {
       {/* Footer note */}
       <p className="text-center text-sm text-[hsl(var(--muted-foreground))] mt-8">
         Alle Preise zzgl. MwSt. &bull; 14 Tage kostenlos testen &bull; Keine
-        Kreditkarte erforderlich &bull; Jederzeit kuendbar
+        Kreditkarte erforderlich &bull; Jederzeit kündbar
       </p>
     </div>
   );

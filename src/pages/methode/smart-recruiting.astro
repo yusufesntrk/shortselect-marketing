@@ -6,18 +6,18 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "WebPage",
   name: "Smart Recruiting Methode - ShortSelect",
-  description: "Die Smart Recruiting Methode: 4 Phasen für bessere Einstellungen. Anziehen, Auswaehlen, Einstellen, Binden.",
+  description: "Die Smart Recruiting Methode: 4 Phasen für bessere Einstellungen. Anziehen, Auswählen, Einstellen, Binden.",
 };
 
 const phases = [
   { number: 1, title: "Anziehen", description: "Talente auf sich aufmerksam machen -- mit der richtigen Karriereseite, den richtigen Kanälen und einer starken Arbeitgebermarke.", link: "/methode/anziehen", color: "primary" },
-  { number: 2, title: "Auswaehlen", description: "Die Nadel im Heuhaufen finden -- mit KI-Matching, strukturiertem Screening und datenbasierten Entscheidungen.", link: "/methode/auswaehlen", color: "accent" },
-  { number: 3, title: "Einstellen", description: "Vom Interview zum Vertrag -- schnell, professionell und ohne Flaschenhaeulse.", link: "/methode/einstellen", color: "emerald" },
+  { number: 2, title: "Auswählen", description: "Die Nadel im Heuhaufen finden -- mit KI-Matching, strukturiertem Screening und datenbasierten Entscheidungen.", link: "/methode/auswählen", color: "accent" },
+  { number: 3, title: "Einstellen", description: "Vom Interview zum Vertrag -- schnell, professionell und ohne Flaschenhälse.", link: "/methode/einstellen", color: "emerald" },
   { number: 4, title: "Binden", description: "Talente langfristig an sich binden -- mit Talent Pools, Nurturing und systematischer Wiederansprache.", link: "/methode/binden", color: "primary" },
 ];
 ---
 
-<MarketingLayout title="Smart Recruiting Methode - ShortSelect" description="Die Smart Recruiting Methode: 4 Phasen für bessere Einstellungen. Anziehen, Auswaehlen, Einstellen, Binden. Ein System für moderne Teams." jsonLd={jsonLd}>
+<MarketingLayout title="Smart Recruiting Methode - ShortSelect" description="Die Smart Recruiting Methode: 4 Phasen für bessere Einstellungen. Anziehen, Auswählen, Einstellen, Binden. Ein System für moderne Teams." jsonLd={jsonLd}>
   <!-- Hero -->
   <section class="relative overflow-hidden py-28 md:py-40 bg-gradient-to-br from-primary via-primary/95 to-accent text-white">
     <div class="absolute inset-0 overflow-hidden">
@@ -99,7 +99,7 @@ const phases = [
       </div>
       <div class="max-w-4xl mx-auto grid md:grid-cols-3 gap-8">
         {[
-          { value: "50%", label: "kuerzere Time-to-Hire", color: "text-primary" },
+          { value: "50%", label: "kürzere Time-to-Hire", color: "text-primary" },
           { value: "3x", label: "bessere Match-Qualität", color: "text-accent" },
           { value: "60%", label: "weniger Admin-Aufwand", color: "text-emerald-500" },
         ].map((kpi, index) => (
