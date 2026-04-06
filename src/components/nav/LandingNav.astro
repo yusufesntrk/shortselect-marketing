@@ -104,8 +104,8 @@ const simpleLinks = [
 
       <!-- Simple Links -->
       {simpleLinks.map((link) => (
-        <a href={link.href} class={link.highlight ? "px-3 py-1.5 text-sm font-semibold text-primary border border-primary/30 rounded-full hover:bg-primary/5 transition-colors" : "px-3 py-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"}>
-          {link.highlight && <span class="inline-block w-1.5 h-1.5 rounded-full bg-primary animate-pulse mr-1.5"></span>}
+        <a href={link.href} class={link.highlight ? "inline-flex items-center gap-1.5 px-3 py-1.5 text-sm font-semibold text-primary border border-primary/30 rounded-full hover:bg-primary/5 transition-colors" : "px-3 py-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"}>
+          {link.highlight && <span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse shrink-0"></span>}
           {link.label}
         </a>
       ))}
@@ -148,7 +148,7 @@ const simpleLinks = [
           {vergleichLinks.map((link) => <a href={link.href} class="block py-1.5 text-sm text-muted-foreground hover:text-foreground">{link.label}</a>)}
         </div>
       </details>
-      {simpleLinks.map((link) => <a href={link.href} class={link.highlight ? "block py-2 text-sm font-semibold text-primary" : "block py-2 text-sm font-medium"}>{link.highlight && <span class="inline-block w-1.5 h-1.5 rounded-full bg-primary animate-pulse mr-1.5"></span>}{link.label}</a>)}
+      {simpleLinks.map((link) => <a href={link.href} class={link.highlight ? "flex items-center gap-1.5 py-2 text-sm font-semibold text-primary" : "block py-2 text-sm font-medium"}>{link.highlight && <span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse shrink-0"></span>}{link.label}</a>)}
       <div class="pt-4 border-t border-border/50 space-y-2">
         <a href="https://app.shortselect.com/login" class="block py-2 text-sm font-medium text-center">Login</a>
         <a href="/demo" class="block py-2.5 bg-primary text-primary-foreground text-sm font-semibold rounded-lg text-center">Demo buchen</a>
