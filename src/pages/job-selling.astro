@@ -234,11 +234,9 @@ const jsonLd = {
       </div>
 
       <!-- 3-Step Grid -->
-      <div class="relative max-w-5xl mx-auto">
-        <!-- Connecting line behind boxes (desktop only) -->
-        <div class="js-process-line hidden lg:block absolute top-16 left-[calc(16.666%)] right-[calc(16.666%)] h-0.5 z-0" style="transform: scaleX(0); transform-origin: left; transition: transform 1s cubic-bezier(0.22, 1, 0.36, 1);">
-          <div class="w-full h-full border-t-2 border-dashed border-primary/30"></div>
-        </div>
+      <div id="js-process-grid" class="relative max-w-5xl mx-auto">
+        <!-- Connecting line: positioned by JS to exactly span box centers -->
+        <div id="js-process-line" class="hidden lg:block absolute h-0.5 z-0 border-t-2 border-dashed border-primary/30" style="transform: scaleX(0); transform-origin: left; transition: transform 1s cubic-bezier(0.22, 1, 0.36, 1); opacity: 0;"></div>
 
         <div class="grid lg:grid-cols-3 gap-16 relative z-10">
           <!-- Step 1: Create -->
@@ -801,7 +799,22 @@ const jsonLd = {
 
           var steps = section.querySelectorAll('.js-process-step');
           var numboxes = section.querySelectorAll('.js-process-numbox');
-          var line = section.querySelector('.js-process-line');
+          var grid = document.getElementById('js-process-grid');
+          var line = document.getElementById('js-process-line');
+
+          // Position the line exactly between first and last box centers
+          if (line && grid && numboxes.length >= 3) {
+            var gridRect = grid.getBoundingClientRect();
+            var box1 = numboxes[0].getBoundingClientRect();
+            var box3 = numboxes[2].getBoundingClientRect();
+            var centerY = box1.top + box1.height / 2 - gridRect.top;
+            var leftX = box1.left + box1.width / 2 - gridRect.left;
+            var rightX = box3.left + box3.width / 2 - gridRect.left;
+            line.style.top = centerY + 'px';
+            line.style.left = leftX + 'px';
+            line.style.width = (rightX - leftX) + 'px';
+            line.style.opacity = '1';
+          }
 
           // Staggered step reveals: 200ms, 400ms, 600ms
           steps.forEach(function(step, i) {
