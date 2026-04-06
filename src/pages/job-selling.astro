@@ -233,14 +233,21 @@ const jsonLd = {
         </p>
       </div>
 
-      <!-- 3-Step Grid: 5 columns on lg (step - connector - step - connector - step) -->
-      <div class="grid lg:grid-cols-[1fr_4rem_1fr_4rem_1fr] gap-8 lg:gap-0 max-w-5xl mx-auto items-start">
+      <!-- 3-Step Grid -->
+      <div class="grid lg:grid-cols-3 gap-12 lg:gap-8 max-w-5xl mx-auto">
 
         <!-- Step 1: Create -->
-        <div class="js-process-step text-center space-y-6 opacity-0 translate-y-12 transition-all duration-600" style="transition-delay: 200ms;">
+        <div class="js-process-step relative text-center space-y-6 opacity-0 translate-y-12 transition-all duration-600" style="transition-delay: 200ms;">
           <div class="relative mx-auto w-28 h-28 md:w-32 md:h-32">
             <div class="w-full h-full rounded-2xl bg-primary/10 border-2 border-primary/20 flex items-center justify-center transition-all duration-500 hover:shadow-xl hover:shadow-primary/10 hover:scale-105">
               <span class="text-4xl md:text-5xl font-display font-extrabold text-primary">1</span>
+            </div>
+          </div>
+          <!-- Connector 1→2: absolutely positioned, vertically centered on number box -->
+          <div class="hidden lg:block absolute top-[3.5rem] md:top-16 right-0 translate-x-[50%] -translate-y-1/2" style="width: calc(100% - 3.5rem); z-index: 10;">
+            <div class="js-connector relative flex items-center w-full">
+              <div class="js-connector-line flex-1 border-t-2 border-dashed border-primary/30 origin-left scale-x-0 transition-transform duration-700 ease-out" style="transition-delay: 600ms;"></div>
+              <svg class="js-connector-arrow shrink-0 w-4 h-4 text-primary/50 opacity-0 -translate-x-2 transition-all duration-400" style="transition-delay: 1200ms;" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clip-rule="evenodd" /></svg>
             </div>
           </div>
           <div>
@@ -252,19 +259,18 @@ const jsonLd = {
           </p>
         </div>
 
-        <!-- Connector 1→2 (hidden on mobile) -->
-        <div class="hidden lg:flex items-center justify-center h-28 md:h-32">
-          <div class="js-connector relative w-full flex items-center">
-            <div class="js-connector-line h-0.5 w-0 bg-gradient-to-r from-primary/40 to-accent/40 transition-all duration-700 ease-out" style="transition-delay: 600ms;"></div>
-            <svg class="js-connector-arrow shrink-0 w-5 h-5 text-accent/60 opacity-0 -translate-x-2 transition-all duration-400" style="transition-delay: 1200ms;" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clip-rule="evenodd" /></svg>
-          </div>
-        </div>
-
         <!-- Step 2: Sell -->
-        <div class="js-process-step text-center space-y-6 opacity-0 translate-y-12 transition-all duration-600" style="transition-delay: 400ms;">
+        <div class="js-process-step relative text-center space-y-6 opacity-0 translate-y-12 transition-all duration-600" style="transition-delay: 400ms;">
           <div class="relative mx-auto w-28 h-28 md:w-32 md:h-32">
             <div class="w-full h-full rounded-2xl bg-accent/10 border-2 border-accent/20 flex items-center justify-center transition-all duration-500 hover:shadow-xl hover:shadow-accent/10 hover:scale-105">
               <span class="text-4xl md:text-5xl font-display font-extrabold text-accent">2</span>
+            </div>
+          </div>
+          <!-- Connector 2→3: absolutely positioned, vertically centered on number box -->
+          <div class="hidden lg:block absolute top-[3.5rem] md:top-16 right-0 translate-x-[50%] -translate-y-1/2" style="width: calc(100% - 3.5rem); z-index: 10;">
+            <div class="js-connector relative flex items-center w-full">
+              <div class="js-connector-line flex-1 border-t-2 border-dashed border-accent/30 origin-left scale-x-0 transition-transform duration-700 ease-out" style="transition-delay: 1300ms;"></div>
+              <svg class="js-connector-arrow shrink-0 w-4 h-4 text-accent/50 opacity-0 -translate-x-2 transition-all duration-400" style="transition-delay: 1900ms;" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clip-rule="evenodd" /></svg>
             </div>
           </div>
           <div>
@@ -274,14 +280,6 @@ const jsonLd = {
           <p class="text-muted-foreground text-sm leading-relaxed max-w-xs mx-auto">
             Ihre Jobs werden aktiv vermarktet: Social Media Ads, Jobbörsen, Google, Karriereseiten. Nicht posten und hoffen, gezielt platzieren.
           </p>
-        </div>
-
-        <!-- Connector 2→3 (hidden on mobile) -->
-        <div class="hidden lg:flex items-center justify-center h-28 md:h-32">
-          <div class="js-connector relative w-full flex items-center">
-            <div class="js-connector-line h-0.5 w-0 bg-gradient-to-r from-accent/40 to-green-500/40 transition-all duration-700 ease-out" style="transition-delay: 1300ms;"></div>
-            <svg class="js-connector-arrow shrink-0 w-5 h-5 text-green-500/60 opacity-0 -translate-x-2 transition-all duration-400" style="transition-delay: 1900ms;" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clip-rule="evenodd" /></svg>
-          </div>
         </div>
 
         <!-- Step 3: Hire -->
@@ -800,9 +798,9 @@ const jsonLd = {
           if (underline) {
             setTimeout(function() { underline.style.strokeDashoffset = '0'; }, 300);
           }
-          // Animated connectors: grow line width → fade in arrow
+          // Animated connectors: draw line from left to right → fade in arrow
           section.querySelectorAll('.js-connector-line').forEach(function(line) {
-            line.style.width = '100%';
+            line.style.transform = 'scaleX(1)';
           });
           section.querySelectorAll('.js-connector-arrow').forEach(function(arrow) {
             arrow.style.opacity = '1';
