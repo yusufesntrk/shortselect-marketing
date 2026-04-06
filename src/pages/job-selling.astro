@@ -234,68 +234,60 @@ const jsonLd = {
       </div>
 
       <!-- 3-Step Grid -->
-      <div class="grid lg:grid-cols-3 gap-12 lg:gap-8 max-w-5xl mx-auto">
-
-        <!-- Step 1: Create -->
-        <div class="js-process-step relative text-center space-y-6 opacity-0 translate-y-12 transition-all duration-600" style="transition-delay: 200ms;">
-          <div class="relative mx-auto w-28 h-28 md:w-32 md:h-32">
-            <div class="w-full h-full rounded-2xl bg-primary/10 border-2 border-primary/20 flex items-center justify-center transition-all duration-500 hover:shadow-xl hover:shadow-primary/10 hover:scale-105">
-              <span class="text-4xl md:text-5xl font-display font-extrabold text-primary">1</span>
-            </div>
-          </div>
-          <!-- Connector 1→2: absolutely positioned, vertically centered on number box -->
-          <div class="hidden lg:block absolute top-[3.5rem] md:top-16 right-0 translate-x-[50%] -translate-y-1/2" style="width: calc(100% - 3.5rem); z-index: 10;">
-            <div class="js-connector relative flex items-center w-full">
-              <div class="js-connector-line flex-1 border-t-2 border-dashed border-primary/30 origin-left scale-x-0 transition-transform duration-700 ease-out" style="transition-delay: 600ms;"></div>
-              <svg class="js-connector-arrow shrink-0 w-4 h-4 text-primary/50 opacity-0 -translate-x-2 transition-all duration-400" style="transition-delay: 1200ms;" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clip-rule="evenodd" /></svg>
-            </div>
-          </div>
-          <div>
-            <h3 class="text-2xl font-display font-bold">Create</h3>
-            <p class="text-sm text-primary font-medium mt-1">KI generiert optimierte Stellenanzeigen</p>
-          </div>
-          <p class="text-muted-foreground text-sm leading-relaxed max-w-xs mx-auto">
-            Unser KI-Agent analysiert Ihre Anforderungen und erstellt hochkonvertierende Stellenanzeigen und Ad Creatives, in Sekunden statt Stunden.
-          </p>
+      <div class="relative max-w-5xl mx-auto">
+        <!-- Connecting line behind boxes (desktop only) -->
+        <div class="js-process-line hidden lg:block absolute top-16 left-[calc(16.666%)] right-[calc(16.666%)] h-0.5 z-0" style="transform: scaleX(0); transform-origin: left; transition: transform 1s cubic-bezier(0.22, 1, 0.36, 1);">
+          <div class="w-full h-full border-t-2 border-dashed border-primary/30"></div>
         </div>
 
-        <!-- Step 2: Sell -->
-        <div class="js-process-step relative text-center space-y-6 opacity-0 translate-y-12 transition-all duration-600" style="transition-delay: 400ms;">
-          <div class="relative mx-auto w-28 h-28 md:w-32 md:h-32">
-            <div class="w-full h-full rounded-2xl bg-accent/10 border-2 border-accent/20 flex items-center justify-center transition-all duration-500 hover:shadow-xl hover:shadow-accent/10 hover:scale-105">
-              <span class="text-4xl md:text-5xl font-display font-extrabold text-accent">2</span>
+        <div class="grid lg:grid-cols-3 gap-16 relative z-10">
+          <!-- Step 1: Create -->
+          <div class="js-process-step text-center space-y-6" style="opacity: 0; transform: translateY(24px);">
+            <div class="js-process-numbox relative mx-auto w-28 h-28 md:w-32 md:h-32" style="opacity: 0; transform: scale(0.9);">
+              <div class="w-full h-full rounded-2xl bg-primary/10 border-2 border-primary/20 flex items-center justify-center transition-all duration-500 hover:shadow-xl hover:shadow-primary/10 hover:scale-105">
+                <span class="text-4xl md:text-5xl font-display font-extrabold text-primary">1</span>
+              </div>
             </div>
-          </div>
-          <!-- Connector 2→3: absolutely positioned, vertically centered on number box -->
-          <div class="hidden lg:block absolute top-[3.5rem] md:top-16 right-0 translate-x-[50%] -translate-y-1/2" style="width: calc(100% - 3.5rem); z-index: 10;">
-            <div class="js-connector relative flex items-center w-full">
-              <div class="js-connector-line flex-1 border-t-2 border-dashed border-accent/30 origin-left scale-x-0 transition-transform duration-700 ease-out" style="transition-delay: 1300ms;"></div>
-              <svg class="js-connector-arrow shrink-0 w-4 h-4 text-accent/50 opacity-0 -translate-x-2 transition-all duration-400" style="transition-delay: 1900ms;" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clip-rule="evenodd" /></svg>
+            <div>
+              <h3 class="text-2xl font-display font-bold">Create</h3>
+              <p class="text-sm text-primary font-medium mt-1">KI generiert optimierte Stellenanzeigen</p>
             </div>
+            <p class="text-muted-foreground text-sm leading-relaxed max-w-xs mx-auto">
+              Unser KI-Agent analysiert Ihre Anforderungen und erstellt hochkonvertierende Stellenanzeigen und Ad Creatives, in Sekunden statt Stunden.
+            </p>
           </div>
-          <div>
-            <h3 class="text-2xl font-display font-bold">Sell</h3>
-            <p class="text-sm text-accent font-medium mt-1">Multi-Channel Distribution</p>
-          </div>
-          <p class="text-muted-foreground text-sm leading-relaxed max-w-xs mx-auto">
-            Ihre Jobs werden aktiv vermarktet: Social Media Ads, Jobbörsen, Google, Karriereseiten. Nicht posten und hoffen, gezielt platzieren.
-          </p>
-        </div>
 
-        <!-- Step 3: Hire -->
-        <div class="js-process-step text-center space-y-6 opacity-0 translate-y-12 transition-all duration-600" style="transition-delay: 600ms;">
-          <div class="relative mx-auto w-28 h-28 md:w-32 md:h-32">
-            <div class="w-full h-full rounded-2xl bg-green-500/10 border-2 border-green-500/20 flex items-center justify-center transition-all duration-500 hover:shadow-xl hover:shadow-green-500/10 hover:scale-105">
-              <span class="text-4xl md:text-5xl font-display font-extrabold text-green-600">3</span>
+          <!-- Step 2: Sell -->
+          <div class="js-process-step text-center space-y-6" style="opacity: 0; transform: translateY(24px);">
+            <div class="js-process-numbox relative mx-auto w-28 h-28 md:w-32 md:h-32" style="opacity: 0; transform: scale(0.9);">
+              <div class="w-full h-full rounded-2xl bg-accent/10 border-2 border-accent/20 flex items-center justify-center transition-all duration-500 hover:shadow-xl hover:shadow-accent/10 hover:scale-105">
+                <span class="text-4xl md:text-5xl font-display font-extrabold text-accent">2</span>
+              </div>
             </div>
+            <div>
+              <h3 class="text-2xl font-display font-bold">Sell</h3>
+              <p class="text-sm text-accent font-medium mt-1">Multi-Channel Distribution</p>
+            </div>
+            <p class="text-muted-foreground text-sm leading-relaxed max-w-xs mx-auto">
+              Ihre Jobs werden aktiv vermarktet: Social Media Ads, Jobbörsen, Google, Karriereseiten. Nicht posten und hoffen, gezielt platzieren.
+            </p>
           </div>
-          <div>
-            <h3 class="text-2xl font-display font-bold">Hire</h3>
-            <p class="text-sm text-green-600 font-medium mt-1">A-Player bewerben sich</p>
+
+          <!-- Step 3: Hire -->
+          <div class="js-process-step text-center space-y-6" style="opacity: 0; transform: translateY(24px);">
+            <div class="js-process-numbox relative mx-auto w-28 h-28 md:w-32 md:h-32" style="opacity: 0; transform: scale(0.9);">
+              <div class="w-full h-full rounded-2xl bg-green-500/10 border-2 border-green-500/20 flex items-center justify-center transition-all duration-500 hover:shadow-xl hover:shadow-green-500/10 hover:scale-105">
+                <span class="text-4xl md:text-5xl font-display font-extrabold text-green-600">3</span>
+              </div>
+            </div>
+            <div>
+              <h3 class="text-2xl font-display font-bold">Hire</h3>
+              <p class="text-sm text-green-600 font-medium mt-1">A-Player bewerben sich</p>
+            </div>
+            <p class="text-muted-foreground text-sm leading-relaxed max-w-xs mx-auto">
+              Die besten Kandidaten kommen zu Ihnen. KI filtert, rankt und priorisiert automatisch. Sie konzentrieren sich nur noch auf die Top 5.
+            </p>
           </div>
-          <p class="text-muted-foreground text-sm leading-relaxed max-w-xs mx-auto">
-            Die besten Kandidaten kommen zu Ihnen. KI filtert, rankt und priorisiert automatisch. Sie konzentrieren sich nur noch auf die Top 5.
-          </p>
         </div>
       </div>
     </div>
@@ -523,17 +515,19 @@ const jsonLd = {
 
       <!-- Timeline -->
       <div class="max-w-2xl mx-auto relative">
-        <!-- Vertical line -->
-        <div class="absolute left-6 md:left-8 top-0 bottom-0 w-px bg-gradient-to-b from-muted-foreground/20 via-primary/40 to-primary"></div>
+        <!-- Vertical line (draws downward) -->
+        <div id="js-vision-line" class="absolute left-6 md:left-8 top-0 bottom-0 w-px z-0" style="transform: scaleY(0); transform-origin: top; transition: transform 1.2s ease-out;">
+          <div class="w-full h-full bg-gradient-to-b from-muted-foreground/20 via-primary/40 to-primary"></div>
+        </div>
 
         <!-- Point 1: Heute -->
-        <div class="js-vision-item flex gap-6 md:gap-8 mb-16 opacity-0 translate-y-8 transition-all duration-700" style="transition-delay: 200ms;">
+        <div class="js-vision-item flex gap-6 md:gap-8 mb-16" style="opacity: 0;">
           <div class="relative shrink-0">
-            <div class="w-12 h-12 md:w-16 md:h-16 rounded-full bg-muted border-4 border-background flex items-center justify-center z-10 relative">
+            <div class="js-vision-circle w-12 h-12 md:w-16 md:h-16 rounded-full bg-muted border-4 border-background flex items-center justify-center z-10 relative" style="transform: scale(0); transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);">
               <span class="text-xs md:text-sm font-bold text-muted-foreground">Heute</span>
             </div>
           </div>
-          <div class="pt-2 md:pt-3">
+          <div class="js-vision-text pt-2 md:pt-3" style="opacity: 0; transform: translateX(20px); transition: opacity 0.5s ease-out, transform 0.5s ease-out;">
             <h3 class="text-xl md:text-2xl font-display font-bold mb-2">Der Status Quo</h3>
             <p class="text-muted-foreground leading-relaxed">
               95% aller Unternehmen nutzen noch Post & Pray. Sie posten Stellenanzeigen auf den gleichen Plattformen wie alle anderen — und wundern sich, warum nur Durchschnitt kommt.
@@ -542,13 +536,13 @@ const jsonLd = {
         </div>
 
         <!-- Point 2: Morgen -->
-        <div class="js-vision-item flex gap-6 md:gap-8 mb-16 opacity-0 translate-y-8 transition-all duration-700" style="transition-delay: 400ms;">
+        <div class="js-vision-item flex gap-6 md:gap-8 mb-16" style="opacity: 0;">
           <div class="relative shrink-0">
-            <div class="w-12 h-12 md:w-16 md:h-16 rounded-full bg-primary/20 border-4 border-background flex items-center justify-center z-10 relative">
+            <div class="js-vision-circle w-12 h-12 md:w-16 md:h-16 rounded-full bg-primary/20 border-4 border-background flex items-center justify-center z-10 relative" style="transform: scale(0); transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);">
               <span class="text-xs md:text-sm font-bold text-primary">Morgen</span>
             </div>
           </div>
-          <div class="pt-2 md:pt-3">
+          <div class="js-vision-text pt-2 md:pt-3" style="opacity: 0; transform: translateX(20px); transition: opacity 0.5s ease-out, transform 0.5s ease-out;">
             <h3 class="text-xl md:text-2xl font-display font-bold mb-2">Der neue Standard</h3>
             <p class="text-muted-foreground leading-relaxed">
               Sell the Job wird zum Standard. Unternehmen, die Jobs nicht aktiv vermarkten, werden die besten Talente verlieren — an die, die es tun.
@@ -557,13 +551,13 @@ const jsonLd = {
         </div>
 
         <!-- Point 3: Ihre Chance -->
-        <div class="js-vision-item flex gap-6 md:gap-8 opacity-0 translate-y-8 transition-all duration-700" style="transition-delay: 600ms;">
+        <div class="js-vision-item flex gap-6 md:gap-8" style="opacity: 0;">
           <div class="relative shrink-0">
-            <div class="w-12 h-12 md:w-16 md:h-16 rounded-full bg-primary border-4 border-background flex items-center justify-center z-10 relative shadow-lg shadow-primary/30">
+            <div class="js-vision-circle w-12 h-12 md:w-16 md:h-16 rounded-full bg-primary border-4 border-background flex items-center justify-center z-10 relative shadow-lg shadow-primary/30" style="transform: scale(0); transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);">
               <svg class="w-5 h-5 md:w-6 md:h-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg>
             </div>
           </div>
-          <div class="pt-2 md:pt-3">
+          <div class="js-vision-text pt-2 md:pt-3" style="opacity: 0; transform: translateX(20px); transition: opacity 0.5s ease-out, transform 0.5s ease-out;">
             <h3 class="text-xl md:text-2xl font-display font-bold mb-2">Ihre Chance — jetzt</h3>
             <p class="text-muted-foreground leading-relaxed">
               First Mover haben den größten Vorteil. Die Frage ist nicht, <em>ob</em> sich Recruiting verändert. Die Frage ist, ob Sie vorne dabei sind — oder zusehen.
@@ -573,7 +567,7 @@ const jsonLd = {
       </div>
 
       <!-- Closing statement -->
-      <div id="js-vision-close" class="text-center mt-20 opacity-0 transition-opacity duration-700" style="transition-delay: 900ms;">
+      <div id="js-vision-close" class="text-center mt-20" style="opacity: 0; transition: opacity 0.7s ease-out;">
         <p class="text-xl md:text-2xl font-display font-bold text-foreground/70 max-w-2xl mx-auto">
           Die Frage ist nicht ob — sondern <span class="text-primary">wann</span>.
         </p>
@@ -680,6 +674,13 @@ const jsonLd = {
 <!-- ═══════════════════════════════════════════════════════════════════
      ALL ANIMATIONS — Single script block
      ═══════════════════════════════════════════════════════════════════ -->
+<style is:inline>
+  @keyframes visionPulse {
+    0% { box-shadow: 0 0 0 0 hsla(0, 72%, 50%, 0.5); }
+    50% { box-shadow: 0 0 20px 8px hsla(0, 72%, 50%, 0.2); }
+    100% { box-shadow: 0 0 0 0 hsla(0, 72%, 50%, 0); }
+  }
+</style>
 <script is:inline>
 (function() {
   // ─── Utility: easeOutExpo ───
@@ -784,7 +785,7 @@ const jsonLd = {
   })();
 
   // ═══════════════════════════════════════════════════════
-  // SECTION 4: PROCESS — Scroll reveal
+  // SECTION 4: PROCESS — Staggered reveal + connecting line
   // ═══════════════════════════════════════════════════════
   (function() {
     var section = document.getElementById('js-process');
@@ -793,19 +794,40 @@ const jsonLd = {
       entries.forEach(function(entry) {
         if (entry.isIntersecting) {
           reveal(document.getElementById('js-process-header'));
-          section.querySelectorAll('.js-process-step').forEach(function(el) { reveal(el); });
           var underline = document.getElementById('js-process-underline');
           if (underline) {
             setTimeout(function() { underline.style.strokeDashoffset = '0'; }, 300);
           }
-          // Animated connectors: draw line from left to right → fade in arrow
-          section.querySelectorAll('.js-connector-line').forEach(function(line) {
-            line.style.transform = 'scaleX(1)';
+
+          var steps = section.querySelectorAll('.js-process-step');
+          var numboxes = section.querySelectorAll('.js-process-numbox');
+          var line = section.querySelector('.js-process-line');
+
+          // Staggered step reveals: 200ms, 400ms, 600ms
+          steps.forEach(function(step, i) {
+            setTimeout(function() {
+              step.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+              step.style.opacity = '1';
+              step.style.transform = 'translateY(0)';
+            }, 200 + (i * 200));
           });
-          section.querySelectorAll('.js-connector-arrow').forEach(function(arrow) {
-            arrow.style.opacity = '1';
-            arrow.style.transform = 'translateX(0)';
+
+          // Number box scale-up with slight extra delay per step
+          numboxes.forEach(function(box, i) {
+            setTimeout(function() {
+              box.style.transition = 'opacity 0.5s cubic-bezier(0.34, 1.56, 0.64, 1), transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1)';
+              box.style.opacity = '1';
+              box.style.transform = 'scale(1)';
+            }, 250 + (i * 200));
           });
+
+          // Connecting line draws at 300ms
+          if (line) {
+            setTimeout(function() {
+              line.style.transform = 'scaleX(1)';
+            }, 300);
+          }
+
           observer.unobserve(entry.target);
         }
       });
@@ -865,7 +887,7 @@ const jsonLd = {
   })();
 
   // ═══════════════════════════════════════════════════════
-  // SECTION 7: VISION — Scroll reveal
+  // SECTION 7: VISION — Sequential timeline draw
   // ═══════════════════════════════════════════════════════
   (function() {
     var section = document.getElementById('js-vision');
@@ -874,8 +896,57 @@ const jsonLd = {
       entries.forEach(function(entry) {
         if (entry.isIntersecting) {
           reveal(document.getElementById('js-vision-header'));
-          section.querySelectorAll('.js-vision-item').forEach(function(el) { reveal(el); });
-          revealOpacity(document.getElementById('js-vision-close'));
+
+          var line = document.getElementById('js-vision-line');
+          var items = section.querySelectorAll('.js-vision-item');
+          var circles = section.querySelectorAll('.js-vision-circle');
+          var texts = section.querySelectorAll('.js-vision-text');
+          var close = document.getElementById('js-vision-close');
+
+          // Start line drawing at 200ms
+          setTimeout(function() {
+            if (line) line.style.transform = 'scaleY(1)';
+          }, 200);
+
+          // Point 1 appears at 400ms (line has started drawing)
+          setTimeout(function() {
+            if (items[0]) items[0].style.opacity = '1';
+            if (circles[0]) circles[0].style.transform = 'scale(1)';
+            setTimeout(function() {
+              if (texts[0]) { texts[0].style.opacity = '1'; texts[0].style.transform = 'translateX(0)'; }
+            }, 150);
+          }, 400);
+
+          // Point 2 appears at 900ms
+          setTimeout(function() {
+            if (items[1]) items[1].style.opacity = '1';
+            if (circles[1]) circles[1].style.transform = 'scale(1)';
+            setTimeout(function() {
+              if (texts[1]) { texts[1].style.opacity = '1'; texts[1].style.transform = 'translateX(0)'; }
+            }, 150);
+          }, 900);
+
+          // Point 3 appears at 1400ms + pulse glow on the checkmark circle
+          setTimeout(function() {
+            if (items[2]) items[2].style.opacity = '1';
+            if (circles[2]) circles[2].style.transform = 'scale(1)';
+            setTimeout(function() {
+              if (texts[2]) { texts[2].style.opacity = '1'; texts[2].style.transform = 'translateX(0)'; }
+            }, 150);
+            // Pulse glow on the last circle
+            setTimeout(function() {
+              if (circles[2]) {
+                circles[2].style.boxShadow = '0 0 0 0 hsla(0, 72%, 50%, 0.4)';
+                circles[2].style.animation = 'visionPulse 1.5s ease-out 1';
+              }
+            }, 400);
+          }, 1400);
+
+          // Closing statement at 1700ms (300ms after point 3 starts)
+          setTimeout(function() {
+            if (close) close.style.opacity = '1';
+          }, 1700);
+
           observer.unobserve(entry.target);
         }
       });
