@@ -1,27 +1,27 @@
 export const aiFeatures = [
   {
     title: "AgentBurst Match",
-    description: "Gleicht Skills, Erfahrung und Kulturfit ab und vergibt präzise Match-Scores von 0-100. Läuft im Hintergrund, rund um die Uhr, DSGVO-konform.",
+    description: "Sie sehen sofort, wer wirklich passt. Match-Scores von 0-100 sortieren Ihre Kandidaten nach Skills, Erfahrung und Kulturfit.",
     icon: "brain",
   },
   {
     title: "AgentBurst Rank",
-    description: "Die besten Talente erscheinen immer oben, basierend auf Ihren individuellen Kriterien. Priorisiert selbstständig, ohne manuelles Sortieren.",
+    description: "Ihr Top-Kandidat steht immer ganz oben. Priorisiert nach Ihren Kriterien, ohne manuelles Sortieren.",
     icon: "zap",
   },
   {
     title: "AgentBurst Screen",
-    description: "Bewerber-Screening in Sekunden. Prüft Qualifikationen, bewertet Knockout-Kriterien und filtert, end-to-end, ohne einen Klick.",
+    description: "100 Bewerbungen in Minuten statt Stunden durchgearbeitet. Qualifikationen geprüft, Knockout-Kriterien bewertet, Shortlist fertig.",
     icon: "bot",
   },
   {
     title: "AgentBurst Anon",
-    description: "Bias-freies Recruiting: Name, Alter, Geschlecht und Foto werden automatisch entfernt. Der Agent anonymisiert jeden Lebenslauf sofort.",
+    description: "Stellen Sie ein, wer wirklich kann, nicht wer am besten klingt. Name, Alter und Foto werden automatisch entfernt.",
     icon: "eye-off",
   },
   {
     title: "AgentBurst Nurture",
-    description: "Nachfass-E-Mails, Statusupdates und Erinnerungen, alles läuft im Hintergrund. Kein Kandidat wird vergessen.",
+    description: "Kein Kandidat wird vergessen, kein Follow-up verpasst. Nachfass-Mails, Statusupdates und Erinnerungen laufen im Hintergrund.",
     icon: "mail",
   },
 ];
@@ -29,7 +29,7 @@ export const aiFeatures = [
 export const platformFeatures = [
   {
     title: "Kanban Board",
-    description: "Visualisieren Sie Ihren Recruiting-Prozess. Drag & Drop Kandidaten durch Ihre Pipeline - intuitiv und übersichtlich.",
+    description: "Kein Kandidat geht verloren. Sehen Sie auf einen Blick, wo jeder Bewerber steht, und schieben Sie ihn per Drag & Drop weiter.",
     icon: "layout-grid",
   },
   {
@@ -39,7 +39,7 @@ export const platformFeatures = [
   },
   {
     title: "Talent Pools",
-    description: "Bauen Sie Ihren Talentpool auf. Kategorisieren, taggen und reaktivieren Sie Kandidaten für zukünftige Positionen.",
+    description: "Nie wieder bei null anfangen. Jede neue Stelle profitiert von Kandidaten, die Sie schon kennen.",
     icon: "users",
   },
   {
@@ -49,12 +49,12 @@ export const platformFeatures = [
   },
   {
     title: "Reports & Analytics",
-    description: "Datengetriebenes Recruiting. Time-to-Hire, Source-Performance, Pipeline-Velocity - alle KPIs auf einen Blick.",
+    description: "Wissen, welcher Kanal Ihre besten Kandidaten bringt. Time-to-Hire, Source-Performance und Pipeline-Velocity auf einen Blick.",
     icon: "bar-chart-3",
   },
   {
     title: "Document Management",
-    description: "CVs, Anschreiben und Verträge zentral verwalten. Automatische Versionierung und sichere Speicherung.",
+    description: "Jedes Dokument griffbereit, immer die aktuelle Version. Kein Suchen in E-Mail-Anhängen mehr.",
     icon: "file-text",
   },
 ];
