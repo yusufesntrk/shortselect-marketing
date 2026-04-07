@@ -27,12 +27,22 @@ const glossarySchema = {
     url: "https://www.shortselect.com/glossar",
   },
 };
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.shortselect.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Glossar", "item": "https://www.shortselect.com/glossar/" },
+    { "@type": "ListItem", "position": 3, "name": entry.title }
+  ]
+};
 ---
 
 <MarketingLayout
   title={`${entry.title} – Recruiting Glossar | ShortSelect`}
   description={entry.shortDef}
-  jsonLd={glossarySchema}
+  jsonLd={[glossarySchema, breadcrumbSchema]}
 >
   <!-- Hero -->
   <section class="relative overflow-hidden py-20 md:py-28">

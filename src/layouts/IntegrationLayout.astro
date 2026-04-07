@@ -39,9 +39,19 @@ const {
   howItWorksSubline,
   trustItems,
 } = Astro.props;
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.shortselect.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Integrationen", "item": "https://www.shortselect.com/integrationen/" },
+    { "@type": "ListItem", "position": 3, "name": title }
+  ]
+};
 ---
 
-<MarketingLayout title={title} description={description}>
+<MarketingLayout title={title} description={description} jsonLd={breadcrumbSchema}>
   <!-- HERO -->
   <section id="integration-hero" class="relative overflow-hidden py-20 md:py-32">
     <div class="absolute inset-0 bg-gradient-to-br from-primary/10 via-accent/5 to-transparent"></div>

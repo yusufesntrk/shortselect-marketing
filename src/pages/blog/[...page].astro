@@ -1,19 +1,39 @@
 ---
+import type { GetStaticPaths } from 'astro';
 import MarketingLayout from '../../layouts/MarketingLayout.astro';
 import CTASection from '../../components/landing/CTASection.astro';
 import { blogPosts, blogCategories } from '../../data/blog/posts';
 
-const sortedPosts = [...blogPosts].sort(
-  (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
-);
+export const getStaticPaths = (async ({ paginate }) => {
+  const sortedPosts = [...blogPosts].sort(
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+  );
+  return paginate(sortedPosts, { pageSize: 12 });
+}) satisfies GetStaticPaths;
 
+const { page } = Astro.props;
 const categories = blogCategories.filter((c) => c !== "Alle");
+const pageTitle = page.currentPage > 1
+  ? `Blog – Recruiting Tipps & News | Seite ${page.currentPage} | ShortSelect`
+  : "Blog – Recruiting Tipps & News | ShortSelect";
 ---
 
 <MarketingLayout
-  title="Blog – Recruiting Tipps & News | ShortSelect"
+  title={pageTitle}
   description="Recruiting-Wissen, Praxis-Guides, KI-Trends und DSGVO-Tipps. Der ShortSelect Blog für HR-Teams und Personalvermittler."
 >
+  <!-- SEO prev/next -->
+  {page.url.prev && (
+    <script is:inline define:vars={{ prevUrl: page.url.prev }}>
+      document.head.appendChild(Object.assign(document.createElement('link'), { rel: 'prev', href: prevUrl }));
+    </script>
+  )}
+  {page.url.next && (
+    <script is:inline define:vars={{ nextUrl: page.url.next }}>
+      document.head.appendChild(Object.assign(document.createElement('link'), { rel: 'next', href: nextUrl }));
+    </script>
+  )}
+
   <!-- Hero -->
   <section class="relative overflow-hidden py-20 md:py-32">
     <div class="absolute inset-0 bg-gradient-to-br from-[hsl(var(--primary)/0.1)] via-[hsl(var(--accent)/0.05)] to-[hsl(var(--background))]"></div>
@@ -59,7 +79,7 @@ const categories = blogCategories.filter((c) => c !== "Alle");
 
       <!-- Posts grid -->
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-        {sortedPosts.map((post, i) => (
+        {page.data.map((post, i) => (
           <a class="reveal-item opacity-0 translate-y-8 transition-all duration-500" style={`transition-delay: ${Math.min(i * 50, 500)}ms;`} href={`/blog/${post.slug}`}>
             <article class="group h-full rounded-xl border border-[hsl(var(--border))] bg-[hsl(var(--card))] hover:shadow-lg hover:border-[hsl(var(--primary)/0.2)] hover:-translate-y-1 transition-all duration-500 cursor-pointer">
               <div class="p-6 flex flex-col h-full space-y-4">
@@ -98,6 +118,25 @@ const categories = blogCategories.filter((c) => c !== "Alle");
           </a>
         ))}
       </div>
+
+      <!-- Pagination -->
+      {page.lastPage > 1 && (
+        <nav class="flex items-center justify-center gap-4 mt-16">
+          {page.url.prev && (
+            <a href={page.url.prev} class="px-4 py-2 rounded-full text-sm font-medium bg-[hsl(var(--muted)/0.6)] text-[hsl(var(--muted-foreground))] hover:bg-[hsl(var(--primary))] hover:text-white transition-colors duration-300">
+              &larr; Zurück
+            </a>
+          )}
+          <span class="text-sm text-[hsl(var(--muted-foreground))]">
+            Seite {page.currentPage} von {page.lastPage}
+          </span>
+          {page.url.next && (
+            <a href={page.url.next} class="px-4 py-2 rounded-full text-sm font-medium bg-[hsl(var(--muted)/0.6)] text-[hsl(var(--muted-foreground))] hover:bg-[hsl(var(--primary))] hover:text-white transition-colors duration-300">
+              Weiter &rarr;
+            </a>
+          )}
+        </nav>
+      )}
     </div>
   </section>
 

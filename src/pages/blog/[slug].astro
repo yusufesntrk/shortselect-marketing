@@ -43,12 +43,22 @@ const articleSchema = {
   articleSection: post.category,
   keywords: post.tags.join(", "),
 };
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.shortselect.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.shortselect.com/blog/" },
+    { "@type": "ListItem", "position": 3, "name": post.title }
+  ]
+};
 ---
 
 <MarketingLayout
   title={`${post.title} | ShortSelect Blog`}
   description={post.excerpt}
-  jsonLd={articleSchema}
+  jsonLd={[articleSchema, breadcrumbSchema]}
 >
   <!-- Hero / Article Header -->
   <section class="relative overflow-hidden py-20 md:py-28">

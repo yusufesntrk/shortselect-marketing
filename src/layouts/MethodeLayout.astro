@@ -24,15 +24,25 @@ const {
   badge = 'Smart Recruiting',
 } = Astro.props;
 
-const jsonLd = {
+const webPageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
   name: title,
   description: description,
 };
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.shortselect.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Methode", "item": "https://www.shortselect.com/methode/" },
+    { "@type": "ListItem", "position": 3, "name": title }
+  ]
+};
 ---
 
-<MarketingLayout title={title} description={description} jsonLd={jsonLd}>
+<MarketingLayout title={title} description={description} jsonLd={[webPageSchema, breadcrumbSchema]}>
   <slot />
   <CTASection />
 </MarketingLayout>

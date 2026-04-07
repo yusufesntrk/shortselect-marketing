@@ -47,9 +47,19 @@ const {
   stepsTitle,
   stepsSubline,
 } = Astro.props;
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.shortselect.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Branchen", "item": "https://www.shortselect.com/branchen/" },
+    { "@type": "ListItem", "position": 3, "name": title }
+  ]
+};
 ---
 
-<MarketingLayout title={title} description={description}>
+<MarketingLayout title={title} description={description} jsonLd={breadcrumbSchema}>
   <!-- HERO -->
   <section id="branche-hero" class="relative overflow-hidden py-20 md:py-32">
     <div class="absolute inset-0 bg-gradient-to-br from-accent/10 via-primary/5 to-transparent"></div>
