@@ -1,6 +1,7 @@
 ---
 import MarketingLayout from '../../layouts/MarketingLayout.astro';
 import CTASection from '../../components/landing/CTASection.astro';
+import PhaseTestimonial from '../../components/landing/PhaseTestimonial.astro';
 
 const features = [
   { title: "Karriereseite", description: "Ihre digitale Visitenkarte als Arbeitgeber" },
@@ -91,6 +92,14 @@ const bestPractices = [
       </div>
     </div>
   </section>
+
+  <!-- Testimonials -->
+  <PhaseTestimonial
+    names={["Bahadir Battal", "Dr. Thomas Wendel"]}
+    title="Kunden, die ihre Pipeline neu aufgestellt haben"
+    subtitle="So machen andere Recruiting-Teams ihre Pipeline messbar voller."
+    accent="primary"
+  />
 
   <!-- Next Phase -->
   <section class="py-16 md:py-20">

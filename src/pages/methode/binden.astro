@@ -1,6 +1,7 @@
 ---
 import MarketingLayout from '../../layouts/MarketingLayout.astro';
 import CTASection from '../../components/landing/CTASection.astro';
+import PhaseTestimonial from '../../components/landing/PhaseTestimonial.astro';
 
 const features = [
   { title: "Talent Pools", description: "Qualifizierte Kandidaten für zukünftige Stellen speichern" },
@@ -85,6 +86,14 @@ const cyclePhases = [
       </div>
     </div>
   </section>
+
+  <!-- Testimonials -->
+  <PhaseTestimonial
+    names={["Ekrem Topcan", "Nordin Begdouri"]}
+    title="Kunden, die skalieren ohne Chaos"
+    subtitle="Automatisierte Pipelines und ein ATS, das mitdenkt."
+    accent="primary"
+  />
 
   <!-- Back to Overview -->
   <section class="py-16 md:py-20">

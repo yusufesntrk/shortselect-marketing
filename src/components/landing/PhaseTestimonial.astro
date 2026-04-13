@@ -1,0 +1,82 @@
+---
+import { testimonials } from '@/data/testimonials';
+
+interface Props {
+  names: string[];
+  title?: string;
+  subtitle?: string;
+  accent?: 'primary' | 'accent' | 'emerald';
+}
+
+const { names, title = 'Was unsere Kunden sagen', subtitle, accent = 'primary' } = Astro.props;
+
+const items = names
+  .map((n) => testimonials.find((t) => t.name === n))
+  .filter(Boolean) as typeof testimonials;
+
+const accentClass = {
+  primary: 'text-primary',
+  accent: 'text-accent',
+  emerald: 'text-emerald-500',
+}[accent];
+
+const borderClass = {
+  primary: 'border-primary/20 hover:border-primary/40',
+  accent: 'border-accent/20 hover:border-accent/40',
+  emerald: 'border-emerald-500/20 hover:border-emerald-500/40',
+}[accent];
+---
+
+<section class="py-20 md:py-28 relative overflow-hidden">
+  <div class="container mx-auto px-4">
+    <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700 text-center space-y-4 mb-12">
+      <h2 class="text-3xl md:text-4xl font-display font-bold tracking-tight">
+        {title}
+      </h2>
+      {subtitle && (
+        <p class="text-lg text-muted-foreground max-w-2xl mx-auto">{subtitle}</p>
+      )}
+    </div>
+
+    <div class={`max-w-5xl mx-auto grid gap-6 ${items.length > 1 ? 'md:grid-cols-2' : 'md:max-w-2xl md:mx-auto'}`}>
+      {items.map((t, i) => (
+        <figure
+          class={`reveal-item opacity-0 translate-y-8 transition-all duration-500 rounded-2xl border-2 ${borderClass} bg-card p-8 shadow-sm hover:shadow-xl hover:-translate-y-1`}
+          style={`transition-delay: ${i * 100}ms;`}
+        >
+          <div class="flex gap-1 mb-5">
+            {[...Array(5)].map(() => (
+              <svg class={`h-5 w-5 ${accentClass}`} viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            ))}
+          </div>
+          <blockquote class="text-base md:text-lg leading-relaxed text-foreground">
+            &ldquo;{t.quote}&rdquo;
+          </blockquote>
+          <figcaption class="mt-6 pt-5 border-t border-border flex items-center gap-3">
+            {t.image ? (
+              <img
+                src={t.image}
+                alt={t.name}
+                loading="lazy"
+                decoding="async"
+                width="48"
+                height="48"
+                class="w-12 h-12 rounded-full object-cover object-top flex-shrink-0"
+              />
+            ) : (
+              <div class={`w-12 h-12 rounded-full bg-${accent}/10 flex items-center justify-center flex-shrink-0`}>
+                <span class={`${accentClass} font-bold text-sm`}>
+                  {t.name.split(' ').map((n) => n[0]).join('')}
+                </span>
+              </div>
+            )}
+            <div>
+              <p class="font-semibold">{t.name}</p>
+              <p class="text-sm text-muted-foreground">{t.role} &bull; {t.company}</p>
+            </div>
+          </figcaption>
+        </figure>
+      ))}
+    </div>
+  </div>
+</section>

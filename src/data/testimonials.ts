@@ -41,4 +41,18 @@ export const testimonials = [
     quote: "Recruiting mit ShortSelect fühlt sich an wie Cheaten. Das ATS denkt mit, priorisiert automatisch und hält unser Team immer auf dem neuesten Stand.",
     image: "/testimonials/nordin-begdouri.webp",
   },
+  {
+    name: "Hasim Pacal",
+    company: "Kerkhoff Experts GmbH",
+    role: "Geschäftsführer",
+    quote: "ShortSelect hat unsere Expertenvermittlung auf ein neues Level gebracht. Wir platzieren doppelt so viele Interim Manager im Einkauf und Supply Chain, weil die Pipelines sauber laufen und nichts mehr liegen bleibt.",
+    image: "/testimonials/hasim-pacal.webp",
+  },
+  {
+    name: "Ekrem Topcan",
+    company: "Hohenfeld Search",
+    role: "Geschäftsführer",
+    quote: "Das ATS von ShortSelect hat unser Fulfillment um 80% entlastet. Endlich können wir skalieren, ohne im operativen Chaos zu versinken. Automatisierte Workflows und Pipelines, die einfach funktionieren.",
+    image: "/testimonials/ekrem-topcan.webp",
+  },
 ];

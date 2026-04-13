@@ -1,6 +1,7 @@
 ---
 import MarketingLayout from '../../layouts/MarketingLayout.astro';
 import CTASection from '../../components/landing/CTASection.astro';
+import PhaseTestimonial from '../../components/landing/PhaseTestimonial.astro';
 
 const features = [
   { title: "Interview Scheduling", description: "Self-Service Buchung für Kandidaten" },
@@ -75,6 +76,14 @@ const features = [
       </div>
     </div>
   </section>
+
+  <!-- Testimonials -->
+  <PhaseTestimonial
+    names={["Rüdiger Bruns", "Hasim Pacal"]}
+    title="Kunden, die ihren Abschluss beschleunigt haben"
+    subtitle="Vom Interview zur Unterschrift, ohne Zettelwirtschaft."
+    accent="emerald"
+  />
 
   <!-- Next Phase -->
   <section class="py-16 md:py-20">

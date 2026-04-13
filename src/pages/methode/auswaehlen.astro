@@ -1,6 +1,7 @@
 ---
 import MarketingLayout from '../../layouts/MarketingLayout.astro';
 import CTASection from '../../components/landing/CTASection.astro';
+import PhaseTestimonial from '../../components/landing/PhaseTestimonial.astro';
 
 const features = [
   { title: "KI-Matching", description: "Automatischer Skills-Abgleich mit Match-Scores" },
@@ -100,6 +101,14 @@ const smartScreening = ["KI bewertet automatisch", "Match-Scores und Rankings", 
       </div>
     </div>
   </section>
+
+  <!-- Testimonials -->
+  <PhaseTestimonial
+    names={["Yasar Sentürk", "Alireza Nikjou"]}
+    title="Kunden, die ihr Screening automatisiert haben"
+    subtitle="KI-Matching und Autopilot statt manueller Vorauswahl."
+    accent="accent"
+  />
 
   <!-- Next Phase -->
   <section class="py-16 md:py-20">
