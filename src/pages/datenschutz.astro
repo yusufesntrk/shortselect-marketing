@@ -102,7 +102,72 @@ import MarketingLayout from '../layouts/MarketingLayout.astro';
         </section>
 
         <section>
-          <h2 class="text-xl font-semibold mb-2">9. Änderungen</h2>
+          <h2 class="text-xl font-semibold mb-2">9. Integration mit Meta (Facebook und Instagram)</h2>
+          <p>
+            ShortSelect bietet eine optionale Integration mit Meta Platforms (Facebook und Instagram) über die offizielle Meta Marketing API und die Meta Graph API. Die Integration wird nur aktiviert, wenn ein Administrator eines Mandanten sein Meta-Business-Konto explizit über den OAuth-Flow verbindet.
+          </p>
+          <p>
+            <strong>Verarbeitete Daten aus der Meta-Integration:</strong>
+          </p>
+          <ul class="list-disc pl-6 space-y-1">
+            <li>OAuth Access Token und Refresh Token (verschlüsselt gespeichert in Supabase Vault, AES-256)</li>
+            <li>Meta Business Manager ID, Name und zugeordnete Assets</li>
+            <li>Ad Account IDs, Namen, Währung, Status, Business-Zuordnung</li>
+            <li>Facebook-Seiten-IDs, Namen, Kategorien und Lead-Formular-Konfigurationen</li>
+            <li>Meta Pixel IDs und zugehörige Event-Metadaten</li>
+            <li>Lead-Ad-Formular-Submissions: Vorname, Nachname, E-Mail-Adresse, Telefonnummer, benutzerdefinierte Antworten, Zeitstempel, Kampagnen- und Ad-Zuordnung</li>
+            <li>Campaign-Performance-Metriken: Impressions, Clicks, Ausgaben, Cost-per-Lead, Cost-per-Application</li>
+          </ul>
+          <p>
+            <strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. b DSGVO (Vertragserfüllung) für die Bereitstellung des ATS-Dienstes sowie Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an effizientem Bewerbermanagement und Recruiting-Werbung).
+          </p>
+          <p>
+            <strong>Zweck der Verarbeitung:</strong>
+          </p>
+          <ul class="list-disc pl-6 space-y-1">
+            <li>Import von Lead-Ad-Bewerbungen in den ATS-Workflow des jeweiligen Mandanten</li>
+            <li>Erstellung, Verwaltung und Performance-Messung von Recruiting-Werbekampagnen auf Facebook und Instagram</li>
+            <li>Aggregierte Performance-Auswertung zur Cost-per-Hire-Analyse</li>
+          </ul>
+          <p>
+            <strong>Speicherdauer:</strong>
+          </p>
+          <ul class="list-disc pl-6 space-y-1">
+            <li>Access Tokens: bis zur Trennung der Verbindung oder Ablauf durch Meta (bis zu 60 Tage mit Rolling Refresh)</li>
+            <li>Lead-Daten und Kandidaten-Profile: gemäß der allgemeinen Kandidaten-Retention des Mandanten (Standard: 6 Monate nach Ablehnung, gemäß AGG)</li>
+            <li>Campaign-Metriken: 24 Monate zur historischen Performance-Analyse</li>
+            <li>Audit-Logs: 12 Monate</li>
+          </ul>
+          <p>
+            <strong>Keine Weitergabe an Dritte:</strong> ShortSelect teilt Meta-Daten ausschließlich innerhalb des eigenen Mandanten über Row-Level-Security. Es erfolgt keine Übermittlung an andere Agenturen oder Drittparteien außer dem technischen Hosting-Dienstleister Supabase (EU-Region Frankfurt, DSGVO-konform).
+          </p>
+          <p>
+            <strong>Deaktivierung und Datenlöschung:</strong>
+          </p>
+          <ul class="list-disc pl-6 space-y-1">
+            <li>Ein Administrator kann die Meta-Verbindung jederzeit in ShortSelect unter Einstellungen → Integrationen → Meta trennen. Access Tokens werden dabei sofort widerrufen und gelöscht.</li>
+            <li>Bei Deautorisierung der App über facebook.com/settings/apps löscht ShortSelect automatisch alle verbundenen Tokens und verknüpften Metadaten innerhalb von 30 Tagen. Meta ruft dafür den Callback <code class="text-xs">https://aztqhtluvomqnxdavjxp.supabase.co/functions/v1/meta-deauthorize-callback</code> auf.</li>
+            <li>Vollständige Datenlöschungsanfragen werden über den Endpoint <code class="text-xs">https://aztqhtluvomqnxdavjxp.supabase.co/functions/v1/meta-data-deletion-callback</code> verarbeitet oder können per E-Mail an <a href="mailto:hello@shortselect.com" class="text-[hsl(var(--primary))] hover:underline">hello@shortselect.com</a> angefordert werden.</li>
+          </ul>
+          <p>
+            <strong>Angeforderte Meta-Berechtigungen:</strong>
+          </p>
+          <ul class="list-disc pl-6 space-y-1">
+            <li><code class="text-xs">ads_read</code> — Lesen von Kampagnen-Performance-Daten</li>
+            <li><code class="text-xs">ads_management</code> — Erstellen und Verwalten von Werbekampagnen</li>
+            <li><code class="text-xs">business_management</code> — Lesen von Business Manager Assets (Ad Accounts, Pages)</li>
+            <li><code class="text-xs">pages_show_list</code> — Auflisten der Facebook-Seiten des verbundenen Nutzers</li>
+            <li><code class="text-xs">pages_read_engagement</code> — Lesen der Lead-Formulare einer verknüpften Seite</li>
+            <li><code class="text-xs">pages_manage_ads</code> — Verknüpfung von Werbeanzeigen mit Facebook-Seiten</li>
+            <li><code class="text-xs">leads_retrieval</code> — Import von Lead-Ad-Submissions</li>
+          </ul>
+          <p>
+            <strong>Verantwortlichkeit:</strong> LeyalTech handelt als Auftragsverarbeiter im Sinne von Art. 28 DSGVO im Auftrag des jeweiligen Mandanten (Recruiting-Agentur). Der Mandant bleibt Verantwortlicher für die Verarbeitung der importierten Bewerberdaten gemäß Art. 4 Nr. 7 DSGVO.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-semibold mb-2">10. Änderungen</h2>
           <p>
             Wir behalten uns vor, diese Datenschutzerklärung anzupassen, um sie an geänderte
             Rechtslagen oder Änderungen des Dienstes anzupassen. Die aktuelle Fassung finden
@@ -111,7 +176,7 @@ import MarketingLayout from '../layouts/MarketingLayout.astro';
         </section>
 
         <p class="text-sm text-[hsl(var(--muted-foreground))] mt-8">
-          Stand: März 2026
+          Stand: April 2026
         </p>
       </div>
     </div>
