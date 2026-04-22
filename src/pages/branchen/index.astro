@@ -1,0 +1,62 @@
+---
+import HubLayout from '../../layouts/HubLayout.astro';
+
+const items = [
+  { title: "IT-Recruiting", href: "/branchen/it-recruiting/", description: "Developer, DevOps und Data-Profile im hart umkämpften Markt finden: GitHub-Sourcing, Skill-Matching und Remote-First-Workflows integriert." },
+  { title: "Engineering", href: "/branchen/engineering/", description: "Maschinenbau, Elektrotechnik und Fertigung: Fachkraft-Pipeline, Werksbesuche im Interview-Scheduling und branchenspezifische Jobbörsen." },
+  { title: "Sales", href: "/branchen/sales/", description: "Account Executives und SDRs bewerten anhand von Quota-Historie, Skill-Tests integriert und Commission-transparente Stellenbeschreibungen." },
+  { title: "Finance", href: "/branchen/finance/", description: "Executive-Search für CFO, Treasurer und Controller: diskrete Sourcing-Workflows, Compliance-Checks und Time-to-Hire unter 2 Wochen." },
+  { title: "Healthcare", href: "/branchen/healthcare/", description: "Pflegekräfte, Ärzte und MFA rekrutieren: Schichtplan-kompatibles Scheduling, WhatsApp-Kommunikation und Approbations-Checks integriert." },
+  { title: "Logistik", href: "/branchen/logistik/", description: "Fahrer, Lagermitarbeiter und Disponenten: Mobile-First-Bewerbung, Führerschein-Verifikation und schnelle Time-to-Start-Prozesse." },
+  { title: "Handwerk", href: "/branchen/handwerk/", description: "Gesellen, Meister und Auszubildende: lokale Jobbörsen, Empfehlungsprogramme und WhatsApp-Bewerbung statt klassischem Formular." },
+];
+
+const introHtml = `
+<p>Recruiting-Prozesse sehen in <strong>IT, Finance und Handwerk</strong> komplett unterschiedlich aus. Ein Senior-Developer wird über GitHub gesourct, hat ein Jahresgehalt über 90.000 Euro, erwartet Remote-First und entscheidet in unter 3 Wochen. Ein Gesellenposten im Handwerk kommt per WhatsApp-Bewerbung rein, hat eine klare regionale Bindung und wird in unter einer Woche besetzt oder gar nicht. ShortSelect deckt beide Extreme und alles dazwischen mit branchenspezifischen Templates, Workflows und Integrationen ab.</p>
+<p>Der Unterschied zu generischen ATS: Wir liefern pro Branche nicht nur eine Stellenanzeigen-Vorlage, sondern die komplette Pipeline-Konfiguration, die relevanten Jobbörsen-Integrationen, die Kommunikations-Kanäle (E-Mail, WhatsApp, SMS), die typischen Screening-Fragen und die branchenspezifischen Compliance-Checks. Wer zum Beispiel im Healthcare rekrutiert, braucht Approbations-Verifikation und Schichtplan-kompatibles Scheduling; wer im Finance-Executive-Search tätig ist, braucht diskrete Sourcing-Workflows und Compliance-Checks gegen PEP-Listen und Geldwäsche-Register.</p>
+<p>Für Recruiting-Agenturen besonders spannend: Die Branchen-Templates lassen sich pro Mandat aktivieren. Eine Agentur, die gleichzeitig <a href="/branchen/it-recruiting/">IT-Profile</a> für einen Software-Konzern, <a href="/branchen/finance/">Executive-Search</a> für eine Bank und <a href="/branchen/healthcare/">Pflegekräfte</a> für eine Klinik besetzt, konfiguriert pro Mandat die passenden Stages, Felder und Jobbörsen. Keine generische Oberfläche, die für alle gleich aussieht.</p>
+<p>Ein Blick auf die Zahlen pro Branche hilft bei der Einordnung: <strong>IT-Recruiting</strong> hat typischerweise die längste Time-to-Hire (45-90 Tage) und die höchste Placement-Provision (20-30 Prozent Jahresgehalt). <strong>Finance-Executive-Search</strong> arbeitet mit Retainer-Modellen und sehr kleinen Fallzahlen, aber hohem Invest pro Mandat. <strong>Healthcare und Logistik</strong> sind Volumen-Recruiting mit schneller Time-to-Hire (unter 14 Tage) und niedrigerer Margen-pro-Placement, aber 10 bis 20 Placements pro Monat und Recruiter. <strong>Handwerk</strong> ist eine Mischform, oft lokal und beziehungs-getrieben, was klassische Jobportale weniger relevant macht.</p>
+<p>Auf jeder Branchenseite finden Sie konkrete Zahlen, die Integrations-Empfehlungen und mindestens einen Case Study oder Testimonial aus der jeweiligen Industrie. Wenn Ihre Branche nicht dabei ist, melden Sie sich: Wir haben zusätzliche Templates für Gastronomie, Bildung, Agentur-Recruiting und den öffentlichen Sektor in Vorbereitung.</p>
+`;
+
+const faqs = [
+  {
+    q: "Warum ist branchenspezifisches Recruiting wichtiger als generisches ATS?",
+    a: "Weil die Customer Journey, die Kommunikationskanäle und die Compliance-Anforderungen sich fundamental unterscheiden. Eine IT-Kandidatin erwartet schnelle, technisch klingende Outreach und mindestens 2-3 Tech-Rounds, ein Pflege-Bewerber erwartet WhatsApp-Antwort und ein Angebot innerhalb von 7 Tagen. Generische ATS zwingen beide in dieselbe Pipeline, branchenspezifische Templates liefern pro Industrie den passenden Prozess."
+  },
+  {
+    q: "Welche Branche ist am schwersten zu rekrutieren?",
+    a: "IT und Healthcare sind 2026 die härtesten Märkte. IT wegen Fachkräftemangel und hoher Gehaltserwartungen (Durchschnitt 78.000 Euro für Senior-Developer laut StepStone), Healthcare wegen demografischer Lücke und regulatorischer Hürden (Approbation, Sprachtest, Schichtbereitschaft). In beiden Branchen ist Active Sourcing plus Talent-Pool-Nurturing Pflicht, klassisches Post-and-Pray funktioniert nicht mehr."
+  },
+  {
+    q: "Welche Jobbörsen sind pro Branche die wichtigsten?",
+    a: "IT: LinkedIn, GitHub Jobs, Xing, honeypot.io, plus englischsprachige Zusatzquellen. Finance: eFinancialCareers, LinkedIn Executive-Search, Xing. Engineering: StepStone, LinkedIn, VDI-Jobbörse, Maschinenbau.de. Sales: LinkedIn Sales Navigator, Indeed, fachverband-spezifische Portale. Healthcare: medi-jobs.de, aerztestellen.de, Facebook-Gruppen. Logistik und Handwerk: Indeed, regionale Zeitungen plus WhatsApp-Empfehlungen. ShortSelect integriert alle genannten Kanäle über Multiposting."
+  },
+  {
+    q: "Wie schnell sollte die Time-to-Hire pro Branche sein?",
+    a: "Das hängt stark von Rolle und Marktsituation ab. Als grobe Benchmarks laut LinkedIn Talent Insights 2024: Handwerk und Logistik unter 14 Tagen, Sales und Healthcare 20-30 Tage, Engineering 30-45 Tage, IT und Finance-Executive 45-90 Tage. Wer diese Benchmarks deutlich überschreitet, verliert Kandidaten an schnellere Wettbewerber."
+  },
+  {
+    q: "Kann ich Branchen-Templates in ShortSelect selbst anpassen?",
+    a: "Ja. Jedes Branchen-Template ist ein Starter-Setup, das Sie pro Mandat oder unternehmensweit anpassen können. Felder, Stages, Screening-Fragen, automatische E-Mails und Integrationen lassen sich individuell konfigurieren. Für komplexe Setups bietet unser Customer-Success-Team kostenlose Template-Reviews im Rahmen des Onboardings."
+  },
+];
+---
+
+<HubLayout
+  title="Recruiting-Software nach Branche – IT, Sales, Finance, Healthcare | ShortSelect"
+  description="Branchenspezifische Recruiting-Workflows für IT, Engineering, Sales, Finance, Healthcare, Logistik und Handwerk. Passende Module und Templates pro Industrie."
+  canonical="https://www.shortselect.com/branchen/"
+  breadcrumbName="Branchen"
+  breadcrumbUrl="https://www.shortselect.com/branchen/"
+  badge="Branchen"
+  h1="Recruiting für"
+  heroHighlight="jede Branche"
+  heroSubtitle="ShortSelect versteht die Besonderheiten von IT bis Handwerk. Branchen-Templates, passende Integrationen und erprobte Workflows."
+  introHtml={introHtml}
+  gridBadge="Industrien"
+  gridTitle="In welcher Branche rekrutieren Sie?"
+  gridSubtitle="Sieben Branchen mit eigenen Prozessen, Kanälen und Compliance-Anforderungen."
+  items={items}
+  faqs={faqs}
+/>

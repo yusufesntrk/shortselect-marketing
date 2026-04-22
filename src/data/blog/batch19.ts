@@ -72,7 +72,7 @@ export const batch19: BlogPost[] = [
 
 <h3>First-Touch vs. Last-Touch Attribution</h3>
 
-<p>Ein Kandidat sieht Ihre Stellenanzeige auf LinkedIn, googelt zwei Wochen später Ihren Firmennamen, landet auf Ihrer Karriereseite und bewirbt sich direkt. Woher kommt diese Bewerbung? Bei Last-Touch Attribution wäre es „Direktbewerbung über die Karriereseite". Bei First-Touch Attribution wäre es „LinkedIn". Beide Perspektiven sind wertvoll. Idealerweise tracken Sie beide und verstehen, dass der Recruiting-Funnel selten linear verläuft.</p>
+<p>Ein Kandidat sieht Ihre Stellenanzeige auf LinkedIn, googelt zwei Wochen später Ihren Firmennamen, landet auf Ihrer Karriereseite und bewirbt sich direkt. Woher kommt diese Bewerbung? Bei Last-Touch Attribution wäre es „Direktbewerbung über die Karriereseite". Bei First-Touch Attribution wäre es „LinkedIn". Beide Perspektiven sind wertvoll. Idealerweise tracken Sie beide und verstehen, dass der <a href="/glossar/recruiting-funnel/">Recruiting Funnel</a> selten linear verläuft.</p>
 
 <h2>Predictive Analytics im Recruiting</h2>
 

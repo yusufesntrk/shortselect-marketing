@@ -1,0 +1,60 @@
+---
+import HubLayout from '../../layouts/HubLayout.astro';
+
+const items = [
+  { title: "1. Anziehen", href: "/methode/anziehen/", description: "Die Top-of-Funnel-Phase: Employer Branding, Stellenanzeigen mit Gehaltsrange, Multiposting und Active Sourcing für passive Kandidaten." },
+  { title: "2. Auswählen", href: "/methode/auswaehlen/", description: "Screening, strukturierte Interviews und KI-Matching: Low-Fit-Kandidaten schnell ausfiltern, High-Fit-Profile in unter 48 Stunden kontaktieren." },
+  { title: "3. Einstellen", href: "/methode/einstellen/", description: "Vom Angebot zur Unterschrift: transparente Gehalts-Verhandlung, Remote-Option, Offer-Acceptance-Rate messen und Counter-Offer-Situationen managen." },
+  { title: "4. Binden", href: "/methode/binden/", description: "Onboarding, Frühfluktuation-Prävention und Boomerang-Programme: Einstellungen, die nach 12 Monaten noch im Unternehmen sind." },
+  { title: "Smart Recruiting Übersicht", href: "/methode/smart-recruiting/", description: "Der zusammenhängende Guide: alle vier Phasen, die KPIs pro Stage und wie ShortSelect jede Phase operativ unterstützt." },
+];
+
+const introHtml = `
+<p>Modernes Recruiting scheitert selten an einer einzelnen Phase und fast immer an fehlender Durchgängigkeit. Ein Unternehmen mit brillanten Stellenanzeigen kann Top-Kandidaten trotzdem verlieren, wenn das Screening 14 Tage dauert. Eine Agentur mit perfektem Interview-Prozess verliert Placements, wenn das Onboarding vergessen wird und der Kandidat nach 6 Monaten kündigt. <strong>Smart Recruiting</strong> ist der Ansatz, alle vier Phasen als zusammenhängendes System zu denken und zu optimieren.</p>
+<p>Die vier Phasen sind bewusst chronologisch gedacht: <strong>Anziehen</strong> (Aufmerksamkeit, Interesse, Bewerbung), <strong>Auswählen</strong> (Screening, Interview), <strong>Einstellen</strong> (Angebot, Unterschrift, Pre-Boarding) und <strong>Binden</strong> (Onboarding, Ramp-Up, Retention). Jede Phase hat eigene KPIs, eigene Stakeholder und eigene Automatisierungs-Hebel. Gleichzeitig hängt jede Phase von der vorherigen ab: ein schwaches Employer Branding macht selbst das beste Interview wirkungslos, ein schlechtes Onboarding entwertet die besten Einstellungen.</p>
+<p>Dieser Hub führt durch die vier Phasen mit konkreten Playbooks, Benchmarks und Tool-Empfehlungen. Wir ziehen pro Phase den Vergleich zum klassischen <a href="/glossar/recruiting-funnel/">Recruiting Funnel</a>-Modell und zeigen, wie sich die Smart-Recruiting-Phasen auf die operative Pipeline in ShortSelect abbilden lassen. Für Recruiting-Agenturen und HR-Teams, die den Methoden-Ansatz konsolidiert sehen wollen, gibt es zusätzlich die <a href="/methode/smart-recruiting/">Smart-Recruiting-Gesamtübersicht</a> mit allen KPIs und Fallstudien.</p>
+<p>Ein wichtiger Perspektivwechsel liegt in der Phase <strong>Binden</strong>. Viele Unternehmen hören methodisch bei der Unterschrift auf und betrachten Retention als HR-Problem. Aus Recruiting-Sicht ist das ein Fehler: Eine Einstellung, die nach 6 Monaten kündigt, kostet das Unternehmen je nach Rolle zwischen 0,5 und 2 Jahresgehältern (Gallup, 2024). Wer die Bindungs-Phase aktiv mitdenkt, investiert rund 10 Prozent der Recruiting-Zeit in Onboarding-Sprints, 30- und 90-Tage-Check-ins und Boomerang-Programme, und senkt die Frühfluktuation um bis zu 50 Prozent.</p>
+<p>Besonders für <strong>Recruiting-Agenturen</strong> relevant: Viele Kunden messen Agenturen heute nicht mehr nur am Placement, sondern an der 12-Monats-Retention. Wer seinen Prozess an allen vier Phasen ausrichtet und Kunden auch in der Bindungs-Phase begleitet, bekommt Folge-Mandate und höhere Retainer. Wer bei der Unterschrift aufhört, wird zur austauschbaren Commodity.</p>
+`;
+
+const faqs = [
+  {
+    q: "Was unterscheidet Smart Recruiting vom klassischen Recruiting-Prozess?",
+    a: "Smart Recruiting denkt Recruiting als durchgängiges System über alle vier Phasen (Anziehen, Auswählen, Einstellen, Binden) statt als isolierte Stages. KPIs werden phasen-übergreifend gemessen (zum Beispiel Quality-per-Source bis 12-Monats-Retention), Automatisierung greift stagenübergreifend und die Perspektive endet nicht bei der Unterschrift, sondern beim langfristig gebundenen Mitarbeiter."
+  },
+  {
+    q: "In welcher Phase stecken die meisten Recruiting-Teams fest?",
+    a: "Laut unseren Audits bei über 200 Agenturen und Inhouse-Teams ist die Auswählen-Phase der häufigste Bottleneck: Screening dauert zu lange, Interview-Scheduling verliert Tage, und die Entscheidung pro Kandidat zieht sich wegen fehlender strukturierter Leitfäden. Die zweithäufigste Schwachstelle ist die Bindungs-Phase, weil sie organisatorisch zwischen Recruiting und HR fällt und von niemandem aktiv verantwortet wird."
+  },
+  {
+    q: "Wie lange dauert es, Smart Recruiting im eigenen Team einzuführen?",
+    a: "Die methodische Einführung dauert typischerweise 8-12 Wochen: Woche 1-2 Ist-Analyse pro Phase, Woche 3-6 Pilot-Mandate mit neuem Prozess, Woche 7-10 Skalierung auf alle Mandate, Woche 11-12 KPI-Tracking und Feinjustierung. ShortSelect begleitet diese Einführung über das Customer-Success-Team mit Templates, Training und wöchentlichen Reviews."
+  },
+  {
+    q: "Welche KPIs sollte ich pro Phase tracken?",
+    a: "Anziehen: Reach, Click-through-Rate, Apply-Start-Rate, Cost-per-Application. Auswählen: Screening-Pass-Rate, Time-in-Interview, Interview-to-Offer-Rate. Einstellen: Offer-Acceptance-Rate, Time-to-Sign, Counter-Offer-Rate. Binden: 30-Tage-Retention, 90-Tage-Retention, 12-Monats-Retention, Ramp-Up-Zeit, Quality-of-Hire-Score. Die Dashboards in ShortSelect decken alle genannten KPIs pro Mandat, pro Recruiter und pro Kunde ab."
+  },
+  {
+    q: "Passt Smart Recruiting auch für kleine Agenturen mit nur 2-3 Recruitern?",
+    a: "Ja. Die Methode ist kein Enterprise-Konstrukt, sondern ein Rahmen, der sich an die Teamgröße anpasst. Kleine Agenturen nutzen dieselben vier Phasen mit leichteren KPIs und weniger Automatisierungs-Layers. Entscheidend ist die Durchgängigkeit, nicht die Komplexität. Viele unserer Kunden starten als 2-Personen-Agentur mit dem vollen Smart-Recruiting-Modell und skalieren es mit der Teamgröße weiter."
+  },
+];
+---
+
+<HubLayout
+  title="Smart-Recruiting-Methode – Anziehen, Auswählen, Einstellen, Binden | ShortSelect"
+  description="Die ShortSelect-Methode in vier Phasen: Talente anziehen, richtig auswählen, schnell einstellen und langfristig binden. Praxis-Playbooks pro Phase."
+  canonical="https://www.shortselect.com/methode/"
+  breadcrumbName="Methode"
+  breadcrumbUrl="https://www.shortselect.com/methode/"
+  badge="Methode"
+  h1="Smart Recruiting in"
+  heroHighlight="vier Phasen"
+  heroSubtitle="Von der ersten Ansprache bis zur nachhaltigen Bindung: ein durchgängiges System für moderne Recruiting-Teams."
+  introHtml={introHtml}
+  gridBadge="Phasen"
+  gridTitle="Die vier Phasen im Detail"
+  gridSubtitle="Jede Phase mit konkreten Playbooks und Erfolgs-KPIs."
+  items={items}
+  faqs={faqs}
+/>

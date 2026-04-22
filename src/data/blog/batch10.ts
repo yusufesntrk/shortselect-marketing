@@ -17,7 +17,7 @@ export const batch10: BlogPost[] = [
 
 <p>Sie haben eine Stelle ausgeschrieben, passende Kandidaten gefunden, erste Gespr\u00e4che gef\u00fchrt \u2014 und dann: Funkstille. Der Kandidat meldet sich nicht mehr, nimmt ein anderes Angebot an oder verschwindet einfach aus dem Prozess. Was Sie gerade erlebt haben, ist kein Einzelfall. Es ist die Regel.</p>
 
-<p>Studien zeigen: Rund 60 Prozent aller Kandidaten springen im Laufe des Bewerbungsprozesses ab, bevor es zu einer Einstellung kommt. Das bedeutet: Von zehn vielversprechenden Bewerbern gehen sechs verloren \u2014 nicht, weil sie unqualifiziert w\u00e4ren, sondern weil der Prozess selbst sie vertreibt.</p>
+<p>Studien zeigen: Rund 60 Prozent aller Kandidaten springen im Laufe des Bewerbungsprozesses ab, bevor es zu einer Einstellung kommt. Das bedeutet: Von zehn vielversprechenden Bewerbern gehen sechs verloren \u2014 nicht, weil sie unqualifiziert w\u00e4ren, sondern weil der Prozess selbst sie vertreibt. Der <a href=\"/glossar/recruiting-funnel/\">Recruiting Funnel</a> leckt an jeder Stage, und jedes Leck lässt sich exakt identifizieren und fixen.</p>
 
 <p>Die gute Nachricht: Die Gr\u00fcnde f\u00fcr Bewerberabspr\u00fcnge sind in der absoluten Mehrheit der F\u00e4lle dieselben f\u00fcnf Ursachen. Und jede einzelne davon ist vermeidbar. In diesem Artikel zeigen wir Ihnen f\u00fcr jeden Grund die konkreten Zahlen, erkl\u00e4ren warum es passiert, geben Ihnen eine sofort umsetzbare Ma\u00dfnahme an die Hand und zeigen, wie ein Bewerbermanagementsystem (ATS) das Problem dauerhaft l\u00f6st.</p>
 

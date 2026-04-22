@@ -268,7 +268,7 @@ export const batch26: BlogPost[] = [
 
 <p>Recruiting-Teams? „Wir haben eine Pipeline." Das ist der gesamte Einblick. Wie viele Kandidaten die Stellenanzeige sehen und sich tatsächlich bewerben? Unbekannt. Wo im Prozess die meisten Kandidaten abspringen? Gefühlt irgendwo nach dem ersten Gespräch. Welcher Kanal die besten Einstellungen produziert, nicht die meisten Bewerbungen, sondern die besten Einstellungen? Keine Ahnung.</p>
 
-<p>Dabei ist ein Recruiting-Prozess exakt das, was im Marketing ein Sales Funnel ist: Ein mehrstufiger Trichter, in dem aus einer großen Menge an Kontakten schrittweise eine kleine Menge an Abschlüssen wird. Die Methoden, die E-Commerce und B2B-Sales seit Jahrzehnten nutzen, lassen sich eins zu eins auf Recruiting übertragen, wenn man bereit ist, wie ein Marketer zu denken.</p>
+<p>Dabei ist ein Recruiting-Prozess exakt das, was im Marketing ein Sales Funnel ist: Ein mehrstufiger Trichter, in dem aus einer großen Menge an Kontakten schrittweise eine kleine Menge an Abschlüssen wird. Wer die sechs Stufen eines <a href="/glossar/recruiting-funnel/">Recruiting Funnels</a> kennt, kann an jeder einzelnen gezielt optimieren. Die Methoden, die E-Commerce und B2B-Sales seit Jahrzehnten nutzen, lassen sich eins zu eins auf Recruiting übertragen, wenn man bereit ist, wie ein Marketer zu denken.</p>
 
 <h2>Recruiting-Funnel = Sales-Funnel</h2>
 

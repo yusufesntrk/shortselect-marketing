@@ -143,7 +143,7 @@ export const batch2: BlogPost[] = [
 
 <p>Sie müssen nicht alles auf einmal umsetzen. Starten Sie mit den Tipps, die am schnellsten umsetzbar sind: Jobtitel optimieren, Gehaltsspanne ergänzen und den Bewerbungsprozess auf das Wesentliche reduzieren. Allein diese drei Maßnahmen können Ihre Bewerbungsrate signifikant steigern.</p>
 
-<p>Messen Sie die Ergebnisse: Wie viele Aufrufe hat Ihre Anzeige? Wie viele davon führen zu einer Bewerbung? Wie hoch ist die Abbruchrate im Formular? Mit einem modernen ATS wie ShortSelect haben Sie all diese Daten im Blick und können Ihre Anzeigen iterativ verbessern.</p>
+<p>Messen Sie die Ergebnisse: Wie viele Aufrufe hat Ihre Anzeige? Wie viele davon führen zu einer Bewerbung? Wie hoch ist die Abbruchrate im Formular? Die Stellenanzeige ist der <a href="/glossar/recruiting-funnel/">Top of Funnel im Recruiting</a>: Läuft sie schlecht, bricht der gesamte Funnel. Mit einem modernen ATS wie ShortSelect haben Sie all diese Daten im Blick und können Ihre Anzeigen iterativ verbessern.</p>
 
 <p>Denken Sie daran: Eine Stellenanzeige ist kein Verwaltungsakt, sie ist Ihr Pitch an potenzielle Teammitglieder. Behandeln Sie sie entsprechend.</p>
 `,

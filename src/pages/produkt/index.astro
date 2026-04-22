@@ -1,0 +1,69 @@
+---
+import HubLayout from '../../layouts/HubLayout.astro';
+
+const items = [
+  { title: "ATS & CRM", href: "/produkt/ats-crm/", description: "Der Kern: Kandidaten, Mandate, Kunden und Sales-Leads in einer einzigen Oberfläche. Keine doppelten Datenbanken, keine CSV-Exporte zwischen Systemen." },
+  { title: "KI-Features (AgentBurst)", href: "/produkt/ki-features/", description: "Screening, Matching, Outreach-Personalisierung und Lebenslauf-Parsing durch KI-Agenten, die 80 Prozent weniger manuelles Screening verursachen." },
+  { title: "Automatisierung", href: "/produkt/automatisierung/", description: "Workflow-Engine für Status-Emails, Scheduling, Follow-ups und CRM-Updates. Einmal konfiguriert, läuft der Recruiting-Prozess autonom im Hintergrund." },
+  { title: "Pipeline", href: "/produkt/pipeline/", description: "Visuelle Kanban-Pipeline pro Mandat oder pro Kunde, mit Drag-and-Drop, Stage-Konfiguration und Live-Conversion-Rates auf jeder Stufe." },
+  { title: "Interviews", href: "/produkt/interviews/", description: "Self-Service-Booking, strukturierte Leitfäden, automatische Reminder und integrierte Video-Calls statt Scheduling-Pingpong per E-Mail." },
+  { title: "Multiposting", href: "/produkt/multiposting/", description: "Eine Anzeige, 30 Jobbörsen: Indeed, StepStone, LinkedIn, Xing, Google for Jobs und Nischenportale in einem Klick, mit Performance-Tracking pro Kanal." },
+  { title: "Talent Pools", href: "/produkt/talent-pools/", description: "Passive Kandidaten nach Skill, Seniorität und Verfügbarkeit strukturieren, automatisiert nurturen und bei neuen Mandaten innerhalb von Minuten aktivieren." },
+  { title: "Karriereseite", href: "/produkt/karriereseite/", description: "In 5 Minuten live, responsive, SEO-optimiert, mit eigenem Branding und One-Click-Apply. Pro Kunde eine separate White-Label-Variante möglich." },
+  { title: "Email-Integration", href: "/produkt/email-integration/", description: "Gmail und Outlook synchronisiert, eingehende Bewerbungen automatisch erkannt und dem richtigen Kandidaten zugeordnet, komplette Konversations-Historie." },
+  { title: "Client-Portal", href: "/produkt/client-portal/", description: "Read-only-Zugriff für Ihre Agentur-Kunden auf Pipeline, Status und Forecast. Schluss mit PDF-Reports per E-Mail alle zwei Wochen." },
+  { title: "Analytics", href: "/produkt/analytics/", description: "Time-to-Hire, Cost-per-Hire, Quality-of-Hire, Pipeline-Velocity und Source-Performance in Echtzeit-Dashboards, export- und drill-down-fähig." },
+  { title: "Mobile", href: "/produkt/mobile/", description: "Nativer Mobile-First-Ansatz für Recruiter on-the-go: Kandidaten sichten, Interviews terminieren und Sales-Calls loggen direkt vom Smartphone." },
+  { title: "Compliance", href: "/produkt/compliance/", description: "DSGVO-native Architektur, EU-Hosting, automatische Löschfristen, Auftragsverarbeitung und Audit-Logs für GoBD- und ISO-27001-Anforderungen." },
+  { title: "API", href: "/produkt/api/", description: "REST-API mit 120+ Endpunkten, Webhooks für Event-driven-Integrationen, fertige Konnektoren für Zapier, Make und n8n plus OpenAPI-Dokumentation." },
+];
+
+const introHtml = `
+<p>ShortSelect ist keine Sammlung von Einzel-Features, die nachträglich integriert wurden, sondern eine durchgängige Recruiting-Plattform, auf der alle 14 Module dieselbe Datenbasis teilen. Ein Kandidat, der über <strong>Multiposting</strong> hereinkommt, wird automatisch im <strong>ATS</strong> angelegt, vom <strong>KI-Screening</strong> bewertet, in die <strong>Kanban-Pipeline</strong> einsortiert, per <strong>Email-Integration</strong> kontaktiert und sein Interview per <strong>Interview-Scheduling</strong> gebucht. Alles ohne Klick zwischen Tools.</p>
+<p>Diese Tiefe der Integration ist der strukturelle Unterschied zu den meisten ATS am Markt. Bullhorn, Vincere oder Greenhouse haben viele Features, aber die KI-Layer sind oft nachträglich angebaut oder über Drittanbieter-Partnerschaften realisiert. Bei ShortSelect gehört <a href="/produkt/ki-features/">AgentBurst</a>, unsere KI-Engine, zum Kern und greift auf jedes Modul zu: Sie matched Kandidaten gegen Mandate, schreibt personalisierte Outreach-Messages, parst Lebensläufe in Sekunden und priorisiert Ihre Pipeline nach Placement-Wahrscheinlichkeit.</p>
+<p>Für <strong>Recruiting-Agenturen und Personalberatungen</strong> sind drei Module besonders relevant: Das <a href="/produkt/client-portal/">Client-Portal</a> gibt Ihren Kunden transparenten Read-only-Zugriff auf ihren Mandats-Fortschritt, ohne dass Sie alle zwei Wochen einen PDF-Report per E-Mail verschicken müssen. Die <a href="/produkt/pipeline/">Pipeline</a> lässt sich pro Mandat komplett individuell konfigurieren, inklusive eigener Stages, Pflichtfelder und SLAs pro Kunde. Und das <a href="/produkt/ats-crm/">ATS-plus-CRM-Modell</a> in einer Oberfläche eliminiert den klassischen Bruch zwischen Recruiting-Tool und Sales-CRM, an dem viele Agenturen aktuell scheitern.</p>
+<p>Für <strong>Inhouse-HR-Teams</strong> stehen <a href="/produkt/multiposting/">Multiposting</a>, <a href="/produkt/karriereseite/">Karriereseite</a> und <a href="/produkt/analytics/">Analytics</a> im Fokus. Eine optimierte Karriereseite mit One-Click-Apply senkt die Abbruchrate im Bewerbungsformular um 40 Prozent (Appcast), Multiposting auf 30 Jobbörsen plus Google-for-Jobs-Integration erhöht die Reichweite ohne Mehrarbeit, und das Analytics-Dashboard macht Time-to-Hire, Cost-per-Hire und Source-Performance in Echtzeit sichtbar.</p>
+<p>Der rote Faden durch alle Module ist <strong>Automatisierung ohne Kontrollverlust</strong>. Jeder KI-Vorschlag lässt sich prüfen, überschreiben und lernen. Jeder automatisierte Workflow lässt sich pro Mandat oder pro Kunde konfigurieren. Jede Daten-Operation wird auditierbar geloggt. Das Ergebnis: Recruiter gewinnen 2 bis 3 Stunden pro Tag zurück, ohne das Gefühl zu haben, den Prozess aus der Hand gegeben zu haben.</p>
+`;
+
+const faqs = [
+  {
+    q: "Muss ich alle 14 Module nutzen, um ShortSelect sinnvoll einzusetzen?",
+    a: "Nein. Die Module sind so geschnitten, dass kleine Teams mit ATS, Pipeline, Karriereseite und Email-Integration starten und später Multiposting, KI-Features und Analytics dazunehmen, wenn sie gebraucht werden. Der Funktionsumfang wächst mit Ihnen mit, die Lizenzkosten passen sich an."
+  },
+  {
+    q: "Sind die KI-Features zusätzlich kostenpflichtig?",
+    a: "Die KI-Basis-Funktionen (Screening, Matching, CV-Parsing) sind in allen Preisplänen enthalten. Nur die AgentBurst-Premium-Features (autonomes Outbound-Sourcing über LinkedIn, KI-generierte personalisierte Outreach-Messages in hoher Stückzahl) benötigen ein Upgrade oder ein Add-on-Budget. Der Aufpreis ist transparent pro Agent dokumentiert."
+  },
+  {
+    q: "Wie tief ist die Integration zwischen ATS und Sales-CRM?",
+    a: "Vollständig. Es gibt keine zwei getrennten Datenbanken. Ein Lead im Sales-CRM kann direkt als Mandat im ATS aktiviert werden, platzierte Kandidaten erzeugen automatisch einen Umsatz-Eintrag im CRM, und Sales-Activities pro Kunde sind im selben Interface sichtbar wie die Recruiting-Pipeline. Das ist der strukturelle Unterschied zu Systemen, die ATS und CRM über APIs verbinden."
+  },
+  {
+    q: "Gibt es eine offene API und Webhooks?",
+    a: "Ja. Die <a href=\"/produkt/api/\">ShortSelect API</a> bietet über 120 REST-Endpunkte, vollständige OpenAPI-Dokumentation und Webhooks für Event-Trigger. Fertige Konnektoren existieren für Zapier, Make und n8n, sodass sich ShortSelect in vorhandene Tool-Stacks integrieren lässt, ohne dass Entwickler-Zeit anfällt."
+  },
+  {
+    q: "Wo wird das Produkt gehostet und wer hat Zugriff auf meine Daten?",
+    a: "Hosting ausschließlich in der EU (Hetzner Rechenzentrum Falkenstein und Nürnberg). Für Enterprise-Kunden ist On-Premise oder Private-Cloud-Hosting möglich. Mitarbeiter-Zugriff auf Kundendaten ist standardmäßig deaktiviert und nur mit dokumentiertem Support-Ticket temporär möglich. Details im <a href=\"/produkt/compliance/\">Compliance-Modul</a>."
+  },
+];
+---
+
+<HubLayout
+  title="ShortSelect Produkt – Alle Features im Überblick | ShortSelect"
+  description="Kompletter Funktionsumfang von ShortSelect: ATS, CRM, KI-Agenten, Automatisierung, Multiposting, Analytics und mehr. 14 Bausteine für modernes Recruiting."
+  canonical="https://www.shortselect.com/produkt/"
+  breadcrumbName="Produkt"
+  breadcrumbUrl="https://www.shortselect.com/produkt/"
+  badge="Produkt"
+  h1="Alle ATS-Funktionen"
+  heroHighlight="auf einen Blick"
+  heroSubtitle="Von KI-Screening bis Client-Portal: 14 integrierte Module, die Recruiting messbar schneller machen."
+  introHtml={introHtml}
+  gridBadge="Module"
+  gridTitle="Was ShortSelect kann"
+  gridSubtitle="Jedes Modul ist sofort einsatzbereit, keine Integrationshürden, keine Zusatzlizenzen."
+  items={items}
+  faqs={faqs}
+/>

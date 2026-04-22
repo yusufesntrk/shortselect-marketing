@@ -214,7 +214,7 @@ export const batch13: BlogPost[] = [
 
 <h2>Wann im Prozess tritt Ghosting auf?</h2>
 
-<p>Ghosting verteilt sich nicht gleichmäßig über den Recruiting-Prozess. Die Daten zeigen klare Muster:</p>
+<p>Ghosting verteilt sich nicht gleichmäßig über die <a href="/glossar/recruiting-funnel/">Funnel-Stages</a>. Die Daten zeigen klare Muster:</p>
 
 <h3>Phase 1: Nach der Bewerbung (30 Prozent)</h3>
 

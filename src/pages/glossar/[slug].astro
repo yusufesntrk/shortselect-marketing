@@ -37,12 +37,32 @@ const breadcrumbSchema = {
     { "@type": "ListItem", "position": 3, "name": entry.title }
   ]
 };
+
+const faqSchema = entry.faqs && entry.faqs.length > 0 ? {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: entry.faqs.map((f: { q: string; a: string }) => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: f.a }
+  }))
+} : null;
+
+const personSchema = entry.author ? {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: entry.author.name,
+  ...(entry.author.role ? { jobTitle: entry.author.role } : {}),
+  ...(entry.author.url ? { url: entry.author.url } : {})
+} : null;
+
+const jsonLdArray = [glossarySchema, breadcrumbSchema, faqSchema, personSchema].filter(Boolean);
 ---
 
 <MarketingLayout
   title={`${entry.title} – Recruiting Glossar | ShortSelect`}
   description={entry.shortDef}
-  jsonLd={[glossarySchema, breadcrumbSchema]}
+  jsonLd={jsonLdArray}
 >
   <!-- Hero -->
   <section class="relative overflow-hidden py-20 md:py-28">
@@ -78,6 +98,12 @@ const breadcrumbSchema = {
   <section class="py-16 md:py-20 relative overflow-hidden">
     <div class="container mx-auto px-4">
       <div class="max-w-3xl mx-auto space-y-16">
+        {entry.heroSnippet && (
+          <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700 rounded-xl border border-[hsl(var(--border))] bg-[hsl(var(--muted)/0.3)] p-6 md:p-8">
+            <p class="text-[hsl(var(--foreground))] leading-relaxed text-lg font-medium">{entry.heroSnippet}</p>
+          </div>
+        )}
+
         <!-- Definition -->
         <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700">
           <h2 class="text-2xl font-display font-bold mb-4">Definition</h2>
@@ -89,6 +115,19 @@ const breadcrumbSchema = {
           <h2 class="text-2xl font-display font-bold mb-4">Warum ist das wichtig?</h2>
           <p class="text-[hsl(var(--muted-foreground))] leading-relaxed text-lg">{entry.importance}</p>
         </div>
+
+        {entry.sections && entry.sections.map((section: any) => (
+          <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700">
+            <h2 class="text-2xl font-display font-bold mb-4">{section.h2}</h2>
+            <div class="text-[hsl(var(--muted-foreground))] leading-relaxed text-lg prose-section" set:html={section.body}></div>
+            {section.h3s && section.h3s.map((sub: any) => (
+              <div class="mt-6">
+                <h3 class="text-xl font-display font-semibold mb-3">{sub.h3}</h3>
+                <div class="text-[hsl(var(--muted-foreground))] leading-relaxed prose-section" set:html={sub.body}></div>
+              </div>
+            ))}
+          </div>
+        ))}
 
         <!-- Best Practices -->
         <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700">
@@ -104,6 +143,23 @@ const breadcrumbSchema = {
             ))}
           </ul>
         </div>
+
+        {entry.faqs && entry.faqs.length > 0 && (
+          <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700">
+            <h2 class="text-2xl font-display font-bold mb-6">Häufig gestellte Fragen</h2>
+            <div class="space-y-4">
+              {entry.faqs.map((faq: { q: string; a: string }, i: number) => (
+                <details class="group border border-[hsl(var(--border))] rounded-lg px-6 transition-all duration-200 hover:border-[hsl(var(--primary)/0.3)]" style={`transition-delay: ${i * 30}ms;`}>
+                  <summary class="flex items-center justify-between py-4 cursor-pointer text-left font-semibold list-none [&::-webkit-details-marker]:hidden">
+                    <span>{faq.q}</span>
+                    <svg class="h-5 w-5 text-[hsl(var(--muted-foreground))] shrink-0 ml-4 transition-transform duration-200 group-open:rotate-180" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                  </summary>
+                  <p class="pb-4 text-[hsl(var(--muted-foreground))] leading-relaxed">{faq.a}</p>
+                </details>
+              ))}
+            </div>
+          </div>
+        )}
 
         <!-- How ShortSelect Helps -->
         <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700 rounded-xl border border-[hsl(var(--primary)/0.2)] bg-[hsl(var(--primary)/0.05)] p-8">

@@ -1,0 +1,68 @@
+---
+import HubLayout from '../../layouts/HubLayout.astro';
+
+const items = [
+  { title: "ShortSelect vs. Bullhorn", href: "/vergleich/shortselect-vs-bullhorn/", description: "Das Schwergewicht aus den USA gegen die moderne europäische Alternative mit DSGVO-nativer Architektur und transparenten Preisen." },
+  { title: "ShortSelect vs. Coveto", href: "/vergleich/shortselect-vs-coveto/", description: "Wo Coveto manuelle Workflows verlangt, liefert ShortSelect KI-Agenten, die Screening und Nurturing im Hintergrund übernehmen." },
+  { title: "ShortSelect vs. Ezekia", href: "/vergleich/shortselect-vs-ezekia/", description: "Executive-Search-Tool gegen All-in-One-ATS mit Client-Portal für Personalberatungen und Headhunter." },
+  { title: "ShortSelect vs. Greenhouse", href: "/vergleich/shortselect-vs-greenhouse/", description: "Deutsch-first und DSGVO-nativ gegen US-Marktführer mit komplexer Konfiguration und englischer Oberfläche." },
+  { title: "ShortSelect vs. Personio", href: "/vergleich/shortselect-vs-personio/", description: "HR-Suite gegen spezialisiertes ATS für Recruiting-Agenturen, Multi-Tenancy und KI-gestütztes Matching." },
+  { title: "ShortSelect vs. Recruitee", href: "/vergleich/shortselect-vs-recruitee/", description: "Moderne UI auf beiden Seiten, unterschiedliche Zielgruppen: Recruitee für Inhouse, ShortSelect für Agenturen und Headhunter." },
+  { title: "ShortSelect vs. Rexx", href: "/vergleich/shortselect-vs-rexx/", description: "Klassische Enterprise-HR gegen agile Cloud-Lösung mit schneller Implementierung und monatlich kündbaren Lizenzen." },
+  { title: "ShortSelect vs. Softgarden", href: "/vergleich/shortselect-vs-softgarden/", description: "Bewerbungs-Tool-Spezialist gegen vollständiges ATS plus CRM mit integriertem Client-Portal und AgentBurst-KI." },
+  { title: "ShortSelect vs. Talent360", href: "/vergleich/shortselect-vs-talent360/", description: "DACH-All-in-One gegen spezialisiertes Agentur-ATS mit besserer Automatisierung und niedrigeren Einstiegskosten." },
+  { title: "ShortSelect vs. Teamtailor", href: "/vergleich/shortselect-vs-teamtailor/", description: "Employer-Branding-starkes ATS gegen Agentur-ATS mit Multi-Tenancy und tieferer Automatisierung pro Kundenmandat." },
+  { title: "ShortSelect vs. Vincere", href: "/vergleich/shortselect-vs-vincere/", description: "Executive-Search-Software gegen moderne All-in-One-Plattform mit DSGVO-nativer Datenverarbeitung und DACH-Support." },
+  { title: "ShortSelect vs. Workwise", href: "/vergleich/shortselect-vs-workwise/", description: "Recruiting-Marktplatz gegen vollwertiges ATS, wenn Sie Ihren eigenen Kandidatenstamm aufbauen und besitzen wollen." },
+  { title: "Beste ATS-Software 2026", href: "/vergleich/beste-ats-software/", description: "Die 13 relevantesten ATS-Systeme im Vergleich: Features, Preise, Zielgruppen, Stärken und Schwächen in einer Tabelle." },
+];
+
+const introHtml = `
+<p>Die Wahl der richtigen ATS-Software entscheidet darüber, wie viele Kandidaten Sie verlieren, wie viel Zeit Ihre Recruiter mit Admin verbringen und wie transparent Ihre Kunden oder Hiring Manager den Prozess mitverfolgen können. Zwischen Enterprise-Giganten wie Bullhorn und Personio, modernen Newcomern wie Teamtailor und Recruitee, und spezialisierten Lösungen wie Vincere oder Ezekia gibt es 2026 keinen einheitlichen Markt mehr, sondern klar abgegrenzte Segmente mit unterschiedlichen Stärken.</p>
+<p>Dieser Vergleichs-Hub zeigt Ihnen für jede relevante ATS-Alternative, wo sie glänzt, wo sie schwächelt und wann ShortSelect die bessere Wahl ist. Besonders für <strong>Recruiting-Agenturen, Headhunter und Personalberatungen</strong> lohnt sich der Blick, weil viele ATS ursprünglich für Inhouse-Recruiting gebaut wurden und bei Multi-Mandanten-Setups schnell an Grenzen stoßen.</p>
+<p>Die wichtigsten Entscheidungskriterien, nach denen wir jeden Vergleich aufbauen: <strong>Preis und Lizenzmodell</strong> (Per-Recruiter, Per-Mandant, Flatrate), <strong>DSGVO-Konformität</strong> (EU-Hosting, Auftragsverarbeitung, Löschfristen), <strong>KI-Automatisierung</strong> (Screening, Matching, Nurturing), <strong>Multi-Tenancy</strong> für Agenturen, <strong>Client-Portal</strong> für transparente Kundenkommunikation und die <strong>Integrationstiefe</strong> zu Jobbörsen, Kalendern und CRM-Systemen.</p>
+<p>Für den schnellen Überblick bietet unsere <a href="/vergleich/beste-ats-software/">Beste-ATS-Software-Analyse</a> eine Tabelle über alle 13 Systeme. Wenn Sie bereits ein konkretes System im Blick haben, finden Sie unten den direkten 1-zu-1-Vergleich. Jede Vergleichsseite basiert auf der gleichen Struktur, damit Sie Äpfel mit Äpfeln vergleichen können: Zielgruppe, Preisniveau, Feature-Tiefe, DSGVO-Status und eine klare Empfehlung, wann welches Tool die richtige Wahl ist.</p>
+<p>Ein Hinweis zum Lesen: Die Vergleiche sind nicht neutral. Wir sind ShortSelect und empfehlen ShortSelect, wo wir glauben, dass wir die bessere Lösung sind. Gleichzeitig sagen wir ehrlich, wann ein Konkurrent besser passt, zum Beispiel bei reinem Inhouse-Recruiting großer Konzerne oder bei Executive Search mit weniger als 10 Mandaten pro Jahr. Ziel ist, dass Sie nach dem Vergleich wissen, ob ShortSelect wirklich zu Ihnen passt.</p>
+`;
+
+const faqs = [
+  {
+    q: "Welches ATS eignet sich am besten für Recruiting-Agenturen und Headhunter?",
+    a: "Agentur-spezifische Anforderungen sind Multi-Tenancy (eigene Mandanten-Konfiguration pro Kunde), Client-Portal für transparente Kundenkommunikation, Sales-CRM zusätzlich zum Recruiting-CRM und Flatrate-Preismodelle statt Per-Recruiter-Lizenzen. ShortSelect, Vincere und Bullhorn decken diese Anforderungen ab. Personio, Greenhouse und Recruitee sind eher für Inhouse-Teams gebaut."
+  },
+  {
+    q: "Was kostet ATS-Software im Schnitt pro Monat?",
+    a: "Die Preisspanne reicht 2026 von 0 Euro (ShortSelect Starter) über 49 bis 150 Euro pro Recruiter bei Mittelklasse-Tools (Recruitee, Teamtailor, Workwise) bis zu 500 Euro+ pro Recruiter im Enterprise-Segment (Bullhorn, Vincere). Für Agenturen kann Per-Recruiter-Lizenzierung schnell ins Geld gehen, weshalb Flatrate- oder Per-Mandant-Modelle attraktiver sind."
+  },
+  {
+    q: "Wie wichtig ist DSGVO-Konformität beim ATS-Vergleich?",
+    a: "Kritisch. Seit der NOYB-Welle 2024 und dem Schrems-II-Urteil sind ATS-Systeme ohne EU-Hosting und ordentliche Auftragsverarbeitungsverträge ein rechtliches Risiko. US-Tools wie Bullhorn oder Greenhouse bieten zwar EU-Server, aber die Datenverarbeitung unterliegt weiterhin dem US-CLOUD-Act. Deutsche und europäische Lösungen wie ShortSelect, Rexx und Personio sind DSGVO-nativ und vermeiden dieses Risiko."
+  },
+  {
+    q: "Kann ich mein aktuelles ATS-System zu ShortSelect migrieren?",
+    a: "Ja. ShortSelect importiert Kandidaten, Mandate, Status und Historie aus Bullhorn, Personio, Greenhouse, Recruitee, Teamtailor, Softgarden und den meisten anderen Systemen per CSV oder direktem API-Export. Die Migration dauert je nach Datenmenge zwischen 2 und 14 Tagen, läuft parallel zum Tagesgeschäft und wird durch unser Implementation-Team begleitet."
+  },
+  {
+    q: "Wie schnell ist ein ATS implementiert?",
+    a: "Moderne Cloud-ATS wie ShortSelect, Recruitee und Teamtailor sind innerhalb von 1 bis 3 Tagen produktiv nutzbar. Enterprise-Tools wie Bullhorn oder Vincere benötigen typischerweise 4 bis 12 Wochen für die vollständige Konfiguration inklusive Integrationen und Mitarbeiter-Training. Die Implementierungsdauer ist oft ein wichtigerer Kostentreiber als die Lizenzgebühren selbst."
+  },
+];
+---
+
+<HubLayout
+  title="ATS Software Vergleich – ShortSelect vs. alle Alternativen | ShortSelect"
+  description="Direkte Vergleiche: ShortSelect gegen Bullhorn, Coveto, Greenhouse, Personio und mehr. Features, Preise, Stärken auf einen Blick."
+  canonical="https://www.shortselect.com/vergleich/"
+  breadcrumbName="Vergleich"
+  breadcrumbUrl="https://www.shortselect.com/vergleich/"
+  badge="Vergleich"
+  h1="ATS Software"
+  heroHighlight="Vergleich"
+  heroSubtitle="ShortSelect gegen die größten ATS-Lösungen. Funktionen, Preise und Recruiting-Workflows direkt gegenübergestellt."
+  introHtml={introHtml}
+  gridBadge="A-Z"
+  gridTitle="Alle Vergleiche im Überblick"
+  gridSubtitle="Finden Sie die ATS-Lösung, die wirklich zu Ihrem Recruiting-Team passt."
+  items={items}
+  faqs={faqs}
+/>

@@ -37,7 +37,7 @@ export const batch18: BlogPost[] = [
 
 <h3>3. Pipeline Velocity</h3>
 
-<p>Pipeline Velocity misst, wie schnell Kandidaten durch die einzelnen Stufen Ihres Recruiting-Prozesses wandern. Diese Kennzahl macht Engpässe sichtbar: Wenn Kandidaten im Durchschnitt 12 Tage im Status "Hiring-Manager-Review" verweilen, aber nur 2 Tage in der Telefoninterview-Phase, wissen Sie genau, wo Sie ansetzen müssen. Pipeline Velocity ist die diagnostische KPI schlechthin, sie zeigt nicht nur, dass etwas langsam ist, sondern wo genau.</p>
+<p>Pipeline Velocity misst, wie schnell Kandidaten durch die einzelnen Stufen Ihres Recruiting-Prozesses wandern. Diese Kennzahl macht Engpässe sichtbar: Wenn Kandidaten im Durchschnitt 12 Tage im Status "Hiring-Manager-Review" verweilen, aber nur 2 Tage in der Telefoninterview-Phase, wissen Sie genau, wo Sie ansetzen müssen. Pipeline Velocity ist die diagnostische KPI schlechthin, sie zeigt nicht nur, dass etwas langsam ist, sondern wo genau. Welche Stufen ein sauber definierter <a href="/glossar/recruiting-funnel/">Recruiting Funnel</a> typischerweise enthält, beschreibt unser Glossar-Eintrag.</p>
 
 <h3>4. Cost per Qualified Application (CPQ)</h3>
 
@@ -170,7 +170,7 @@ export const batch18: BlogPost[] = [
 
 <h3>Komponente 1: Zeitersparnis × Stundensatz</h3>
 
-<p>Die offensichtlichste Komponente. Wenn ein Recruiter durch Automatisierung 5 Stunden pro Woche spart, multiplizieren Sie diese Zeit mit dem vollständig kalkulierten Stundensatz (Gehalt plus Sozialabgaben plus Overhead). Bei einem durchschnittlichen Recruiter-Gehalt von 55.000 Euro brutto liegt der Vollkostenstundensatz bei etwa 45 bis 55 Euro.</p>
+<p>Die offensichtlichste Komponente. Wenn ein Recruiter durch Automatisierung 5 Stunden pro Woche spart, multiplizieren Sie diese Zeit mit dem vollständig kalkulierten Stundensatz (Gehalt plus Sozialabgaben plus Overhead). Bei einem durchschnittlichen Recruiter-Gehalt von 55.000 Euro brutto liegt der Vollkostenstundensatz bei etwa 45 bis 55 Euro. Den ROI pro Automatisierungs-Stufe zu messen, wird deutlich einfacher, wenn Sie vorher Ihren <a href="/glossar/recruiting-funnel/">Recruiting Funnel</a> sauber definiert haben.</p>
 
 <h3>Komponente 2: Qualitätsverbesserung</h3>
 

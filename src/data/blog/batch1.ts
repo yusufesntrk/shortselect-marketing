@@ -258,7 +258,7 @@ export const batch1: BlogPost[] = [
 
 <h2>9. Pipeline Velocity</h2>
 <h3>Definition</h3>
-<p>Die <strong>Pipeline Velocity</strong> (auch: Recruiting Funnel Velocity) misst die Geschwindigkeit, mit der Kandidaten die einzelnen Phasen Ihrer Recruiting-Pipeline durchlaufen. Sie hilft Ihnen, Engpässe und Verzögerungen in spezifischen Prozessphasen zu identifizieren, nicht nur die Gesamtdauer.</p>
+<p>Die <strong>Pipeline Velocity</strong> (auch: Recruiting Funnel Velocity) misst die Geschwindigkeit, mit der Kandidaten die einzelnen Phasen Ihrer Recruiting-Pipeline durchlaufen. Sie hilft Ihnen, Engpässe und Verzögerungen in spezifischen Prozessphasen zu identifizieren, nicht nur die Gesamtdauer. Eine saubere Definition der sechs Phasen finden Sie in unserem <a href="/glossar/recruiting-funnel/">Recruiting-Funnel-Guide</a>.</p>
 
 <h3>Formel</h3>
 <p><strong>Pipeline Velocity pro Phase = Durchschnittliche Verweildauer der Kandidaten in einer bestimmten Phase (in Tagen)</strong></p>

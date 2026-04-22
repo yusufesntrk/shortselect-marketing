@@ -29,13 +29,33 @@ const orgSchema = {
     contactType: "Customer Service",
     availableLanguage: ["German", "English"],
   },
+  sameAs: [
+    "https://linkedin.com/company/shortselect",
+  ],
+};
+
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://www.shortselect.com/#website",
+  url: "https://www.shortselect.com/",
+  name: "ShortSelect",
+  inLanguage: "de-DE",
+  publisher: { "@id": "https://www.shortselect.com/#organization" },
+  potentialAction: {
+    "@type": "SearchAction",
+    target: "https://www.shortselect.com/blog/?q={search_term_string}",
+    "query-input": "required name=search_term_string",
+  },
 };
 ---
 
 <!doctype html>
 <html lang="de">
   <head>
-    <SEOHead {...props} jsonLd={props.jsonLd ? [orgSchema, ...(Array.isArray(props.jsonLd) ? props.jsonLd : [props.jsonLd])] : orgSchema} />
+    <SEOHead {...props} jsonLd={props.jsonLd
+      ? [orgSchema, websiteSchema, ...(Array.isArray(props.jsonLd) ? props.jsonLd : [props.jsonLd])]
+      : [orgSchema, websiteSchema]} />
   </head>
   <body class="min-h-screen bg-background text-foreground antialiased">
     <LandingNav />

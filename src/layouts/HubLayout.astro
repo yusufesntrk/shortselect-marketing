@@ -1,0 +1,197 @@
+---
+import MarketingLayout from './MarketingLayout.astro';
+import CTASection from '../components/landing/CTASection.astro';
+
+interface HubItem {
+  title: string;
+  href: string;
+  description: string;
+}
+
+interface HubFaq {
+  q: string;
+  a: string;
+}
+
+interface Props {
+  title: string;
+  description: string;
+  canonical: string;
+  breadcrumbName: string;
+  breadcrumbUrl: string;
+  badge: string;
+  h1: string;
+  heroHighlight?: string;
+  heroSuffix?: string;
+  heroSubtitle: string;
+  introHtml?: string;
+  gridBadge: string;
+  gridTitle: string;
+  gridSubtitle: string;
+  items: HubItem[];
+  faqs?: HubFaq[];
+}
+
+const {
+  title,
+  description,
+  canonical,
+  breadcrumbName,
+  breadcrumbUrl,
+  badge,
+  h1,
+  heroHighlight,
+  heroSuffix = '',
+  heroSubtitle,
+  introHtml,
+  gridBadge,
+  gridTitle,
+  gridSubtitle,
+  items,
+  faqs = [],
+} = Astro.props;
+
+const collectionPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  name: title,
+  description: description,
+  url: canonical,
+  inLanguage: "de-DE",
+  mainEntity: {
+    "@type": "ItemList",
+    itemListElement: items.map((item, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: item.title,
+      url: `https://www.shortselect.com${item.href}`,
+    })),
+  },
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.shortselect.com/" },
+    { "@type": "ListItem", "position": 2, "name": breadcrumbName, "item": breadcrumbUrl },
+  ],
+};
+
+const faqSchema = faqs.length >= 2 ? {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((f) => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: f.a },
+  })),
+} : null;
+
+const jsonLd = faqSchema
+  ? [collectionPageSchema, breadcrumbSchema, faqSchema]
+  : [collectionPageSchema, breadcrumbSchema];
+---
+
+<MarketingLayout title={title} description={description} canonical={canonical} jsonLd={jsonLd}>
+  <!-- Hero -->
+  <section class="relative overflow-hidden py-20 md:py-28">
+    <div class="absolute inset-0 bg-gradient-to-br from-[hsl(var(--primary)/0.1)] via-[hsl(var(--accent)/0.05)] to-[hsl(var(--background))]"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,hsl(var(--primary)/0.15),transparent_50%)]"></div>
+    <div class="absolute top-20 left-10 w-72 h-72 bg-[hsl(var(--primary)/0.1)] rounded-full blur-3xl animate-float-slow"></div>
+    <div class="absolute bottom-20 right-10 w-96 h-96 bg-[hsl(var(--accent)/0.1)] rounded-full blur-3xl animate-float-slow" style="animation-delay: -3s;"></div>
+    <div class="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.03)_1px,transparent_1px)] bg-[size:60px_60px] [mask-image:radial-gradient(ellipse_at_center,black_30%,transparent_70%)]"></div>
+
+    <div class="container relative mx-auto px-4">
+      <div class="mx-auto max-w-4xl text-center space-y-6">
+        <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[hsl(var(--primary)/0.1)] border border-[hsl(var(--primary)/0.2)]">
+          <span class="text-sm font-medium">{badge}</span>
+        </div>
+
+        <h1 class="reveal-item opacity-0 translate-y-8 transition-all duration-500 text-4xl md:text-6xl lg:text-7xl font-display font-bold tracking-tight" style="transition-delay: 100ms;">
+          {h1}{heroHighlight && <> <span class="text-[hsl(var(--primary))]">{heroHighlight}</span></>}{heroSuffix}
+        </h1>
+
+        <p class="reveal-item opacity-0 translate-y-8 transition-all duration-500 text-lg md:text-xl text-[hsl(var(--muted-foreground))] max-w-2xl mx-auto" style="transition-delay: 200ms;">
+          {heroSubtitle}
+        </p>
+      </div>
+    </div>
+
+    <div class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[hsl(var(--background))] to-transparent"></div>
+  </section>
+
+  {introHtml && (
+    <section class="py-12 md:py-16 relative">
+      <div class="container mx-auto px-4">
+        <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700 max-w-3xl mx-auto prose-hub space-y-4 text-[hsl(var(--muted-foreground))] text-lg leading-relaxed" set:html={introHtml}></div>
+      </div>
+    </section>
+  )}
+
+  <!-- Grid -->
+  <section class="py-16 md:py-24 relative overflow-hidden">
+    <div class="container mx-auto px-4">
+      <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700 text-center max-w-3xl mx-auto mb-12">
+        <span class="inline-block px-2.5 py-0.5 rounded-full border border-[hsl(var(--primary)/0.2)] text-[hsl(var(--primary))] text-xs font-medium mb-4">{gridBadge}</span>
+        <h2 class="text-3xl md:text-5xl font-display font-bold tracking-tight mb-4">{gridTitle}</h2>
+        <p class="text-lg text-[hsl(var(--muted-foreground))]">{gridSubtitle}</p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        {items.map((item, i) => (
+          <a href={item.href} class="reveal-item opacity-0 translate-y-8 transition-all duration-500" style={`transition-delay: ${Math.min(i * 80, 400)}ms;`}>
+            <article class="group h-full rounded-xl border border-[hsl(var(--border))] bg-[hsl(var(--card))] hover:shadow-lg hover:border-[hsl(var(--primary)/0.5)] hover:-translate-y-1 transition-all duration-500 cursor-pointer p-6 space-y-3">
+              <h3 class="text-lg font-display font-bold group-hover:text-[hsl(var(--primary))] transition-colors">{item.title}</h3>
+              <p class="text-sm text-[hsl(var(--muted-foreground))] leading-relaxed">{item.description}</p>
+              <div class="flex items-center gap-1 text-sm font-medium text-[hsl(var(--primary))] opacity-0 group-hover:opacity-100 transition-opacity">
+                Mehr erfahren
+                <svg class="h-4 w-4 transition-transform group-hover:translate-x-1" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </div>
+            </article>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  {faqs.length > 0 && (
+    <section class="py-16 md:py-24 bg-[hsl(var(--muted)/0.3)] relative overflow-hidden">
+      <div class="container mx-auto px-4">
+        <div class="max-w-3xl mx-auto">
+          <h2 class="reveal-item opacity-0 translate-y-8 transition-all duration-700 text-3xl md:text-4xl font-display font-bold text-center mb-12">Häufige Fragen</h2>
+          <div class="space-y-4">
+            {faqs.map((f, i) => (
+              <details class="reveal-item opacity-0 translate-y-8 transition-all duration-500 group rounded-xl border border-[hsl(var(--border))] bg-[hsl(var(--card))] p-6" style={`transition-delay: ${Math.min(i * 60, 300)}ms;`}>
+                <summary class="cursor-pointer font-display font-semibold text-lg flex items-center justify-between gap-4">
+                  <span>{f.q}</span>
+                  <svg class="h-5 w-5 transition-transform group-open:rotate-180 shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                </summary>
+                <p class="mt-4 text-[hsl(var(--muted-foreground))] leading-relaxed">{f.a}</p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  )}
+
+  <CTASection />
+
+  <script is:inline>
+  (function() {
+    var items = document.querySelectorAll('.reveal-item');
+    if (!items.length) return;
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    items.forEach(function(item) { observer.observe(item); });
+  })();
+  </script>
+</MarketingLayout>

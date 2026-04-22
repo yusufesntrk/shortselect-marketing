@@ -105,7 +105,7 @@ export const batch4: BlogPost[] = [
       <h2>Bewerbungsprozess automatisieren: 5 Workflows die sofort wirken</h2>
       <p>Hand aufs Herz: Wie viel Ihrer Recruiting-Arbeitszeit verbringen Sie mit wirklich wertschöpfenden Tätigkeiten? Wenn Sie ehrlich sind, wahrscheinlich weniger als die Hälfte. Der Rest geht drauf für E-Mails kopieren, Termine hin- und herschieben, Absagen formulieren und Daten einpflegen.</p>
       <p>Studien bestätigen das Bauchgefühl: <strong>Bis zu 80 % der täglichen Recruiting-Arbeit besteht aus repetitiven, administrativen Aufgaben</strong>. Das ist nicht nur ineffizient, es ist frustrierend. Denn jede Stunde, die Sie mit Copy-Paste verbringen, fehlt für das, was wirklich zählt: persönliche Gespräche mit Kandidaten, strategische Beratung der Hiring Manager und den Aufbau von Beziehungen.</p>
-      <p>Die gute Nachricht: Die fünf Workflows, die wir Ihnen in diesem Artikel vorstellen, lassen sich in wenigen Stunden einrichten und sparen <strong>sofort messbar Zeit</strong>, ohne dass die Qualität Ihres Bewerbungsprozesses leidet. Im Gegenteil: In den meisten Fällen verbessert sich die Candidate Experience sogar erheblich.</p>
+      <p>Die gute Nachricht: Die fünf Workflows, die wir Ihnen in diesem Artikel vorstellen, lassen sich in wenigen Stunden einrichten und sparen <strong>sofort messbar Zeit</strong>, ohne dass die Qualität Ihres Bewerbungsprozesses leidet. Im Gegenteil: In den meisten Fällen verbessert sich die Candidate Experience sogar erheblich. Die Automation greift an jeder Phase des <a href="/glossar/recruiting-funnel/">Recruiting Funnels</a>.</p>
 
       <h2>Workflow 1: Automatische Eingangsbestätigung</h2>
       <h3>Das Problem</h3>

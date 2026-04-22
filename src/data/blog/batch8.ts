@@ -83,7 +83,7 @@ export const batch8: BlogPost[] = [
 
 <p>Die durchschnittliche Online-Bewerbung dauert laut einer Studie von Appcast immer noch 15 Minuten. Jede zusätzliche Minute im Bewerbungsprozess führt zu einem Abfall der Abschlussrate um 3 %. Bei mobilen Bewerbungen sind die Abbruchquoten noch dramatischer: Über 60 % der Kandidaten brechen eine Bewerbung ab, wenn sie länger als 5 Minuten dauert.</p>
 
-<p>2026 setzen erfolgreiche Unternehmen auf One-Click-Bewerbungen und Quick-Apply-Funktionen. LinkedIn-Profil importieren, zwei bis drei Screening-Fragen beantworten, absenden. Der gesamte Prozess dauert unter 60 Sekunden. Unternehmen, die diesen Ansatz bereits implementiert haben, berichten von einer Steigerung der Bewerbungseingänge um 200 bis 300 %.</p>
+<p>2026 setzen erfolgreiche Unternehmen auf One-Click-Bewerbungen und Quick-Apply-Funktionen. LinkedIn-Profil importieren, zwei bis drei Screening-Fragen beantworten, absenden. Der gesamte Prozess dauert unter 60 Sekunden. Unternehmen, die diesen Ansatz bereits implementiert haben, berichten von einer Steigerung der Bewerbungseingänge um 200 bis 300 %. Der klassische <a href="/glossar/recruiting-funnel/">Recruiting Funnel</a> wird damit an der Apply-Stage deutlich breiter, ohne Qualitätsverlust beim Screening.</p>
 
 <h3>Empfehlungen für schnellere Bewerbungsprozesse</h3>
 

@@ -1,0 +1,61 @@
+---
+import HubLayout from '../../layouts/HubLayout.astro';
+
+const items = [
+  { title: "Für Recruiter", href: "/fuer/recruiter/", description: "Weniger Admin, mehr Gespräche: KI-Screening, Auto-Scheduling und Kanban-Pipeline entlasten Ihren Recruiter-Alltag pro Tag um 2-3 Stunden." },
+  { title: "Für HR-Leiter", href: "/fuer/hr-leiter/", description: "Live-Dashboards über alle Mandate, Time-to-Hire pro Team und Forecasting-Daten für Ihre Personalplanung und das Budget-Gespräch." },
+  { title: "Für Personalvermittlung", href: "/fuer/personalvermittlung/", description: "Multi-Mandanten-ATS mit Client-Portal, Sales-CRM und Flatrate-Pricing, speziell für Recruiting-Agenturen und Headhunter." },
+  { title: "Für Geschäftsführer", href: "/fuer/geschaeftsfuehrer/", description: "Recruiting als Wachstumstreiber: Placement-Pipeline, Umsatz-Forecast und Recruiter-Produktivität transparent auf einem Blick." },
+  { title: "Für Startups", href: "/fuer/startups/", description: "Karriereseite in 5 Minuten live, ab 0 EUR starten, mitwachsendes Preismodell ohne versteckte Per-Recruiter-Kosten." },
+  { title: "Für Enterprise", href: "/fuer/enterprise/", description: "SSO, Audit-Logs, Custom-Roles, dedizierter Customer Success und DSGVO-konforme EU-Hosting-Optionen für Konzern-Anforderungen." },
+];
+
+const introHtml = `
+<p>Recruiting-Software ist nicht gleich Recruiting-Software. Was ein <strong>Recruiter im Agentur-Alltag</strong> braucht, überschneidet sich nur teilweise mit dem, was ein <strong>HR-Leiter im Mittelstand</strong> steuern muss oder ein <strong>Geschäftsführer einer Personalberatung</strong> für sein Forecasting benötigt. ShortSelect wurde bewusst so gebaut, dass sich die Oberfläche und die Workflows pro Rolle anpassen, statt jeden Nutzer durch dieselbe Enterprise-Menüstruktur zu schleusen.</p>
+<p>Auf diesem Hub finden Sie die Zielgruppen-spezifischen Landingpages mit konkreten Use-Cases, Zeitersparnis-Berechnungen und Pricing-Hinweisen. Die sechs Personas decken den größten Teil des DACH-Recruiting-Markts ab: <strong>operative Recruiter und HR-Leiter</strong> auf der Unternehmensseite, <strong>Personalvermittlungen und Headhunter</strong> als externe Dienstleister, sowie die <strong>Entscheider-Perspektive der Geschäftsführung</strong> plus zwei Unternehmensgrößen-Varianten (Startup und Enterprise).</p>
+<p>Ein typisches Muster: Recruiter interessieren sich für Zeitersparnis pro Tag, HR-Leiter für Team-KPIs und Compliance-Themen, Personalvermittlungen für Multi-Mandanten-Features und Client-Portal, Geschäftsführer für Pipeline-Forecast und Umsatz-Zuordnung, Startups für Preis-Einstieg und Karriereseite in Minuten, Enterprise für SSO, Audit-Logs und dedizierte Customer-Success-Betreuung. Jede unserer Persona-Seiten adressiert genau diese Erwartungshaltung ohne Umwege.</p>
+<p>Besonders wichtig für Agenturen: Auf <a href="/fuer/personalvermittlung/">/fuer/personalvermittlung/</a> zeigen wir, wie sich Retainer- und Contingency-Mandate getrennt abbilden lassen, wie Flatrate-Pricing statt Per-Recruiter-Lizenzierung die Skalierung von 2 auf 20 Recruiter ohne Kostenexplosion ermöglicht und wie das integrierte Client-Portal Kunden transparenten Read-only-Zugriff auf den Fortschritt pro Mandat gibt.</p>
+<p>Wenn Sie sich zwischen zwei Rollen nicht entscheiden können, ist das in Ordnung. In vielen kleinen und mittelständischen Agenturen tragen Founder und Senior-Recruiter mehrere Hüte gleichzeitig. In diesem Fall empfehlen wir, bei der Seite zu starten, die Ihre aktuelle Schmerzstelle beschreibt: Wenn Sie täglich im Recruiting stecken, beginnen Sie bei <a href="/fuer/recruiter/">Recruiter</a>. Wenn Sie strategisch planen, bei <a href="/fuer/geschaeftsfuehrer/">Geschäftsführer</a>. Wenn Sie parallel Sales machen, bei <a href="/fuer/personalvermittlung/">Personalvermittlung</a>.</p>
+`;
+
+const faqs = [
+  {
+    q: "Unterscheidet sich die Oberfläche je nach Nutzer-Rolle?",
+    a: "Ja. ShortSelect hat ein Rollen- und Rechte-System, das pro User festlegt, welche Dashboards, Mandate, Kandidaten und Reports sichtbar sind. Recruiter sehen primär ihre Kanban-Pipeline, HR-Leiter zusätzlich Team-KPIs und Forecasting, Geschäftsführer die Placement-Pipeline mit Umsatz-Hochrechnung. Die zugrundeliegende Daten sind dieselben, die Perspektive ist pro Rolle optimiert."
+  },
+  {
+    q: "Gibt es unterschiedliche Preismodelle für verschiedene Zielgruppen?",
+    a: "Ja. Startups starten bei 0 Euro (Free-Plan mit Basis-Funktionen), KMU und Inhouse-Teams nutzen Per-Recruiter-Lizenzen ab 49 Euro pro Monat, Recruiting-Agenturen bekommen Flatrate-Pakete mit unbegrenzten Recruitern und Mandanten-Staffelung, Enterprise-Kunden individuelle Angebote mit SLA, dediziertem CSM und On-Premise-Option bei Bedarf. Die genaue Einordnung finden Sie auf der jeweiligen Persona-Seite."
+  },
+  {
+    q: "Kann ShortSelect als reine Recruiter-Software ohne HR-Features genutzt werden?",
+    a: "Absolut. Der Kern von ShortSelect ist ATS plus Recruiting-CRM. Payroll, Urlaubsverwaltung, Mitarbeiter-Onboarding-Workflows und klassische HR-Suite-Features sind bewusst ausgelagert, weil sie in reinen Recruiting-Teams und bei Agenturen nicht gebraucht werden. Für HR-Leiter, die eine vollständige HR-Suite wollen, integrieren wir mit Personio, HRworks und Sage HR."
+  },
+  {
+    q: "Wie unterscheidet sich ShortSelect für Personalvermittlungen von Inhouse-ATS?",
+    a: "Drei Kernunterschiede: Multi-Tenancy (eigene Mandantenkonfiguration und Branding pro Kunde), Client-Portal (Read-only-Zugriff Ihrer Kunden auf den Fortschritt), und ein integriertes Sales-CRM für Ihren eigenen Vertrieb. Klassische Inhouse-ATS wie Personio oder Teamtailor decken diese Funktionen nicht ab oder nur über teure Workarounds, deshalb lohnt sich für Agenturen ein spezialisiertes Tool."
+  },
+  {
+    q: "Welche Rolle passt zu mir, wenn ich Gründer einer kleinen Agentur bin?",
+    a: "Als Gründer tragen Sie meist drei Hüte: operatives Recruiting, Vertrieb und Unternehmenssteuerung. Wir empfehlen, die Persona-Seite für <a href=\"/fuer/personalvermittlung/\">Personalvermittlung</a> als Startpunkt zu nutzen, weil sie die Kombination aus Recruiting-Pipeline, Client-Sales und Forecasting abdeckt. Die Seiten für Recruiter und Geschäftsführer vertiefen einzelne Aspekte, sind aber optional."
+  },
+];
+---
+
+<HubLayout
+  title="ShortSelect für jede Zielgruppe – Recruiter, HR, Personalvermittlung | ShortSelect"
+  description="Maßgeschneiderte Recruiting-Software für Recruiter, HR-Leiter, Personalvermittler, Geschäftsführer, Startups und Enterprise. Finden Sie Ihre Lösung."
+  canonical="https://www.shortselect.com/fuer/"
+  breadcrumbName="Lösungen"
+  breadcrumbUrl="https://www.shortselect.com/fuer/"
+  badge="Zielgruppen"
+  h1="Recruiting-Software für"
+  heroHighlight="jede Rolle"
+  heroSubtitle="Ob Recruiter, HR-Leiter oder Geschäftsführer. ShortSelect passt sich Ihrer Rolle an und deckt die Workflows ab, die wirklich zählen."
+  introHtml={introHtml}
+  gridBadge="Zielgruppen"
+  gridTitle="Welche Rolle beschreibt Sie am besten?"
+  gridSubtitle="Sechs Persona-Fokusseiten mit konkreten Use-Cases und Pricing-Hinweisen."
+  items={items}
+  faqs={faqs}
+/>

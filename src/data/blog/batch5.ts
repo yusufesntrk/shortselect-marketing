@@ -187,7 +187,7 @@ export const batch5: BlogPost[] = [
 
 <blockquote>„Geschwindigkeit ist keine Abkürzung – sie ist das Ergebnis eines durchdachten Prozesses. Wer schnell einstellt, hat vorher besser vorbereitet."</blockquote>
 
-<p>Die folgenden 8 Strategien helfen Ihnen, Ihre Time-to-Hire systematisch zu verkürzen, ohne Kompromisse bei der Qualität zu machen.</p>
+<p>Die folgenden 8 Strategien helfen Ihnen, Ihre Time-to-Hire systematisch zu verkürzen, ohne Kompromisse bei der Qualität zu machen. Wer seinen <a href="/glossar/recruiting-funnel/">Recruiting Funnel</a> pro Stage sauber misst, erkennt zusätzlich, an welcher Phase die meiste Zeit verloren geht.</p>
 
 <h2>Strategie 1: Anforderungsprofil VOR der Ausschreibung klären</h2>
 

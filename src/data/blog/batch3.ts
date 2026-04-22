@@ -190,7 +190,7 @@ export const batch3: BlogPost[] = [
 
 <h2>Die Touchpoints im Bewerbungsprozess</h2>
 
-<p>Um die Candidate Experience gezielt zu verbessern, müssen Sie die einzelnen Phasen des Bewerbungsprozesses verstehen. Jede Phase hat eigene Touchpoints, Pain Points und Optimierungsmöglichkeiten.</p>
+<p>Um die Candidate Experience gezielt zu verbessern, müssen Sie die einzelnen <a href="/glossar/recruiting-funnel/">Phasen des Recruiting Funnels</a> verstehen. Jede Phase hat eigene Touchpoints, Pain Points und Optimierungsmöglichkeiten.</p>
 
 <h3>Phase 1: Stellenanzeige &amp; Arbeitgeberauftritt</h3>
 

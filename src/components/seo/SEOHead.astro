@@ -12,7 +12,7 @@ interface Props {
 const {
   title,
   description,
-  canonical = Astro.url.href,
+  canonical: canonicalProp,
   ogImage = '/og-image.png',
   ogType = 'website',
   noindex = false,
@@ -22,6 +22,13 @@ const {
 const siteName = 'ShortSelect';
 const siteUrl = 'https://www.shortselect.com';
 const fullOgImage = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage}`;
+
+// Canonical-Normalisierung: Trailing-Slash erzwingen (CF Pages redirected non-slash → slash).
+// Ausnahmen: URLs mit Query-String oder Dateiendung (z. B. .xml, .pdf) bleiben unveraendert.
+const rawCanonical = canonicalProp ?? Astro.url.href;
+const canonical = rawCanonical.endsWith('/')
+  ? rawCanonical
+  : (rawCanonical.includes('?') || /\.\w{2,5}$/.test(rawCanonical) ? rawCanonical : rawCanonical + '/');
 ---
 
 <!-- Primary Meta Tags -->

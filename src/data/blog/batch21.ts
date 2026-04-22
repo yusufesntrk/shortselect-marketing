@@ -132,7 +132,7 @@ export const batch21: BlogPost[] = [
     content: `
 <h2>Die unbequeme Wahrheit über Personalvermittler und Vertrieb</h2>
 
-<p>Lassen Sie uns ehrlich sein: Die meisten Personalvermittler haben keinen strukturierten Vertrieb. Null. Nichts. Sie haben eine Recruiting-Pipeline, die sie mit Hingabe pflegen, Kandidaten werden gesourct, interviewt, vorgestellt, platziert. Aber fragen Sie nach dem Sales-Funnel, ernten Sie leere Blicke.</p>
+<p>Lassen Sie uns ehrlich sein: Die meisten Personalvermittler haben keinen strukturierten Vertrieb. Null. Nichts. Sie haben eine <a href="/glossar/recruiting-funnel/">Recruiting-Pipeline als Funnel</a>, die sie mit Hingabe pflegen, Kandidaten werden gesourct, interviewt, vorgestellt, platziert. Aber fragen Sie nach dem Sales-Funnel, ernten Sie leere Blicke.</p>
 
 <p>Das ist so, als würde ein Restaurant einen exzellenten Koch haben, aber keine Gäste einladen. Sie können die besten Kandidaten der Welt finden, wenn niemand Sie dafür beauftragt, ist das ein teures Hobby.</p>
 
