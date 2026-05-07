@@ -117,7 +117,22 @@ const currentYear = new Date().getFullYear();
     <div class="border-t border-gray-800 pt-6 text-center">
       <p class="text-sm text-gray-500">
         &copy; {currentYear} ShortSelect. Alle Rechte vorbehalten.
+        <span class="mx-2">&middot;</span>
+        <button
+          type="button"
+          data-cookie-reopen
+          class="text-gray-500 hover:text-gray-300 transition-colors underline-offset-2 hover:underline"
+        >
+          Cookie-Einstellungen
+        </button>
       </p>
     </div>
+    <script is:inline>
+      document.querySelectorAll('[data-cookie-reopen]').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          window.dispatchEvent(new CustomEvent('cookie-consent-reopen'));
+        });
+      });
+    </script>
   </div>
 </footer>
