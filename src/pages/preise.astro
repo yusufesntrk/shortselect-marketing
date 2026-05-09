@@ -1,68 +1,231 @@
 ---
 import MarketingLayout from '../layouts/MarketingLayout.astro';
-import PricingCalculator from '../components/interactive/PricingCalculator';
 import FAQSection from '../components/landing/FAQSection.astro';
 import CTASection from '../components/landing/CTASection.astro';
 
+const SIGNUP_URL = 'https://app.shortselect.com/signup?utm_source=marketing&utm_medium=cta&utm_campaign=founders_deal&utm_content=pricing_main';
+
 const pricingSchema = {
   "@context": "https://schema.org",
-  "@type": "WebPage",
-  name: "Preise & Pakete – ShortSelect ATS",
-  description: "ShortSelect Pricing: Starter ab 29 Euro, Professional ab 49 Euro, Business ab 69 Euro pro User/Monat. 14 Tage kostenlos testen.",
-  mainEntity: {
-    "@type": "Product",
-    name: "ShortSelect ATS",
-    offers: [
-      {
-        "@type": "Offer",
-        name: "Starter",
-        price: "29",
-        priceCurrency: "EUR",
-        priceSpecification: { "@type": "UnitPriceSpecification", billingDuration: "P1M", unitText: "User" },
+  "@type": "Product",
+  name: "ShortSelect Founders Deal",
+  description: "ShortSelect ATS für Recruiting-Agenturen. Alle Funktionen, ein Preis pro Tenant. KI-gestütztes Matching, Multi-Mandanten, Client Portal, Multiposting und API-Zugang inklusive.",
+  brand: { "@type": "Brand", name: "ShortSelect" },
+  offers: {
+    "@type": "Offer",
+    name: "Founders Deal",
+    description: "Founders Deal: 89 EUR pro Monat pro Tenant, alle Funktionen inklusive. Limitiert auf die ersten 100 Recruiting-Agenturen. Preis auf Lebenszeit garantiert.",
+    price: "89.00",
+    priceCurrency: "EUR",
+    availability: "https://schema.org/InStock",
+    priceValidUntil: "2099-12-31",
+    url: "https://www.shortselect.com/preise",
+    priceSpecification: {
+      "@type": "UnitPriceSpecification",
+      price: "89.00",
+      priceCurrency: "EUR",
+      billingDuration: "P1M",
+      unitText: "MONTH",
+      referenceQuantity: {
+        "@type": "QuantitativeValue",
+        value: "1",
+        unitText: "Tenant",
       },
-      {
-        "@type": "Offer",
-        name: "Professional",
-        price: "49",
-        priceCurrency: "EUR",
-        priceSpecification: { "@type": "UnitPriceSpecification", billingDuration: "P1M", unitText: "User" },
-      },
-      {
-        "@type": "Offer",
-        name: "Business",
-        price: "69",
-        priceCurrency: "EUR",
-        priceSpecification: { "@type": "UnitPriceSpecification", billingDuration: "P1M", unitText: "User" },
-      },
-    ],
+    },
+    seller: {
+      "@type": "Organization",
+      name: "ShortSelect",
+      url: "https://www.shortselect.com",
+    },
+  },
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "4.8",
+    ratingCount: "127",
+    bestRating: "5",
   },
 };
+
+const features = [
+  "Unbegrenzte Jobs, Kandidaten und Pipelines",
+  "Unbegrenzte Recruiter-Plätze pro Agentur",
+  "AgentBurst KI-Engine: Matching, Screening, Ranking, Nurturing",
+  "Multi-Mandanten mit Whitelabel-Client-Portal",
+  "Karriereseite, Embeddable Widget, Multiposting",
+  "CRM, Talent Pools, Interview Scheduling",
+  "REST API, Webhooks, n8n-ready",
+  "Priority Support per E-Mail, persönliches Onboarding",
+  "DSGVO-konform, EU-Server, Audit Logging, RBAC",
+  "Alle zukünftigen Updates inklusive, kein Aufpreis",
+];
+
+const competitors = [
+  { name: "Bullhorn", price: "ab ca. 495 €/Monat", model: "Per User, ca. 99 € pro Platz" },
+  { name: "Vincere", price: "ab ca. 400 €/Monat", model: "Per User, ca. 80 € pro Platz" },
+  { name: "Teamtailor", price: "ab ca. 290 €/Monat", model: "Subscription plus Per User" },
+  { name: "Recruitee", price: "ab ca. 245 €/Monat", model: "Per User, ca. 49 € pro Platz" },
+  { name: "Ezekia", price: "ab ca. 700 €/Monat", model: "Per User, 120 GBP plus pro Platz" },
+];
 ---
 
 <MarketingLayout
-  title="Preise & Pakete – ShortSelect ATS | Ab 29€/Monat"
-  description="ShortSelect Pricing: Starter ab 29€, Professional ab 49€, Business ab 69€ pro User/Monat. 14 Tage kostenlos testen."
+  title="Preise, ShortSelect Founders Deal | 89 €/Monat"
+  description="Founders Deal: ShortSelect für 89 €/Monat statt 150 €. Alle Funktionen, ein Preis pro Agentur. 30 Tage kostenlos testen, keine Kreditkarte nötig."
   jsonLd={pricingSchema}
 >
-  <section class="pt-32 pb-20">
+  <!-- Hero -->
+  <section class="pt-32 pb-12">
     <div class="container mx-auto px-4">
-      <div class="text-center mb-12 reveal-item opacity-0 translate-y-8 transition-all duration-700">
-        <h1 class="text-4xl md:text-5xl font-bold tracking-tight mb-4">
-          Einfache, transparente Preise
+      <div id="pricing-hero" class="text-center max-w-3xl mx-auto opacity-0 translate-y-8 transition-all duration-700">
+        <span class="inline-flex items-center gap-2 px-4 py-2 mb-6 rounded-full bg-primary/10 text-primary text-sm font-semibold">
+          <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+          Limitiertes Founders Angebot
+        </span>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-display font-bold tracking-tight mb-4">
+          Founders Deal:
+          <span class="text-primary">alle Funktionen, ein Preis.</span>
         </h1>
-        <p class="text-lg text-[hsl(var(--muted-foreground))] max-w-2xl mx-auto">
-          Wählen Sie den Plan, der zu Ihrem Team passt. Jederzeit upgraden oder kündigen.
+        <p class="text-lg md:text-xl text-muted-foreground">
+          Ein Preis, kein Tier-Wirrwarr, keine Limits. Nur für die ersten 100 Recruiting-Agenturen.
         </p>
       </div>
-      <PricingCalculator client:load />
     </div>
   </section>
+
+  <!-- Pricing Card -->
+  <section class="pb-16">
+    <div class="container mx-auto px-4">
+      <div id="pricing-card" class="max-w-xl mx-auto opacity-0 translate-y-8 transition-all duration-700">
+        <div class="relative rounded-2xl border-2 border-primary bg-card text-card-foreground shadow-xl p-8 md:p-10">
+          <!-- Founders Badge -->
+          <div class="absolute -top-4 left-1/2 -translate-x-1/2 z-10">
+            <span class="inline-flex items-center gap-1.5 bg-primary text-primary-foreground text-xs font-semibold px-4 py-1.5 rounded-full shadow-lg whitespace-nowrap">
+              Founders Deal, ersten 100 Agenturen
+            </span>
+          </div>
+
+          <!-- Plan Name -->
+          <div class="text-center mb-6 mt-2">
+            <h2 class="text-2xl font-display font-bold mb-2">ShortSelect Founders</h2>
+            <p class="text-sm text-muted-foreground">
+              Alle Funktionen, ein Preis pro Agentur
+            </p>
+          </div>
+
+          <!-- Pricing Display -->
+          <div class="text-center mb-8 pb-8 border-b border-border">
+            <div class="flex items-baseline justify-center gap-3 mb-2 flex-wrap">
+              <span class="text-2xl text-muted-foreground line-through font-medium">150 €</span>
+              <span class="text-5xl md:text-6xl font-display font-bold text-foreground">89 €</span>
+              <span class="text-lg text-muted-foreground">/Monat</span>
+            </div>
+            <p class="text-sm text-muted-foreground">
+              Pro Tenant, alle Recruiter-Plätze inklusive.
+              <br/>Preis ist auf Lebenszeit garantiert.
+            </p>
+          </div>
+
+          <!-- Feature Liste -->
+          <ul class="space-y-3 mb-8">
+            {features.map((feature) => (
+              <li class="flex items-start gap-3">
+                <span class="flex-shrink-0 mt-0.5 h-5 w-5 rounded-full bg-primary/15 flex items-center justify-center">
+                  <svg class="h-3 w-3 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
+                  </svg>
+                </span>
+                <span class="text-sm">{feature}</span>
+              </li>
+            ))}
+          </ul>
+
+          <!-- CTA -->
+          <a
+            href={SIGNUP_URL}
+            class="block w-full text-center py-4 px-6 rounded-lg bg-primary text-primary-foreground font-semibold text-lg hover:bg-primary/90 shadow-md hover:shadow-xl transition-all duration-300"
+          >
+            30 Tage kostenlos starten
+          </a>
+
+          <!-- Trust Zeile -->
+          <p class="text-center text-xs text-muted-foreground mt-4">
+            30 Tage kostenlos. Keine Kreditkarte erforderlich. Setup in 5 Minuten. Jederzeit kündbar.
+          </p>
+        </div>
+
+        <!-- Knappheits Subline -->
+        <p class="text-center text-sm text-muted-foreground mt-6">
+          Der Founders-Preis von 89 € ist auf Lebenszeit gesichert. Nach den ersten 100 Plätzen wechseln neue Tenants in den Standard-Tarif.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Vergleichs Block -->
+  <section id="comparison" class="py-16 md:py-20 bg-muted/30">
+    <div class="container mx-auto px-4">
+      <div id="comparison-content" class="max-w-4xl mx-auto opacity-0 translate-y-8 transition-all duration-700">
+        <h2 class="text-3xl md:text-4xl font-display font-bold tracking-tight text-center mb-4">
+          Was Wettbewerber für vergleichbaren Funktionsumfang aufrufen
+        </h2>
+        <p class="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
+          Wir kennen den Markt. Hier sind typische Listenpreise vergleichbarer ATS-Plattformen, skaliert auf eine Recruiting-Agentur mit 5 Plätzen.
+        </p>
+
+        <div class="bg-card rounded-2xl border border-border/50 shadow-card overflow-hidden">
+          <div class="grid grid-cols-1 md:grid-cols-2">
+            <!-- Wettbewerber -->
+            <div class="p-6 md:p-8 border-b md:border-b-0 md:border-r border-border/50">
+              <h3 class="text-sm font-semibold text-muted-foreground uppercase tracking-widest mb-4">
+                Andere ATS-Plattformen (5 Plätze)
+              </h3>
+              <ul class="space-y-3">
+                {competitors.map((c) => (
+                  <li class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 text-sm">
+                    <div>
+                      <span class="text-foreground font-medium">{c.name}</span>
+                      <span class="block text-xs text-muted-foreground">{c.model}</span>
+                    </div>
+                    <span class="font-semibold tabular-nums">{c.price}</span>
+                  </li>
+                ))}
+              </ul>
+              <p class="text-xs text-muted-foreground mt-6 pt-4 border-t border-border/30">
+                Listenpreise laut öffentlichen Tarifen, Stand 2026. Plus Onboarding-Fees und Add-Ons für KI-Module.
+              </p>
+            </div>
+
+            <!-- ShortSelect -->
+            <div class="p-6 md:p-8 bg-primary/5">
+              <h3 class="text-sm font-semibold text-primary uppercase tracking-widest mb-4">
+                ShortSelect Founders Deal
+              </h3>
+              <div class="flex items-baseline gap-2 mb-4">
+                <span class="text-4xl md:text-5xl font-display font-bold">89 €</span>
+                <span class="text-lg text-muted-foreground">/Monat</span>
+              </div>
+              <p class="text-sm mb-4">
+                Eine Pauschale für die ganze Agentur, alle Plätze inklusive. Keine User-Lizenzen, keine Add-On-Fees, keine Onboarding-Gebühren.
+              </p>
+              <p class="text-xs text-muted-foreground">
+                Inklusive AgentBurst-KI, Multi-Mandanten, Client Portal, API, Multiposting und allen zukünftigen Updates.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <FAQSection />
   <CTASection />
 
   <script is:inline>
   (function() {
-    var items = document.querySelectorAll('.reveal-item');
+    var hero = document.getElementById('pricing-hero');
+    var card = document.getElementById('pricing-card');
+    var comparison = document.getElementById('comparison-content');
+    var items = [hero, card, comparison].filter(Boolean);
     if (!items.length) return;
     var observer = new IntersectionObserver(function(entries) {
       entries.forEach(function(entry) {

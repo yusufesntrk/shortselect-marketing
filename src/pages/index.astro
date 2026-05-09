@@ -10,7 +10,8 @@ import StatsSection from '../components/landing/StatsSection.astro';
 import FAQSection from '../components/landing/FAQSection.astro';
 import CTASection from '../components/landing/CTASection.astro';
 import TestimonialsSection from '../components/landing/TestimonialsSection.astro';
-import PricingCalculator from '../components/interactive/PricingCalculator';
+
+const SIGNUP_URL_HERO = 'https://app.shortselect.com/signup?utm_source=marketing&utm_medium=cta&utm_campaign=founders_deal&utm_content=hero';
 
 const softwareSchema = {
   "@context": "https://schema.org",
@@ -21,11 +22,13 @@ const softwareSchema = {
   operatingSystem: "Web Browser",
   description: "KI-gestützte Recruiting Software für modernes Bewerbermanagement mit AI Matching, Smart Ranking und Client Portal",
   offers: {
-    "@type": "AggregateOffer",
-    lowPrice: "29",
-    highPrice: "89",
+    "@type": "Offer",
+    name: "Founders Deal",
+    price: "89.00",
     priceCurrency: "EUR",
-    offerCount: "3",
+    availability: "https://schema.org/InStock",
+    priceValidUntil: "2099-12-31",
+    url: "https://www.shortselect.com/preise",
   },
   featureList: [
     "KI-gestütztes Kandidaten-Matching",
@@ -47,8 +50,8 @@ const softwareSchema = {
 ---
 
 <MarketingLayout
-  title="ShortSelect – KI-Recruiting Software & ATS | Kostenlos testen"
-  description="KI-gestützte Recruiting Software mit AI Matching, Smart Ranking & Client Portal. 14 Tage kostenlos testen – keine Kreditkarte nötig."
+  title="ShortSelect, KI-Recruiting Software & ATS | Kostenlos testen"
+  description="KI-gestützte Recruiting Software mit AI Matching, Smart Ranking und Client Portal. 30 Tage kostenlos testen, keine Kreditkarte nötig."
   jsonLd={softwareSchema}
 >
   <HeroSection />
@@ -60,28 +63,54 @@ const softwareSchema = {
   <StatsSection />
   <TestimonialsSection />
 
-  <!-- Pricing Section -->
+  <!-- Pricing Teaser -->
   <section class="py-20 md:py-32 relative overflow-hidden" id="pricing">
     <div class="container mx-auto px-4">
-      <div class="text-center mb-12 reveal-item opacity-0 translate-y-8 transition-all duration-700">
+      <div id="pricing-teaser" class="max-w-2xl mx-auto text-center opacity-0 translate-y-8 transition-all duration-700">
+        <span class="inline-flex items-center gap-2 px-4 py-2 mb-6 rounded-full bg-primary/10 text-primary text-sm font-semibold">
+          <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+          Limitiertes Founders Angebot
+        </span>
         <h2 class="text-3xl md:text-4xl font-display font-bold tracking-tight mb-4">
-          Einfache, transparente Preise
+          Founders Deal: <span class="text-primary">alle Funktionen, ein Preis.</span>
         </h2>
-        <p class="text-lg text-muted-foreground max-w-2xl mx-auto">
-          Wählen Sie den Plan, der zu Ihrem Team passt. Jederzeit upgraden oder kündigen.
+        <div class="flex items-baseline justify-center gap-3 mb-4 flex-wrap">
+          <span class="text-xl text-muted-foreground line-through font-medium">150 €</span>
+          <span class="text-5xl font-display font-bold text-foreground">89 €</span>
+          <span class="text-lg text-muted-foreground">/Monat</span>
+        </div>
+        <p class="text-lg text-muted-foreground max-w-xl mx-auto mb-8">
+          Pro Tenant, alle Recruiter-Plätze inklusive. Preis auf Lebenszeit garantiert. Limitiert auf die ersten 100 Recruiting-Agenturen.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a
+            href={SIGNUP_URL_HERO}
+            class="inline-flex items-center gap-2 px-8 py-3 bg-primary text-primary-foreground font-semibold rounded-lg text-base hover:bg-primary/90 shadow-md hover:shadow-xl transition-all duration-300"
+          >
+            30 Tage kostenlos starten
+          </a>
+          <a
+            href="/preise"
+            class="inline-flex items-center px-8 py-3 border-2 border-border font-semibold rounded-lg text-base hover:border-primary/50 transition-colors"
+          >
+            Alle Details ansehen
+          </a>
+        </div>
+        <p class="text-xs text-muted-foreground mt-6">
+          30 Tage kostenlos. Keine Kreditkarte erforderlich. Jederzeit kündbar.
         </p>
       </div>
-      <PricingCalculator client:visible />
     </div>
   </section>
+
   <FAQSection />
   <CTASection />
 </MarketingLayout>
 
 <script is:inline>
 (function() {
-  var items = document.querySelectorAll('.reveal-item');
-  if (!items.length) return;
+  var teaser = document.getElementById('pricing-teaser');
+  if (!teaser) return;
   var observer = new IntersectionObserver(function(entries) {
     entries.forEach(function(entry) {
       if (entry.isIntersecting) {
@@ -91,6 +120,6 @@ const softwareSchema = {
       }
     });
   }, { threshold: 0.1 });
-  items.forEach(function(item) { observer.observe(item); });
+  observer.observe(teaser);
 })();
 </script>
