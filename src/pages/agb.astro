@@ -10,7 +10,7 @@ import MarketingLayout from '../layouts/MarketingLayout.astro';
   <section class="pt-32 pb-20 md:pb-28">
     <div class="container mx-auto px-4 max-w-3xl">
       <h1 class="text-3xl font-display font-bold mb-2">Allgemeine Geschäftsbedingungen (AGB) für ShortSelect</h1>
-      <p class="text-sm text-muted-foreground mb-8">Version 1.0 · Stand: 7. Mai 2026</p>
+      <p class="text-sm text-muted-foreground mb-8">Version 1.1 · Stand: 10. Mai 2026</p>
 
       <div class="prose-legal space-y-6">
         <section>
@@ -57,10 +57,26 @@ import MarketingLayout from '../layouts/MarketingLayout.astro';
             <li>bei monatlicher Abrechnung: zu Beginn jedes Vertragsmonats,</li>
             <li>bei jährlicher Abrechnung: zu Beginn jedes Vertragsjahres.</li>
           </ul>
-          <p>(3) Zahlungen erfolgen wahlweise per SEPA-Lastschrift, Kreditkarte oder Banküberweisung. Bei Bezahlung per Lastschrift oder Kreditkarte erteilt der Kunde dem Anbieter ein widerrufliches SEPA-Mandat oder eine Belastungsvollmacht.</p>
+          <p>(3) Zahlungen erfolgen über den Zahlungsdienstleister Stripe Payments Europe Ltd. ("Stripe") wahlweise per SEPA-Lastschrift, Kreditkarte oder anderen von Stripe unterstützten Zahlungsmethoden. Stripe stellt im Auftrag des Anbieters Rechnungen aus. Der Kunde verwaltet seine Zahlungsmethoden über das Stripe Customer Portal, das über die ShortSelect-App zugänglich ist. Bei Bezahlung per Lastschrift oder Kreditkarte erteilt der Kunde Stripe ein widerrufliches SEPA-Mandat oder eine Belastungsvollmacht. Die Verarbeitung der Kartendaten erfolgt ausschließlich bei Stripe (PCI-DSS Level 1); ShortSelect speichert keine vollständigen Kartendaten.</p>
           <p>(4) Bei Zahlungsverzug ist der Anbieter berechtigt, Verzugszinsen in gesetzlicher Höhe gemäß § 288 Abs. 2 BGB (9 Prozentpunkte über dem Basiszinssatz) sowie eine Pauschale gemäß § 288 Abs. 5 BGB in Höhe von 40,00 Euro zu verlangen.</p>
           <p>(5) Verzögert der Kunde die Zahlung um mehr als 14 Tage, ist der Anbieter nach vorheriger Mahnung mit angemessener Fristsetzung berechtigt, den Zugang zur Software zu sperren. Der Vergütungsanspruch bleibt von der Sperrung unberührt.</p>
           <p>(6) Eine Aufrechnung oder Geltendmachung von Zurückbehaltungsrechten durch den Kunden ist nur mit unbestrittenen oder rechtskräftig festgestellten Forderungen oder mit Forderungen aus demselben Vertragsverhältnis zulässig.</p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-semibold mb-2">&sect; 4a Kostenfreie Testphase</h2>
+          <p>(1) Bei Self-Service-Registrierung erhält der Kunde Zugang zu ShortSelect für einen Zeitraum von 30 Tagen ab Account-Aktivierung kostenfrei zum Testen ("Testphase"). Die Eingabe einer Zahlungsmethode oder Kreditkartendaten ist während der Testphase nicht erforderlich.</p>
+          <p>(2) Der Kunde kann jederzeit während der Testphase einen kostenpflichtigen Tarif aktivieren ("Founders Deal" oder anderer verfügbarer Tarif). Bei Aktivierung während der Testphase wird die Restzeit der Testphase auf den Tarif übertragen und endet mit Ablauf des ursprünglichen 30-Tage-Zeitraums; danach erfolgt die erste Abrechnung gemäß § 4 Abs. 2.</p>
+          <p>(3) Wird bis zum Ablauf der 30-tägigen Testphase keine Zahlungsmethode hinterlegt, wird der Account automatisch <strong>pausiert</strong>. Die in der Plattform gespeicherten Daten bleiben für 90 Tage nach Pausierung erhalten und können durch Aktivierung eines kostenpflichtigen Tarifs wiederhergestellt werden. Nach Ablauf der 90-Tage-Frist werden die Daten automatisch gelöscht, soweit keine gesetzlichen Aufbewahrungspflichten entgegenstehen.</p>
+          <p>(4) Die Testphase kann jederzeit ohne Angabe von Gründen durch Schließen des Accounts in den Einstellungen oder durch Nicht-Aktivierung beendet werden. Es entstehen keine Kosten für den Kunden.</p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-semibold mb-2">&sect; 4b Founders Deal</h2>
+          <p>(1) Der Anbieter bietet für eine begrenzte Anzahl von Erstkunden den "Founders Deal" zu einem reduzierten monatlichen Festpreis an. Der konkrete Preis und die Anzahl der verfügbaren Plätze werden auf der Tarif-Seite (shortselect.com/preise) ausgewiesen.</p>
+          <p>(2) Der Founders-Deal-Preis bleibt für den Kunden <strong>solange das Vertragsverhältnis ununterbrochen besteht</strong> unverändert. Spätere allgemeine Preisanpassungen nach § 4 Abs. 2 lassen den Founders-Preis unberührt ("Preisgarantie für Founders Deal Kunden").</p>
+          <p>(3) Wird das Vertragsverhältnis durch ordentliche oder außerordentliche Kündigung beendet (§ 7) oder durch Zahlungsverzug gemäß § 4 Abs. 5 gesperrt, erlischt die Founders-Deal-Preisgarantie. Bei einer späteren Wiederaufnahme der Geschäftsbeziehung gilt der zum Zeitpunkt der Reaktivierung jeweils aktuelle Listenpreis.</p>
+          <p>(4) Der Anbieter behält sich vor, das Founders-Deal-Angebot ohne Vorankündigung zu beenden, sobald die ausgewiesene Anzahl an Plätzen vergeben ist. Bereits abgeschlossene Verträge bleiben hiervon unberührt.</p>
         </section>
 
         <section>
@@ -127,6 +143,8 @@ import MarketingLayout from '../layouts/MarketingLayout.astro';
             <li>Verstoß gegen die Nutzungsbeschränkungen nach § 11.</li>
           </ul>
           <p>(4) Kündigungserklärungen bedürfen der Textform (§ 126b BGB). E-Mail genügt der Form. Eine Kündigung über die im Produkt bereitgestellte Kündigungsfunktion gilt als formgerecht, sofern sie eindeutig dem Kunden zugeordnet werden kann.</p>
+          <p>(5) Bei nicht hinterlegter Zahlungsmethode am Ende der Testphase (§ 4a Abs. 3) oder bei wiederholt fehlgeschlagener Zahlung trotz Smart-Retry-Versuchen wird das Vertragsverhältnis automatisch <strong>pausiert</strong>. Im pausierten Zustand ist der Zugriff auf die Plattform eingeschränkt; die gespeicherten Daten bleiben für 90 Tage erhalten und können durch Hinterlegung einer gültigen Zahlungsmethode via Stripe Customer Portal jederzeit reaktiviert werden.</p>
+          <p>(6) Die ordentliche Kündigung erfolgt durch den Kunden über das Stripe Customer Portal (zugänglich über die ShortSelect-App unter "Einstellungen → Abrechnung"). Eine Kündigung über das Customer Portal genügt der Textform nach Absatz (4) und gilt zum Ende des laufenden Abrechnungszeitraums. Nach Wirksamwerden der Kündigung wird der Account in den pausierten Zustand überführt; gespeicherte Daten bleiben für 90 Tage erhalten (Reaktivierungs-Fenster), danach werden sie gelöscht, soweit keine gesetzlichen Aufbewahrungspflichten entgegenstehen.</p>
         </section>
 
         <section>
@@ -255,7 +273,7 @@ import MarketingLayout from '../layouts/MarketingLayout.astro';
           <p>(5) Vertragssprache ist Deutsch.</p>
         </section>
 
-        <p class="text-sm text-muted-foreground mt-8">Stand: 7. Mai 2026 · Version 1.0 · Rückfragen: hello@shortselect.com</p>
+        <p class="text-sm text-muted-foreground mt-8">Stand: 10. Mai 2026 · Version 1.1 · Rückfragen: hello@shortselect.com</p>
       </div>
     </div>
   </section>

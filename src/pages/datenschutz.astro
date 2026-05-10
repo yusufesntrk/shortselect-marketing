@@ -10,7 +10,7 @@ import MarketingLayout from '../layouts/MarketingLayout.astro';
   <section class="pt-32 pb-20 md:pb-28">
     <div class="container mx-auto px-4 max-w-3xl">
       <h1 class="text-3xl font-display font-bold mb-2">Datenschutzerklärung für ShortSelect Plattform- und Website-Nutzer</h1>
-      <p class="text-sm text-muted-foreground mb-8">Version 2.0 · Stand: 7. Mai 2026</p>
+      <p class="text-sm text-muted-foreground mb-8">Version 2.1 · Stand: 10. Mai 2026</p>
 
       <div class="prose-legal space-y-6">
         <p>Diese Datenschutzerklärung informiert darüber, wie wir personenbezogene Daten verarbeiten, wenn Sie die Website shortselect.com, die App app.shortselect.com, ein ShortSelect-Konto, den Login-Bereich, Einladungslinks oder das Client-Portal nutzen.</p>
@@ -47,7 +47,8 @@ import MarketingLayout from '../layouts/MarketingLayout.astro';
             <li><strong>Authentifizierungs- und Sicherheitsdaten:</strong> Passwort-Hash, MFA-Token, Session-IDs, Login-Zeitstempel</li>
             <li><strong>Technische Protokolldaten:</strong> IP-Adresse, User-Agent, Aufrufzeitpunkt, aufgerufene Funktion (Server-Log)</li>
             <li><strong>Einwilligungs- und Akzeptanz-Audit:</strong> Versionen akzeptierter AGB / Datenschutzerklärung / AVV, Zeitpunkt, Text-Snapshot, IP-Adresse</li>
-            <li><strong>Zahlungs- und Abrechnungsdaten:</strong> Tarif, Rechnungsadresse, USt-IdNr., Zahlungsverlauf (Bezahlung über Stripe; vollständige Kartendaten verarbeiten wir nicht)</li>
+            <li><strong>Zahlungs- und Abrechnungsdaten:</strong> Tarif, Rechnungsadresse, Steuer-ID/USt-IdNr., Zahlungsverlauf, Trial-Start- und Trial-Endzeitpunkt, Subscription-Status (trialing/active/past_due/paused/canceled), Stripe-Customer-ID, Rechnungs-PDF-URLs. Die vollständigen Kartendaten verarbeiten wir <strong>nicht</strong>; diese werden ausschließlich von Stripe als unserem Zahlungsdienstleister gespeichert und verarbeitet (PCI-DSS Level 1).</li>
+            <li><strong>Checkout-Metadaten:</strong> IP-Adresse, User-Agent und Zeitpunkt zum Zeitpunkt der Stripe-Checkout-Session zur Betrugsprävention. Diese Daten werden gemeinsam mit Stripe verarbeitet (gemeinsame Verantwortlichkeit nach Art. 26 DSGVO im engen Rahmen der Zahlungsabwicklung).</li>
             <li><strong>Nutzungsdaten:</strong> Aktivitätshistorie für Audit, Sicherheit und Produktverbesserung</li>
             <li><strong>Kommunikationsdaten:</strong> Inhalt von Support-Anfragen, gesendete und empfangene E-Mails über die Plattform</li>
           </ul>
@@ -87,7 +88,7 @@ import MarketingLayout from '../layouts/MarketingLayout.astro';
                 <tr><td class="p-2 border-b border-muted-foreground/10 align-top">Hetzner Online GmbH</td><td class="p-2 border-b border-muted-foreground/10 align-top">DE (Falkenstein)</td><td class="p-2 border-b border-muted-foreground/10 align-top">Server für PDF-Generierung, Workflow-Automation, WebRTC, Bot-Orchestrierung</td><td class="p-2 border-b border-muted-foreground/10 align-top">Nein (EU)</td></tr>
                 <tr><td class="p-2 border-b border-muted-foreground/10 align-top">Cloudflare Inc.</td><td class="p-2 border-b border-muted-foreground/10 align-top">US / global</td><td class="p-2 border-b border-muted-foreground/10 align-top">Hosting Marketing-Site und App-Frontend, CDN, Bot-Schutz</td><td class="p-2 border-b border-muted-foreground/10 align-top">USA, DPF + SCC</td></tr>
                 <tr><td class="p-2 border-b border-muted-foreground/10 align-top">Resend (Ra Resende Inc.)</td><td class="p-2 border-b border-muted-foreground/10 align-top">USA</td><td class="p-2 border-b border-muted-foreground/10 align-top">Transaktionale E-Mails (Login-Bestätigung, Einladungen, Rechnungen)</td><td class="p-2 border-b border-muted-foreground/10 align-top">USA, DPF + SCC</td></tr>
-                <tr><td class="p-2 border-b border-muted-foreground/10 align-top">Stripe Inc.</td><td class="p-2 border-b border-muted-foreground/10 align-top">IE / USA</td><td class="p-2 border-b border-muted-foreground/10 align-top">Zahlungsabwicklung, Rechnungsstellung</td><td class="p-2 border-b border-muted-foreground/10 align-top">USA, DPF + SCC</td></tr>
+                <tr><td class="p-2 border-b border-muted-foreground/10 align-top">Stripe Payments Europe Ltd. / Stripe Inc.</td><td class="p-2 border-b border-muted-foreground/10 align-top">IE / USA</td><td class="p-2 border-b border-muted-foreground/10 align-top">Zahlungsabwicklung, Subscription-Management, Rechnungsstellung, Steuer-Berechnung (Stripe Tax), Customer Portal</td><td class="p-2 border-b border-muted-foreground/10 align-top">USA, DPF + SCC; <a href="https://stripe.com/de/legal/dpa" target="_blank" rel="noopener" class="text-[hsl(var(--primary))] hover:underline">Stripe-AVV (DPA)</a></td></tr>
                 <tr><td class="p-2 border-b border-muted-foreground/10 align-top">Anthropic PBC</td><td class="p-2 border-b border-muted-foreground/10 align-top">USA</td><td class="p-2 border-b border-muted-foreground/10 align-top">KI-Verarbeitung Lebenslauf-Analyse, Matching, Screening, AI-Interview</td><td class="p-2 border-b border-muted-foreground/10 align-top">USA, DPF + SCC</td></tr>
                 <tr><td class="p-2 border-b border-muted-foreground/10 align-top">OpenAI</td><td class="p-2 border-b border-muted-foreground/10 align-top">USA</td><td class="p-2 border-b border-muted-foreground/10 align-top">KI-Sprachmodelle</td><td class="p-2 border-b border-muted-foreground/10 align-top">USA, DPF + SCC</td></tr>
                 <tr><td class="p-2 border-b border-muted-foreground/10 align-top">Deepgram Inc.</td><td class="p-2 border-b border-muted-foreground/10 align-top">USA</td><td class="p-2 border-b border-muted-foreground/10 align-top">Speech-to-Text bei AI-Interview</td><td class="p-2 border-b border-muted-foreground/10 align-top">USA, SCC + TIA</td></tr>
@@ -104,6 +105,14 @@ import MarketingLayout from '../layouts/MarketingLayout.astro';
             </table>
           </div>
           <p>Eine jeweils tagesaktuelle Liste der Unterauftragsverarbeiter finden Sie unter <a href="/legal/subprocessors" class="text-[hsl(var(--primary))] hover:underline">shortselect.com/legal/subprocessors</a>.</p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-semibold mb-2">6a. Zahlungsabwicklung über Stripe</h2>
+          <p>Für die Abwicklung kostenpflichtiger Tarife setzen wir Stripe Payments Europe Ltd. (Vertragspartner für EU-Kunden) bzw. Stripe Inc. (technische Verarbeitung in den USA) ein. Bei Aktivierung eines Tarifs werden Sie auf eine von Stripe gehostete Zahlungsseite weitergeleitet. Stripe verarbeitet dabei eigenverantwortlich Kartendaten und Bankverbindungen; ShortSelect erhält von Stripe ausschließlich nicht-sensible Metadaten (Stripe-Customer-ID, Subscription-Status, Rechnungsnummer, Rechnungs-PDF-URL).</p>
+          <p>Stripe stellt Rechnungen im Auftrag der LeyalTech (Yusuf Esentürk e.K.) aus. Die Rechnung enthält auf Wunsch Ihre Steuer-ID/USt-IdNr.; bei B2B-Kunden innerhalb der EU wird automatisch das Reverse-Charge-Verfahren angewandt (Stripe Tax).</p>
+          <p>Eine Kopie des AVV mit Stripe ist abrufbar unter <a href="https://stripe.com/de/legal/dpa" target="_blank" rel="noopener" class="text-[hsl(var(--primary))] hover:underline">stripe.com/de/legal/dpa</a>. Stripes eigene Datenschutzerklärung finden Sie unter <a href="https://stripe.com/de/privacy" target="_blank" rel="noopener" class="text-[hsl(var(--primary))] hover:underline">stripe.com/de/privacy</a>.</p>
+          <p>Während der 30-tägigen kostenfreien Testphase ist die Eingabe einer Zahlungsmethode <strong>nicht</strong> erforderlich. Erst beim Hinterlegen einer Karte oder beim Wechsel auf einen kostenpflichtigen Tarif werden Zahlungsdaten an Stripe übermittelt.</p>
         </section>
 
         <section>
@@ -167,7 +176,9 @@ import MarketingLayout from '../layouts/MarketingLayout.astro';
                 <tr><td class="p-2 border-b border-muted-foreground/10 align-top">Account-Stammdaten (Recruiter / Plattform-Nutzer)</td><td class="p-2 border-b border-muted-foreground/10 align-top">Dauer des Vertrages + 3 Jahre für Audit; Löschung 90 Tage nach Vertragsende</td></tr>
                 <tr><td class="p-2 border-b border-muted-foreground/10 align-top">Authentifizierungs-/Session-Daten</td><td class="p-2 border-b border-muted-foreground/10 align-top">Bis zum Logout, Server-Log max. 90 Tage</td></tr>
                 <tr><td class="p-2 border-b border-muted-foreground/10 align-top">Akzeptanz-Audit AGB / Datenschutz / AVV</td><td class="p-2 border-b border-muted-foreground/10 align-top">Dauer des Vertrages + 3 Jahre</td></tr>
-                <tr><td class="p-2 border-b border-muted-foreground/10 align-top">Rechnungs- und Abrechnungsdaten</td><td class="p-2 border-b border-muted-foreground/10 align-top">10 Jahre nach Ende des Geschäftsjahres (§ 147 AO, § 257 HGB)</td></tr>
+                <tr><td class="p-2 border-b border-muted-foreground/10 align-top">Rechnungs- und Abrechnungsdaten (inkl. Stripe-Customer-ID, Rechnungsnummern, Belege)</td><td class="p-2 border-b border-muted-foreground/10 align-top">10 Jahre nach Ende des Geschäftsjahres (§ 147 AO, § 257 HGB)</td></tr>
+                <tr><td class="p-2 border-b border-muted-foreground/10 align-top">Subscription-Status (Trial-/Subscription-/Cancellation-Verlauf)</td><td class="p-2 border-b border-muted-foreground/10 align-top">Dauer des Vertrages + 90 Tage nach letztem aktiven Status (Reaktivierungs-Fenster); danach Anonymisierung mit Beibehalten der buchhalterischen Einträge</td></tr>
+                <tr><td class="p-2 border-b border-muted-foreground/10 align-top">Stripe-Webhook-Events (Idempotenz-Log)</td><td class="p-2 border-b border-muted-foreground/10 align-top">180 Tage</td></tr>
                 <tr><td class="p-2 border-b border-muted-foreground/10 align-top">Bewerberdaten (vom Kunden verarbeitet)</td><td class="p-2 border-b border-muted-foreground/10 align-top">Spätestens 6 Monate nach Abschluss des Bewerbungsverfahrens (§ 15 Abs. 4 AGG, § 61b ArbGG); längere Aufbewahrung nur mit ausdrücklicher Einwilligung des Bewerbers</td></tr>
                 <tr><td class="p-2 border-b border-muted-foreground/10 align-top">Audio-Aufnahmen aus AI-Interviews</td><td class="p-2 border-b border-muted-foreground/10 align-top">30 Tage</td></tr>
                 <tr><td class="p-2 border-b border-muted-foreground/10 align-top">Transkripte aus AI-Interviews</td><td class="p-2 border-b border-muted-foreground/10 align-top">Wie Bewerberdaten (max. 6 Monate)</td></tr>
@@ -213,7 +224,7 @@ import MarketingLayout from '../layouts/MarketingLayout.astro';
           <p>Bei Fragen zum Datenschutz oder zur Geltendmachung Ihrer Rechte erreichen Sie uns unter <a href="mailto:hello@shortselect.com" class="text-[hsl(var(--primary))] hover:underline">hello@shortselect.com</a>.</p>
         </section>
 
-        <p class="text-sm text-muted-foreground mt-8">Stand: 7. Mai 2026 · Version 2.0 · Rückfragen: hello@shortselect.com</p>
+        <p class="text-sm text-muted-foreground mt-8">Stand: 10. Mai 2026 · Version 2.1 · Rückfragen: hello@shortselect.com</p>
       </div>
     </div>
   </section>
