@@ -97,42 +97,26 @@ const competitors = [
     <div class="container mx-auto px-4">
       <div id="pricing-card" class="max-w-xl mx-auto opacity-0 translate-y-8 transition-all duration-700">
         <div class="relative rounded-2xl border-2 border-primary bg-card text-card-foreground shadow-xl p-8 md:p-10">
-          <!-- Animierte Flamme über der Card -->
-          <div class="flame-container absolute -top-20 md:-top-24 left-1/2 -translate-x-1/2 z-20 pointer-events-none" aria-hidden="true">
-            <div class="flame-glow"></div>
-            <svg class="flame-svg" viewBox="0 0 80 110" xmlns="http://www.w3.org/2000/svg">
-              <defs>
-                <radialGradient id="flame-outer-grad" cx="50%" cy="80%" r="60%">
-                  <stop offset="0%" stop-color="#FBBF24" stop-opacity="0.95" />
-                  <stop offset="50%" stop-color="#F97316" stop-opacity="0.9" />
-                  <stop offset="100%" stop-color="#DC2626" stop-opacity="0.7" />
-                </radialGradient>
-                <radialGradient id="flame-mid-grad" cx="50%" cy="80%" r="55%">
-                  <stop offset="0%" stop-color="#FEF3C7" stop-opacity="1" />
-                  <stop offset="55%" stop-color="#FBBF24" stop-opacity="0.95" />
-                  <stop offset="100%" stop-color="#F97316" stop-opacity="0.85" />
-                </radialGradient>
-                <radialGradient id="flame-core-grad" cx="50%" cy="75%" r="55%">
-                  <stop offset="0%" stop-color="#FFFFFF" stop-opacity="1" />
-                  <stop offset="60%" stop-color="#FEF3C7" stop-opacity="0.95" />
-                  <stop offset="100%" stop-color="#FBBF24" stop-opacity="0.6" />
-                </radialGradient>
-              </defs>
-              <!-- Äußere Flamme -->
-              <path class="flame flame-outer" d="M40 105 C 14 95 6 70 16 48 C 22 35 30 28 30 16 C 38 22 42 28 44 36 C 50 30 56 24 60 16 C 66 32 72 44 70 60 C 68 82 60 96 40 105 Z" fill="url(#flame-outer-grad)" />
-              <!-- Mittlere Flamme -->
-              <path class="flame flame-mid" d="M40 100 C 22 92 18 72 26 56 C 32 46 36 38 38 28 C 42 36 46 42 46 50 C 52 44 56 38 58 30 C 62 42 64 54 62 64 C 60 80 54 92 40 100 Z" fill="url(#flame-mid-grad)" />
-              <!-- Innerer Kern -->
-              <path class="flame flame-core" d="M40 96 C 30 90 28 76 32 66 C 36 58 38 50 40 42 C 44 50 46 58 48 66 C 50 76 48 90 40 96 Z" fill="url(#flame-core-grad)" />
-            </svg>
-            <div class="flame-spark flame-spark-1"></div>
-            <div class="flame-spark flame-spark-2"></div>
-            <div class="flame-spark flame-spark-3"></div>
-          </div>
-
-          <!-- Founders Badge -->
+          <!-- Founders Badge mit animierter Flamme -->
           <div class="absolute -top-4 left-1/2 -translate-x-1/2 z-10">
-            <span class="inline-flex items-center gap-1.5 bg-primary text-primary-foreground text-xs font-semibold px-4 py-1.5 rounded-full shadow-lg whitespace-nowrap">
+            <span class="inline-flex items-center gap-1.5 bg-primary text-primary-foreground text-xs font-semibold pl-2.5 pr-4 py-1.5 rounded-full shadow-lg whitespace-nowrap">
+              <svg class="badge-flame" viewBox="0 0 24 32" width="14" height="18" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="bf-outer-grad" x1="50%" y1="100%" x2="50%" y2="0%">
+                    <stop offset="0%" stop-color="#FBBF24" />
+                    <stop offset="55%" stop-color="#FDE68A" />
+                    <stop offset="100%" stop-color="#FFFFFF" />
+                  </linearGradient>
+                  <linearGradient id="bf-core-grad" x1="50%" y1="100%" x2="50%" y2="0%">
+                    <stop offset="0%" stop-color="#FDE68A" />
+                    <stop offset="100%" stop-color="#FFFFFF" />
+                  </linearGradient>
+                </defs>
+                <!-- Äußere Flamme: emoji-🔥-Form, bauchig unten, spitzer Top mit S-Kurve -->
+                <path class="bf-outer" fill="url(#bf-outer-grad)" d="M12 31 C 4 30, 1 24, 3 17 C 4.5 13, 7 11, 8 6 C 10 9, 11 13, 12 16 C 13 12, 15 8, 17 2 C 19 7, 22 13, 23 19 C 24 26, 19 31, 12 31 Z" />
+                <!-- Innerer Kern -->
+                <path class="bf-core" fill="url(#bf-core-grad)" d="M12 28 C 7 27, 5.5 22, 7 18 C 8.5 15, 10 13, 11 10 C 12 13, 13.5 16, 14.5 19 C 16 23, 14 28, 12 28 Z" />
+              </svg>
               Founders Deal, ersten 100 Agenturen
             </span>
           </div>
@@ -274,122 +258,36 @@ const competitors = [
   </script>
 
   <style is:global>
-    .flame-container {
-      width: 80px;
-      height: 110px;
-      filter: drop-shadow(0 0 24px rgba(249, 115, 22, 0.55)) drop-shadow(0 0 48px rgba(220, 38, 38, 0.3));
+    .badge-flame {
+      display: inline-block;
+      flex-shrink: 0;
+      filter: drop-shadow(0 0 3px rgba(254, 240, 138, 0.7));
+      overflow: visible;
     }
-    @media (min-width: 768px) {
-      .flame-container { width: 96px; height: 132px; }
-    }
-    .flame-svg {
-      width: 100%;
-      height: 100%;
-      display: block;
-      transform-origin: 50% 100%;
-    }
-    .flame {
+    .bf-outer {
       transform-origin: 50% 100%;
       transform-box: fill-box;
+      animation: bfFlicker 1.6s ease-in-out infinite;
     }
-    .flame-outer {
-      animation: flameFlickerOuter 2.4s ease-in-out infinite;
+    .bf-core {
+      transform-origin: 50% 100%;
+      transform-box: fill-box;
+      animation: bfFlickerCore 1.2s ease-in-out infinite;
+      animation-delay: 0.25s;
     }
-    .flame-mid {
-      animation: flameFlickerMid 1.8s ease-in-out infinite;
-      animation-delay: 0.15s;
+    @keyframes bfFlicker {
+      0%, 100% { transform: scale(1, 1) skewX(-2deg); opacity: 1; }
+      30% { transform: scale(1.06, 0.96) skewX(3deg); opacity: 0.95; }
+      60% { transform: scale(0.96, 1.05) skewX(-3deg); opacity: 1; }
+      80% { transform: scale(1.02, 0.98) skewX(1deg); opacity: 0.92; }
     }
-    .flame-core {
-      animation: flameFlickerCore 1.3s ease-in-out infinite;
-      animation-delay: 0.3s;
-    }
-    @keyframes flameFlickerOuter {
-      0%, 100% { transform: scale(1, 1) skewX(-2deg) translateY(0); opacity: 0.92; }
-      20% { transform: scale(1.03, 1.06) skewX(3deg) translateY(-2px); opacity: 1; }
-      45% { transform: scale(0.96, 0.94) skewX(-4deg) translateY(2px); opacity: 0.85; }
-      70% { transform: scale(1.05, 1.08) skewX(2deg) translateY(-3px); opacity: 1; }
-      85% { transform: scale(0.98, 1.02) skewX(-1deg) translateY(0); opacity: 0.95; }
-    }
-    @keyframes flameFlickerMid {
-      0%, 100% { transform: scale(1, 1) skewX(2deg) translateY(0); opacity: 0.95; }
-      25% { transform: scale(0.92, 1.1) skewX(-5deg) translateY(-3px); opacity: 1; }
-      50% { transform: scale(1.06, 0.92) skewX(4deg) translateY(2px); opacity: 0.88; }
-      75% { transform: scale(0.94, 1.06) skewX(-2deg) translateY(-2px); opacity: 1; }
-    }
-    @keyframes flameFlickerCore {
-      0%, 100% { transform: scale(1, 1) translateY(0); opacity: 1; }
-      30% { transform: scale(1.08, 0.94) translateY(2px); opacity: 0.85; }
-      60% { transform: scale(0.9, 1.1) translateY(-4px); opacity: 1; }
-      80% { transform: scale(1.04, 0.96) translateY(1px); opacity: 0.9; }
-    }
-    .flame-glow {
-      position: absolute;
-      bottom: -8px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 140%;
-      height: 60px;
-      background: radial-gradient(ellipse at center, rgba(249, 115, 22, 0.5) 0%, rgba(220, 38, 38, 0.25) 40%, transparent 70%);
-      filter: blur(12px);
-      border-radius: 50%;
-      animation: flameGlowPulse 2.4s ease-in-out infinite;
-      z-index: -1;
-    }
-    @keyframes flameGlowPulse {
-      0%, 100% { opacity: 0.7; transform: translateX(-50%) scale(1); }
-      50% { opacity: 1; transform: translateX(-50%) scale(1.15); }
-    }
-    .flame-spark {
-      position: absolute;
-      width: 4px;
-      height: 4px;
-      border-radius: 50%;
-      background: radial-gradient(circle, #FEF3C7 0%, #F97316 70%, transparent 100%);
-      opacity: 0;
-      pointer-events: none;
-    }
-    .flame-spark-1 {
-      top: 20%;
-      left: 35%;
-      animation: sparkRise1 2.6s ease-out infinite;
-    }
-    .flame-spark-2 {
-      top: 30%;
-      right: 30%;
-      width: 3px;
-      height: 3px;
-      animation: sparkRise2 3.1s ease-out infinite;
-      animation-delay: 0.7s;
-    }
-    .flame-spark-3 {
-      top: 25%;
-      left: 55%;
-      width: 5px;
-      height: 5px;
-      animation: sparkRise3 2.9s ease-out infinite;
-      animation-delay: 1.3s;
-    }
-    @keyframes sparkRise1 {
-      0% { transform: translateY(0) translateX(0); opacity: 0; }
-      15% { opacity: 1; }
-      80% { opacity: 0.6; }
-      100% { transform: translateY(-60px) translateX(-8px); opacity: 0; }
-    }
-    @keyframes sparkRise2 {
-      0% { transform: translateY(0) translateX(0); opacity: 0; }
-      20% { opacity: 1; }
-      80% { opacity: 0.5; }
-      100% { transform: translateY(-70px) translateX(10px); opacity: 0; }
-    }
-    @keyframes sparkRise3 {
-      0% { transform: translateY(0) translateX(0); opacity: 0; }
-      25% { opacity: 1; }
-      80% { opacity: 0.7; }
-      100% { transform: translateY(-80px) translateX(-4px); opacity: 0; }
+    @keyframes bfFlickerCore {
+      0%, 100% { transform: scale(1, 1); opacity: 1; }
+      40% { transform: scale(0.92, 1.08); opacity: 0.85; }
+      70% { transform: scale(1.05, 0.94); opacity: 1; }
     }
     @media (prefers-reduced-motion: reduce) {
-      .flame-outer, .flame-mid, .flame-core, .flame-glow, .flame-spark { animation: none; }
-      .flame-spark { opacity: 0; }
+      .bf-outer, .bf-core { animation: none; }
     }
   </style>
 </MarketingLayout>
