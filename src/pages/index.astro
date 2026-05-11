@@ -2279,8 +2279,8 @@ const websiteSchema = {
           ShortSelect ist die Pipeline-Software für Recruiting-Agenturen, die endlich aufhören wollen, <span class="marker">zwölf Tools</span> nebeneinander offen zu haben.
         </p>
         <div class="actions">
-          <a href="#" class="fc-btn">30 Tage kostenlos starten →</a>
-          <a href="#" class="fc-btn fc-btn-ghost">Demo ansehen</a>
+          <a href="https://app.shortselect.com/signup?utm_source=marketing&utm_medium=cta&utm_campaign=founders_deal&utm_content=hero" class="fc-btn">30 Tage kostenlos starten →</a>
+          <a href="/demo" class="fc-btn fc-btn-ghost">Demo ansehen</a>
         </div>
         <div class="trust">
           <div class="avatars">
@@ -2924,7 +2924,7 @@ const websiteSchema = {
           <div class="feat-row">Client Portal mit eigenem Branding</div>
           <div class="feat-row">Preis lebenslang garantiert</div>
         </div>
-        <a href="#" class="fc-btn">30 Tage starten →</a>
+        <a href="https://app.shortselect.com/signup?utm_source=marketing&utm_medium=cta&utm_campaign=founders_deal&utm_content=pricing" class="fc-btn">30 Tage starten →</a>
         <div class="terms">Keine Kreditkarte · jederzeit kündbar</div>
       </div>
     </section>
@@ -2982,8 +2982,8 @@ const websiteSchema = {
         <h2 style="margin-top:18px">Heute angemeldet.<br>Morgen <span class="wavy">im Einsatz.</span></h2>
         <p class="lead">30 Tage kostenlos. Keine Kreditkarte. Keine Tricks.</p>
         <div class="actions">
-          <a href="#" class="fc-btn">Jetzt starten →</a>
-          <a href="#" class="fc-btn fc-btn-ghost">Mit uns sprechen</a>
+          <a href="https://app.shortselect.com/signup?utm_source=marketing&utm_medium=cta&utm_campaign=founders_deal&utm_content=cta_section" class="fc-btn">Jetzt starten →</a>
+          <a href="/kontakt" class="fc-btn fc-btn-ghost">Mit uns sprechen</a>
         </div>
       </div>
     </section>
@@ -3099,7 +3099,7 @@ const websiteSchema = {
       <div class="bottom">
         <span>© 2026 ShortSelect &middot; LeyalTech UG &middot; Alle Rechte vorbehalten.</span>
         <span>
-          <a href="#" data-cookie-reopen>Cookie-Einstellungen</a>
+          <button type="button" data-cookie-reopen style="background:none;border:none;color:inherit;cursor:pointer;font:inherit;padding:0;text-decoration:none;">Cookie-Einstellungen</button>
         </span>
       </div>
     </footer>
@@ -3262,6 +3262,13 @@ const websiteSchema = {
     tickPipe();
     setInterval(tickPipe, 1500);
   }
+
+  // Cookie banner reopen trigger
+  document.querySelectorAll('[data-cookie-reopen]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      window.dispatchEvent(new CustomEvent('cookie-consent-reopen'));
+    });
+  });
 })();
   </script>
 </body>
