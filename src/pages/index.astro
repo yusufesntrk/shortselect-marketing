@@ -1,15 +1,7 @@
 ---
-import MarketingLayout from '../layouts/MarketingLayout.astro';
-import HeroSection from '../components/landing/HeroSection.astro';
-import SellTheJobTeaser from '../components/landing/SellTheJobTeaser.astro';
-import AgentsVsFeaturesSection from '../components/landing/AgentsVsFeaturesSection.astro';
-import TrustedBySection from '../components/landing/TrustedBySection.astro';
-import AIFeaturesSection from '../components/landing/AIFeaturesSection.astro';
-import PlatformSection from '../components/landing/PlatformSection.astro';
-import StatsSection from '../components/landing/StatsSection.astro';
-import FAQSection from '../components/landing/FAQSection.astro';
-import CTASection from '../components/landing/CTASection.astro';
-import TestimonialsSection from '../components/landing/TestimonialsSection.astro';
+import SEOHead from '../components/seo/SEOHead.astro';
+import CookieConsentBanner from '../components/legal/CookieConsentBanner.astro';
+import '../styles/global.css';
 
 const SIGNUP_URL_HERO = 'https://app.shortselect.com/signup?utm_source=marketing&utm_medium=cta&utm_campaign=founders_deal&utm_content=hero';
 
@@ -20,7 +12,7 @@ const softwareSchema = {
   applicationCategory: "BusinessApplication",
   applicationSubCategory: "Applicant Tracking System",
   operatingSystem: "Web Browser",
-  description: "KI-gestützte Recruiting Software für modernes Bewerbermanagement mit AI Matching, Smart Ranking und Client Portal",
+  description: "KI-gestützte Recruiting Software mit AgentBurst-Engine, Smart Ranking und Client Portal",
   offers: {
     "@type": "Offer",
     name: "Founders Deal",
@@ -34,7 +26,7 @@ const softwareSchema = {
     "KI-gestütztes Kandidaten-Matching",
     "Smart Ranking mit AI",
     "Automatische Benachrichtigungen",
-    "Client Portal für Kunden",
+    "Client Portal mit Whitelabel",
     "Kanban Board",
     "Interview Scheduling",
     "Talent Pools",
@@ -47,79 +39,3227 @@ const softwareSchema = {
     bestRating: "5",
   },
 };
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    { "@type": "Question", name: "Was ist im Founders Deal enthalten?", acceptedAnswer: { "@type": "Answer", text: "Alle Funktionen von ShortSelect: unbegrenzte Jobs und Kandidaten, AgentBurst KI-Engine für Matching, Screening, Ranking und Nurturing, Multi-Mandanten mit Client Portal, Karriereseite, Multiposting, Talent Pools, Interview Scheduling, REST API, Webhooks und Priority Support. Ein Preis pro Agentur, keine User-Lizenzen, keine Add-On-Fees." } },
+    { "@type": "Question", name: "Was passiert nach den 30 Tagen?", acceptedAnswer: { "@type": "Answer", text: "Nach Ablauf des Trials bleibt Ihr Account erhalten und Sie wechseln in den Founders Deal für 89 EUR pro Monat. Wenn Sie nicht weitermachen möchten, wird Ihr Account ohne weitere Kosten archiviert. Wir erinnern Sie rechtzeitig vor Trial-Ende per E-Mail, damit Sie aktiv entscheiden können." } },
+    { "@type": "Question", name: "Brauche ich eine Kreditkarte für den Trial?", acceptedAnswer: { "@type": "Answer", text: "Nein. Der 30-tägige Trial ist komplett kostenlos und ohne Zahlungsdaten. Sie geben Ihre Zahlungsmethode erst an, wenn Sie nach dem Trial in den Founders Deal wechseln möchten." } },
+    { "@type": "Question", name: "Bleibt der Preis von 89 EUR garantiert?", acceptedAnswer: { "@type": "Answer", text: "Ja. Wer den Founders Deal nutzt, bezahlt diesen Preis auf Lebenszeit, auch wenn wir später die Standard-Preise anheben. Der Founders Deal ist limitiert auf die ersten 100 Recruiting-Agenturen." } },
+    { "@type": "Question", name: "Kann ich jederzeit kündigen?", acceptedAnswer: { "@type": "Answer", text: "Ja. ShortSelect ist monatlich kündbar, ohne Mindestlaufzeit. Eine Kündigung erfolgt direkt im Account. Sie behalten Zugriff bis zum Ende der laufenden Abrechnungsperiode." } },
+    { "@type": "Question", name: "Werden Updates und neue Funktionen extra berechnet?", acceptedAnswer: { "@type": "Answer", text: "Nein. Alle zukünftigen Updates und neuen Funktionen sind im Founders Deal enthalten. Es gibt keine Aufpreise für Premium-Module oder neue KI-Features." } },
+    { "@type": "Question", name: "Wie sicher sind meine Daten?", acceptedAnswer: { "@type": "Answer", text: "Ihre Daten werden ausschließlich in EU-Rechenzentren gespeichert und sind durch Row-Level-Security, SSL-Verschlüsselung und tägliche Backups geschützt. ShortSelect ist vollständig DSGVO-konform und bietet Audit-Logging, RBAC und einen AVV-Vertrag." } },
+    { "@type": "Question", name: "Kann ich meine bestehenden Daten importieren?", acceptedAnswer: { "@type": "Answer", text: "Ja. ShortSelect unterstützt CSV-Import für Kandidaten, Jobs und Unternehmen. Unser Onboarding-Team hilft Ihnen beim reibungslosen Umzug von Ihrem bisherigen System, das ist im Founders Deal kostenfrei enthalten." } },
+  ],
+};
+
+const orgSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://www.shortselect.com/#organization",
+  name: "ShortSelect",
+  url: "https://www.shortselect.com",
+  logo: { "@type": "ImageObject", url: "https://www.shortselect.com/logo.svg" },
+  description: "KI-gestützte Recruiting Software und ATS für moderne Teams",
+  contactPoint: {
+    "@type": "ContactPoint",
+    email: "hello@shortselect.com",
+    contactType: "Customer Service",
+    availableLanguage: ["German", "English"],
+  },
+  sameAs: [ "https://linkedin.com/company/shortselect" ],
+};
+
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://www.shortselect.com/#website",
+  url: "https://www.shortselect.com/",
+  name: "ShortSelect",
+  inLanguage: "de-DE",
+  publisher: { "@id": "https://www.shortselect.com/#organization" },
+};
 ---
 
-<MarketingLayout
-  title="ShortSelect, KI-Recruiting Software & ATS | Kostenlos testen"
-  description="KI-gestützte Recruiting Software mit AI Matching, Smart Ranking und Client Portal. 30 Tage kostenlos testen, keine Kreditkarte nötig."
-  jsonLd={softwareSchema}
->
-  <HeroSection />
-  <SellTheJobTeaser />
-  <AgentsVsFeaturesSection />
-  <TrustedBySection />
-  <AIFeaturesSection />
-  <PlatformSection />
-  <StatsSection />
-  <TestimonialsSection />
+<!doctype html>
+<html lang="de">
+<head>
+  <SEOHead
+    title="ShortSelect · KI-Recruiting Software & ATS | 30 Tage kostenlos"
+    description="KI-gestützte Recruiting Software mit AgentBurst-Engine, Smart Ranking und Client Portal. 30 Tage kostenlos testen, keine Kreditkarte nötig."
+    jsonLd={[orgSchema, websiteSchema, softwareSchema, faqSchema]}
+  />
+  <style is:global>
 
-  <!-- Pricing Teaser -->
-  <section class="py-20 md:py-32 relative overflow-hidden" id="pricing">
-    <div class="container mx-auto px-4">
-      <div id="pricing-teaser" class="max-w-2xl mx-auto text-center opacity-0 translate-y-8 transition-all duration-700">
-        <span class="inline-flex items-center gap-2 px-4 py-2 mb-6 rounded-full bg-primary/10 text-primary text-sm font-semibold">
-          <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
-          Limitiertes Founders Angebot
-        </span>
-        <h2 class="text-3xl md:text-4xl font-display font-bold tracking-tight mb-4">
-          Founders Deal: <span class="text-primary">alle Funktionen, ein Preis.</span>
-        </h2>
-        <div class="flex items-baseline justify-center gap-3 mb-4 flex-wrap">
-          <span class="text-xl text-muted-foreground line-through font-medium">150 €</span>
-          <span class="text-5xl font-display font-bold text-foreground">89 €</span>
-          <span class="text-lg text-muted-foreground">/Monat</span>
-        </div>
-        <p class="text-lg text-muted-foreground max-w-xl mx-auto mb-8">
-          Pro Tenant, alle Recruiter-Plätze inklusive. Preis auf Lebenszeit garantiert. Limitiert auf die ersten 100 Recruiting-Agenturen.
-        </p>
-        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <a
-            href={SIGNUP_URL_HERO}
-            class="inline-flex items-center gap-2 px-8 py-3 bg-primary text-primary-foreground font-semibold rounded-lg text-base hover:bg-primary/90 shadow-md hover:shadow-xl transition-all duration-300"
-          >
-            30 Tage kostenlos starten
+  /* === DESIGN SYSTEM === */
+  .fc { color: #0a0a0e; font-family: 'Inter', -apple-system, sans-serif; line-height: 1.5; letter-spacing: -0.005em; }
+  .fc * { box-sizing: border-box; }
+  .fc h1, .fc h2, .fc h3, .fc h4 { font-family: 'Poppins', 'Inter', sans-serif; font-weight: 800; letter-spacing: -0.03em; margin: 0; }
+  .fc h1 { font-size: 60px; line-height: 0.98; }
+  .fc h2 { font-size: 44px; line-height: 1.02; }
+  .fc h3 { font-size: 24px; }
+
+  .fc-pill {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 6px 14px; border-radius: 100px;
+    background: #ffe4e1; color: #c92a2a;
+    font-size: 12px; font-weight: 700;
+  }
+  .fc-pill .dot { width: 6px; height: 6px; background: #ef4444; border-radius: 50%; animation: pulse 1.6s infinite; }
+  @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.4;transform:scale(1.4)} }
+
+  .wavy { position: relative; display: inline-block; color: #ef4444; }
+  .wavy::after { content: ''; position: absolute; left: 0; right: 0; bottom: -8px; height: 8px; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 8' preserveAspectRatio='none'%3E%3Cpath d='M0 4 Q 10 0, 20 4 T 40 4 T 60 4' stroke='%23ef4444' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"); background-size: 60px 8px; background-repeat: repeat-x; animation: dash 3s linear infinite; }
+  @keyframes dash { from { background-position-x: 0 } to { background-position-x: 60px } }
+
+  .marker { position: relative; display: inline-block; z-index: 1; }
+  .marker::before { content: ''; position: absolute; inset: 8% -3% 8% -3%; background: #fef3c7; z-index: -1; border-radius: 2px; transform: rotate(-1.5deg); }
+
+  .fc-btn { display: inline-flex; align-items: center; gap: 10px; padding: 16px 28px; background: #ef4444; color: white; font-weight: 700; font-size: 15px; border-radius: 14px; text-decoration: none; box-shadow: 0 6px 0 #b91c1c, 0 12px 24px rgba(239,68,68,0.25); border: none; cursor: pointer; }
+  .fc-btn-ghost { background: white; color: #0a0a0e; box-shadow: 0 6px 0 #e5e5e3, 0 12px 24px rgba(0,0,0,0.05); }
+
+  /* Reveal-on-scroll base */
+  .reveal { opacity: 0; transform: translateY(40px); transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1), transform 0.9s cubic-bezier(0.16, 1, 0.3, 1); }
+  .reveal.in { opacity: 1; transform: translateY(0); }
+  .reveal-stagger > * { opacity: 0; transform: translateY(30px); transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1); }
+  .reveal-stagger.in > *:nth-child(1) { opacity: 1; transform: translateY(0); transition-delay: 0.05s; }
+  .reveal-stagger.in > *:nth-child(2) { opacity: 1; transform: translateY(0); transition-delay: 0.12s; }
+  .reveal-stagger.in > *:nth-child(3) { opacity: 1; transform: translateY(0); transition-delay: 0.19s; }
+  .reveal-stagger.in > *:nth-child(4) { opacity: 1; transform: translateY(0); transition-delay: 0.26s; }
+  .reveal-stagger.in > *:nth-child(5) { opacity: 1; transform: translateY(0); transition-delay: 0.33s; }
+  .reveal-stagger.in > *:nth-child(6) { opacity: 1; transform: translateY(0); transition-delay: 0.40s; }
+
+  /* === NAV (centered floating pill) === */
+  .fc-nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 14px 24px 0;
+    background: transparent;
+    pointer-events: none;
+  }
+  .fc-nav-inner {
+    width: fit-content;
+    margin: 0 auto;
+    padding: 7px 7px 7px 18px;
+    background: rgba(255,251,246,0.85);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border: 1px solid rgba(10,10,14,0.06);
+    border-radius: 100px;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.06), 0 2px 6px rgba(0,0,0,0.04);
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    pointer-events: auto;
+  }
+  .fc-nav-left { display: flex; align-items: center; gap: 18px; }
+  .fc-nav-right { display: flex; align-items: center; gap: 4px; }
+  .fc-logo { display: flex; align-items: center; gap: 10px; font-family: 'Poppins'; font-weight: 700; font-size: 19px; letter-spacing: -0.03em; text-decoration: none; }
+  .fc-logo .lg { width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .fc-logo .lg svg { width: 100%; height: 100%; display: block; }
+  .fc-logo .text-grad {
+    background: linear-gradient(135deg, #8B0000 0%, #FF6347 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .fc-nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    font-size: 13.5px;
+    font-weight: 500;
+  }
+  .fc-nav-menu .nav-link {
+    color: #0a0a0e;
+    text-decoration: none;
+    opacity: 0.75;
+    padding: 7px 10px;
+    border-radius: 8px;
+    transition: all 0.18s;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+  }
+  .fc-nav-menu .nav-link:hover { opacity: 1; background: rgba(239,68,68,0.05); color: #ef4444; }
+  .fc-nav-menu .nav-link.highlight {
+    color: #ef4444;
+    border: 1px solid rgba(239,68,68,0.3);
+    border-radius: 100px;
+    padding: 5px 12px;
+    font-weight: 600;
+    opacity: 1;
+    margin-left: 4px;
+  }
+  .fc-nav-menu .nav-link.highlight::before {
+    content: '';
+    width: 6px; height: 6px;
+    background: #ef4444;
+    border-radius: 50%;
+    animation: pulse 1.5s infinite;
+  }
+  .fc-nav-menu .nav-link.highlight:hover {
+    background: rgba(239,68,68,0.06);
+    border-color: #ef4444;
+  }
+  /* Dropdown */
+  .nav-dd { position: relative; }
+  .nav-dd-trigger {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 7px 10px;
+    border-radius: 8px;
+    font-size: 13.5px;
+    font-weight: 500;
+    color: #0a0a0e;
+    opacity: 0.75;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    transition: all 0.18s;
+  }
+  .nav-dd:hover .nav-dd-trigger {
+    opacity: 1;
+    background: rgba(239,68,68,0.05);
+    color: #ef4444;
+  }
+  .nav-dd-trigger svg {
+    width: 12px;
+    height: 12px;
+    transition: transform 0.2s;
+  }
+  .nav-dd:hover .nav-dd-trigger svg { transform: rotate(180deg); }
+  .nav-dd-panel {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding-top: 10px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-6px);
+    transition: opacity 0.2s ease, visibility 0.2s, transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: 200;
+  }
+  .nav-dd:hover .nav-dd-panel {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+  .nav-dd-card {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 24px 60px rgba(0,0,0,0.12), 0 0 0 1px rgba(10,10,14,0.05);
+    padding: 10px;
+    min-width: 340px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+  .nav-dd-card.wide { min-width: 380px; }
+  .nav-dd-item {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding: 10px 12px;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: background 0.15s;
+  }
+  .nav-dd-item:hover { background: #fffbf6; }
+  .nav-dd-item .lab {
+    font-size: 13.5px;
+    font-weight: 600;
+    color: #0a0a0e;
+  }
+  .nav-dd-item .desc {
+    font-size: 11.5px;
+    color: #71717a;
+    line-height: 1.3;
+  }
+  .nav-dd-item:hover .lab { color: #ef4444; }
+
+  .nav-cta-ghost {
+    padding: 7px 12px;
+    color: #0a0a0e;
+    text-decoration: none;
+    font-size: 13.5px;
+    font-weight: 500;
+    border-radius: 100px;
+    opacity: 0.75;
+  }
+  .nav-cta-ghost:hover { opacity: 1; background: rgba(0,0,0,0.04); }
+  .nav-cta-primary {
+    padding: 8px 16px;
+    background: #ef4444;
+    color: white;
+    border-radius: 100px;
+    font-size: 13.5px;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(239,68,68,0.3);
+    transition: transform 0.15s, box-shadow 0.15s;
+  }
+  .nav-cta-primary:hover { transform: translateY(-1px); box-shadow: 0 6px 16px rgba(239,68,68,0.4); }
+
+  /* === HERO (centered, no network) === */
+  .fc-hero {
+    padding: 100px 0 110px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+  }
+  .fc-hero::before {
+    content: '';
+    position: absolute;
+    top: 50%; left: 50%; transform: translate(-50%, -50%);
+    width: 900px; height: 900px;
+    background:
+      radial-gradient(circle at center, rgba(239,68,68,0.08) 0%, transparent 50%);
+    z-index: 0;
+  }
+  .fc-hero-deco-dot {
+    position: absolute;
+    border-radius: 50%;
+    z-index: 0;
+  }
+  .fc-hero-deco-dot.d1 { top: 22%; left: 12%; width: 14px; height: 14px; background: #facc15; animation: floatY 4s ease-in-out infinite; }
+  .fc-hero-deco-dot.d2 { top: 28%; right: 14%; width: 10px; height: 10px; background: #14b8a6; animation: floatY 5s ease-in-out infinite 1s; }
+  .fc-hero-deco-dot.d3 { bottom: 24%; left: 18%; width: 8px; height: 8px; background: #ef4444; animation: floatY 6s ease-in-out infinite 0.5s; }
+  .fc-hero-deco-dot.d4 { bottom: 32%; right: 10%; width: 12px; height: 12px; background: #f97316; animation: floatY 4.5s ease-in-out infinite 1.5s; }
+  .fc-hero-deco-star { position: absolute; color: #ef4444; font-size: 22px; opacity: 0.45; z-index: 0; }
+  .fc-hero-deco-star.s1 { top: 18%; right: 22%; transform: rotate(15deg); animation: floatY 5s ease-in-out infinite; }
+  .fc-hero-deco-star.s2 { bottom: 18%; left: 28%; transform: rotate(-25deg); animation: floatY 6s ease-in-out infinite 1s; }
+  @keyframes floatY {
+    0%, 100% { transform: translateY(0) rotate(0); }
+    50% { transform: translateY(-12px) rotate(5deg); }
+  }
+  .fc-hero-inner {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 0 32px;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .fc-hero h1 { margin-top: 24px; font-size: 76px; }
+  .fc-hero .lead { margin-top: 28px; font-size: 19px; color: #525252; max-width: 560px; }
+  .fc-hero .actions { margin-top: 36px; display: flex; gap: 14px; align-items: center; flex-wrap: wrap; justify-content: center; }
+  .fc-hero .trust { margin-top: 32px; display: flex; align-items: center; gap: 14px; }
+  .fc-hero .avatars { display: flex; }
+  .fc-hero .av { width: 32px; height: 32px; border-radius: 50%; border: 2px solid white; margin-left: -10px; font-weight: 700; color: white; font-size: 12px; display: flex; align-items: center; justify-content: center; }
+  .fc-hero .av:first-child { margin-left: 0; }
+  .fc-hero .av:nth-child(1) { background: #ef4444; }
+  .fc-hero .av:nth-child(2) { background: #f97316; }
+  .fc-hero .av:nth-child(3) { background: #facc15; color: #0a0a0e; }
+  .fc-hero .av:nth-child(4) { background: #14b8a6; }
+  .fc-hero .av:nth-child(5) { background: #0a0a0e; }
+  .fc-hero .trust .text { font-size: 13px; color: #525252; }
+  .fc-hero .trust strong { color: #0a0a0e; }
+  .fc-hero .stars { color: #facc15; margin-right: 4px; }
+
+  /* === HERO LIVE NETWORK ANIMATION === */
+  .live-net {
+    position: relative;
+    aspect-ratio: 1;
+    max-width: 480px;
+    margin-left: auto;
+    background:
+      radial-gradient(circle at 50% 50%, rgba(239,68,68,0.04) 0%, transparent 70%),
+      radial-gradient(circle at 50% 50%, rgba(255,255,255,0.6) 0%, transparent 30%);
+    border-radius: 32px;
+    overflow: hidden;
+    border: 1px solid rgba(10,10,14,0.05);
+    box-shadow: 0 30px 80px rgba(239,68,68,0.12);
+  }
+  .live-net::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(to right, rgba(10,10,14,0.04) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(10,10,14,0.04) 1px, transparent 1px);
+    background-size: 30px 30px;
+  }
+  .live-net-svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+  .live-net-node { position: absolute; transform: translate(-50%, -50%); display: flex; flex-direction: column; align-items: center; gap: 4px; }
+  .live-net-node .icon {
+    width: 44px; height: 44px;
+    background: white;
+    border-radius: 12px;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 800; font-size: 14px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    border: 1px solid rgba(0,0,0,0.05);
+  }
+  .live-net-node .label {
+    font-size: 10px; font-weight: 700; color: #525252;
+    background: white; padding: 2px 8px; border-radius: 100px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+  }
+  .live-net-node.src1 { top: 18%; left: 18%; }
+  .live-net-node.src2 { top: 22%; left: 80%; }
+  .live-net-node.src3 { top: 78%; left: 18%; }
+  .live-net-node.src4 { top: 78%; left: 78%; }
+  .live-net-node.src1 .icon { color: #0a66c2; }
+  .live-net-node.src2 .icon { color: #2557a7; }
+  .live-net-node.src3 .icon { color: #16a34a; }
+  .live-net-node.src4 .icon { color: #d97706; }
+  .live-net-center {
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+    width: 96px; height: 96px;
+    background: linear-gradient(135deg, #ef4444, #f97316);
+    border-radius: 28px;
+    display: flex; align-items: center; justify-content: center;
+    color: white; font-weight: 800; font-size: 13px; text-align: center;
+    box-shadow: 0 20px 50px rgba(239,68,68,0.4);
+    z-index: 10;
+  }
+  .live-net-center::before {
+    content: '';
+    position: absolute;
+    inset: -8px;
+    border: 2px solid #ef4444;
+    border-radius: 32px;
+    opacity: 0;
+    animation: ringPulse 2.4s ease-out infinite;
+  }
+  .live-net-center::after {
+    content: '';
+    position: absolute;
+    inset: -8px;
+    border: 2px solid #ef4444;
+    border-radius: 32px;
+    opacity: 0;
+    animation: ringPulse 2.4s ease-out infinite 1.2s;
+  }
+  @keyframes ringPulse {
+    0% { inset: -2px; opacity: 0.6; }
+    100% { inset: -30px; opacity: 0; }
+  }
+  .live-net-center .icon { font-size: 22px; }
+
+  /* Animated lines (data flowing) */
+  .data-line {
+    stroke: #ef4444;
+    stroke-width: 2;
+    stroke-dasharray: 4 6;
+    fill: none;
+    opacity: 0.4;
+    animation: dataFlow 1.5s linear infinite;
+  }
+  @keyframes dataFlow {
+    from { stroke-dashoffset: 0; }
+    to { stroke-dashoffset: -20; }
+  }
+
+  /* Floating candidate badges */
+  .candi-fly {
+    position: absolute;
+    background: white;
+    padding: 6px 10px;
+    border-radius: 100px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    font-size: 11px;
+    font-weight: 600;
+    display: flex; align-items: center; gap: 6px;
+    z-index: 5;
+  }
+  .candi-fly .av-mini { width: 18px; height: 18px; border-radius: 50%; background: #ef4444; color: white; font-size: 9px; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+  .candi-fly .sc { background: #ef4444; color: white; padding: 1px 6px; border-radius: 100px; font-size: 10px; font-weight: 700; }
+  .candi-fly.cf1 { animation: flyIn1 5s ease-in-out infinite; }
+  .candi-fly.cf2 { animation: flyIn2 5s ease-in-out infinite 1.6s; }
+  .candi-fly.cf3 { animation: flyIn3 5s ease-in-out infinite 3.2s; }
+  @keyframes flyIn1 {
+    0% { top: 18%; left: 25%; opacity: 0; transform: scale(0.5); }
+    20% { opacity: 1; transform: scale(1); }
+    50% { top: 50%; left: 50%; opacity: 1; transform: scale(0.95); }
+    80% { opacity: 0; transform: scale(0.6); }
+    100% { opacity: 0; }
+  }
+  @keyframes flyIn2 {
+    0% { top: 28%; left: 70%; opacity: 0; transform: scale(0.5); }
+    20% { opacity: 1; transform: scale(1); }
+    50% { top: 50%; left: 50%; opacity: 1; transform: scale(0.95); }
+    80% { opacity: 0; transform: scale(0.6); }
+    100% { opacity: 0; }
+  }
+  @keyframes flyIn3 {
+    0% { top: 75%; left: 30%; opacity: 0; transform: scale(0.5); }
+    20% { opacity: 1; transform: scale(1); }
+    50% { top: 50%; left: 50%; opacity: 1; transform: scale(0.95); }
+    80% { opacity: 0; transform: scale(0.6); }
+    100% { opacity: 0; }
+  }
+
+  /* Live counter */
+  .live-counter {
+    position: absolute;
+    bottom: 16px; left: 16px;
+    background: white;
+    padding: 8px 14px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 700;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    display: flex; align-items: center; gap: 8px;
+    z-index: 20;
+  }
+  .live-counter .live-dot { width: 8px; height: 8px; background: #16a34a; border-radius: 50%; animation: pulse 1.3s infinite; box-shadow: 0 0 8px #16a34a; }
+
+  /* === HOW IT WORKS === */
+  .fc-how { padding: 100px 0; }
+  .fc-how-head { max-width: 720px; margin: 0 auto; padding: 0 32px; text-align: center; }
+  .fc-how-head h2 { margin-top: 18px; }
+  .fc-how-head .lead { margin-top: 18px; font-size: 17px; color: #525252; }
+  .fc-how-cards { max-width: 1100px; margin: 60px auto 0; padding: 0 32px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .fc-how-card { border-radius: 24px; padding: 28px; position: relative; overflow: hidden; min-height: 320px; display: flex; flex-direction: column; justify-content: space-between; }
+  .fc-how-card.c1 { background: #fef3c7; }
+  .fc-how-card.c2 { background: #fee2e2; }
+  .fc-how-card.c3 { background: #dcfce7; }
+  .fc-how-card .step-badge { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; background: white; border-radius: 14px; font-weight: 800; font-size: 18px; margin-bottom: 14px; transform: rotate(-6deg); }
+  .fc-how-card h4 { font-size: 22px; margin-bottom: 8px; }
+  .fc-how-card p { margin: 0; font-size: 14px; color: #525252; line-height: 1.55; }
+
+  /* Animation: scanning radar (sourcing) */
+  .lottie-radar {
+    height: 110px;
+    margin: 14px 0;
+    position: relative;
+    border-radius: 16px;
+    background: rgba(255,255,255,0.5);
+    overflow: hidden;
+  }
+  .lottie-radar svg { width: 100%; height: 100%; }
+  .radar-sweep { transform-origin: 50% 100%; animation: sweep 3s linear infinite; }
+  @keyframes sweep { from { transform: rotate(-60deg) } to { transform: rotate(60deg) } }
+  .radar-blip { animation: blip 2.4s ease-out infinite; transform-origin: center; }
+  .radar-blip.b2 { animation-delay: 0.8s; }
+  .radar-blip.b3 { animation-delay: 1.6s; }
+  @keyframes blip { 0% { opacity: 0; r: 2 } 30% { opacity: 1; r: 4 } 100% { opacity: 0; r: 8 } }
+
+  /* Animation: matching (cards comparing) */
+  .lottie-match {
+    height: 110px;
+    margin: 14px 0;
+    position: relative;
+    border-radius: 16px;
+    background: rgba(255,255,255,0.5);
+    overflow: hidden;
+    display: flex; align-items: center; justify-content: center; gap: 10px;
+  }
+  .match-card {
+    background: white;
+    border-radius: 8px;
+    padding: 8px;
+    width: 60px; height: 70px;
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    font-size: 10px; font-weight: 700;
+    animation: matchPulse 3s ease-in-out infinite;
+  }
+  .match-card .av { width: 22px; height: 22px; border-radius: 50%; background: #ef4444; color: white; display: flex; align-items: center; justify-content: center; font-size: 9px; }
+  .match-card .sc { background: #ef4444; color: white; padding: 1px 5px; border-radius: 4px; font-size: 9px; }
+  .match-card.m2 { animation-delay: 0.5s; }
+  .match-card.m3 { animation-delay: 1s; }
+  @keyframes matchPulse {
+    0%, 80%, 100% { transform: translateY(0) scale(1); box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+    40% { transform: translateY(-8px) scale(1.05); box-shadow: 0 12px 24px rgba(239,68,68,0.25); }
+  }
+  .match-vs { font-size: 11px; color: #c92a2a; font-weight: 800; }
+
+  /* Animation: closing (FIXED: passt jetzt in die Card) */
+  .lottie-close {
+    height: 110px;
+    margin: 14px 0;
+    position: relative;
+    border-radius: 16px;
+    background: rgba(255,255,255,0.5);
+    overflow: hidden;
+    display: flex; align-items: center; justify-content: center;
+    padding: 0 8px;
+  }
+  .close-pipeline {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .close-stage {
+    background: white;
+    padding: 5px 9px;
+    border-radius: 100px;
+    font-size: 10px;
+    font-weight: 700;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.06);
+    color: #525252;
+    white-space: nowrap;
+    flex-shrink: 0;
+    transition: background 0.4s, color 0.4s, box-shadow 0.4s;
+  }
+  .close-arrow {
+    color: #16a34a;
+    font-weight: 800;
+    opacity: 0;
+    animation: arrowAppear 4s infinite;
+    font-size: 12px;
+    flex-shrink: 0;
+  }
+  .close-arrow.a1 { animation-delay: 0s; }
+  .close-arrow.a2 { animation-delay: 1s; }
+  .close-arrow.a3 { animation-delay: 2s; }
+  @keyframes arrowAppear { 0%, 80%, 100% { opacity: 0 } 20%, 60% { opacity: 1 } }
+  .close-stage[data-active="0"] { animation: stageActivate 4s infinite; }
+  .close-stage[data-active="1"] { animation: stageActivate 4s infinite 1s; }
+  .close-stage[data-active="2"] { animation: stageActivate 4s infinite 2s; }
+  .close-stage[data-active="3"] { animation: stageActivate 4s infinite 3s; }
+  @keyframes stageActivate {
+    0%, 75%, 100% { background: white; color: #525252; box-shadow: 0 3px 8px rgba(0,0,0,0.06); }
+    25%, 50% { background: #16a34a; color: white; box-shadow: 0 6px 16px rgba(22,163,74,0.35); }
+  }
+
+  /* === BENTO FEATURES === */
+  .fc-feat { padding: 100px 0; background: white; }
+  .fc-feat-head { text-align: center; margin-bottom: 60px; padding: 0 32px; }
+  .fc-feat-head h2 { margin-top: 18px; }
+  .fc-bento { max-width: 1100px; margin: 0 auto; padding: 0 32px; display: grid; grid-template-columns: repeat(6, 1fr); grid-auto-rows: 220px; gap: 18px; }
+  .bento { border-radius: 24px; padding: 24px; overflow: hidden; position: relative; border: 1px solid #f4f4f5; display: flex; flex-direction: column; }
+  .bento h5 { font-family: 'Poppins'; font-weight: 800; font-size: 20px; margin: 8px 0 6px 0; letter-spacing: -0.02em; }
+  .bento p { font-size: 12px; color: #525252; margin: 0; line-height: 1.5; }
+  .bento .pill { display: inline-block; padding: 4px 10px; background: rgba(255,255,255,0.8); border-radius: 100px; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; width: fit-content; }
+
+  .bento-1 { grid-column: 1 / 4; grid-row: 1 / 3; background: linear-gradient(135deg, #ef4444 0%, #f97316 100%); color: white; }
+  .bento-1 .pill { background: rgba(0,0,0,0.2); color: white; }
+  .bento-1 p { color: rgba(255,255,255,0.85); }
+  .bento-1 h5 { font-size: 26px; }
+
+  /* Smart Ranking animation: sorting candidates (FIXED with absolute positioning) */
+  .ranking-anim {
+    margin-top: auto;
+    flex: 1;
+    position: relative;
+    min-height: 180px;
+  }
+  .rank-row {
+    position: absolute;
+    left: 0; right: 0;
+    height: 38px;
+    background: rgba(255,255,255,0.15);
+    border-radius: 10px;
+    padding: 0 12px;
+    display: flex; align-items: center; gap: 10px;
+    backdrop-filter: blur(10px);
+    transition: transform 0.9s cubic-bezier(0.34, 1.56, 0.64, 1), background 0.4s, border-color 0.4s;
+    border: 1px solid rgba(255,255,255,0);
+    will-change: transform;
+  }
+  .rank-row .av { width: 24px; height: 24px; border-radius: 50%; background: white; color: #ef4444; font-weight: 700; font-size: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .rank-row .nm { flex: 1; font-size: 12px; font-weight: 600; }
+  .rank-row .sc { background: white; color: #ef4444; padding: 2px 8px; border-radius: 6px; font-size: 11px; font-weight: 800; }
+  .rank-row.top { background: rgba(255,255,255,0.3); border-color: rgba(255,255,255,0.5); }
+  .rank-row.top::after {
+    content: '★';
+    position: absolute;
+    right: -6px; top: -6px;
+    background: #facc15; color: #0a0a0e;
+    width: 22px; height: 22px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  }
+
+  .bento-2 { grid-column: 4 / 7; grid-row: 1 / 2; background: #fef3c7; }
+  .bento-2 .pill { background: white; color: #d97706; }
+
+  /* Bento-2 animation: live event stream (FIXED: fixed item height for seamless loop) */
+  .stream-anim {
+    margin-top: 12px; flex: 1; overflow: hidden; position: relative;
+  }
+  .stream-anim::after {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 20px;
+    background: linear-gradient(to bottom, #fef3c7, transparent);
+    z-index: 2; pointer-events: none;
+  }
+  .stream-anim::before {
+    content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 20px;
+    background: linear-gradient(to top, #fef3c7, transparent);
+    z-index: 2; pointer-events: none;
+  }
+  .stream-list {
+    animation: streamScroll 12s linear infinite;
+    will-change: transform;
+  }
+  @keyframes streamScroll {
+    0% { transform: translate3d(0, 0, 0); }
+    100% { transform: translate3d(0, -50%, 0); }
+  }
+  .stream-item {
+    display: flex; align-items: center; gap: 8px;
+    height: 24px;
+    font-size: 11px; color: #78350f;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .stream-item .ic { width: 6px; height: 6px; background: #d97706; border-radius: 50%; flex-shrink: 0; }
+  .stream-item .who { font-weight: 700; flex-shrink: 0; }
+  .stream-item .ev { color: #92400e; overflow: hidden; text-overflow: ellipsis; }
+
+  .bento-3 { grid-column: 4 / 6; grid-row: 2 / 3; background: #dbeafe; }
+  .bento-3 .pill { background: white; color: #2563eb; }
+
+  /* Bento-3 Pipeline animation (FIXED: 4 stacked cards each appearing in their column) */
+  .pipe-anim {
+    margin-top: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 6px;
+    height: 110px;
+  }
+  .pipe-col {
+    background: white;
+    border-radius: 8px;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    position: relative;
+    overflow: hidden;
+  }
+  .pipe-col .lbl {
+    font-size: 9px;
+    color: #1e40af;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .pipe-card {
+    background: #dbeafe;
+    border-radius: 4px;
+    padding: 5px 7px;
+    font-size: 10px;
+    font-weight: 700;
+    color: #1e3a8a;
+    text-align: center;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.4s, transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+  .pipe-card.live { opacity: 1; transform: scale(1); }
+  .pipe-card.live.hot {
+    background: #ef4444;
+    color: white;
+    box-shadow: 0 4px 10px rgba(239,68,68,0.3);
+  }
+  .pipe-counter {
+    background: rgba(30,58,138,0.1);
+    color: #1e40af;
+    padding: 3px 6px;
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: 800;
+    text-align: center;
+    margin-top: auto;
+  }
+
+  .bento-4 { grid-column: 6 / 7; grid-row: 2 / 3; background: #0a0a0e; color: white; }
+  .bento-4 .pill { background: rgba(239,68,68,0.2); color: #fca5a5; }
+  .bento-4 p { color: rgba(255,255,255,0.6); }
+  .bento-4 h5 { color: white; font-size: 14px; }
+
+  /* Bento-4 AI Interview: speech waveform */
+  .wave-anim {
+    margin-top: auto;
+    display: flex; align-items: center; justify-content: center; gap: 3px;
+    height: 50px;
+  }
+  .wave-bar {
+    width: 3px;
+    background: linear-gradient(to top, #ef4444, #f97316);
+    border-radius: 100px;
+    animation: waveBounce 1s ease-in-out infinite;
+  }
+  .wave-bar:nth-child(1) { animation-delay: 0s; height: 30%; }
+  .wave-bar:nth-child(2) { animation-delay: 0.1s; height: 60%; }
+  .wave-bar:nth-child(3) { animation-delay: 0.2s; height: 80%; }
+  .wave-bar:nth-child(4) { animation-delay: 0.3s; height: 100%; }
+  .wave-bar:nth-child(5) { animation-delay: 0.4s; height: 70%; }
+  .wave-bar:nth-child(6) { animation-delay: 0.5s; height: 50%; }
+  .wave-bar:nth-child(7) { animation-delay: 0.6s; height: 80%; }
+  .wave-bar:nth-child(8) { animation-delay: 0.7s; height: 60%; }
+  .wave-bar:nth-child(9) { animation-delay: 0.8s; height: 90%; }
+  .wave-bar:nth-child(10) { animation-delay: 0.9s; height: 40%; }
+  .wave-bar:nth-child(11) { animation-delay: 0.45s; height: 70%; }
+  .wave-bar:nth-child(12) { animation-delay: 0.55s; height: 60%; }
+  @keyframes waveBounce {
+    0%, 100% { transform: scaleY(0.3); }
+    50% { transform: scaleY(1); }
+  }
+  .interview-meta { font-size: 10px; color: #fca5a5; text-align: center; margin-top: 6px; }
+  .interview-meta .live-dot { display: inline-block; width: 6px; height: 6px; background: #ef4444; border-radius: 50%; margin-right: 4px; animation: pulse 1.3s infinite; }
+
+  .bento-5 { grid-column: 1 / 3; grid-row: 3 / 4; background: #dcfce7; }
+  .bento-5 .pill { background: white; color: #16a34a; }
+
+  /* Bento-5 Reports: animated bar chart */
+  .chart-anim {
+    margin-top: auto;
+    display: flex; align-items: flex-end; justify-content: space-between; height: 60px; gap: 4px;
+  }
+  .chart-bar {
+    flex: 1;
+    background: linear-gradient(to top, #16a34a, #4ade80);
+    border-radius: 4px 4px 0 0;
+    animation: chartGrow 3s ease-in-out infinite;
+  }
+  .chart-bar:nth-child(1) { animation-delay: 0s; }
+  .chart-bar:nth-child(2) { animation-delay: 0.1s; }
+  .chart-bar:nth-child(3) { animation-delay: 0.2s; }
+  .chart-bar:nth-child(4) { animation-delay: 0.3s; }
+  .chart-bar:nth-child(5) { animation-delay: 0.4s; }
+  .chart-bar:nth-child(6) { animation-delay: 0.5s; }
+  .chart-bar:nth-child(7) { animation-delay: 0.6s; }
+  .chart-bar:nth-child(8) { animation-delay: 0.7s; }
+  @keyframes chartGrow {
+    0%, 100% { transform: scaleY(0.3); transform-origin: bottom; }
+    50% { transform: scaleY(1); transform-origin: bottom; }
+  }
+
+  .bento-6 { grid-column: 3 / 7; grid-row: 3 / 4; background: #ffe4e1; }
+  .bento-6 .pill { background: white; color: #c92a2a; }
+
+  /* Bento-6 Notification stream (FIXED: sequential, one at a time) */
+  .notif-anim {
+    margin-top: 12px;
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    min-height: 70px;
+  }
+  .notif-pop {
+    background: white;
+    padding: 10px 14px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px;
+    position: absolute;
+    top: 50%; left: 0; right: 0;
+    transform: translateY(-50%) translateX(-10px) scale(0.92);
+    opacity: 0;
+    animation: notifSeq 9s ease-in-out infinite;
+    will-change: transform, opacity;
+  }
+  .notif-pop.n1 { animation-delay: 0s; }
+  .notif-pop.n2 { animation-delay: 3s; }
+  .notif-pop.n3 { animation-delay: 6s; }
+  .notif-pop .ic-circle { width: 30px; height: 30px; background: #fee2e2; color: #ef4444; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; flex-shrink: 0; font-size: 14px; }
+  .notif-pop .ti { font-weight: 700; color: #0a0a0e; font-size: 12px; }
+  .notif-pop .sb { font-size: 10px; color: #71717a; }
+  @keyframes notifSeq {
+    0% { opacity: 0; transform: translateY(-50%) translateX(20px) scale(0.92); }
+    8%, 25% { opacity: 1; transform: translateY(-50%) translateX(0) scale(1); }
+    33%, 100% { opacity: 0; transform: translateY(-50%) translateX(-20px) scale(0.92); }
+  }
+
+  /* === STATS === */
+  .fc-stats { padding: 100px 0; background: #0a0a0e; color: white; position: relative; overflow: hidden; }
+  .fc-stats::before { content: ''; position: absolute; top: -50%; left: -10%; width: 60%; height: 200%; background: radial-gradient(circle, rgba(239,68,68,0.15) 0%, transparent 60%); }
+  .fc-stats-head { max-width: 720px; margin: 0 auto; padding: 0 32px; text-align: center; position: relative; }
+  .fc-stats h2 { color: white; margin-top: 18px; }
+  .fc-stats h2 .wavy { color: #fca5a5; }
+  .fc-stats h2 .wavy::after { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 8' preserveAspectRatio='none'%3E%3Cpath d='M0 4 Q 10 0, 20 4 T 40 4 T 60 4' stroke='%23fca5a5' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"); }
+  .fc-stats-grid { max-width: 1100px; margin: 70px auto 0; padding: 0 32px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; position: relative; }
+  .fc-stat-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 24px; padding: 32px; backdrop-filter: blur(10px); position: relative; overflow: hidden; }
+  .fc-stat-card .icon { position: absolute; top: 24px; right: 24px; width: 44px; height: 44px; border-radius: 14px; background: rgba(239,68,68,0.2); display: flex; align-items: center; justify-content: center; font-size: 18px; transform: rotate(-6deg); }
+  .fc-stat-card .num { font-family: 'Poppins'; font-size: 64px; font-weight: 800; line-height: 1; margin-bottom: 6px; background: linear-gradient(135deg, #ef4444, #f97316); -webkit-background-clip: text; background-clip: text; color: transparent; letter-spacing: -0.04em; }
+  .fc-stat-card .label { font-size: 13px; color: rgba(255,255,255,0.6); font-weight: 600; }
+  .fc-stat-card .progress { margin-top: 14px; height: 4px; background: rgba(255,255,255,0.1); border-radius: 2px; overflow: hidden; }
+  .fc-stat-card .progress > i { display: block; height: 100%; background: linear-gradient(90deg, #ef4444, #f97316); width: 0; transition: width 1.6s cubic-bezier(0.16, 1, 0.3, 1); }
+  .fc-stat-card.in .progress > i { width: var(--w, 80%); }
+
+  /* === PRICING === */
+  .fc-price { padding: 100px 0; background: white; }
+  .fc-price-head { text-align: center; margin-bottom: 60px; padding: 0 32px; }
+  .fc-price-card {
+    max-width: 540px; margin: 0 auto;
+    background: linear-gradient(140deg, #ef4444 0%, #f97316 100%);
+    color: white; border-radius: 32px; padding: 44px;
+    position: relative; overflow: hidden;
+    box-shadow: 0 30px 60px rgba(239,68,68,0.3);
+  }
+  .fc-price-card::before { content: ''; position: absolute; top: -50%; right: -20%; width: 60%; height: 200%; background: rgba(255,255,255,0.1); transform: rotate(20deg); animation: shimmer2 8s linear infinite; }
+  @keyframes shimmer2 {
+    0% { transform: rotate(20deg) translateX(-50%); }
+    100% { transform: rotate(20deg) translateX(50%); }
+  }
+  .fc-price-card .sticker { position: absolute; top: 16px; right: 16px; background: #facc15; color: #0a0a0e; padding: 8px 14px; border-radius: 100px; font-size: 11px; font-weight: 800; transform: rotate(8deg); box-shadow: 0 4px 0 #d97706; animation: sticker 3s ease-in-out infinite; }
+  @keyframes sticker {
+    0%, 100% { transform: rotate(8deg) scale(1); }
+    50% { transform: rotate(12deg) scale(1.05); }
+  }
+  .fc-price-card h3 { font-size: 28px; color: white; margin-bottom: 8px; }
+  .fc-price-card .desc { font-size: 14px; opacity: 0.85; margin-bottom: 28px; }
+  .fc-price-card .price-row { display: flex; align-items: baseline; gap: 12px; margin-bottom: 8px; }
+  .fc-price-card .old { font-size: 22px; text-decoration: line-through; opacity: 0.6; }
+  .fc-price-card .new { font-family: 'Poppins'; font-size: 72px; font-weight: 800; line-height: 1; letter-spacing: -0.04em; }
+  .fc-price-card .month { font-size: 16px; opacity: 0.85; }
+  .fc-price-card .features { margin: 24px 0; display: flex; flex-direction: column; gap: 8px; }
+  .fc-price-card .feat-row { display: flex; align-items: center; gap: 10px; font-size: 14px; }
+  .fc-price-card .feat-row::before { content: '✓'; width: 22px; height: 22px; background: rgba(255,255,255,0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700; }
+  .fc-price-card .fc-btn { background: white; color: #ef4444; box-shadow: 0 6px 0 rgba(0,0,0,0.15); }
+  .fc-price-card .terms { margin-top: 20px; font-size: 11px; opacity: 0.7; }
+
+  /* === CLOSING CTA === */
+  .fc-close { padding: 120px 0; background: linear-gradient(140deg, #0a0a0e 0%, #1a1a22 100%); color: white; text-align: center; position: relative; overflow: hidden; }
+  .fc-close::before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 30% 30%, rgba(239,68,68,0.3) 0%, transparent 50%), radial-gradient(circle at 70% 70%, rgba(249,115,22,0.2) 0%, transparent 50%); }
+  .fc-close-inner { position: relative; max-width: 720px; margin: 0 auto; padding: 0 32px; }
+  .fc-close h2 { color: white; font-size: 56px; }
+  .fc-close h2 .wavy { color: #fca5a5; }
+  .fc-close h2 .wavy::after { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 8' preserveAspectRatio='none'%3E%3Cpath d='M0 4 Q 10 0, 20 4 T 40 4 T 60 4' stroke='%23fca5a5' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"); }
+  .fc-close .lead { margin-top: 20px; font-size: 17px; opacity: 0.7; }
+  .fc-close .actions { margin-top: 36px; display: flex; gap: 14px; justify-content: center; }
+  .fc-close .fc-btn-ghost { background: white; color: #0a0a0e; }
+
+  /* === TRUSTED BY MARQUEE === */
+  .fc-trusted {
+    padding: 36px 0;
+    background: white;
+    border-top: 1px solid #f4f4f5;
+    border-bottom: 1px solid #f4f4f5;
+    overflow: hidden;
+    position: relative;
+  }
+  .fc-trusted .lbl {
+    text-align: center;
+    font-size: 12px;
+    color: #71717a;
+    margin-bottom: 20px;
+    font-weight: 600;
+  }
+  .fc-trusted-track {
+    display: flex;
+    gap: 64px;
+    width: max-content;
+    animation: marquee 28s linear infinite;
+    align-items: center;
+  }
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+  .fc-trusted-item {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    color: #a1a1aa;
+    flex-shrink: 0;
+    letter-spacing: -0.02em;
+    transition: color 0.3s, transform 0.3s;
+  }
+  .fc-trusted-item:hover { color: #ef4444; transform: scale(1.05); }
+  .fc-trusted::before, .fc-trusted::after {
+    content: ''; position: absolute; top: 0; bottom: 0; width: 100px;
+    z-index: 2; pointer-events: none;
+  }
+  .fc-trusted::before { left: 0; background: linear-gradient(to right, white, transparent); }
+  .fc-trusted::after { right: 0; background: linear-gradient(to left, white, transparent); }
+
+  /* === SELL THE JOB TEASER === */
+  .fc-stj {
+    padding: 80px 0;
+    background: #050507;
+    color: white;
+    position: relative;
+    overflow: hidden;
+  }
+  .fc-stj::before {
+    content: ''; position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse at 30% 50%, rgba(239,68,68,0.15) 0%, transparent 60%),
+      radial-gradient(ellipse at 70% 50%, rgba(249,115,22,0.1) 0%, transparent 60%);
+  }
+  .fc-stj::after {
+    content: ''; position: absolute; inset: 0;
+    background-image: radial-gradient(circle at center, rgba(255,255,255,0.04) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+  .fc-stj-inner {
+    position: relative;
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 0 32px;
+    text-align: center;
+  }
+  .fc-stj h2 {
+    color: white;
+    font-size: 44px;
+    margin-top: 18px;
+  }
+  .fc-stj h2 .accent { color: #ef4444; }
+  .fc-stj .lead {
+    margin-top: 22px;
+    font-size: 17px;
+    color: rgba(255,255,255,0.65);
+    max-width: 540px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .fc-stj .actions { margin-top: 28px; }
+  .fc-stj-pill {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 6px 14px; border-radius: 100px;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+    color: white;
+    font-size: 12px; font-weight: 700;
+  }
+
+  /* === AGENTS VS FEATURES COMPARISON === */
+  .fc-avf { padding: 100px 0; background: #fffbf6; }
+  .fc-avf-head { text-align: center; max-width: 720px; margin: 0 auto 48px; padding: 0 32px; }
+  .fc-avf-head h2 { margin-top: 18px; }
+  .fc-avf-head .lead { margin-top: 18px; font-size: 17px; color: #525252; }
+  .fc-avf-grid {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 32px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+  .fc-avf-card {
+    border-radius: 24px;
+    padding: 32px;
+    background: white;
+    border: 1px solid #e5e5e5;
+  }
+  .fc-avf-card.lose {
+    background: #fafafa;
+    border-color: #e5e5e5;
+  }
+  .fc-avf-card.win {
+    background: linear-gradient(140deg, #fee2e2 0%, #ffe4e1 100%);
+    border: 2px solid #ef4444;
+    box-shadow: 0 20px 50px rgba(239,68,68,0.12);
+    transform: rotate(-0.5deg);
+  }
+  .fc-avf-card .head {
+    display: flex; align-items: center; gap: 12px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+  }
+  .fc-avf-card.win .head { border-bottom-color: rgba(239,68,68,0.2); }
+  .fc-avf-card .head .ic {
+    width: 44px; height: 44px;
+    border-radius: 12px;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 800; font-size: 20px;
+  }
+  .fc-avf-card.lose .ic { background: #f4f4f5; color: #71717a; }
+  .fc-avf-card.win .ic {
+    background: #ef4444; color: white;
+    transform: rotate(-6deg);
+    box-shadow: 0 4px 12px rgba(239,68,68,0.3);
+  }
+  .fc-avf-card .ti {
+    font-family: 'Poppins'; font-weight: 800;
+    font-size: 18px;
+    margin: 0 0 2px 0;
+    letter-spacing: -0.02em;
+  }
+  .fc-avf-card .sub {
+    font-size: 12px;
+    color: #71717a;
+    margin: 0;
+  }
+  .fc-avf-card.win .sub { color: #c92a2a; font-weight: 700; }
+  .fc-avf-card ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 14px; }
+  .fc-avf-card li { display: flex; align-items: flex-start; gap: 10px; font-size: 14px; line-height: 1.5; }
+  .fc-avf-card.lose li { color: #71717a; }
+  .fc-avf-card.win li { color: #0a0a0e; font-weight: 500; }
+  .fc-avf-card .mark {
+    flex-shrink: 0;
+    width: 20px; height: 20px;
+    border-radius: 6px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 12px; font-weight: 800;
+    margin-top: 1px;
+  }
+  .fc-avf-card.lose .mark { background: #f4f4f5; color: #a1a1aa; }
+  .fc-avf-card.win .mark { background: #ef4444; color: white; }
+
+  /* === AVF Live Dashboard Cards (Framer Motion-style) === */
+
+  /* Make cards 3D-tilt-ready */
+  .fc-avf-card {
+    transform-style: preserve-3d;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: transform;
+  }
+
+  /* Dashboard mock area inside each card */
+  .avf-dash {
+    border-radius: 14px;
+    margin-bottom: 22px;
+    padding: 18px;
+    position: relative;
+    overflow: hidden;
+    transform: translateZ(20px);
+  }
+
+  /* === LEFT (LOSE): Asleep Dashboard === */
+  .avf-dash.lose {
+    background: #fafafa;
+    border: 1px solid #e5e5e5;
+  }
+
+  .avf-dash-row {
+    display: flex; align-items: center; gap: 8px;
+    margin-bottom: 12px;
+    font-size: 11px;
+  }
+  .avf-dash-row .lbl {
+    color: #71717a;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 9px;
+  }
+  .avf-dash-row .timestamp {
+    margin-left: auto;
+    color: #a1a1aa;
+    font-size: 10px;
+  }
+  .avf-dash-row .live-dot {
+    width: 7px; height: 7px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .avf-dash.lose .live-dot {
+    background: #facc15;
+    animation: slowBlink 3s ease-in-out infinite;
+  }
+  .avf-dash.lose .lbl-status { color: #71717a; }
+  @keyframes slowBlink {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 0.7; }
+  }
+
+  .avf-dash-counter {
+    display: flex; align-items: baseline; gap: 6px;
+    margin-bottom: 14px;
+  }
+  .avf-dash-counter .num {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 1;
+    letter-spacing: -0.04em;
+  }
+  .avf-dash-counter .total {
+    font-size: 13px;
+    color: #a1a1aa;
+    font-weight: 600;
+  }
+
+  .avf-dash.lose .num { color: #71717a; }
+
+  .avf-dash-progress {
+    height: 6px;
+    background: #e5e5e5;
+    border-radius: 100px;
+    overflow: hidden;
+    margin-bottom: 12px;
+  }
+  .avf-dash-progress > i {
+    display: block;
+    height: 100%;
+    border-radius: 100px;
+    transition: width 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .avf-dash.lose .avf-dash-progress > i {
+    background: #d4d4d8;
+    width: 0%;
+  }
+
+  .avf-dash-agents {
+    display: flex; gap: 6px;
+  }
+  .avf-dash-agent {
+    flex: 1;
+    height: 22px;
+    background: #f4f4f5;
+    border-radius: 6px;
+    border: 1px solid #e5e5e5;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 9px;
+    font-weight: 700;
+    color: #a1a1aa;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .avf-dash-zzz {
+    position: absolute;
+    top: 12px; right: 14px;
+    color: #d4d4d8;
+    font-family: 'Poppins';
+    font-weight: 800;
+    font-size: 16px;
+    letter-spacing: 2px;
+    animation: zzzDrift 2.4s ease-in-out infinite;
+  }
+  @keyframes zzzDrift {
+    0%, 100% { opacity: 0.3; transform: translate(0, 0); }
+    50% { opacity: 0.8; transform: translate(-3px, -3px); }
+  }
+
+  /* === RIGHT (WIN): LIVE Dashboard === */
+  .avf-dash.win {
+    background: linear-gradient(140deg, #fff 0%, #fffbf6 100%);
+    border: 1px solid rgba(239,68,68,0.2);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.8);
+  }
+  .avf-dash.win::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 80% 0%, rgba(239,68,68,0.05) 0%, transparent 60%);
+    pointer-events: none;
+  }
+
+  .avf-dash.win .live-dot {
+    background: #16a34a;
+    box-shadow: 0 0 8px #16a34a;
+    animation: pulse 1.2s ease-in-out infinite;
+  }
+  .avf-dash.win .lbl-status {
+    color: #16a34a;
+    font-weight: 800;
+  }
+
+  .avf-dash.win .num {
+    background: linear-gradient(135deg, #ef4444, #f97316);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .avf-dash.win .avf-dash-progress > i {
+    background: linear-gradient(90deg, #ef4444, #f97316);
+    width: 78%;
+    animation: progressBreathe 4s ease-in-out infinite;
+    box-shadow: 0 0 10px rgba(239,68,68,0.4);
+  }
+  @keyframes progressBreathe {
+    0%, 100% { width: 78%; }
+    50% { width: 92%; }
+  }
+
+  .avf-dash.win .avf-dash-agent {
+    background: linear-gradient(135deg, rgba(239,68,68,0.1), rgba(249,115,22,0.05));
+    border: 1px solid rgba(239,68,68,0.2);
+    color: #c92a2a;
+    position: relative;
+    overflow: hidden;
+  }
+  .avf-dash.win .avf-dash-agent::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, transparent, rgba(239,68,68,0.15), transparent);
+    transform: translateX(-100%);
+    animation: agentScan 3s ease-in-out infinite;
+  }
+  .avf-dash.win .avf-dash-agent:nth-child(1)::before { animation-delay: 0s; }
+  .avf-dash.win .avf-dash-agent:nth-child(2)::before { animation-delay: 0.5s; }
+  .avf-dash.win .avf-dash-agent:nth-child(3)::before { animation-delay: 1s; }
+  .avf-dash.win .avf-dash-agent:nth-child(4)::before { animation-delay: 1.5s; }
+  @keyframes agentScan {
+    0%, 70%, 100% { transform: translateX(-100%); }
+    35%, 45% { transform: translateX(100%); }
+  }
+  .avf-dash.win .avf-dash-agent .agent-dot {
+    width: 5px; height: 5px;
+    background: #16a34a;
+    border-radius: 50%;
+    margin-right: 4px;
+    box-shadow: 0 0 6px #16a34a;
+    animation: pulse 1.2s infinite;
+  }
+
+  /* Activity feed in win card */
+  .avf-dash-feed {
+    margin-top: 12px;
+    height: 36px;
+    overflow: hidden;
+    border-top: 1px dashed rgba(239,68,68,0.15);
+    padding-top: 10px;
+    position: relative;
+  }
+  .avf-dash-feed::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0; height: 14px;
+    background: linear-gradient(to top, #fff, transparent);
+    z-index: 2;
+    pointer-events: none;
+  }
+  .avf-dash-feed-list {
+    animation: feedScroll 10s linear infinite;
+  }
+  @keyframes feedScroll {
+    from { transform: translateY(0); }
+    to { transform: translateY(-50%); }
+  }
+  .avf-dash-feed-item {
+    height: 18px;
+    display: flex; align-items: center; gap: 6px;
+    font-size: 10px;
+    color: #525252;
+  }
+  .avf-dash-feed-item .feed-dot {
+    width: 4px; height: 4px;
+    background: #ef4444;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+  .avf-dash-feed-item .who { font-weight: 700; color: #ef4444; }
+  .avf-dash-feed-item .ev { color: #71717a; }
+
+  .avf-dash-live-badge {
+    position: absolute;
+    top: 12px; right: 14px;
+    display: flex; align-items: center; gap: 4px;
+    background: #16a34a;
+    color: white;
+    padding: 3px 8px;
+    border-radius: 100px;
+    font-size: 9px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    box-shadow: 0 4px 10px rgba(22,163,74,0.3);
+  }
+  .avf-dash-live-badge::before {
+    content: '';
+    width: 5px; height: 5px;
+    background: white;
+    border-radius: 50%;
+    animation: pulse 1.2s infinite;
+  }
+
+  /* === SELL THE JOB MAGNET CARD === */
+  .stj-magnet {
+    margin: 44px auto 0;
+    position: relative;
+    width: 100%;
+    max-width: 620px;
+    height: 320px;
+  }
+
+  /* Magnetic field rings */
+  .stj-field {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1.5px dashed rgba(239,68,68,0.25);
+    border-radius: 50%;
+    pointer-events: none;
+  }
+  .stj-field.f1 { width: 280px; height: 280px; animation: fieldRot 30s linear infinite; }
+  .stj-field.f2 { width: 380px; height: 380px; animation: fieldRot 50s linear infinite reverse; opacity: 0.6; }
+  .stj-field.f3 { width: 480px; height: 480px; animation: fieldRot 70s linear infinite; opacity: 0.3; }
+  @keyframes fieldRot {
+    from { transform: translate(-50%, -50%) rotate(0deg); }
+    to { transform: translate(-50%, -50%) rotate(360deg); }
+  }
+
+  /* Pulse rings emanating from card */
+  .stj-pulse {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 220px; height: 140px;
+    border-radius: 16px;
+    border: 2px solid #ef4444;
+    opacity: 0;
+    animation: stjPulseOut 3.6s ease-out infinite;
+    pointer-events: none;
+  }
+  .stj-pulse.p2 { animation-delay: 1.2s; }
+  .stj-pulse.p3 { animation-delay: 2.4s; }
+  @keyframes stjPulseOut {
+    0% { opacity: 0.6; transform: translate(-50%, -50%) scale(1); }
+    100% { opacity: 0; transform: translate(-50%, -50%) scale(2); }
+  }
+
+  /* Center: Sell-the-Job Card */
+  .stj-card {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 260px;
+    background: linear-gradient(140deg, white 0%, #fffbf6 100%);
+    border-radius: 20px;
+    padding: 22px;
+    box-shadow:
+      0 30px 80px rgba(239,68,68,0.4),
+      0 0 0 1px rgba(255,255,255,0.1);
+    z-index: 10;
+    color: #0a0a0e;
+    text-align: left;
+  }
+  .stj-card-badge {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: linear-gradient(135deg, #ef4444, #f97316);
+    color: white;
+    padding: 4px 10px;
+    border-radius: 100px;
+    font-size: 10px;
+    font-weight: 800;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    box-shadow: 0 4px 12px rgba(239,68,68,0.3);
+  }
+  .stj-card-badge::before {
+    content: '🔥';
+    font-size: 11px;
+    animation: shake 0.6s ease-in-out infinite;
+  }
+  @keyframes shake {
+    0%, 100% { transform: rotate(-8deg); }
+    50% { transform: rotate(8deg); }
+  }
+  .stj-card-title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    font-size: 17px;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    margin-bottom: 8px;
+    color: #0a0a0e;
+  }
+  .stj-card-stars {
+    color: #facc15;
+    font-size: 12px;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+  }
+  .stj-card-stars span { color: #71717a; margin-left: 6px; font-size: 10px; font-weight: 600; }
+  .stj-card-perks {
+    display: flex; flex-direction: column; gap: 6px;
+    margin-bottom: 14px;
+  }
+  .stj-card-perks .row {
+    display: flex; align-items: center; gap: 8px;
+    font-size: 11px;
+    color: #525252;
+    font-weight: 500;
+  }
+  .stj-card-perks .row::before {
+    content: '✓';
+    color: #16a34a;
+    font-weight: 800;
+    flex-shrink: 0;
+    width: 14px; height: 14px;
+    background: #dcfce7;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 9px;
+  }
+  .stj-card-cta {
+    background: #0a0a0e;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: 700;
+    position: relative;
+    overflow: hidden;
+  }
+  .stj-card-cta::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    transform: translateX(-100%);
+    animation: ctaShine 3s ease-in-out infinite;
+  }
+  @keyframes ctaShine {
+    0%, 50% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+  }
+
+  /* Live Counter Badge above card */
+  .stj-live-counter {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, calc(-50% - 110px));
+    background: white;
+    padding: 8px 14px;
+    border-radius: 100px;
+    display: flex; align-items: center; gap: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    z-index: 12;
+  }
+  .stj-live-counter .live-dot {
+    width: 8px; height: 8px;
+    background: #16a34a;
+    border-radius: 50%;
+    animation: pulse 1.3s infinite;
+    box-shadow: 0 0 10px #16a34a;
+  }
+  .stj-live-counter .text {
+    font-size: 11px;
+    font-weight: 700;
+    color: #0a0a0e;
+  }
+  .stj-live-counter .num {
+    color: #ef4444;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 800;
+  }
+
+  /* A-Player avatars magnetically attracted */
+  .stj-aplayer {
+    position: absolute;
+    top: 50%; left: 50%;
+    width: 44px; height: 44px;
+    border-radius: 50%;
+    color: white;
+    font-weight: 800;
+    font-size: 14px;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    border: 2px solid white;
+    z-index: 8;
+  }
+  .stj-aplayer .star {
+    position: absolute;
+    top: -5px; right: -5px;
+    background: #facc15;
+    color: #0a0a0e;
+    width: 16px; height: 16px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 9px;
+    font-weight: 800;
+  }
+  .stj-aplayer.a1 { background: linear-gradient(135deg, #ef4444, #f97316); animation: orbitA 8s linear infinite; }
+  .stj-aplayer.a2 { background: linear-gradient(135deg, #14b8a6, #0a0a0e); animation: orbitA 8s linear infinite -2.7s; }
+  .stj-aplayer.a3 { background: linear-gradient(135deg, #facc15, #f97316); color: #0a0a0e; animation: orbitA 8s linear infinite -5.4s; }
+  .stj-aplayer.a4 { background: linear-gradient(135deg, #a855f7, #ef4444); animation: orbitA 11s linear infinite -3s; }
+  .stj-aplayer.a5 { background: linear-gradient(135deg, #14b8a6, #facc15); color: #0a0a0e; animation: orbitA 11s linear infinite -7s; }
+
+  @keyframes orbitA {
+    0% {
+      transform: translate(-50%, -50%) rotate(0deg) translateX(180px) rotate(0deg) scale(0.7);
+      opacity: 0;
+    }
+    15% {
+      opacity: 1;
+      transform: translate(-50%, -50%) rotate(54deg) translateX(160px) rotate(-54deg) scale(0.85);
+    }
+    50% {
+      opacity: 1;
+      transform: translate(-50%, -50%) rotate(180deg) translateX(140px) rotate(-180deg) scale(1);
+    }
+    85% {
+      opacity: 1;
+      transform: translate(-50%, -50%) rotate(306deg) translateX(160px) rotate(-306deg) scale(0.85);
+    }
+    100% {
+      opacity: 0;
+      transform: translate(-50%, -50%) rotate(360deg) translateX(180px) rotate(-360deg) scale(0.7);
+    }
+  }
+
+  /* Trailing spark particles */
+  .stj-spark {
+    position: absolute;
+    width: 4px; height: 4px;
+    background: #facc15;
+    border-radius: 50%;
+    box-shadow: 0 0 8px #facc15;
+    pointer-events: none;
+  }
+  .stj-spark.s1 { top: 20%; left: 12%; animation: sparkFloat 4s ease-in-out infinite; }
+  .stj-spark.s2 { top: 78%; right: 16%; animation: sparkFloat 5s ease-in-out infinite 1s; }
+  .stj-spark.s3 { top: 32%; right: 8%; animation: sparkFloat 4.5s ease-in-out infinite 0.5s; }
+  .stj-spark.s4 { bottom: 24%; left: 14%; animation: sparkFloat 5.5s ease-in-out infinite 2s; }
+  @keyframes sparkFloat {
+    0%, 100% { opacity: 0.4; transform: translate(0, 0) scale(1); }
+    50% { opacity: 1; transform: translate(8px, -10px) scale(1.5); }
+  }
+
+  /* "Boring" old job posting in corner — for contrast */
+  .stj-old {
+    position: absolute;
+    top: 8%;
+    left: -2%;
+    width: 130px;
+    background: #1a1a22;
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 8px;
+    padding: 10px;
+    z-index: 4;
+    transform: rotate(-8deg);
+    opacity: 0.5;
+    filter: grayscale(0.8);
+  }
+  .stj-old .stj-old-title {
+    font-size: 9px;
+    font-weight: 700;
+    color: rgba(255,255,255,0.6);
+    margin-bottom: 6px;
+    line-height: 1.2;
+  }
+  .stj-old .stj-old-line {
+    height: 3px;
+    background: rgba(255,255,255,0.12);
+    border-radius: 2px;
+    margin-bottom: 3px;
+  }
+  .stj-old .stj-old-line.short { width: 70%; }
+  .stj-old .stj-old-stamp {
+    margin-top: 8px;
+    color: rgba(255,255,255,0.4);
+    font-size: 8px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+  .stj-old::after {
+    content: '0 Bewerbungen';
+    position: absolute;
+    bottom: -22px; left: 50%;
+    transform: translateX(-50%);
+    color: rgba(255,255,255,0.3);
+    font-size: 9px;
+    font-style: italic;
+    white-space: nowrap;
+  }
+  .stj-old-fly {
+    position: absolute;
+    top: 30%; left: 5%;
+    color: rgba(255,255,255,0.4);
+    font-size: 12px;
+    animation: flyBuzz 2.5s ease-in-out infinite;
+  }
+  @keyframes flyBuzz {
+    0% { transform: translate(0, 0); }
+    25% { transform: translate(8px, -4px); }
+    50% { transform: translate(12px, 4px); }
+    75% { transform: translate(4px, 8px); }
+    100% { transform: translate(0, 0); }
+  }
+
+  /* === AI FEATURES (5 AgentBurst with per-card animations) === */
+  .fc-ai { padding: 100px 0; background: white; }
+  .fc-ai-head { text-align: center; max-width: 720px; margin: 0 auto 60px; padding: 0 32px; }
+  .fc-ai-head h2 { margin-top: 18px; }
+  .fc-ai-head .lead { margin-top: 18px; font-size: 17px; color: #525252; }
+  .fc-ai-grid {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 32px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+  }
+  .fc-ai-card {
+    background: #fffbf6;
+    border: 1px solid #f4f4f5;
+    border-radius: 20px;
+    padding: 24px;
+    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  .fc-ai-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(239,68,68,0.12);
+    border-color: rgba(239,68,68,0.3);
+  }
+  .fc-ai-card h4 {
+    font-size: 19px;
+    font-weight: 800;
+    margin: 14px 0 6px 0;
+    font-family: 'Poppins';
+    letter-spacing: -0.02em;
+  }
+  .fc-ai-card p {
+    margin: 0;
+    font-size: 13px;
+    color: #525252;
+    line-height: 1.55;
+  }
+  .fc-ai-card .badge-prefix {
+    display: inline-block;
+    padding: 3px 8px;
+    background: rgba(239,68,68,0.1);
+    color: #c92a2a;
+    border-radius: 6px;
+    font-size: 9px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 6px;
+    font-family: 'Inter';
+  }
+  .fc-ai-foot { text-align: center; margin-top: 36px; padding: 0 32px; }
+  .fc-ai-foot a {
+    color: #ef4444;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    border-bottom: 2px solid #ef4444;
+    padding-bottom: 2px;
+  }
+
+  /* AgentBurst Card animations container */
+  .ab-anim {
+    height: 100px;
+    background: white;
+    border-radius: 14px;
+    border: 1px solid #f4f4f5;
+    margin-bottom: 4px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Match: two avatars connecting */
+  .ab-match-stage { position: relative; width: 100%; height: 100%; }
+  .ab-match-av {
+    position: absolute;
+    top: 50%;
+    width: 32px; height: 32px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #ef4444, #f97316);
+    color: white;
+    font-weight: 800;
+    font-size: 12px;
+    display: flex; align-items: center; justify-content: center;
+    transform: translateY(-50%);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+  .ab-match-av.left { left: 18%; animation: matchSlideLeft 4s ease-in-out infinite; }
+  .ab-match-av.right { right: 18%; background: linear-gradient(135deg, #facc15, #f97316); color: #0a0a0e; animation: matchSlideRight 4s ease-in-out infinite; }
+  @keyframes matchSlideLeft {
+    0%, 100% { transform: translate(0, -50%); }
+    40%, 60% { transform: translate(48px, -50%); }
+  }
+  @keyframes matchSlideRight {
+    0%, 100% { transform: translate(0, -50%); }
+    40%, 60% { transform: translate(-48px, -50%); }
+  }
+  .ab-match-pulse {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px; height: 60px;
+    border-radius: 50%;
+    border: 2px solid #ef4444;
+    opacity: 0;
+    animation: matchPulseRing 4s ease-out infinite;
+  }
+  @keyframes matchPulseRing {
+    0%, 35% { opacity: 0; transform: translate(-50%, -50%) scale(0.5); }
+    40%, 60% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+    65%, 100% { opacity: 0; transform: translate(-50%, -50%) scale(1.6); }
+  }
+  .ab-match-score {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    background: #ef4444;
+    color: white;
+    padding: 3px 10px;
+    border-radius: 100px;
+    font-size: 11px;
+    font-weight: 800;
+    opacity: 0;
+    animation: matchScore 4s ease-in-out infinite;
+    z-index: 5;
+    box-shadow: 0 4px 12px rgba(239,68,68,0.4);
+  }
+  @keyframes matchScore {
+    0%, 35% { opacity: 0; transform: translate(-50%, calc(-50% + 8px)) scale(0.5); }
+    45%, 60% { opacity: 1; transform: translate(-50%, calc(-50% - 22px)) scale(1); }
+    70%, 100% { opacity: 0; transform: translate(-50%, calc(-50% - 34px)) scale(0.8); }
+  }
+
+  /* Rank: bars resorting */
+  .ab-rank-stage {
+    width: 100%; height: 100%;
+    display: flex; flex-direction: column; gap: 6px;
+    padding: 14px 22px;
+    justify-content: center;
+  }
+  .ab-rank-bar {
+    height: 14px;
+    border-radius: 100px;
+    background: linear-gradient(90deg, #ef4444, #f97316);
+    transition: width 0.8s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.4s;
+    transform-origin: left;
+  }
+  .ab-rank-bar.r1 { animation: rankResort 4s ease-in-out infinite; }
+  .ab-rank-bar.r2 { animation: rankResort2 4s ease-in-out infinite; opacity: 0.7; }
+  .ab-rank-bar.r3 { animation: rankResort3 4s ease-in-out infinite; opacity: 0.5; }
+  @keyframes rankResort {
+    0%, 100% { width: 95%; opacity: 1; }
+    50% { width: 60%; opacity: 0.7; }
+  }
+  @keyframes rankResort2 {
+    0%, 100% { width: 70%; opacity: 0.7; }
+    50% { width: 95%; opacity: 1; }
+  }
+  @keyframes rankResort3 {
+    0%, 100% { width: 50%; opacity: 0.5; }
+    50% { width: 80%; opacity: 0.8; }
+  }
+
+  /* Screen: CV stack with checkmarks */
+  .ab-screen-stage { display: flex; gap: 4px; align-items: flex-end; }
+  .ab-screen-doc {
+    width: 28px; height: 36px;
+    background: white;
+    border: 1.5px solid #ef4444;
+    border-radius: 4px;
+    position: relative;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+  }
+  .ab-screen-doc::before, .ab-screen-doc::after {
+    content: '';
+    position: absolute;
+    left: 4px; right: 4px;
+    height: 1px;
+    background: #fca5a5;
+  }
+  .ab-screen-doc::before { top: 8px; }
+  .ab-screen-doc::after { top: 12px; right: 10px; }
+  .ab-screen-doc .check {
+    position: absolute;
+    bottom: -5px; right: -5px;
+    width: 14px; height: 14px;
+    background: #16a34a;
+    border-radius: 50%;
+    color: white;
+    font-size: 9px;
+    font-weight: 800;
+    display: flex; align-items: center; justify-content: center;
+    opacity: 0;
+    transform: scale(0);
+    animation: docCheck 4s ease-in-out infinite;
+  }
+  .ab-screen-doc:nth-child(1) .check { animation-delay: 0s; }
+  .ab-screen-doc:nth-child(2) .check { animation-delay: 0.3s; }
+  .ab-screen-doc:nth-child(3) .check { animation-delay: 0.6s; }
+  .ab-screen-doc:nth-child(4) .check { animation-delay: 0.9s; }
+  .ab-screen-doc:nth-child(5) .check { animation-delay: 1.2s; }
+  @keyframes docCheck {
+    0%, 35% { opacity: 0; transform: scale(0); }
+    40%, 75% { opacity: 1; transform: scale(1); }
+    80%, 100% { opacity: 0; transform: scale(0.5); }
+  }
+
+  /* Anon: face being anonymized */
+  .ab-anon-stage { position: relative; }
+  .ab-anon-card {
+    background: white;
+    border-radius: 10px;
+    padding: 8px 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    display: flex; align-items: center; gap: 8px;
+    width: 180px;
+    border: 1px solid #f4f4f5;
+  }
+  .ab-anon-av {
+    width: 28px; height: 28px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #ef4444, #f97316);
+    flex-shrink: 0;
+    transition: filter 1.5s, background 1.5s;
+    animation: anonBlur 4s ease-in-out infinite;
+  }
+  .ab-anon-info { flex: 1; font-size: 11px; }
+  .ab-anon-name {
+    font-weight: 700;
+    color: #0a0a0e;
+    margin-bottom: 2px;
+    transition: color 1.5s, filter 1.5s;
+    animation: anonText 4s ease-in-out infinite;
+  }
+  .ab-anon-meta { font-size: 9px; color: #71717a; }
+  @keyframes anonBlur {
+    0%, 30% { filter: blur(0); background: linear-gradient(135deg, #ef4444, #f97316); }
+    60%, 100% { filter: blur(6px); background: #d4d4d8; }
+  }
+  @keyframes anonText {
+    0%, 30% { filter: blur(0); color: #0a0a0e; }
+    60%, 100% { filter: blur(4px); color: #d4d4d8; }
+  }
+  .ab-anon-badge {
+    position: absolute;
+    top: -10px; right: -10px;
+    background: #16a34a;
+    color: white;
+    padding: 3px 8px;
+    border-radius: 100px;
+    font-size: 9px;
+    font-weight: 800;
+    opacity: 0;
+    animation: anonBadge 4s ease-in-out infinite;
+    box-shadow: 0 4px 10px rgba(22,163,74,0.3);
+  }
+  @keyframes anonBadge {
+    0%, 50% { opacity: 0; transform: scale(0.5); }
+    65%, 95% { opacity: 1; transform: scale(1); }
+    100% { opacity: 0; transform: scale(0.5); }
+  }
+
+  /* Nurture: email pulse waves */
+  .ab-nurture-stage { position: relative; }
+  .ab-nurture-icon {
+    width: 36px; height: 28px;
+    background: #ef4444;
+    border-radius: 6px;
+    position: relative;
+    z-index: 5;
+    box-shadow: 0 4px 12px rgba(239,68,68,0.3);
+  }
+  .ab-nurture-icon::before {
+    content: '';
+    position: absolute;
+    top: 4px; left: 4px; right: 4px; height: 16px;
+    background: linear-gradient(135deg, transparent 49%, white 50%, white 52%, transparent 53%);
+  }
+  .ab-nurture-wave {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    border: 2px solid #ef4444;
+    opacity: 0;
+    animation: nurtureWave 2.5s ease-out infinite;
+  }
+  .ab-nurture-wave.w2 { animation-delay: 0.6s; }
+  .ab-nurture-wave.w3 { animation-delay: 1.2s; }
+  @keyframes nurtureWave {
+    0% { opacity: 0.7; transform: translate(-50%, -50%) scale(1); }
+    100% { opacity: 0; transform: translate(-50%, -50%) scale(3.2); }
+  }
+  .ab-nurture-badge {
+    position: absolute;
+    top: -8px; right: -36px;
+    background: white;
+    padding: 3px 8px;
+    border-radius: 100px;
+    font-size: 9px;
+    font-weight: 700;
+    color: #16a34a;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    border: 1px solid #dcfce7;
+    opacity: 0;
+    animation: nurtureBadge 3s ease-in-out infinite;
+  }
+  @keyframes nurtureBadge {
+    0%, 30% { opacity: 0; transform: translate(0, 4px); }
+    40%, 80% { opacity: 1; transform: translate(0, 0); }
+    90%, 100% { opacity: 0; transform: translate(0, -4px); }
+  }
+
+  /* === TESTIMONIALS GRID === */
+  .fc-testi { padding: 100px 0; background: #fffbf6; }
+  .fc-testi-head { text-align: center; max-width: 720px; margin: 0 auto 60px; padding: 0 32px; }
+  .fc-testi-head h2 { margin-top: 18px; }
+  .fc-testi-head .lead { margin-top: 18px; font-size: 17px; color: #525252; }
+  .fc-testi-grid {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 32px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  .fc-testi-card {
+    background: white;
+    border: 1px solid #f4f4f5;
+    border-radius: 20px;
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .fc-testi-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.06);
+  }
+  .fc-testi-card .stars { color: #facc15; font-size: 14px; letter-spacing: 1px; }
+  .fc-testi-card blockquote {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.55;
+    color: #0a0a0e;
+    font-weight: 500;
+    font-family: 'Poppins';
+    flex: 1;
+  }
+  .fc-testi-card .who {
+    display: flex; align-items: center; gap: 12px;
+    padding-top: 16px;
+    border-top: 1px solid #f4f4f5;
+  }
+  .fc-testi-card .av {
+    width: 40px; height: 40px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #ef4444, #f97316);
+    color: white;
+    font-weight: 800;
+    font-size: 14px;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+  .fc-testi-card .name { font-weight: 700; font-size: 13px; }
+  .fc-testi-card .role { font-size: 11px; color: #71717a; }
+
+  /* === FAQ === */
+  .fc-faq { padding: 100px 0; background: white; }
+  .fc-faq-head { text-align: center; max-width: 720px; margin: 0 auto 48px; padding: 0 32px; }
+  .fc-faq-head h2 { margin-top: 18px; }
+  .fc-faq-list {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .fc-faq-item {
+    background: #fffbf6;
+    border-radius: 16px;
+    padding: 0;
+    border: 1px solid #f4f4f5;
+    transition: border-color 0.2s, transform 0.2s;
+    overflow: hidden;
+  }
+  .fc-faq-item:hover { border-color: rgba(239,68,68,0.4); }
+  .fc-faq-item summary {
+    padding: 22px 28px;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 14px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #0a0a0e;
+  }
+  .fc-faq-item summary::-webkit-details-marker { display: none; }
+  .fc-faq-item summary .plus {
+    width: 30px; height: 30px;
+    border-radius: 50%;
+    background: #fee2e2;
+    color: #ef4444;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 16px; font-weight: 800;
+    flex-shrink: 0;
+    transition: transform 0.3s;
+  }
+  .fc-faq-item[open] summary .plus { transform: rotate(45deg); background: #ef4444; color: white; }
+  .fc-faq-item .answer {
+    padding: 0 28px 22px;
+    font-size: 14px;
+    color: #525252;
+    line-height: 1.6;
+  }
+  .fc-faq-foot { text-align: center; margin-top: 36px; padding: 0 32px; font-size: 14px; color: #525252; }
+  .fc-faq-foot a { color: #ef4444; text-decoration: none; font-weight: 700; border-bottom: 1px solid #ef4444; }
+
+  /* === FOOTER (6 Spalten, dark) === */
+  .fc-footer { padding: 80px 0 30px; background: #050507; color: #d4d4d8; }
+  .fc-footer-grid {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 32px;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 40px;
+  }
+  .fc-footer-col-logo { padding-right: 20px; }
+  .fc-footer .lead-text { font-size: 13px; color: rgba(255,255,255,0.5); margin-top: 14px; line-height: 1.55; max-width: 220px; }
+  .fc-footer h6 {
+    margin: 0 0 14px 0;
+    font-size: 13px;
+    color: white;
+    font-weight: 700;
+    font-family: 'Poppins';
+    letter-spacing: -0.005em;
+  }
+  .fc-footer ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 9px; }
+  .fc-footer ul a {
+    color: rgba(255,255,255,0.55);
+    text-decoration: none;
+    font-size: 13px;
+    transition: color 0.15s;
+  }
+  .fc-footer ul a:hover { color: white; }
+  .fc-footer .socials {
+    display: flex;
+    gap: 10px;
+    margin-top: 18px;
+  }
+  .fc-footer .socials a {
+    width: 36px; height: 36px;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.08);
+    display: flex; align-items: center; justify-content: center;
+    color: rgba(255,255,255,0.6);
+    transition: all 0.2s;
+  }
+  .fc-footer .socials a:hover {
+    background: rgba(239,68,68,0.15);
+    border-color: rgba(239,68,68,0.3);
+    color: #ef4444;
+    transform: translateY(-2px);
+  }
+  .fc-footer .socials svg { width: 18px; height: 18px; }
+  .fc-footer .logo-foot { display: flex; align-items: center; gap: 10px; font-family: 'Poppins'; font-weight: 700; font-size: 19px; letter-spacing: -0.03em; text-decoration: none; color: white; }
+  .fc-footer .logo-foot .lg-icon { width: 32px; height: 32px; flex-shrink: 0; }
+  .fc-footer .logo-foot .lg-icon svg { width: 100%; height: 100%; display: block; }
+  .fc-footer .bottom {
+    max-width: 1280px;
+    margin: 60px auto 0;
+    padding: 24px 32px 0;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    color: rgba(255,255,255,0.4);
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .fc-footer .bottom a {
+    color: rgba(255,255,255,0.4);
+    text-decoration: none;
+    transition: color 0.15s;
+    margin-left: 8px;
+  }
+  .fc-footer .bottom a:hover { color: rgba(255,255,255,0.8); }
+  </style>
+</head>
+<body class="fc">
+
+    <!-- NAV (full production) -->
+    <nav class="fc-nav">
+      <div class="fc-nav-inner">
+        <div class="fc-nav-left">
+          <a href="/" class="fc-logo">
+            <div class="lg">
+              <svg viewBox="0 0 213 213" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#8B0000"/>
+                    <stop offset="100%" stop-color="#FF6347"/>
+                  </linearGradient>
+                </defs>
+                <g fill="url(#logoGrad)">
+                  <path d="M141.52,187.81c-2.87,6.61-5.6,12.87-8.3,19.14-1.37,3.18-2.92,6.06-7.07,5.96-4.33-.1-6.67-2.76-8.03-6.4-3.24-8.74-6.32-17.54-9.47-26.31-11.21-31.17-22.44-62.33-33.6-93.52-1.36-3.8-4.02-7.9-.24-11.64,3.58-3.54,7.58-1.12,11.23.19,39.64,14.22,79.26,28.53,118.89,42.79,2.57.92,4.91,2.06,6.37,4.51,2.63,4.41,1.25,8.3-4.16,10.73-13.82,6.21-27.55,12.67-41.62,18.26-7.25,2.88-11.81,7.15-14.42,14.48-2.61,7.35-6.25,14.34-9.59,21.83Z"/>
+                  <path d="M99.59,53.25c9.9-9.9,19.58-19.49,29.16-29.17,2.85-2.88,5.74-4.28,8.9-.82,2.92,3.2,2.09,6.28-.83,9.17-9.57,9.46-19.09,18.96-28.61,28.48-2.35,2.35-4.85,3.75-7.84,1.27-3-2.48-3.71-5.41-.78-8.93Z"/>
+                  <path d="M29.57,123.89c7.68-7.67,15.09-15.1,22.54-22.5,3.83-3.8,6.5-4.11,9.39-1.22,2.8,2.8,2.49,5.8-1.15,9.47-9.15,9.23-18.34,18.43-27.55,27.6-3.63,3.62-6.71,3.94-9.47.95-3.08-3.35-1.9-6.31,1.07-9.06,1.71-1.58,3.28-3.32,5.16-5.24Z"/>
+                  <path d="M.34,78.03c1.58-2.46,3.7-2.72,5.91-2.72,13.44,0,26.89,0,40.33,0,4.14,0,6.79,1.79,6.63,6.21-.16,4.39-3.19,5.22-6.93,5.2-13.11-.07-26.23,0-39.34-.05-6.47-.02-7.66-1.54-6.6-8.65Z"/>
+                  <path d="M48.68,40.75c4.34,4.4,8.38,8.59,12.49,12.73,2.74,2.77,2.92,5.63.06,8.24-2.71,2.47-5.58,2.59-8.36-.24-9.69-9.86-19.38-19.71-29.17-29.47-2.72-2.71-3.31-5.44-.63-8.26,2.83-2.99,5.75-2.65,8.65.27,5.51,5.56,11.14,11,16.98,16.73Z"/>
+                  <path d="M85.45,16.38c0,10.49-.08,20.48.01,30.46.03,3.91-1.18,6.72-5.51,6.62-4.17-.1-5.72-2.99-5.69-6.77.09-13.8.27-27.6.42-41.4.04-3.76,2.03-5.41,5.7-5.29,3.51.11,5.1,1.94,5.06,5.39-.04,3.5,0,6.99.01,10.99Z"/>
+                </g>
+              </svg>
+            </div>
+            <span class="text-grad">ShortSelect</span>
           </a>
-          <a
-            href="/preise"
-            class="inline-flex items-center px-8 py-3 border-2 border-border font-semibold rounded-lg text-base hover:border-primary/50 transition-colors"
-          >
-            Alle Details ansehen
-          </a>
+          <div class="fc-nav-menu">
+
+            <!-- Produkt Dropdown -->
+            <div class="nav-dd">
+              <button class="nav-dd-trigger">Produkt <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+              <div class="nav-dd-panel">
+                <div class="nav-dd-card wide">
+                  <a href="/produkt/ats-crm" class="nav-dd-item"><span class="lab">ATS &amp; CRM</span><span class="desc">Bewerbermanagement-Plattform</span></a>
+                  <a href="/produkt/karriereseite" class="nav-dd-item"><span class="lab">Karriereseite</span><span class="desc">Branded Career Pages &amp; Widget</span></a>
+                  <a href="/produkt/ki-features" class="nav-dd-item"><span class="lab">KI-Features</span><span class="desc">DSGVO-konforme Enterprise-KI</span></a>
+                  <a href="/produkt/automatisierung" class="nav-dd-item"><span class="lab">Automatisierung</span><span class="desc">Workflows &amp; Auto-E-Mails</span></a>
+                  <a href="/produkt/multiposting" class="nav-dd-item"><span class="lab">Multiposting</span><span class="desc">Alle Jobbörsen, ein Klick</span></a>
+                  <a href="/produkt/compliance" class="nav-dd-item"><span class="lab">DSGVO &amp; Compliance</span><span class="desc">Datenschutz by Design</span></a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Lösungen Dropdown -->
+            <div class="nav-dd">
+              <button class="nav-dd-trigger">Lösungen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+              <div class="nav-dd-panel">
+                <div class="nav-dd-card wide">
+                  <a href="/fuer/personalvermittlung" class="nav-dd-item"><span class="lab">Personalvermittlung</span><span class="desc">Multi-Mandanten für Agenturen</span></a>
+                  <a href="/fuer/startups" class="nav-dd-item"><span class="lab">Startups</span><span class="desc">Kostenlos starten, smart wachsen</span></a>
+                  <a href="/fuer/enterprise" class="nav-dd-item"><span class="lab">Enterprise</span><span class="desc">Skalierbar mit RBAC &amp; SSO</span></a>
+                  <a href="/branchen/it-recruiting" class="nav-dd-item"><span class="lab">IT-Recruiting</span><span class="desc">Tech-Talente finden</span></a>
+                  <a href="/branchen/finance" class="nav-dd-item"><span class="lab">Finance &amp; Banking</span><span class="desc">Diskret &amp; compliant</span></a>
+                  <a href="/branchen/healthcare" class="nav-dd-item"><span class="lab">Healthcare</span><span class="desc">Medizin &amp; Pflege</span></a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Vergleich Dropdown -->
+            <div class="nav-dd">
+              <button class="nav-dd-trigger">Vergleich <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+              <div class="nav-dd-panel">
+                <div class="nav-dd-card wide">
+                  <a href="/vergleich/shortselect-vs-personio" class="nav-dd-item"><span class="lab">vs. Personio</span><span class="desc">Spezialisiertes ATS vs. HR-Suite</span></a>
+                  <a href="/vergleich/shortselect-vs-softgarden" class="nav-dd-item"><span class="lab">vs. Softgarden</span><span class="desc">Moderne KI vs. Legacy</span></a>
+                  <a href="/vergleich/shortselect-vs-bullhorn" class="nav-dd-item"><span class="lab">vs. Bullhorn</span><span class="desc">Agil vs. Enterprise-Gigant</span></a>
+                  <a href="/vergleich/shortselect-vs-greenhouse" class="nav-dd-item"><span class="lab">vs. Greenhouse</span><span class="desc">DACH vs. US-Enterprise</span></a>
+                  <a href="/vergleich/shortselect-vs-vincere" class="nav-dd-item"><span class="lab">vs. Vincere</span><span class="desc">AgentBurst vs. Access-Legacy</span></a>
+                  <a href="/vergleich/shortselect-vs-teamtailor" class="nav-dd-item"><span class="lab">vs. Teamtailor</span><span class="desc">Agenturen vs. Employer Branding</span></a>
+                  <a href="/vergleich/beste-ats-software" class="nav-dd-item"><span class="lab">Beste ATS 2026</span><span class="desc">Der große Vergleich</span></a>
+                </div>
+              </div>
+            </div>
+
+            <a href="/job-selling" class="nav-link highlight">Sell the Job</a>
+            <a href="/preise" class="nav-link">Preise</a>
+            <a href="/kunden" class="nav-link">Kunden</a>
+            <a href="/blog" class="nav-link">Blog</a>
+            <a href="/ressourcen" class="nav-link">Ressourcen</a>
+          </div>
         </div>
-        <p class="text-xs text-muted-foreground mt-6">
-          30 Tage kostenlos. Keine Kreditkarte erforderlich. Jederzeit kündbar.
-        </p>
+        <div class="fc-nav-right">
+          <a href="https://app.shortselect.com/login" class="nav-cta-ghost">Login</a>
+          <a href="/demo" class="nav-cta-primary">Demo buchen</a>
+        </div>
       </div>
-    </div>
-  </section>
+    </nav>
 
-  <FAQSection />
-  <CTASection />
-</MarketingLayout>
+    <!-- HERO centered -->
+    <section class="fc-hero">
+      <div class="fc-hero-deco-dot d1"></div>
+      <div class="fc-hero-deco-dot d2"></div>
+      <div class="fc-hero-deco-dot d3"></div>
+      <div class="fc-hero-deco-dot d4"></div>
+      <div class="fc-hero-deco-star s1">★</div>
+      <div class="fc-hero-deco-star s2">✦</div>
+      <div class="fc-hero-inner reveal-stagger" data-reveal>
+        <div class="fc-pill"><span class="dot"></span> Live · 73 von 100 Founder-Plätzen frei</div>
+        <h1>Recruiting,<br>das sich anfühlt wie <span class="wavy">Magie.</span></h1>
+        <p class="lead">
+          ShortSelect ist die Pipeline-Software für Recruiting-Agenturen, die endlich aufhören wollen, <span class="marker">zwölf Tools</span> nebeneinander offen zu haben.
+        </p>
+        <div class="actions">
+          <a href="#" class="fc-btn">30 Tage kostenlos starten →</a>
+          <a href="#" class="fc-btn fc-btn-ghost">Demo ansehen</a>
+        </div>
+        <div class="trust">
+          <div class="avatars">
+            <div class="av">M</div><div class="av">A</div><div class="av">L</div><div class="av">S</div><div class="av">+</div>
+          </div>
+          <div class="text"><span class="stars">★★★★★</span> <strong>4,8</strong> von 200+ Agenturen</div>
+        </div>
+      </div>
+    </section>
 
-<script is:inline>
+    <!-- TRUSTED BY MARQUEE -->
+    <section class="fc-trusted">
+      <div class="lbl">Vertrauenspartner von führenden Recruiting-Agenturen</div>
+      <div class="fc-trusted-track">
+        <div class="fc-trusted-item">searched GmbH</div>
+        <div class="fc-trusted-item">AMONOVA GmbH</div>
+        <div class="fc-trusted-item">tw.con. GmbH</div>
+        <div class="fc-trusted-item">VeraPartners</div>
+        <div class="fc-trusted-item">Experiton UG</div>
+        <div class="fc-trusted-item">SalesWorx</div>
+        <div class="fc-trusted-item">Kerkhoff Experts</div>
+        <div class="fc-trusted-item">Hohenfeld Search</div>
+        <!-- Duplicate für seamless loop -->
+        <div class="fc-trusted-item">searched GmbH</div>
+        <div class="fc-trusted-item">AMONOVA GmbH</div>
+        <div class="fc-trusted-item">tw.con. GmbH</div>
+        <div class="fc-trusted-item">VeraPartners</div>
+        <div class="fc-trusted-item">Experiton UG</div>
+        <div class="fc-trusted-item">SalesWorx</div>
+        <div class="fc-trusted-item">Kerkhoff Experts</div>
+        <div class="fc-trusted-item">Hohenfeld Search</div>
+      </div>
+    </section>
+
+    <!-- SELL THE JOB TEASER -->
+    <section class="fc-stj">
+      <div class="fc-stj-inner reveal" data-reveal>
+        <span class="fc-stj-pill"><span style="width:6px;height:6px;background:#ef4444;border-radius:50%;animation:pulse 1.6s infinite"></span> NEU</span>
+        <h2>A-Player gewinnen statt auf Bewerbungen <span class="accent">hoffen</span>.</h2>
+        <p class="lead">Post &amp; Pray ist tot. Entdecke <strong>Sell the Job</strong>, die Methode mit der du A-Player aktiv gewinnst statt passiv zu warten.</p>
+        <div class="stj-magnet">
+
+          <!-- Old boring job posting (background, faded) -->
+          <div class="stj-old">
+            <div class="stj-old-title">Senior Backend Developer</div>
+            <div class="stj-old-line"></div>
+            <div class="stj-old-line"></div>
+            <div class="stj-old-line short"></div>
+            <div class="stj-old-stamp">— Job Posting —</div>
+            <div class="stj-old-fly">🪰</div>
+          </div>
+
+          <!-- Magnetic field rings -->
+          <div class="stj-field f3"></div>
+          <div class="stj-field f2"></div>
+          <div class="stj-field f1"></div>
+
+          <!-- Sparks scattered -->
+          <div class="stj-spark s1"></div>
+          <div class="stj-spark s2"></div>
+          <div class="stj-spark s3"></div>
+          <div class="stj-spark s4"></div>
+
+          <!-- Pulse rings emanating from card -->
+          <div class="stj-pulse"></div>
+          <div class="stj-pulse p2"></div>
+          <div class="stj-pulse p3"></div>
+
+          <!-- Live counter above -->
+          <div class="stj-live-counter">
+            <div class="live-dot"></div>
+            <span class="text">A-Player interessiert: <span class="num" id="stjCounter">47</span></span>
+          </div>
+
+          <!-- THE Sell-the-Job card -->
+          <div class="stj-card">
+            <span class="stj-card-badge">Hot Job</span>
+            <div class="stj-card-title">Senior Backend Engineer<br>im Recruiting-Stack</div>
+            <div class="stj-card-stars">★★★★★ <span>5.0 · 12 Mitarbeiter</span></div>
+            <div class="stj-card-perks">
+              <div class="row">95k–115k + 13. Gehalt</div>
+              <div class="row">100% Remote · 4-Tage-Woche</div>
+              <div class="row">Equity ab Tag 1</div>
+            </div>
+            <div class="stj-card-cta">Jetzt bewerben →</div>
+          </div>
+
+          <!-- A-Player avatars orbiting in -->
+          <div class="stj-aplayer a1">JK<div class="star">★</div></div>
+          <div class="stj-aplayer a2">MA<div class="star">★</div></div>
+          <div class="stj-aplayer a3">LB<div class="star">★</div></div>
+          <div class="stj-aplayer a4">TM<div class="star">★</div></div>
+          <div class="stj-aplayer a5">SE<div class="star">★</div></div>
+
+        </div>
+        <div class="actions">
+          <a href="/job-selling" class="fc-btn">Sell the Job entdecken →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- AGENTS VS FEATURES -->
+    <section class="fc-avf">
+      <div class="fc-avf-head reveal" data-reveal>
+        <div class="fc-pill"><span class="dot"></span> Der Unterschied</div>
+        <h2>KI-Features vs. <span class="wavy">KI-Agents.</span></h2>
+        <p class="lead">Andere Tools warten auf deinen Klick. ShortSelect arbeitet, während du schläfst.</p>
+      </div>
+      <div class="fc-avf-grid reveal-stagger" data-reveal>
+        <div class="fc-avf-card lose" data-tilt>
+          <div class="avf-dash lose">
+            <div class="avf-dash-zzz">Zz</div>
+            <div class="avf-dash-row">
+              <span class="live-dot"></span>
+              <span class="lbl lbl-status">Wartend</span>
+              <span class="timestamp">Stand: 14:32</span>
+            </div>
+            <div class="avf-dash-counter">
+              <span class="num">0</span>
+              <span class="total">/ 47 Aufgaben</span>
+            </div>
+            <div class="avf-dash-progress"><i></i></div>
+            <div class="avf-dash-agents">
+              <div class="avf-dash-agent">Match</div>
+              <div class="avf-dash-agent">Rank</div>
+              <div class="avf-dash-agent">Screen</div>
+              <div class="avf-dash-agent">Nurture</div>
+            </div>
+          </div>
+          <div class="head">
+            <div class="ic">⚙</div>
+            <div>
+              <div class="ti">KI-Features</div>
+              <div class="sub">Wettbewerber</div>
+            </div>
+          </div>
+          <ul>
+            <li><div class="mark">−</div>Manuell auslösen: Recruiter klickt "Matching starten"</li>
+            <li><div class="mark">−</div>Nur reaktiv: Läuft erst nach Benutzeraktion</li>
+            <li><div class="mark">−</div>Isoliert: Jedes Feature arbeitet für sich</li>
+            <li><div class="mark">−</div>Keine Lernkurve: Statische Regeln und Filter</li>
+            <li><div class="mark">−</div>Tageszeit-abhängig: Nur aktiv wenn jemand arbeitet</li>
+          </ul>
+        </div>
+        <div class="fc-avf-card win" data-tilt>
+          <div class="avf-dash win">
+            <div class="avf-dash-live-badge">LIVE</div>
+            <div class="avf-dash-row">
+              <span class="live-dot"></span>
+              <span class="lbl lbl-status">Aktiv · gerade jetzt</span>
+              <span class="timestamp">24/7</span>
+            </div>
+            <div class="avf-dash-counter">
+              <span class="num" id="winCounter">147</span>
+              <span class="total">Aufgaben heute</span>
+            </div>
+            <div class="avf-dash-progress"><i></i></div>
+            <div class="avf-dash-agents">
+              <div class="avf-dash-agent"><span class="agent-dot"></span>Match</div>
+              <div class="avf-dash-agent"><span class="agent-dot"></span>Rank</div>
+              <div class="avf-dash-agent"><span class="agent-dot"></span>Screen</div>
+              <div class="avf-dash-agent"><span class="agent-dot"></span>Nurture</div>
+            </div>
+            <div class="avf-dash-feed">
+              <div class="avf-dash-feed-list">
+                <div class="avf-dash-feed-item"><span class="feed-dot"></span><span class="who">Match:</span><span class="ev">Julia K. → 94/100</span></div>
+                <div class="avf-dash-feed-item"><span class="feed-dot"></span><span class="who">Screen:</span><span class="ev">12 CVs gefiltert</span></div>
+                <div class="avf-dash-feed-item"><span class="feed-dot"></span><span class="who">Nurture:</span><span class="ev">Mehmet A. follow-up</span></div>
+                <div class="avf-dash-feed-item"><span class="feed-dot"></span><span class="who">Rank:</span><span class="ev">Top-5 sortiert</span></div>
+                <!-- Duplicate für loop -->
+                <div class="avf-dash-feed-item"><span class="feed-dot"></span><span class="who">Match:</span><span class="ev">Julia K. → 94/100</span></div>
+                <div class="avf-dash-feed-item"><span class="feed-dot"></span><span class="who">Screen:</span><span class="ev">12 CVs gefiltert</span></div>
+                <div class="avf-dash-feed-item"><span class="feed-dot"></span><span class="who">Nurture:</span><span class="ev">Mehmet A. follow-up</span></div>
+                <div class="avf-dash-feed-item"><span class="feed-dot"></span><span class="who">Rank:</span><span class="ev">Top-5 sortiert</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="head">
+            <div class="ic">⚡</div>
+            <div>
+              <div class="ti">KI-Agents</div>
+              <div class="sub">ShortSelect AgentBurst</div>
+            </div>
+          </div>
+          <ul>
+            <li><div class="mark">✓</div>Du kommst morgens und die Shortlist steht</li>
+            <li><div class="mark">✓</div>Über Nacht werden neue Bewerber gescreent und gerankt</li>
+            <li><div class="mark">✓</div>Matching, Screening und Follow-up greifen nahtlos ineinander</li>
+            <li><div class="mark">✓</div>Je mehr du besetzt, desto präziser werden die Vorschläge</li>
+            <li><div class="mark">✓</div>Auch am Wochenende werden Kandidaten nicht vertröstet</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS with mini-Lottie animations per card -->
+    <section class="fc-how">
+      <div class="fc-how-head reveal" data-reveal>
+        <div class="fc-pill" style="background:#fef3c7;color:#d97706"><span class="dot" style="background:#d97706"></span> Funktionsweise</div>
+        <h2>Drei Schritte zum<br>vollen <span class="wavy">Funnel.</span></h2>
+        <p class="lead">Was bei Coveto und Bullhorn ein Kanban-Board mit zehn Tools drumherum ist, ist bei uns eine einzige Pipeline.</p>
+      </div>
+      <div class="fc-how-cards reveal-stagger" data-reveal>
+        <div class="fc-how-card c1">
+          <div>
+            <div class="step-badge">1</div>
+            <h4>Sourcing,<br>im Hintergrund.</h4>
+          </div>
+          <div class="lottie-radar">
+            <svg viewBox="0 0 200 80">
+              <circle cx="100" cy="80" r="20" fill="none" stroke="#d97706" stroke-width="1" opacity="0.2" />
+              <circle cx="100" cy="80" r="40" fill="none" stroke="#d97706" stroke-width="1" opacity="0.15" />
+              <circle cx="100" cy="80" r="60" fill="none" stroke="#d97706" stroke-width="1" opacity="0.1" />
+              <g class="radar-sweep">
+                <path d="M 100 80 L 100 0 A 80 80 0 0 1 178 60 Z" fill="#d97706" opacity="0.15"/>
+              </g>
+              <circle class="radar-blip" cx="60" cy="40" r="3" fill="#d97706" />
+              <circle class="radar-blip b2" cx="140" cy="30" r="3" fill="#d97706" />
+              <circle class="radar-blip b3" cx="120" cy="55" r="3" fill="#d97706" />
+            </svg>
+          </div>
+          <p>KI-Agents crawlen LinkedIn, Indeed und Xing. Du siehst nur, was wirklich passt.</p>
+        </div>
+        <div class="fc-how-card c2">
+          <div>
+            <div class="step-badge">2</div>
+            <h4>Matching,<br>nach Substanz.</h4>
+          </div>
+          <div class="lottie-match">
+            <div class="match-card"><div class="av">JK</div>Julia<div class="sc">94</div></div>
+            <div class="match-vs">vs</div>
+            <div class="match-card m2"><div class="av" style="background:#f97316">MA</div>Mehmet<div class="sc">91</div></div>
+            <div class="match-vs">vs</div>
+            <div class="match-card m3"><div class="av" style="background:#facc15;color:#0a0a0e">LB</div>Lara<div class="sc">87</div></div>
+          </div>
+          <p>Skills, Erfahrung, Cultural Fit. Top-5 mit lesbarer Begründung pro Match.</p>
+        </div>
+        <div class="fc-how-card c3">
+          <div>
+            <div class="step-badge">3</div>
+            <h4>Closing,<br>mit Übersicht.</h4>
+          </div>
+          <div class="lottie-close">
+            <div class="close-pipeline">
+              <div class="close-stage" data-active="0">Source</div>
+              <span class="close-arrow a1">→</span>
+              <div class="close-stage" data-active="1">Screen</div>
+              <span class="close-arrow a2">→</span>
+              <div class="close-stage" data-active="2">Interv.</div>
+              <span class="close-arrow a3">→</span>
+              <div class="close-stage" data-active="3">Hire ✓</div>
+            </div>
+          </div>
+          <p>Pipeline-Stages, Follow-ups, Risiko-Alarme. Du hältst die Beziehung, wir den Plan.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- AI FEATURES (5 AgentBurst Agents) -->
+    <section class="fc-ai">
+      <div class="fc-ai-head reveal" data-reveal>
+        <div class="fc-pill"><span class="dot"></span> AgentBurst Agents</div>
+        <h2>Weniger Klicks,<br><span class="wavy">mehr Placements.</span></h2>
+        <p class="lead">AgentBurst-Agents arbeiten rund um die Uhr im Hintergrund, damit du dich auf das konzentrierst was zählt: Beziehungen aufbauen.</p>
+      </div>
+      <div class="fc-ai-grid reveal-stagger" data-reveal>
+
+        <!-- MATCH: avatars connecting + score -->
+        <div class="fc-ai-card">
+          <div class="ab-anim">
+            <div class="ab-match-stage">
+              <div class="ab-match-pulse"></div>
+              <div class="ab-match-av left">JK</div>
+              <div class="ab-match-av right">MA</div>
+              <div class="ab-match-score">94 / 100</div>
+            </div>
+          </div>
+          <span class="badge-prefix">★ Kern-Agent</span>
+          <h4>AgentBurst Match</h4>
+          <p>Du siehst sofort, wer wirklich passt. Match-Scores 0–100 sortieren Kandidaten nach Skills, Erfahrung und Kulturfit.</p>
+        </div>
+
+        <!-- RANK: bars resorting -->
+        <div class="fc-ai-card">
+          <div class="ab-anim">
+            <div class="ab-rank-stage">
+              <div class="ab-rank-bar r1"></div>
+              <div class="ab-rank-bar r2"></div>
+              <div class="ab-rank-bar r3"></div>
+            </div>
+          </div>
+          <span class="badge-prefix">Auto-Sort</span>
+          <h4>AgentBurst Rank</h4>
+          <p>Dein Top-Kandidat steht immer ganz oben. Priorisiert nach deinen Kriterien, ohne manuelles Sortieren.</p>
+        </div>
+
+        <!-- SCREEN: docs with checkmarks -->
+        <div class="fc-ai-card">
+          <div class="ab-anim">
+            <div class="ab-screen-stage">
+              <div class="ab-screen-doc"><div class="check">✓</div></div>
+              <div class="ab-screen-doc"><div class="check">✓</div></div>
+              <div class="ab-screen-doc"><div class="check">✓</div></div>
+              <div class="ab-screen-doc"><div class="check">✓</div></div>
+              <div class="ab-screen-doc"><div class="check">✓</div></div>
+            </div>
+          </div>
+          <span class="badge-prefix">100x schneller</span>
+          <h4>AgentBurst Screen</h4>
+          <p>100 Bewerbungen in Minuten statt Stunden. Qualifikationen geprüft, Knockout-Kriterien bewertet, Shortlist fertig.</p>
+        </div>
+
+        <!-- ANON: face being anonymized -->
+        <div class="fc-ai-card">
+          <div class="ab-anim">
+            <div class="ab-anon-stage">
+              <div class="ab-anon-card">
+                <div class="ab-anon-av"></div>
+                <div class="ab-anon-info">
+                  <div class="ab-anon-name">Julia Krüger, 32</div>
+                  <div class="ab-anon-meta">München · Senior Backend</div>
+                </div>
+              </div>
+              <div class="ab-anon-badge">DSGVO</div>
+            </div>
+          </div>
+          <span class="badge-prefix">DSGVO</span>
+          <h4>AgentBurst Anon</h4>
+          <p>Stell ein wer wirklich kann, nicht wer am besten klingt. Name, Alter und Foto werden automatisch entfernt.</p>
+        </div>
+
+        <!-- NURTURE: email with pulse waves -->
+        <div class="fc-ai-card">
+          <div class="ab-anim">
+            <div class="ab-nurture-stage">
+              <div class="ab-nurture-wave"></div>
+              <div class="ab-nurture-wave w2"></div>
+              <div class="ab-nurture-wave w3"></div>
+              <div class="ab-nurture-icon"></div>
+              <div class="ab-nurture-badge">✓ Sent</div>
+            </div>
+          </div>
+          <span class="badge-prefix">24/7</span>
+          <h4>AgentBurst Nurture</h4>
+          <p>Kein Kandidat wird vergessen, kein Follow-up verpasst. Nachfass-Mails, Statusupdates und Erinnerungen laufen im Hintergrund.</p>
+        </div>
+
+        <!-- ALL AGENTS CARD -->
+        <div class="fc-ai-card" style="background:linear-gradient(135deg,#0a0a0e,#1a1a22);color:white;border:none">
+          <div class="ab-anim" style="background:rgba(255,255,255,0.04);border-color:rgba(255,255,255,0.08)">
+            <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:6px;padding:10px">
+              <div style="background:rgba(239,68,68,0.15);color:#fca5a5;padding:3px 8px;border-radius:100px;font-size:9px;font-weight:700">Sourcing</div>
+              <div style="background:rgba(239,68,68,0.15);color:#fca5a5;padding:3px 8px;border-radius:100px;font-size:9px;font-weight:700">Outreach</div>
+              <div style="background:rgba(239,68,68,0.15);color:#fca5a5;padding:3px 8px;border-radius:100px;font-size:9px;font-weight:700">Risk</div>
+              <div style="background:rgba(239,68,68,0.15);color:#fca5a5;padding:3px 8px;border-radius:100px;font-size:9px;font-weight:700">Pipeline</div>
+              <div style="background:rgba(239,68,68,0.15);color:#fca5a5;padding:3px 8px;border-radius:100px;font-size:9px;font-weight:700">Reports</div>
+              <div style="background:rgba(239,68,68,0.15);color:#fca5a5;padding:3px 8px;border-radius:100px;font-size:9px;font-weight:700">Pool</div>
+              <div style="background:rgba(239,68,68,0.15);color:#fca5a5;padding:3px 8px;border-radius:100px;font-size:9px;font-weight:700">Doc</div>
+            </div>
+          </div>
+          <span class="badge-prefix" style="background:rgba(239,68,68,0.2);color:#fca5a5">+7 weitere</span>
+          <h4 style="color:white">Alle Agents entdecken</h4>
+          <p style="color:rgba(255,255,255,0.7)">Sieben weitere Agents in der Plattform für Sourcing, Outreach, Risiko-Erkennung, Pipeline-Management und mehr.</p>
+          <a href="/produkt/ki-features" style="display:inline-block;margin-top:14px;color:#ef4444;font-size:13px;font-weight:700;border-bottom:1px solid #ef4444;padding-bottom:2px;text-decoration:none">Alle ansehen →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- BENTO FEATURES with constant animations -->
+    <section class="fc-feat">
+      <div class="fc-feat-head reveal" data-reveal>
+        <div class="fc-pill"><span class="dot"></span> Die ganze Plattform</div>
+        <h2>Sechs Module.<br>Eine <span class="wavy">Pipeline.</span></h2>
+        <p style="margin-top:18px;font-size:17px;color:#525252;max-width:540px;margin-left:auto;margin-right:auto">Alles was deine Agentur täglich braucht, eng integriert in einer Plattform.</p>
+      </div>
+      <div class="fc-bento reveal-stagger" data-reveal>
+
+        <!-- BENTO 1: Kanban Board (sorting candidate cards) -->
+        <div class="bento bento-1">
+          <div class="pill">★ Hauptfeature</div>
+          <h5>Kanban Board</h5>
+          <p>Kein Kandidat geht verloren. Sieh auf einen Blick, wo jeder Bewerber steht, und schieb ihn per Drag &amp; Drop weiter.</p>
+          <div class="ranking-anim" id="rankingAnim">
+            <div class="rank-row top" data-i="0"><div class="av">JK</div><div class="nm">Julia Krüger</div><div class="sc">Hired</div></div>
+            <div class="rank-row" data-i="1"><div class="av">MA</div><div class="nm">Mehmet Aydin</div><div class="sc">Int.</div></div>
+            <div class="rank-row" data-i="2"><div class="av">LB</div><div class="nm">Lara Bauer</div><div class="sc">Screen</div></div>
+            <div class="rank-row" data-i="3"><div class="av">TM</div><div class="nm">Tom Meier</div><div class="sc">Src</div></div>
+          </div>
+        </div>
+
+        <!-- BENTO 2: Interview Scheduling (Termine ohne E-Mail-Ping-Pong) -->
+        <div class="bento bento-2">
+          <div class="pill">Calendar Sync</div>
+          <h5>Interview Scheduling.<br>Kein E-Mail-Ping-Pong.</h5>
+          <div class="stream-anim">
+            <div class="stream-list">
+              <div class="stream-item"><div class="ic"></div><div><span class="who">Mo 14:00:</span> <span class="ev">Julia K. · Tech-Interview</span></div></div>
+              <div class="stream-item"><div class="ic"></div><div><span class="who">Mo 16:30:</span> <span class="ev">Mehmet A. · Erstgespräch</span></div></div>
+              <div class="stream-item"><div class="ic"></div><div><span class="who">Di 09:00:</span> <span class="ev">Lara B. · Final mit Kunden</span></div></div>
+              <div class="stream-item"><div class="ic"></div><div><span class="who">Di 11:00:</span> <span class="ev">Tom M. · Recruiter-Screen</span></div></div>
+              <div class="stream-item"><div class="ic"></div><div><span class="who">Mi 10:30:</span> <span class="ev">3 Bewerbungs-Reviews</span></div></div>
+              <div class="stream-item"><div class="ic"></div><div><span class="who">Mi 15:00:</span> <span class="ev">Müller AG · Briefing</span></div></div>
+              <!-- duplicate für loop -->
+              <div class="stream-item"><div class="ic"></div><div><span class="who">Mo 14:00:</span> <span class="ev">Julia K. · Tech-Interview</span></div></div>
+              <div class="stream-item"><div class="ic"></div><div><span class="who">Mo 16:30:</span> <span class="ev">Mehmet A. · Erstgespräch</span></div></div>
+              <div class="stream-item"><div class="ic"></div><div><span class="who">Di 09:00:</span> <span class="ev">Lara B. · Final mit Kunden</span></div></div>
+              <div class="stream-item"><div class="ic"></div><div><span class="who">Di 11:00:</span> <span class="ev">Tom M. · Recruiter-Screen</span></div></div>
+              <div class="stream-item"><div class="ic"></div><div><span class="who">Mi 10:30:</span> <span class="ev">3 Bewerbungs-Reviews</span></div></div>
+              <div class="stream-item"><div class="ic"></div><div><span class="who">Mi 15:00:</span> <span class="ev">Müller AG · Briefing</span></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- BENTO 3: Talent Pools (pipeline view as pool refresher) -->
+        <div class="bento bento-3">
+          <div class="pill">Talent Pools</div>
+          <h5>Nie wieder bei null anfangen.</h5>
+          <div class="pipe-anim" id="pipeAnim">
+            <div class="pipe-col">
+              <div class="lbl">Tech</div>
+              <div class="pipe-card" data-stage="0">142</div>
+              <div class="pipe-counter">Pool</div>
+            </div>
+            <div class="pipe-col">
+              <div class="lbl">Sales</div>
+              <div class="pipe-card" data-stage="1">89</div>
+              <div class="pipe-counter">Pool</div>
+            </div>
+            <div class="pipe-col">
+              <div class="lbl">C-Level</div>
+              <div class="pipe-card" data-stage="2">34</div>
+              <div class="pipe-counter">Pool</div>
+            </div>
+            <div class="pipe-col">
+              <div class="lbl">Aktiv</div>
+              <div class="pipe-card hot" data-stage="3">12</div>
+              <div class="pipe-counter">Pool</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- BENTO 4: Client Portal (dark whitelabel mockup) -->
+        <div class="bento bento-4">
+          <div>
+            <div class="pill">Whitelabel</div>
+            <h5>Client Portal</h5>
+          </div>
+          <div class="wave-anim">
+            <div class="wave-bar"></div><div class="wave-bar"></div><div class="wave-bar"></div>
+            <div class="wave-bar"></div><div class="wave-bar"></div><div class="wave-bar"></div>
+            <div class="wave-bar"></div><div class="wave-bar"></div><div class="wave-bar"></div>
+            <div class="wave-bar"></div><div class="wave-bar"></div><div class="wave-bar"></div>
+          </div>
+          <div class="interview-meta"><span class="live-dot"></span>Live · Müller AG eingeloggt</div>
+        </div>
+
+        <!-- BENTO 5: Reports & Analytics (bar chart) -->
+        <div class="bento bento-5">
+          <div class="pill">Analytics</div>
+          <h5>Reports &amp; Analytics</h5>
+          <div class="chart-anim">
+            <div class="chart-bar"></div><div class="chart-bar"></div><div class="chart-bar"></div>
+            <div class="chart-bar"></div><div class="chart-bar"></div><div class="chart-bar"></div>
+            <div class="chart-bar"></div><div class="chart-bar"></div>
+          </div>
+        </div>
+
+        <!-- BENTO 6: Document Management (Files popping in) -->
+        <div class="bento bento-6">
+          <div class="pill">Documents</div>
+          <h5>Document Management.<br>Jedes Dokument griffbereit.</h5>
+          <div class="notif-anim">
+            <div class="notif-pop">
+              <div class="ic-circle">📄</div>
+              <div><div class="ti">CV_Julia_Krüger.pdf</div><div class="sb">automatisch geparsed</div></div>
+            </div>
+            <div class="notif-pop n2">
+              <div class="ic-circle">📋</div>
+              <div><div class="ti">Vertrag_Müller_AG_v3.pdf</div><div class="sb">unterschrieben</div></div>
+            </div>
+            <div class="notif-pop n3">
+              <div class="ic-circle">📊</div>
+              <div><div class="ti">Job_Profile_Backend.docx</div><div class="sb">erstellt &amp; verteilt</div></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- STATS with animated bars -->
+    <section class="fc-stats">
+      <div class="fc-stats-head reveal" data-reveal>
+        <div class="fc-pill" style="background:rgba(239,68,68,0.2);color:#fca5a5"><span class="dot"></span> Wirkung</div>
+        <h2>Zahlen, die <span class="wavy">zählen.</span></h2>
+      </div>
+      <div class="fc-stats-grid reveal-stagger" data-reveal>
+        <div class="fc-stat-card" style="--w: 100%">
+          <div class="icon">👥</div>
+          <div class="num"><span data-counter="10000" data-suffix="+">0</span></div>
+          <div class="label">Kandidaten vermittelt</div>
+          <div class="progress"><i></i></div>
+        </div>
+        <div class="fc-stat-card" style="--w: 92%">
+          <div class="icon">🎯</div>
+          <div class="num"><span data-counter="500" data-suffix="+">0</span></div>
+          <div class="label">Erfolgreiche Placements</div>
+          <div class="progress"><i></i></div>
+        </div>
+        <div class="fc-stat-card" style="--w: 50%">
+          <div class="icon">⚡</div>
+          <div class="num"><span data-counter="50" data-suffix="%">0</span></div>
+          <div class="label">Zeitersparnis pro Stelle</div>
+          <div class="progress"><i></i></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="fc-testi">
+      <div class="fc-testi-head reveal" data-reveal>
+        <div class="fc-pill"><span class="dot"></span> Stimmen</div>
+        <h2>Was unsere Kunden<br><span class="wavy">über uns sagen.</span></h2>
+        <p class="lead">Hunderte Recruiting-Teams vertrauen auf ShortSelect.</p>
+      </div>
+      <div class="fc-testi-grid reveal-stagger" data-reveal>
+        <div class="fc-testi-card">
+          <div class="stars">★★★★★</div>
+          <blockquote>"Mit ShortSelect behalten wir den Überblick über alle Kandidaten auf einen Blick. Das AI-Matching spart uns täglich Stunden an manueller Arbeit."</blockquote>
+          <div class="who">
+            <div class="av">YS</div>
+            <div>
+              <div class="name">Yasar Sentürk</div>
+              <div class="role">Geschäftsführer · searched GmbH</div>
+            </div>
+          </div>
+        </div>
+        <div class="fc-testi-card">
+          <div class="stars">★★★★★</div>
+          <blockquote>"Das Client Portal ist ein absoluter Gamechanger. Unsere Kunden sehen den Status ihrer Positionen in Echtzeit, das schafft ein ganz neues Level an Vertrauen."</blockquote>
+          <div class="who">
+            <div class="av" style="background:linear-gradient(135deg,#f97316,#facc15)">RB</div>
+            <div>
+              <div class="name">Rüdiger Bruns</div>
+              <div class="role">Geschäftsführer · AMONOVA GmbH</div>
+            </div>
+          </div>
+        </div>
+        <div class="fc-testi-card">
+          <div class="stars">★★★★★</div>
+          <blockquote>"Die Vermittlungszeit hat sich seit ShortSelect drastisch reduziert. Automatisiertes Kandidaten-Matching und strukturierte Pipelines machen den Unterschied."</blockquote>
+          <div class="who">
+            <div class="av" style="background:linear-gradient(135deg,#14b8a6,#0a0a0e)">TW</div>
+            <div>
+              <div class="name">Dr. Thomas Wendel</div>
+              <div class="role">Geschäftsführer · tw.con. GmbH</div>
+            </div>
+          </div>
+        </div>
+        <div class="fc-testi-card">
+          <div class="stars">★★★★★</div>
+          <blockquote>"ShortSelect hat unsere gesamte Recruiting-Pipeline transparent gemacht. Kein Kandidat geht mehr verloren und unsere Abschlussrate ist deutlich gestiegen."</blockquote>
+          <div class="who">
+            <div class="av" style="background:linear-gradient(135deg,#a855f7,#ef4444)">BB</div>
+            <div>
+              <div class="name">Bahadir Battal</div>
+              <div class="role">Gründer · VeraPartners Leadership</div>
+            </div>
+          </div>
+        </div>
+        <div class="fc-testi-card">
+          <div class="stars">★★★★★</div>
+          <blockquote>"Seit wir ShortSelect nutzen, läuft unser gesamter Bewerbungsprozess auf Autopilot. Das Screening und die automatisierten Workflows haben unsere Effizienz verdreifacht."</blockquote>
+          <div class="who">
+            <div class="av" style="background:linear-gradient(135deg,#ef4444,#a855f7)">AN</div>
+            <div>
+              <div class="name">Alireza Nikjou</div>
+              <div class="role">Geschäftsführer · Experiton UG</div>
+            </div>
+          </div>
+        </div>
+        <div class="fc-testi-card">
+          <div class="stars">★★★★★</div>
+          <blockquote>"Recruiting mit ShortSelect fühlt sich an wie Cheaten. Das ATS denkt mit, priorisiert automatisch und hält unser Team immer auf dem neuesten Stand."</blockquote>
+          <div class="who">
+            <div class="av" style="background:linear-gradient(135deg,#14b8a6,#facc15)">NB</div>
+            <div>
+              <div class="name">Nordin Begdouri</div>
+              <div class="role">Geschäftsführer · SalesWorx</div>
+            </div>
+          </div>
+        </div>
+        <div class="fc-testi-card">
+          <div class="stars">★★★★★</div>
+          <blockquote>"ShortSelect hat unsere Expertenvermittlung auf ein neues Level gebracht. Wir platzieren doppelt so viele Interim Manager im Einkauf, weil die Pipelines sauber laufen."</blockquote>
+          <div class="who">
+            <div class="av" style="background:linear-gradient(135deg,#0a0a0e,#ef4444)">HP</div>
+            <div>
+              <div class="name">Hasim Pacal</div>
+              <div class="role">Geschäftsführer · Kerkhoff Experts</div>
+            </div>
+          </div>
+        </div>
+        <div class="fc-testi-card">
+          <div class="stars">★★★★★</div>
+          <blockquote>"Das ATS von ShortSelect hat unser Fulfillment um 80% entlastet. Endlich können wir skalieren, ohne im operativen Chaos zu versinken."</blockquote>
+          <div class="who">
+            <div class="av" style="background:linear-gradient(135deg,#f97316,#a855f7)">ET</div>
+            <div>
+              <div class="name">Ekrem Topcan</div>
+              <div class="role">Geschäftsführer · Hohenfeld Search</div>
+            </div>
+          </div>
+        </div>
+        <div class="fc-testi-card" style="background:linear-gradient(135deg,#ef4444,#f97316);color:white;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center">
+          <div style="font-family:'Poppins';font-size:48px;font-weight:800;line-height:1">+200</div>
+          <div style="font-size:14px;margin-top:8px;opacity:0.9">weitere Recruiting-Agenturen</div>
+          <a href="/kunden" style="margin-top:14px;background:white;color:#ef4444;padding:8px 16px;border-radius:100px;font-size:12px;font-weight:700;text-decoration:none">Alle ansehen →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING -->
+    <section class="fc-price">
+      <div class="fc-price-head reveal" data-reveal>
+        <div class="fc-pill"><span class="dot"></span> Founders Deal</div>
+        <h2>Ein Preis. Alles drin.<br><span class="wavy">Auf Lebenszeit.</span></h2>
+      </div>
+      <div class="fc-price-card reveal" data-reveal>
+        <div class="sticker">⚡ Nur 73 von 100</div>
+        <h3>Founders Deal</h3>
+        <p class="desc">Pro Tenant. Alle Recruiter-Plätze. Alle Werkzeuge. Auf Lebenszeit garantiert.</p>
+        <div class="price-row">
+          <span class="old">150€</span>
+          <span class="new">89€</span>
+          <span class="month">/ Monat</span>
+        </div>
+        <div class="features">
+          <div class="feat-row">Unlimited Recruiter</div>
+          <div class="feat-row">Alle KI-Agents inklusive</div>
+          <div class="feat-row">Client Portal mit eigenem Branding</div>
+          <div class="feat-row">Preis lebenslang garantiert</div>
+        </div>
+        <a href="#" class="fc-btn">30 Tage starten →</a>
+        <div class="terms">Keine Kreditkarte · jederzeit kündbar</div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="fc-faq">
+      <div class="fc-faq-head reveal" data-reveal>
+        <div class="fc-pill" style="background:#dbeafe;color:#2563eb"><span class="dot" style="background:#2563eb"></span> Fragen &amp; Antworten</div>
+        <h2>Häufig gestellte<br><span class="wavy">Fragen.</span></h2>
+        <p class="lead">Hier findest du Antworten auf die wichtigsten Fragen zu ShortSelect.</p>
+      </div>
+      <div class="fc-faq-list reveal-stagger" data-reveal>
+        <details class="fc-faq-item" open>
+          <summary>Was ist im Founders Deal enthalten? <span class="plus">+</span></summary>
+          <div class="answer">Alle Funktionen von ShortSelect: unbegrenzte Jobs und Kandidaten, AgentBurst KI-Engine für Matching, Screening, Ranking und Nurturing, Multi-Mandanten mit Client Portal, Karriereseite, Multiposting, Talent Pools, Interview Scheduling, REST API, Webhooks und Priority Support. Ein Preis pro Agentur, keine User-Lizenzen, keine Add-On-Fees.</div>
+        </details>
+        <details class="fc-faq-item">
+          <summary>Was passiert nach den 30 Tagen? <span class="plus">+</span></summary>
+          <div class="answer">Nach Ablauf des Trials bleibt dein Account erhalten und du wechselst in den Founders Deal für 89 € pro Monat. Wenn du nicht weitermachen möchtest, wird dein Account ohne weitere Kosten archiviert. Wir erinnern dich rechtzeitig vor Trial-Ende per E-Mail, damit du aktiv entscheiden kannst.</div>
+        </details>
+        <details class="fc-faq-item">
+          <summary>Brauche ich eine Kreditkarte für den Trial? <span class="plus">+</span></summary>
+          <div class="answer">Nein. Der 30-tägige Trial ist komplett kostenlos und ohne Zahlungsdaten. Du gibst deine Zahlungsmethode erst an, wenn du nach dem Trial in den Founders Deal wechseln möchtest.</div>
+        </details>
+        <details class="fc-faq-item">
+          <summary>Bleibt der Preis von 89 € garantiert? <span class="plus">+</span></summary>
+          <div class="answer">Ja. Wer den Founders Deal nutzt, bezahlt diesen Preis auf Lebenszeit, auch wenn wir später die Standard-Preise anheben. Der Founders Deal ist limitiert auf die ersten 100 Recruiting-Agenturen.</div>
+        </details>
+        <details class="fc-faq-item">
+          <summary>Kann ich jederzeit kündigen? <span class="plus">+</span></summary>
+          <div class="answer">Ja. ShortSelect ist monatlich kündbar, ohne Mindestlaufzeit. Eine Kündigung erfolgt direkt im Account. Du behältst Zugriff bis zum Ende der laufenden Abrechnungsperiode.</div>
+        </details>
+        <details class="fc-faq-item">
+          <summary>Werden Updates und neue Funktionen extra berechnet? <span class="plus">+</span></summary>
+          <div class="answer">Nein. Alle zukünftigen Updates und neuen Funktionen sind im Founders Deal enthalten. Es gibt keine Aufpreise für Premium-Module oder neue KI-Features.</div>
+        </details>
+        <details class="fc-faq-item">
+          <summary>Wie sicher sind meine Daten? <span class="plus">+</span></summary>
+          <div class="answer">Deine Daten werden ausschließlich in EU-Rechenzentren gespeichert und sind durch Row-Level-Security, SSL-Verschlüsselung und tägliche Backups geschützt. ShortSelect ist vollständig DSGVO-konform und bietet Audit-Logging, RBAC und einen AVV-Vertrag.</div>
+        </details>
+        <details class="fc-faq-item">
+          <summary>Kann ich meine bestehenden Daten importieren? <span class="plus">+</span></summary>
+          <div class="answer">Ja. ShortSelect unterstützt CSV-Import für Kandidaten, Jobs und Unternehmen. Unser Onboarding-Team hilft dir beim reibungslosen Umzug von deinem bisherigen System, das ist im Founders Deal kostenfrei enthalten.</div>
+        </details>
+      </div>
+      <div class="fc-faq-foot">
+        Weitere Fragen? <a href="mailto:hello@shortselect.com">Kontaktiere uns</a>
+      </div>
+    </section>
+
+    <!-- CLOSING -->
+    <section class="fc-close">
+      <div class="fc-close-inner reveal" data-reveal>
+        <div class="fc-pill" style="background:rgba(239,68,68,0.2);color:#fca5a5"><span class="dot"></span> Bereit?</div>
+        <h2 style="margin-top:18px">Heute angemeldet.<br>Morgen <span class="wavy">im Einsatz.</span></h2>
+        <p class="lead">30 Tage kostenlos. Keine Kreditkarte. Keine Tricks.</p>
+        <div class="actions">
+          <a href="#" class="fc-btn">Jetzt starten →</a>
+          <a href="#" class="fc-btn fc-btn-ghost">Mit uns sprechen</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER (6 Spalten, production) -->
+    <footer class="fc-footer">
+      <div class="fc-footer-grid">
+
+        <!-- Logo Column -->
+        <div class="fc-footer-col-logo">
+          <a href="/" class="logo-foot">
+            <div class="lg-icon">
+              <svg viewBox="0 0 213 213" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="logoGradFoot" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#FF6347"/>
+                    <stop offset="100%" stop-color="#FFA07A"/>
+                  </linearGradient>
+                </defs>
+                <g fill="url(#logoGradFoot)">
+                  <path d="M141.52,187.81c-2.87,6.61-5.6,12.87-8.3,19.14-1.37,3.18-2.92,6.06-7.07,5.96-4.33-.1-6.67-2.76-8.03-6.4-3.24-8.74-6.32-17.54-9.47-26.31-11.21-31.17-22.44-62.33-33.6-93.52-1.36-3.8-4.02-7.9-.24-11.64,3.58-3.54,7.58-1.12,11.23.19,39.64,14.22,79.26,28.53,118.89,42.79,2.57.92,4.91,2.06,6.37,4.51,2.63,4.41,1.25,8.3-4.16,10.73-13.82,6.21-27.55,12.67-41.62,18.26-7.25,2.88-11.81,7.15-14.42,14.48-2.61,7.35-6.25,14.34-9.59,21.83Z"/>
+                  <path d="M99.59,53.25c9.9-9.9,19.58-19.49,29.16-29.17,2.85-2.88,5.74-4.28,8.9-.82,2.92,3.2,2.09,6.28-.83,9.17-9.57,9.46-19.09,18.96-28.61,28.48-2.35,2.35-4.85,3.75-7.84,1.27-3-2.48-3.71-5.41-.78-8.93Z"/>
+                  <path d="M29.57,123.89c7.68-7.67,15.09-15.1,22.54-22.5,3.83-3.8,6.5-4.11,9.39-1.22,2.8,2.8,2.49,5.8-1.15,9.47-9.15,9.23-18.34,18.43-27.55,27.6-3.63,3.62-6.71,3.94-9.47.95-3.08-3.35-1.9-6.31,1.07-9.06,1.71-1.58,3.28-3.32,5.16-5.24Z"/>
+                  <path d="M.34,78.03c1.58-2.46,3.7-2.72,5.91-2.72,13.44,0,26.89,0,40.33,0,4.14,0,6.79,1.79,6.63,6.21-.16,4.39-3.19,5.22-6.93,5.2-13.11-.07-26.23,0-39.34-.05-6.47-.02-7.66-1.54-6.6-8.65Z"/>
+                  <path d="M48.68,40.75c4.34,4.4,8.38,8.59,12.49,12.73,2.74,2.77,2.92,5.63.06,8.24-2.71,2.47-5.58,2.59-8.36-.24-9.69-9.86-19.38-19.71-29.17-29.47-2.72-2.71-3.31-5.44-.63-8.26,2.83-2.99,5.75-2.65,8.65.27,5.51,5.56,11.14,11,16.98,16.73Z"/>
+                  <path d="M85.45,16.38c0,10.49-.08,20.48.01,30.46.03,3.91-1.18,6.72-5.51,6.62-4.17-.1-5.72-2.99-5.69-6.77.09-13.8.27-27.6.42-41.4.04-3.76,2.03-5.41,5.7-5.29,3.51.11,5.1,1.94,5.06,5.39-.04,3.5,0,6.99.01,10.99Z"/>
+                </g>
+              </svg>
+            </div>
+            ShortSelect
+          </a>
+          <p class="lead-text">KI-gestütztes Bewerbermanagement für moderne Recruiting-Teams.</p>
+          <div class="socials">
+            <a href="https://linkedin.com/company/shortselect" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <svg fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="mailto:hello@shortselect.com" aria-label="E-Mail">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Produkt -->
+        <div>
+          <h6>Produkt</h6>
+          <ul>
+            <li><a href="/produkt/ats-crm">ATS &amp; CRM</a></li>
+            <li><a href="/produkt/karriereseite">Karriereseite</a></li>
+            <li><a href="/produkt/ki-features">KI-Features</a></li>
+            <li><a href="/produkt/automatisierung">Automatisierung</a></li>
+            <li><a href="/produkt/multiposting">Multiposting</a></li>
+            <li><a href="/produkt/compliance">DSGVO &amp; Compliance</a></li>
+            <li><a href="/preise">Preise</a></li>
+          </ul>
+        </div>
+
+        <!-- Lösungen -->
+        <div>
+          <h6>Lösungen</h6>
+          <ul>
+            <li><a href="/fuer/personalvermittlung">Personalvermittlung</a></li>
+            <li><a href="/fuer/startups">Startups</a></li>
+            <li><a href="/fuer/enterprise">Enterprise</a></li>
+            <li><a href="/branchen/it-recruiting">IT-Recruiting</a></li>
+            <li><a href="/branchen/finance">Finance &amp; Banking</a></li>
+            <li><a href="/branchen/healthcare">Healthcare</a></li>
+            <li><a href="/branchen/handwerk">Handwerk</a></li>
+          </ul>
+        </div>
+
+        <!-- Ressourcen -->
+        <div>
+          <h6>Ressourcen</h6>
+          <ul>
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/ressourcen">Ressourcen</a></li>
+            <li><a href="/glossar">Glossar</a></li>
+            <li><a href="/methode/smart-recruiting">Smart Recruiting</a></li>
+            <li><a href="/vergleich/beste-ats-software">ATS Vergleich</a></li>
+            <li><a href="/integrationen">Integrationen</a></li>
+            <li><a href="/demo">Demo buchen</a></li>
+          </ul>
+        </div>
+
+        <!-- Vergleich -->
+        <div>
+          <h6>Vergleich</h6>
+          <ul>
+            <li><a href="/vergleich/shortselect-vs-bullhorn">vs. Bullhorn</a></li>
+            <li><a href="/vergleich/shortselect-vs-vincere">vs. Vincere</a></li>
+            <li><a href="/vergleich/shortselect-vs-coveto">vs. Coveto</a></li>
+            <li><a href="/vergleich/shortselect-vs-teamtailor">vs. Teamtailor</a></li>
+            <li><a href="/vergleich/shortselect-vs-talent360">vs. Talent360</a></li>
+            <li><a href="/vergleich/beste-ats-software">ATS Vergleich 2026</a></li>
+          </ul>
+        </div>
+
+        <!-- Unternehmen -->
+        <div>
+          <h6>Unternehmen</h6>
+          <ul>
+            <li><a href="/ueber-uns">Über uns</a></li>
+            <li><a href="/kunden">Kunden</a></li>
+            <li><a href="/kontakt">Kontakt</a></li>
+            <li><a href="/sicherheit">Sicherheit</a></li>
+            <li><a href="/datenschutz">Datenschutz</a></li>
+            <li><a href="/impressum">Impressum</a></li>
+            <li><a href="/agb">AGB</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="bottom">
+        <span>© 2026 ShortSelect &middot; LeyalTech UG &middot; Alle Rechte vorbehalten.</span>
+        <span>
+          <a href="#" data-cookie-reopen>Cookie-Einstellungen</a>
+        </span>
+      </div>
+    </footer>
+
+
+  <CookieConsentBanner />
+
+  <script is:inline>
 (function() {
-  var teaser = document.getElementById('pricing-teaser');
-  if (!teaser) return;
-  var observer = new IntersectionObserver(function(entries) {
-    entries.forEach(function(entry) {
-      if (entry.isIntersecting) {
-        entry.target.style.opacity = '1';
-        entry.target.style.transform = 'translateY(0)';
-        observer.unobserve(entry.target);
+  // Use window for scroll
+  
+
+  // Reveal-on-scroll observer (within scrollable stage)
+  function checkReveal() {
+    // Use viewport for measurements
+    var triggerY = window.innerHeight * 0.85;
+    document.querySelectorAll('[data-reveal]').forEach(function(el) {
+      if (el.classList.contains('in')) return;
+      var rect = el.getBoundingClientRect();
+      var elTop = rect.top;
+      if (elTop < triggerY && elTop > -rect.height) {
+        el.classList.add('in');
       }
     });
-  }, { threshold: 0.1 });
-  observer.observe(teaser);
+    // Stat cards trigger
+    document.querySelectorAll('.fc-stat-card').forEach(function(el) {
+      if (el.classList.contains('in')) return;
+      var rect = el.getBoundingClientRect();
+      var elTop = rect.top;
+      if (elTop < triggerY && elTop > -rect.height) {
+        el.classList.add('in');
+        // animate counter
+        var counter = el.querySelector('[data-counter]');
+        if (counter) {
+          var target = parseFloat(counter.dataset.counter);
+          var dec = parseInt(counter.dataset.decimals || 0);
+          var prefix = counter.dataset.prefix || '';
+          var suffix = counter.dataset.suffix || '';
+          var dur = 1800;
+          var start = performance.now();
+          function step(now) {
+            var p = Math.min(1, (now - start) / dur);
+            var eased = 1 - Math.pow(1 - p, 3);
+            var v = target * eased;
+            var formatted;
+            if (dec > 0) {
+              formatted = v.toFixed(dec).replace('.', ',');
+            } else {
+              formatted = Math.floor(v).toLocaleString('de-DE');
+            }
+            counter.textContent = prefix + formatted + suffix;
+            if (p < 1) requestAnimationFrame(step);
+          }
+          requestAnimationFrame(step);
+        }
+      }
+    });
+  }
+  window.addEventListener("scroll", checkReveal); window.addEventListener("resize", checkReveal);
+  setTimeout(checkReveal, 100);
+
+  // Smart Ranking: shuffle candidates every 4s (FIXED: position rows absolutely)
+  var rankingAnim = document.getElementById('rankingAnim');
+  if (rankingAnim) {
+    var ROW_GAP = 44; // 38px height + 6px gap
+    var rows = rankingAnim.querySelectorAll('.rank-row');
+    // Set initial positions
+    rows.forEach(function(row, idx) {
+      row.style.transform = 'translate3d(0,' + (idx * ROW_GAP) + 'px,0)';
+    });
+
+    var permutations = [
+      [0, 1, 2, 3],
+      [1, 0, 2, 3],
+      [1, 2, 0, 3],
+      [2, 0, 3, 1],
+      [0, 2, 1, 3],
+      [3, 0, 2, 1],
+      [0, 1, 3, 2]
+    ];
+    var permIdx = 0;
+    setInterval(function() {
+      permIdx = (permIdx + 1) % permutations.length;
+      var perm = permutations[permIdx];
+      // perm[i] = which row should be at position i
+      perm.forEach(function(rowIdx, posIdx) {
+        var row = rows[rowIdx];
+        row.style.transform = 'translate3d(0,' + (posIdx * ROW_GAP) + 'px,0)';
+        if (posIdx === 0) row.classList.add('top');
+        else row.classList.remove('top');
+      });
+    }, 4000);
+  }
+
+  // AVF Win Dashboard: Counter tickt live hoch
+  var winCounter = document.getElementById('winCounter');
+  if (winCounter) {
+    var w = 147;
+    setInterval(function() {
+      w += 1;
+      if (w > 999) w = 147;
+      winCounter.textContent = w;
+    }, 1100);
+  }
+
+  // 3D Tilt on Hover (Framer-Motion-style)
+  document.querySelectorAll('[data-tilt]').forEach(function(card) {
+    var rafId = null;
+    var targetRX = 0, targetRY = 0;
+    var currentRX = 0, currentRY = 0;
+
+    function tiltLoop() {
+      currentRX += (targetRX - currentRX) * 0.15;
+      currentRY += (targetRY - currentRY) * 0.15;
+      card.style.transform = 'perspective(1200px) rotateX(' + currentRX + 'deg) rotateY(' + currentRY + 'deg) translateZ(0)';
+      if (Math.abs(targetRX - currentRX) > 0.01 || Math.abs(targetRY - currentRY) > 0.01) {
+        rafId = requestAnimationFrame(tiltLoop);
+      } else {
+        rafId = null;
+      }
+    }
+
+    card.addEventListener('mousemove', function(e) {
+      var rect = card.getBoundingClientRect();
+      var x = (e.clientX - rect.left) / rect.width;
+      var y = (e.clientY - rect.top) / rect.height;
+      targetRY = (x - 0.5) * 8;
+      targetRX = -(y - 0.5) * 8;
+      if (!rafId) rafId = requestAnimationFrame(tiltLoop);
+    });
+
+    card.addEventListener('mouseleave', function() {
+      targetRX = 0;
+      targetRY = 0;
+      if (!rafId) rafId = requestAnimationFrame(tiltLoop);
+    });
+  });
+
+  // STJ live counter (tickt langsam hoch)
+  var stjCounter = document.getElementById('stjCounter');
+  if (stjCounter) {
+    var n = 47;
+    setInterval(function() {
+      n += Math.random() > 0.5 ? 1 : 0;
+      if (n > 89) n = 47; // reset für demo
+      stjCounter.textContent = n;
+    }, 2400);
+  }
+
+  // Pipeline animation (FIXED: cards appear in correct columns sequentially)
+  var pipeAnim = document.getElementById('pipeAnim');
+  if (pipeAnim) {
+    var pipeCards = pipeAnim.querySelectorAll('.pipe-card');
+    var pipeStage = 0;
+    function tickPipe() {
+      pipeCards.forEach(function(c) { c.classList.remove('live'); });
+      pipeCards[pipeStage].classList.add('live');
+      pipeStage = (pipeStage + 1) % pipeCards.length;
+    }
+    tickPipe();
+    setInterval(tickPipe, 1500);
+  }
 })();
-</script>
+  </script>
+</body>
+</html>
