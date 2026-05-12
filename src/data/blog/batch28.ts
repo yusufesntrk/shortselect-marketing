@@ -156,7 +156,7 @@ export const batch28: BlogPost[] = [
 
 <p>Ihre Website ist Ihre digitale Visitenkarte. Und in der Personalvermittlung, wo Vertrauen alles ist, muss diese Visitenkarte Kompetenz ausstrahlen. Das bedeutet nicht, dass Sie 15.000 Euro für ein Redesign ausgeben müssen. Es bedeutet, dass Ihre Website drei Fragen in fünf Sekunden beantworten muss: Was machen Sie? Für wen? Und warum sollte ich Ihnen vertrauen?</p>
 
-<p><strong>Sofort-Maßnahme (1 Stunde):</strong> Ueberarbeiten Sie Ihre Startseite. Ersetzen Sie den generischen Text durch drei konkrete Zahlen: Wie viele Positionen haben Sie besetzt? In welcher durchschnittlichen Zeit? In welchen Branchen? Fuegen Sie zwei bis drei Testimonials hinzu, echte Zitate von echten Kunden. Entfernen Sie jedes Stockfoto und ersetzen Sie es durch ein echtes Teamfoto oder lassen Sie es weg.</p>
+<p><strong>Sofort-Maßnahme (1 Stunde):</strong> Überarbeiten Sie Ihre Startseite. Ersetzen Sie den generischen Text durch drei konkrete Zahlen: Wie viele Positionen haben Sie besetzt? In welcher durchschnittlichen Zeit? In welchen Branchen? Fügen Sie zwei bis drei Testimonials hinzu, echte Zitate von echten Kunden. Entfernen Sie jedes Stockfoto und ersetzen Sie es durch ein echtes Teamfoto oder lassen Sie es weg.</p>
 
 <h2>Grund 3: Sie haben kein Netzwerk außerhalb Ihrer 5 Stammkunden</h2>
 
@@ -264,7 +264,7 @@ export const batch28: BlogPost[] = [
 
 <h3>47 Prozent mehr Bewerbungen</h3>
 
-<p>Ueber alle drei Rollen hinweg generierten die Stellenanzeigen mit Gehaltsangabe 47 Prozent mehr Bewerbungen als ihre Pendants ohne. Beim Marketing Manager war der Unterschied am größten: 34 Bewerbungen mit Gehalt gegenüber 19 ohne, ein Plus von 79 Prozent. Beim Softwareentwickler: 28 gegenüber 21. Beim Vertriebsmitarbeiter: 41 gegenüber 30.</p>
+<p>Über alle drei Rollen hinweg generierten die Stellenanzeigen mit Gehaltsangabe 47 Prozent mehr Bewerbungen als ihre Pendants ohne. Beim Marketing Manager war der Unterschied am größten: 34 Bewerbungen mit Gehalt gegenüber 19 ohne, ein Plus von 79 Prozent. Beim Softwareentwickler: 28 gegenüber 21. Beim Vertriebsmitarbeiter: 41 gegenüber 30.</p>
 
 <p>Die Erklärung ist intuitiv: Eine Gehaltsangabe reduziert Unsicherheit. Bewerber wissen sofort, ob die Stelle zu ihren Erwartungen passt. Das senkt die Hemmschwelle, sich zu bewerben, besonders bei Kandidaten, die nicht aktiv suchen, sondern nur „mal schauen". Und genau diese passiven Kandidaten sind oft die besten.</p>
 
