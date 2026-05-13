@@ -2173,6 +2173,294 @@ const websiteSchema = {
     margin-left: 8px;
   }
   .fc-footer .bottom a:hover { color: rgba(255,255,255,0.8); }
+
+  /* ============ AGENTBURST SOURCING SHOWCASE ============ */
+  .fc-abs { padding: 100px 0; background: white; position: relative; overflow: hidden; }
+  .fc-abs::before {
+    content: ''; position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse 1000px 500px at 50% 0%, rgba(239,68,68,0.05), transparent 60%),
+      radial-gradient(ellipse 800px 400px at 50% 100%, rgba(239,68,68,0.04), transparent 60%);
+    pointer-events: none;
+  }
+  .fc-abs > * { position: relative; z-index: 1; }
+  .abs-head { max-width: 760px; margin: 0 auto 48px; text-align: center; padding: 0 32px; }
+  .abs-head h2 { margin-top: 18px; font-size: 46px; line-height: 1.02; }
+  .abs-head h2 .accent { color: #ef4444; position: relative; display: inline-block; }
+  .abs-head h2 .accent::after {
+    content: ''; position: absolute; left: 0; right: 0; bottom: 4px;
+    height: 12px; background: rgba(239,68,68,0.13); z-index: -1; border-radius: 4px;
+  }
+  .abs-head .lead { margin: 18px auto 0; font-size: 17px; color: #525252; line-height: 1.55; max-width: 620px; }
+
+  .abs-stage { max-width: 1100px; margin: 0 auto; padding: 0 32px; }
+
+  /* Platform bar */
+  .abs-plat-bar { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 28px; }
+  .abs-plat {
+    background: white; border: 1px solid #e5e5e5; border-radius: 14px; padding: 12px 14px;
+    display: flex; align-items: center; gap: 11px;
+    box-shadow: 0 10px 24px -16px rgba(0,0,0,0.15);
+    position: relative; transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .abs-plat-logo {
+    width: 36px; height: 36px; border-radius: 9px;
+    display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+  .abs-plat-logo svg { width: 22px; height: 22px; display: block; }
+  .abs-plat-logo-stepstone { background: transparent !important; padding: 0; }
+  .abs-plat-logo-stepstone svg { width: 36px; height: 36px; border-radius: 9px; }
+  .abs-plat-meta { flex: 1; min-width: 0; }
+  .abs-plat-name { font-family: 'Poppins'; font-weight: 800; font-size: 12.5px; letter-spacing: -0.01em; }
+  .abs-plat-status {
+    font-family: ui-monospace, 'SF Mono', Menlo, monospace;
+    font-size: 8.5px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
+    display: flex; align-items: center; gap: 4px; margin-top: 2px;
+  }
+  .abs-plat-status.live { color: #16a34a; }
+  .abs-plat-status.soon { color: #d97706; }
+  .abs-plat-status .led {
+    width: 6px; height: 6px; border-radius: 50%; background: currentColor;
+    animation: abs-pulse 1.4s ease-in-out infinite;
+  }
+  @keyframes abs-pulse { 0%, 100% { opacity: 0.4; transform: scale(0.85); } 50% { opacity: 1; transform: scale(1.15); } }
+
+  .abs-plat.active {
+    border-color: #ef4444;
+    box-shadow:
+      0 0 0 4px rgba(239,68,68,0.1),
+      0 20px 50px -10px rgba(239,68,68,0.35),
+      inset 0 0 30px rgba(239,68,68,0.04);
+    transform: translateY(-4px);
+  }
+  .abs-plat.active .abs-plat-logo { transform: scale(1.15) rotate(-4deg); }
+  .abs-plat.active::after {
+    content: 'Profil gefunden';
+    position: absolute; top: -10px; right: 12px;
+    background: #ef4444; color: white;
+    font-size: 9px; font-weight: 800; padding: 4px 8px; border-radius: 100px;
+    letter-spacing: 0.04em; text-transform: uppercase;
+    box-shadow: 0 6px 16px rgba(239,68,68,0.4);
+    animation: abs-toast-pop 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+  @keyframes abs-toast-pop { 0% { opacity: 0; transform: translateY(8px) scale(0.6); } 100% { opacity: 1; transform: translateY(0) scale(1); } }
+
+  /* Main row */
+  .abs-main-row {
+    display: grid; grid-template-columns: 1fr 320px; gap: 24px; align-items: stretch;
+  }
+  .abs-arena { position: relative; min-height: 380px; perspective: 1400px; }
+
+  /* Hero card */
+  .abs-hero-card {
+    position: absolute; top: 50%; left: 50%;
+    width: 340px; margin-top: -130px; margin-left: -170px;
+    background: white; border-radius: 16px; padding: 18px;
+    box-shadow: 0 24px 56px -16px rgba(0,0,0,0.22), 0 0 0 1px rgba(0,0,0,0.04);
+    opacity: 0; z-index: 4; transform-style: preserve-3d;
+    --spawn-dx: 0px; --spawn-dy: -200px;
+    --file-dx: 300px; --file-dy: 0px;
+  }
+  .abs-hero-card.spawning { animation: abs-spawn 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+  @keyframes abs-spawn {
+    0% { transform: translate(var(--spawn-dx), var(--spawn-dy)) scale(0.4) rotate(-8deg); opacity: 0; }
+    30% { opacity: 1; }
+    100% { transform: translate(0, 0) scale(1) rotate(0deg); opacity: 1; }
+  }
+  .abs-hero-card.idle { opacity: 1; transform: translate(0, 0) scale(1); }
+  .abs-hero-card.filing { animation: abs-file-away 0.9s cubic-bezier(0.7, 0.05, 0.35, 1) forwards; }
+  @keyframes abs-file-away {
+    0% { transform: translate(0, 0) scale(1) rotate(0); opacity: 1; }
+    40% { transform: translate(calc(var(--file-dx) * 0.4), calc(var(--file-dy) * 0.4 - 20px)) scale(0.85) rotate(6deg); opacity: 1; }
+    100% { transform: translate(var(--file-dx), var(--file-dy)) scale(0.18) rotate(2deg); opacity: 0; }
+  }
+  .abs-hero-card.rejecting { animation: abs-reject-drop 0.9s cubic-bezier(0.55, 0, 0.85, 0.5) forwards; }
+  @keyframes abs-reject-drop {
+    0% { transform: translate(0, 0) rotate(0); opacity: 1; }
+    100% { transform: translate(20px, 260px) rotate(22deg) scale(0.5); opacity: 0; }
+  }
+
+  /* Reject X */
+  .abs-reject-x { position: absolute; inset: -8px; pointer-events: none; opacity: 0; z-index: 6; }
+  .abs-reject-x svg { width: 100%; height: 100%; overflow: visible; }
+  .abs-reject-x line {
+    stroke: #ef4444; stroke-width: 5; stroke-linecap: round;
+    stroke-dasharray: 400; stroke-dashoffset: 400;
+    filter: drop-shadow(0 0 10px rgba(239,68,68,0.6));
+  }
+  .abs-hero-card.strike .abs-reject-x { opacity: 1; }
+  .abs-hero-card.strike .abs-reject-x line { animation: abs-strike 0.45s cubic-bezier(0.4, 0, 0.2, 1) forwards; }
+  .abs-hero-card.strike .abs-reject-x line:nth-child(2) { animation-delay: 0.18s; }
+  @keyframes abs-strike { to { stroke-dashoffset: 0; } }
+  .abs-hero-card.strike .abs-hc-name,
+  .abs-hero-card.strike .abs-crit-label {
+    text-decoration: line-through; text-decoration-color: #ef4444; text-decoration-thickness: 2px;
+  }
+  .abs-hero-card.strike { background: rgba(239, 68, 68, 0.03); }
+
+  /* Scan beam */
+  .abs-scan-beam {
+    position: absolute; left: 8px; right: 8px; height: 3px;
+    background: linear-gradient(90deg, transparent, #ef4444 30%, #ef4444 70%, transparent);
+    box-shadow: 0 0 24px #ef4444, 0 0 8px #ef4444;
+    border-radius: 2px; top: 0; opacity: 0; pointer-events: none;
+  }
+  .abs-hero-card.scanning .abs-scan-beam { animation: abs-beam 1.8s cubic-bezier(0.5, 0, 0.5, 1) 0.1s; }
+  @keyframes abs-beam {
+    0% { opacity: 0; top: 0; } 10% { opacity: 1; }
+    90% { opacity: 1; top: calc(100% - 3px); } 100% { opacity: 0; top: calc(100% - 3px); }
+  }
+
+  /* Identity */
+  .abs-hc-id { display: flex; align-items: center; gap: 14px; padding-bottom: 16px; border-bottom: 1px solid #f4f4f5; margin-bottom: 14px; }
+  .abs-hc-av {
+    width: 52px; height: 52px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    color: white; font-family: 'Poppins'; font-weight: 800; font-size: 17px;
+    flex-shrink: 0; box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+  }
+  .abs-hc-info { flex: 1; min-width: 0; }
+  .abs-hc-name { font-family: 'Poppins'; font-weight: 800; font-size: 18px; line-height: 1.1; }
+  .abs-hc-role { font-size: 12px; color: #525252; margin-top: 4px; display: flex; align-items: center; gap: 8px; }
+  .abs-hc-src {
+    font-family: ui-monospace, 'SF Mono', Menlo, monospace;
+    font-size: 9px; font-weight: 700; padding: 3px 7px; border-radius: 5px;
+    color: white; letter-spacing: 0.04em;
+  }
+  .abs-hc-id-num { font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 10px; color: #71717a; }
+
+  /* Criteria */
+  .abs-crit-list { display: flex; flex-direction: column; gap: 9px; }
+  .abs-crit {
+    display: flex; align-items: center; gap: 10px;
+    padding: 9px 12px; background: #fafafa; border-radius: 10px;
+    border: 1px solid #f4f4f5;
+    opacity: 0; transform: translateX(20px) scale(0.92);
+  }
+  .abs-crit.show { animation: abs-crit-in 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards; }
+  @keyframes abs-crit-in {
+    0% { opacity: 0; transform: translateX(20px) scale(0.92); }
+    60% { transform: translateX(-2px) scale(1.04); }
+    100% { opacity: 1; transform: translateX(0) scale(1); }
+  }
+  .abs-crit-icon {
+    width: 22px; height: 22px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    background: #e5e5e5; color: white; font-size: 11px; font-weight: 800; flex-shrink: 0;
+  }
+  .abs-crit.pass .abs-crit-icon { background: #16a34a; box-shadow: 0 0 12px rgba(22,163,74,0.4); }
+  .abs-crit.fail .abs-crit-icon { background: #ef4444; box-shadow: 0 0 12px rgba(239,68,68,0.4); }
+  .abs-crit-label { flex: 1; font-size: 12.5px; font-weight: 700; color: #0a0a0e; }
+  .abs-crit-val { font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 11px; font-weight: 700; color: #525252; }
+  .abs-crit.pass .abs-crit-val { color: #16a34a; }
+  .abs-crit.fail .abs-crit-val { color: #ef4444; }
+
+  /* Score stamp */
+  .abs-score-stamp {
+    position: absolute; top: -22px; right: -22px;
+    width: 86px; height: 86px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center; flex-direction: column;
+    color: white; font-family: 'Poppins'; font-weight: 800;
+    opacity: 0; z-index: 5;
+    box-shadow: 0 14px 40px -8px rgba(0,0,0,0.3);
+    transform: scale(3) rotate(25deg);
+  }
+  .abs-score-stamp.match { background: linear-gradient(135deg, #22c55e, #16a34a); }
+  .abs-score-stamp.miss { background: linear-gradient(135deg, #ef4444, #b91c1c); }
+  .abs-score-stamp .num { font-size: 28px; line-height: 1; }
+  .abs-score-stamp .lbl { font-size: 9px; font-weight: 800; letter-spacing: 0.1em; margin-top: 2px; text-transform: uppercase; }
+  .abs-hero-card.scored .abs-score-stamp { animation: abs-stamp 0.6s cubic-bezier(0.5, -0.2, 0.6, 1.5) forwards; }
+  @keyframes abs-stamp {
+    0% { opacity: 0; transform: scale(3) rotate(25deg); }
+    55% { opacity: 1; transform: scale(0.85) rotate(-14deg); }
+    75% { transform: scale(1.12) rotate(-6deg); }
+    100% { opacity: 1; transform: scale(1) rotate(-9deg); }
+  }
+  .abs-score-stamp::before {
+    content: ''; position: absolute; inset: -8px; border-radius: 50%;
+    border: 2px dashed rgba(255,255,255,0.4);
+    animation: abs-ring 2s linear infinite;
+  }
+  @keyframes abs-ring { from { transform: rotate(0); } to { transform: rotate(360deg); } }
+
+  /* Confetti */
+  .abs-confetti { position: absolute; top: -10px; right: -10px; width: 120px; height: 120px; pointer-events: none; opacity: 0; }
+  .abs-hero-card.scored.match-card .abs-confetti { animation: abs-confetti 0.8s ease-out 0.2s; }
+  @keyframes abs-confetti {
+    0% { opacity: 0; transform: scale(0.3); } 40% { opacity: 1; } 100% { opacity: 0; transform: scale(1.8); }
+  }
+  .abs-confetti i { position: absolute; width: 6px; height: 6px; border-radius: 2px; top: 50%; left: 50%; transform-origin: center; }
+  .abs-confetti i:nth-child(1) { background: #22c55e; transform: rotate(0) translateY(-20px); }
+  .abs-confetti i:nth-child(2) { background: #ef4444; transform: rotate(45deg) translateY(-20px); }
+  .abs-confetti i:nth-child(3) { background: #facc15; transform: rotate(90deg) translateY(-20px); }
+  .abs-confetti i:nth-child(4) { background: #3b82f6; transform: rotate(135deg) translateY(-20px); }
+  .abs-confetti i:nth-child(5) { background: #ec4899; transform: rotate(180deg) translateY(-20px); }
+  .abs-confetti i:nth-child(6) { background: #22c55e; transform: rotate(225deg) translateY(-20px); }
+  .abs-confetti i:nth-child(7) { background: #f97316; transform: rotate(270deg) translateY(-20px); }
+  .abs-confetti i:nth-child(8) { background: #8b5cf6; transform: rotate(315deg) translateY(-20px); }
+
+  /* Pipeline (Sourcing Pool) */
+  .abs-pipeline {
+    background: white; border: 1px solid #e5e5e5; border-radius: 18px; padding: 18px;
+    box-shadow: 0 16px 48px -22px rgba(0,0,0,0.15);
+    display: flex; flex-direction: column; gap: 14px; position: relative; z-index: 2;
+  }
+  .abs-pipe-head { display: flex; align-items: center; justify-content: space-between; padding-bottom: 12px; border-bottom: 1px solid #e5e5e5; }
+  .abs-pipe-title { font-family: 'Poppins'; font-weight: 800; font-size: 14px; }
+  .abs-pipe-live {
+    display: flex; align-items: center; gap: 6px;
+    font-family: ui-monospace, 'SF Mono', Menlo, monospace;
+    font-size: 10px; font-weight: 700; color: #16a34a;
+    letter-spacing: 0.08em; text-transform: uppercase;
+  }
+  .abs-pipe-live .led { width: 7px; height: 7px; border-radius: 50%; background: #16a34a; animation: abs-pulse 1.4s ease-in-out infinite; box-shadow: 0 0 8px #16a34a; }
+  .abs-pool-cards { display: flex; flex-direction: column; gap: 10px; flex: 1; padding: 4px 0; }
+  .abs-pipe-card {
+    background: #fafafa; border: 1px solid #e5e5e5; border-radius: 12px; padding: 11px 12px;
+    display: flex; align-items: center; gap: 10px;
+    box-shadow: 0 4px 12px -4px rgba(0,0,0,0.06);
+  }
+  .abs-pipe-card.land { animation: abs-pcard-land 0.5s cubic-bezier(0.16, 1, 0.3, 1) both; }
+  @keyframes abs-pcard-land {
+    0% { opacity: 0; transform: scale(0.6) translateY(-6px); }
+    100% { opacity: 1; transform: scale(1) translateY(0); }
+  }
+  .abs-pipe-card.exit { animation: abs-pcard-exit 0.55s cubic-bezier(0.55, 0, 0.85, 0.5) forwards; }
+  @keyframes abs-pcard-exit {
+    0% { opacity: 1; transform: translateX(0) scale(1); }
+    100% { opacity: 0; transform: translateX(40px) scale(0.9); }
+  }
+  .abs-pc-av {
+    width: 34px; height: 34px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    color: white; font-weight: 800; font-size: 12px; flex-shrink: 0;
+  }
+  .abs-pc-meta { flex: 1; min-width: 0; }
+  .abs-pc-name { font-size: 13px; font-weight: 700; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .abs-pc-foot { display: flex; align-items: center; gap: 5px; margin-top: 2px; }
+  .abs-pc-source {
+    font-family: ui-monospace, 'SF Mono', Menlo, monospace;
+    font-size: 8.5px; font-weight: 700; padding: 2px 5px; border-radius: 4px;
+    color: white; letter-spacing: 0.04em;
+  }
+  .abs-pc-score { font-family: 'Poppins'; font-weight: 800; font-size: 18px; color: #ef4444; }
+  .abs-source-linkedin { background: #0a66c2; }
+  .abs-source-xing { background: #006567; }
+  .abs-source-indeed { background: #2557a7; }
+  .abs-source-stepstone { background: #0073e6; }
+
+  @media (max-width: 880px) {
+    .abs-main-row { grid-template-columns: 1fr; }
+    .abs-plat-bar { grid-template-columns: repeat(2, 1fr); }
+    .abs-head h2 { font-size: 36px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .abs-hero-card, .abs-hero-card *, .abs-plat, .abs-plat *, .abs-pipe-card, .abs-pipe-card *,
+    .abs-crit, .abs-score-stamp, .abs-confetti, .abs-reject-x line, .abs-scan-beam {
+      animation-duration: 0.01s !important; animation-iteration-count: 1 !important; transition-duration: 0.01s !important;
+    }
+  }
   </style>
 </head>
 <body class="fc">
@@ -2472,6 +2760,126 @@ const websiteSchema = {
             <li><div class="mark">✓</div>Je mehr du besetzt, desto präziser werden die Vorschläge</li>
             <li><div class="mark">✓</div>Auch am Wochenende werden Kandidaten nicht vertröstet</li>
           </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- AGENTBURST SOURCING SHOWCASE (Hero Spotlight Animation) -->
+    <section class="fc-abs">
+      <div class="abs-head reveal" data-reveal>
+        <div class="fc-pill"><span class="dot"></span> AgentBurst Sourcing</div>
+        <h2>KI findet, prüft,<br><span class="accent">füllt deine Pipeline.</span></h2>
+        <p class="lead">Definiere einmal das Wunschprofil. AgentBurst sourct parallel auf LinkedIn, Xing, Indeed und Stepstone, prüft jeden Kandidaten gegen deine Kriterien und schiebt nur die Top-Matches in deine Pipeline. 24/7. Ohne Klick.</p>
+      </div>
+
+      <div class="abs-stage reveal" data-reveal>
+        <!-- Platform bar -->
+        <div class="abs-plat-bar">
+          <div class="abs-plat" data-key="linkedin" id="abs-plat-linkedin">
+            <div class="abs-plat-logo" style="background:#0a66c2">
+              <svg viewBox="0 0 24 24" fill="white"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </div>
+            <div class="abs-plat-meta">
+              <div class="abs-plat-name">LinkedIn</div>
+              <div class="abs-plat-status live"><span class="led"></span>Live</div>
+            </div>
+          </div>
+          <div class="abs-plat" data-key="xing" id="abs-plat-xing">
+            <div class="abs-plat-logo" style="background:#006567">
+              <svg viewBox="0 0 24 24" fill="white"><path d="M18.188 0c-.517 0-.741.325-.927.66 0 0-7.455 13.224-7.702 13.657.015.024 4.919 9.023 4.919 9.023.17.308.436.66.967.66h3.454c.211 0 .375-.078.463-.22.089-.151.089-.346-.009-.536l-4.879-8.916c-.004-.006-.004-.016 0-.022L22.139.756c.095-.191.097-.387.006-.535C22.056.078 21.894 0 21.686 0h-3.498zM3.648 4.74c-.211 0-.385.074-.473.216-.09.149-.078.339.02.531l2.34 4.05c.004.01.004.016 0 .021L1.86 16.051c-.099.188-.093.381 0 .529.085.142.239.234.45.234h3.461c.518 0 .766-.348.945-.667l3.734-6.609-2.378-4.155c-.172-.315-.434-.659-.962-.659H3.648v.016z"/></svg>
+            </div>
+            <div class="abs-plat-meta">
+              <div class="abs-plat-name">Xing</div>
+              <div class="abs-plat-status live"><span class="led"></span>Live</div>
+            </div>
+          </div>
+          <div class="abs-plat" data-key="indeed" id="abs-plat-indeed">
+            <div class="abs-plat-logo" style="background:#2557a7">
+              <svg viewBox="0 0 24 24" fill="white"><path d="M11.566 21.5633v-8.762c.2553.0231.5009.0346.758.0346 1.2225 0 2.3739-.3206 3.3506-.8928v9.6182c0 .8219-.1957 1.4287-.5757 1.8338-.378.4033-.8808.6049-1.491.6049-.6007 0-1.0766-.2016-1.468-.6183-.3781-.4032-.5739-1.01-.5739-1.8184zM11.589.5659c2.5447-.8929 5.4424-.8449 7.6186.987.405.3687.8673.8334 1.0515 1.3806.2207.6913-.7695-.073-.9057-.167-.71-.4532-1.4182-.8334-2.2127-1.0946C12.8614.3873 8.8122 2.709 6.2945 6.315c-1.0516 1.5939-1.7367 3.2721-2.299 5.1174-.0614.2017-.1094.4647-.2207.6413-.1113.2036-.048-.5453-.048-.5702.0845-.7623.2438-1.4997.4414-2.237C5.3292 5.3375 7.897 2.0655 11.5891.5658zm4.9281 7.0587c0 1.6686-1.353 3.0224-3.0205 3.0224-1.6677 0-3.0186-1.3538-3.0186-3.0224 0-1.6687 1.351-3.0224 3.0186-3.0224 1.6676 0 3.0205 1.3518 3.0205 3.0224Z"/></svg>
+            </div>
+            <div class="abs-plat-meta">
+              <div class="abs-plat-name">Indeed</div>
+              <div class="abs-plat-status live"><span class="led"></span>Live</div>
+            </div>
+          </div>
+          <div class="abs-plat" data-key="stepstone" id="abs-plat-stepstone">
+            <div class="abs-plat-logo abs-plat-logo-stepstone">
+              <svg viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="absSsGrad" x1=".923" x2="34.828" y1="34.427" y2=".602" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#ff9e8c"/>
+                    <stop offset=".259" stop-color="#f5d4c8"/>
+                    <stop offset=".357" stop-color="#f2e2d8"/>
+                    <stop offset=".467" stop-color="#f0f0e7"/>
+                    <stop offset=".555" stop-color="#e2eee6"/>
+                    <stop offset=".611" stop-color="#d3ece6"/>
+                    <stop offset=".706" stop-color="#bae8e5"/>
+                    <stop offset="1" stop-color="#29d3df"/>
+                  </linearGradient>
+                  <mask id="absSsMask" maskUnits="userSpaceOnUse" x="0" y="0" width="36" height="36">
+                    <path fill="#fff" d="M4.706 0A4.705 4.705 0 0 0 0 4.705v26.59A4.706 4.706 0 0 0 4.624 36h26.728c2.572-.027 4.624-2.134 4.624-4.705V4.705A4.705 4.705 0 0 0 31.27 0z"/>
+                  </mask>
+                </defs>
+                <g mask="url(#absSsMask)">
+                  <rect fill="url(#absSsGrad)" width="36" height="36"/>
+                  <path fill="#0a1e5f" d="M17.853 13.611c-.554-2.75 2.55-4.167 6.374-3.944 3.741.194 7.732 1.86 7.926 3.666.194 1.667-3.77 2.64-7.206 2.64s-6.678-.418-7.094-2.362"/>
+                  <path fill="#0a1e5f" d="M16.634 9.861c.221-2.056-3.437-2.417-5.931-1.667-2.494.778-4.379 2.473-2.688 3.278.97.445 2.854.695 5.071.334 2.217-.334 3.437-.778 3.548-1.945"/>
+                  <path fill="#0a1e5f" d="M24.864 21.917c-.416-3.528-4.323-4.64-8.563-4.084-4.24.528-8.84 2.695-10.614 5.667-2.411 4 2.688 6.195 8.258 6.111 5.57-.083 11.529-2.528 10.92-7.694"/>
+                </g>
+              </svg>
+            </div>
+            <div class="abs-plat-meta">
+              <div class="abs-plat-name">Stepstone</div>
+              <div class="abs-plat-status live"><span class="led"></span>Live</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="abs-main-row">
+          <!-- Arena -->
+          <div class="abs-arena" id="absArena">
+            <div class="abs-hero-card" id="absHeroCard">
+              <div class="abs-confetti"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+              <div class="abs-reject-x">
+                <svg viewBox="0 0 100 100" preserveAspectRatio="none">
+                  <line x1="6" y1="6" x2="94" y2="94"/>
+                  <line x1="94" y1="6" x2="6" y2="94"/>
+                </svg>
+              </div>
+              <div class="abs-scan-beam"></div>
+              <div class="abs-score-stamp" id="absScoreStamp">
+                <span class="num" id="absScoreNum">94</span>
+                <span class="lbl" id="absScoreLbl">Match</span>
+              </div>
+              <div class="abs-hc-id">
+                <div class="abs-hc-av" id="absHcAv">JK</div>
+                <div class="abs-hc-info">
+                  <div class="abs-hc-name" id="absHcName">Julia Kessler</div>
+                  <div class="abs-hc-role">
+                    <span id="absHcRole">Senior Sales Manager</span>
+                    <span class="abs-hc-src" id="absHcSrc">linkedin</span>
+                  </div>
+                </div>
+                <div class="abs-hc-id-num" id="absHcIdNum">#A847-291</div>
+              </div>
+              <div class="abs-crit-list" id="absCritList">
+                <div class="abs-crit" data-i="0"><div class="abs-crit-icon">·</div><div class="abs-crit-label">Skills Match</div><div class="abs-crit-val">—</div></div>
+                <div class="abs-crit" data-i="1"><div class="abs-crit-icon">·</div><div class="abs-crit-label">Erfahrung</div><div class="abs-crit-val">—</div></div>
+                <div class="abs-crit" data-i="2"><div class="abs-crit-icon">·</div><div class="abs-crit-label">Standort</div><div class="abs-crit-val">—</div></div>
+                <div class="abs-crit" data-i="3"><div class="abs-crit-icon">·</div><div class="abs-crit-label">Sprache</div><div class="abs-crit-val">—</div></div>
+                <div class="abs-crit" data-i="4"><div class="abs-crit-icon">·</div><div class="abs-crit-label">Gehaltsrahmen</div><div class="abs-crit-val">—</div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sourcing Pool -->
+          <div class="abs-pipeline">
+            <div class="abs-pipe-head">
+              <div class="abs-pipe-title">Sourcing Pool</div>
+              <div class="abs-pipe-live"><span class="led"></span>Live</div>
+            </div>
+            <div class="abs-pool-cards" id="absColSourced"></div>
+          </div>
         </div>
       </div>
     </section>
@@ -3269,6 +3677,196 @@ const websiteSchema = {
       window.dispatchEvent(new CustomEvent('cookie-consent-reopen'));
     });
   });
+
+  // ============ AGENTBURST SOURCING SHOWCASE ============
+  var absCard = document.getElementById('absHeroCard');
+  if (absCard) {
+    var ABS_PROFILES = [
+      { id:'A847-291', av:'JK', name:'Julia Kessler', role:'Senior Sales Manager', source:'linkedin', color:'#0a66c2',
+        score:94, match:true, crit:[ ['9/10','pass'],['7 Jahre','pass'],['Berlin','pass'],['DE/EN','pass'],['85k€','pass'] ] },
+      { id:'A847-318', av:'MA', name:'Mehmet Aydın', role:'Account Executive', source:'xing', color:'#006567',
+        score:91, match:true, crit:[ ['8/10','pass'],['5 Jahre','pass'],['München','pass'],['DE','pass'],['72k€','pass'] ] },
+      { id:'A847-344', av:'PR', name:'Patrick Roth', role:'BDR Junior', source:'indeed', color:'#2557a7',
+        score:42, match:false, crit:[ ['6/10','pass'],['1 Jahr','fail'],['Wien','pass'],['DE','pass'],['—','fail'] ] },
+      { id:'A847-512', av:'TN', name:'Tanja Neumann', role:'Key Account Manager', source:'stepstone', color:'#0073e6',
+        score:87, match:true, crit:[ ['8/10','pass'],['4 Jahre','pass'],['Hamburg','pass'],['DE/EN','pass'],['68k€','pass'] ] }
+    ];
+
+    var absEls = {
+      av: document.getElementById('absHcAv'),
+      name: document.getElementById('absHcName'),
+      role: document.getElementById('absHcRole'),
+      src: document.getElementById('absHcSrc'),
+      idNum: document.getElementById('absHcIdNum'),
+      crits: document.querySelectorAll('#absCritList .abs-crit'),
+      stamp: document.getElementById('absScoreStamp'),
+      stampNum: document.getElementById('absScoreNum'),
+      stampLbl: document.getElementById('absScoreLbl'),
+      colSourced: document.getElementById('absColSourced'),
+      plats: {
+        linkedin: document.getElementById('abs-plat-linkedin'),
+        xing: document.getElementById('abs-plat-xing'),
+        indeed: document.getElementById('abs-plat-indeed'),
+        stepstone: document.getElementById('abs-plat-stepstone')
+      }
+    };
+
+    var absIdx = 0;
+
+    function absClearCardClasses() {
+      absCard.classList.remove('spawning','idle','scanning','scored','filing','rejecting','strike','match-card','miss-card');
+      absCard.style.opacity = '0';
+      absCard.style.removeProperty('transform');
+    }
+    function absResetCrits() {
+      absEls.crits.forEach(function(c) {
+        c.classList.remove('show','pass','fail');
+        c.querySelector('.abs-crit-icon').textContent = '·';
+        c.querySelector('.abs-crit-val').textContent = '—';
+      });
+    }
+    function absDeactivatePlats() {
+      Object.keys(absEls.plats).forEach(function(k){ absEls.plats[k].classList.remove('active'); });
+    }
+    function absSetSpawnVector(platformEl) {
+      var pRect = platformEl.getBoundingClientRect();
+      absCard.style.opacity = '0';
+      absCard.classList.remove('spawning');
+      var cRect = absCard.getBoundingClientRect();
+      var dx = (pRect.left + pRect.width/2) - (cRect.left + cRect.width/2);
+      var dy = (pRect.top + pRect.height/2) - (cRect.top + cRect.height/2);
+      absCard.style.setProperty('--spawn-dx', dx + 'px');
+      absCard.style.setProperty('--spawn-dy', dy + 'px');
+    }
+    function absSetFileVector() {
+      var target = absEls.colSourced.getBoundingClientRect();
+      var cRect = absCard.getBoundingClientRect();
+      var dx = (target.left + 40) - (cRect.left + cRect.width/2);
+      var dy = (target.top + 30) - (cRect.top + cRect.height/2);
+      absCard.style.setProperty('--file-dx', dx + 'px');
+      absCard.style.setProperty('--file-dy', dy + 'px');
+    }
+    function absAnimateScore(target, ms) {
+      var cur = 0;
+      var steps = 22;
+      var stepDur = ms / steps;
+      var step = Math.max(1, Math.round(target / steps));
+      var t = setInterval(function() {
+        cur = Math.min(target, cur + step);
+        absEls.stampNum.textContent = cur;
+        if (cur >= target) clearInterval(t);
+      }, stepDur);
+    }
+    function absSetCrit(idx, val, status) {
+      var c = absEls.crits[idx];
+      c.classList.add('show', status);
+      c.querySelector('.abs-crit-icon').textContent = status === 'pass' ? '✓' : '✕';
+      c.querySelector('.abs-crit-val').textContent = val;
+    }
+    function absAddPoolCard(p) {
+      var html =
+        '<div class="abs-pipe-card land">' +
+          '<div class="abs-pc-av" style="background:'+p.color+'">'+p.av+'</div>' +
+          '<div class="abs-pc-meta">' +
+            '<div class="abs-pc-name">'+p.name+'</div>' +
+            '<div class="abs-pc-foot">' +
+              '<span class="abs-pc-source abs-source-'+p.source+'">'+p.source+'</span>' +
+              '<span class="abs-pc-score">'+p.score+'</span>' +
+            '</div>' +
+          '</div>' +
+        '</div>';
+      absEls.colSourced.insertAdjacentHTML('beforeend', html);
+    }
+    function absClearPool() {
+      var cards = Array.prototype.slice.call(absEls.colSourced.children);
+      cards.forEach(function(c, i) { setTimeout(function(){ c.classList.add('exit'); }, i * 80); });
+      setTimeout(function(){ absEls.colSourced.innerHTML = ''; }, cards.length * 80 + 600);
+    }
+
+    function absRunCycle() {
+      var p = ABS_PROFILES[absIdx % ABS_PROFILES.length];
+      var isFirstOfRound = (absIdx % ABS_PROFILES.length === 0);
+      absIdx++;
+
+      if (isFirstOfRound && absEls.colSourced.children.length > 0) {
+        absClearPool();
+      }
+
+      absClearCardClasses();
+      absResetCrits();
+      absDeactivatePlats();
+      absEls.stamp.classList.remove('match','miss');
+      absEls.stampNum.textContent = '0';
+
+      absEls.av.textContent = p.av;
+      absEls.av.style.background = p.color;
+      absEls.name.textContent = p.name;
+      absEls.role.textContent = p.role;
+      absEls.src.textContent = p.source;
+      absEls.src.className = 'abs-hc-src abs-source-' + p.source;
+      absEls.idNum.textContent = '#' + p.id;
+
+      absEls.plats[p.source].classList.add('active');
+
+      setTimeout(function() {
+        absSetSpawnVector(absEls.plats[p.source]);
+        absCard.classList.add('spawning');
+      }, 1000);
+
+      setTimeout(function() {
+        absCard.classList.remove('spawning');
+        absCard.classList.add('idle');
+        absCard.style.opacity = '1';
+      }, 1700);
+
+      setTimeout(function() {
+        absCard.classList.add('scanning');
+        p.crit.forEach(function(cv, i) {
+          setTimeout(function() { absSetCrit(i, cv[0], cv[1]); }, 100 + i * 320);
+        });
+      }, 2200);
+
+      setTimeout(function() {
+        absCard.classList.remove('scanning');
+        absEls.stamp.classList.add(p.match ? 'match' : 'miss');
+        absEls.stampLbl.textContent = p.match ? 'Match' : 'Pass';
+        absCard.classList.add('scored', p.match ? 'match-card' : 'miss-card');
+        absAnimateScore(p.score, 400);
+      }, 4500);
+
+      setTimeout(function() {
+        if (p.match) {
+          absSetFileVector();
+          absCard.classList.remove('idle');
+          absCard.classList.add('filing');
+          setTimeout(function() { absAddPoolCard(p); }, 780);
+        } else {
+          absCard.classList.add('strike');
+          setTimeout(function() {
+            absCard.classList.remove('idle');
+            absCard.classList.add('rejecting');
+          }, 700);
+        }
+      }, 5400);
+    }
+
+    // Start the loop only when section is scrolled into view (preserves performance)
+    var absArenaEl = document.getElementById('absArena');
+    var absStarted = false;
+    var absInterval = null;
+    function absMaybeStart() {
+      if (absStarted) return;
+      var rect = absArenaEl.getBoundingClientRect();
+      if (rect.top < window.innerHeight && rect.bottom > 0) {
+        absStarted = true;
+        setTimeout(absRunCycle, 600);
+        absInterval = setInterval(absRunCycle, 7000);
+      }
+    }
+    window.addEventListener('scroll', absMaybeStart, { passive: true });
+    window.addEventListener('load', absMaybeStart);
+    absMaybeStart();
+  }
 })();
   </script>
 </body>
