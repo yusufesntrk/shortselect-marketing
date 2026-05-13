@@ -2195,8 +2195,8 @@ const websiteSchema = {
 
   .abs-stage { max-width: 1100px; margin: 0 auto; padding: 0 32px; }
 
-  /* Platform bar */
-  .abs-plat-bar { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 28px; }
+  /* Platform bar — z-index above hero card so spawn animation doesn't bleed through */
+  .abs-plat-bar { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 28px; position: relative; z-index: 10; }
   .abs-plat {
     background: white; border: 1px solid #e5e5e5; border-radius: 14px; padding: 12px 14px;
     display: flex; align-items: center; gap: 11px;
@@ -2250,16 +2250,16 @@ const websiteSchema = {
   .abs-main-row {
     display: grid; grid-template-columns: 1fr 320px; gap: 24px; align-items: stretch;
   }
-  .abs-arena { position: relative; min-height: 380px; perspective: 1400px; }
+  .abs-arena { position: relative; min-height: 420px; perspective: 1400px; }
 
   /* Hero card */
   .abs-hero-card {
     position: absolute; top: 50%; left: 50%;
-    width: 340px; margin-top: -130px; margin-left: -170px;
+    width: 340px; margin-top: -190px; margin-left: -170px;
     background: white; border-radius: 16px; padding: 18px;
     box-shadow: 0 24px 56px -16px rgba(0,0,0,0.22), 0 0 0 1px rgba(0,0,0,0.04);
     opacity: 0; z-index: 4; transform-style: preserve-3d;
-    --spawn-dx: 0px; --spawn-dy: -200px;
+    --spawn-dx: 0px; --spawn-dy: 0px;
     --file-dx: 300px; --file-dy: 0px;
   }
   .abs-hero-card.spawning { animation: abs-spawn 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
@@ -3733,10 +3733,11 @@ const websiteSchema = {
       absCard.style.opacity = '0';
       absCard.classList.remove('spawning');
       var cRect = absCard.getBoundingClientRect();
+      // Only horizontal motion from platform — vertical clamped to 0 so card
+      // never crosses into the platform bar visually
       var dx = (pRect.left + pRect.width/2) - (cRect.left + cRect.width/2);
-      var dy = (pRect.top + pRect.height/2) - (cRect.top + cRect.height/2);
       absCard.style.setProperty('--spawn-dx', dx + 'px');
-      absCard.style.setProperty('--spawn-dy', dy + 'px');
+      absCard.style.setProperty('--spawn-dy', '0px');
     }
     function absSetFileVector() {
       var target = absEls.colSourced.getBoundingClientRect();
