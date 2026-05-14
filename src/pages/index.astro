@@ -4115,6 +4115,72 @@ const websiteSchema = {
     absMaybeStart();
   }
 })();
+
+  // === MOBILE NAV OVERLAY ===
+  (function initMobileNav() {
+    const burger = document.querySelector('.fc-nav-burger');
+    const overlay = document.getElementById('mobile-nav-overlay');
+    const closeBtn = overlay && overlay.querySelector('.fc-mob-nav-close');
+    if (!burger || !overlay || !closeBtn) return;
+
+    const accTriggers = overlay.querySelectorAll('.fc-mob-acc-trigger');
+
+    function openOverlay() {
+      overlay.removeAttribute('hidden');
+      // Force reflow so transition runs from translateX(100%)
+      void overlay.offsetHeight;
+      overlay.classList.add('is-open');
+      burger.setAttribute('aria-expanded', 'true');
+      document.body.classList.add('no-scroll');
+      setTimeout(function () { closeBtn.focus(); }, 50);
+    }
+
+    function closeOverlay() {
+      overlay.classList.remove('is-open');
+      burger.setAttribute('aria-expanded', 'false');
+      document.body.classList.remove('no-scroll');
+      setTimeout(function () {
+        overlay.setAttribute('hidden', '');
+        accTriggers.forEach(function (t) {
+          t.setAttribute('aria-expanded', 'false');
+          const panel = t.nextElementSibling;
+          if (panel) panel.classList.remove('is-open');
+        });
+      }, 300);
+    }
+
+    burger.addEventListener('click', openOverlay);
+    closeBtn.addEventListener('click', closeOverlay);
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && overlay.classList.contains('is-open')) {
+        closeOverlay();
+      }
+    });
+
+    accTriggers.forEach(function (trigger) {
+      trigger.addEventListener('click', function () {
+        const isOpen = trigger.getAttribute('aria-expanded') === 'true';
+        accTriggers.forEach(function (t) {
+          t.setAttribute('aria-expanded', 'false');
+          const p = t.nextElementSibling;
+          if (p) p.classList.remove('is-open');
+        });
+        if (!isOpen) {
+          trigger.setAttribute('aria-expanded', 'true');
+          const panel = trigger.nextElementSibling;
+          if (panel) panel.classList.add('is-open');
+        }
+      });
+    });
+
+    overlay.querySelectorAll('.fc-mob-link').forEach(function (link) {
+      link.addEventListener('click', function () {
+        // Don't preventDefault — let navigation happen
+        closeOverlay();
+      });
+    });
+  })();
   </script>
 </body>
 </html>
