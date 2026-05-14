@@ -2612,14 +2612,213 @@ const websiteSchema = {
 
   body.no-scroll { overflow: hidden; }
 
-  /* === MOBILE OVERRIDES (≤768px) — populated by subsequent tasks === */
+  /* === MOBILE OVERRIDES (≤768px) === */
   @media (max-width: 768px) {
-    /* Tasks 4–13 add rules here */
+    /* --- Nav --- */
+    .fc-nav { padding: 12px 16px 0; }
+    .fc-nav-inner {
+      width: 100%;
+      max-width: 100%;
+      padding: 6px 6px 6px 14px;
+      gap: 8px;
+      box-sizing: border-box;
+    }
+    .fc-nav-left { gap: 8px; flex: 1; min-width: 0; }
+    .fc-nav-menu { display: none; }
+    .fc-nav-burger { display: flex; }
+    .fc-nav-right { gap: 0; flex-shrink: 0; }
+    /* On mobile, CTAs move into the hamburger overlay — hide them in the top bar */
+    .fc-nav-right .nav-cta-ghost,
+    .fc-nav-right .nav-cta-primary { display: none; }
+
+    /* --- Hero --- */
+    .fc-hero { padding: 60px 0 40px; overflow-x: hidden; }
+    .fc-hero-inner {
+      padding: 0 20px;
+      align-items: stretch;
+      text-align: center;
+      width: 100%;
+      max-width: 100%;
+    }
+    .fc-hero-inner > * { max-width: 100%; }
+    .fc-hero h1 {
+      font-size: 32px;
+      line-height: 1.05;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      hyphens: auto;
+    }
+    .fc-hero .lead {
+      font-size: 16px;
+      max-width: 100%;
+      margin-top: 20px;
+      margin-left: 0;
+      margin-right: 0;
+    }
+    .fc-hero .actions {
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 28px;
+      width: 100%;
+      align-items: stretch;
+    }
+    .fc-hero .actions .fc-btn,
+    .fc-hero .actions .fc-btn-ghost {
+      width: 100%;
+      justify-content: center;
+      box-sizing: border-box;
+    }
+    .fc-hero .trust { justify-content: center; flex-wrap: wrap; }
+    .fc-pill { align-self: center; }
+    .fc-hero-glow { display: none; }
+    .fc-hero::before { width: 100%; height: 600px; }
+    .fc-hero-deco-dot { opacity: 0.3; }
+    .fc-hero-deco-star { opacity: 0.4; font-size: 16px; }
+    .fc-pill { font-size: 12px; padding: 6px 12px; }
+
+    /* --- "So funktioniert's" Cards --- */
+    .fc-how-head { padding: 0 20px; max-width: 100%; }
+    .fc-how-head h2 { font-size: 32px; }
+    .fc-how-cards {
+      grid-template-columns: 1fr;
+      gap: 16px;
+      padding: 0 20px;
+      margin-top: 40px;
+      max-width: 100%;
+    }
+
+    /* --- Bento Grid --- */
+    .fc-bento-head { padding: 0 20px; max-width: 100%; }
+    .fc-bento-head h2 { font-size: 32px; }
+    .fc-bento {
+      grid-template-columns: 1fr;
+      grid-auto-rows: auto;
+      gap: 16px;
+      padding: 0 20px;
+      max-width: 100%;
+    }
+    .fc-bento > * {
+      grid-column: auto !important;
+      grid-row: auto !important;
+      min-height: 200px;
+    }
+
+    /* --- Stats Grid --- */
+    .fc-stats-head { padding: 0 20px; max-width: 100%; }
+    .fc-stats-head h2 { font-size: 32px; }
+    .fc-stats-grid {
+      grid-template-columns: 1fr;
+      gap: 18px;
+      padding: 0 20px;
+      margin-top: 40px;
+      max-width: 100%;
+    }
+
+    /* --- Close (dark CTA section) --- */
+    .fc-close { padding: 60px 0; }
+    .fc-close-inner { padding: 0 20px; max-width: 100%; }
+    .fc-close h2 { font-size: 32px; line-height: 1.1; }
+    .fc-close .lead { font-size: 15px; margin-top: 14px; }
+    .fc-close .actions {
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 28px;
+    }
+    .fc-close .actions a { width: 100%; justify-content: center; box-sizing: border-box; }
+
+    /* --- Agents-vs-Features --- */
+    .fc-avf { padding: 60px 0; }
+    .fc-avf-head { padding: 0 20px; margin-bottom: 32px; max-width: 100%; }
+    .fc-avf-head h2 { font-size: 32px; }
+    .fc-avf-grid {
+      grid-template-columns: 1fr;
+      padding: 0 20px;
+      gap: 20px;
+      max-width: 100%;
+    }
+
+    /* --- AI-Features --- */
+    .fc-ai-head { padding: 0 20px; margin-bottom: 40px; max-width: 100%; }
+    .fc-ai-head h2 { font-size: 32px; }
+    .fc-ai-grid {
+      grid-template-columns: 1fr;
+      padding: 0 20px;
+      gap: 16px;
+      max-width: 100%;
+    }
+
+    /* --- Testimonials --- */
+    .fc-testi-head { padding: 0 20px; margin-bottom: 40px; max-width: 100%; }
+    .fc-testi-head h2 { font-size: 32px; }
+    .fc-testi-grid {
+      grid-template-columns: 1fr;
+      padding: 0 20px;
+      gap: 16px;
+      max-width: 100%;
+    }
+
+    /* --- FAQ --- */
+    .fc-faq { padding: 60px 0; }
+    .fc-faq-head { padding: 0 20px; margin-bottom: 32px; max-width: 100%; }
+    .fc-faq-head h2 { font-size: 32px; }
+
+    /* --- Sell-the-Job teaser (decorative fields) --- */
+    .stj-field { display: none; }
+
+    /* --- Trusted-by marquee — keep marquee but ensure parent clips properly --- */
+    .fc-trusted { max-width: 100vw; overflow: hidden; }
+
+    /* --- Sourcing score-stamp + other absolute positioned siblings --- */
+    .abs-section, .abs-main-row, .abs-pipe-card { max-width: 100%; overflow: hidden; }
+
+    /* --- Body-level overflow safety net --- */
+    html, body.fc {
+      overflow-x: clip;
+      max-width: 100vw;
+    }
+    /* Fallback for browsers without overflow: clip support */
+    @supports not (overflow-x: clip) {
+      html, body.fc { overflow-x: hidden; }
+    }
   }
 
-  /* === SMALL MOBILE OVERRIDES (≤480px) — populated by subsequent tasks === */
+  /* === SMALL MOBILE OVERRIDES (≤480px) === */
   @media (max-width: 480px) {
-    /* Tasks 4–13 add rules here */
+    /* --- Nav --- */
+    .fc-nav { padding: 10px 12px 0; }
+    .fc-nav-inner { padding: 5px 5px 5px 12px; gap: 6px; }
+    .fc-logo { font-size: 17px; gap: 8px; }
+    .fc-logo .lg { width: 28px; height: 28px; }
+
+    /* --- Hero --- */
+    .fc-hero { padding: 50px 0 30px; }
+    .fc-hero-inner { padding: 0 16px; }
+    .fc-hero h1 { font-size: 26px; }
+    .fc-hero .lead { font-size: 15px; margin-top: 16px; }
+    .fc-hero-deco-dot { display: none; }
+    .fc-hero-deco-star { display: none; }
+
+    /* --- Headings further reduced --- */
+    .fc-how-head h2,
+    .fc-bento-head h2,
+    .fc-stats-head h2,
+    .fc-close h2,
+    .fc-avf-head h2,
+    .fc-ai-head h2,
+    .fc-testi-head h2,
+    .fc-faq-head h2 { font-size: 26px; }
+
+    /* --- Sourcing-Showcase scale-down --- */
+    .abs-head h2 { font-size: 26px; }
+    .abs-pipe-card {
+      transform: scale(0.92);
+      transform-origin: center top;
+    }
+    .abs-plat-bar { gap: 8px; }
+    .abs-plat {
+      padding: 8px 6px;
+      font-size: 11px;
+    }
   }
 
   @media (max-width: 880px) {
@@ -2629,8 +2828,13 @@ const websiteSchema = {
   }
   @media (prefers-reduced-motion: reduce) {
     .abs-hero-card, .abs-hero-card *, .abs-plat, .abs-plat *, .abs-pipe-card, .abs-pipe-card *,
-    .abs-crit, .abs-score-stamp, .abs-confetti, .abs-reject-x line, .abs-scan-beam {
-      animation-duration: 0.01s !important; animation-iteration-count: 1 !important; transition-duration: 0.01s !important;
+    .abs-crit, .abs-score-stamp, .abs-confetti, .abs-reject-x line, .abs-scan-beam,
+    .fc-hero-deco-dot, .fc-hero-deco-star, .fc-pill .dot,
+    .fc-trusted-track, .stj-field,
+    .fc-mob-nav, .fc-mob-acc-panel, .fc-mob-acc-caret {
+      animation-duration: 0.01s !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01s !important;
     }
   }
   </style>
