@@ -3,3 +3,5 @@ dist
 .astro
 package-lock.json
 .superpowers/
+.worktrees/
+.playwright-tmp/
