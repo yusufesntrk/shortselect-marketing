@@ -1,27 +1,35 @@
 export const faqs = [
   {
-    question: "Was ist im Founders Deal enthalten?",
+    question: "Was ist im Pioneer Plan enthalten?",
     answer: "Alle Funktionen von ShortSelect: unbegrenzte Jobs und Kandidaten, AgentBurst KI-Engine für Matching, Screening, Ranking und Nurturing, Multi-Mandanten mit Client Portal, Karriereseite, Multiposting, Talent Pools, Interview Scheduling, REST API, Webhooks und Priority Support. Ein Preis pro Agentur, keine User-Lizenzen, keine Add-On-Fees.",
   },
   {
-    question: "Was passiert nach den 30 Tagen?",
-    answer: "Nach Ablauf des Trials bleibt Ihr Account erhalten und Sie wechseln in den Founders Deal für 89 EUR pro Monat. Wenn Sie nicht weitermachen möchten, wird Ihr Account ohne weitere Kosten archiviert. Wir erinnern Sie rechtzeitig vor Trial-Ende per E-Mail, damit Sie aktiv entscheiden können.",
+    question: "Was passiert nach den 30 Tagen Trial?",
+    answer: "Nach Ablauf des Trials bleibt Ihr Account erhalten und Sie wechseln in den Pioneer Plan für 149 EUR pro Monat. Wenn Sie nicht weitermachen möchten, wird Ihr Account ohne weitere Kosten archiviert. Wir erinnern Sie rechtzeitig vor Trial-Ende per E-Mail, damit Sie aktiv entscheiden können.",
   },
   {
     question: "Brauche ich eine Kreditkarte für den Trial?",
-    answer: "Nein. Der 30-tägige Trial ist komplett kostenlos und ohne Zahlungsdaten. Sie geben Ihre Zahlungsmethode erst an, wenn Sie nach dem Trial in den Founders Deal wechseln möchten.",
+    answer: "Nein. Der 30-tägige Trial ist komplett kostenlos und ohne Zahlungsdaten. Sie geben Ihre Zahlungsmethode erst an, wenn Sie nach dem Trial in den Pioneer Plan wechseln möchten.",
   },
   {
-    question: "Bleibt der Preis von 89 EUR garantiert?",
-    answer: "Ja. Wer den Founders Deal nutzt, bezahlt diesen Preis auf Lebenszeit, auch wenn wir später die Standard-Preise anheben. Der Founders Deal ist limitiert auf die ersten 100 Recruiting-Agenturen.",
+    question: "Bleibt der Preis von 149 EUR garantiert?",
+    answer: "Ja. Wer den Pioneer Plan nutzt, bezahlt diesen Preis auf Lebenszeit, solange das Abo ununterbrochen aktiv bleibt, auch wenn wir später die Standard-Preise anheben. Der Pioneer Plan ist limitiert auf die ersten 100 Recruiting-Agenturen.",
+  },
+  {
+    question: "Wie viele Pioneer-Plätze sind noch frei?",
+    answer: "Auf shortselect.com/preise sehen Sie einen Live-Counter mit der aktuellen Anzahl freier Pioneer-Plätze. Nach Vergabe aller 100 Plätze wechseln neue Tenants automatisch in den Standard-Tarif.",
+  },
+  {
+    question: "Was kostet ShortSelect nach den 100 Pioneer-Plätzen?",
+    answer: "Ab Platz 101 gilt der Standard-Tarif von 249 EUR pro Monat pro Tenant, gleicher Funktionsumfang, kein Tier-Wirrwarr. Bestehende Pioneer-Kunden behalten ihren Preis von 149 EUR lebenslang, solange ihr Abo aktiv bleibt.",
   },
   {
     question: "Kann ich jederzeit kündigen?",
-    answer: "Ja. ShortSelect ist monatlich kündbar, ohne Mindestlaufzeit. Eine Kündigung erfolgt direkt im Account. Sie behalten Zugriff bis zum Ende der laufenden Abrechnungsperiode.",
+    answer: "Ja. ShortSelect ist monatlich kündbar, ohne Mindestlaufzeit. Eine Kündigung erfolgt direkt im Account über das Stripe Customer Portal. Sie behalten Zugriff bis zum Ende der laufenden Abrechnungsperiode.",
   },
   {
     question: "Werden Updates und neue Funktionen extra berechnet?",
-    answer: "Nein. Alle zukünftigen Updates und neuen Funktionen sind im Founders Deal enthalten. Es gibt keine Aufpreise für Premium-Module oder neue KI-Features.",
+    answer: "Nein. Alle zukünftigen Updates und neuen Funktionen sind im Pioneer Plan und im Standard-Tarif enthalten. Es gibt keine Aufpreise für Premium-Module oder neue KI-Features.",
   },
   {
     question: "Wie sicher sind meine Daten?",
@@ -29,6 +37,6 @@ export const faqs = [
   },
   {
     question: "Kann ich meine bestehenden Daten importieren?",
-    answer: "Ja. ShortSelect unterstützt CSV-Import für Kandidaten, Jobs und Unternehmen. Unser Onboarding-Team hilft Ihnen beim reibungslosen Umzug von Ihrem bisherigen System, das ist im Founders Deal kostenfrei enthalten.",
+    answer: "Ja. ShortSelect unterstützt CSV-Import für Kandidaten, Jobs und Unternehmen. Unser Onboarding-Team hilft Ihnen beim reibungslosen Umzug von Ihrem bisherigen System, das ist im Pioneer Plan kostenfrei enthalten.",
   },
 ];

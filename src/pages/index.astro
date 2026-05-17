@@ -3,7 +3,7 @@ import SEOHead from '../components/seo/SEOHead.astro';
 import CookieConsentBanner from '../components/legal/CookieConsentBanner.astro';
 import '../styles/global.css';
 
-const SIGNUP_URL_HERO = 'https://app.shortselect.com/signup?utm_source=marketing&utm_medium=cta&utm_campaign=founders_deal&utm_content=hero';
+const SIGNUP_URL_HERO = 'https://app.shortselect.com/signup?utm_source=marketing&utm_medium=cta&utm_campaign=pioneer_plan&utm_content=hero';
 
 const softwareSchema = {
   "@context": "https://schema.org",
@@ -15,10 +15,10 @@ const softwareSchema = {
   description: "KI-gestützte Recruiting Software mit AgentBurst-Engine, Smart Ranking und Client Portal",
   offers: {
     "@type": "Offer",
-    name: "Founders Deal",
-    price: "89.00",
+    name: "Pioneer Plan",
+    price: "149.00",
     priceCurrency: "EUR",
-    availability: "https://schema.org/InStock",
+    availability: "https://schema.org/LimitedAvailability",
     priceValidUntil: "2099-12-31",
     url: "https://www.shortselect.com/preise",
   },
@@ -44,14 +44,16 @@ const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
   mainEntity: [
-    { "@type": "Question", name: "Was ist im Founders Deal enthalten?", acceptedAnswer: { "@type": "Answer", text: "Alle Funktionen von ShortSelect: unbegrenzte Jobs und Kandidaten, AgentBurst KI-Engine für Matching, Screening, Ranking und Nurturing, Multi-Mandanten mit Client Portal, Karriereseite, Multiposting, Talent Pools, Interview Scheduling, REST API, Webhooks und Priority Support. Ein Preis pro Agentur, keine User-Lizenzen, keine Add-On-Fees." } },
-    { "@type": "Question", name: "Was passiert nach den 30 Tagen?", acceptedAnswer: { "@type": "Answer", text: "Nach Ablauf des Trials bleibt Ihr Account erhalten und Sie wechseln in den Founders Deal für 89 EUR pro Monat. Wenn Sie nicht weitermachen möchten, wird Ihr Account ohne weitere Kosten archiviert. Wir erinnern Sie rechtzeitig vor Trial-Ende per E-Mail, damit Sie aktiv entscheiden können." } },
-    { "@type": "Question", name: "Brauche ich eine Kreditkarte für den Trial?", acceptedAnswer: { "@type": "Answer", text: "Nein. Der 30-tägige Trial ist komplett kostenlos und ohne Zahlungsdaten. Sie geben Ihre Zahlungsmethode erst an, wenn Sie nach dem Trial in den Founders Deal wechseln möchten." } },
-    { "@type": "Question", name: "Bleibt der Preis von 89 EUR garantiert?", acceptedAnswer: { "@type": "Answer", text: "Ja. Wer den Founders Deal nutzt, bezahlt diesen Preis auf Lebenszeit, auch wenn wir später die Standard-Preise anheben. Der Founders Deal ist limitiert auf die ersten 100 Recruiting-Agenturen." } },
-    { "@type": "Question", name: "Kann ich jederzeit kündigen?", acceptedAnswer: { "@type": "Answer", text: "Ja. ShortSelect ist monatlich kündbar, ohne Mindestlaufzeit. Eine Kündigung erfolgt direkt im Account. Sie behalten Zugriff bis zum Ende der laufenden Abrechnungsperiode." } },
-    { "@type": "Question", name: "Werden Updates und neue Funktionen extra berechnet?", acceptedAnswer: { "@type": "Answer", text: "Nein. Alle zukünftigen Updates und neuen Funktionen sind im Founders Deal enthalten. Es gibt keine Aufpreise für Premium-Module oder neue KI-Features." } },
+    { "@type": "Question", name: "Was ist im Pioneer Plan enthalten?", acceptedAnswer: { "@type": "Answer", text: "Alle Funktionen von ShortSelect: unbegrenzte Jobs und Kandidaten, AgentBurst KI-Engine für Matching, Screening, Ranking und Nurturing, Multi-Mandanten mit Client Portal, Karriereseite, Multiposting, Talent Pools, Interview Scheduling, REST API, Webhooks und Priority Support. Ein Preis pro Agentur, keine User-Lizenzen, keine Add-On-Fees." } },
+    { "@type": "Question", name: "Was passiert nach den 30 Tagen Trial?", acceptedAnswer: { "@type": "Answer", text: "Nach Ablauf des Trials bleibt Ihr Account erhalten und Sie wechseln in den Pioneer Plan für 149 EUR pro Monat. Wenn Sie nicht weitermachen möchten, wird Ihr Account ohne weitere Kosten archiviert. Wir erinnern Sie rechtzeitig vor Trial-Ende per E-Mail, damit Sie aktiv entscheiden können." } },
+    { "@type": "Question", name: "Brauche ich eine Kreditkarte für den Trial?", acceptedAnswer: { "@type": "Answer", text: "Nein. Der 30-tägige Trial ist komplett kostenlos und ohne Zahlungsdaten. Sie geben Ihre Zahlungsmethode erst an, wenn Sie nach dem Trial in den Pioneer Plan wechseln möchten." } },
+    { "@type": "Question", name: "Bleibt der Preis von 149 EUR garantiert?", acceptedAnswer: { "@type": "Answer", text: "Ja. Wer den Pioneer Plan nutzt, bezahlt diesen Preis auf Lebenszeit, solange das Abo ununterbrochen aktiv bleibt, auch wenn wir später die Standard-Preise anheben. Der Pioneer Plan ist limitiert auf die ersten 100 Recruiting-Agenturen." } },
+    { "@type": "Question", name: "Wie viele Pioneer-Plätze sind noch frei?", acceptedAnswer: { "@type": "Answer", text: "Auf shortselect.com/preise sehen Sie einen Live-Counter mit der aktuellen Anzahl freier Pioneer-Plätze. Nach Vergabe aller 100 Plätze wechseln neue Tenants automatisch in den Standard-Tarif." } },
+    { "@type": "Question", name: "Was kostet ShortSelect nach den 100 Pioneer-Plätzen?", acceptedAnswer: { "@type": "Answer", text: "Ab Platz 101 gilt der Standard-Tarif von 249 EUR pro Monat pro Tenant, gleicher Funktionsumfang, kein Tier-Wirrwarr. Bestehende Pioneer-Kunden behalten ihren Preis von 149 EUR lebenslang, solange ihr Abo aktiv bleibt." } },
+    { "@type": "Question", name: "Kann ich jederzeit kündigen?", acceptedAnswer: { "@type": "Answer", text: "Ja. ShortSelect ist monatlich kündbar, ohne Mindestlaufzeit. Eine Kündigung erfolgt direkt im Account über das Stripe Customer Portal. Sie behalten Zugriff bis zum Ende der laufenden Abrechnungsperiode." } },
+    { "@type": "Question", name: "Werden Updates und neue Funktionen extra berechnet?", acceptedAnswer: { "@type": "Answer", text: "Nein. Alle zukünftigen Updates und neuen Funktionen sind im Pioneer Plan und im Standard-Tarif enthalten. Es gibt keine Aufpreise für Premium-Module oder neue KI-Features." } },
     { "@type": "Question", name: "Wie sicher sind meine Daten?", acceptedAnswer: { "@type": "Answer", text: "Ihre Daten werden ausschließlich in EU-Rechenzentren gespeichert und sind durch Row-Level-Security, SSL-Verschlüsselung und tägliche Backups geschützt. ShortSelect ist vollständig DSGVO-konform und bietet Audit-Logging, RBAC und einen AVV-Vertrag." } },
-    { "@type": "Question", name: "Kann ich meine bestehenden Daten importieren?", acceptedAnswer: { "@type": "Answer", text: "Ja. ShortSelect unterstützt CSV-Import für Kandidaten, Jobs und Unternehmen. Unser Onboarding-Team hilft Ihnen beim reibungslosen Umzug von Ihrem bisherigen System, das ist im Founders Deal kostenfrei enthalten." } },
+    { "@type": "Question", name: "Kann ich meine bestehenden Daten importieren?", acceptedAnswer: { "@type": "Answer", text: "Ja. ShortSelect unterstützt CSV-Import für Kandidaten, Jobs und Unternehmen. Unser Onboarding-Team hilft Ihnen beim reibungslosen Umzug von Ihrem bisherigen System, das ist im Pioneer Plan kostenfrei enthalten." } },
   ],
 };
 
@@ -3011,13 +3013,13 @@ const websiteSchema = {
       <div class="fc-hero-deco-star s1">★</div>
       <div class="fc-hero-deco-star s2">✦</div>
       <div class="fc-hero-inner reveal-stagger" data-reveal>
-        <div class="fc-pill"><span class="dot"></span> Live · 73 von 100 Founder-Plätzen frei</div>
+        <div class="fc-pill" id="hero-pioneer-pill"><span class="dot"></span> <span id="hero-pioneer-pill-text">Pioneer Plan · 100 Plätze, jetzt sichern</span></div>
         <h1>Recruiting,<br>das sich anfühlt wie <span class="wavy">Magie.</span></h1>
         <p class="lead">
           ShortSelect ist die Pipeline-Software für Recruiting-Agenturen, die endlich aufhören wollen, <span class="marker">zwölf Tools</span> nebeneinander offen zu haben.
         </p>
         <div class="actions">
-          <a href="https://app.shortselect.com/signup?utm_source=marketing&utm_medium=cta&utm_campaign=founders_deal&utm_content=hero" class="fc-btn">30 Tage kostenlos starten →</a>
+          <a href="https://app.shortselect.com/signup?utm_source=marketing&utm_medium=cta&utm_campaign=pioneer_plan&utm_content=hero" class="fc-btn">30 Tage kostenlos starten →</a>
           <a href="/demo" class="fc-btn fc-btn-ghost">Demo ansehen</a>
         </div>
         <div class="trust">
@@ -3764,26 +3766,26 @@ const websiteSchema = {
     <!-- PRICING -->
     <section class="fc-price">
       <div class="fc-price-head reveal" data-reveal>
-        <div class="fc-pill"><span class="dot"></span> Founders Deal</div>
+        <div class="fc-pill"><span class="dot"></span> Pioneer Plan</div>
         <h2>Ein Preis. Alles drin.<br><span class="wavy">Auf Lebenszeit.</span></h2>
       </div>
       <div class="fc-price-card reveal" data-reveal>
-        <div class="sticker">⚡ Nur 73 von 100</div>
-        <h3>Founders Deal</h3>
-        <p class="desc">Pro Tenant. Alle Recruiter-Plätze. Alle Werkzeuge. Auf Lebenszeit garantiert.</p>
+        <div class="sticker" id="home-pricing-sticker">⚡ Pioneer Plan · 100 Plätze</div>
+        <h3>Pioneer Plan</h3>
+        <p class="desc">Pro Tenant. Alle Recruiter-Plätze. Alle Werkzeuge. Preis auf Lebenszeit garantiert für die ersten 100 Agenturen.</p>
         <div class="price-row">
-          <span class="old">150€</span>
-          <span class="new">89€</span>
+          <span class="old">249€</span>
+          <span class="new">149€</span>
           <span class="month">/ Monat</span>
         </div>
         <div class="features">
           <div class="feat-row">Unlimited Recruiter</div>
           <div class="feat-row">Alle KI-Agents inklusive</div>
           <div class="feat-row">Client Portal mit eigenem Branding</div>
-          <div class="feat-row">Preis lebenslang garantiert</div>
+          <div class="feat-row">Lifetime-Preisgarantie für Pioneer-Kunden</div>
         </div>
-        <a href="https://app.shortselect.com/signup?utm_source=marketing&utm_medium=cta&utm_campaign=founders_deal&utm_content=pricing" class="fc-btn">30 Tage starten →</a>
-        <div class="terms">Keine Kreditkarte · jederzeit kündbar</div>
+        <a href="https://app.shortselect.com/signup?utm_source=marketing&utm_medium=cta&utm_campaign=pioneer_plan&utm_content=pricing" class="fc-btn">30 Tage starten →</a>
+        <div class="terms">Keine Kreditkarte · jederzeit kündbar · Danach Standard 249 €</div>
       </div>
     </section>
 
@@ -3796,28 +3798,36 @@ const websiteSchema = {
       </div>
       <div class="fc-faq-list reveal-stagger" data-reveal>
         <details class="fc-faq-item" open>
-          <summary>Was ist im Founders Deal enthalten? <span class="plus">+</span></summary>
+          <summary>Was ist im Pioneer Plan enthalten? <span class="plus">+</span></summary>
           <div class="answer">Alle Funktionen von ShortSelect: unbegrenzte Jobs und Kandidaten, AgentBurst KI-Engine für Matching, Screening, Ranking und Nurturing, Multi-Mandanten mit Client Portal, Karriereseite, Multiposting, Talent Pools, Interview Scheduling, REST API, Webhooks und Priority Support. Ein Preis pro Agentur, keine User-Lizenzen, keine Add-On-Fees.</div>
         </details>
         <details class="fc-faq-item">
-          <summary>Was passiert nach den 30 Tagen? <span class="plus">+</span></summary>
-          <div class="answer">Nach Ablauf des Trials bleibt dein Account erhalten und du wechselst in den Founders Deal für 89 € pro Monat. Wenn du nicht weitermachen möchtest, wird dein Account ohne weitere Kosten archiviert. Wir erinnern dich rechtzeitig vor Trial-Ende per E-Mail, damit du aktiv entscheiden kannst.</div>
+          <summary>Was passiert nach den 30 Tagen Trial? <span class="plus">+</span></summary>
+          <div class="answer">Nach Ablauf des Trials bleibt dein Account erhalten und du wechselst in den Pioneer Plan für 149 € pro Monat. Wenn du nicht weitermachen möchtest, wird dein Account ohne weitere Kosten archiviert. Wir erinnern dich rechtzeitig vor Trial-Ende per E-Mail, damit du aktiv entscheiden kannst.</div>
         </details>
         <details class="fc-faq-item">
           <summary>Brauche ich eine Kreditkarte für den Trial? <span class="plus">+</span></summary>
-          <div class="answer">Nein. Der 30-tägige Trial ist komplett kostenlos und ohne Zahlungsdaten. Du gibst deine Zahlungsmethode erst an, wenn du nach dem Trial in den Founders Deal wechseln möchtest.</div>
+          <div class="answer">Nein. Der 30-tägige Trial ist komplett kostenlos und ohne Zahlungsdaten. Du gibst deine Zahlungsmethode erst an, wenn du nach dem Trial in den Pioneer Plan wechseln möchtest.</div>
         </details>
         <details class="fc-faq-item">
-          <summary>Bleibt der Preis von 89 € garantiert? <span class="plus">+</span></summary>
-          <div class="answer">Ja. Wer den Founders Deal nutzt, bezahlt diesen Preis auf Lebenszeit, auch wenn wir später die Standard-Preise anheben. Der Founders Deal ist limitiert auf die ersten 100 Recruiting-Agenturen.</div>
+          <summary>Bleibt der Preis von 149 € garantiert? <span class="plus">+</span></summary>
+          <div class="answer">Ja. Wer den Pioneer Plan nutzt, bezahlt diesen Preis auf Lebenszeit, solange das Abo ununterbrochen aktiv bleibt, auch wenn wir später die Standard-Preise anheben. Der Pioneer Plan ist limitiert auf die ersten 100 Recruiting-Agenturen.</div>
+        </details>
+        <details class="fc-faq-item">
+          <summary>Wie viele Pioneer-Plätze sind noch frei? <span class="plus">+</span></summary>
+          <div class="answer">Auf shortselect.com/preise siehst du einen Live-Counter mit der aktuellen Anzahl freier Pioneer-Plätze. Nach Vergabe aller 100 Plätze wechseln neue Tenants automatisch in den Standard-Tarif.</div>
+        </details>
+        <details class="fc-faq-item">
+          <summary>Was kostet ShortSelect nach den 100 Pioneer-Plätzen? <span class="plus">+</span></summary>
+          <div class="answer">Ab Platz 101 gilt der Standard-Tarif von 249 € pro Monat pro Tenant, gleicher Funktionsumfang, kein Tier-Wirrwarr. Bestehende Pioneer-Kunden behalten ihren Preis von 149 € lebenslang, solange ihr Abo aktiv bleibt.</div>
         </details>
         <details class="fc-faq-item">
           <summary>Kann ich jederzeit kündigen? <span class="plus">+</span></summary>
-          <div class="answer">Ja. ShortSelect ist monatlich kündbar, ohne Mindestlaufzeit. Eine Kündigung erfolgt direkt im Account. Du behältst Zugriff bis zum Ende der laufenden Abrechnungsperiode.</div>
+          <div class="answer">Ja. ShortSelect ist monatlich kündbar, ohne Mindestlaufzeit. Eine Kündigung erfolgt direkt im Account über das Stripe Customer Portal. Du behältst Zugriff bis zum Ende der laufenden Abrechnungsperiode.</div>
         </details>
         <details class="fc-faq-item">
           <summary>Werden Updates und neue Funktionen extra berechnet? <span class="plus">+</span></summary>
-          <div class="answer">Nein. Alle zukünftigen Updates und neuen Funktionen sind im Founders Deal enthalten. Es gibt keine Aufpreise für Premium-Module oder neue KI-Features.</div>
+          <div class="answer">Nein. Alle zukünftigen Updates und neuen Funktionen sind im Pioneer Plan und im Standard-Tarif enthalten. Es gibt keine Aufpreise für Premium-Module oder neue KI-Features.</div>
         </details>
         <details class="fc-faq-item">
           <summary>Wie sicher sind meine Daten? <span class="plus">+</span></summary>
@@ -3825,7 +3835,7 @@ const websiteSchema = {
         </details>
         <details class="fc-faq-item">
           <summary>Kann ich meine bestehenden Daten importieren? <span class="plus">+</span></summary>
-          <div class="answer">Ja. ShortSelect unterstützt CSV-Import für Kandidaten, Jobs und Unternehmen. Unser Onboarding-Team hilft dir beim reibungslosen Umzug von deinem bisherigen System, das ist im Founders Deal kostenfrei enthalten.</div>
+          <div class="answer">Ja. ShortSelect unterstützt CSV-Import für Kandidaten, Jobs und Unternehmen. Unser Onboarding-Team hilft dir beim reibungslosen Umzug von deinem bisherigen System, das ist im Pioneer Plan kostenfrei enthalten.</div>
         </details>
       </div>
       <div class="fc-faq-foot">
@@ -3840,7 +3850,7 @@ const websiteSchema = {
         <h2 style="margin-top:18px">Heute angemeldet.<br>Morgen <span class="wavy">im Einsatz.</span></h2>
         <p class="lead">30 Tage kostenlos. Keine Kreditkarte. Keine Tricks.</p>
         <div class="actions">
-          <a href="https://app.shortselect.com/signup?utm_source=marketing&utm_medium=cta&utm_campaign=founders_deal&utm_content=cta_section" class="fc-btn">Jetzt starten →</a>
+          <a href="https://app.shortselect.com/signup?utm_source=marketing&utm_medium=cta&utm_campaign=pioneer_plan&utm_content=cta_section" class="fc-btn">Jetzt starten →</a>
           <a href="/kontakt" class="fc-btn fc-btn-ghost">Mit uns sprechen</a>
         </div>
       </div>
@@ -4127,6 +4137,32 @@ const websiteSchema = {
       window.dispatchEvent(new CustomEvent('cookie-consent-reopen'));
     });
   });
+
+  // ============ PIONEER SLOT COUNTER (Live-Fetch zu Edge Function) ============
+  (function() {
+    var heroPill = document.getElementById('hero-pioneer-pill-text');
+    var pricingSticker = document.getElementById('home-pricing-sticker');
+    if (!heroPill && !pricingSticker) return;
+
+    var endpoint = 'https://aztqhtluvomqnxdavjxp.supabase.co/functions/v1/get-pioneer-slot-status';
+
+    function render(available, total, soldOut) {
+      if (soldOut) {
+        if (heroPill) heroPill.textContent = 'Pioneer-Plätze ausverkauft · Standard 249 €';
+        if (pricingSticker) pricingSticker.textContent = '⚡ Standard 249 €/Monat';
+      } else {
+        if (heroPill) heroPill.textContent = 'Live · Noch ' + available + ' von ' + total + ' Pioneer-Plätzen';
+        if (pricingSticker) pricingSticker.textContent = '⚡ Noch ' + available + ' von ' + total + ' Plätzen';
+      }
+    }
+
+    try {
+      fetch(endpoint, { method: 'GET', headers: { 'Accept': 'application/json' } })
+        .then(function(r) { return r.ok ? r.json() : null; })
+        .then(function(data) { if (data) render(data.available, data.total || 100, data.sold_out); })
+        .catch(function() { /* silent fail, statischer Fallback bleibt */ });
+    } catch (e) { /* noop */ }
+  })();
 
   // ============ AGENTBURST SOURCING SHOWCASE ============
   var absCard = document.getElementById('absHeroCard');
