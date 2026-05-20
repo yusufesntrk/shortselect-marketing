@@ -1,6 +1,5 @@
-// Pioneer Plan Pricing — Marketing-Site Twin
-// MUSS identisch sein zu /Users/yusufesentuerk/shortselect/project-spark-pioneer-pricing/src/lib/billing-constants.ts
-// Bei Aenderung: BEIDE Repos updaten + deployen (App zuerst, dann Marketing).
+// Pioneer Plan Pricing — Marketing-Site copy source.
+// Public website copy prices the plan per internal user.
 
 export const PIONEER_PRICE_EUR = 149;
 export const PIONEER_COMPARE_AT_EUR = 249;

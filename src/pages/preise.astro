@@ -4,9 +4,7 @@ import FAQSection from '../components/landing/FAQSection.astro';
 import CTASection from '../components/landing/CTASection.astro';
 import {
   PIONEER_PRICE_EUR,
-  PIONEER_COMPARE_AT_EUR,
   PIONEER_LIMIT,
-  STANDARD_PRICE_EUR,
   SLOT_STATUS_ENDPOINT,
 } from '../lib/billing-constants';
 
@@ -16,59 +14,35 @@ const pricingSchema = {
   "@context": "https://schema.org",
   "@type": "Product",
   name: "ShortSelect Pioneer Plan",
-  description: "ShortSelect ATS für Recruiting-Agenturen. Alle Funktionen, ein Preis pro Tenant. Pioneer Plan: 149 EUR pro Monat für die ersten 100 Agenturen, Lifetime-Preisgarantie. Danach Standard-Tarif 249 EUR pro Monat.",
+  description: "ShortSelect ATS für Recruiting-Agenturen. Alle Funktionen, ein Preis pro User. Pioneer Plan: 149 EUR pro User und Monat für die ersten 100 Agenturen, Lifetime-Preisgarantie.",
   brand: { "@type": "Brand", name: "ShortSelect" },
-  offers: [
-    {
-      "@type": "Offer",
-      name: "Pioneer Plan",
-      description: `Pioneer Plan: ${PIONEER_PRICE_EUR} EUR pro Monat pro Tenant, alle Funktionen inklusive. Limitiert auf die ersten ${PIONEER_LIMIT} Recruiting-Agenturen. Preis auf Lebenszeit garantiert.`,
+  offers: {
+    "@type": "Offer",
+    name: "Pioneer Plan",
+    description: `Pioneer Plan: ${PIONEER_PRICE_EUR} EUR pro User und Monat, alle Funktionen inklusive. Limitiert auf die ersten ${PIONEER_LIMIT} Recruiting-Agenturen. Preis auf Lebenszeit garantiert.`,
+    price: `${PIONEER_PRICE_EUR}.00`,
+    priceCurrency: "EUR",
+    availability: "https://schema.org/LimitedAvailability",
+    priceValidUntil: "2099-12-31",
+    url: "https://www.shortselect.com/preise",
+    priceSpecification: {
+      "@type": "UnitPriceSpecification",
       price: `${PIONEER_PRICE_EUR}.00`,
       priceCurrency: "EUR",
-      availability: "https://schema.org/LimitedAvailability",
-      priceValidUntil: "2099-12-31",
-      url: "https://www.shortselect.com/preise",
-      priceSpecification: {
-        "@type": "UnitPriceSpecification",
-        price: `${PIONEER_PRICE_EUR}.00`,
-        priceCurrency: "EUR",
-        billingDuration: "P1M",
-        unitText: "MONTH",
-        referenceQuantity: {
-          "@type": "QuantitativeValue",
-          value: "1",
-          unitText: "Tenant",
-        },
-      },
-      seller: {
-        "@type": "Organization",
-        name: "ShortSelect",
-        url: "https://www.shortselect.com",
+      billingDuration: "P1M",
+      unitText: "MONTH",
+      referenceQuantity: {
+        "@type": "QuantitativeValue",
+        value: "1",
+        unitText: "User",
       },
     },
-    {
-      "@type": "Offer",
-      name: "Standard",
-      description: `Standard-Tarif: ${STANDARD_PRICE_EUR} EUR pro Monat pro Tenant, alle Funktionen inklusive. Verfügbar nach Vergabe der ersten ${PIONEER_LIMIT} Pioneer-Plätze.`,
-      price: `${STANDARD_PRICE_EUR}.00`,
-      priceCurrency: "EUR",
-      availability: "https://schema.org/InStock",
-      priceValidUntil: "2099-12-31",
-      url: "https://www.shortselect.com/preise",
-      priceSpecification: {
-        "@type": "UnitPriceSpecification",
-        price: `${STANDARD_PRICE_EUR}.00`,
-        priceCurrency: "EUR",
-        billingDuration: "P1M",
-        unitText: "MONTH",
-      },
-      seller: {
-        "@type": "Organization",
-        name: "ShortSelect",
-        url: "https://www.shortselect.com",
-      },
+    seller: {
+      "@type": "Organization",
+      name: "ShortSelect",
+      url: "https://www.shortselect.com",
     },
-  ],
+  },
   aggregateRating: {
     "@type": "AggregateRating",
     ratingValue: "4.8",
@@ -79,7 +53,7 @@ const pricingSchema = {
 
 const features = [
   "Unbegrenzte Jobs, Kandidaten und Pipelines",
-  "Unbegrenzte Recruiter-Plätze pro Agentur",
+  "Ein Preis pro User, alle Funktionen inklusive",
   "AgentBurst KI-Engine: Matching, Screening, Ranking, Nurturing",
   "Multi-Mandanten mit Whitelabel-Client-Portal",
   "Karriereseite, Embeddable Widget, Multiposting",
@@ -91,17 +65,17 @@ const features = [
 ];
 
 const competitors = [
-  { name: "Bullhorn", price: "ab ca. 495 €/Monat", model: "Per User, ca. 99 € pro Platz" },
-  { name: "Vincere", price: "ab ca. 400 €/Monat", model: "Per User, ca. 80 € pro Platz" },
-  { name: "Teamtailor", price: "ab ca. 290 €/Monat", model: "Subscription plus Per User" },
-  { name: "Recruitee", price: "ab ca. 245 €/Monat", model: "Per User, ca. 49 € pro Platz" },
-  { name: "Ezekia", price: "ab ca. 700 €/Monat", model: "Per User, 120 GBP plus pro Platz" },
+  { name: "Bullhorn Core", price: "825 $/Monat", model: "5 User à 165 $ pro User/Monat" },
+  { name: "Vincere CRM + Elite AI", price: "ab £694/Monat", model: "5 User à £69 plus Elite-AI-Paket ab £349" },
+  { name: "Teamtailor", price: "Auf Anfrage", model: "Angebot auf Anfrage, unbegrenzte User" },
+  { name: "Tellent Recruitee", price: "Individuelles Angebot", model: "Agenturen bekommen ein individuelles Angebot" },
+  { name: "Ezekia", price: "Auf Anfrage", model: "User-basiertes Modell, Angebot auf Anfrage" },
 ];
 ---
 
 <MarketingLayout
-  title={`Preise, ShortSelect Pioneer Plan | ${PIONEER_PRICE_EUR} €/Monat`}
-  description={`Pioneer Plan: ShortSelect für ${PIONEER_PRICE_EUR} €/Monat statt ${PIONEER_COMPARE_AT_EUR} €. Für die ersten ${PIONEER_LIMIT} Recruiting-Agenturen, Lifetime-Preisgarantie. 30 Tage kostenlos testen, keine Kreditkarte.`}
+  title={`Preise, ShortSelect Pioneer Plan | ${PIONEER_PRICE_EUR} € pro User`}
+  description={`Pioneer Plan: ShortSelect für ${PIONEER_PRICE_EUR} € pro User/Monat. Alle Funktionen, ein Preis pro User. 30 Tage kostenlos testen, keine Kreditkarte.`}
   jsonLd={pricingSchema}
 >
   <!-- Hero -->
@@ -114,10 +88,10 @@ const competitors = [
         </span>
         <h1 class="text-4xl md:text-5xl lg:text-6xl font-display font-bold tracking-tight mb-4">
           Pioneer Plan:
-          <span class="text-primary">{PIONEER_PRICE_EUR} € statt {PIONEER_COMPARE_AT_EUR} €.</span>
+          <span class="text-primary">{PIONEER_PRICE_EUR} € pro User.</span>
         </h1>
         <p class="text-lg md:text-xl text-muted-foreground">
-          Für die ersten {PIONEER_LIMIT} Recruiting-Agenturen. Preis lebenslang garantiert, solange das Abo aktiv bleibt.
+          Ein Preis, kein Tier-Wirrwarr, alle Funktionen inklusive. Nur für die ersten {PIONEER_LIMIT} Recruiting-Agenturen.
         </p>
       </div>
     </div>
@@ -154,19 +128,18 @@ const competitors = [
           <div class="text-center mb-6 mt-2">
             <h2 class="text-2xl font-display font-bold mb-2">ShortSelect Pioneer</h2>
             <p class="text-sm text-muted-foreground">
-              Alle Funktionen, ein Preis pro Agentur, Lifetime-Preisgarantie
+              Alle Funktionen, ein Preis pro User, Lifetime-Preisgarantie
             </p>
           </div>
 
           <!-- Pricing Display -->
           <div class="text-center mb-8 pb-8 border-b border-border">
             <div class="flex items-baseline justify-center gap-3 mb-2 flex-wrap">
-              <span class="text-2xl text-muted-foreground line-through font-medium">{PIONEER_COMPARE_AT_EUR} €</span>
               <span class="text-5xl md:text-6xl font-display font-bold text-foreground">{PIONEER_PRICE_EUR} €</span>
-              <span class="text-lg text-muted-foreground">/Monat</span>
+              <span class="text-lg text-muted-foreground">pro User/Monat</span>
             </div>
             <p class="text-sm text-muted-foreground">
-              Pro Tenant, alle Recruiter-Plätze inklusive.
+              Pro User, alle Funktionen inklusive.
               <br/>Preis ist auf Lebenszeit garantiert, solange das Abo aktiv bleibt.
             </p>
           </div>
@@ -201,27 +174,8 @@ const competitors = [
 
         <!-- Knappheits Subline -->
         <p class="text-center text-sm text-muted-foreground mt-6">
-          Der Pioneer-Preis von {PIONEER_PRICE_EUR} € ist auf Lebenszeit gesichert, solange das Abo ununterbrochen aktiv bleibt. Nach den ersten {PIONEER_LIMIT} Plätzen wechseln neue Tenants automatisch in den Standard-Tarif ({STANDARD_PRICE_EUR} €/Monat).
+          Der Pioneer-Preis von {PIONEER_PRICE_EUR} € pro User ist auf Lebenszeit gesichert, solange das Abo ununterbrochen aktiv bleibt.
         </p>
-      </div>
-
-      <!-- Standard-Tarif Sekundär-Card (informativ) -->
-      <div id="standard-card" class="max-w-xl mx-auto mt-10 opacity-0 translate-y-8 transition-all duration-700">
-        <div class="rounded-xl border border-border bg-muted/30 p-6">
-          <div class="flex items-center justify-between flex-wrap gap-3">
-            <div>
-              <h3 class="text-lg font-display font-semibold mb-1">Standard-Tarif</h3>
-              <p class="text-sm text-muted-foreground">Verfügbar nach Vergabe der {PIONEER_LIMIT} Pioneer-Plätze</p>
-            </div>
-            <div class="flex items-baseline gap-2">
-              <span class="text-2xl font-display font-bold">{STANDARD_PRICE_EUR} €</span>
-              <span class="text-sm text-muted-foreground">/Monat</span>
-            </div>
-          </div>
-          <p class="text-xs text-muted-foreground mt-3">
-            Gleicher Funktionsumfang wie der Pioneer Plan, kein Tier-Wirrwarr, ein Preis pro Tenant.
-          </p>
-        </div>
       </div>
     </div>
   </section>
@@ -231,10 +185,10 @@ const competitors = [
     <div class="container mx-auto px-4">
       <div id="comparison-content" class="max-w-4xl mx-auto opacity-0 translate-y-8 transition-all duration-700">
         <h2 class="text-3xl md:text-4xl font-display font-bold tracking-tight text-center mb-4">
-          Was Wettbewerber für vergleichbaren Funktionsumfang aufrufen
+          ShortSelect ist der günstigste transparente Einstieg
         </h2>
         <p class="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-          Wir kennen den Markt. Hier sind typische Listenpreise vergleichbarer ATS-Plattformen, skaliert auf eine Recruiting-Agentur mit 5 Plätzen.
+          Für 5 User kostet ShortSelect 745 € pro Monat. Vergleichbare Agentur-Setups mit ATS, CRM, Automatisierung und KI liegen öffentlich höher oder sind nur auf Anfrage erhältlich.
         </p>
 
         <div class="bg-card rounded-2xl border border-border/50 shadow-card overflow-hidden">
@@ -256,7 +210,7 @@ const competitors = [
                 ))}
               </ul>
               <p class="text-xs text-muted-foreground mt-6 pt-4 border-t border-border/30">
-                Listenpreise laut öffentlichen Tarifen, Stand 2026. Plus Onboarding-Fees und Add-Ons für KI-Module.
+                Öffentliche Preisangaben und Anbieter-Preislogik, Stand Mai 2026. Anbieter mit Preisen auf Anfrage nennen keine feste Einstiegssumme und kalkulieren häufig nach Teamgröße, Paket und Add-ons.
               </p>
             </div>
 
@@ -266,14 +220,14 @@ const competitors = [
                 ShortSelect Pioneer Plan
               </h3>
               <div class="flex items-baseline gap-2 mb-4">
-                <span class="text-4xl md:text-5xl font-display font-bold">{PIONEER_PRICE_EUR} €</span>
-                <span class="text-lg text-muted-foreground">/Monat</span>
+                <span class="text-4xl md:text-5xl font-display font-bold">745 €</span>
+                <span class="text-lg text-muted-foreground">/Monat bei 5 Usern</span>
               </div>
               <p class="text-sm mb-4">
-                Eine Pauschale für die ganze Agentur, alle Plätze inklusive. Keine User-Lizenzen, keine Add-On-Fees, keine Onboarding-Gebühren.
+                {PIONEER_PRICE_EUR} € pro User und Monat. Damit ist ShortSelect der günstigste transparente Einstieg in diesem Vergleich.
               </p>
               <p class="text-xs text-muted-foreground">
-                Inklusive AgentBurst-KI, Multi-Mandanten, Client Portal, API, Multiposting und allen zukünftigen Updates. Auch der Standard-Tarif ({STANDARD_PRICE_EUR} €) liegt deutlich unter den Listenpreisen der Wettbewerber.
+                Inklusive AgentBurst-KI, Multi-Mandanten, Client Portal, API, Multiposting und allen zukünftigen Updates.
               </p>
             </div>
           </div>
@@ -289,9 +243,8 @@ const competitors = [
   (function() {
     var hero = document.getElementById('pricing-hero');
     var card = document.getElementById('pricing-card');
-    var standard = document.getElementById('standard-card');
     var comparison = document.getElementById('comparison-content');
-    var items = [hero, card, standard, comparison].filter(Boolean);
+    var items = [hero, card, comparison].filter(Boolean);
     if (!items.length) return;
     var observer = new IntersectionObserver(function(entries) {
       entries.forEach(function(entry) {
@@ -306,7 +259,7 @@ const competitors = [
   })();
   </script>
 
-  <script is:inline define:vars={{ endpoint: SLOT_STATUS_ENDPOINT, totalLimit: PIONEER_LIMIT, standardPrice: STANDARD_PRICE_EUR }}>
+  <script is:inline define:vars={{ endpoint: SLOT_STATUS_ENDPOINT, totalLimit: PIONEER_LIMIT }}>
   (function() {
     var pill = document.getElementById('pioneer-slot-pill');
     var badge = document.getElementById('pioneer-badge-text');
@@ -315,7 +268,7 @@ const competitors = [
     function render(available, totalSlots, soldOut) {
       var pillText, badgeText;
       if (soldOut) {
-        pillText = 'Pioneer-Plätze ausverkauft, Standard ' + standardPrice + ' €/Monat';
+        pillText = 'Pioneer-Plätze ausverkauft';
         badgeText = 'Pioneer ausverkauft';
       } else {
         pillText = 'Noch ' + available + ' von ' + totalSlots + ' Pioneer-Plätzen frei';

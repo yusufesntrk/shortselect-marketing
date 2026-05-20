@@ -1,11 +1,11 @@
 export const faqs = [
   {
     question: "Was ist im Pioneer Plan enthalten?",
-    answer: "Alle Funktionen von ShortSelect: unbegrenzte Jobs und Kandidaten, AgentBurst KI-Engine für Matching, Screening, Ranking und Nurturing, Multi-Mandanten mit Client Portal, Karriereseite, Multiposting, Talent Pools, Interview Scheduling, REST API, Webhooks und Priority Support. Ein Preis pro Agentur, keine User-Lizenzen, keine Add-On-Fees.",
+    answer: "Alle Funktionen von ShortSelect: unbegrenzte Jobs und Kandidaten, AgentBurst KI-Engine für Matching, Screening, Ranking und Nurturing, Multi-Mandanten mit Client Portal, Karriereseite, Multiposting, Talent Pools, Interview Scheduling, REST API, Webhooks und Priority Support. Ein Preis pro User, keine Add-On-Fees.",
   },
   {
     question: "Was passiert nach den 30 Tagen Trial?",
-    answer: "Nach Ablauf des Trials bleibt Ihr Account erhalten und Sie wechseln in den Pioneer Plan für 149 EUR pro Monat. Wenn Sie nicht weitermachen möchten, wird Ihr Account ohne weitere Kosten archiviert. Wir erinnern Sie rechtzeitig vor Trial-Ende per E-Mail, damit Sie aktiv entscheiden können.",
+    answer: "Nach Ablauf des Trials bleibt Ihr Account erhalten und Sie wechseln in den Pioneer Plan für 149 EUR pro User und Monat. Wenn Sie nicht weitermachen möchten, wird Ihr Account ohne weitere Kosten archiviert. Wir erinnern Sie rechtzeitig vor Trial-Ende per E-Mail, damit Sie aktiv entscheiden können.",
   },
   {
     question: "Brauche ich eine Kreditkarte für den Trial?",
@@ -17,11 +17,11 @@ export const faqs = [
   },
   {
     question: "Wie viele Pioneer-Plätze sind noch frei?",
-    answer: "Auf shortselect.com/preise sehen Sie einen Live-Counter mit der aktuellen Anzahl freier Pioneer-Plätze. Nach Vergabe aller 100 Plätze wechseln neue Tenants automatisch in den Standard-Tarif.",
+    answer: "Auf shortselect.com/preise sehen Sie einen Live-Counter mit der aktuellen Anzahl freier Pioneer-Plätze. Der Pioneer-Preis gilt pro User und ist für aktive Pioneer-Kunden auf Lebenszeit gesichert.",
   },
   {
     question: "Was kostet ShortSelect nach den 100 Pioneer-Plätzen?",
-    answer: "Ab Platz 101 gilt der Standard-Tarif von 249 EUR pro Monat pro Tenant, gleicher Funktionsumfang, kein Tier-Wirrwarr. Bestehende Pioneer-Kunden behalten ihren Preis von 149 EUR lebenslang, solange ihr Abo aktiv bleibt.",
+    answer: "Nach Vergabe der 100 Pioneer-Plätze gilt der jeweils aktuelle Standard-Tarif. Bestehende Pioneer-Kunden behalten ihren Preis von 149 EUR pro User und Monat lebenslang, solange ihr Abo aktiv bleibt.",
   },
   {
     question: "Kann ich jederzeit kündigen?",

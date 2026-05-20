@@ -3,24 +3,24 @@ import type { BlogPost } from "./types";
 export const batch21: BlogPost[] = [
   {
     slug: "per-recruiter-lizenz-kostenfalle",
-    title: "Per-Recruiter-Lizenz: Die versteckte Kostenfalle die Ihre Agentur ausbremst",
+    title: "ATS-Lizenzkosten: Die versteckte Kostenfalle, die Ihre Agentur ausbremst",
     date: "2024-08-26",
     author: "ShortSelect Team",
     authorRole: "Redaktion",
     category: "Trends & Studien",
     tags: ["Preismodell", "Lizenzkosten", "SaaS", "Skalierung"],
     excerpt:
-      "99€ pro Recruiter klingt fair, bis Sie 15 Recruiter haben und 1.485€/Monat für ein Tool zahlen das 200€ wert ist.",
+      "Ein niedriger Einstiegspreis klingt fair, bis Add-ons, Readonly-Rollen und lange Vertragslaufzeiten die echte ATS-Rechnung verdoppeln.",
     readTime: "6 Min.",
     content: `
-<h2>Das Per-Seat-Modell: Warum es so beliebt ist, bei Anbietern</h2>
+<h2>Das Problem sind nicht User-Preise. Das Problem sind versteckte Kosten.</h2>
 
-<p>99€ pro Recruiter pro Monat. Klingt fair, oder? Ein klarer Preis, leicht zu kalkulieren, transparent. So verkaufen es Ihnen die ATS-Anbieter. Was sie Ihnen nicht sagen: Sie haben gerade ein Preismodell akzeptiert, das systematisch gegen Sie arbeitet. Je erfolgreicher Sie werden, desto mehr zahlen Sie, ohne dass der Anbieter auch nur einen Cent mehr investiert.</p>
+<p>Viele ATS-Angebote wirken auf den ersten Blick klar: ein Preis pro Nutzer, ein paar Module, fertig. Teuer wird es erst im Kleingedruckten. Onboarding kostet extra, Readonly-Rollen zählen wie volle Zugänge, Integrationen liegen hinter Add-ons und der Datenexport wird beim Wechsel plötzlich zum Projekt.</p>
 
-<p>Das Per-Seat-Modell ist das Lieblingspreismodell der SaaS-Industrie. Nicht weil es fair ist. Sondern weil es den Revenue pro Kunde automatisch skaliert, ohne dass der Anbieter irgendetwas tun muss. Ihr fünfzehnter Recruiter verursacht exakt null zusätzliche Serverkosten. Null zusätzlichen Support-Aufwand. Null zusätzliche Entwicklungskosten. Aber er bringt dem Anbieter 99€ pro Monat. Jeden Monat. Für immer.</p>
+<p>Ein transparenter User-Preis kann fair sein, wenn klar ist, welche Rollen zahlen, welche Funktionen enthalten sind und wie die Rechnung bei Wachstum aussieht. Unfair wird es, wenn der beworbene Preis nur der Einstieg in eine lange Liste kostenpflichtiger Ausnahmen ist.</p>
 
 <blockquote>
-  <strong>Die unbequeme Wahrheit:</strong> Per-Seat-Pricing bestraft Wachstum. Es ist eine versteckte Steuer auf Ihren Erfolg. Und die meisten Personalvermittler merken es erst, wenn die monatliche Rechnung vierstellig wird.
+  <strong>Die unbequeme Wahrheit:</strong> Die meisten Personalvermittler vergleichen nur den sichtbaren Monatsbetrag. Entscheidend ist aber der Gesamtpreis nach Rollen, Modulen, Setup, Support und Vertragsbindung.
 </blockquote>
 
 <h2>Das Rechenbeispiel, das Sie nicht sehen sollen</h2>
@@ -28,74 +28,74 @@ export const batch21: BlogPost[] = [
 <p>Machen wir die Rechnung, die kein ATS-Vertriebsmitarbeiter freiwillig auf den Tisch legt:</p>
 
 <ul>
-  <li><strong>5 Recruiter:</strong> 5 × 99€ = 495€/Monat = 5.940€/Jahr</li>
-  <li><strong>10 Recruiter:</strong> 10 × 99€ = 990€/Monat = 11.880€/Jahr</li>
-  <li><strong>15 Recruiter:</strong> 15 × 99€ = 1.485€/Monat = 17.820€/Jahr</li>
-  <li><strong>20 Recruiter:</strong> 20 × 99€ = 1.980€/Monat = 23.760€/Jahr</li>
-  <li><strong>30 Recruiter:</strong> 30 × 99€ = 2.970€/Monat = 35.640€/Jahr</li>
+  <li><strong>5 aktive Nutzer:</strong> 5 × 99 € = 495 €/Monat = 5.940 €/Jahr</li>
+  <li><strong>5 Readonly-Rollen:</strong> noch einmal 495 €/Monat, wenn sie voll berechnet werden</li>
+  <li><strong>Setup und Migration:</strong> häufig 1.000 bis 5.000 € einmalig</li>
+  <li><strong>Integrationen:</strong> oft 200 bis 500 € zusätzlich pro Monat</li>
+  <li><strong>Support-Paket:</strong> bei vielen Anbietern erst im teureren Tarif wirklich brauchbar</li>
 </ul>
 
-<p>35.640€ pro Jahr. Für ein ATS. Lassen Sie das sacken. Das ist das Jahresgehalt eines Junior Recruiters. Für eine Software, die im Kern eine Datenbank mit ein paar Formularen und einer Kanban-Ansicht ist.</p>
+<p>Aus einem scheinbar günstigen Paket wird so schnell eine vierstellige Monatsrechnung. Nicht weil Ihr Recruiting plötzlich doppelt so komplex ist, sondern weil jeder nötige Baustein einzeln abgerechnet wird.</p>
 
-<p>Und jetzt die entscheidende Frage: Wird das Tool bei 30 Recruitern sechsmal besser als bei 5? Hat es sechsmal mehr Features? Sechsmal besseren Support? Natürlich nicht. Es ist exakt dasselbe Produkt. Sie zahlen nur sechsmal so viel.</p>
+<p>Die entscheidende Frage lautet deshalb nicht: „Was kostet ein Nutzer?“ Die entscheidende Frage lautet: „Was kostet der reale Betrieb unseres Teams in 12, 24 und 36 Monaten?“</p>
 
 <h3>Die versteckte Mathematik dahinter</h3>
 
-<p>Die tatsächlichen Kosten eines Cloud-ATS pro zusätzlichem Nutzer liegen bei etwa 2 bis 5 Euro pro Monat, für Server, Speicher und Bandbreite. Das bedeutet: Bei 99€ pro Seat macht der Anbieter eine Marge von über 95% auf jeden zusätzlichen Recruiter. Kein anderes Preismodell in der Software-Industrie hat eine vergleichbare Gewinnspanne. Und Sie finanzieren sie.</p>
+<p>Die tatsächlichen Infrastrukturkosten eines zusätzlichen Nutzers sind bei Cloud-Software niedrig. Hohe Preise können trotzdem gerechtfertigt sein, wenn der Anbieter echte Automatisierung, bessere Kandidatenauswahl oder messbar weniger manuelle Arbeit liefert. Problematisch wird es, wenn Sie nur für Zugang zahlen, aber für den eigentlichen Nutzen noch einmal Add-ons kaufen müssen.</p>
 
-<h2>Warum Readonly-User trotzdem als "Seat" zählen</h2>
+<h2>Warum Readonly-Rollen so wichtig sind</h2>
 
-<p>Hier wird es richtig absurd. Bei den meisten ATS-Anbietern zählt jeder User als "Seat", egal ob er aktiv rekrutiert oder nur gelegentlich den Status einer Bewerbung nachschaut. Ihr Hiring Manager, der einmal pro Woche für drei Minuten reinschaut? Ein Seat. Die Geschäftsführerin, die monatlich die KPIs prüft? Ein Seat. Der Praktikant, der einen Zugang braucht, um Termine zu koordinieren? Ein Seat.</p>
+<p>In Recruiting-Agenturen brauchen nicht nur aktive Recruiter Zugriff. Geschäftsführung, Account Manager, Assistenz, Hiring Manager oder externe Kunden müssen oft Status, Profile oder Auswertungen sehen. Wenn jeder dieser Zugänge wie ein voller operativer Nutzer berechnet wird, explodiert die Rechnung ohne entsprechenden Mehrwert.</p>
 
-<p>In einer typischen Recruiting-Agentur mit 10 aktiven Recruitern gibt es leicht 5 bis 8 zusätzliche Personen, die Zugang brauchen: Account Manager, Teamleiter, Assistenzen, externe Berater. Das sind 15 bis 18 Seats, von denen die Hälfte das Tool weniger als eine Stunde pro Woche nutzt.</p>
+<p>Fragen Sie deshalb früh, welche Rollen bezahlt werden, welche Rechte sie bekommen und ob Kundenansichten oder Portalzugänge separat zählen. Gerade bei Agenturen entscheidet dieser Punkt darüber, ob ein Angebot wirklich planbar ist.</p>
 
 <blockquote>
-  <strong>Fragen Sie Ihren Anbieter:</strong> „Zählen Readonly-User als vollwertige Seats?" Wenn die Antwort Ja ist, zahlen Sie für Personen, die Ihr Tool kaum benutzen, den vollen Preis. Das ist kein Preismodell, das ist ein Abrechnungstrick.
+  <strong>Fragen Sie Ihren Anbieter:</strong> „Welche Rollen werden voll berechnet und welche Portal- oder Readonly-Zugänge sind enthalten?“ Wenn die Antwort ausweichend ist, fehlt Ihnen Planungssicherheit.
 </blockquote>
 
 <h2>Versteckte Kosten, die niemand erwähnt</h2>
 
-<p>Per-Seat-Pricing ist nur die Spitze des Eisbergs. Dahinter verbirgt sich ein ganzes Ökosystem versteckter Kosten, die den tatsächlichen Preis Ihres ATS weit über den beworbenen Stückpreis treiben.</p>
+<p>Der sichtbare Lizenzpreis ist nur die Spitze des Eisbergs. Dahinter verbirgt sich oft ein ganzes Ökosystem versteckter Kosten, die den tatsächlichen Preis Ihres ATS weit über den beworbenen Stückpreis treiben.</p>
 
 <h3>Onboarding-Kosten</h3>
 
-<p>Viele Anbieter berechnen Onboarding separat, 1.000 bis 5.000€ einmalig für Setup, Datenmigration und Schulung. Bei einigen Anbietern zahlen Sie sogar pro Onboarding-Session pro Recruiter. Stellen Sie drei neue Recruiter ein? Das sind drei Onboarding-Pakete.</p>
+<p>Viele Anbieter berechnen Onboarding separat, 1.000 bis 5.000 € einmalig für Setup, Datenmigration und Schulung. Bei einigen Anbietern zahlen Sie sogar pro zusätzlicher Schulung oder pro Team. Stellen Sie neue Nutzer ein, kann der Aufwand erneut berechnet werden.</p>
 
 <h3>Support-Tiers</h3>
 
-<p>"Priority Support" kostet extra. "Dedicated Account Manager" kostet extra. "Telefon-Support statt nur E-Mail" kostet extra. Im Basis-Tarif bekommen Sie eine Wissensdatenbank und einen Chatbot. Echte Hilfe gibt es erst ab dem Enterprise-Plan, der natürlich auch mehr pro Seat kostet.</p>
+<p>"Priority Support" kostet extra. "Dedicated Account Manager" kostet extra. "Telefon-Support statt nur E-Mail" kostet extra. Im Basis-Tarif bekommen Sie eine Wissensdatenbank und einen Chatbot. Echte Hilfe gibt es erst ab dem Enterprise-Plan, der natürlich auch deutlich teurer ist.</p>
 
 <h3>Integrationen</h3>
 
-<p>Die Anbindung an LinkedIn Recruiter, Jobbörsen oder Ihr E-Mail-System? Oft separate Add-ons mit eigenen monatlichen Gebühren. Eine HRIS-Integration kann leicht 200 bis 500€ zusätzlich pro Monat kosten. Plus einmalige Setup-Gebühren.</p>
+<p>Die Anbindung an LinkedIn, Jobbörsen oder Ihr E-Mail-System? Oft separate Add-ons mit eigenen monatlichen Gebühren. Eine HRIS-Integration kann leicht 200 bis 500 € zusätzlich pro Monat kosten. Plus einmalige Setup-Gebühren.</p>
 
 <h3>Datenexport</h3>
 
 <p>Das ist der perfideste Punkt. Viele Anbieter machen den Export Ihrer eigenen Daten absichtlich schwer oder teuer. Sie wollen wechseln? Viel Spaß beim manuellen Kopieren von 10.000 Kandidatenprofilen. Oder Sie zahlen 2.000€ für einen "professionellen Datenexport-Service". Mit Ihren eigenen Daten.</p>
 
-<h2>Alternative Preismodelle, die tatsächlich fair sind</h2>
+<h2>Was ein faires Preismodell ausmacht</h2>
 
-<p>Per-Seat ist nicht das einzige Modell. Es ist nur das profitabelste, für den Anbieter. Es gibt Alternativen, die Ihre Interessen besser abbilden:</p>
+<p>Ob ein Modell pro User, pro Nutzung oder in festen Paketen abgerechnet wird, ist weniger wichtig als Transparenz. Faire Preise haben drei Eigenschaften:</p>
 
-<h3>Flat-Rate-Modell</h3>
+<h3>Klare Einheit</h3>
 
-<p>Ein Preis, unbegrenzte User. Sie zahlen 299€ pro Monat, egal ob Sie 5 oder 50 Recruiter haben. Dieses Modell belohnt Wachstum statt es zu bestrafen. Der Anbieter verdient durch neue Kunden, nicht durch das Melken bestehender. Flat-Rate-Anbieter müssen ein gutes Produkt liefern, weil sie durch Kündigungen mehr verlieren als durch User-Reduktion.</p>
+<p>Sie wissen genau, ob nach User, Nutzung, Mandat oder Paket abgerechnet wird. Ein Preis wie 149 € pro User und Monat ist planbar, wenn klar ist, welche Nutzer zählen und welche Rollen enthalten sind.</p>
 
-<h3>Usage-Based-Modell</h3>
+<h3>Enthaltene Kernfunktionen</h3>
 
-<p>Sie zahlen nach tatsächlicher Nutzung: Anzahl aktiver Jobs, versendete E-Mails, gespeicherte Kandidaten. Das ist fair, weil die Kosten direkt mit Ihrer Geschäftsaktivität korrelieren. Wenig los? Niedrige Kosten. Hochsaison? Höhere Kosten, aber auch höhere Einnahmen. Risiko und Reward sind synchronisiert.</p>
+<p>Matching, Pipeline, Kundenportal, Datenexport und grundlegende Integrationen sollten nicht erst durch mehrere Add-ons nutzbar werden. Sonst vergleichen Sie keinen Produktpreis, sondern nur einen Einstiegspreis.</p>
 
-<h3>Tiered-Modell</h3>
+<h3>Vorhersehbares Wachstum</h3>
 
-<p>Feste Pakete basierend auf Unternehmensgrößen, z.B. bis 10 User, bis 25 User, bis 50 User. Innerhalb einer Stufe zahlen Sie den gleichen Preis, egal ob Sie 11 oder 24 User haben. Das gibt Ihnen Planungssicherheit und einen "Puffer" für Wachstum, bevor die nächste Stufe greift.</p>
+<p>Wenn Ihr Team wächst, muss die Rechnung nachvollziehbar mitwachsen. Mengenrabatte, klare Preisgarantien und monatliche Kündbarkeit sind wichtiger als ein niedriger Einstiegspreis, der später nicht mehr gilt.</p>
 
 <h2>Was Sie bei der ATS-Auswahl fragen sollten</h2>
 
 <p>Bevor Sie den nächsten ATS-Vertrag unterschreiben, stellen Sie diese Fragen. Wenn der Vertriebsmitarbeiter bei einer davon ins Stottern gerät, wissen Sie Bescheid.</p>
 
 <ol>
-  <li><strong>Was kostet ein Readonly-User?</strong> Wenn die Antwort „das gleiche wie ein voller Seat" ist, suchen Sie weiter.</li>
-  <li><strong>Was passiert preislich, wenn wir von 10 auf 20 Recruiter wachsen?</strong> Verdoppelt sich der Preis? Gibt es Mengenrabatte? Ab welcher Größe wird es absurd?</li>
+  <li><strong>Was kostet ein Readonly- oder Portalzugang?</strong> Wenn die Antwort „das gleiche wie ein voller Nutzer" ist, prüfen Sie den Gesamtpreis sehr genau.</li>
+  <li><strong>Was passiert preislich, wenn wir von 10 auf 20 Nutzern wachsen?</strong> Verdoppelt sich der Preis? Gibt es Mengenrabatte? Ab welcher Größe wird es absurd?</li>
   <li><strong>Was kostet der Datenexport?</strong> Wenn es keinen kostenlosen, vollständigen Export gibt, werden Sie bei einem Wechsel als Geisel gehalten.</li>
   <li><strong>Welche Integrationen sind im Preis enthalten?</strong> „Wir haben 50 Integrationen" ist wertlos, wenn jede einzelne ein kostenpflichtiges Add-on ist.</li>
   <li><strong>Gibt es eine Preisgarantie?</strong> Viele Anbieter erhöhen jährlich die Preise um 5 bis 15 Prozent. Nach drei Jahren zahlen Sie signifikant mehr als zum Start.</li>
@@ -107,9 +107,9 @@ export const batch21: BlogPost[] = [
   <strong>Die Faustregel:</strong> Wenn ein ATS-Anbieter nicht bereit ist, Ihnen exakt vorzurechnen, was Sie in 12, 24 und 36 Monaten bei realistischem Wachstum zahlen werden, dann hat er etwas zu verbergen.
 </blockquote>
 
-<h2>Fazit: Hören Sie auf, Ihren Erfolg zu besteuern</h2>
+<h2>Fazit: Vergleichen Sie den echten Betriebspreis</h2>
 
-<p>Per-Seat-Pricing ist kein Naturgesetz. Es ist eine Entscheidung des Anbieters, und zwar eine, die ausschließlich ihm nützt. Als Personalvermittler sollten Sie ein Tool wählen, dessen Preismodell mit Ihren Interessen alignt ist, nicht gegen sie arbeitet.</p>
+<p>Ein ATS-Preis ist nur dann fair, wenn Sie ihn vorher durchrechnen können. Als Personalvermittler sollten Sie ein Tool wählen, dessen Preismodell mit Ihren Interessen alignt ist, nicht gegen sie arbeitet.</p>
 
 <p>Jeder Euro, den Sie unnötig in überteuerte Lizenzen stecken, fehlt Ihnen für Recruiter-Gehälter, Marketing oder Weiterbildung. In einer Branche mit ohnehin knappen Margen ist das keine Kleinigkeit, das ist ein strategischer Nachteil.</p>
 
