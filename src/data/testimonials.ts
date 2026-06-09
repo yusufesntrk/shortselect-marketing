@@ -14,6 +14,13 @@ export const testimonials = [
     image: "/testimonials/ruediger-bruns.webp",
   },
   {
+    name: "Sinan Tarti",
+    company: "PolyTALENT GmbH",
+    role: "Manager Digital Process Automation",
+    quote: "Mit ShortSelect haben wir endlich alles an einem Ort. Wir brauchen keine zusätzlichen Tools mehr und steuern unseren gesamten Recruiting-Prozess zentral in einem System.",
+    image: "/testimonials/sinan-tarti.jpg",
+  },
+  {
     name: "Dr. Thomas Wendel",
     company: "tw.con. GmbH",
     role: "Geschäftsführer",

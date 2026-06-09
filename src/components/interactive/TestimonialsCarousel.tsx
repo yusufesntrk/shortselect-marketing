@@ -123,7 +123,7 @@ export default function TestimonialsCarousel() {
         <button
           onClick={nextSlide}
           className="pointer-events-auto rounded-full border border-[hsl(var(--border))] bg-[hsl(var(--background)/0.8)] backdrop-blur-sm hover:bg-[hsl(var(--background))] shadow-lg transition-all hover:scale-110 h-10 w-10 flex items-center justify-center"
-          aria-label="Naechstes Testimonial"
+          aria-label="Nächstes Testimonial"
         >
           <ChevronRight className="h-5 w-5" />
         </button>
