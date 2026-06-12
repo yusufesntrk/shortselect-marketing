@@ -18,6 +18,23 @@ const formattedDate = new Date(post.date).toLocaleDateString("de-DE", {
   year: "numeric",
 });
 
+const truncateSeoText = (value: string, maxLength: number) => {
+  if (value.length <= maxLength) return value;
+  const trimmed = value.slice(0, maxLength - 1);
+  const lastSpace = trimmed.lastIndexOf(" ");
+  return `${trimmed.slice(0, lastSpace > 42 ? lastSpace : maxLength - 1)}…`;
+};
+
+const seoTitleBase = post.seoTitle ?? truncateSeoText(post.title, 49);
+const seoTitle = `${seoTitleBase} | ShortSelect`;
+const seoDescriptionBase = post.seoDescription ?? post.excerpt;
+const seoDescription = truncateSeoText(
+  seoDescriptionBase.length < 125
+    ? `${seoDescriptionBase} Praxiswissen für Recruiting-Teams.`
+    : seoDescriptionBase,
+  158
+);
+
 // Related posts: same category first, then recent
 const relatedPosts = blogPosts
   .filter((p) => p.slug !== post.slug)
@@ -39,7 +56,7 @@ const articleSchema = {
     name: "ShortSelect",
     logo: { "@type": "ImageObject", url: "https://www.shortselect.com/logo.svg" },
   },
-  description: post.excerpt,
+  description: seoDescription,
   articleSection: post.category,
   keywords: post.tags.join(", "),
 };
@@ -56,8 +73,9 @@ const breadcrumbSchema = {
 ---
 
 <MarketingLayout
-  title={`${post.title} | ShortSelect Blog`}
-  description={post.excerpt}
+  title={seoTitle}
+  description={seoDescription}
+  ogType="article"
   jsonLd={[articleSchema, breadcrumbSchema]}
 >
   <!-- Hero / Article Header -->

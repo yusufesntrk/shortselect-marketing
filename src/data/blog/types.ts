@@ -1,12 +1,14 @@
 export interface BlogPost {
   slug: string;
   title: string;
+  seoTitle?: string;
   date: string;
   author: string;
   authorRole: string;
   category: string;
   tags: string[];
   excerpt: string;
+  seoDescription?: string;
   readTime: string;
   content: string;
 }

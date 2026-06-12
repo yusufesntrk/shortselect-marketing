@@ -10,8 +10,10 @@ interface Props {
   description: string;
   canonical?: string;
   ogImage?: string;
+  ogType?: string;
   jsonLd?: object | object[];
   noindex?: boolean;
+  nofollow?: boolean;
 }
 
 const props = Astro.props;
@@ -43,17 +45,16 @@ const websiteSchema = {
   name: "ShortSelect",
   inLanguage: "de-DE",
   publisher: { "@id": "https://www.shortselect.com/#organization" },
-  potentialAction: {
-    "@type": "SearchAction",
-    target: "https://www.shortselect.com/blog/?q={search_term_string}",
-    "query-input": "required name=search_term_string",
-  },
 };
 ---
 
 <!doctype html>
-<html lang="de">
+<html lang="de" class="no-js">
   <head>
+    <script is:inline>
+      document.documentElement.classList.remove('no-js');
+      document.documentElement.classList.add('js');
+    </script>
     <SEOHead {...props} jsonLd={props.jsonLd
       ? [orgSchema, websiteSchema, ...(Array.isArray(props.jsonLd) ? props.jsonLd : [props.jsonLd])]
       : [orgSchema, websiteSchema]} />
@@ -70,6 +71,12 @@ const websiteSchema = {
     <!-- Global data-reveal observer for non-landing pages (blog, produkt, etc.) -->
     <script is:inline>
       (function() {
+        var selector = 'main [data-reveal], main .reveal-item, main .opacity-0.translate-y-8, main .opacity-0.translate-y-12';
+        function reveal(el) {
+          el.style.opacity = '1';
+          el.style.transform = 'translateY(0)';
+          el.classList.add('revealed');
+        }
         var observer = new IntersectionObserver(
           function(entries) {
             entries.forEach(function(entry) {
@@ -78,7 +85,7 @@ const websiteSchema = {
                 if (delay) {
                   entry.target.style.transitionDelay = delay + 'ms';
                 }
-                entry.target.classList.add('revealed');
+                reveal(entry.target);
                 observer.unobserve(entry.target);
               }
             });
@@ -86,7 +93,13 @@ const websiteSchema = {
           { threshold: 0.1, rootMargin: '0px' }
         );
         function init() {
-          document.querySelectorAll('[data-reveal]').forEach(function(el) { observer.observe(el); });
+          var elements = document.querySelectorAll(selector);
+          elements.forEach(function(el) { observer.observe(el); });
+          window.setTimeout(function() {
+            elements.forEach(function(el) {
+              if (!el.classList.contains('revealed')) reveal(el);
+            });
+          }, 1800);
         }
         if (document.readyState === 'loading') {
           document.addEventListener('DOMContentLoaded', init);

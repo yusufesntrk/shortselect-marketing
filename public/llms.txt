@@ -1,0 +1,36 @@
+# ShortSelect
+
+> ShortSelect ist eine KI-gestützte Recruiting-Software und ein Applicant Tracking System für Recruiting-Agenturen, Personalvermittlungen und moderne HR-Teams im DACH-Markt.
+
+## Was ShortSelect macht
+
+ShortSelect bündelt ATS, CRM, KI-Matching, Recruiting-Pipeline, Client Portal, Karriereseite, Multiposting, Talent Pools, Interview Scheduling, Analytics und Automatisierung in einer webbasierten Plattform.
+
+## Wichtige Fakten
+
+- Produkt: ShortSelect
+- Kategorie: Recruiting Software, Applicant Tracking System, ATS, Recruiting CRM
+- Zielgruppen: Recruiting-Agenturen, Personalvermittlungen, HR-Teams, Startups, Enterprise-Teams
+- Region: DACH und EU
+- Datenschutz: DSGVO-konform, EU-Hosting, rollenbasierte Zugriffe, Audit-Logging
+- KI-Engine: AgentBurst für Matching, Screening, Ranking und Recruiting-Automatisierung
+- Preismodell: Pioneer Plan mit 149 EUR pro User und Monat für die ersten 100 Recruiting-Agenturen
+
+## Wichtige Seiten
+
+- Startseite: https://www.shortselect.com/
+- Preise: https://www.shortselect.com/preise/
+- Produktübersicht: https://www.shortselect.com/produkt/
+- ATS und CRM: https://www.shortselect.com/produkt/ats-crm/
+- KI-Features: https://www.shortselect.com/produkt/ki-features/
+- Personalvermittlung: https://www.shortselect.com/fuer/personalvermittlung/
+- ATS-Vergleiche: https://www.shortselect.com/vergleich/
+- Blog: https://www.shortselect.com/blog/
+- Glossar: https://www.shortselect.com/glossar/
+
+## Kontakt
+
+- Website: https://www.shortselect.com/
+- App: https://app.shortselect.com/
+- E-Mail: hello@shortselect.com
+- LinkedIn: https://linkedin.com/company/shortselect

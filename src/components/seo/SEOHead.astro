@@ -6,6 +6,7 @@ interface Props {
   ogImage?: string;
   ogType?: string;
   noindex?: boolean;
+  nofollow?: boolean;
   jsonLd?: object | object[];
 }
 
@@ -16,6 +17,7 @@ const {
   ogImage = '/og-image.png',
   ogType = 'website',
   noindex = false,
+  nofollow = false,
   jsonLd,
 } = Astro.props;
 
@@ -39,7 +41,7 @@ const canonical = rawCanonical.endsWith('/')
 <meta name="description" content={description} />
 <meta name="author" content={siteName} />
 <meta name="language" content="German" />
-{noindex ? <meta name="robots" content="noindex, nofollow" /> : <meta name="robots" content="index, follow" />}
+<meta name="robots" content={`${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`} />
 
 <!-- Canonical -->
 <link rel="canonical" href={canonical} />

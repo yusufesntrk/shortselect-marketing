@@ -4,24 +4,84 @@ Disallow: /dashboard/
 Disallow: /client/
 Disallow: /auth
 
-# AI Search Bots - explicitly allowed
+# Search and AI bots are explicitly allowed to crawl public marketing pages.
+# Repeat private disallows in every explicit group because robots rules are not inherited.
+User-agent: Googlebot
+Allow: /
+Disallow: /dashboard/
+Disallow: /client/
+Disallow: /auth
+
+User-agent: Bingbot
+Allow: /
+Disallow: /dashboard/
+Disallow: /client/
+Disallow: /auth
+
 User-agent: GPTBot
 Allow: /
+Disallow: /dashboard/
+Disallow: /client/
+Disallow: /auth
+
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /dashboard/
+Disallow: /client/
+Disallow: /auth
 
 User-agent: ChatGPT-User
 Allow: /
+Disallow: /dashboard/
+Disallow: /client/
+Disallow: /auth
 
 User-agent: PerplexityBot
 Allow: /
+Disallow: /dashboard/
+Disallow: /client/
+Disallow: /auth
 
 User-agent: ClaudeBot
 Allow: /
+Disallow: /dashboard/
+Disallow: /client/
+Disallow: /auth
 
 User-agent: anthropic-ai
 Allow: /
+Disallow: /dashboard/
+Disallow: /client/
+Disallow: /auth
+
+User-agent: Claude-User
+Allow: /
+Disallow: /dashboard/
+Disallow: /client/
+Disallow: /auth
 
 User-agent: Google-Extended
 Allow: /
+Disallow: /dashboard/
+Disallow: /client/
+Disallow: /auth
+
+User-agent: Applebot
+Allow: /
+Disallow: /dashboard/
+Disallow: /client/
+Disallow: /auth
+
+User-agent: Applebot-Extended
+Allow: /
+Disallow: /dashboard/
+Disallow: /client/
+Disallow: /auth
+
+User-agent: CCBot
+Allow: /
+Disallow: /dashboard/
+Disallow: /client/
+Disallow: /auth
 
 Sitemap: https://www.shortselect.com/sitemap-index.xml
-Sitemap: https://www.shortselect.com/sitemap.xml
