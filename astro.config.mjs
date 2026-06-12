@@ -9,12 +9,7 @@ export default defineConfig({
   trailingSlash: 'always',
   integrations: [
     react(),
-    sitemap({
-      filter: (page) => {
-        const { pathname } = new URL(page);
-        return !['/agb/', '/datenschutz/', '/impressum/'].includes(pathname);
-      },
-    }),
+    sitemap(),
   ],
   vite: {
     plugins: [tailwindcss()],

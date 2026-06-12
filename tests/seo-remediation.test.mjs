@@ -93,7 +93,7 @@ assert(sitemapIndex.includes(`${siteUrl}/sitemap-0.xml`), 'sitemap-index.xml mus
 
 const sitemap = readDist('sitemap-0.xml');
 ['/agb/', '/datenschutz/', '/impressum/'].forEach((path) => {
-  assert(!sitemap.includes(`${siteUrl}${path}`), `sitemap must not include ${path}`);
+  assert(sitemap.includes(`${siteUrl}${path}`), `sitemap must include ${path}`);
 });
 
 [
