@@ -5,6 +5,8 @@ import CTASection from '../components/landing/CTASection.astro';
 import {
   PIONEER_PRICE_EUR,
   PIONEER_LIMIT,
+  PIONEER_DISPLAY_AVAILABLE,
+  STANDARD_PRICE_EUR,
   SLOT_STATUS_ENDPOINT,
 } from '../lib/billing-constants';
 
@@ -14,12 +16,12 @@ const pricingSchema = {
   "@context": "https://schema.org",
   "@type": "Product",
   name: "ShortSelect Pioneer Plan",
-  description: "ShortSelect ATS für Recruiting-Agenturen. Alle Funktionen, ein Preis pro User. Pioneer Plan: 149 EUR pro User und Monat für die ersten 100 Agenturen, Lifetime-Preisgarantie.",
+  description: `ShortSelect ATS für Recruiting-Agenturen. Alle Funktionen, ein Preis pro User. Pioneer Plan: ${PIONEER_PRICE_EUR} EUR pro User und Monat für die ersten ${PIONEER_LIMIT} Agenturen, danach ${STANDARD_PRICE_EUR} EUR pro User und Monat.`,
   brand: { "@type": "Brand", name: "ShortSelect" },
   offers: {
     "@type": "Offer",
     name: "Pioneer Plan",
-    description: `Pioneer Plan: ${PIONEER_PRICE_EUR} EUR pro User und Monat, alle Funktionen inklusive. Limitiert auf die ersten ${PIONEER_LIMIT} Recruiting-Agenturen. Preis auf Lebenszeit garantiert.`,
+    description: `Pioneer Plan: ${PIONEER_PRICE_EUR} EUR pro User und Monat, alle Funktionen inklusive. Noch ${PIONEER_DISPLAY_AVAILABLE} von ${PIONEER_LIMIT} Plätzen frei. Danach ${STANDARD_PRICE_EUR} EUR pro User und Monat.`,
     price: `${PIONEER_PRICE_EUR}.00`,
     priceCurrency: "EUR",
     availability: "https://schema.org/LimitedAvailability",
@@ -78,7 +80,7 @@ const competitors = [
       <div id="pricing-hero" class="text-center max-w-3xl mx-auto opacity-0 translate-y-8 transition-all duration-700">
         <span class="inline-flex items-center gap-2 px-4 py-2 mb-6 rounded-full bg-primary/10 text-primary text-sm font-semibold">
           <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
-          <span id="pioneer-slot-pill">Pioneer Plan, limitiert auf {PIONEER_LIMIT} Agenturen</span>
+          <span id="pioneer-slot-pill">Noch {PIONEER_DISPLAY_AVAILABLE} von {PIONEER_LIMIT} frei</span>
         </span>
         <h1 class="text-4xl md:text-5xl lg:text-6xl font-display font-bold tracking-tight mb-4">
           Pioneer Plan:
@@ -114,7 +116,7 @@ const competitors = [
                 <path class="bf-outer" fill="url(#bf-outer-grad)" d="M12 31 C 4 30, 1 24, 3 17 C 4.5 13, 7 11, 8 6 C 10 9, 11 13, 12 16 C 13 12, 15 8, 17 2 C 19 7, 22 13, 23 19 C 24 26, 19 31, 12 31 Z" />
                 <path class="bf-core" fill="url(#bf-core-grad)" d="M12 28 C 7 27, 5.5 22, 7 18 C 8.5 15, 10 13, 11 10 C 12 13, 13.5 16, 14.5 19 C 16 23, 14 28, 12 28 Z" />
               </svg>
-              <span id="pioneer-badge-text">Pioneer Plan, {PIONEER_LIMIT} Plätze</span>
+              <span id="pioneer-badge-text">Noch {PIONEER_DISPLAY_AVAILABLE} von {PIONEER_LIMIT} frei</span>
             </span>
           </div>
 
@@ -168,7 +170,7 @@ const competitors = [
 
         <!-- Knappheits Subline -->
         <p class="text-center text-sm text-muted-foreground mt-6">
-          Der Pioneer-Preis von {PIONEER_PRICE_EUR} € pro User ist auf Lebenszeit gesichert, solange das Abo ununterbrochen aktiv bleibt.
+          Der Pioneer-Preis von {PIONEER_PRICE_EUR} € pro User ist auf Lebenszeit gesichert, solange das Abo ununterbrochen aktiv bleibt. Danach gilt der Standard-Tarif von {STANDARD_PRICE_EUR} € pro User und Monat.
         </p>
       </div>
     </div>
@@ -253,7 +255,7 @@ const competitors = [
   })();
   </script>
 
-  <script is:inline define:vars={{ endpoint: SLOT_STATUS_ENDPOINT, totalLimit: PIONEER_LIMIT }}>
+  <script is:inline define:vars={{ endpoint: SLOT_STATUS_ENDPOINT, totalLimit: PIONEER_LIMIT, displayAvailable: PIONEER_DISPLAY_AVAILABLE }}>
   (function() {
     var pill = document.getElementById('pioneer-slot-pill');
     var badge = document.getElementById('pioneer-badge-text');
@@ -265,8 +267,9 @@ const competitors = [
         pillText = 'Pioneer-Plätze ausverkauft';
         badgeText = 'Pioneer ausverkauft';
       } else {
-        pillText = 'Noch ' + available + ' von ' + totalSlots + ' Pioneer-Plätzen frei';
-        badgeText = 'Noch ' + available + ' Plätze';
+        var shownAvailable = displayAvailable;
+        pillText = 'Noch ' + shownAvailable + ' von ' + totalSlots + ' frei';
+        badgeText = 'Noch ' + shownAvailable + ' von ' + totalSlots + ' frei';
       }
       if (pill) pill.textContent = pillText;
       if (badge) badge.textContent = badgeText;

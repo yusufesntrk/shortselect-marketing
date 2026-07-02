@@ -2,11 +2,12 @@
 // Public website copy prices the plan per internal user.
 
 export const PIONEER_PRICE_EUR = 149;
-export const PIONEER_COMPARE_AT_EUR = 249;
+export const PIONEER_COMPARE_AT_EUR = 300;
 export const PIONEER_LIMIT = 100;
+export const PIONEER_DISPLAY_AVAILABLE = 24;
 export const PIONEER_LOOKUP_KEY = 'shortselect_pioneer_monthly_v1';
 
-export const STANDARD_PRICE_EUR = 249;
+export const STANDARD_PRICE_EUR = 300;
 export const STANDARD_LOOKUP_KEY = 'shortselect_standard_monthly_v1';
 
 export const TRIAL_DAYS = 30;

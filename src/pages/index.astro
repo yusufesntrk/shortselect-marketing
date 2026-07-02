@@ -42,8 +42,8 @@ const faqSchema = {
     { "@type": "Question", name: "Was passiert nach den 30 Tagen Trial?", acceptedAnswer: { "@type": "Answer", text: "Nach Ablauf des Trials bleibt Ihr Account erhalten und Sie wechseln in den Pioneer Plan für 149 EUR pro User und Monat. Wenn Sie nicht weitermachen möchten, wird Ihr Account ohne weitere Kosten archiviert. Wir erinnern Sie rechtzeitig vor Trial-Ende per E-Mail, damit Sie aktiv entscheiden können." } },
     { "@type": "Question", name: "Brauche ich eine Kreditkarte für den Trial?", acceptedAnswer: { "@type": "Answer", text: "Nein. Der 30-tägige Trial ist komplett kostenlos und ohne Zahlungsdaten. Sie geben Ihre Zahlungsmethode erst an, wenn Sie nach dem Trial in den Pioneer Plan wechseln möchten." } },
     { "@type": "Question", name: "Bleibt der Preis von 149 EUR garantiert?", acceptedAnswer: { "@type": "Answer", text: "Ja. Wer den Pioneer Plan nutzt, bezahlt diesen Preis auf Lebenszeit, solange das Abo ununterbrochen aktiv bleibt, auch wenn wir später die Standard-Preise anheben. Der Pioneer Plan ist limitiert auf die ersten 100 Recruiting-Agenturen." } },
-    { "@type": "Question", name: "Wie viele Pioneer-Plätze sind noch frei?", acceptedAnswer: { "@type": "Answer", text: "Auf shortselect.com/preise sehen Sie einen Live-Counter mit der aktuellen Anzahl freier Pioneer-Plätze. Der Pioneer-Preis gilt pro User und ist für aktive Pioneer-Kunden auf Lebenszeit gesichert." } },
-    { "@type": "Question", name: "Was kostet ShortSelect nach den 100 Pioneer-Plätzen?", acceptedAnswer: { "@type": "Answer", text: "Nach Vergabe der 100 Pioneer-Plätze gilt der jeweils aktuelle Standard-Tarif. Bestehende Pioneer-Kunden behalten ihren Preis von 149 EUR pro User und Monat lebenslang, solange ihr Abo aktiv bleibt." } },
+    { "@type": "Question", name: "Wie viele Pioneer-Plätze sind noch frei?", acceptedAnswer: { "@type": "Answer", text: "Aktuell sind noch 24 von 100 Pioneer-Plätzen frei. Der Pioneer-Preis gilt pro User und ist für aktive Pioneer-Kunden auf Lebenszeit gesichert." } },
+    { "@type": "Question", name: "Was kostet ShortSelect nach den 100 Pioneer-Plätzen?", acceptedAnswer: { "@type": "Answer", text: "Nach Vergabe der 100 Pioneer-Plätze gilt der Standard-Tarif von 300 EUR pro User und Monat. Bestehende Pioneer-Kunden behalten ihren Preis von 149 EUR pro User und Monat lebenslang, solange ihr Abo aktiv bleibt." } },
     { "@type": "Question", name: "Kann ich jederzeit kündigen?", acceptedAnswer: { "@type": "Answer", text: "Ja. ShortSelect ist monatlich kündbar, ohne Mindestlaufzeit. Eine Kündigung erfolgt direkt im Account über das Stripe Customer Portal. Sie behalten Zugriff bis zum Ende der laufenden Abrechnungsperiode." } },
     { "@type": "Question", name: "Werden Updates und neue Funktionen extra berechnet?", acceptedAnswer: { "@type": "Answer", text: "Nein. Alle zukünftigen Updates und neuen Funktionen sind im Pioneer Plan und im Standard-Tarif enthalten. Es gibt keine Aufpreise für Premium-Module oder neue KI-Features." } },
     { "@type": "Question", name: "Wie sicher sind meine Daten?", acceptedAnswer: { "@type": "Answer", text: "Ihre Daten werden ausschließlich in EU-Rechenzentren gespeichert und sind durch Row-Level-Security, SSL-Verschlüsselung und tägliche Backups geschützt. ShortSelect ist vollständig DSGVO-konform und bietet Audit-Logging, RBAC und einen AVV-Vertrag." } },
@@ -3026,7 +3026,7 @@ const websiteSchema = {
       <div class="fc-hero-deco-star s1">★</div>
       <div class="fc-hero-deco-star s2">✦</div>
       <div class="fc-hero-inner reveal-stagger" data-reveal>
-        <div class="fc-pill" id="hero-pioneer-pill"><span class="dot"></span> <span id="hero-pioneer-pill-text">Pioneer Plan · 100 Plätze, jetzt sichern</span></div>
+        <div class="fc-pill" id="hero-pioneer-pill"><span class="dot"></span> <span id="hero-pioneer-pill-text">Noch 24 von 100 frei</span></div>
         <h1>Recruiting,<br>das sich anfühlt wie <span class="wavy">Magie.</span></h1>
         <p class="lead">
           ShortSelect ist die Pipeline-Software für Recruiting-Agenturen, die endlich aufhören wollen, <span class="marker">zwölf Tools</span> nebeneinander offen zu haben.
@@ -3794,7 +3794,7 @@ const websiteSchema = {
         <h2>Ein Preis. Alles drin.<br><span class="wavy">Auf Lebenszeit.</span></h2>
       </div>
       <div class="fc-price-card reveal" data-reveal>
-        <div class="sticker" id="home-pricing-sticker">⚡ Pioneer Plan · 100 Plätze</div>
+        <div class="sticker" id="home-pricing-sticker">⚡ Noch 24 von 100 frei</div>
         <h3>Pioneer Plan</h3>
         <p class="desc">Pro User. Alle Werkzeuge. Preis auf Lebenszeit garantiert für die ersten 100 Agenturen.</p>
         <div class="price-row">
@@ -3838,11 +3838,11 @@ const websiteSchema = {
         </details>
         <details class="fc-faq-item">
           <summary>Wie viele Pioneer-Plätze sind noch frei? <span class="plus">+</span></summary>
-          <div class="answer">Auf shortselect.com/preise siehst du einen Live-Counter mit der aktuellen Anzahl freier Pioneer-Plätze. Der Pioneer-Preis gilt pro User und ist für aktive Pioneer-Kunden auf Lebenszeit gesichert.</div>
+          <div class="answer">Aktuell sind noch 24 von 100 Pioneer-Plätzen frei. Der Pioneer-Preis gilt pro User und ist für aktive Pioneer-Kunden auf Lebenszeit gesichert.</div>
         </details>
         <details class="fc-faq-item">
           <summary>Was kostet ShortSelect nach den 100 Pioneer-Plätzen? <span class="plus">+</span></summary>
-          <div class="answer">Nach Vergabe der 100 Pioneer-Plätze gilt der jeweils aktuelle Standard-Tarif. Bestehende Pioneer-Kunden behalten ihren Preis von 149 € pro User und Monat lebenslang, solange ihr Abo aktiv bleibt.</div>
+          <div class="answer">Nach Vergabe der 100 Pioneer-Plätze gilt der Standard-Tarif von 300 € pro User und Monat. Bestehende Pioneer-Kunden behalten ihren Preis von 149 € pro User und Monat lebenslang, solange ihr Abo aktiv bleibt.</div>
         </details>
         <details class="fc-faq-item">
           <summary>Kann ich jederzeit kündigen? <span class="plus">+</span></summary>
@@ -4173,14 +4173,16 @@ const websiteSchema = {
     if (!heroPill && !pricingSticker) return;
 
     var endpoint = 'https://aztqhtluvomqnxdavjxp.supabase.co/functions/v1/get-pioneer-slot-status';
+    var displayAvailable = 24;
 
     function render(available, total, soldOut) {
       if (soldOut) {
         if (heroPill) heroPill.textContent = 'Pioneer-Plätze ausverkauft';
         if (pricingSticker) pricingSticker.textContent = '⚡ Pioneer ausverkauft';
       } else {
-        if (heroPill) heroPill.textContent = 'Live · Noch ' + available + ' von ' + total + ' Pioneer-Plätzen';
-        if (pricingSticker) pricingSticker.textContent = '⚡ Noch ' + available + ' von ' + total + ' Plätzen';
+        var shownAvailable = displayAvailable;
+        if (heroPill) heroPill.textContent = 'Noch ' + shownAvailable + ' von ' + total + ' frei';
+        if (pricingSticker) pricingSticker.textContent = '⚡ Noch ' + shownAvailable + ' von ' + total + ' frei';
       }
     }
 

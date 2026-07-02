@@ -17,11 +17,11 @@ export const faqs = [
   },
   {
     question: "Wie viele Pioneer-Plätze sind noch frei?",
-    answer: "Auf shortselect.com/preise sehen Sie einen Live-Counter mit der aktuellen Anzahl freier Pioneer-Plätze. Der Pioneer-Preis gilt pro User und ist für aktive Pioneer-Kunden auf Lebenszeit gesichert.",
+    answer: "Aktuell sind noch 24 von 100 Pioneer-Plätzen frei. Der Pioneer-Preis gilt pro User und ist für aktive Pioneer-Kunden auf Lebenszeit gesichert.",
   },
   {
     question: "Was kostet ShortSelect nach den 100 Pioneer-Plätzen?",
-    answer: "Nach Vergabe der 100 Pioneer-Plätze gilt der jeweils aktuelle Standard-Tarif. Bestehende Pioneer-Kunden behalten ihren Preis von 149 EUR pro User und Monat lebenslang, solange ihr Abo aktiv bleibt.",
+    answer: "Nach Vergabe der 100 Pioneer-Plätze gilt der Standard-Tarif von 300 EUR pro User und Monat. Bestehende Pioneer-Kunden behalten ihren Preis von 149 EUR pro User und Monat lebenslang, solange ihr Abo aktiv bleibt.",
   },
   {
     question: "Kann ich jederzeit kündigen?",
