@@ -11,13 +11,37 @@ const comparisonData = [
   { feature: "Multiposting", ssStatus: "check" as const, ssLabel: "Wachsend", compStatus: "check" as const, compLabel: "Verfügbar" },
   { feature: "DSGVO", ssStatus: "check" as const, ssLabel: "EU-nativ", compStatus: "check" as const, compLabel: "DACH-Anbieter" },
   { feature: "Autonomes Nurturing", ssStatus: "check" as const, ssLabel: "AgentBurst Nurture", compStatus: "warn" as const, compLabel: "Einfache Vorlagen" },
-  { feature: "Preis", ssStatus: "check" as const, ssLabel: "149 € pro User/Monat", compStatus: "warn" as const, compLabel: "Ab 250\u20AC/Monat/Standort" },
+  { feature: "Preis", ssStatus: "check" as const, ssLabel: "149 € pro User/Monat", compStatus: "warn" as const, compLabel: "Ab 250€/Monat/Standort" },
+];
+
+const faqs = [
+  {
+    question: "Was ist der Unterschied zwischen ShortSelect und Talent360?",
+    answer: "Talent360 ist ein DACH-ATS für Personaldienstleister mit soliden Grundfunktionen, das aber regelbasiert matcht und kein CV Parsing bietet. ShortSelect setzt auf die KI-Engine AgentBurst mit echtem KI-Matching, CV Parsing in unter 2 Sekunden, KI-Screening und Predictive Analytics.",
+  },
+  {
+    question: "Für wen ist Talent360 besser geeignet?",
+    answer: "Talent360 kann passen, wenn Ihnen ein einfaches ATS ohne KI-Anforderungen genügt, regelbasiertes Matching für Ihre Prozesse ausreicht, Sie eine WhatsApp-Integration schätzen und einen DACH-Anbieter mit lokaler Präsenz bevorzugen.",
+  },
+  {
+    question: "Was kostet ShortSelect im Vergleich zu Talent360?",
+    answer: "ShortSelect kostet im Pioneer Plan 149 € pro User/Monat für die ersten 100 Agenturen, danach 300 € pro User/Monat, mit 30 Tagen kostenlosem Test ohne Kreditkarte. Talent360 startet ab etwa 250 € pro Monat und Standort, die Abrechnung erfolgt also pro Standort statt pro User.",
+  },
+  {
+    question: "Was bedeutet regelbasiertes Matching bei Talent360 im Vergleich zu KI-Matching?",
+    answer: "Regelbasiertes Matching gleicht feste Kriterien wie Keywords ab und erkennt keine inhaltlich ähnlichen Profile. Das KI-Matching von ShortSelect versteht Zusammenhänge in Lebenslauf und Stellenprofil und rankt Kandidaten automatisch, auch wenn Formulierungen nicht exakt übereinstimmen.",
+  },
+  {
+    question: "Wie wechsle ich von Talent360 zu ShortSelect?",
+    answer: "Der Umzug dauert in der Regel etwa 15 Minuten: Account erstellen, Kandidaten und Jobs per CSV oder API importieren, Team einladen und loslegen. Eine Schritt-für-Schritt-Anleitung finden Sie auf unserer Wechsel-Seite.",
+    answerHtml: 'Der Umzug dauert in der Regel etwa 15 Minuten: Account erstellen, Kandidaten und Jobs per CSV oder API importieren, Team einladen und loslegen. Eine Schritt-für-Schritt-Anleitung finden Sie auf unserer <a href="/wechsel/" class="text-primary hover:underline">Wechsel-Seite</a>.',
+  },
 ];
 ---
 
 <VergleichLayout
   title="ShortSelect vs. Talent360 - ATS Vergleich 2026"
-  description="Talent360 nutzt regelbasiertes Matching ohne echte KI und kein CV Parsing. ShortSelect bietet Autonome AgentBurst-Agenten."
+  description="Talent360 matcht regelbasiert, ohne CV Parsing. ShortSelect: echte KI-Agenten, Parsing unter 2 Sekunden, ab 149 € pro User. Fairer Agentur-Vergleich."
   competitorName="Talent360"
   heroSubline="Talent360 ist ein DACH-ATS mit soliden Grundfunktionen. Aber: Regelbasiertes Matching statt echter KI, kein CV Parsing und ein sehr kleines Entwicklerteam."
   heroBadge="Vergleich"
@@ -44,7 +68,8 @@ const comparisonData = [
       "Blitzschnelles CV Parsing in unter 2 Sekunden",
       "Predictive Analytics für datengetriebene Entscheidungen",
       "Wachsendes Produkt mit aktivem Entwicklerteam",
-      "Faire Preise: 149 € pro User/Monat statt 250\u20AC/Monat/Standort",
+      "Faire Preise: 149 € pro User/Monat statt 250€/Monat/Standort",
     ]
   }}
+  faqs={faqs}
 />

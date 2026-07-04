@@ -14,11 +14,35 @@ const comparisonData = [
   { feature: "Multiposting", ssStatus: "check" as const, ssLabel: "Wachsend", compStatus: "check" as const, compLabel: "Stark" },
   { feature: "API", ssStatus: "check" as const, ssLabel: "REST + Webhooks", compStatus: "check" as const, compLabel: "Verfügbar" },
 ];
+
+const faqs = [
+  {
+    question: "Was ist der Unterschied zwischen ShortSelect und coveto?",
+    answer: "coveto ist ein etabliertes DACH-ATS mit starkem Multiposting-Netzwerk und optionaler On-Premise-Installation. ShortSelect ist ein modernes Cloud-ATS mit KI-Engine AgentBurst, die Screening, Matching und Ranking im Hintergrund übernimmt, dazu Kanban-Pipeline und transparente Preise.",
+  },
+  {
+    question: "Für wen ist coveto besser geeignet?",
+    answer: "coveto passt gut, wenn Sie starkes Multiposting mit vielen Jobbörsen-Anbindungen brauchen, eine On-Premise-Installation gewünscht oder vorgeschrieben ist oder Sie einen langjährig etablierten Anbieter mit klassischer Oberfläche bevorzugen.",
+  },
+  {
+    question: "Was kostet ShortSelect im Vergleich zu coveto?",
+    answer: "ShortSelect kostet im Pioneer Plan 149 € pro User/Monat für die ersten 100 Agenturen, danach 300 € pro User/Monat. Sie testen 30 Tage kostenlos ohne Kreditkarte. coveto nennt Preise nur auf Anfrage, die Kosten hängen also vom individuellen Angebot ab.",
+  },
+  {
+    question: "Hat coveto KI-Agenten wie ShortSelect?",
+    answer: "Nein. coveto bietet begrenzte KI-Features, aber keine KI-Agenten. Bei ShortSelect übernimmt die KI-Engine AgentBurst Matching, Screening und Ranking selbstständig, ohne dass Sie manuelle Workflows anstoßen müssen.",
+  },
+  {
+    question: "Wie wechsle ich von coveto zu ShortSelect?",
+    answer: "Der Umzug dauert in der Regel etwa 15 Minuten: Account erstellen, Kandidaten und Jobs per CSV oder API importieren, Team einladen und loslegen. Eine Schritt-für-Schritt-Anleitung finden Sie auf unserer Wechsel-Seite.",
+    answerHtml: 'Der Umzug dauert in der Regel etwa 15 Minuten: Account erstellen, Kandidaten und Jobs per CSV oder API importieren, Team einladen und loslegen. Eine Schritt-für-Schritt-Anleitung finden Sie auf unserer <a href="/wechsel/" class="text-primary hover:underline">Wechsel-Seite</a>.',
+  },
+];
 ---
 
 <VergleichLayout
   title="ShortSelect vs. coveto - ATS Vergleich 2026"
-  description="Modernes ATS oder etablierter Klassiker? coveto ist seit Jahren im DACH-Markt etabliert. Vergleich mit ShortSelect."
+  description="coveto ist der DACH-Klassiker mit starkem Multiposting. ShortSelect bietet KI-Agenten und Kanban-Pipeline ab 149 € pro User. Fairer Vergleich mit Preisen."
   competitorName="coveto"
   heroSubline="Modernes ATS oder etablierter Klassiker? coveto ist seit Jahren im DACH-Markt etabliert. Wir vergleichen mit dem modernen Ansatz von ShortSelect."
   heroBadge="Vergleich"
@@ -49,4 +73,5 @@ const comparisonData = [
       "REST API und Webhooks für flexible Integrationen",
     ]
   }}
+  faqs={faqs}
 />

@@ -33,7 +33,7 @@ export const batch5: BlogPost[] = [
 <p>Unconscious Bias – etwa der Halo-Effekt, Ähnlichkeitsbias oder der Primacy-Effekt – wird durch Struktur systematisch reduziert. Studien zeigen, dass strukturierte Interviews die Diversität in Teams nachweislich verbessern, weil Entscheidungen auf Kompetenzen statt auf Bauchgefühl basieren.</p>
 
 <h3>4. Rechtssicherheit</h3>
-<p>Ein dokumentierter, nachvollziehbarer Prozess schützt Ihr Unternehmen bei AGG-Beschwerden oder arbeitsrechtlichen Auseinandersetzungen. Sie können jederzeit belegen, warum ein Kandidat ausgewählt oder abgelehnt wurde.</p>
+<p>Ein <a href="/produkt/compliance/">dokumentierter, nachvollziehbarer Prozess</a> schützt Ihr Unternehmen bei AGG-Beschwerden oder arbeitsrechtlichen Auseinandersetzungen. Sie können jederzeit belegen, warum ein Kandidat ausgewählt oder abgelehnt wurde.</p>
 
 <h3>5. Bessere Candidate Experience</h3>
 <p>Kandidaten empfinden strukturierte Interviews als professioneller und fairer. Laut einer LinkedIn-Studie bewerten 72% der Bewerber Unternehmen positiver, wenn der Interviewprozess transparent und einheitlich ist.</p>
@@ -111,7 +111,7 @@ export const batch5: BlogPost[] = [
   <li><strong>Fragetechnik:</strong> Wie stellt man offene Fragen? Wie hakt man nach, ohne zu suggerieren? Wie reagiert man auf ausweichende Antworten?</li>
   <li><strong>Bewertungsdisziplin:</strong> Üben Sie das Bewerten mit Ankerpunkten anhand von aufgezeichneten Probeinterviews. Vergleichen Sie die Bewertungen im Team und diskutieren Sie Abweichungen.</li>
   <li><strong>Gesprächsführung:</strong> Wie schafft man eine angenehme Atmosphäre, ohne das strukturierte Format aufzugeben? Wie geht man mit nervösen Kandidaten um?</li>
-  <li><strong>Dokumentation:</strong> Wie werden Notizen und Bewertungen festgehalten? Welche Tools (z.B. ATS-System) werden verwendet?</li>
+  <li><strong>Dokumentation:</strong> Wie werden Notizen und Bewertungen festgehalten? Welche Tools (z.B. <a href="/produkt/ats-crm/">ATS-System</a>) werden verwendet?</li>
 </ol>
 
 <p><strong>Empfehlung:</strong> Führen Sie mindestens einmal pro Quartal Kalibrierungssitzungen durch, in denen Interviewer gemeinsam dieselben Antworten bewerten und Abweichungen besprechen.</p>
@@ -218,7 +218,7 @@ export const batch5: BlogPost[] = [
   <li><strong>Silbermedaillen-Kandidaten erfassen:</strong> Jeder Kandidat, der es in die Endrunde geschafft hat aber nicht genommen wurde, gehört in Ihren Talent Pool – mit Notizen, warum er gut war.</li>
   <li><strong>Regelmäßig pflegen:</strong> Kontaktieren Sie Talent-Pool-Kandidaten alle 3–6 Monate mit einem kurzen Update. „Wir haben gerade nichts Passendes, aber denken an Sie" hält die Beziehung warm.</li>
   <li><strong>Segmentieren:</strong> Gruppieren Sie Kandidaten nach Funktion, Seniorität und Verfügbarkeit. So finden Sie bei einer neuen Stelle sofort die richtigen Profile.</li>
-  <li><strong>ATS nutzen:</strong> Moderne Bewerbermanagementsysteme ermöglichen es, Talent Pools automatisch zu durchsuchen und Kandidaten mit passenden Profilen vorzuschlagen.</li>
+  <li><strong>ATS nutzen:</strong> Moderne Bewerbermanagementsysteme ermöglichen es, <a href="/produkt/talent-pools/">Talent Pools</a> automatisch zu durchsuchen und Kandidaten mit passenden Profilen vorzuschlagen.</li>
 </ul>
 
 <h2>Strategie 3: Bewerbungsformular kürzen – maximal 5 Felder</h2>
@@ -233,7 +233,7 @@ export const batch5: BlogPost[] = [
 <ul>
   <li><strong>Die 5 essentiellen Felder:</strong> Name, E-Mail, Telefon, LinkedIn-Profil (oder Lebenslauf-Upload), frühester Starttermin.</li>
   <li><strong>Streichen Sie:</strong> Anschreiben (weniger als 15% der Recruiter lesen es vollständig), Gehaltsvorstellung im ersten Schritt, „Wie haben Sie von uns erfahren?"-Fragen.</li>
-  <li><strong>One-Click-Bewerbung anbieten:</strong> LinkedIn-Profilimport oder CV-Parsing reduzieren den Aufwand für Kandidaten auf unter 2 Minuten.</li>
+  <li><strong>One-Click-Bewerbung anbieten:</strong> LinkedIn-Profilimport oder <a href="/produkt/ki-features/">CV-Parsing</a> reduzieren den Aufwand für Kandidaten auf unter 2 Minuten.</li>
   <li><strong>Mobile-First:</strong> Über 50% der Bewerbungen kommen von Mobilgeräten. Testen Sie Ihr Formular auf dem Smartphone – wenn es länger als 3 Minuten dauert, ist es zu lang.</li>
 </ul>
 
@@ -243,7 +243,7 @@ export const batch5: BlogPost[] = [
 <p>Manuelles Screening ist der größte Zeitfresser: Recruiter verbringen durchschnittlich <strong>23 Stunden pro Stelle</strong> damit, Lebensläufe zu sichten und Kandidaten vorzuqualifizieren. Bei 20 offenen Stellen sind das fast 460 Stunden pro Monat.</p>
 
 <h3>Hebel</h3>
-<p>Automatisierte Screening-Fragen (Knockout-Fragen) filtern ungeeignete Kandidaten sofort heraus und sparen bis zu <strong>75% der Screening-Zeit</strong>. Sie bewerten objektiv und konsistent – rund um die Uhr.</p>
+<p><a href="/produkt/automatisierung/">Automatisierte Screening-Fragen</a> (Knockout-Fragen) filtern ungeeignete Kandidaten sofort heraus und sparen bis zu <strong>75% der Screening-Zeit</strong>. Sie bewerten objektiv und konsistent – rund um die Uhr.</p>
 
 <h3>Umsetzung</h3>
 <ul>

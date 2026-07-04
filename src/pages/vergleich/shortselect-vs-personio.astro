@@ -10,13 +10,37 @@ const comparisonData = [
   { feature: "Talent Pools", ssStatus: "check" as const, ssLabel: "Unbegrenzt", compStatus: "warn" as const, compLabel: "Eingeschränkt" },
   { feature: "Interview Scheduling", ssStatus: "check" as const, ssLabel: "Automatisch", compStatus: "warn" as const, compLabel: "Manuell" },
   { feature: "API Zugang", ssStatus: "check" as const, ssLabel: "REST API", compStatus: "check" as const, compLabel: "REST API" },
-  { feature: "Preis", ssStatus: "check" as const, ssLabel: "149 € pro User/Monat", compStatus: "warn" as const, compLabel: "Ab ~200\u20AC/Monat" },
+  { feature: "Preis", ssStatus: "check" as const, ssLabel: "149 € pro User/Monat", compStatus: "warn" as const, compLabel: "Ab ~200€/Monat" },
+];
+
+const faqs = [
+  {
+    question: "Was ist der Unterschied zwischen ShortSelect und Personio?",
+    answer: "Personio ist eine HR-Suite mit Lohnabrechnung, Zeiterfassung und Abwesenheitsmanagement, bei der das ATS ein Zusatzmodul ist. ShortSelect ist ein spezialisiertes Recruiting-ATS mit KI-Matching, Multi-Tenancy und Client Portal, gebaut für Personalberatungen und Recruiting-Agenturen.",
+  },
+  {
+    question: "Für wen ist Personio besser geeignet?",
+    answer: "Personio passt besser, wenn Sie eine vollständige HR-Suite für interne Prozesse brauchen: Lohnabrechnung, Gehaltsmanagement, Zeiterfassung, Abwesenheiten und Performance Reviews in einem System. Für reine Recruiting-Arbeit ist es dagegen nicht spezialisiert.",
+  },
+  {
+    question: "Was kostet ShortSelect im Vergleich zu Personio?",
+    answer: "ShortSelect kostet im Pioneer Plan 149 € pro User/Monat für die ersten 100 Agenturen, danach 300 € pro User/Monat, mit 30 Tagen kostenlosem Test ohne Kreditkarte und ohne Mindestlaufzeit. Personio startet ab etwa 200 € pro Monat, der genaue Preis hängt von Modulen und Mitarbeiterzahl ab.",
+  },
+  {
+    question: "Kann ich mit Personio mehrere Mandanten verwalten wie mit ShortSelect?",
+    answer: "Nein. Personio ist Single-Tenant und hat kein Client Portal. ShortSelect bietet vollständige Multi-Tenancy und ein integriertes Client Portal, sodass Recruiting-Agenturen mehrere Kunden getrennt verwalten und transparent zusammenarbeiten können.",
+  },
+  {
+    question: "Wie wechsle ich von Personio zu ShortSelect?",
+    answer: "Der Umzug dauert in der Regel etwa 15 Minuten: Account erstellen, Kandidaten und Jobs per CSV oder API importieren, Team einladen und loslegen. Eine Schritt-für-Schritt-Anleitung finden Sie auf unserer Wechsel-Seite.",
+    answerHtml: 'Der Umzug dauert in der Regel etwa 15 Minuten: Account erstellen, Kandidaten und Jobs per CSV oder API importieren, Team einladen und loslegen. Eine Schritt-für-Schritt-Anleitung finden Sie auf unserer <a href="/wechsel/" class="text-primary hover:underline">Wechsel-Seite</a>.',
+  },
 ];
 ---
 
 <VergleichLayout
   title="ShortSelect vs. Personio - ATS Vergleich 2026"
-  description="Personio ist großartig für HR. Für Recruiting brauchen Sie mehr. Vergleichen Sie Features, Preise und Usability von ShortSelect und Personio."
+  description="Personio ist HR-Suite mit ATS-Modul. ShortSelect ist reines Recruiting-ATS mit KI-Matching und Client Portal ab 149 € pro User. Fairer Vergleich."
   competitorName="Personio"
   heroSubline="Personio ist großartig für HR. Für Recruiting brauchen Sie mehr."
   heroBadge="Ehrlicher Vergleich"
@@ -47,4 +71,5 @@ const comparisonData = [
       "30-Tage-Test ohne Mindestlaufzeit",
     ]
   }}
+  faqs={faqs}
 />

@@ -7,17 +7,41 @@ const comparisonData = [
   { feature: "Client Portal", ssStatus: "check" as const, ssLabel: "Integriert", compStatus: "x" as const, compLabel: "Nicht verfügbar" },
   { feature: "Multi-Tenancy", ssStatus: "check" as const, ssLabel: "Für Agenturen", compStatus: "x" as const, compLabel: "Nicht verfügbar" },
   { feature: "Pipeline", ssStatus: "check" as const, ssLabel: "Kanban", compStatus: "check" as const, compLabel: "Kanban" },
-  { feature: "Preise", ssStatus: "check" as const, ssLabel: "149 € pro User/Monat", compStatus: "warn" as const, compLabel: "Ab 199\u20AC/Monat" },
+  { feature: "Preise", ssStatus: "check" as const, ssLabel: "149 € pro User/Monat", compStatus: "warn" as const, compLabel: "Ab 199€/Monat" },
   { feature: "DSGVO", ssStatus: "check" as const, ssLabel: "Vollständig", compStatus: "check" as const, compLabel: "Vollständig" },
   { feature: "API", ssStatus: "check" as const, ssLabel: "REST + Webhooks", compStatus: "check" as const, compLabel: "REST" },
   { feature: "Screening-Fragen", ssStatus: "check" as const, ssLabel: "Vollständig", compStatus: "warn" as const, compLabel: "Begrenzt" },
   { feature: "Talent Pools", ssStatus: "check" as const, ssLabel: "Unbegrenzt", compStatus: "warn" as const, compLabel: "Begrenzt" },
 ];
+
+const faqs = [
+  {
+    question: "Was ist der Unterschied zwischen ShortSelect und Recruitee?",
+    answer: "Recruitee, das inzwischen zu Teamtailor gehört, ist ein einfaches ATS für kleine und mittlere Unternehmen mit Fokus auf Karriereseiten und Team-Kollaboration, aber ohne KI-Matching. ShortSelect bietet KI-gestütztes Matching, Multi-Tenancy und ein Client Portal und richtet sich damit an Personalberatungen und Recruiting-Agenturen.",
+  },
+  {
+    question: "Für wen ist Recruitee besser geeignet?",
+    answer: "Recruitee passt gut für kleine Inhouse-Teams, die eine Karriereseite ohne Entwickler bauen wollen, ein bewährtes Kanban-Board suchen und Employer Branding in den Fokus stellen. Wer kein KI-Matching und keine Mandantenverwaltung braucht, kommt damit solide zurecht.",
+  },
+  {
+    question: "Was kostet ShortSelect im Vergleich zu Recruitee?",
+    answer: "ShortSelect kostet im Pioneer Plan 149 € pro User/Monat für die ersten 100 Agenturen, danach 300 € pro User/Monat, mit 30 Tagen kostenlosem Test ohne Kreditkarte und ohne Mindestlaufzeit. Recruitee startet ab etwa 199 € pro Monat, abhängig vom gewählten Tarif.",
+  },
+  {
+    question: "Hat Recruitee KI-Matching wie ShortSelect?",
+    answer: "Nein. Recruitee bietet eine Basis-Suche, aber kein KI-Matching und kein KI-Ranking. Bei ShortSelect analysiert die KI Kandidatenprofile und Jobs und schlägt passende Matches automatisch vor, das spart bei vielen Bewerbungen deutlich Zeit.",
+  },
+  {
+    question: "Wie wechsle ich von Recruitee zu ShortSelect?",
+    answer: "Der Umzug dauert in der Regel etwa 15 Minuten: Account erstellen, Kandidaten und Jobs per CSV oder API importieren, Team einladen und loslegen. Eine Schritt-für-Schritt-Anleitung finden Sie auf unserer Wechsel-Seite.",
+    answerHtml: 'Der Umzug dauert in der Regel etwa 15 Minuten: Account erstellen, Kandidaten und Jobs per CSV oder API importieren, Team einladen und loslegen. Eine Schritt-für-Schritt-Anleitung finden Sie auf unserer <a href="/wechsel/" class="text-primary hover:underline">Wechsel-Seite</a>.',
+  },
+];
 ---
 
 <VergleichLayout
   title="ShortSelect vs. Recruitee (Teamtailor) - ATS Vergleich 2026"
-  description="Recruitee (jetzt Teamtailor) vs. ShortSelect: Welches ATS passt zu Ihnen? Vergleich von Features, KI-Matching, Preisen und Multi-Tenancy."
+  description="Recruitee passt zu kleinen Teams ohne KI-Bedarf. ShortSelect: KI-Matching, Multi-Tenancy und Client Portal ab 149 € pro User. Ehrlicher Vergleich."
   competitorName="Recruitee"
   heroSubline="Recruitee (jetzt Teamtailor) ist beliebt bei KMUs. Wir vergleichen Features, Preise und Usability."
   heroBadge="Vergleich"
@@ -48,4 +72,5 @@ const comparisonData = [
       "30-Tage-Test ohne Mindestlaufzeit",
     ]
   }}
+  faqs={faqs}
 />

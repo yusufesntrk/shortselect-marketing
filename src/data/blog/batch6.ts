@@ -23,7 +23,7 @@ export const batch6: BlogPost[] = [
 
 <h3>1. CV-Parsing und Datenextraktion</h3>
 
-<p>Die automatische Extraktion von Lebensläufen ist einer der ausgereiftesten KI-Anwendungsfälle im Recruiting. Moderne Parser erkennen nicht nur Name, Adresse und Berufserfahrung, sondern verstehen auch unstrukturierte Freitexte, verschiedene Dateiformate und sogar handschriftliche Notizen in eingescannten Dokumenten.</p>
+<p>Die <a href="/produkt/ki-features/">automatische Extraktion von Lebensläufen</a> ist einer der ausgereiftesten KI-Anwendungsfälle im Recruiting. Moderne Parser erkennen nicht nur Name, Adresse und Berufserfahrung, sondern verstehen auch unstrukturierte Freitexte, verschiedene Dateiformate und sogar handschriftliche Notizen in eingescannten Dokumenten.</p>
 
 <p><strong>Praxisbeispiel:</strong> Ein mittelständischer Personaldienstleister reduzierte die manuelle Dateneingabe pro Bewerbung von durchschnittlich 12 Minuten auf unter 2 Minuten, bei gleichzeitig höherer Datenqualität.</p>
 
@@ -76,7 +76,7 @@ export const batch6: BlogPost[] = [
 
 <h2>DSGVO und KI: Was Sie beachten müssen</h2>
 
-<p>Im DACH-Raum gelten strenge Datenschutzregeln, die bei KI-Anwendungen im Recruiting besondere Beachtung verdienen. Die wichtigsten Punkte im Überblick:</p>
+<p>Im DACH-Raum gelten <a href="/produkt/compliance/">strenge Datenschutzregeln</a>, die bei KI-Anwendungen im Recruiting besondere Beachtung verdienen. Die wichtigsten Punkte im Überblick:</p>
 
 <h3>Art. 22 DSGVO: Automatisierte Einzelentscheidungen</h3>
 
@@ -104,7 +104,7 @@ export const batch6: BlogPost[] = [
 
 <ol>
   <li><strong>Time-to-Hire:</strong> Wie viele Tage reduziert sich die Zeit von der Stellenausschreibung bis zur Einstellung?</li>
-  <li><strong>Cost-per-Hire:</strong> Sinken die Kosten pro Einstellung durch Automatisierung?</li>
+  <li><strong>Cost-per-Hire:</strong> Sinken die Kosten pro Einstellung durch <a href="/produkt/automatisierung/">Automatisierung</a>?</li>
   <li><strong>Recruiter-Kapazität:</strong> Wie viele zusätzliche Stellen kann ein Recruiter parallel bearbeiten?</li>
   <li><strong>Quality-of-Hire:</strong> Verbessert sich die Qualität der eingestellten Kandidaten?</li>
   <li><strong>Candidate Experience:</strong> Steigt die Zufriedenheit der Bewerber (messbar durch Feedback-Umfragen)?</li>
@@ -131,7 +131,7 @@ export const batch6: BlogPost[] = [
 <p>Starten Sie mit einem einzigen, klar definierten Use Case. CV-Parsing ist oft der beste Einstieg, weil es den geringsten organisatorischen Widerstand hat und schnelle Ergebnisse liefert.</p>
 
 <h3>Schritt 3: Tool evaluieren (Woche 4–6)</h3>
-<p>Prüfen Sie Anbieter nach diesen Kriterien: DSGVO-Konformität, Server-Standort in der EU, Integration in Ihr bestehendes ATS, Transparenz des Algorithmus und Support-Qualität. Lassen Sie sich Live-Demos zeigen und testen Sie mit echten Daten.</p>
+<p>Prüfen Sie Anbieter nach diesen Kriterien: DSGVO-Konformität, Server-Standort in der EU, Integration in Ihr <a href="/produkt/ats-crm/">bestehendes ATS</a>, Transparenz des Algorithmus und Support-Qualität. Lassen Sie sich Live-Demos zeigen und testen Sie mit echten Daten.</p>
 
 <h3>Schritt 4: Pilotprojekt starten (Woche 7–12)</h3>
 <p>Führen Sie das Tool zunächst in einem begrenzten Bereich ein, z. B, für eine Abteilung oder eine bestimmte Stellenkategorie. Sammeln Sie Feedback vom Team und messen Sie die Ergebnisse gegen Ihre definierten KPIs.</p>
@@ -205,7 +205,7 @@ export const batch6: BlogPost[] = [
 
 <h2>Die Karriereseite: Herzstück Ihres Employer Brandings</h2>
 
-<p>82 % der Bewerber besuchen vor einer Bewerbung die Karriereseite des Unternehmens. Wenn Sie dort nicht überzeugen, verlieren Sie Kandidaten, bevor Sie überhaupt von ihnen erfahren.</p>
+<p>82 % der Bewerber besuchen vor einer Bewerbung die <a href="/produkt/karriereseite/">Karriereseite</a> des Unternehmens. Wenn Sie dort nicht überzeugen, verlieren Sie Kandidaten, bevor Sie überhaupt von ihnen erfahren.</p>
 
 <h3>Was eine gute KMU-Karriereseite braucht</h3>
 
@@ -213,7 +213,7 @@ export const batch6: BlogPost[] = [
   <li><strong>Echte Fotos:</strong> Keine Stockfotos von lachenden Business-Menschen. Zeigen Sie Ihr Team, Ihr Büro, Ihren Alltag. Ein Smartphone-Foto aus der Mittagspause ist authentischer als ein professionelles Shooting mit Models.</li>
   <li><strong>Mitarbeiter-Zitate:</strong> Lassen Sie Ihre Mitarbeiter in eigenen Worten erzählen, warum sie gerne bei Ihnen arbeiten. Keine PR-Texte, echte Stimmen.</li>
   <li><strong>Klare Informationen:</strong> Benefits, Arbeitszeiten, Remote-Optionen, Entwicklungsmöglichkeiten. Bewerber wollen Fakten, keine Floskeln.</li>
-  <li><strong>Einfacher Bewerbungsprozess:</strong> Maximal drei Klicks bis zur Bewerbung. Kein Login-Zwang, keine 20-Felder-Formulare. Lebenslauf hochladen und fertig.</li>
+  <li><strong>Einfacher Bewerbungsprozess:</strong> Maximal <a href="/produkt/ats-crm/">drei Klicks bis zur Bewerbung</a>. Kein Login-Zwang, keine 20-Felder-Formulare. Lebenslauf hochladen und fertig.</li>
   <li><strong>Mobile-Optimierung:</strong> Über 60 % der Jobsuchen finden mobil statt. Wenn Ihre Karriereseite auf dem Smartphone nicht funktioniert, haben Sie ein Problem.</li>
 </ul>
 

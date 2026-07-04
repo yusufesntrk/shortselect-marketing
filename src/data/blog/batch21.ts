@@ -83,7 +83,7 @@ export const batch21: BlogPost[] = [
 
 <h3>Enthaltene Kernfunktionen</h3>
 
-<p>Matching, Pipeline, Kundenportal, Datenexport und grundlegende Integrationen sollten nicht erst durch mehrere Add-ons nutzbar werden. Sonst vergleichen Sie keinen Produktpreis, sondern nur einen Einstiegspreis.</p>
+<p>Matching, Pipeline, <a href="/produkt/client-portal/">Kundenportal</a>, Datenexport und grundlegende Integrationen sollten nicht erst durch mehrere Add-ons nutzbar werden. Sonst vergleichen Sie keinen Produktpreis, sondern nur einen Einstiegspreis.</p>
 
 <h3>Vorhersehbares Wachstum</h3>
 
@@ -96,7 +96,7 @@ export const batch21: BlogPost[] = [
 <ol>
   <li><strong>Was kostet ein Readonly- oder Portalzugang?</strong> Wenn die Antwort „das gleiche wie ein voller Nutzer" ist, prüfen Sie den Gesamtpreis sehr genau.</li>
   <li><strong>Was passiert preislich, wenn wir von 10 auf 20 Nutzern wachsen?</strong> Verdoppelt sich der Preis? Gibt es Mengenrabatte? Ab welcher Größe wird es absurd?</li>
-  <li><strong>Was kostet der Datenexport?</strong> Wenn es keinen kostenlosen, vollständigen Export gibt, werden Sie bei einem Wechsel als Geisel gehalten.</li>
+  <li><strong>Was kostet der Datenexport?</strong> Wenn es keinen kostenlosen, vollständigen Export gibt, werden Sie <a href="/wechsel/">bei einem Wechsel</a> als Geisel gehalten.</li>
   <li><strong>Welche Integrationen sind im Preis enthalten?</strong> „Wir haben 50 Integrationen" ist wertlos, wenn jede einzelne ein kostenpflichtiges Add-on ist.</li>
   <li><strong>Gibt es eine Preisgarantie?</strong> Viele Anbieter erhöhen jährlich die Preise um 5 bis 15 Prozent. Nach drei Jahren zahlen Sie signifikant mehr als zum Start.</li>
   <li><strong>Wie sieht das Kündigungsrecht aus?</strong> Jährliche Vorauszahlung mit 12 Monaten Kündigungsfrist ist ein klares Warnsignal.</li>
@@ -109,11 +109,11 @@ export const batch21: BlogPost[] = [
 
 <h2>Fazit: Vergleichen Sie den echten Betriebspreis</h2>
 
-<p>Ein ATS-Preis ist nur dann fair, wenn Sie ihn vorher durchrechnen können. Als Personalvermittler sollten Sie ein Tool wählen, dessen Preismodell mit Ihren Interessen alignt ist, nicht gegen sie arbeitet.</p>
+<p>Ein <a href="/preise/">ATS-Preis</a> ist nur dann fair, wenn Sie ihn vorher durchrechnen können. Als Personalvermittler sollten Sie ein Tool wählen, dessen Preismodell mit Ihren Interessen alignt ist, nicht gegen sie arbeitet.</p>
 
 <p>Jeder Euro, den Sie unnötig in überteuerte Lizenzen stecken, fehlt Ihnen für Recruiter-Gehälter, Marketing oder Weiterbildung. In einer Branche mit ohnehin knappen Margen ist das keine Kleinigkeit, das ist ein strategischer Nachteil.</p>
 
-<p>Prüfen Sie Ihre aktuelle ATS-Rechnung. Rechnen Sie durch, was Sie in zwei Jahren zahlen werden, wenn Ihr Team wächst. Und dann fragen Sie sich: Gibt es nicht eine bessere Option?</p>
+<p>Prüfen Sie Ihre aktuelle ATS-Rechnung. Rechnen Sie durch, was Sie in zwei Jahren zahlen werden, wenn Ihr Team wächst. Und dann fragen Sie sich: Gibt es nicht <a href="/vergleich/">eine bessere Option</a>?</p>
 
 <p>Die Antwort ist fast immer: Ja.</p>
     `,
@@ -168,7 +168,7 @@ export const batch21: BlogPost[] = [
 
 <h2>Der Sales-Funnel für Personalvermittler</h2>
 
-<p>Ihr Recruiting-Funnel hat klar definierte Stufen: Sourcing → Screening → Interview → Vorstellung → Placement. Warum hat Ihr Vertrieb nicht dasselbe? Hier ist der Sales-Funnel, den jede Personalvermittlung braucht:</p>
+<p>Ihr Recruiting-Funnel hat klar definierte Stufen: Sourcing → Screening → Interview → Vorstellung → Placement. Warum hat Ihr Vertrieb nicht dasselbe? Hier ist der Sales-Funnel, den jede <a href="/fuer/personalvermittlung/">Personalvermittlung</a> braucht:</p>
 
 <h3>Stufe 1: Lead-Identifikation</h3>
 
@@ -198,7 +198,7 @@ export const batch21: BlogPost[] = [
 
 <p>Die meisten Personalvermittler nutzen ein ATS für Kandidaten und ein separates CRM für Kunden, oder noch schlimmer: gar kein CRM. Kundenkontakte liegen in Excel-Listen, E-Mail-Postfächern und Notizbüchern verstreut. Das ist wie Recruiting ohne ATS: theoretisch möglich, praktisch ein Desaster.</p>
 
-<p>Ein ATS mit integrierter CRM-Funktion löst dieses Problem. Alle Kontakte, Kandidaten und Kunden, in einem System. Jede Interaktion dokumentiert. Jeder Follow-up-Termin automatisch erinnert. Kein Lead fällt mehr durchs Raster.</p>
+<p>Ein <a href="/produkt/ats-crm/">ATS mit integrierter CRM-Funktion</a> löst dieses Problem. Alle Kontakte, Kandidaten und Kunden, in einem System. Jede Interaktion dokumentiert. Jeder Follow-up-Termin <a href="/produkt/automatisierung/">automatisch erinnert</a>. Kein Lead fällt mehr durchs Raster.</p>
 
 <p>Wenn Ihr aktuelles ATS keine CRM-Funktionalität bietet, nutzen Sie mindestens ein dediziertes Tool. Aber trennen Sie niemals Recruiting und Sales in zwei Datensilos ohne Verbindung. Die besten Agenturen sehen beides als einen zusammenhängenden Prozess, weil es einer ist.</p>
 
@@ -294,7 +294,7 @@ export const batch21: BlogPost[] = [
 <h3>Was echte KI im Recruiting kann</h3>
 
 <ul>
-  <li><strong>Semantic Matching:</strong> Statt Keyword-Abgleich versteht ein echtes KI-System die Bedeutung hinter Begriffen. "Projektmanager" und "Program Manager" werden als ähnlich erkannt, obwohl die Wörter unterschiedlich sind. Dafür braucht es eigene Embedding-Modelle, die auf Recruiting-Daten trainiert wurden.</li>
+  <li><strong><a href="/produkt/ki-features/">Semantic Matching</a>:</strong> Statt Keyword-Abgleich versteht ein echtes KI-System die Bedeutung hinter Begriffen. "Projektmanager" und "Program Manager" werden als ähnlich erkannt, obwohl die Wörter unterschiedlich sind. Dafür braucht es eigene Embedding-Modelle, die auf Recruiting-Daten trainiert wurden.</li>
   <li><strong>Predictive Hiring:</strong> Basierend auf historischen Einstellungs- und Performance-Daten vorhersagen, welche Kandidatenprofile die höchste Erfolgswahrscheinlichkeit haben. Das erfordert große, saubere Datensätze und echtes Machine Learning, nicht einen API-Call.</li>
   <li><strong>CV-Parsing mit NLP:</strong> Einen Lebenslauf lesen und die Informationen strukturiert extrahieren, inklusive impliziter Informationen wie Karrierelevel, Branchenerfahrung und Skill-Tiefe. Nicht nur Name und E-Mail-Adresse aus dem Header ziehen.</li>
   <li><strong>Bias-Erkennung:</strong> Statistische Analyse des Recruiting-Prozesses, um unbewusste Vorurteile zu identifizieren. Welche Kandidatengruppen werden überproportional häufig abgelehnt? An welcher Pipeline-Stufe? Dafür braucht es echte Datenanalyse, nicht einen Diversity-Disclaimer in der Stellenanzeige.</li>
@@ -351,7 +351,7 @@ export const batch21: BlogPost[] = [
   <li><strong>Welches KI-Modell nutzen Sie?</strong> Eigenes Modell oder API eines Drittanbieters (OpenAI, Anthropic, Google)?</li>
   <li><strong>Auf welchen Daten wurde Ihr Modell trainiert?</strong> Recruiting-spezifische Daten oder allgemeine Internetdaten?</li>
   <li><strong>Wo laufen meine Daten?</strong> Auf Ihren Servern? Bei OpenAI? Bei AWS? In der EU oder in den USA?</li>
-  <li><strong>Ist Ihre Lösung DSGVO-konform?</strong> Werden Kandidatendaten an Drittanbieter-APIs gesendet? Gibt es eine Auftragsverarbeitungsvereinbarung?</li>
+  <li><strong>Ist Ihre Lösung <a href="/produkt/compliance/">DSGVO-konform</a>?</strong> Werden Kandidatendaten an Drittanbieter-APIs gesendet? Gibt es eine Auftragsverarbeitungsvereinbarung?</li>
   <li><strong>Was passiert mit meinen Daten im Training?</strong> Werden meine Kandidatendaten genutzt, um Ihr Modell zu verbessern? Für wen? Auch für meine Wettbewerber?</li>
   <li><strong>Können Sie Ihre KI-Ergebnisse erklären?</strong> Warum wird Kandidat A höher gerankt als Kandidat B? Wenn die Antwort "Black Box" ist, ist das ein Problem.</li>
   <li><strong>Wie messen Sie die Qualität Ihrer KI?</strong> Welche Benchmarks nutzen Sie? Gegen welche Baselines vergleichen Sie? Haben Sie Studien oder Case Studies mit echten Zahlen?</li>
@@ -389,7 +389,7 @@ export const batch21: BlogPost[] = [
 
 <h2>Fazit: Nicht gegen KI sein, gegen Betrug</h2>
 
-<p>Dieser Artikel ist kein Plädoyer gegen KI im Recruiting. Im Gegenteil: Echte KI wird die Branche transformieren. Semantic Matching, Predictive Analytics und intelligente Automatisierung werden Recruiting schneller, fairer und effektiver machen.</p>
+<p>Dieser Artikel ist kein Plädoyer gegen KI im Recruiting. Im Gegenteil: Echte KI wird die Branche transformieren. Semantic Matching, Predictive Analytics und <a href="/produkt/automatisierung/">intelligente Automatisierung</a> werden Recruiting schneller, fairer und effektiver machen.</p>
 
 <p>Aber dafür müssen Sie zwischen echten Innovationen und aufgehübschten ChatGPT-Prompts unterscheiden können. Die KI-Hype-Blase hat eine Flut von Anbietern hervorgebracht, deren einzige Innovation ein System-Prompt und ein Stripe-Zahlungsformular ist. Diese Anbieter schaden nicht nur Ihrem Budget, sie schaden dem Vertrauen in echte KI-Lösungen.</p>
 

@@ -14,11 +14,35 @@ const comparisonData = [
   { feature: "Integrationen", ssStatus: "warn" as const, ssLabel: "API + wachsend", compStatus: "check" as const, compLabel: "300+ Marketplace" },
   { feature: "Multi-Tenancy", ssStatus: "check" as const, ssLabel: "Vollständig", compStatus: "check" as const, compLabel: "Vollständig" },
 ];
+
+const faqs = [
+  {
+    question: "Was ist der Unterschied zwischen ShortSelect und Bullhorn?",
+    answer: "Bullhorn ist eine Enterprise-Staffing-Suite mit über 300 Marketplace-Integrationen, deren Einführung Wochen bis Monate dauert. ShortSelect ist ein DSGVO-konformes, EU-natives ATS mit KI-Engine AgentBurst, das in Minuten einsatzbereit ist und sich an Recruiting-Agenturen von KMU bis Enterprise richtet.",
+  },
+  {
+    question: "Für wen ist Bullhorn besser geeignet?",
+    answer: "Bullhorn passt besser für große Staffing-Unternehmen mit 100 und mehr Recruitern weltweit, komplexen Compliance-Anforderungen, Bedarf an hunderten fertigen Integrationen und einem dedizierten IT-Team für Setup und Wartung.",
+  },
+  {
+    question: "Was kostet ShortSelect im Vergleich zu Bullhorn?",
+    answer: "ShortSelect kostet im Pioneer Plan 149 € pro User/Monat für die ersten 100 Agenturen, danach 300 € pro User/Monat, inklusive 30 Tage kostenlosem Test ohne Kreditkarte. Bullhorn startet ab etwa 99 US-Dollar pro User/Monat, die Gesamtkosten hängen aber stark von Modulen und Setup ab.",
+  },
+  {
+    question: "Ist ShortSelect DSGVO-konformer als Bullhorn?",
+    answer: "ShortSelect ist EU-nativ mit EU-Hosting und DSGVO-Konformität ab Werk. Bullhorn ist ein US-Anbieter, bei dem DSGVO-Konformität über ein EU-Addon gelöst wird. Für Teams mit strengen Datenschutz-Anforderungen im DACH-Raum ist ShortSelect der direktere Weg.",
+  },
+  {
+    question: "Wie wechsle ich von Bullhorn zu ShortSelect?",
+    answer: "Der Umzug dauert in der Regel etwa 15 Minuten: Account erstellen, Kandidaten und Jobs per CSV oder API importieren, Team einladen und loslegen. Eine Schritt-für-Schritt-Anleitung finden Sie auf unserer Wechsel-Seite.",
+    answerHtml: 'Der Umzug dauert in der Regel etwa 15 Minuten: Account erstellen, Kandidaten und Jobs per CSV oder API importieren, Team einladen und loslegen. Eine Schritt-für-Schritt-Anleitung finden Sie auf unserer <a href="/wechsel/" class="text-primary hover:underline">Wechsel-Seite</a>.',
+  },
+];
 ---
 
 <VergleichLayout
   title="ShortSelect vs. Bullhorn - ATS Vergleich 2026"
-  description="Enterprise-Gigant oder agile Innovation? Bullhorn ist der weltgrößte ATS-Anbieter für Personaldienstleister. Vergleich mit ShortSelect."
+  description="Bullhorn ist Enterprise-Staffing mit langem Setup. ShortSelect: DSGVO EU-nativ, KI-Agenten, ab 149 € pro User, startklar in Minuten. Fairer Vergleich."
   competitorName="Bullhorn"
   heroSubline="Enterprise-Gigant oder agile Innovation? Bullhorn ist der weltgrößte ATS-Anbieter für Personaldienstleister. Aber ist größer immer besser?"
   heroBadge="Vergleich"
@@ -49,4 +73,5 @@ const comparisonData = [
       "DSGVO-konform ohne zusätzliche Add-ons",
     ]
   }}
+  faqs={faqs}
 />

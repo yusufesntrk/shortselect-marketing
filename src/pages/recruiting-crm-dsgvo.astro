@@ -1,0 +1,196 @@
+---
+import MarketingLayout from '../layouts/MarketingLayout.astro';
+import CTASection from '../components/landing/CTASection.astro';
+
+const requirements = [
+  {
+    title: "1. Rechtsgrundlage und Einwilligung",
+    legal: "Im Bewerbungsverfahren stützt sich die Verarbeitung in der Regel auf Art. 6 Abs. 1 lit. b DSGVO (vorvertragliche Maßnahmen) und § 26 BDSG (Beschäftigtendatenschutz). Für alles darüber hinaus, etwa die Aufnahme in einen Talent Pool, braucht es eine Einwilligung nach Art. 7 DSGVO: freiwillig, dokumentiert und jederzeit widerrufbar.",
+    product: "ShortSelect dokumentiert die Rechtsgrundlage pro Kandidat und bringt Einwilligungsmanagement mit Opt-in und Opt-out mit. Für den Talent Pool können Kandidaten per Link der weiteren Speicherung zustimmen (Retention Consent).",
+  },
+  {
+    title: "2. Löschfristen und Datenminimierung",
+    legal: "Bewerberdaten dürfen nicht unbegrenzt gespeichert werden. In der Praxis üblich sind bis zu sechs Monate nach Ende des Bewerbungsverfahrens, weil sich Bewerber in dieser Zeit noch auf Ansprüche nach dem AGG berufen können. Danach müssen die Daten gelöscht werden, außer es liegt eine Einwilligung zur längeren Speicherung vor.",
+    product: "In ShortSelect konfigurieren Sie Aufbewahrungsfristen pro Mandant. Nach Ablauf werden Kandidatendaten automatisch gelöscht, ohne manuelle Erinnerungslisten.",
+  },
+  {
+    title: "3. Auftragsverarbeitungsvertrag (AVV)",
+    legal: "Sobald ein Software-Anbieter Bewerberdaten für Sie verarbeitet, ist er Auftragsverarbeiter. Art. 28 DSGVO verlangt dafür einen Auftragsverarbeitungsvertrag, der Gegenstand, Dauer, Art der Daten und die technischen und organisatorischen Maßnahmen regelt.",
+    product: "ShortSelect stellt einen AV-Vertrag bereit. Damit ist das Verhältnis zwischen Ihrer Agentur als Verantwortlichem und ShortSelect als Auftragsverarbeiter sauber geregelt.",
+  },
+  {
+    title: "4. EU-Hosting und Datensicherheit",
+    legal: "Art. 32 DSGVO fordert technische und organisatorische Maßnahmen: Verschlüsselung, Zugriffskontrolle, Protokollierung. Ein Server-Standort in der EU vermeidet zusätzlich die rechtlich heiklen Drittlandübermittlungen, etwa in die USA.",
+    product: "Alle ShortSelect-Daten liegen auf EU-Servern in Frankfurt. Verschlüsselung mit AES-256 at rest und TLS 1.3 in transit, Mandantentrennung per Row Level Security auf Datenbankebene und ein lückenloser Audit-Trail sind Standard.",
+  },
+  {
+    title: "5. Betroffenenrechte: Auskunft und Löschung",
+    legal: "Bewerber und Kandidaten haben ein Auskunftsrecht (Art. 15 DSGVO) und ein Recht auf Löschung (Art. 17 DSGVO). Ihr Recruiting-CRM muss beides praktisch umsetzbar machen, sonst wird jede Anfrage zur Handarbeit.",
+    product: "ShortSelect exportiert alle Daten eines Kandidaten auf Knopfdruck als CSV oder JSON und löscht Datensätze vollständig, wenn ein Kandidat es verlangt.",
+  },
+];
+
+const faqs = [
+  { question: "Was muss ein Recruiting-CRM für die DSGVO erfüllen?", answer: "Fünf Kern-Anforderungen: eine dokumentierte Rechtsgrundlage beziehungsweise Einwilligung pro Kandidat, automatische Löschfristen, einen Auftragsverarbeitungsvertrag (AVV) mit dem Anbieter, sichere Verarbeitung idealerweise mit EU-Hosting sowie die praktische Umsetzung der Betroffenenrechte wie Auskunft und Löschung." },
+  { question: "Wie lange darf ich Bewerberdaten speichern?", answer: "Für das laufende Bewerbungsverfahren so lange wie nötig. Nach einer Absage sind in der Praxis bis zu sechs Monate üblich, weil Bewerber in dieser Zeit noch Ansprüche nach dem AGG geltend machen können. Eine längere Speicherung, etwa im Talent Pool, braucht eine ausdrückliche Einwilligung des Kandidaten." },
+  { question: "Brauche ich für mein Recruiting-CRM einen AVV?", answer: "Ja. Der Software-Anbieter verarbeitet Bewerberdaten in Ihrem Auftrag und ist damit Auftragsverarbeiter nach Art. 28 DSGVO. Ohne Auftragsverarbeitungsvertrag ist der Einsatz nicht DSGVO-konform. ShortSelect stellt einen AV-Vertrag bereit." },
+  { question: "Darf ich Kandidaten in einen Talent Pool übernehmen?", answer: "Ja, aber nur mit Einwilligung. Der Kandidat muss der Speicherung über das Bewerbungsverfahren hinaus aktiv zustimmen und die Einwilligung jederzeit widerrufen können. ShortSelect bildet das mit einem Zustimmungs-Link ab, den Kandidaten selbst bestätigen." },
+  { question: "Muss mein Recruiting-CRM in der EU gehostet sein?", answer: "Die DSGVO schreibt keinen EU-Server vor, verlangt aber bei Übermittlungen in Drittländer zusätzliche Garantien. EU-Hosting ist der einfachste und sicherste Weg, dieses Risiko zu vermeiden. ShortSelect hostet alle Daten in Frankfurt." },
+  { question: "Ist KI im Recruiting-CRM ein DSGVO-Problem?", answer: "Nicht, wenn sie richtig eingesetzt wird: Die KI liefert eine nachvollziehbare Empfehlung, die Entscheidung trifft ein Mensch. Bei ShortSelect arbeitet die KI auf EU-Servern, trainiert nicht auf Kundendaten und jede Bewertung ist pro Kriterium nachvollziehbar." },
+];
+
+const webPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  name: "Recruiting CRM DSGVO: 5 Anforderungen",
+  description: "Recruiting CRM und DSGVO: Einwilligung, Löschfristen, AVV, EU-Hosting, Auskunftsrecht. Wie ShortSelect alle Anforderungen abdeckt, ab 149 Euro pro User.",
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.shortselect.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Recruiting CRM DSGVO" }
+  ]
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((f) => ({
+    "@type": "Question",
+    name: f.question,
+    acceptedAnswer: { "@type": "Answer", text: f.answer }
+  }))
+};
+---
+
+<MarketingLayout
+  title="Recruiting CRM DSGVO: 5 Anforderungen | ShortSelect"
+  description="Recruiting CRM und DSGVO: Einwilligung, Löschfristen, AVV, EU-Hosting, Auskunftsrecht. Wie ShortSelect alle Anforderungen abdeckt, ab 149 Euro pro User."
+  jsonLd={[webPageSchema, breadcrumbSchema, faqSchema]}
+>
+  <!-- Hero -->
+  <section class="relative overflow-hidden py-20 md:py-32">
+    <div class="absolute inset-0 bg-gradient-to-br from-primary/10 via-accent/5 to-background"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,hsl(var(--primary)/0.15),transparent_50%)]"></div>
+    <div class="absolute top-20 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-float-slow"></div>
+    <div class="absolute bottom-20 right-10 w-96 h-96 bg-accent/10 rounded-full blur-3xl animate-float-slow" style="animation-delay: -3s;"></div>
+    <div class="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.03)_1px,transparent_1px)] bg-[size:60px_60px] [mask-image:radial-gradient(ellipse_at_center,black_30%,transparent_70%)]"></div>
+
+    <div class="container relative mx-auto px-4">
+      <div class="mx-auto max-w-4xl text-center space-y-8">
+        <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700 hero-badge-premium">
+          <svg class="h-4 w-4 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>
+          Datenschutz
+        </div>
+
+        <h1 class="reveal-item opacity-0 translate-y-8 transition-all duration-700 text-4xl md:text-6xl font-display font-bold tracking-tight" style="transition-delay: 100ms;">
+          Recruiting-CRM und{" "}
+          <span class="relative inline-block text-primary">DSGVO</span>
+        </h1>
+
+        <p class="reveal-item opacity-0 translate-y-8 transition-all duration-700 text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto" style="transition-delay: 200ms;">
+          Ein DSGVO-konformes Recruiting-CRM muss fünf Kern-Anforderungen erfüllen: dokumentierte Einwilligung, automatische Löschfristen, einen Auftragsverarbeitungsvertrag (AVV), sichere Verarbeitung mit EU-Hosting und die Umsetzung von Betroffenenrechten wie dem Auskunftsrecht. Diese Seite erklärt jede Anforderung und zeigt, wie ShortSelect sie abdeckt.
+        </p>
+
+        <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700 flex flex-col sm:flex-row items-center justify-center gap-4 pt-4" style="transition-delay: 300ms;">
+          <a href="https://app.shortselect.com/signup" class="inline-flex items-center gap-2 px-8 py-3 bg-primary text-primary-foreground font-semibold rounded-lg text-base group relative overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+            <span class="relative z-10 flex items-center gap-2">
+              Jetzt kostenlos testen
+              <svg class="h-5 w-5 transition-transform group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </span>
+          </a>
+          <a href="/produkt/compliance/" class="inline-flex items-center gap-2 px-8 py-3 border-2 border-border font-semibold rounded-lg text-base transition-all hover:bg-muted">
+            Compliance-Features ansehen
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5 Anforderungen -->
+  <section class="py-16 md:py-24 bg-muted/30">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700 text-center mb-12">
+          <span class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold bg-secondary text-secondary-foreground mb-4">Anforderungen</span>
+          <h2 class="text-3xl md:text-4xl font-display font-bold tracking-tight mb-4">Die 5 DSGVO-Anforderungen an ein Recruiting-CRM</h2>
+          <p class="text-muted-foreground text-lg">Was rechtlich gefordert ist und wie ShortSelect es umsetzt.</p>
+        </div>
+
+        <div class="space-y-6">
+          {requirements.map((req, index) => (
+            <div class="reveal-item opacity-0 translate-y-8 transition-all duration-500 rounded-xl border bg-card p-6 md:p-8" style={`transition-delay: ${Math.min((index + 1) * 100, 400)}ms;`}>
+              <h3 class="text-xl md:text-2xl font-display font-bold mb-4">{req.title}</h3>
+              <p class="text-muted-foreground leading-relaxed mb-4">{req.legal}</p>
+              <div class="flex items-start gap-3 rounded-lg bg-green-500/5 border border-green-500/10 p-4">
+                <svg class="h-5 w-5 text-green-600 shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
+                <p class="text-sm leading-relaxed"><span class="font-semibold">So löst es ShortSelect:</span> {req.product}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <p class="reveal-item opacity-0 translate-y-8 transition-all duration-700 text-sm text-muted-foreground mt-8 text-center max-w-2xl mx-auto">
+          Hinweis: Diese Seite ist keine Rechtsberatung. Für die Bewertung Ihres konkreten Setups sprechen Sie mit Ihrem Datenschutzbeauftragten.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kandidaten überzeugen -->
+  <section class="py-16 md:py-24">
+    <div class="container mx-auto px-4">
+      <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700 max-w-3xl mx-auto text-center space-y-6">
+        <h2 class="text-3xl md:text-4xl font-display font-bold tracking-tight">DSGVO ist kein Bremsklotz, sondern ein Verkaufsargument</h2>
+        <p class="text-lg text-muted-foreground">
+          Recruiting-Agenturen arbeiten im Auftrag ihrer Kunden mit hochsensiblen Daten. Wer im Pitch belegen kann, dass Kandidatendaten auf EU-Servern liegen, automatisch gelöscht werden und jede Verarbeitung protokolliert ist, gewinnt Vertrauen. Alle technischen Details finden Sie unter <a href="/produkt/compliance/" class="text-primary hover:underline">DSGVO und Compliance</a>. Und wenn Sie wissen wollen, wie DSGVO-konforme KI-Bewertung funktioniert, lesen Sie <a href="/ats-mit-ki-matching/" class="text-primary hover:underline">ATS mit KI-Matching</a>.
+        </p>
+        <p class="text-lg text-muted-foreground">
+          ShortSelect kostet 149 € pro User und Monat, alle Compliance-Funktionen inklusive. Details unter <a href="/preise/" class="text-primary hover:underline">Preise</a>.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16 md:py-24 bg-muted/30">
+    <div class="container mx-auto px-4">
+      <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700 text-center max-w-3xl mx-auto mb-12">
+        <h2 class="text-3xl md:text-4xl font-display font-bold tracking-tight">Häufige Fragen zu Recruiting-CRM und DSGVO</h2>
+      </div>
+      <div class="max-w-3xl mx-auto space-y-0 rounded-xl border bg-card overflow-hidden">
+        {faqs.map((item) => (
+          <details class="reveal-item opacity-0 translate-y-8 transition-all duration-700 border-b last:border-0 group">
+            <summary class="flex items-center justify-between w-full py-5 px-6 text-left cursor-pointer font-display font-bold text-lg list-none [&::-webkit-details-marker]:hidden">
+              {item.question}
+              <svg class="h-5 w-5 text-muted-foreground shrink-0 ml-4 transition-transform duration-300 group-open:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+            </summary>
+            <div class="px-6 pb-5 text-muted-foreground leading-relaxed">{item.answer}</div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <CTASection />
+</MarketingLayout>
+
+<script is:inline>
+(function() {
+  var items = document.querySelectorAll('.reveal-item');
+  if (!items.length) return;
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  items.forEach(function(item) { observer.observe(item); });
+})();
+</script>

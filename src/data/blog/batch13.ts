@@ -122,7 +122,7 @@ export const batch13: BlogPost[] = [
   <li><strong>Keine Standardrundführung:</strong> Die 45-minütige Tour durch alle Abteilungen, bei der der Kandidat 30 Hände schüttelt und keinen Namen behält, ist Zeitverschwendung. Konzentrieren Sie sich auf die relevanten Bereiche.</li>
   <li><strong>Nicht überfordern:</strong> Der Probearbeitstag ist kein Assessment Center. Stapeln Sie nicht fünf Aufgaben, drei Interviews und eine Präsentation in acht Stunden. Weniger ist mehr.</li>
   <li><strong>Das Hannelore-Prinzip vermeiden:</strong> Stellen Sie dem Kandidaten nicht ausgerechnet den schwierigsten, unzufriedensten oder schroffsten Kollegen vor. Jedes Team hat diese eine Person, die jeden Neuen vergrault. Planen Sie bewusst, welche Teammitglieder der Kandidat kennenlernt, und welche vielleicht besser nicht am ersten Tag.</li>
-  <li><strong>Kein Feedback-Vakuum:</strong> Der Kandidat verlässt das Büro und hört tagelang nichts. Das ist der schnellste Weg, ihn an die Konkurrenz zu verlieren. Feedback innerhalb von 24 Stunden ist Pflicht.</li>
+  <li><strong>Kein Feedback-Vakuum:</strong> Der Kandidat verlässt das Büro und hört tagelang nichts. Das ist der schnellste Weg, ihn an die Konkurrenz zu verlieren. <a href="/produkt/automatisierung/">Feedback innerhalb von 24 Stunden</a> ist Pflicht.</li>
 </ol>
 
 <h2>Was nach dem Probearbeitstag passiert</h2>
@@ -136,7 +136,7 @@ export const batch13: BlogPost[] = [
 <p>Sammeln Sie das Feedback aller beteiligten Teammitglieder strukturiert ein. Eine einfache Scorecard mit fünf bis sieben Kriterien reicht aus: Fachliche Kompetenz, Kommunikation, Teamfähigkeit, Problemlösungsansatz, kultureller Fit, Motivation, Gesamteindruck. Bewerten Sie auf einer Skala von 1 bis 5 und ergänzen Sie kurze Notizen.</p>
 
 <blockquote>
-  <strong>Tipp:</strong> Nutzen Sie ein ATS wie ShortSelect, um Scorecard-Bewertungen direkt im Kandidatenprofil zu hinterlegen. So haben Sie alle Informationen an einem Ort und können Kandidaten objektiv vergleichen.
+  <strong>Tipp:</strong> Nutzen Sie ein <a href="/produkt/ats-crm/">ATS wie ShortSelect</a>, um Scorecard-Bewertungen direkt im Kandidatenprofil zu hinterlegen. So haben Sie alle Informationen an einem Ort und können Kandidaten objektiv vergleichen.
 </blockquote>
 
 <h3>Team-Debrief</h3>
@@ -236,10 +236,10 @@ export const batch13: BlogPost[] = [
 
 <h3>1. Schnelle Erstreaktion, unter 24 Stunden</h3>
 
-<p>Die erste Reaktion auf eine Bewerbung muss innerhalb von 24 Stunden erfolgen, nicht innerhalb von 24 Werktagen. Und damit ist nicht die automatische Eingangsbestätigung gemeint. Der Kandidat sollte innerhalb eines Arbeitstages wissen, ob seine Bewerbung in die engere Auswahl kommt oder nicht. Nutzen Sie ein ATS, das Bewerbungen automatisch sortiert und die Erstbewertung beschleunigt.</p>
+<p>Die erste Reaktion auf eine Bewerbung muss innerhalb von 24 Stunden erfolgen, nicht innerhalb von 24 Werktagen. Und damit ist nicht die automatische Eingangsbestätigung gemeint. Der Kandidat sollte innerhalb eines Arbeitstages wissen, ob seine Bewerbung in die engere Auswahl kommt oder nicht. Nutzen Sie ein ATS, das <a href="/produkt/ki-features/">Bewerbungen automatisch sortiert</a> und die Erstbewertung beschleunigt.</p>
 
 <blockquote>
-  <strong>Best Practice:</strong> Richten Sie in Ihrem ATS eine automatische Benachrichtigung ein, wenn eine Bewerbung länger als 24 Stunden unbearbeitet bleibt. So stellen Sie sicher, dass kein Kandidat durchs Raster fällt.
+  <strong>Best Practice:</strong> Richten Sie in Ihrem ATS eine <a href="/produkt/automatisierung/">automatische Benachrichtigung</a> ein, wenn eine Bewerbung länger als 24 Stunden unbearbeitet bleibt. So stellen Sie sicher, dass kein Kandidat durchs Raster fällt.
 </blockquote>
 
 <h3>2. Persönlicher Kontakt statt Massen-E-Mail</h3>
@@ -268,7 +268,7 @@ export const batch13: BlogPost[] = [
 
 <h3>8. Daten analysieren, wann und wo tritt Ghosting auf?</h3>
 
-<p>Tracken Sie systematisch, in welcher Phase Kandidaten verschwinden. Nutzen Sie Ihr ATS, um Ghosting-Raten pro Phase, pro Stelle und pro Recruiter zu messen. Wenn 40 Prozent der Kandidaten nach dem Erstinterview verschwinden, liegt das Problem dort, nicht an der Stellenanzeige. Wenn bestimmte Recruiter höhere Ghosting-Raten haben, lohnt sich ein Blick auf deren Kommunikationsstil.</p>
+<p>Tracken Sie systematisch, in welcher Phase Kandidaten verschwinden. Nutzen Sie <a href="/produkt/ats-crm/">Ihr ATS</a>, um Ghosting-Raten pro Phase, pro Stelle und pro Recruiter zu messen. Wenn 40 Prozent der Kandidaten nach dem Erstinterview verschwinden, liegt das Problem dort, nicht an der Stellenanzeige. Wenn bestimmte Recruiter höhere Ghosting-Raten haben, lohnt sich ein Blick auf deren Kommunikationsstil.</p>
 
 <blockquote>
   <strong>Tipp:</strong> In ShortSelect können Sie die Pipeline-Analyse nutzen, um Drop-off-Raten pro Phase zu visualisieren. So sehen Sie auf einen Blick, wo Kandidaten verloren gehen, und können gezielt gegensteuern.

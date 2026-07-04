@@ -125,19 +125,19 @@ export const batch17: BlogPost[] = [
 
 <h2>CRM und ATS als Lead-Management-Tool</h2>
 
-<p>Ohne ein System zur Verwaltung Ihrer Leads verlieren Sie den Überblick. Ein CRM oder ein ATS mit integrierten Vertriebsfunktionen ist unverzichtbar, sobald Sie mehr als 20 aktive Leads gleichzeitig bearbeiten.</p>
+<p>Ohne ein System zur Verwaltung Ihrer Leads verlieren Sie den Überblick. Ein <a href="/produkt/ats-crm/">CRM oder ein ATS mit integrierten Vertriebsfunktionen</a> ist unverzichtbar, sobald Sie mehr als 20 aktive Leads gleichzeitig bearbeiten.</p>
 
 <p>Was Ihr System können muss:</p>
 
 <ul>
   <li><strong>Lead-Tracking:</strong> Jeder Kontakt, jede E-Mail, jeder Anruf wird dokumentiert</li>
   <li><strong>Pipeline-Ansicht:</strong> Wo steht jeder Lead im Vertriebsprozess?</li>
-  <li><strong>Automatisierung:</strong> E-Mail-Sequenzen, Follow-up-Erinnerungen, Lead-Scoring</li>
+  <li><strong><a href="/produkt/automatisierung/">Automatisierung</a>:</strong> E-Mail-Sequenzen, Follow-up-Erinnerungen, Lead-Scoring</li>
   <li><strong>Reporting:</strong> Wie viele Leads generieren Sie? Wie hoch ist Ihre Conversion Rate?</li>
   <li><strong>Integration:</strong> Verknüpfung mit LinkedIn, E-Mail und Telefonie</li>
 </ul>
 
-<p>Moderne ATS-Systeme wie ShortSelect bieten diese Funktionen bereits integriert, Ihre Kandidatenpipeline und Ihre Kundenpipeline in einem einzigen System. Das spart nicht nur Kosten für separate Tools, sondern verhindert auch Datensilos zwischen Recruiting und Vertrieb.</p>
+<p>Moderne <a href="/fuer/personalvermittlung/">ATS-Systeme wie ShortSelect</a> bieten diese Funktionen bereits integriert, Ihre Kandidatenpipeline und Ihre Kundenpipeline in einem einzigen System. Das spart nicht nur Kosten für separate Tools, sondern verhindert auch Datensilos zwischen Recruiting und Vertrieb.</p>
 
 <h2>KPIs messen: Was funktioniert wirklich?</h2>
 
@@ -219,7 +219,7 @@ export const batch17: BlogPost[] = [
 <p>Multiposting und Programmatic Job Advertising werden häufig verwechselt, sind aber grundlegend verschieden:</p>
 
 <ul>
-  <li><strong>Multiposting:</strong> Eine Stellenanzeige wird gleichzeitig auf mehreren Jobbörsen veröffentlicht. Die Verteilung ist manuell oder halbautomatisch. Das Budget wird vorab pro Kanal festgelegt und ändert sich während der Laufzeit nicht. Sie bezahlen pro Anzeige oder pro Laufzeit, unabhängig davon, wie viele Bewerbungen eingehen.</li>
+  <li><strong><a href="/produkt/multiposting/">Multiposting</a>:</strong> Eine Stellenanzeige wird gleichzeitig auf mehreren Jobbörsen veröffentlicht. Die Verteilung ist manuell oder halbautomatisch. Das Budget wird vorab pro Kanal festgelegt und ändert sich während der Laufzeit nicht. Sie bezahlen pro Anzeige oder pro Laufzeit, unabhängig davon, wie viele Bewerbungen eingehen.</li>
   <li><strong>Programmatic:</strong> Die Stellenanzeige wird algorithmisch auf den Kanälen ausgespielt, die die besten Ergebnisse liefern. Das Budget wird dynamisch verteilt, performante Kanäle bekommen mehr, schwache weniger. Sie bezahlen pro Klick, pro Bewerbung oder pro qualifizierter Bewerbung.</li>
 </ul>
 
@@ -255,7 +255,7 @@ export const batch17: BlogPost[] = [
   <li><strong>Skill-basiertes Targeting:</strong> Kandidaten mit bestimmten Fähigkeiten oder Zertifizierungen</li>
   <li><strong>Regionales Targeting:</strong> Umkreissuche um den Arbeitsort, Pendlerbereitschaft</li>
   <li><strong>Verhaltens-Targeting:</strong> Kandidaten, die aktiv nach Jobs suchen vs. passive Kandidaten</li>
-  <li><strong>Retargeting:</strong> Kandidaten, die Ihre Karriereseite besucht, aber sich nicht beworben haben</li>
+  <li><strong>Retargeting:</strong> Kandidaten, die Ihre <a href="/produkt/karriereseite/">Karriereseite</a> besucht, aber sich nicht beworben haben</li>
 </ul>
 
 <h3>Echtzeit-Analytics</h3>
@@ -336,7 +336,7 @@ export const batch17: BlogPost[] = [
 
 <h2>Integration mit dem ATS</h2>
 
-<p>Programmatic Job Advertising entfaltet seinen vollen Nutzen erst in Kombination mit einem modernen Applicant Tracking System. Die Integration sorgt dafür, dass Daten nahtlos zwischen Anzeigenplattform und Bewerbermanagement fließen.</p>
+<p>Programmatic Job Advertising entfaltet seinen vollen Nutzen erst in Kombination mit einem <a href="/produkt/ats-crm/">modernen Applicant Tracking System</a>. Die Integration sorgt dafür, dass Daten nahtlos zwischen Anzeigenplattform und Bewerbermanagement fließen.</p>
 
 <h3>Automatische Datenrückmeldung</h3>
 

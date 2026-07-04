@@ -54,7 +54,7 @@ export const batch11: BlogPost[] = [
   <li>Ersetzen Sie "jung" durch "motiviert" oder "engagiert"</li>
   <li>Formulieren Sie Sprachanforderungen als Kompetenzniveau (B2, C1, C2)</li>
   <li>Prüfen Sie jede Anzeige mit einer Checkliste vor der Veröffentlichung</li>
-  <li>Nutzen Sie ein ATS mit integrierten Compliance-Prüfungen</li>
+  <li>Nutzen Sie ein ATS mit integrierten <a href="/produkt/compliance/">Compliance-Prüfungen</a></li>
 </ul>
 
 <h2>Fehler 2: Verbotene Fragen im Vorstellungsgespräch</h2>
@@ -103,7 +103,7 @@ export const batch11: BlogPost[] = [
 <h3>Wie Sie es richtig machen</h3>
 
 <ul>
-  <li>Senden Sie innerhalb von zwei Wochen eine Absage, automatisiert über Ihr ATS</li>
+  <li>Senden Sie innerhalb von zwei Wochen eine Absage, <a href="/produkt/automatisierung/">automatisiert über Ihr ATS</a></li>
   <li>Formulieren Sie Absagen neutral: "Wir haben uns für einen Kandidaten entschieden, dessen Profil noch besser zu den Anforderungen passt"</li>
   <li>Dokumentieren Sie die Absagegründe intern, sachlich und nachvollziehbar</li>
   <li>Nennen Sie niemals AGG-relevante Gründe in der Absage</li>
@@ -239,7 +239,7 @@ export const batch11: BlogPost[] = [
 
 <p>Arbeitsrechtliche Compliance im Recruiting wird oft als bürokratische Last empfunden. In Wahrheit ist sie ein Wettbewerbsvorteil. Unternehmen, die ihre Stellenanzeigen AGG-konform formulieren, strukturierte Interviews führen und transparente Prozesse haben, gewinnen nicht nur rechtliche Sicherheit, sie gewinnen bessere Kandidaten. Denn Professionalität im Bewerbungsprozess ist das erste Signal, das Sie als Arbeitgeber senden.</p>
 
-<p>Ein modernes ATS wie ShortSelect hilft Ihnen dabei, diese Compliance-Anforderungen systematisch umzusetzen: automatisierte Absagen, dokumentierte Prozesse, DSGVO-konforme Datenhaltung und standardisierte Bewertungskriterien. So schützen Sie sich vor rechtlichen Risiken und bieten gleichzeitig eine professionelle Candidate Experience.</p>
+<p>Ein <a href="/produkt/ats-crm/">modernes ATS</a> wie ShortSelect hilft Ihnen dabei, diese Compliance-Anforderungen systematisch umzusetzen: automatisierte Absagen, dokumentierte Prozesse, DSGVO-konforme Datenhaltung und standardisierte Bewertungskriterien. So schützen Sie sich vor rechtlichen Risiken und bieten gleichzeitig eine professionelle Candidate Experience.</p>
 `,
   },
   {
@@ -263,7 +263,7 @@ export const batch11: BlogPost[] = [
 
 <h3>Karriereseite vs. Jobbörsen: Warum nicht nur auf externe Plattformen setzen?</h3>
 
-<p>Jobbörsen wie Indeed, StepStone und LinkedIn sind wichtige Reichweitenkanäle. Aber sie haben entscheidende Nachteile:</p>
+<p><a href="/produkt/multiposting/">Jobbörsen</a> wie Indeed, StepStone und LinkedIn sind wichtige Reichweitenkanäle. Aber sie haben entscheidende Nachteile:</p>
 
 <ul>
   <li><strong>Keine Kontrolle über die Darstellung:</strong> Auf Jobbörsen sieht jede Stellenanzeige gleich aus. Ihr Employer Branding geht in der Masse unter.</li>
@@ -338,7 +338,7 @@ export const batch11: BlogPost[] = [
   <li><strong>baseSalary:</strong> Gehaltsangabe (optional, aber empfohlen)</li>
 </ul>
 
-<p>Ein ATS wie ShortSelect generiert diese strukturierten Daten automatisch für jede Stelle, die Sie veröffentlichen. So erscheinen Ihre Anzeigen ohne manuellen Aufwand bei Google for Jobs.</p>
+<p>Ein ATS wie ShortSelect <a href="/produkt/karriereseite/">generiert diese strukturierten Daten automatisch</a> für jede Stelle, die Sie veröffentlichen. So erscheinen Ihre Anzeigen ohne manuellen Aufwand bei Google for Jobs.</p>
 
 <h3>On-Page-SEO</h3>
 
@@ -385,7 +385,7 @@ export const batch11: BlogPost[] = [
 <ul>
   <li><strong>Vorteile:</strong> Automatische Synchronisation aller Stellen, integriertes Bewerbungsformular, SEO-optimiert, einfache Einbindung per JavaScript-Snippet, Design anpassbar an die Unternehmens-CI</li>
   <li><strong>Nachteile:</strong> Design-Anpassungen sind begrenzt (aber ausreichend für die meisten Unternehmen)</li>
-  <li><strong>Geeignet für:</strong> Kleine und mittlere Unternehmen, Personalvermittler</li>
+  <li><strong>Geeignet für:</strong> Kleine und mittlere Unternehmen, <a href="/fuer/personalvermittlung/">Personalvermittler</a></li>
 </ul>
 
 <h3>iFrame</h3>
@@ -465,7 +465,7 @@ export const batch11: BlogPost[] = [
 
 <p>Eine professionelle Karriereseite ist kein Nice-to-have, sondern ein strategisches Werkzeug im Recruiting. Sie gibt Ihnen die Kontrolle über Ihre Arbeitgebermarke, senkt die Abhängigkeit von teuren Jobbörsen und bietet Bewerbern ein Erlebnis, das Vertrauen schafft. Die Investition lohnt sich: Unternehmen mit optimierten Karriereseiten berichten von 40 Prozent mehr qualifizierten Bewerbungen und einer um 25 Prozent kürzeren Time-to-Hire.</p>
 
-<p>Beginnen Sie mit den Grundlagen, aktuelle Stellen, echte Fotos, mobiles Design, und optimieren Sie dann schrittweise: SEO, strukturierte Daten, Conversion-Optimierung. Mit einem ATS wie ShortSelect können Sie Ihre Karriereseite über ein einfaches Job-Widget einbinden und alle Bewerbungen zentral verwalten. So wird Ihre Website zum stärksten Recruiting-Kanal.</p>
+<p>Beginnen Sie mit den Grundlagen, aktuelle Stellen, echte Fotos, mobiles Design, und optimieren Sie dann schrittweise: SEO, strukturierte Daten, Conversion-Optimierung. Mit einem ATS wie ShortSelect können Sie Ihre Karriereseite über ein einfaches Job-Widget einbinden und <a href="/produkt/ats-crm/">alle Bewerbungen zentral verwalten</a>. So wird Ihre Website zum stärksten Recruiting-Kanal.</p>
 `,
   },
 ];

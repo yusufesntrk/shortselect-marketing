@@ -13,11 +13,35 @@ const comparisonData = [
   { feature: "CV Parsing", ssStatus: "check" as const, ssLabel: "AgentBurst Parse", compStatus: "warn" as const, compLabel: "Basis" },
   { feature: "Setup-Zeit", ssStatus: "check" as const, ssLabel: "Minuten", compStatus: "warn" as const, compLabel: "Wochen" },
 ];
+
+const faqs = [
+  {
+    question: "Was ist der Unterschied zwischen ShortSelect und Vincere?",
+    answer: "Vincere ist ein Recruiting-CRM mit breitem Feature-Set, das vor allem im UK- und ANZ-Markt etabliert ist und seit der Übernahme durch die Access Group mit Support-Problemen und versteckten Kosten kämpft. ShortSelect ist ein EU-natives, DSGVO-konformes ATS mit KI-Engine AgentBurst, transparenten Preisen und Echtzeit-Suche.",
+  },
+  {
+    question: "Für wen ist Vincere besser geeignet?",
+    answer: "Vincere kann die bessere Wahl bleiben, wenn Sie bereits tief integriert sind und viele Workflows aufgebaut haben, Ihr Fokus auf dem UK- oder ANZ-Markt liegt und der bisherige Support-Level für Sie ausreichend war.",
+  },
+  {
+    question: "Was kostet ShortSelect im Vergleich zu Vincere?",
+    answer: "ShortSelect kostet im Pioneer Plan 149 € pro User/Monat für die ersten 100 Agenturen, danach 300 € pro User/Monat, ohne versteckte Kosten und mit 30 Tagen kostenlosem Test ohne Kreditkarte. Bei Vincere hängt der Preis vom individuellen Vertrag ab, Nutzer berichten über versteckte Zusatzkosten.",
+  },
+  {
+    question: "Warum wechseln Agenturen von Vincere zu ShortSelect?",
+    answer: "Die häufigsten Gründe sind der rückläufige Support seit der Access-Übernahme, versteckte Kosten, die langsame Suche und das veraltete Interface. ShortSelect bietet persönlichen Support, Echtzeit-Suche, ein modernes UI und KI-Agenten, die Matching und Screening im Hintergrund übernehmen.",
+  },
+  {
+    question: "Wie wechsle ich von Vincere zu ShortSelect?",
+    answer: "Der Umzug dauert in der Regel etwa 15 Minuten: Account erstellen, Kandidaten und Jobs per CSV oder API importieren, Team einladen und loslegen. Eine Schritt-für-Schritt-Anleitung finden Sie auf unserer Wechsel-Seite.",
+    answerHtml: 'Der Umzug dauert in der Regel etwa 15 Minuten: Account erstellen, Kandidaten und Jobs per CSV oder API importieren, Team einladen und loslegen. Eine Schritt-für-Schritt-Anleitung finden Sie auf unserer <a href="/wechsel/" class="text-primary hover:underline">Wechsel-Seite</a>.',
+  },
+];
 ---
 
 <VergleichLayout
   title="ShortSelect vs Vincere: DSGVO-ATS für 149 € pro User"
-  description="Seit Access-Übernahme: weniger Support, versteckte Kosten, langsame Suche. ShortSelect: 149 € pro User/Monat, DSGVO EU-nativ, Echtzeit-Suche, autonome KI. In 15 Min umziehen."
+  description="Vincere schwächelt seit der Access-Übernahme: Support, Kosten, Tempo. ShortSelect: DSGVO EU-nativ, KI-Agenten, ab 149 € pro User. Mit Wechsel-Anleitung."
   competitorName="Vincere"
   heroSubline="Vincere war ein starkes ATS. bis Access Group übernahm. Seitdem: Support-Probleme, versteckte Kosten, langsame Suche. Zeit für eine Alternative mit echten KI-Agenten."
   heroBadge="Vergleich"
@@ -47,4 +71,5 @@ const comparisonData = [
       "Modernes Interface mit Echtzeit-Suche",
     ]
   }}
+  faqs={faqs}
 />

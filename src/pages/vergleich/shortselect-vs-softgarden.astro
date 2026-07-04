@@ -12,11 +12,35 @@ const comparisonData = [
   { feature: "API Zugang", ssStatus: "check" as const, ssLabel: "REST API", compStatus: "check" as const, compLabel: "REST API" },
   { feature: "Preis", ssStatus: "check" as const, ssLabel: "149 € pro User/Monat", compStatus: "warn" as const, compLabel: "Auf Anfrage" },
 ];
+
+const faqs = [
+  {
+    question: "Was ist der Unterschied zwischen ShortSelect und Softgarden?",
+    answer: "Softgarden ist ein etabliertes ATS für den Mittelstand mit Kanban-Board, Karriereseite und Analytics, aber ohne KI-Matching, Multi-Tenancy oder Client Portal. ShortSelect bringt genau diese drei Bausteine mit und richtet sich damit vor allem an Recruiting-Agenturen und Personalberatungen.",
+  },
+  {
+    question: "Für wen ist Softgarden besser geeignet?",
+    answer: "Softgarden passt gut, wenn Sie ein etabliertes ATS ohne KI-Features suchen, Ihre Recruiting-Prozesse einfach und standardisiert sind, Sie kein Multi-Mandanten-Management brauchen oder bereits in das Softgarden-Ökosystem integriert sind.",
+  },
+  {
+    question: "Was kostet ShortSelect im Vergleich zu Softgarden?",
+    answer: "ShortSelect kostet im Pioneer Plan 149 € pro User/Monat für die ersten 100 Agenturen, danach 300 € pro User/Monat, und Sie testen 30 Tage kostenlos ohne Kreditkarte. Softgarden nennt Preise nur auf Anfrage, die Kosten hängen also vom individuellen Angebot ab.",
+  },
+  {
+    question: "Hat Softgarden KI-Matching wie ShortSelect?",
+    answer: "Nein. Softgarden bietet kein KI-Matching. Bei ShortSelect ist KI-gestütztes Kandidaten-Matching integriert: Das System gleicht Profile und Anforderungen automatisch ab und schlägt die passendsten Kandidaten vor.",
+  },
+  {
+    question: "Wie wechsle ich von Softgarden zu ShortSelect?",
+    answer: "Der Umzug dauert in der Regel etwa 15 Minuten: Account erstellen, Kandidaten und Jobs per CSV oder API importieren, Team einladen und loslegen. Eine Schritt-für-Schritt-Anleitung finden Sie auf unserer Wechsel-Seite.",
+    answerHtml: 'Der Umzug dauert in der Regel etwa 15 Minuten: Account erstellen, Kandidaten und Jobs per CSV oder API importieren, Team einladen und loslegen. Eine Schritt-für-Schritt-Anleitung finden Sie auf unserer <a href="/wechsel/" class="text-primary hover:underline">Wechsel-Seite</a>.',
+  },
+];
 ---
 
 <VergleichLayout
   title="ShortSelect vs. Softgarden - ATS Vergleich 2026"
-  description="Modernes ATS mit KI-Power statt Legacy-Software. Vergleichen Sie ShortSelect und Softgarden in Features, Preisen und Usability."
+  description="Softgarden ist solide für den Mittelstand. ShortSelect ergänzt KI-Matching, Multi-Tenancy und Client Portal ab 149 € pro User. Ehrlicher Vergleich."
   competitorName="Softgarden"
   heroSubline="Modernes ATS mit KI-Power statt Legacy-Software."
   heroBadge="Feature-Vergleich"
@@ -46,4 +70,5 @@ const comparisonData = [
       "Sie ein modernes, schnelles Interface bevorzugen",
     ]
   }}
+  faqs={faqs}
 />

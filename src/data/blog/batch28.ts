@@ -51,7 +51,7 @@ export const batch28: BlogPost[] = [
 
 <h3>Nur 5 Prozent bieten eine Talent-Pool-Option an</h3>
 
-<p>25 von 500 E-Mails. Fünf Prozent. In einer Zeit, in der jedes Unternehmen über Fachkräftemangel klagt, nutzen 95 Prozent der Absagen nicht die Gelegenheit, den Kontakt aufrechtzuerhalten. Keine Einladung zum Talent-Pool, kein „Dürfen wir Sie kontaktieren, wenn eine passendere Stelle frei wird?", kein LinkedIn-Connect-Vorschlag.</p>
+<p>25 von 500 E-Mails. Fünf Prozent. In einer Zeit, in der jedes Unternehmen über Fachkräftemangel klagt, nutzen 95 Prozent der Absagen nicht die Gelegenheit, den Kontakt aufrechtzuerhalten. Keine Einladung zum <a href="/produkt/talent-pools/">Talent-Pool</a>, kein „Dürfen wir Sie kontaktieren, wenn eine passendere Stelle frei wird?", kein LinkedIn-Connect-Vorschlag.</p>
 
 <p>Das ist nicht nur eine verpasste Chance, es ist betriebswirtschaftlicher Unsinn. Die Cost-per-Hire für eine Neuansprache liegt bei 3.000 bis 7.000 Euro. Ein Kandidat, der bereits im Prozess war, ist vorqualifiziert, kennt das Unternehmen und hat Interesse gezeigt. Diesen Kontakt einfach fallen zu lassen, weil die aktuelle Stelle nicht gepasst hat, ist wie einen warmen Lead in den Papierkorb zu werfen.</p>
 
@@ -101,12 +101,12 @@ export const batch28: BlogPost[] = [
 
 <h2>Warum das alles mehr als Hoeflichkeit ist</h2>
 
-<p>Manche werden jetzt denken: „Wir haben hunderte Bewerbungen. Wir können nicht jede einzeln beantworten." Das stimmt, und gleichzeitig stimmt es nicht. Ein modernes ATS kann personalisierte E-Mails automatisch versenden. Der Name, die Stellenbezeichnung, der Zeitpunkt, das sind Felder, die jedes halbwegs aktuelle System automatisch befüllen kann. Es kostet Sie exakt null zusätzliche Minuten pro Absage. Was es kostet, es NICHT zu tun, ist dagegen real: verlorene Weiterempfehlungen, negative Kununu-Bewertungen, geschädigte Arbeitgebermarke.</p>
+<p>Manche werden jetzt denken: „Wir haben hunderte Bewerbungen. Wir können nicht jede einzeln beantworten." Das stimmt, und gleichzeitig stimmt es nicht. Ein modernes ATS kann <a href="/produkt/automatisierung/">personalisierte E-Mails automatisch versenden</a>. Der Name, die Stellenbezeichnung, der Zeitpunkt, das sind Felder, die jedes halbwegs aktuelle System automatisch befüllen kann. Es kostet Sie exakt null zusätzliche Minuten pro Absage. Was es kostet, es NICHT zu tun, ist dagegen real: verlorene Weiterempfehlungen, negative Kununu-Bewertungen, geschädigte Arbeitgebermarke.</p>
 
 <p>Eine Studie des HR-Softwareanbieters Phenom zeigt: 64 Prozent der Bewerber teilen negative Erfahrungen in ihrem Netzwerk. Bei positiven Erfahrungen, auch bei einer Absage, steigt die Weiterempfehlungsrate auf 82 Prozent. Der Unterschied zwischen „schlechte Absage" und „gute Absage" ist kein Soft-Faktor. Es ist ein messbarer Business-Impact.</p>
 
 <blockquote>
-  <strong>Eine gute Absage ist das beste Employer Branding.</strong> Jeder Bewerber, den Sie heute respektvoll absagen, ist ein potenzieller Kunde, Empfehler oder zukünftiger Mitarbeiter von morgen. Jeder, den Sie ghosten, ist ein verlorener Kontakt, dauerhaft.
+  <strong>Eine gute Absage ist das beste <a href="/produkt/karriereseite/">Employer Branding</a>.</strong> Jeder Bewerber, den Sie heute respektvoll absagen, ist ein potenzieller Kunde, Empfehler oder zukünftiger Mitarbeiter von morgen. Jeder, den Sie ghosten, ist ein verlorener Kontakt, dauerhaft.
 </blockquote>
 
 <h2>Was sich ändern muss</h2>
@@ -140,7 +140,7 @@ export const batch28: BlogPost[] = [
   <strong>Harte Wahrheit:</strong> Recruiting ist ein Vertriebsgeschäft. Wer keine Kunden akquiriert, hat kein Geschäft, egal wie gut die Kandidaten sind.
 </blockquote>
 
-<p>Dieser Artikel ist kein Motivationsvortrag. Er ist eine Diagnose mit Therapieplan. Sieben Gründe, warum Ihre Personalvermittlung keine Kunden findet, und zu jedem Grund eine Sofort-Maßnahme, die Sie heute noch umsetzen können. Nicht nächste Woche. Heute.</p>
+<p>Dieser Artikel ist kein Motivationsvortrag. Er ist eine Diagnose mit Therapieplan. Sieben Gründe, warum Ihre <a href="/fuer/personalvermittlung/">Personalvermittlung</a> keine Kunden findet, und zu jedem Grund eine Sofort-Maßnahme, die Sie heute noch umsetzen können. Nicht nächste Woche. Heute.</p>
 
 <h2>Grund 1: Sie warten auf Inbound statt aktiv zu verkaufen</h2>
 
@@ -178,7 +178,7 @@ export const batch28: BlogPost[] = [
 
 <p>Wenn Ihre Kundenkontakte in Excel-Tabellen, Outlook-Kontakten und Post-its auf Ihrem Bildschirm verteilt sind, haben Sie kein System. Und ohne System verlieren Sie Kontakte, vergessen Follow-ups und verpassen Chancen, die Sie hätten nutzen können.</p>
 
-<p>Ein CRM für Personalvermittler muss kein Enterprise-Monster sein. Es muss drei Dinge können: Kontakte speichern mit Interaktionshistorie, Follow-up-Erinnerungen setzen und Pipeline-Stufen abbilden (Lead → Kontakt → Angebot → Auftrag). Ob Sie HubSpot Free, Pipedrive oder eine Notion-Datenbank nutzen, ist zweitrangig. Hauptsache, Sie nutzen überhaupt etwas.</p>
+<p>Ein <a href="/produkt/ats-crm/">CRM für Personalvermittler</a> muss kein Enterprise-Monster sein. Es muss drei Dinge können: Kontakte speichern mit Interaktionshistorie, Follow-up-Erinnerungen setzen und Pipeline-Stufen abbilden (Lead → Kontakt → Angebot → Auftrag). Ob Sie HubSpot Free, Pipedrive oder eine Notion-Datenbank nutzen, ist zweitrangig. Hauptsache, Sie nutzen überhaupt etwas.</p>
 
 <p><strong>Sofort-Maßnahme (45 Minuten):</strong> Richten Sie ein kostenloses CRM ein, HubSpot Free genügt völlig. Importieren Sie Ihre bestehenden Kontakte. Setzen Sie für jeden offenen Lead einen Follow-up-Termin innerhalb der nächsten sieben Tage. Ab jetzt wird jeder Kundenkontakt dokumentiert. Kein Kontakt darf länger als 14 Tage ohne Interaktion sein.</p>
 
@@ -349,9 +349,9 @@ export const batch28: BlogPost[] = [
 
 <h2>Was Sie morgen tun sollten</h2>
 
-<p>Wenn Sie nach dem Lesen dieses Artikels immer noch zögern, machen Sie einen einfachen Test: Nehmen Sie Ihre nächste offene Stelle und schalten Sie zwei Anzeigen, eine mit Gehaltsspanne, eine ohne. Gleicher Text, gleiche Plattform, gleicher Zeitraum. Messen Sie Bewerbungsanzahl, Bewerberqualität und Time-to-Hire. Lassen Sie die Daten entscheiden.</p>
+<p>Wenn Sie nach dem Lesen dieses Artikels immer noch zögern, machen Sie einen einfachen Test: Nehmen Sie Ihre nächste offene Stelle und <a href="/produkt/multiposting/">schalten Sie zwei Anzeigen</a>, eine mit Gehaltsspanne, eine ohne. Gleicher Text, gleiche Plattform, gleicher Zeitraum. Messen Sie Bewerbungsanzahl, Bewerberqualität und Time-to-Hire. Lassen Sie die Daten entscheiden.</p>
 
-<p>Denn genau das ist der Kern von datengetriebenem Recruiting: nicht raten, nicht meinen, nicht „Das haben wir schon immer so gemacht." Sondern messen, vergleichen und die Entscheidung treffen, die die Zahlen stützen.</p>
+<p>Denn genau das ist der Kern von <a href="/produkt/ats-crm/">datengetriebenem Recruiting</a>: nicht raten, nicht meinen, nicht „Das haben wir schon immer so gemacht." Sondern messen, vergleichen und die Entscheidung treffen, die die Zahlen stützen.</p>
 
 <p>In unserem Experiment war die Antwort eindeutig. In Ihrem wird sie es vermutlich auch sein.</p>
     `,

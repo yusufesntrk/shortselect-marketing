@@ -62,7 +62,7 @@ export const batch22: BlogPost[] = [
 
 <h3>Automatische Follow-ups</h3>
 
-<p>Follow-ups sind der größte Hebel im Outreach, und der am meisten vernachlässigte. Ein manueller Recruiter schreibt 20 Erstansprachen und hat keine Zeit für Follow-ups. Ein automatisiertes System schreibt 100 Erstansprachen UND sendet automatisch drei Follow-ups an jeden, der nicht antwortet. Das sind 400 Touchpoints pro Tag statt 20. Zwanzigmal mehr Kontaktpunkte. Zwanzigmal mehr Chancen auf eine Antwort.</p>
+<p>Follow-ups sind der größte Hebel im Outreach, und der am meisten vernachlässigte. Ein manueller Recruiter schreibt 20 Erstansprachen und hat keine Zeit für Follow-ups. Ein <a href="/produkt/automatisierung/">automatisiertes System</a> schreibt 100 Erstansprachen UND sendet automatisch drei Follow-ups an jeden, der nicht antwortet. Das sind 400 Touchpoints pro Tag statt 20. Zwanzigmal mehr Kontaktpunkte. Zwanzigmal mehr Chancen auf eine Antwort.</p>
 
 <h2>Qualität vs. Quantität, ein falscher Gegensatz</h2>
 
@@ -118,13 +118,13 @@ export const batch22: BlogPost[] = [
   <strong>5x bis 8x mehr Placements.</strong> Nicht weil Ihr Recruiter schlechter wird, sondern weil das Tool den Engpass beseitigt. Der Recruiter verbringt seine Zeit jetzt mit Interviews und Kandidatenbetreuung statt mit Copy-Paste.
 </blockquote>
 
-<p>Die Investition in ein gutes Outreach-Tool rechnet sich ab dem ersten Monat. Die meisten Tools kosten 100 bis 300 Euro pro Nutzer und Monat. Ein zusätzliches Placement bringt im Schnitt 8.000 bis 25.000 Euro Provision. Das ROI-Argument ist so offensichtlich, dass es fast peinlich ist, es ausführen zu müssen.</p>
+<p>Die Investition in ein gutes Outreach-Tool rechnet sich ab dem ersten Monat. Die meisten Tools kosten <a href="/preise/">100 bis 300 Euro pro Nutzer und Monat</a>. Ein zusätzliches Placement bringt im Schnitt 8.000 bis 25.000 Euro Provision. Das ROI-Argument ist so offensichtlich, dass es fast peinlich ist, es ausführen zu müssen.</p>
 
 <h2>Die Tool-Frage: integriert oder spezialisiert?</h2>
 
 <p>Sie haben zwei Optionen: Ein ATS mit integriertem E-Mail-Outreach oder ein separates Outreach-Tool neben Ihrem ATS.</p>
 
-<p><strong>Integriertes ATS:</strong> Alles in einem System. Kandidatendaten, Pipeline, Outreach, Follow-ups, nahtlos verbunden. Kein Datentransfer zwischen Systemen. Jede Interaktion wird automatisch im Kandidatenprofil dokumentiert. Nachteil: Die Outreach-Funktionalität ist oft weniger ausgereift als bei spezialisierten Tools.</p>
+<p><strong><a href="/produkt/ats-crm/">Integriertes ATS</a>:</strong> Alles in einem System. Kandidatendaten, Pipeline, Outreach, Follow-ups, nahtlos verbunden. Kein Datentransfer zwischen Systemen. Jede Interaktion wird automatisch im Kandidatenprofil dokumentiert. Nachteil: Die Outreach-Funktionalität ist oft weniger ausgereift als bei spezialisierten Tools.</p>
 
 <p><strong>Separates Outreach-Tool:</strong> Spezialisiert auf E-Mail-Sequenzen, A/B-Tests, erweiterte Personalisierung. Oft leistungsfähiger als integrierte Lösungen. Nachteil: Datensilos, manuelle Synchronisation, doppelte Datenpflege, Risiko inkonsistenter Kandidatendaten.</p>
 
@@ -151,7 +151,7 @@ export const batch22: BlogPost[] = [
     content: `
 <h2>Das Risiko, über das niemand spricht</h2>
 
-<p>Sie haben KI in Ihr Recruiting eingebaut. Vielleicht ein CV-Parsing-Tool, das Lebensläufe automatisch bewertet. Vielleicht ein Matching-Algorithmus, der Kandidaten ranked. Vielleicht ein Chatbot, der Bewerber vorqualifiziert. Sie fühlen sich innovativ. Modern. Effizient. Was Sie vermutlich nicht haben: eine DSGVO-Strategie dafür. Und das könnte Sie bis zu 20 Millionen Euro kosten.</p>
+<p>Sie haben KI in Ihr Recruiting eingebaut. Vielleicht ein CV-Parsing-Tool, das Lebensläufe automatisch bewertet. Vielleicht ein <a href="/produkt/ki-features/">Matching-Algorithmus</a>, der Kandidaten ranked. Vielleicht ein Chatbot, der Bewerber vorqualifiziert. Sie fühlen sich innovativ. Modern. Effizient. Was Sie vermutlich nicht haben: eine DSGVO-Strategie dafür. Und das könnte Sie bis zu 20 Millionen Euro kosten.</p>
 
 <p>Das ist keine Panikmache. Das ist Artikel 83 der Datenschutz-Grundverordnung. Die maximale Geldbuße für Verstöße gegen Grundsätze der Verarbeitung, wozu automatisierte Entscheidungsfindung gehört, beträgt bis zu 20 Millionen Euro oder 4 Prozent des weltweiten Jahresumsatzes, je nachdem, welcher Betrag höher ist. Und die Aufsichtsbehörden schauen seit 2024 genauer hin als je zuvor.</p>
 
@@ -250,7 +250,7 @@ export const batch22: BlogPost[] = [
   <li><strong>Erklärbarkeit gegeben?</strong>, Entscheidungen sind nachvollziehbar und kommunizierbar.</li>
   <li><strong>Bias-Monitoring aktiv?</strong>, Regelmäßige Audits auf Diskriminierung.</li>
   <li><strong>AVV mit KI-Anbieter geschlossen?</strong>, Auftragsverarbeitung geregelt.</li>
-  <li><strong>Löschfristen definiert?</strong>, Bewerberdaten werden nach Ablauf der Frist gelöscht.</li>
+  <li><strong><a href="/produkt/compliance/">Löschfristen definiert?</a></strong>, Bewerberdaten werden nach Ablauf der Frist gelöscht.</li>
   <li><strong>Verantwortlicher benannt?</strong>, Eine Person ist zuständig für DSGVO-Konformität der KI-Systeme.</li>
 </ul>
 
@@ -357,7 +357,7 @@ export const batch22: BlogPost[] = [
   <li><strong>Wenn</strong> Source X < 3% Conversion zu Hire <strong>→</strong> Budget umverteilen. Nicht nächstes Quartal. Sofort. Jeder Euro in einem Kanal mit unter 3 Prozent Conversion ist verbranntes Geld.</li>
   <li><strong>Wenn</strong> Drop-off in Stage 2 > 40% <strong>→</strong> Screening-Prozess analysieren. Sind die Anforderungen zu hoch angesetzt? Ist die Stellenausschreibung irreführend? Stimmt die Gehaltserwartung nicht?</li>
   <li><strong>Wenn</strong> Angebotsablehnungsrate > 25% <strong>→</strong> Compensation-Analyse. Sind Sie marktgerecht? Bieten Sie zu spät an? Kommunizieren Sie Benefits zu wenig?</li>
-  <li><strong>Wenn</strong> Probezeit-Fluktuation > 15% <strong>→</strong> Qualität des Screenings überprüfen. Passen die Kriterien? Wird Cultural Fit bewertet? Stimmen die Erwartungen auf beiden Seiten?</li>
+  <li><strong>Wenn</strong> Probezeit-Fluktuation > 15% <strong>→</strong> Qualität des <a href="/produkt/ki-features/">Screenings</a> überprüfen. Passen die Kriterien? Wird Cultural Fit bewertet? Stimmen die Erwartungen auf beiden Seiten?</li>
   <li><strong>Wenn</strong> Hiring Manager Satisfaction < 3.5 von 5 <strong>→</strong> Anforderungsprofil gemeinsam überarbeiten. Offensichtlich matchen die Einstellungen nicht die Erwartungen, entweder die Erwartungen sind unrealistisch oder das Sourcing trifft daneben.</li>
 </ul>
 
@@ -389,7 +389,7 @@ export const batch22: BlogPost[] = [
 
 <ul>
   <li><strong>Anzahl Bewerbungen:</strong> Ohne Qualitätsbezug wertlos. 500 unqualifizierte Bewerbungen sind schlimmer als 20 gute, weil sie Ihre Recruiter mit Screening beschäftigen statt mit echten Gesprächen.</li>
-  <li><strong>Career Page Visits:</strong> Schön dass Leute Ihre Karriereseite besuchen. Irrelevant wenn sie sich nicht bewerben. Messen Sie die Conversion Rate der Karriereseite, nicht die Besucher.</li>
+  <li><strong>Career Page Visits:</strong> Schön dass Leute Ihre Karriereseite besuchen. Irrelevant wenn sie sich nicht bewerben. Messen Sie die Conversion Rate der <a href="/produkt/karriereseite/">Karriereseite</a>, nicht die Besucher.</li>
   <li><strong>Social Media Followers:</strong> Haben null Korrelation mit Recruiting-Erfolg. Null. Ein Unternehmen mit 50.000 LinkedIn-Followern kann trotzdem 6 Monate brauchen, um einen Entwickler einzustellen.</li>
   <li><strong>Cost per Application:</strong> Misst das Falsche. Sie wollen nicht günstige Bewerbungen, Sie wollen günstige gute Einstellungen. Cost per Quality Hire ist die richtige Metrik.</li>
   <li><strong>Time-to-Fill (isoliert):</strong> Time-to-Fill ohne Qualitätsbezug ist gefährlich. Sie können jede Stelle in 5 Tagen besetzen, wenn Ihnen Qualität egal ist. Schnell einstellen und nach 3 Monaten wieder suchen ist teurer als langsam gut einstellen.</li>

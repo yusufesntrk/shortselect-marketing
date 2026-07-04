@@ -19,7 +19,7 @@ export const batch4: BlogPost[] = [
 
       <h2>1. KI wird Standard, nicht mehr nur Hype</h2>
       <h3>Kontext</h3>
-      <p>Künstliche Intelligenz im Recruiting hat die Experimentierphase hinter sich gelassen. Was 2023 noch als Zukunftsmusik galt, ist 2025 fester Bestandteil moderner HR-Abteilungen. Von der automatisierten Vorauswahl über intelligente Matching-Algorithmen bis hin zur KI-gestützten Interviewplanung, die Einsatzgebiete sind vielfältig und praxiserprobt.</p>
+      <p>Künstliche Intelligenz im Recruiting hat die Experimentierphase hinter sich gelassen. Was 2023 noch als Zukunftsmusik galt, ist 2025 fester Bestandteil moderner HR-Abteilungen. Von der automatisierten Vorauswahl über <a href="/produkt/ki-features/">intelligente Matching-Algorithmen</a> bis hin zur KI-gestützten Interviewplanung, die Einsatzgebiete sind vielfältig und praxiserprobt.</p>
       <h3>Daten &amp; Statistiken</h3>
       <p>Laut einer Studie von LinkedIn setzen bereits <strong>67 % der Recruiter</strong> in irgendeiner Form KI-Tools ein. Unternehmen, die KI-basierte Screening-Tools nutzen, berichten von einer <strong>Reduktion der Time-to-Hire um bis zu 40 %</strong>. Die Phenom-Studie 2024 zeigt zudem, dass KI-gestütztes Matching die Qualität der Kandidaten-Shortlist um durchschnittlich 35 % verbessert.</p>
       <h3>Handlungsempfehlung</h3>
@@ -55,7 +55,7 @@ export const batch4: BlogPost[] = [
       <h3>Daten &amp; Statistiken</h3>
       <p>Eine McKinsey-Analyse zeigt, dass <strong>bis zu 65 % der Recruiting-Tätigkeiten</strong> automatisierbar sind. Unternehmen, die Workflow-Automatisierung einsetzen, berichten von einer <strong>Zeitersparnis von 14 Stunden pro Woche und Recruiter</strong>. Die Zufriedenheit der HR-Teams steigt dabei um durchschnittlich 28 %, da sie sich auf wertschöpfende Tätigkeiten konzentrieren können.</p>
       <h3>Handlungsempfehlung</h3>
-      <p>Identifizieren Sie Ihre Top-5-Zeitfresser im Recruiting-Alltag. In den meisten Fällen sind das: Eingangsbestätigungen, Interview-Scheduling, Absage-E-Mails, Statusupdates und Dateneingabe. Automatisieren Sie diese Workflows schrittweise mit Ihrem ATS. Beginnen Sie mit den Aufgaben, die am häufigsten vorkommen und am wenigsten individuelle Anpassung erfordern.</p>
+      <p>Identifizieren Sie Ihre Top-5-Zeitfresser im Recruiting-Alltag. In den meisten Fällen sind das: Eingangsbestätigungen, Interview-Scheduling, Absage-E-Mails, Statusupdates und Dateneingabe. Automatisieren Sie diese <a href="/produkt/automatisierung/">Workflows</a> schrittweise mit Ihrem ATS. Beginnen Sie mit den Aufgaben, die am häufigsten vorkommen und am wenigsten individuelle Anpassung erfordern.</p>
 
       <h2>6. Datengetriebenes Recruiting</h2>
       <h3>Kontext</h3>
@@ -67,7 +67,7 @@ export const batch4: BlogPost[] = [
 
       <h2>7. Employer Branding auf Social Media</h2>
       <h3>Kontext</h3>
-      <p>Die Zeiten, in denen eine Karriereseite und ein Indeed-Inserat ausreichten, sind vorbei. 2025 informieren sich Kandidaten primär über Social Media über potenzielle Arbeitgeber. Authentische Einblicke in den Arbeitsalltag, Employee-Generated Content und eine konsistente Arbeitgebermarke auf LinkedIn, Instagram und TikTok werden zum Muss, besonders im Wettbewerb um Young Professionals und Gen Z.</p>
+      <p>Die Zeiten, in denen eine <a href="/produkt/karriereseite/">Karriereseite</a> und ein Indeed-Inserat ausreichten, sind vorbei. 2025 informieren sich Kandidaten primär über Social Media über potenzielle Arbeitgeber. Authentische Einblicke in den Arbeitsalltag, Employee-Generated Content und eine konsistente Arbeitgebermarke auf LinkedIn, Instagram und TikTok werden zum Muss, besonders im Wettbewerb um Young Professionals und Gen Z.</p>
       <h3>Daten &amp; Statistiken</h3>
       <p>Eine Glassdoor-Studie belegt, dass <strong>86 % der Bewerber</strong> Unternehmensbewertungen und Social-Media-Auftritte recherchieren, bevor sie sich bewerben. Unternehmen mit starker Employer Brand erhalten <strong>50 % mehr qualifizierte Bewerbungen</strong> und können ihre Cost-per-Hire um bis zu 43 % senken. Besonders wirkungsvoll: Kurze Video-Formate mit echten Mitarbeitern erzielen 3x mehr Engagement als klassische Stellenanzeigen.</p>
       <h3>Handlungsempfehlung</h3>
@@ -85,7 +85,7 @@ export const batch4: BlogPost[] = [
       <p>Die 8 Trends zeigen deutlich: Das Recruiting wird technologischer, datengetriebener und kandidatenzentrierter. Doch Technologie allein reicht nicht. Der Schlüssel liegt in der <strong>intelligenten Kombination</strong> aus Automatisierung und menschlicher Empathie, aus Datenanalyse und persönlicher Ansprache.</p>
       <p>HR-Teams, die jetzt in die richtigen Tools investieren, ihre Prozesse automatisieren und ihre Candidate Experience optimieren, werden 2025 einen klaren Wettbewerbsvorteil haben. Denn in Zeiten des Fachkräftemangels gewinnt nicht das Unternehmen mit dem größten Budget, sondern das mit den smartesten Prozessen.</p>
       <blockquote>
-        <p><strong>Tipp:</strong> Starten Sie nicht mit allen 8 Trends gleichzeitig. Wählen Sie die 2-3 Bereiche mit dem größten Hebel für Ihr Unternehmen und setzen Sie diese konsequent um. Ein modernes ATS wie ShortSelect unterstützt Sie dabei, viele dieser Trends direkt in Ihren Recruiting-Alltag zu integrieren.</p>
+        <p><strong>Tipp:</strong> Starten Sie nicht mit allen 8 Trends gleichzeitig. Wählen Sie die 2-3 Bereiche mit dem größten Hebel für Ihr Unternehmen und setzen Sie diese konsequent um. Ein <a href="/produkt/ats-crm/">modernes ATS</a> wie ShortSelect unterstützt Sie dabei, viele dieser Trends direkt in Ihren Recruiting-Alltag zu integrieren.</p>
       </blockquote>
     `,
   },
@@ -176,13 +176,13 @@ export const batch4: BlogPost[] = [
       <p>Sie haben 200 Bewerbungen gesichtet, 50 Erstinterviews geführt, 15 Fachinterviews arrangiert, und am Ende eine Person eingestellt. Was passiert mit den anderen 199 Kandidaten? In den meisten Unternehmen: nichts. Sie verschwinden im digitalen Nirwana, und beim nächsten Hiring-Bedarf beginnt die Suche komplett von vorne.</p>
       <p>Dabei waren viele dieser Kandidaten nicht "schlecht", sie waren nur nicht die beste Wahl für genau diese Stelle zu genau diesem Zeitpunkt. Ein systematischer Talent-Pool verwandelt diese verlorenen Kontakte in einen wertvollen Recruiting-Kanal für die Zukunft.</p>
       <h3>Die Lösung</h3>
-      <p>Ein automatisierter Workflow, der abgelehnten Kandidaten die Möglichkeit gibt, sich in einen kategorisierten Talent-Pool einzutragen. Bei passenden neuen Stellen werden sie automatisch benachrichtigt und können sich mit einem Klick erneut bewerben.</p>
+      <p>Ein automatisierter Workflow, der abgelehnten Kandidaten die Möglichkeit gibt, sich in einen kategorisierten <a href="/produkt/talent-pools/">Talent-Pool</a> einzutragen. Bei passenden neuen Stellen werden sie automatisch benachrichtigt und können sich mit einem Klick erneut bewerben.</p>
       <h3>Setup-Anleitung</h3>
       <ol>
         <li><strong>Talent-Pool-Kategorien definieren:</strong> Erstellen Sie Pools nach Fachbereich (z.B. Entwicklung, Marketing, Vertrieb), Erfahrungslevel (Junior, Senior, Lead) und Standortpräferenz. Das ermöglicht gezielte Ansprache bei neuen Vakanzen.</li>
         <li><strong>Opt-in-Formular erstellen:</strong> Entwickeln Sie ein einfaches Formular, über das sich Kandidaten mit ihren Präferenzen in den Pool eintragen können. Wichtig: DSGVO-konform mit expliziter Einwilligung und Angabe der Speicherdauer.</li>
         <li><strong>Automatische Einladung nach Absage:</strong> Integrieren Sie den Talent-Pool-Link in Ihre Absage-E-Mails (aus Workflow 4). Die Formulierung sollte wertschätzend sein: "Auch wenn es diesmal nicht gepasst hat, wir würden Sie gerne für zukünftige Positionen im Blick behalten."</li>
-        <li><strong>Matching-Benachrichtigung einrichten:</strong> Konfigurieren Sie eine automatische Benachrichtigung, die Talent-Pool-Mitglieder informiert, wenn eine neue Stelle veröffentlicht wird, die zu ihrem Profil passt. ShortSelect ermöglicht dies über Skills-Matching und Präferenz-Abgleich.</li>
+        <li><strong>Matching-Benachrichtigung einrichten:</strong> Konfigurieren Sie eine automatische Benachrichtigung, die Talent-Pool-Mitglieder informiert, wenn eine neue Stelle veröffentlicht wird, die zu ihrem Profil passt. ShortSelect ermöglicht dies über <a href="/produkt/ki-features/">Skills-Matching</a> und Präferenz-Abgleich.</li>
       </ol>
       <h3>Das Ergebnis</h3>
       <p>Erfahrungsgemäß tragen sich <strong>20-30 % der abgelehnten Kandidaten</strong> in den Talent-Pool ein. Bei 40 Absagen pro Monat wächst Ihr Pool um 8-12 vorqualifizierte Kontakte, pro Monat. Nach einem Jahr haben Sie einen Pool von über 100 Kandidaten, die Ihr Unternehmen bereits kennen und Interesse gezeigt haben. Die <strong>Time-to-Hire für Positionen, die aus dem Talent-Pool besetzt werden, liegt durchschnittlich 60 % unter</strong> der für externe Neubesetzungen.</p>
@@ -199,7 +199,7 @@ export const batch4: BlogPost[] = [
       <p><strong>Gesamtersparnis: 25-40 Stunden pro Monat</strong>, das entspricht 3-5 vollen Arbeitstagen, die Ihr Recruiting-Team für strategische Aufgaben nutzen kann.</p>
       <p>Und das Beste: Die Candidate Experience verbessert sich gleichzeitig. Schnellere Antworten, transparentere Prozesse, persönlichere Kommunikation, Automatisierung und Qualität schließen sich nicht aus. Im Gegenteil: Erst die Automatisierung der Routine schafft den Freiraum für echte, menschliche Interaktion dort, wo sie am meisten zählt.</p>
       <blockquote>
-        <p><strong>Praxis-Tipp:</strong> Starten Sie nicht mit allen fünf Workflows gleichzeitig. Beginnen Sie mit Workflow 1 (Eingangsbestätigung), der ist in 30 Minuten eingerichtet und liefert sofort sichtbare Ergebnisse. Arbeiten Sie sich dann Schritt für Schritt vor. Mit einem ATS wie ShortSelect lassen sich alle fünf Workflows zentral verwalten und miteinander verknüpfen.</p>
+        <p><strong>Praxis-Tipp:</strong> Starten Sie nicht mit allen fünf Workflows gleichzeitig. Beginnen Sie mit Workflow 1 (Eingangsbestätigung), der ist in 30 Minuten eingerichtet und liefert sofort sichtbare Ergebnisse. Arbeiten Sie sich dann Schritt für Schritt vor. Mit einem ATS wie ShortSelect lassen sich alle fünf <a href="/produkt/automatisierung/">Workflows zentral verwalten</a> und miteinander verknüpfen.</p>
       </blockquote>
     `,
   },

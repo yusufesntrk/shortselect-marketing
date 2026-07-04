@@ -15,7 +15,7 @@ export const batch16: BlogPost[] = [
     content: `
 <h2>Warum E-Mail im Recruiting immer noch Kanal Nummer eins ist</h2>
 
-<p>LinkedIn, WhatsApp, Karrieremessen, die Kontaktmöglichkeiten im Recruiting waren noch nie so vielfältig. Und trotzdem bleibt E-Mail der wichtigste Kanal für die Kandidatenansprache. Das hat handfeste Gründe: Jeder Berufstätige hat eine E-Mail-Adresse, die meisten prüfen ihren Posteingang mehrmals täglich, und E-Mails lassen sich skalieren, automatisieren und tracken. Laut einer aktuellen Studie von Gem nutzen 90 Prozent der Recruiter E-Mail als primären Outreach-Kanal, noch vor LinkedIn InMails und Telefonanrufen.</p>
+<p>LinkedIn, WhatsApp, Karrieremessen, die Kontaktmöglichkeiten im Recruiting waren noch nie so vielfältig. Und trotzdem bleibt E-Mail der wichtigste Kanal für die Kandidatenansprache. Das hat handfeste Gründe: Jeder Berufstätige hat eine E-Mail-Adresse, die meisten prüfen ihren Posteingang mehrmals täglich, und E-Mails lassen sich <a href="/produkt/automatisierung/">skalieren, automatisieren und tracken</a>. Laut einer aktuellen Studie von Gem nutzen 90 Prozent der Recruiter E-Mail als primären Outreach-Kanal, noch vor LinkedIn InMails und Telefonanrufen.</p>
 
 <p>Doch zwischen "E-Mail versenden" und "Kandidat antwortet" liegt ein Ozean aus technischen Hürden, verfälschten Metriken und rechtlichen Grauzonen. Dieser Guide zeigt Ihnen, wie Sie E-Mail-Marketing im Recruiting wirklich messen, optimieren und DSGVO-konform gestalten.</p>
 
@@ -52,7 +52,7 @@ export const batch16: BlogPost[] = [
   <li><strong>Unsubscribe Rate:</strong> Unter 0,5 Prozent ist der Industriestandard.</li>
 </ul>
 
-<p>Wichtig: Diese Zahlen gelten für Cold Outreach an Kandidaten, die Sie noch nicht kennen. Bei Warm-E-Mails an bestehende Talent-Pool-Mitglieder liegen die Raten deutlich höher, Open Rates von 45 bis 55 Prozent sind realistisch.</p>
+<p>Wichtig: Diese Zahlen gelten für Cold Outreach an Kandidaten, die Sie noch nicht kennen. Bei Warm-E-Mails an bestehende <a href="/produkt/talent-pools/">Talent-Pool-Mitglieder</a> liegen die Raten deutlich höher, Open Rates von 45 bis 55 Prozent sind realistisch.</p>
 
 <h2>Deliverability verbessern: Damit Ihre E-Mails ankommen</h2>
 
@@ -159,7 +159,7 @@ export const batch16: BlogPost[] = [
 <p>Im Recruiting-E-Mail-Marketing stehen Sie vor einer grundlegenden Entscheidung: Nutzen Sie die E-Mail-Funktionen Ihres ATS oder CRM, oder setzen Sie auf ein separates Tool?</p>
 
 <ul>
-  <li><strong>ATS-integrierte E-Mails</strong> (z. B. ShortSelect, Bullhorn, Recruitee): Alle Kandidatendaten, Kommunikationshistorie und Pipeline-Status an einem Ort. Keine Datensilos. Die E-Mail-Funktionalität ist aber oft weniger ausgereift als bei spezialisierten Tools.</li>
+  <li><strong><a href="/produkt/ats-crm/">ATS-integrierte E-Mails</a></strong> (z. B. ShortSelect, Bullhorn, Recruitee): Alle Kandidatendaten, Kommunikationshistorie und Pipeline-Status an einem Ort. Keine Datensilos. Die E-Mail-Funktionalität ist aber oft weniger ausgereift als bei spezialisierten Tools.</li>
   <li><strong>Standalone-Tools</strong> (z. B. Lemlist, Instantly, Woodpecker): Mehr Funktionen für Sequenzen, A/B-Tests, Bot-Filterung und Deliverability-Optimierung. Dafür müssen Daten zwischen ATS und E-Mail-Tool synchronisiert werden, ein zusätzlicher Aufwand und potenzielle Fehlerquelle.</li>
 </ul>
 
@@ -167,7 +167,7 @@ export const batch16: BlogPost[] = [
 
 <h2>DSGVO bei Recruiting-E-Mails</h2>
 
-<p>E-Mail-Marketing im Recruiting unterliegt strengen datenschutzrechtlichen Vorgaben. Die wichtigsten Punkte:</p>
+<p>E-Mail-Marketing im Recruiting unterliegt strengen <a href="/produkt/compliance/">datenschutzrechtlichen Vorgaben</a>. Die wichtigsten Punkte:</p>
 
 <ul>
   <li><strong>Rechtsgrundlage:</strong> Für Cold Outreach an Kandidaten nutzen die meisten Recruiter das berechtigte Interesse (Art. 6 Abs. 1 lit. f DSGVO). Das ist zulässig, solange die Ansprache berufsbezogen ist und der Kandidat eine angemessene Erwartungshaltung hat, etwa weil sein LinkedIn-Profil öffentlich ist.</li>
@@ -275,11 +275,11 @@ export const batch16: BlogPost[] = [
 
 <h3>Eigene Karriereseite</h3>
 
-<p>Die unterschätzteste Quelle für Bewerbungen. Eine gut optimierte Karriereseite mit echten Einblicken ins Unternehmen, Mitarbeiter-Testimonials und einem unkomplizierten Bewerbungsprozess generiert langfristig die günstigsten und qualitativ besten Bewerbungen. Voraussetzung: SEO-Optimierung und Verknüpfung mit Google for Jobs.</p>
+<p>Die unterschätzteste Quelle für Bewerbungen. Eine <a href="/produkt/karriereseite/">gut optimierte Karriereseite</a> mit echten Einblicken ins Unternehmen, Mitarbeiter-Testimonials und einem unkomplizierten Bewerbungsprozess generiert langfristig die günstigsten und qualitativ besten Bewerbungen. Voraussetzung: SEO-Optimierung und Verknüpfung mit Google for Jobs.</p>
 
 <h2>Multiposting als Risiko-Diversifizierung</h2>
 
-<p>Multiposting, das gleichzeitige Veröffentlichen einer Stellenanzeige auf mehreren Plattformen, ist die logische Antwort auf Indeeds Strategiewechsel. Statt alle Eier in einen Korb zu legen, verteilen Sie Ihre Anzeigen auf fünf bis zehn Kanäle und messen, welcher für welche Rolle am besten performt.</p>
+<p><a href="/produkt/multiposting/">Multiposting</a>, das gleichzeitige Veröffentlichen einer Stellenanzeige auf mehreren Plattformen, ist die logische Antwort auf Indeeds Strategiewechsel. Statt alle Eier in einen Korb zu legen, verteilen Sie Ihre Anzeigen auf fünf bis zehn Kanäle und messen, welcher für welche Rolle am besten performt.</p>
 
 <p>Modernes Multiposting funktioniert direkt aus dem ATS heraus. Sie erstellen die Stellenanzeige einmal und wählen die Zielkanäle per Klick. Bewerbungen fließen zentral zurück, mit Quellenangabe. So sehen Sie nach vier Wochen exakt, welcher Kanal für welche Position den besten Cost-per-Hire liefert.</p>
 
@@ -307,12 +307,12 @@ export const batch16: BlogPost[] = [
 
 <h2>Eigene Kandidaten-Pipeline aufbauen: Talent Pool</h2>
 
-<p>Die nachhaltigste Antwort auf steigende Jobbörsen-Kosten ist der Aufbau einer eigenen Kandidaten-Pipeline. Ein gut gepflegter Talent Pool reduziert die Abhängigkeit von externen Kanälen und senkt den Cost-per-Hire langfristig auf einen Bruchteil der Jobbörsen-Kosten.</p>
+<p>Die nachhaltigste Antwort auf steigende Jobbörsen-Kosten ist der Aufbau einer eigenen Kandidaten-Pipeline. Ein <a href="/produkt/talent-pools/">gut gepflegter Talent Pool</a> reduziert die Abhängigkeit von externen Kanälen und senkt den Cost-per-Hire langfristig auf einen Bruchteil der Jobbörsen-Kosten.</p>
 
 <p>Was einen funktionierenden Talent Pool ausmacht:</p>
 
 <ul>
-  <li><strong>Systematische Erfassung:</strong> Jeder Kandidat, der jemals mit Ihnen in Kontakt war, ob über eine Bewerbung, ein Event, ein Gespräch oder eine Empfehlung, gehört in den Talent Pool. Die meisten ATS-Systeme bieten dafür dedizierte Funktionen.</li>
+  <li><strong>Systematische Erfassung:</strong> Jeder Kandidat, der jemals mit Ihnen in Kontakt war, ob über eine Bewerbung, ein Event, ein Gespräch oder eine Empfehlung, gehört in den Talent Pool. Die meisten <a href="/produkt/ats-crm/">ATS-Systeme</a> bieten dafür dedizierte Funktionen.</li>
   <li><strong>Aktive Pflege:</strong> Ein Talent Pool ist kein Friedhof für alte Lebensläufe. Kontaktieren Sie Kandidaten regelmäßig mit relevanten Updates: neue Positionen, Branchen-Insights, Einladungen zu Events. Ziel ist es, im Bewusstsein zu bleiben.</li>
   <li><strong>Segmentierung:</strong> Kategorisieren Sie Kandidaten nach Skills, Erfahrungslevel, Branche und Verfügbarkeit. So können Sie bei einer neuen offenen Stelle sofort die passenden Profile identifizieren und gezielt ansprechen.</li>
   <li><strong>Messbare Ergebnisse:</strong> Tracken Sie, wie viele Einstellungen aus dem Talent Pool kommen. Ein reifer Talent Pool sollte 20 bis 30 Prozent aller Einstellungen ohne externe Kosten ermöglichen.</li>

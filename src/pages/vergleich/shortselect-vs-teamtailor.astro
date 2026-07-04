@@ -9,15 +9,39 @@ const comparisonData = [
   { feature: "KI-Matching", ssStatus: "check" as const, ssLabel: "AgentBurst Match", compStatus: "warn" as const, compLabel: "Basis-KI" },
   { feature: "Karriereseite", ssStatus: "check" as const, ssLabel: "Widget + Seite", compStatus: "check" as const, compLabel: "Stark" },
   { feature: "Agentur-Features", ssStatus: "check" as const, ssLabel: "Komplett", compStatus: "x" as const, compLabel: "Null" },
-  { feature: "Preise", ssStatus: "check" as const, ssLabel: "149 € pro User/Monat", compStatus: "warn" as const, compLabel: "Ab 2.400\u20AC/Jahr" },
+  { feature: "Preise", ssStatus: "check" as const, ssLabel: "149 € pro User/Monat", compStatus: "warn" as const, compLabel: "Ab 2.400€/Jahr" },
   { feature: "Autonomes Screening", ssStatus: "check" as const, ssLabel: "AgentBurst Screen", compStatus: "x" as const, compLabel: "Manuell" },
   { feature: "DSGVO", ssStatus: "check" as const, ssLabel: "EU-nativ", compStatus: "check" as const, compLabel: "EU (Schweden)" },
+];
+
+const faqs = [
+  {
+    question: "Was ist der Unterschied zwischen ShortSelect und Teamtailor?",
+    answer: "Teamtailor ist eine Employer-Branding-Plattform aus Schweden für Inhouse-HR-Teams mit starker Karriereseite. ShortSelect ist ein ATS für Recruiting-Agenturen mit Multi-Tenancy, Client Portal und der KI-Engine AgentBurst für Matching, Screening und Ranking. Beides sind EU-Anbieter, die Zielgruppen unterscheiden sich aber grundlegend.",
+  },
+  {
+    question: "Für wen ist Teamtailor besser geeignet?",
+    answer: "Teamtailor passt besser für Inhouse-HR-Teams, bei denen Employer Branding und eine schöne Karriereseite höchste Priorität haben und die weder Mandantenverwaltung noch Client Portal oder KI-Agenten benötigen.",
+  },
+  {
+    question: "Was kostet ShortSelect im Vergleich zu Teamtailor?",
+    answer: "ShortSelect kostet im Pioneer Plan 149 € pro User/Monat für die ersten 100 Agenturen, danach 300 € pro User/Monat, mit 30 Tagen kostenlosem Test ohne Kreditkarte. Teamtailor startet ab etwa 2.400 € pro Jahr, der genaue Preis hängt von Teamgröße und Tarif ab.",
+  },
+  {
+    question: "Kann ich Teamtailor als Recruiting-Agentur nutzen?",
+    answer: "Nur eingeschränkt. Teamtailor bietet weder Multi-Tenancy noch ein Client Portal, mehrere Mandanten lassen sich also nicht sauber trennen und Kunden können nicht in den Prozess einbezogen werden. ShortSelect ist genau für dieses Agentur-Szenario gebaut.",
+  },
+  {
+    question: "Wie wechsle ich von Teamtailor zu ShortSelect?",
+    answer: "Der Umzug dauert in der Regel etwa 15 Minuten: Account erstellen, Kandidaten und Jobs per CSV oder API importieren, Team einladen und loslegen. Eine Schritt-für-Schritt-Anleitung finden Sie auf unserer Wechsel-Seite.",
+    answerHtml: 'Der Umzug dauert in der Regel etwa 15 Minuten: Account erstellen, Kandidaten und Jobs per CSV oder API importieren, Team einladen und loslegen. Eine Schritt-für-Schritt-Anleitung finden Sie auf unserer <a href="/wechsel/" class="text-primary hover:underline">Wechsel-Seite</a>.',
+  },
 ];
 ---
 
 <VergleichLayout
   title="ShortSelect vs. Teamtailor - ATS Vergleich 2026"
-  description="Teamtailor ist ein Employer-Branding-Tool, kein Agentur-ATS. Null Multi-Tenancy, kein Client Portal, keine autonomen KI-Agenten."
+  description="Teamtailor glänzt bei Employer Branding für Inhouse-HR. ShortSelect: Multi-Tenancy, Client Portal, KI-Agenten ab 149 € pro User. Der Agentur-Vergleich."
   competitorName="Teamtailor"
   heroSubline="Teamtailor glänzt beim Employer Branding. aber für Recruiting-Agenturen fehlt alles: Kein Multi-Tenancy, kein Client Portal, keine autonomen KI-Agenten."
   heroBadge="Vergleich"
@@ -43,8 +67,9 @@ const comparisonData = [
       "Agentur mit mehreren Mandanten und Multi-Tenancy-Bedarf",
       "Autonome AgentBurst-Agenten statt manueller Prozesse",
       "Client Portal für transparente Zusammenarbeit mit Kunden",
-      "Faire Preise: 149 € pro User/Monat statt 2.400\u20AC/Jahr",
+      "Faire Preise: 149 € pro User/Monat statt 2.400€/Jahr",
       "DSGVO-konforme KI für autonomes Matching und Screening",
     ]
   }}
+  faqs={faqs}
 />

@@ -147,12 +147,12 @@ export const batch9: BlogPost[] = [
 
 <h2>Multiposting-Strategie: Mehr Reichweite, weniger Aufwand</h2>
 
-<p>Multiposting bedeutet, eine Stellenanzeige gleichzeitig auf mehreren Jobbörsen zu veröffentlichen, idealerweise aus einem System heraus. Das spart Zeit und ermöglicht einen direkten Performance-Vergleich der Kanäle.</p>
+<p><a href="/produkt/multiposting/">Multiposting</a> bedeutet, eine Stellenanzeige gleichzeitig auf mehreren Jobbörsen zu veröffentlichen, idealerweise aus einem System heraus. Das spart Zeit und ermöglicht einen direkten Performance-Vergleich der Kanäle.</p>
 
 <p>Für eine effektive Multiposting-Strategie gelten folgende Grundsätze:</p>
 
 <ol>
-  <li><strong>Zentrales ATS als Steuerungszentrale:</strong> Alle Bewerbungen laufen in einem System zusammen, unabhängig vom Kanal. So behalten Sie den Überblick und können Source-of-Hire sauber tracken.</li>
+  <li><strong>Zentrales ATS als Steuerungszentrale:</strong> Alle Bewerbungen laufen in <a href="/produkt/ats-crm/">einem System</a> zusammen, unabhängig vom Kanal. So behalten Sie den Überblick und können Source-of-Hire sauber tracken.</li>
   <li><strong>Anzeigentext pro Kanal optimieren:</strong> LinkedIn-Nutzer erwarten einen anderen Tonfall als Indeed-Nutzer. Passen Sie mindestens die Einleitung und den Call-to-Action an.</li>
   <li><strong>Budget dynamisch verteilen:</strong> Starten Sie auf 3–4 Kanälen und schichten Sie das Budget nach 2 Wochen auf die performantesten Kanäle um.</li>
   <li><strong>Laufzeit begrenzen:</strong> Stellenanzeigen, die länger als 30 Tage laufen, verlieren an Sichtbarkeit und Glaubwürdigkeit. Lieber erneuern als laufen lassen.</li>
@@ -160,7 +160,7 @@ export const batch9: BlogPost[] = [
 
 <h2>Karriereseite: Der unterschätzte eigene Kanal</h2>
 
-<p>Ihre Karriereseite ist der günstigste und langfristig effektivste Recruiting-Kanal, wenn sie richtig aufgesetzt ist. Kandidaten, die über Ihre Karriereseite kommen, haben sich bereits mit Ihrem Unternehmen beschäftigt. Die Bewerberqualität ist in der Regel höher, die Cost-per-Hire niedriger.</p>
+<p>Ihre <a href="/produkt/karriereseite/">Karriereseite</a> ist der günstigste und langfristig effektivste Recruiting-Kanal, wenn sie richtig aufgesetzt ist. Kandidaten, die über Ihre Karriereseite kommen, haben sich bereits mit Ihrem Unternehmen beschäftigt. Die Bewerberqualität ist in der Regel höher, die Cost-per-Hire niedriger.</p>
 
 <p>Was eine gute Karriereseite 2026 braucht:</p>
 
@@ -337,7 +337,7 @@ export const batch9: BlogPost[] = [
 <ul>
   <li>Erfassen Sie alle Kandidaten, die im Prozess gut waren, aber nicht eingestellt wurden (Silver Medalists)</li>
   <li>Sammeln Sie Kontakte von Karriere-Events, Messen und Networking</li>
-  <li>Nutzen Sie Ihr ATS, um Kandidaten mit Tags und Notizen zu versehen und bei passenden Stellen automatisch zu benachrichtigen</li>
+  <li>Nutzen Sie Ihr ATS, um Kandidaten in <a href="/produkt/talent-pools/">Talent Pools</a> mit Tags und Notizen zu versehen und bei passenden Stellen automatisch zu benachrichtigen</li>
   <li>Pflegen Sie den Pool mit regelmäßigen Updates (Newsletter, Einladungen zu Events)</li>
 </ul>
 
@@ -388,13 +388,13 @@ export const batch9: BlogPost[] = [
 
 <h3>5. Automatisierung des Recruiting-Prozesses</h3>
 
-<p>Je länger ein Bewerbungsprozess dauert, desto mehr Kandidaten springen ab. In der IT verlieren Unternehmen 60 Prozent der qualifizierten Bewerber, weil der Prozess länger als 3 Wochen dauert. Automatisierung ist der Hebel, um schneller zu werden, ohne Qualitätsverluste.</p>
+<p>Je länger ein Bewerbungsprozess dauert, desto mehr Kandidaten springen ab. In der IT verlieren Unternehmen 60 Prozent der qualifizierten Bewerber, weil der Prozess länger als 3 Wochen dauert. <a href="/produkt/automatisierung/">Automatisierung</a> ist der Hebel, um schneller zu werden, ohne Qualitätsverluste.</p>
 
 <p>Was sich 2026 automatisieren lässt:</p>
 
 <ul>
   <li><strong>Eingangsbestätigungen:</strong> Sofortige, personalisierte Bestätigung nach Bewerbungseingang</li>
-  <li><strong>Vorqualifizierung:</strong> Screening-Fragen und KI-gestütztes Matching filtern unpassende Bewerbungen automatisch</li>
+  <li><strong>Vorqualifizierung:</strong> Screening-Fragen und <a href="/produkt/ki-features/">KI-gestütztes Matching</a> filtern unpassende Bewerbungen automatisch</li>
   <li><strong>Terminplanung:</strong> Self-Service-Buchung für Interviews statt endloser E-Mail-Ping-Pong</li>
   <li><strong>Pipeline-Management:</strong> Automatische Statusupdates und Erinnerungen für das HR-Team</li>
   <li><strong>Absagen:</strong> Wertschätzende, personalisierte Absagen statt Ghosting</li>
@@ -457,7 +457,7 @@ export const batch9: BlogPost[] = [
   <li><strong>Talent Pool starten.</strong> Sammeln Sie jeden guten Kontakt systematisch. In einem ATS, nicht in Excel-Listen oder E-Mail-Ordnern.</li>
   <li><strong>Prozessgeschwindigkeit erhöhen.</strong> Antworten Sie innerhalb von 48 Stunden auf jede Bewerbung. Führen Sie das erste Interview innerhalb einer Woche. Treffen Sie die Einstellungsentscheidung innerhalb von zwei Wochen.</li>
   <li><strong>Benefits sichtbar machen.</strong> Sie bieten flexible Arbeitszeiten, 30 Tage Urlaub und ein gutes Team? Schreiben Sie es in die Stellenanzeige, und auf die Karriereseite.</li>
-  <li><strong>ATS einsetzen.</strong> Ein modernes Bewerbermanagementsystem spart 10 bis 15 Stunden pro Woche. Die Investition amortisiert sich in der Regel nach der ersten Einstellung.</li>
+  <li><strong>ATS einsetzen.</strong> Ein modernes <a href="/produkt/ats-crm/">Bewerbermanagementsystem</a> spart 10 bis 15 Stunden pro Woche. Die Investition amortisiert sich in der Regel nach der ersten Einstellung.</li>
 </ol>
 
 <h2>Fazit: Der Fachkräftemangel ist nicht vorbei, aber managebar</h2>

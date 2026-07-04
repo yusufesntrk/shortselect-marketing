@@ -1,0 +1,261 @@
+---
+import MarketingLayout from '../../layouts/MarketingLayout.astro';
+import CTASection from '../../components/landing/CTASection.astro';
+
+const comparisonData = [
+  { feature: "KI-Agents", ss: "check" as const, ssLabel: "Screening, Matching, Ranking", comp: "x" as const, compLabel: "Keine KI-Agents" },
+  { feature: "KI-Matching", ss: "check" as const, ssLabel: "Match-Score 0 bis 100", comp: "warn" as const, compLabel: "Begrenzt" },
+  { feature: "UI/UX", ss: "check" as const, ssLabel: "Modern, Kanban", comp: "warn" as const, compLabel: "Funktional, klassisch" },
+  { feature: "Preise", ss: "check" as const, ssLabel: "149 € pro User/Monat", comp: "warn" as const, compLabel: "Auf Anfrage" },
+  { feature: "Cloud", ss: "check" as const, ssLabel: "100% Cloud", comp: "check" as const, compLabel: "Cloud + On-Premise" },
+  { feature: "Multiposting", ss: "check" as const, ssLabel: "Wachsend", comp: "check" as const, compLabel: "Stark" },
+  { feature: "Client Portal", ss: "check" as const, ssLabel: "Integriert", comp: "check" as const, compLabel: "Verfügbar" },
+  { feature: "Multi-Mandanten", ss: "check" as const, ssLabel: "Vollständig", comp: "check" as const, compLabel: "Verfügbar" },
+  { feature: "API", ss: "check" as const, ssLabel: "REST + Webhooks", comp: "check" as const, compLabel: "Verfügbar" },
+];
+
+function statusSvg(status: string) {
+  if (status === 'check') return '<svg class="h-5 w-5 text-green-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>';
+  if (status === 'x') return '<svg class="h-5 w-5 text-red-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>';
+  return '<svg class="h-5 w-5 text-yellow-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>';
+}
+
+const whenCoveto = [
+  "Starkes Multiposting mit vielen Jobbörsen-Anbindungen ist Ihr wichtigstes Kriterium",
+  "Eine On-Premise-Installation ist gewünscht oder vorgeschrieben",
+  "Sie setzen auf langjährige Erfahrung und etablierten Support im DACH-Raum",
+  "Ihr Team bevorzugt eine klassische, vertraute Oberfläche",
+];
+
+const whenShortSelect = [
+  "Sie wollen KI-Agents, die Screening, Matching und Ranking im Hintergrund erledigen",
+  "Jeder Kandidat soll einen nachvollziehbaren Match-Score von 0 bis 100 erhalten",
+  "Sie wollen transparente Preise statt Angebot auf Anfrage: 149 € pro User und Monat",
+  "Eine moderne Kanban-Pipeline und aufgeräumte Oberfläche sind Ihnen wichtig",
+  "Sie wollen ohne Installations- und Wartungsaufwand starten, 100% Cloud",
+];
+
+const faqs = [
+  { question: "Welche Alternative zu Coveto gibt es?", answer: "ShortSelect ist eine moderne Alternative zu Coveto für Recruiting-Agenturen und Personalvermittlungen. Der wichtigste Unterschied: ShortSelect arbeitet mit KI-Agents, die Bewerbungen im Hintergrund screenen, matchen und ranken. Dazu kommen eine moderne Kanban-Oberfläche, Client Portal, Multi-Mandanten-Fähigkeit und transparente Preise ab 149 Euro pro User und Monat." },
+  { question: "Was unterscheidet ShortSelect von Coveto?", answer: "Coveto ist ein etabliertes ATS mit starkem Multiposting-Netzwerk und optionaler On-Premise-Installation. ShortSelect setzt auf KI-gestützte Automatisierung: Die KI-Engine AgentBurst bewertet jeden Kandidaten mit einem Match-Score von 0 bis 100, nachvollziehbar pro Kriterium. Außerdem sind die Preise öffentlich, statt nur auf Anfrage." },
+  { question: "Was kostet ShortSelect im Vergleich zu Coveto?", answer: "ShortSelect kostet im Pioneer Plan 149 Euro pro User und Monat, mit allen Funktionen inklusive. Coveto nennt Preise auf Anfrage. Bei ShortSelect können Sie zudem 30 Tage kostenlos testen, ohne Kreditkarte." },
+  { question: "Kann ich meine Daten von Coveto zu ShortSelect umziehen?", answer: "Ja. Kandidaten und Jobs lassen sich per CSV-Import oder API übertragen. Der Grund-Umzug dauert in der Regel unter einer Stunde: Account erstellen, Daten importieren, Team einladen, loslegen." },
+  { question: "Für wen bleibt Coveto die bessere Wahl?", answer: "Coveto passt gut, wenn Sie eine On-Premise-Installation benötigen, auf ein besonders breites Multiposting-Netzwerk angewiesen sind oder bewusst auf einen langjährig etablierten Anbieter mit klassischer Oberfläche setzen möchten." },
+  { question: "Kann ich ShortSelect kostenlos testen?", answer: "Ja, 30 Tage lang mit vollem Funktionsumfang und ohne Kreditkarte. Der Test endet automatisch, wenn Sie sich nicht aktiv für einen Plan entscheiden." },
+];
+
+const webPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  name: "Coveto Alternative 2026: das moderne ATS",
+  description: "Welche Alternative zu Coveto gibt es? ShortSelect: modernes ATS mit KI-Matching für Recruiting-Agenturen, ab 149 Euro pro User. 30 Tage gratis testen.",
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.shortselect.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Vergleich", "item": "https://www.shortselect.com/vergleich/" },
+    { "@type": "ListItem", "position": 3, "name": "Coveto Alternative" }
+  ]
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((f) => ({
+    "@type": "Question",
+    name: f.question,
+    acceptedAnswer: { "@type": "Answer", text: f.answer }
+  }))
+};
+---
+
+<MarketingLayout
+  title="Coveto Alternative 2026: das moderne ATS | ShortSelect"
+  description="Welche Alternative zu Coveto gibt es? ShortSelect: modernes ATS mit KI-Matching für Recruiting-Agenturen, ab 149 Euro pro User. 30 Tage gratis testen."
+  jsonLd={[webPageSchema, breadcrumbSchema, faqSchema]}
+>
+  <!-- Hero -->
+  <section class="relative overflow-hidden py-20 md:py-32">
+    <div class="absolute inset-0 bg-gradient-to-br from-primary/10 via-accent/5 to-background"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,hsl(var(--primary)/0.15),transparent_50%)]"></div>
+    <div class="absolute top-20 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-float-slow"></div>
+    <div class="absolute bottom-20 right-10 w-96 h-96 bg-accent/10 rounded-full blur-3xl animate-float-slow" style="animation-delay: -3s;"></div>
+    <div class="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.03)_1px,transparent_1px)] bg-[size:60px_60px] [mask-image:radial-gradient(ellipse_at_center,black_30%,transparent_70%)]"></div>
+
+    <div class="container relative mx-auto px-4">
+      <div class="mx-auto max-w-4xl text-center space-y-8">
+        <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700 hero-badge-premium">
+          <svg class="h-4 w-4 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></svg>
+          Vergleich
+        </div>
+
+        <h1 class="reveal-item opacity-0 translate-y-8 transition-all duration-700 text-4xl md:text-6xl font-display font-bold tracking-tight" style="transition-delay: 100ms;">
+          Coveto Alternative:{" "}
+          <span class="relative inline-block text-primary">das moderne ATS</span>{" "}
+          für Recruiting-Agenturen
+        </h1>
+
+        <p class="reveal-item opacity-0 translate-y-8 transition-all duration-700 text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto" style="transition-delay: 200ms;">
+          Welche Alternative zu Coveto gibt es? ShortSelect ist ein modernes ATS mit CRM für Recruiting-Agenturen und Personalvermittlungen: KI-gestütztes Matching mit Match-Score von 0 bis 100, Kanban-Pipeline, Client Portal und transparente Preise ab 149 € pro User und Monat. 30 Tage kostenlos testen, ohne Kreditkarte.
+        </p>
+
+        <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700 flex flex-col sm:flex-row items-center justify-center gap-4 pt-4" style="transition-delay: 300ms;">
+          <a href="https://app.shortselect.com/signup" class="inline-flex items-center gap-2 px-8 py-3 bg-primary text-primary-foreground font-semibold rounded-lg text-base group relative overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+            <span class="relative z-10 flex items-center gap-2">
+              Jetzt kostenlos testen
+              <svg class="h-5 w-5 transition-transform group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </span>
+          </a>
+          <a href="/preise/" class="inline-flex items-center gap-2 px-8 py-3 border-2 border-border font-semibold rounded-lg text-base transition-all hover:bg-muted">
+            Preise ansehen
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Warum eine Alternative suchen -->
+  <section class="py-16 md:py-24 bg-muted/30">
+    <div class="container mx-auto px-4">
+      <div class="max-w-3xl mx-auto">
+        <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700 text-center mb-10">
+          <h2 class="text-3xl md:text-4xl font-display font-bold tracking-tight mb-4">Warum überhaupt eine Coveto Alternative?</h2>
+        </div>
+        <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700 space-y-4 text-muted-foreground text-lg leading-relaxed" style="transition-delay: 150ms;">
+          <p>
+            Zunächst die faire Einordnung: Coveto ist eines der etabliertesten ATS im DACH-Markt und führt die ATS-Kategorie auf OMR Reviews an. Das Multiposting-Netzwerk ist stark, es gibt Cloud und On-Premise, und der Anbieter bringt langjährige Erfahrung im deutschsprachigen Recruiting mit. Wer genau das sucht, ist bei Coveto gut aufgehoben.
+          </p>
+          <p>
+            Der Blick auf eine Alternative lohnt sich vor allem in drei Fällen: wenn Sie KI-Agents wollen, die Screening, Matching und Ranking selbstständig übernehmen statt manueller Workflows. Wenn Sie eine moderne, aufgeräumte Oberfläche mit Kanban-Pipeline bevorzugen. Und wenn Sie transparente Preise pro User erwarten statt eines Angebots auf Anfrage.
+          </p>
+          <p>
+            Genau hier setzt ShortSelect an. Den direkten Feature-Vergleich finden Sie auch auf unserer Seite <a href="/vergleich/shortselect-vs-coveto/" class="text-primary hover:underline">ShortSelect vs. Coveto</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Vergleichstabelle -->
+  <section class="py-16 md:py-24">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700 text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-display font-bold tracking-tight mb-4">ShortSelect und Coveto im Vergleich</h2>
+          <p class="text-muted-foreground text-lg">Ein ehrlicher Blick auf die Unterschiede.</p>
+        </div>
+
+        <div class="reveal-item opacity-0 translate-y-8 transition-all duration-500 grid grid-cols-3 gap-4 px-4 py-3 rounded-t-lg bg-muted font-semibold text-sm" style="transition-delay: 100ms;">
+          <span>Feature</span>
+          <span class="text-center">ShortSelect</span>
+          <span class="text-center">Coveto</span>
+        </div>
+
+        {comparisonData.map((row, index) => (
+          <div class="reveal-item opacity-0 translate-y-8 transition-all duration-500 grid grid-cols-3 gap-4 px-4 py-4 border-b last:border-b-0 items-center" style={`transition-delay: ${Math.min((index + 2) * 80, 500)}ms;`}>
+            <span class="font-medium text-sm">{row.feature}</span>
+            <div class="flex items-center justify-center gap-2 bg-primary/5 rounded-lg py-2">
+              <Fragment set:html={statusSvg(row.ss)} />
+              <span class="text-sm hidden sm:inline">{row.ssLabel}</span>
+            </div>
+            <div class="flex items-center justify-center gap-2 py-2">
+              <Fragment set:html={statusSvg(row.comp)} />
+              <span class="text-sm hidden sm:inline text-muted-foreground">{row.compLabel}</span>
+            </div>
+          </div>
+        ))}
+
+        <p class="reveal-item opacity-0 translate-y-8 transition-all duration-700 text-sm text-muted-foreground mt-6 text-center">
+          Mehr zu den KI-Funktionen von ShortSelect: <a href="/produkt/ki-features/" class="text-primary hover:underline">KI-Features im Detail</a>.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Wann was passt -->
+  <section class="py-16 md:py-24 bg-muted/30">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-12">
+        <div class="reveal-item opacity-0 translate-y-8 transition-all duration-500" style="transition-delay: 150ms;">
+          <span class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold bg-secondary text-secondary-foreground mb-4">Faire Einschätzung</span>
+          <h2 class="text-2xl md:text-3xl font-display font-bold tracking-tight mb-4">Wann Coveto gut passt</h2>
+          <ul class="space-y-3">
+            {whenCoveto.map((item) => (
+              <li class="flex items-start gap-2 text-sm">
+                <svg class="h-4 w-4 text-muted-foreground shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+                <span class="text-muted-foreground">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div class="reveal-item opacity-0 translate-y-8 transition-all duration-500" style="transition-delay: 300ms;">
+          <span class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold bg-primary/10 text-primary border-primary/20 mb-4">Empfehlung</span>
+          <h2 class="text-2xl md:text-3xl font-display font-bold tracking-tight mb-4">Wann ShortSelect die bessere Alternative ist</h2>
+          <ul class="space-y-3">
+            {whenShortSelect.map((item) => (
+              <li class="flex items-start gap-2 text-sm">
+                <svg class="h-4 w-4 text-green-600 shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Wechsel -->
+  <section class="py-16 md:py-24">
+    <div class="container mx-auto px-4">
+      <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700 max-w-3xl mx-auto text-center space-y-6">
+        <h2 class="text-3xl md:text-4xl font-display font-bold tracking-tight">Der Wechsel ist einfacher als gedacht</h2>
+        <p class="text-lg text-muted-foreground">
+          Kandidaten und Jobs übertragen Sie per CSV oder API, Ihr Team ist in Minuten eingeladen. Wie der Umstieg im Detail abläuft, zeigen wir auf unserer <a href="/wechsel/" class="text-primary hover:underline">Wechsel-Seite</a>. Alle Preise und den Pioneer Plan finden Sie unter <a href="/preise/" class="text-primary hover:underline">Preise</a>.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16 md:py-24 bg-muted/30">
+    <div class="container mx-auto px-4">
+      <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700 text-center max-w-3xl mx-auto mb-12">
+        <h2 class="text-3xl md:text-4xl font-display font-bold tracking-tight">Häufige Fragen zur Coveto Alternative</h2>
+      </div>
+      <div class="max-w-3xl mx-auto space-y-0 rounded-xl border bg-card overflow-hidden">
+        {faqs.map((item) => (
+          <details class="reveal-item opacity-0 translate-y-8 transition-all duration-700 border-b last:border-0 group">
+            <summary class="flex items-center justify-between w-full py-5 px-6 text-left cursor-pointer font-display font-bold text-lg list-none [&::-webkit-details-marker]:hidden">
+              {item.question}
+              <svg class="h-5 w-5 text-muted-foreground shrink-0 ml-4 transition-transform duration-300 group-open:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+            </summary>
+            <div class="px-6 pb-5 text-muted-foreground leading-relaxed">{item.answer}</div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <CTASection />
+</MarketingLayout>
+
+<script is:inline>
+(function() {
+  var items = document.querySelectorAll('.reveal-item');
+  if (!items.length) return;
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  items.forEach(function(item) { observer.observe(item); });
+})();
+</script>

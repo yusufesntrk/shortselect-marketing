@@ -29,7 +29,7 @@ export const batch8: BlogPost[] = [
 <h3>So nutzen Sie diesen Trend</h3>
 
 <ul>
-<li>Implementieren Sie ein ATS mit integriertem KI-Matching wie ShortSelect, das Kandidatenprofile automatisch mit Stellenanforderungen abgleicht.</li>
+<li>Implementieren Sie ein ATS mit integriertem <a href="/produkt/ki-features/">KI-Matching</a> wie ShortSelect, das Kandidatenprofile automatisch mit Stellenanforderungen abgleicht.</li>
 <li>Definieren Sie klare Anforderungsprofile mit gewichteten Kompetenzen, damit die KI präzise arbeiten kann.</li>
 <li>Nutzen Sie die Ergebnisse als Entscheidungshilfe, nicht als alleiniges Auswahlkriterium. Die finale Entscheidung bleibt beim Menschen.</li>
 </ul>
@@ -43,7 +43,7 @@ export const batch8: BlogPost[] = [
 <h3>Praktische Empfehlungen</h3>
 
 <ul>
-<li>Starten Sie mit einem klar definierten Use Case, etwa der automatischen Vorqualifizierung von Bewerbungen anhand von Screening-Fragen.</li>
+<li>Starten Sie mit einem klar definierten Use Case, etwa der <a href="/produkt/automatisierung/">automatischen Vorqualifizierung von Bewerbungen</a> anhand von Screening-Fragen.</li>
 <li>Achten Sie auf DSGVO-Konformität: Bewerber müssen informiert werden, wenn sie mit einer KI interagieren.</li>
 <li>Messen Sie die Qualität der KI-Screening-Ergebnisse regelmäßig und kalibrieren Sie die Modelle anhand von Feedback aus dem Hiring-Team.</li>
 </ul>
@@ -73,7 +73,7 @@ export const batch8: BlogPost[] = [
 <h3>Datengetriebenes Employer Branding in der Praxis</h3>
 
 <ul>
-<li>Tracken Sie die Conversion-Rate Ihrer Karriereseite: Wie viele Besucher werden zu Bewerbern?</li>
+<li>Tracken Sie die Conversion-Rate Ihrer <a href="/produkt/karriereseite/">Karriereseite</a>: Wie viele Besucher werden zu Bewerbern?</li>
 <li>Analysieren Sie Abbruchquoten im Bewerbungsprozess, um Reibungspunkte zu identifizieren.</li>
 <li>Nutzen Sie A/B-Tests für Stellenanzeigen, um herauszufinden, welche Formulierungen und Benefits die meisten qualifizierten Bewerbungen generieren.</li>
 <li>Sammeln Sie systematisch Feedback von Bewerbern und Neueinstellungen zur Candidate Experience.</li>
@@ -104,7 +104,7 @@ export const batch8: BlogPost[] = [
 
 <ul>
 <li>Definieren Sie Ihre fünf wichtigsten Recruiting-KPIs und messen Sie diese konsequent.</li>
-<li>Nutzen Sie ein ATS, das diese Daten automatisch erfasst und in übersichtlichen Dashboards aufbereitet.</li>
+<li>Nutzen Sie ein <a href="/produkt/ats-crm/">ATS, das diese Daten automatisch erfasst</a> und in übersichtlichen Dashboards aufbereitet.</li>
 <li>Etablieren Sie wöchentliche Daten-Reviews im Recruiting-Team, um Trends frühzeitig zu erkennen.</li>
 <li>Vergleichen Sie Ihre Zahlen mit Branchen-Benchmarks, um Ihren Reifegrad realistisch einzuschätzen.</li>
 </ul>
@@ -326,8 +326,8 @@ export const batch8: BlogPost[] = [
 <p>Technologie kann ein strukturiertes Onboarding erheblich erleichtern. Die richtigen Tools automatisieren Routineaufgaben und stellen sicher, dass nichts vergessen wird.</p>
 
 <ul>
-<li><strong>Applicant Tracking System (ATS):</strong> Ein modernes ATS wie ShortSelect ermöglicht den nahtlosen Übergang vom Recruiting zum Onboarding. Alle Kandidateninformationen, Gesprächsnotizen und Bewertungen stehen dem Onboarding-Team sofort zur Verfügung.</li>
-<li><strong>Digitale Checklisten:</strong> Tools für automatisierte Aufgabenlisten stellen sicher, dass jeder Schritt des Onboarding-Plans abgearbeitet wird.</li>
+<li><strong>Applicant Tracking System (ATS):</strong> Ein <a href="/produkt/ats-crm/">modernes ATS</a> wie ShortSelect ermöglicht den nahtlosen Übergang vom Recruiting zum Onboarding. Alle Kandidateninformationen, Gesprächsnotizen und Bewertungen stehen dem Onboarding-Team sofort zur Verfügung.</li>
+<li><strong>Digitale Checklisten:</strong> Tools für <a href="/produkt/automatisierung/">automatisierte Aufgabenlisten</a> stellen sicher, dass jeder Schritt des Onboarding-Plans abgearbeitet wird.</li>
 <li><strong>Lernplattformen:</strong> Für Schulungsinhalte, Produktwissen und Compliance-Trainings. Neue Mitarbeiter können in ihrem eigenen Tempo lernen.</li>
 <li><strong>Kommunikationstools:</strong> Slack, Microsoft Teams oder ähnliche Plattformen mit einem dedizierten Kanal für neue Mitarbeiter, in dem Fragen offen gestellt werden können.</li>
 <li><strong>Feedback-Tools:</strong> Pulse-Surveys und Check-in-Formulare, die automatisch zu den richtigen Zeitpunkten versendet werden.</li>

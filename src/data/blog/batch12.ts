@@ -15,7 +15,7 @@ export const batch12: BlogPost[] = [
     content: `
 <h2>Was ist CV-Parsing?</h2>
 
-<p>Recruiter in Deutschland sichten im Durchschnitt 23 Stunden pro Woche Lebensläufe. Pro offene Stelle gehen zwischen 50 und 250 Bewerbungen ein, je nach Branche und Standort. Jeder Lebenslauf muss gelesen, bewertet und in das Bewerbermanagementsystem eingepflegt werden. Das ist nicht nur zeitaufwendig, sondern auch fehleranfällig: Tippfehler bei der Dateneingabe, vergessene Qualifikationen und subjektive Vorselektion kosten Unternehmen bares Geld.</p>
+<p>Recruiter in Deutschland sichten im Durchschnitt 23 Stunden pro Woche Lebensläufe. Pro offene Stelle gehen zwischen 50 und 250 Bewerbungen ein, je nach Branche und Standort. Jeder Lebenslauf muss gelesen, bewertet und in das <a href="/produkt/ats-crm/">Bewerbermanagementsystem</a> eingepflegt werden. Das ist nicht nur zeitaufwendig, sondern auch fehleranfällig: Tippfehler bei der Dateneingabe, vergessene Qualifikationen und subjektive Vorselektion kosten Unternehmen bares Geld.</p>
 
 <p>CV-Parsing ist die Technologie, die diesen Engpass auflöst. Der Begriff setzt sich aus <strong>CV</strong> (Curriculum Vitae, also Lebenslauf) und <strong>Parsing</strong> (maschinelles Analysieren und Zerlegen von Daten) zusammen. Ein CV-Parser liest ein Bewerbungsdokument ein, identifiziert die relevanten Informationsfelder und wandelt die unstrukturierten Daten in ein strukturiertes, maschinenlesbares Format um. Das Ergebnis: Statt manueller Eingabe werden Name, Kontaktdaten, Berufserfahrung und Qualifikationen automatisch in die richtigen Datenbankfelder geschrieben.</p>
 
@@ -69,7 +69,7 @@ export const batch12: BlogPost[] = [
 
 <h3>Schnellere Recruiting-Pipeline</h3>
 
-<p>CV-Parsing beschleunigt den gesamten Recruiting-Prozess. Bewerbungen werden nicht nur schneller erfasst, sondern können direkt mit den Anforderungen der Stelle abgeglichen werden. Ein automatischer Vorfilter auf Basis der geparsten Daten sortiert ungeeignete Bewerbungen aus und priorisiert die vielversprechendsten Kandidaten. Das verkürzt die Time-to-Shortlist von Tagen auf Stunden.</p>
+<p>CV-Parsing beschleunigt den gesamten Recruiting-Prozess. Bewerbungen werden nicht nur schneller erfasst, sondern können direkt <a href="/produkt/ki-features/">mit den Anforderungen der Stelle abgeglichen</a> werden. Ein automatischer Vorfilter auf Basis der geparsten Daten sortiert ungeeignete Bewerbungen aus und priorisiert die vielversprechendsten Kandidaten. Das verkürzt die Time-to-Shortlist von Tagen auf Stunden.</p>
 
 <blockquote>
   <strong>Praxis-Tipp:</strong> Kombinieren Sie CV-Parsing mit einem automatischen Scoring-Modell. Definieren Sie Muss-Kriterien (z. B. bestimmte Zertifizierungen oder Mindest-Berufserfahrung) und lassen Sie den Parser die Vorselektion übernehmen. So konzentrieren Sie sich auf die Top-20-Prozent der Bewerbungen.
@@ -94,7 +94,7 @@ export const batch12: BlogPost[] = [
 <ol>
   <li><strong>Sprachsupport für Deutsch:</strong> Viele Parser sind primär für den englischsprachigen Markt entwickelt. Achten Sie darauf, dass der Parser explizit für deutsche Lebensläufe optimiert ist und Umlaute, zusammengesetzte Wörter und deutsche Datumsformate (TT.MM.JJJJ) korrekt verarbeitet.</li>
   <li><strong>Genauigkeit (Accuracy):</strong> Fragen Sie nach Benchmarks. Seriöse Anbieter können Genauigkeitsraten pro Feld dokumentieren. Eine Gesamtgenauigkeit von "95 Prozent" sagt wenig aus, wenn die Genauigkeit bei Skills nur bei 80 Prozent liegt.</li>
-  <li><strong>Datenschutz und DSGVO:</strong> Lebensläufe enthalten hochsensible personenbezogene Daten. Prüfen Sie, wo die Daten verarbeitet werden (EU-Server?), wie lange sie gespeichert werden und ob der Anbieter einen Auftragsverarbeitungsvertrag (AVV) bereitstellt. Cloud-basierte Parser, die Daten in die USA übertragen, sind aus DSGVO-Sicht problematisch.</li>
+  <li><strong>Datenschutz und <a href="/produkt/compliance/">DSGVO</a>:</strong> Lebensläufe enthalten hochsensible personenbezogene Daten. Prüfen Sie, wo die Daten verarbeitet werden (EU-Server?), wie lange sie gespeichert werden und ob der Anbieter einen Auftragsverarbeitungsvertrag (AVV) bereitstellt. Cloud-basierte Parser, die Daten in die USA übertragen, sind aus DSGVO-Sicht problematisch.</li>
   <li><strong>Integrationen:</strong> Der Parser muss sich nahtlos in Ihr bestehendes ATS oder Ihre Recruiting-Software integrieren lassen. API-basierte Lösungen bieten hier die größte Flexibilität.</li>
   <li><strong>Verarbeitungsgeschwindigkeit:</strong> Bei hohem Bewerbungsvolumen zählt jede Sekunde. Testen Sie die Verarbeitungszeit unter realistischen Bedingungen mit deutschen Lebensläufen in verschiedenen Formaten.</li>
 </ol>
@@ -169,9 +169,9 @@ export const batch12: BlogPost[] = [
 <h3>Die Argumente dafür</h3>
 
 <ul>
-  <li><strong>Höhere Bewerbungsrate:</strong> Stellenanzeigen mit Gehaltsangabe erhalten laut einer Analyse von Indeed 30 Prozent mehr Bewerbungen. Bei Positionen im mittleren Gehaltssegment (40.000 bis 70.000 Euro) ist der Effekt besonders ausgeprägt.</li>
+  <li><strong>Höhere Bewerbungsrate:</strong> <a href="/produkt/multiposting/">Stellenanzeigen</a> mit Gehaltsangabe erhalten laut einer Analyse von Indeed 30 Prozent mehr Bewerbungen. Bei Positionen im mittleren Gehaltssegment (40.000 bis 70.000 Euro) ist der Effekt besonders ausgeprägt.</li>
   <li><strong>Bessere Kandidatenpassung:</strong> Wenn der Gehaltsrahmen bekannt ist, bewerben sich weniger Kandidaten, deren Vorstellungen außerhalb des Budgets liegen. Das spart Screening-Zeit und reduziert Absagen in späten Prozessphasen.</li>
-  <li><strong>Employer Branding:</strong> Transparenz wird von Kandidaten als Zeichen einer modernen, fairen Unternehmenskultur gewertet. Besonders die Generation Z und Millennials bewerten Gehaltstrransparenz als wichtigen Faktor bei der Arbeitgeberwahl.</li>
+  <li><strong><a href="/produkt/karriereseite/">Employer Branding</a>:</strong> Transparenz wird von Kandidaten als Zeichen einer modernen, fairen Unternehmenskultur gewertet. Besonders die Generation Z und Millennials bewerten Gehaltstrransparenz als wichtigen Faktor bei der Arbeitgeberwahl.</li>
   <li><strong>Schnellere Time-to-Hire:</strong> Wenn die Gehaltserwartungen von Anfang an klar sind, entfallen langwierige Verhandlungsrunden am Ende des Prozesses.</li>
 </ul>
 

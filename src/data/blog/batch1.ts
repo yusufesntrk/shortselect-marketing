@@ -21,7 +21,7 @@ export const batch1: BlogPost[] = [
 <p>Ein ATS begleitet den gesamten Recruiting-Lebenszyklus. Die folgenden Kernfunktionen bilden das Herzstück jeder modernen Bewerbermanagement-Software:</p>
 
 <h3>1. Stellenanzeigen erstellen und veröffentlichen</h3>
-<p>Mit einem ATS erstellen Sie Stellenanzeigen direkt in der Software und veröffentlichen sie mit wenigen Klicks auf mehreren Kanälen gleichzeitig, sei es auf Ihrer Karriereseite, auf Jobbörsen wie StepStone und Indeed oder über Social-Media-Plattformen wie LinkedIn und Xing. Das sogenannte <strong>Multiposting</strong> spart enorm viel Zeit und stellt sicher, dass Ihre Ausschreibung die maximale Reichweite erzielt.</p>
+<p>Mit einem ATS erstellen Sie Stellenanzeigen direkt in der Software und veröffentlichen sie mit wenigen Klicks auf mehreren Kanälen gleichzeitig, sei es auf Ihrer Karriereseite, auf Jobbörsen wie StepStone und Indeed oder über Social-Media-Plattformen wie LinkedIn und Xing. Das sogenannte <strong><a href="/produkt/multiposting/">Multiposting</a></strong> spart enorm viel Zeit und stellt sicher, dass Ihre Ausschreibung die maximale Reichweite erzielt.</p>
 <p>Viele Systeme bieten zudem Vorlagen und Textbausteine an, damit Ihre Stellenanzeigen professionell und einheitlich aussehen, unabhängig davon, wer sie erstellt.</p>
 
 <h3>2. Bewerbungseingang und Parsing</h3>
@@ -64,7 +64,7 @@ export const batch1: BlogPost[] = [
 <ul>
 <li><strong>ATS (Applicant Tracking System):</strong> Fokussiert sich auf den Recruiting-Prozess, von der Stellenausschreibung bis zur Einstellung. Es ist das Werkzeug für Recruiter und Hiring Manager, um Bewerbungen zu verwalten und den Auswahlprozess zu steuern.</li>
 <li><strong>HR-Software (HRIS/HCM):</strong> Deckt den gesamten Mitarbeiterlebenszyklus ab, von der Personalakte über Gehaltsabrechnung, Zeiterfassung und Urlaubsverwaltung bis hin zu Performance Management. Der Recruiting-Teil ist hier oft nur rudimentär abgedeckt.</li>
-<li><strong>Recruiting-CRM:</strong> Konzentriert sich auf die Beziehungspflege mit potenziellen Kandidaten, bevor diese sich bewerben. Es dient dem Aufbau von Talent Pools und dem langfristigen Beziehungsmanagement, ähnlich wie ein Vertriebs-CRM für Kunden.</li>
+<li><strong>Recruiting-CRM:</strong> Konzentriert sich auf die Beziehungspflege mit potenziellen Kandidaten, bevor diese sich bewerben. Es dient dem Aufbau von <a href="/produkt/talent-pools/">Talent Pools</a> und dem langfristigen Beziehungsmanagement, ähnlich wie ein Vertriebs-CRM für Kunden.</li>
 </ul>
 
 <p>In der Praxis ergänzen sich diese Systeme ideal: Das CRM sorgt für eine volle Pipeline, das ATS steuert den Auswahlprozess, und die HR-Software übernimmt nach der Einstellung. Viele moderne ATS-Lösungen integrieren bereits CRM-Funktionen, sodass Sie nicht zwingend separate Systeme benötigen.</p>
@@ -73,7 +73,7 @@ export const batch1: BlogPost[] = [
 <p>Die Auswahl des richtigen ATS ist eine strategische Entscheidung, die Ihr Recruiting für Jahre prägen wird. Achten Sie auf folgende Kriterien:</p>
 
 <h3>DSGVO-Konformität</h3>
-<p>Für Unternehmen in der DACH-Region ist die DSGVO-Konformität keine Option, sondern Pflicht. Achten Sie darauf, dass das ATS Bewerberdaten DSGVO-konform verarbeitet, automatische Löschfristen unterstützt, Einwilligungen dokumentiert und Daten auf europäischen Servern speichert. Fragen Sie den Anbieter explizit nach einem Auftragsverarbeitungsvertrag (AVV) und nach Zertifizierungen wie ISO 27001.</p>
+<p>Für Unternehmen in der DACH-Region ist die DSGVO-Konformität keine Option, sondern Pflicht. Achten Sie darauf, dass das ATS Bewerberdaten <a href="/produkt/compliance/">DSGVO-konform verarbeitet</a>, automatische Löschfristen unterstützt, Einwilligungen dokumentiert und Daten auf europäischen Servern speichert. Fragen Sie den Anbieter explizit nach einem Auftragsverarbeitungsvertrag (AVV) und nach Zertifizierungen wie ISO 27001.</p>
 
 <h3>Benutzerfreundlichkeit</h3>
 <p>Das beste ATS nützt nichts, wenn Ihr Team es nicht nutzt. Eine intuitive Benutzeroberfläche, schnelle Einarbeitung und mobiler Zugriff sind entscheidend für die Akzeptanz. Achten Sie auf ein modernes Design, klare Workflows und eine flache Lernkurve. Tipp: Testen Sie das System immer mit den tatsächlichen Endanwendern, nicht nur mit der IT-Abteilung.</p>
@@ -82,7 +82,7 @@ export const batch1: BlogPost[] = [
 <p>Kein ATS arbeitet isoliert. Prüfen Sie, ob das System sich nahtlos in Ihre bestehende Infrastruktur integriert: E-Mail-Systeme, Kalender, Jobbörsen, Video-Interview-Tools, HRIS-Systeme und Kommunikationstools wie Slack oder Microsoft Teams. Je besser die Integrationen, desto weniger manuelle Arbeit fällt an.</p>
 
 <h3>Preis-Leistungs-Verhältnis</h3>
-<p>Die Preismodelle variieren stark: einige Anbieter berechnen pro User, andere pro offene Stelle, wieder andere bieten Flatrates an. Achten Sie auf versteckte Kosten für Onboarding, Support, Multiposting oder zusätzliche Features. Berechnen Sie den ROI: Ein ATS, das Ihre Time-to-Hire um 30 % reduziert und die Qualität Ihrer Einstellungen verbessert, zahlt sich schnell aus.</p>
+<p>Die <a href="/preise/">Preismodelle</a> variieren stark: einige Anbieter berechnen pro User, andere pro offene Stelle, wieder andere bieten Flatrates an. Achten Sie auf versteckte Kosten für Onboarding, Support, Multiposting oder zusätzliche Features. Berechnen Sie den ROI: Ein ATS, das Ihre Time-to-Hire um 30 % reduziert und die Qualität Ihrer Einstellungen verbessert, zahlt sich schnell aus.</p>
 
 <h3>Skalierbarkeit</h3>
 <p>Ihr Unternehmen wächst, und Ihr ATS sollte mitwachsen können. Achten Sie darauf, dass das System auch bei steigendem Stellenvolumen, mehr Nutzern und komplexeren Workflows performant bleibt. Cloud-basierte Lösungen haben hier einen klaren Vorteil gegenüber On-Premise-Systemen, da sie flexibel skalieren und regelmäßig Updates erhalten.</p>
@@ -124,8 +124,8 @@ export const batch1: BlogPost[] = [
 <ul>
 <li>Analysieren Sie, in welcher Phase die meiste Zeit verloren geht (Screening, Interview-Planung, Entscheidungsfindung).</li>
 <li>Setzen Sie feste SLAs für jede Pipeline-Phase: z. B. Screening innerhalb von 48 Stunden, Feedback nach Interview innerhalb von 24 Stunden.</li>
-<li>Nutzen Sie automatisierte Terminplanung, um die Koordination von Vorstellungsgesprächen zu beschleunigen.</li>
-<li>Bauen Sie einen Talent Pool auf, damit Sie bei neuen Vakanzen nicht bei null anfangen.</li>
+<li>Nutzen Sie <a href="/produkt/automatisierung/">automatisierte Terminplanung</a>, um die Koordination von Vorstellungsgesprächen zu beschleunigen.</li>
+<li>Bauen Sie einen <a href="/produkt/talent-pools/">Talent Pool</a> auf, damit Sie bei neuen Vakanzen nicht bei null anfangen.</li>
 </ul>
 
 <h2>2. Cost-per-Hire</h2>
@@ -141,7 +141,7 @@ export const batch1: BlogPost[] = [
 <h3>Optimierungstipps</h3>
 <ul>
 <li>Identifizieren Sie die teuersten Recruiting-Kanäle und prüfen Sie deren tatsächliche Effektivität.</li>
-<li>Investieren Sie in Ihre Karriereseite und Employer Branding, organische Bewerbungen sind die kostengünstigsten.</li>
+<li>Investieren Sie in Ihre <a href="/produkt/karriereseite/">Karriereseite</a> und Employer Branding, organische Bewerbungen sind die kostengünstigsten.</li>
 <li>Nutzen Sie Mitarbeiterempfehlungsprogramme: Empfehlungen kosten oft weniger und führen zu besseren Einstellungen.</li>
 <li>Automatisieren Sie administrative Aufgaben mit einem ATS, um interne Personalkosten zu senken.</li>
 </ul>
@@ -301,7 +301,7 @@ export const batch1: BlogPost[] = [
 <li><strong>Weniger ist mehr:</strong> Starten Sie mit drei bis fünf KPIs, die für Ihr Unternehmen aktuell am relevantesten sind. Es ist besser, wenige Kennzahlen konsequent zu tracken und daraus zu lernen, als zehn KPIs halbherzig zu erheben.</li>
 <li><strong>Kontext statt Zahlen:</strong> Eine Time-to-Hire von 45 Tagen ist weder gut noch schlecht, sie muss im Kontext Ihrer Branche, der Position und des Arbeitsmarkts bewertet werden. Setzen Sie eigene Benchmarks basierend auf Ihren historischen Daten.</li>
 <li><strong>Regelmäßige Reviews:</strong> Analysieren Sie Ihre KPIs mindestens monatlich im Team. Identifizieren Sie Trends, feiern Sie Verbesserungen und leiten Sie konkrete Maßnahmen bei negativen Entwicklungen ab.</li>
-<li><strong>Automatisierung:</strong> Manuelle KPI-Erhebung funktioniert nicht dauerhaft. Nutzen Sie ein ATS mit integrierten Analytics, das Ihre Kennzahlen automatisch berechnet und in Echtzeit-Dashboards visualisiert.</li>
+<li><strong>Automatisierung:</strong> Manuelle KPI-Erhebung funktioniert nicht dauerhaft. Nutzen Sie ein <a href="/produkt/ats-crm/">ATS mit integrierten Analytics</a>, das Ihre Kennzahlen automatisch berechnet und in Echtzeit-Dashboards visualisiert.</li>
 </ol>
 
 <h2>Fazit: Messen, lernen, optimieren</h2>

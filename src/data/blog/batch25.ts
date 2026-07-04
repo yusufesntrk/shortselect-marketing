@@ -69,7 +69,7 @@ export const batch25: BlogPost[] = [
 <ol>
   <li><strong>Werden Sie Teil der Community:</strong> Treten Sie relevanten Servern bei. Nehmen Sie an Diskussionen teil. Helfen Sie anderen. Beantworten Sie Fragen. Werden Sie bekannt als hilfreiches Mitglied, nicht als Recruiter, der nur nimmt.</li>
   <li><strong>Nutzen Sie #jobs-Channels:</strong> Viele Server haben dedizierte Kanäle für Jobangebote. Posten Sie dort, aber halten Sie sich an die Server-Regeln und den Tonfall der Community.</li>
-  <li><strong>Bauen Sie einen eigenen Server:</strong> Erstellen Sie einen Company-Server für Interessierte. Laden Sie zu Tech-Talks ein, hosten Sie Coding-Challenges, schaffen Sie einen Raum für Austausch. Das ist langfristiges Employer Branding auf einem Level, das LinkedIn nicht bieten kann.</li>
+  <li><strong>Bauen Sie einen eigenen Server:</strong> Erstellen Sie einen Company-Server für Interessierte. Laden Sie zu Tech-Talks ein, hosten Sie Coding-Challenges, schaffen Sie einen Raum für Austausch. Das ist langfristiges <a href="/produkt/karriereseite/">Employer Branding</a> auf einem Level, das LinkedIn nicht bieten kann.</li>
   <li><strong>DMs, mit Fingerspitzengefühl:</strong> Direktnachrichten auf Discord sind persönlicher als InMails. Wenn Sie jemanden anschreiben, der gerade eine brillante Antwort in einem Coding-Channel gegeben hat, ist das relevanter als jede LinkedIn-Nachricht. Aber Spam wird hier noch härter bestraft.</li>
 </ol>
 
@@ -147,7 +147,7 @@ export const batch25: BlogPost[] = [
 
 <ul>
   <li><strong>70 Prozent</strong> der Gen Z nutzen Social Media aktiv für die Jobsuche (Quelle: Adobe Future Workforce Study).</li>
-  <li><strong>50 Prozent</strong> haben sich bereits über Social Media auf einen Job beworben, nicht über klassische Jobbörsen.</li>
+  <li><strong>50 Prozent</strong> haben sich bereits über Social Media auf einen Job beworben, nicht über <a href="/produkt/multiposting/">klassische Jobbörsen</a>.</li>
   <li><strong>46 Prozent</strong> der Gen Z sagen, ein Arbeitgeber ohne Social-Media-Präsenz wirkt "veraltet und unattraktiv".</li>
   <li><strong>65 Prozent</strong> recherchieren potenzielle Arbeitgeber auf Social Media, bevor sie sich bewerben.</li>
   <li><strong>Der #JobTok-Hashtag</strong> auf TikTok hat über 4 Milliarden Views, mehr als die gesamte jährliche Reichweite aller deutschen Jobbörsen zusammen.</li>
@@ -266,9 +266,9 @@ export const batch25: BlogPost[] = [
 <p>Die 4-Tage-Woche anzubieten reicht nicht, Sie müssen sie richtig kommunizieren. So wird sie zur Recruiting-Waffe:</p>
 
 <ol>
-  <li><strong>In die Stellenanzeige, und zwar prominent:</strong> Nicht versteckt unter "Benefits". Direkt in den Titel oder die erste Zeile: "Senior Developer (m/w/d), 4-Tage-Woche bei vollem Gehalt". Das allein verdoppelt Ihre Klickrate.</li>
+  <li><strong>In die <a href="/produkt/multiposting/">Stellenanzeige</a>, und zwar prominent:</strong> Nicht versteckt unter "Benefits". Direkt in den Titel oder die erste Zeile: "Senior Developer (m/w/d), 4-Tage-Woche bei vollem Gehalt". Das allein verdoppelt Ihre Klickrate.</li>
   <li><strong>Konkret werden:</strong> "4-Tage-Woche" allein ist vage. Sagen Sie welches Modell: "Jeden Freitag frei, bei vollem Gehalt und 32 Stunden/Woche". Transparenz schafft Vertrauen.</li>
-  <li><strong>Erfahrungsberichte nutzen:</strong> Lassen Sie Ihre bestehenden Mitarbeiter erzählen, wie die 4-Tage-Woche ihr Leben verändert hat. Das ist glaubwürdiger als jede HR-Kampagne.</li>
+  <li><strong><a href="/produkt/karriereseite/">Erfahrungsberichte nutzen</a>:</strong> Lassen Sie Ihre bestehenden Mitarbeiter erzählen, wie die 4-Tage-Woche ihr Leben verändert hat. Das ist glaubwürdiger als jede HR-Kampagne.</li>
   <li><strong>Daten zeigen:</strong> "Seit der Einführung der 4-Tage-Woche: 40% weniger Krankmeldungen, 30% weniger Fluktuation, NPS von 85". Zahlen überzeugen.</li>
   <li><strong>Auf Social Media damit arbeiten:</strong> Posten Sie über Ihre 4-Tage-Woche. Nicht einmal, regelmäßig. Es ist Ihr stärkstes Differenzierungsmerkmal. Nutzen Sie es.</li>
 </ol>
@@ -310,7 +310,7 @@ export const batch25: BlogPost[] = [
     content: `
 <h2>Der teuerste Fehler im Recruiting: Menschen vergessen, die Sie schon kennen</h2>
 
-<p>Stellen Sie sich vor, Sie suchen einen Senior Developer. Sie schalten Stellenanzeigen auf LinkedIn, StepStone und Indeed. Sie beauftragen vielleicht einen Headhunter. Sie screenen 200 Bewerbungen, führen 30 Erstgespräche, 12 Zweitgespräche, machen 3 Angebote, und nach 4 Monaten und 15.000 Euro Recruiting-Kosten stellen Sie jemanden ein, der dann 6 Monate braucht, um das Unternehmen, die Prozesse und die Codebase zu verstehen.</p>
+<p>Stellen Sie sich vor, Sie suchen einen Senior Developer. Sie schalten <a href="/produkt/multiposting/">Stellenanzeigen auf LinkedIn, StepStone und Indeed</a>. Sie beauftragen vielleicht einen Headhunter. Sie screenen 200 Bewerbungen, führen 30 Erstgespräche, 12 Zweitgespräche, machen 3 Angebote, und nach 4 Monaten und 15.000 Euro Recruiting-Kosten stellen Sie jemanden ein, der dann 6 Monate braucht, um das Unternehmen, die Prozesse und die Codebase zu verstehen.</p>
 
 <p>Währenddessen sitzt Ihr ehemaliger Senior Developer, der vor zwei Jahren für ein Startup gegangen ist, das inzwischen pleite ist, zu Hause und überlegt, ob er Sie anrufen soll. Aber er traut sich nicht, weil er denkt, dass "Rückkehrer" unerwünscht sind.</p>
 
@@ -380,7 +380,7 @@ export const batch25: BlogPost[] = [
 
 <h3>Alumni-Datenbank pflegen</h3>
 
-<p>Führen Sie eine strukturierte Datenbank aller ehemaligen Mitarbeiter: Wann gegangen? Warum gegangen? Wohin gegangen? Welche Fähigkeiten? Bereitschaft für Rückkehr? Wenn eine Stelle frei wird, schauen Sie zuerst in diese Datenbank, bevor Sie eine Stellenanzeige schalten. Das spart Zeit, Geld und liefert bessere Kandidaten.</p>
+<p>Führen Sie eine <a href="/produkt/talent-pools/">strukturierte Datenbank</a> aller ehemaligen Mitarbeiter: Wann gegangen? Warum gegangen? Wohin gegangen? Welche Fähigkeiten? Bereitschaft für Rückkehr? Wenn eine Stelle frei wird, schauen Sie zuerst in diese Datenbank, bevor Sie eine Stellenanzeige schalten. Das spart Zeit, Geld und liefert bessere Kandidaten.</p>
 
 <h2>Das Exit-Interview als Investition</h2>
 

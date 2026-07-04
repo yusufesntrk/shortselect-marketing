@@ -64,7 +64,7 @@ export const batch7: BlogPost[] = [
 <p>Der Aufbau ist nur die halbe Miete. Ohne kontinuierliche Pflege wird selbst der beste Talent Pool innerhalb weniger Monate obsolet. Die Pflege umfasst drei zentrale Bereiche:</p>
 
 <h3>Regelmäßige Daten-Updates</h3>
-<p>Planen Sie feste Zyklen ein, um Daten im Pool zu aktualisieren. Ein bewährter Rhythmus: Alle sechs Monate eine kurze Umfrage oder ein Check-in bei den Kandidaten. Fragen Sie nach aktueller Position, neuen Skills und grundsätzlicher Wechselbereitschaft. Tools wie ein modernes ATS können diesen Prozess automatisieren, indem sie LinkedIn-Profile abgleichen oder automatische Update-Anfragen versenden.</p>
+<p>Planen Sie feste Zyklen ein, um Daten im Pool zu aktualisieren. Ein bewährter Rhythmus: Alle sechs Monate eine kurze Umfrage oder ein Check-in bei den Kandidaten. Fragen Sie nach aktueller Position, neuen Skills und grundsätzlicher Wechselbereitschaft. Tools wie ein modernes ATS können <a href="/produkt/automatisierung/">diesen Prozess automatisieren</a>, indem sie LinkedIn-Profile abgleichen oder automatische Update-Anfragen versenden.</p>
 
 <h3>Re-Engagement-Kampagnen</h3>
 <p>Halten Sie den Kontakt zu Ihren Talenten aufrecht, auch wenn gerade keine passende Stelle offen ist. Bewährte Re-Engagement-Formate sind:</p>
@@ -81,7 +81,7 @@ export const batch7: BlogPost[] = [
 <li><strong>Opt-in statt Opt-out:</strong> Kandidaten müssen aktiv zustimmen, dass ihre Daten über den Bewerbungsprozess hinaus gespeichert werden dürfen.</li>
 <li><strong>Retention Consent:</strong> Holen Sie nach Ablauf der regulären Aufbewahrungsfrist (in der Regel sechs Monate nach Absage) eine erneute Einwilligung ein. Automatisieren Sie diesen Prozess über Ihr ATS.</li>
 <li><strong>Transparenz:</strong> Informieren Sie Kandidaten klar darüber, welche Daten gespeichert werden, zu welchem Zweck und wie lange.</li>
-<li><strong>Löschkonzept:</strong> Implementieren Sie automatische Löschroutinen für Kandidaten, die ihre Einwilligung nicht erneuern.</li>
+<li><strong>Löschkonzept:</strong> Implementieren Sie <a href="/produkt/compliance/">automatische Löschroutinen</a> für Kandidaten, die ihre Einwilligung nicht erneuern.</li>
 </ul>
 <blockquote>Tipp: Formulieren Sie die Opt-in-Nachricht positiv, nicht „Dürfen wir Ihre Daten behalten?", sondern „Bleiben Sie in unserem Talent-Netzwerk und erfahren Sie als Erste/r von passenden Chancen!"</blockquote>
 
@@ -89,7 +89,7 @@ export const batch7: BlogPost[] = [
 <p>Ein gepflegter Talent Pool zeigt seinen wahren Wert, wenn eine neue Stelle zu besetzen ist. Die Aktivierung sollte der erste Schritt im Recruiting-Prozess sein, noch vor dem Veröffentlichen einer Stellenanzeige.</p>
 
 <h3>Automatische Job-Alerts</h3>
-<p>Richten Sie automatische Benachrichtigungen ein, die Kandidaten in Ihrem Pool über passende neue Stellen informieren. Ein modernes ATS kann auf Basis der gespeicherten Profile und Tags automatisch matchen und Job-Alerts versenden. So erreichen Sie relevante Kandidaten, bevor die Stelle überhaupt auf Jobbörsen erscheint, ein enormer Zeitvorteil.</p>
+<p>Richten Sie automatische Benachrichtigungen ein, die Kandidaten in Ihrem Pool über passende neue Stellen informieren. Ein modernes ATS kann auf Basis der gespeicherten Profile und Tags <a href="/produkt/ki-features/">automatisch matchen</a> und Job-Alerts versenden. So erreichen Sie relevante Kandidaten, bevor die Stelle überhaupt auf Jobbörsen erscheint, ein enormer Zeitvorteil.</p>
 
 <h3>Personalisierte Ansprache</h3>
 <p>Wenn Sie einen Kandidaten aus dem Pool kontaktieren, zeigen Sie, dass Sie sich an ihn erinnern. Referenzieren Sie frühere Gespräche, erwähnen Sie seine spezifischen Qualifikationen und erklären Sie, warum diese Stelle besonders gut zu seinem Profil passt. Eine personalisierte Nachricht hat eine bis zu <strong>3x höhere Antwortrate</strong> als eine generische Massen-E-Mail.</p>
@@ -107,7 +107,7 @@ export const batch7: BlogPost[] = [
 <h2>Tools: Ohne die richtige Software geht es nicht</h2>
 <p>Ein Talent Pool lässt sich theoretisch in einer Excel-Tabelle führen. Praktisch scheitert das spätestens ab 100 Kandidaten an Komplexität, Datenschutz und fehlender Automatisierung. Die richtige Software macht den Unterschied:</p>
 <ul>
-<li><strong>ATS mit integriertem Talent Pool:</strong> Moderne Applicant Tracking Systeme wie ShortSelect bieten Talent-Pool-Funktionen direkt im Bewerbermanagement. Kandidaten können mit Tags versehen, segmentiert und automatisch bei passenden Stellen benachrichtigt werden, alles DSGVO-konform.</li>
+<li><strong>ATS mit integriertem Talent Pool:</strong> Moderne Applicant Tracking Systeme wie ShortSelect bieten <a href="/produkt/talent-pools/">Talent-Pool-Funktionen</a> direkt im Bewerbermanagement. Kandidaten können mit Tags versehen, segmentiert und automatisch bei passenden Stellen benachrichtigt werden, alles DSGVO-konform.</li>
 <li><strong>CRM-Funktionen:</strong> Achten Sie auf integrierte CRM-Features wie Kommunikationshistorie, Aktivitäten-Tracking und automatische Erinnerungen für Re-Engagement.</li>
 <li><strong>Automatisierung:</strong> Job-Alerts, Retention-Consent-Anfragen und Daten-Update-Erinnerungen sollten automatisiert ablaufen, damit Ihr Team sich auf die persönliche Beziehungspflege konzentrieren kann.</li>
 </ul>
@@ -157,7 +157,7 @@ export const batch7: BlogPost[] = [
 <p>Wer international einstellt, muss sich mit unterschiedlichen Arbeitsrechtssystemen, Sozialversicherungspflichten und Steuerregelungen auseinandersetzen. Ein Arbeitsvertrag, der in Deutschland rechtsgültig ist, hat in Portugal oder Polen möglicherweise ganz andere Implikationen. Hier ist professionelle Beratung unverzichtbar, oder der Einsatz von Employer-of-Record-Diensten (mehr dazu weiter unten).</p>
 
 <h3>Compliance und Datenschutz</h3>
-<p>Verschiedene Länder haben unterschiedliche Datenschutzgesetze. Während die DSGVO in der EU gilt, gelten in anderen Regionen andere Regelungen. Stellen Sie sicher, dass Ihr ATS und Ihre Recruiting-Prozesse die jeweils strengsten Standards erfüllen, so sind Sie auf der sicheren Seite, egal wo Ihre Kandidaten sitzen.</p>
+<p>Verschiedene Länder haben unterschiedliche Datenschutzgesetze. Während die DSGVO in der EU gilt, gelten in anderen Regionen andere Regelungen. Stellen Sie sicher, dass Ihr ATS und Ihre Recruiting-Prozesse die <a href="/produkt/compliance/">jeweils strengsten Standards</a> erfüllen, so sind Sie auf der sicheren Seite, egal wo Ihre Kandidaten sitzen.</p>
 
 <h2>Remote-Interview Best Practices</h2>
 <p>Das Vorstellungsgespräch ist der kritischste Moment im Recruiting-Prozess, und im Remote-Setting gelten besondere Regeln. Die folgenden Best Practices helfen Ihnen, auch ohne persönliches Treffen die richtigen Kandidaten zu identifizieren.</p>
@@ -215,7 +215,7 @@ export const batch7: BlogPost[] = [
 <h2>Tools für Remote Teams: Die Tech-Infrastruktur</h2>
 <p>Remote Recruiting und Remote Work funktionieren nur mit der richtigen technologischen Grundlage. Diese Tool-Kategorien sind unverzichtbar:</p>
 <ul>
-<li><strong>ATS mit Remote-Funktionen:</strong> Ihr Bewerbermanagement-System muss standortunabhängiges Recruiting unterstützen, von Video-Interview-Integration über Zeitzonen-Planung bis hin zu mehrsprachigen Stellenanzeigen. ShortSelect bietet diese Funktionen und ermöglicht die nahtlose Zusammenarbeit verteilter Recruiting-Teams.</li>
+<li><strong>ATS mit Remote-Funktionen:</strong> Ihr <a href="/produkt/ats-crm/">Bewerbermanagement-System</a> muss standortunabhängiges Recruiting unterstützen, von Video-Interview-Integration über Zeitzonen-Planung bis hin zu mehrsprachigen Stellenanzeigen. ShortSelect bietet diese Funktionen und ermöglicht die nahtlose Zusammenarbeit verteilter Recruiting-Teams.</li>
 <li><strong>Kommunikation:</strong> Slack oder Microsoft Teams als asynchrone Kommunikationszentrale, Zoom oder Google Meet für synchrone Meetings, Loom für asynchrone Video-Updates.</li>
 <li><strong>Projektmanagement:</strong> Asana, Monday oder Jira für Aufgabenverwaltung und Transparenz über Zeitzonen hinweg.</li>
 <li><strong>Dokumentation:</strong> Notion, Confluence oder Google Workspace als zentrale Wissensbasis, essenziell für verteilte Teams, die nicht mal eben den Kollegen am Nebentisch fragen können.</li>
@@ -226,6 +226,6 @@ export const batch7: BlogPost[] = [
 <h2>Fazit: Remote Recruiting als strategische Notwendigkeit</h2>
 <p>Remote Recruiting ist 2025 keine Zukunftsmusik mehr, es ist die Gegenwart. Der Fachkräftemangel zwingt Unternehmen dazu, über Grenzen hinaus zu denken und zu handeln. Die Vorteile, ein größerer Talentpool, Kostenersparnis, mehr Diversität und höhere Mitarbeiterzufriedenheit, überwiegen die Herausforderungen bei weitem.</p>
 <p>Entscheidend ist, dass Sie Remote Recruiting nicht als Provisorium betrachten, sondern als strategische Kompetenz aufbauen. Investieren Sie in die richtigen Tools, etablieren Sie klare Prozesse für Interviews und Onboarding, und klären Sie die rechtlichen Rahmenbedingungen proaktiv. Unternehmen, die das tun, werden im Wettbewerb um die besten Talente einen entscheidenden Vorsprung haben, unabhängig davon, wo diese Talente leben.</p>
-<p>Der erste Schritt ist einfacher als gedacht: Öffnen Sie Ihre nächste Stellenanzeige für Remote-Bewerbungen und erleben Sie selbst, wie sich Ihr Kandidatenpool vervielfacht. Die Grenzen des Recruitings verlaufen nicht mehr entlang von Landesgrenzen, sie verlaufen dort, wo Ihr Denken aufhört.</p>`,
+<p>Der erste Schritt ist einfacher als gedacht: Öffnen Sie Ihre nächste <a href="/produkt/multiposting/">Stellenanzeige</a> für Remote-Bewerbungen und erleben Sie selbst, wie sich Ihr Kandidatenpool vervielfacht. Die Grenzen des Recruitings verlaufen nicht mehr entlang von Landesgrenzen, sie verlaufen dort, wo Ihr Denken aufhört.</p>`,
   },
 ];

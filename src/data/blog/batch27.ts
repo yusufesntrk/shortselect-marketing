@@ -38,7 +38,7 @@ export const batch27: BlogPost[] = [
 <p>Statt allgemeiner Zufriedenheitsfragen brauchen Sie spezifische, handlungsorientierte Fragen. Jede einzelne davon zielt auf einen konkreten Aspekt Ihres Hiring-Prozesses ab:</p>
 
 <ol>
-  <li><strong>„Was hat Sie überrascht, als Sie hier angefangen haben?"</strong>, Diese Frage deckt die Lücke zwischen Stellenanzeige und Realität auf. Wenn die Antwort „Nichts" ist, war Ihre Kommunikation ehrlich. Wenn die Antwort „Alles" ist, haben Sie ein Problem mit Ihrer Employer Brand.</li>
+  <li><strong>„Was hat Sie überrascht, als Sie hier angefangen haben?"</strong>, Diese Frage deckt die Lücke zwischen Stellenanzeige und Realität auf. Wenn die Antwort „Nichts" ist, war Ihre Kommunikation ehrlich. Wenn die Antwort „Alles" ist, haben Sie ein Problem mit Ihrer <a href="/produkt/karriereseite/">Employer Brand</a>.</li>
   <li><strong>„Was wussten Sie vorher nicht, das Sie gerne gewusst hätten?"</strong>, Hier geht es um fehlende Information im Bewerbungsprozess. Vielleicht wurde verschwiegen, dass 30 Prozent Reisetätigkeit anfallen. Oder dass das Team gerade einen Umbruch durchmacht. Diese Informationslücken kosten Sie Mitarbeitende.</li>
   <li><strong>„Was hätten wir im Bewerbungsprozess anders kommunizieren sollen?"</strong>, Direktes Feedback zur Kandidatenkommunikation. Waren die Interviews realistisch? Wurden die richtigen Erwartungen gesetzt? Wurde die Unternehmenskultur korrekt dargestellt?</li>
   <li><strong>„Welche Fähigkeit hätten wir im Interview stärker prüfen sollen?"</strong>, Diese Frage zeigt, ob Ihre Auswahlkriterien mit den tatsächlichen Jobanforderungen übereinstimmen. Wenn jemand scheitert, weil ihm eine Kompetenz fehlt, die Sie nie geprüft haben, ist das ein Prozessfehler.</li>
@@ -74,7 +74,7 @@ export const batch27: BlogPost[] = [
 
 <h3>Stufe 1: Exit-Daten strukturiert erfassen</h3>
 
-<p>Jedes Exit-Interview wird standardisiert dokumentiert. Nicht als Fließtext, sondern in Kategorien: Stellenanzeige, Interviewprozess, Onboarding, Führung, Kultur, Entwicklung. Jede Kategorie bekommt eine Bewertung und qualitative Kommentare. So werden die Daten vergleichbar und aggregierbar.</p>
+<p>Jedes Exit-Interview wird <a href="/produkt/ats-crm/">standardisiert dokumentiert</a>. Nicht als Fließtext, sondern in Kategorien: Stellenanzeige, Interviewprozess, Onboarding, Führung, Kultur, Entwicklung. Jede Kategorie bekommt eine Bewertung und qualitative Kommentare. So werden die Daten vergleichbar und aggregierbar.</p>
 
 <h3>Stufe 2: Stellenanzeige verbessern</h3>
 
@@ -196,7 +196,7 @@ export const batch27: BlogPost[] = [
 
 <h3>1. Pipeline aufbauen, auch ohne sofortigen Bedarf</h3>
 
-<p>Nutzen Sie die Rezession, um Beziehungen aufzubauen. Führen Sie Kennenlerngespräche mit Top-Talenten, die gerade verfügbar sind. Bauen Sie einen Talent Pool auf, den Sie aktivieren können, wenn Positionen frei werden. Die Investition ist minimal, ein Gespräch pro Woche mit einem potenziellen A-Kandidaten kostet Sie eine Stunde Zeit und kann Ihnen in sechs Monaten Wochen an Sourcing ersparen.</p>
+<p>Nutzen Sie die Rezession, um Beziehungen aufzubauen. Führen Sie Kennenlerngespräche mit Top-Talenten, die gerade verfügbar sind. Bauen Sie einen <a href="/produkt/talent-pools/">Talent Pool</a> auf, den Sie aktivieren können, wenn Positionen frei werden. Die Investition ist minimal, ein Gespräch pro Woche mit einem potenziellen A-Kandidaten kostet Sie eine Stunde Zeit und kann Ihnen in sechs Monaten Wochen an Sourcing ersparen.</p>
 
 <h3>2. Strategische Positionen besetzen, nicht nur Lücken füllen</h3>
 
@@ -204,7 +204,7 @@ export const batch27: BlogPost[] = [
 
 <h3>3. Employer Brand stärken, wenn andere schweigen</h3>
 
-<p>Wenn alle anderen Unternehmen ihre Karriereseiten verwaisen lassen und ihre Social-Media-Kanäle einfrieren, ist der Raum für Ihre Arbeitgebermarke plötzlich leer. Veröffentlichen Sie Inhalte. Zeigen Sie, dass Sie einstellen. Zeigen Sie, dass Sie an die Zukunft glauben. Die Kandidaten, die Sie heute beeindrucken, werden sich in der nächsten Wachstumsphase an Sie erinnern.</p>
+<p>Wenn alle anderen Unternehmen ihre <a href="/produkt/karriereseite/">Karriereseiten</a> verwaisen lassen und ihre Social-Media-Kanäle einfrieren, ist der Raum für Ihre Arbeitgebermarke plötzlich leer. Veröffentlichen Sie Inhalte. Zeigen Sie, dass Sie einstellen. Zeigen Sie, dass Sie an die Zukunft glauben. Die Kandidaten, die Sie heute beeindrucken, werden sich in der nächsten Wachstumsphase an Sie erinnern.</p>
 
 <h3>4. Onboarding nicht vernachlässigen</h3>
 
@@ -242,7 +242,7 @@ export const batch27: BlogPost[] = [
     content: `
 <h2>Ausgangslage: Eine typische Recruiting-Agentur im Jahr 2024</h2>
 
-<p>Die TalentBridge GmbH ist eine mittelständische Personalvermittlung in Frankfurt am Main. Acht Recruiter, spezialisiert auf IT- und Finance-Positionen im DACH-Raum. Der Jahresumsatz liegt bei knapp zwei Millionen Euro, die Marge ist solide, aber seit drei Jahren stagnierend. Die Agentur ist profitabel, aber gefangen in einem Hamsterrad aus manueller Arbeit, das jedes Wachstum verhindert.</p>
+<p>Die TalentBridge GmbH ist eine mittelständische <a href="/fuer/personalvermittlung/">Personalvermittlung</a> in Frankfurt am Main. Acht Recruiter, spezialisiert auf IT- und Finance-Positionen im DACH-Raum. Der Jahresumsatz liegt bei knapp zwei Millionen Euro, die Marge ist solide, aber seit drei Jahren stagnierend. Die Agentur ist profitabel, aber gefangen in einem Hamsterrad aus manueller Arbeit, das jedes Wachstum verhindert.</p>
 
 <p>Die Zahlen vor der Transformation zeichnen ein Bild, das viele Personalvermittlungen kennen werden:</p>
 
@@ -287,15 +287,15 @@ export const batch27: BlogPost[] = [
 
 <h3>Komponente 1: ATS mit KI-Matching</h3>
 
-<p>Ein modernes Applicant Tracking System wurde eingeführt, das nicht nur Bewerbungen speichert, sondern aktiv matched. Der KI-Algorithmus analysiert jeden eingehenden Lebenslauf und vergleicht ihn mit allen offenen Positionen, nicht nur nach Keywords, sondern nach semantischer Ähnlichkeit. Ein Kandidat mit „Projektsteuerung im Finanzumfeld" wird auch für Stellen vorgeschlagen, die „Financial Project Management" suchen. Cross-Recruiter-Matching sorgt dafür, dass kein Kandidat mehr in einem einzelnen Postfach verschwindet.</p>
+<p>Ein <a href="/produkt/ats-crm/">modernes Applicant Tracking System</a> wurde eingeführt, das nicht nur Bewerbungen speichert, sondern aktiv matched. Der KI-Algorithmus analysiert jeden eingehenden Lebenslauf und vergleicht ihn mit allen offenen Positionen, nicht nur nach Keywords, sondern nach semantischer Ähnlichkeit. Ein Kandidat mit „Projektsteuerung im Finanzumfeld" wird auch für Stellen vorgeschlagen, die „Financial Project Management" suchen. Cross-Recruiter-Matching sorgt dafür, dass kein Kandidat mehr in einem einzelnen Postfach verschwindet.</p>
 
 <h3>Komponente 2: Automatische Eingangsbestätigung und Screening</h3>
 
-<p>Jede eingehende Bewerbung erhält innerhalb von 60 Sekunden eine personalisierte Eingangsbestätigung. Gleichzeitig werden automatische Screening-Fragen ausgelöst, angepasst an die jeweilige Position. Für eine Senior-Developer-Stelle: „Wie viele Jahre Erfahrung haben Sie mit Cloud-Architekturen?" Für eine Finance-Rolle: „Haben Sie Erfahrung mit IFRS-Reporting?" Die Antworten fließen direkt in den Matching-Score ein.</p>
+<p>Jede eingehende Bewerbung erhält innerhalb von 60 Sekunden eine personalisierte Eingangsbestätigung. Gleichzeitig werden <a href="/produkt/ki-features/">automatische Screening-Fragen</a> ausgelöst, angepasst an die jeweilige Position. Für eine Senior-Developer-Stelle: „Wie viele Jahre Erfahrung haben Sie mit Cloud-Architekturen?" Für eine Finance-Rolle: „Haben Sie Erfahrung mit IFRS-Reporting?" Die Antworten fließen direkt in den Matching-Score ein.</p>
 
 <h3>Komponente 3: Pipeline-Automatisierung</h3>
 
-<p>Der gesamte Recruiting-Prozess wurde in standardisierte Phasen unterteilt: Eingang, Screening, Erstgespräch, Kundenpräsentation, Interview, Angebot, Placement. Jede Phase hat automatische Trigger: Wenn ein Kandidat in die Phase „Kundenpräsentation" verschoben wird, erhält der Kunde automatisch ein strukturiertes Kandidatenprofil. Wenn ein Kandidat länger als fünf Tage in einer Phase steckt, wird der zuständige Recruiter erinnert.</p>
+<p>Der gesamte Recruiting-Prozess wurde in standardisierte Phasen unterteilt: Eingang, Screening, Erstgespräch, Kundenpräsentation, Interview, Angebot, Placement. Jede Phase hat <a href="/produkt/automatisierung/">automatische Trigger</a>: Wenn ein Kandidat in die Phase „Kundenpräsentation" verschoben wird, erhält der Kunde automatisch ein strukturiertes Kandidatenprofil. Wenn ein Kandidat länger als fünf Tage in einer Phase steckt, wird der zuständige Recruiter erinnert.</p>
 
 <h3>Komponente 4: Dashboard und Analytics</h3>
 

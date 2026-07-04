@@ -3,7 +3,7 @@ import VergleichLayout from '../../layouts/VergleichLayout.astro';
 
 const comparisonData = [
   { feature: "KI-Agenten", ssStatus: "check" as const, ssLabel: "AgentBurst-Agenten", compStatus: "x" as const, compLabel: "Keine" },
-  { feature: "Preis pro User", ssStatus: "check" as const, ssLabel: "149 € pro User/Monat", compStatus: "x" as const, compLabel: "Ab \u00A3120+/User/Monat" },
+  { feature: "Preis pro User", ssStatus: "check" as const, ssLabel: "149 € pro User/Monat", compStatus: "x" as const, compLabel: "Ab £120+/User/Monat" },
   { feature: "Bewertungen", ssStatus: "check" as const, ssLabel: "4.8/5 (127+ Reviews)", compStatus: "warn" as const, compLabel: "Nur 4 Reviews" },
   { feature: "KI-Matching", ssStatus: "check" as const, ssLabel: "AgentBurst Match", compStatus: "x" as const, compLabel: "Kein KI-Matching" },
   { feature: "CV Parsing", ssStatus: "check" as const, ssLabel: "AgentBurst Parse", compStatus: "warn" as const, compLabel: "Basis" },
@@ -13,13 +13,37 @@ const comparisonData = [
   { feature: "Autonomes Screening", ssStatus: "check" as const, ssLabel: "AgentBurst Screen", compStatus: "x" as const, compLabel: "Kein Screening" },
   { feature: "Marktpräsenz", ssStatus: "check" as const, ssLabel: "Wachsend", compStatus: "warn" as const, compLabel: "Nische" },
 ];
+
+const faqs = [
+  {
+    question: "Was ist der Unterschied zwischen ShortSelect und Ezekia?",
+    answer: "Ezekia ist ein Premium-ATS aus UK, das auf Executive Search spezialisiert ist, aber kein KI-Matching und kein KI-Screening bietet. ShortSelect ist ein EU-natives ATS mit KI-Engine AgentBurst, die Matching, Screening und Ranking selbstständig übernimmt, und deckt neben Executive Search auch andere Recruiting-Bereiche ab.",
+  },
+  {
+    question: "Für wen ist Ezekia besser geeignet?",
+    answer: "Ezekia kann passen, wenn Executive Search Ihr einziger Fokus ist, Sie speziell Long-List-Management für Suchmandate brauchen und das Budget keine große Rolle spielt. Wer bereits mit Ezekia arbeitet und etablierte Workflows hat, findet dort ebenfalls Kontinuität.",
+  },
+  {
+    question: "Was kostet ShortSelect im Vergleich zu Ezekia?",
+    answer: "ShortSelect kostet im Pioneer Plan 149 € pro User/Monat für die ersten 100 Agenturen, danach 300 € pro User/Monat, mit 30 Tagen kostenlosem Test ohne Kreditkarte. Ezekia liegt bei über 120 £ pro User/Monat und bietet dabei weder KI-Matching noch KI-Screening.",
+  },
+  {
+    question: "Bietet Ezekia KI-Matching wie ShortSelect?",
+    answer: "Nein. Ezekia hat kein KI-Matching und kein KI-Screening, das CV Parsing ist auf Basis-Funktionen beschränkt. Bei ShortSelect sind KI-Matching, Screening und Ranking über die KI-Engine AgentBurst ohne Aufpreis enthalten.",
+  },
+  {
+    question: "Wie wechsle ich von Ezekia zu ShortSelect?",
+    answer: "Der Umzug dauert in der Regel etwa 15 Minuten: Account erstellen, Kandidaten und Jobs per CSV oder API importieren, Team einladen und loslegen. Eine Schritt-für-Schritt-Anleitung finden Sie auf unserer Wechsel-Seite.",
+    answerHtml: 'Der Umzug dauert in der Regel etwa 15 Minuten: Account erstellen, Kandidaten und Jobs per CSV oder API importieren, Team einladen und loslegen. Eine Schritt-für-Schritt-Anleitung finden Sie auf unserer <a href="/wechsel/" class="text-primary hover:underline">Wechsel-Seite</a>.',
+  },
+];
 ---
 
 <VergleichLayout
   title="ShortSelect vs. Ezekia - ATS Vergleich 2026"
-  description="Ezekia kostet \u00A3120+ pro User und hat nur 4 Bewertungen. ShortSelect bietet Autonome KI-Agenten zum Bruchteil des Preises."
+  description="Ezekia: über 120 £ pro User, kein KI-Matching. ShortSelect: KI-Screening, Matching und Client Portal ab 149 € pro User. Fairer Vergleich für Headhunter."
   competitorName="Ezekia"
-  heroSubline="Ezekia positioniert sich als Premium-ATS für Executive Search. Aber: \u00A3120+ pro User, nur 4 öffentliche Bewertungen und kein KI-Matching. Lohnt sich das?"
+  heroSubline="Ezekia positioniert sich als Premium-ATS für Executive Search. Aber: £120+ pro User, nur 4 öffentliche Bewertungen und kein KI-Matching. Lohnt sich das?"
   heroBadge="Vergleich"
   ssDescription="KI-Agent-ATS mit autonomen AgentBurst-Agenten"
   ssHighlights={["AgentBurst-Agenten arbeiten autonom", "Transparente Preise: 149 € pro User/Monat", "Über 127 verifizierte Bewertungen", "Autonomes KI-Matching, Screening und Ranking"]}
@@ -41,10 +65,11 @@ const comparisonData = [
     intro: "ShortSelect ist ideal, wenn Sie autonome KI und Social Proof wollen:",
     items: [
       "Autonome AgentBurst-Agenten statt manueller Prozesse",
-      "Faire Preise statt \u00A3120+ pro User pro Monat",
+      "Faire Preise statt £120+ pro User pro Monat",
       "Über 127 verifizierte Bewertungen als Social Proof",
       "Autonomes KI-Matching und Screening ohne Aufpreis",
       "Skalierung über Executive Search hinaus möglich",
     ]
   }}
+  faqs={faqs}
 />

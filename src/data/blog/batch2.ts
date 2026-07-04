@@ -124,7 +124,7 @@ export const batch2: BlogPost[] = [
 
 <p>Eine Untersuchung von Appcast zeigt: Bewerbungsformulare mit mehr als 25 Fragen haben eine Abbruchrate von über 60 %. Formulare mit unter 10 Fragen liegen bei unter 15 %. Die Rechnung ist einfach: Weniger Felder bedeuten mehr Bewerbungen.</p>
 
-<p>Moderne ATS-Systeme wie ShortSelect ermöglichen es, den Lebenslauf automatisch zu parsen und die wichtigsten Daten zu extrahieren. Der Bewerber muss nichts doppelt eingeben, und Ihr HR-Team bekommt trotzdem strukturierte Daten.</p>
+<p>Moderne ATS-Systeme wie ShortSelect ermöglichen es, den <a href="/produkt/ki-features/">Lebenslauf automatisch zu parsen</a> und die wichtigsten Daten zu extrahieren. Der Bewerber muss nichts doppelt eingeben, und Ihr HR-Team bekommt trotzdem strukturierte Daten.</p>
 
 <p><strong>Praxis-Tipp:</strong> Schaffen Sie das Anschreiben ab, oder machen Sie es zumindest optional. Die meisten Anschreiben sind generisch und liefern kaum entscheidungsrelevante Informationen. Stattdessen können Sie zwei bis drei gezielte Fragen stellen, die wirklich etwas über den Kandidaten verraten.</p>
 
@@ -137,13 +137,13 @@ export const batch2: BlogPost[] = [
 <p><strong>Gut:</strong> „Unser 12-köpfiges Team arbeitet seit 2021 zusammen, die durchschnittliche Betriebszugehörigkeit liegt bei 3,4 Jahren. Auf Kununu bewerten uns Mitarbeiter mit 4,2 von 5 Sternen. Letztes Jahr haben wir gemeinsam ein Offsite in Portugal gemacht und drei Teammitglieder intern befördert."</p>
 </blockquote>
 
-<p>Zahlen, Fakten und konkrete Geschichten wirken. Floskeln nicht. Zeigen Sie, wie der Arbeitsalltag wirklich aussieht: Fotos vom Büro, Team-Events, kurze Zitate von Mitarbeitern. Wenn Sie einen Unternehmensblog oder eine Karriereseite haben, verlinken Sie darauf. Je transparenter Sie sind, desto besser können Bewerber einschätzen, ob Ihr Unternehmen zu ihnen passt, und das spart beiden Seiten Zeit.</p>
+<p>Zahlen, Fakten und konkrete Geschichten wirken. Floskeln nicht. Zeigen Sie, wie der Arbeitsalltag wirklich aussieht: Fotos vom Büro, Team-Events, kurze Zitate von Mitarbeitern. Wenn Sie einen Unternehmensblog oder eine <a href="/produkt/karriereseite/">Karriereseite</a> haben, verlinken Sie darauf. Je transparenter Sie sind, desto besser können Bewerber einschätzen, ob Ihr Unternehmen zu ihnen passt, und das spart beiden Seiten Zeit.</p>
 
 <h2>Fazit: Kleine Änderungen, große Wirkung</h2>
 
 <p>Sie müssen nicht alles auf einmal umsetzen. Starten Sie mit den Tipps, die am schnellsten umsetzbar sind: Jobtitel optimieren, Gehaltsspanne ergänzen und den Bewerbungsprozess auf das Wesentliche reduzieren. Allein diese drei Maßnahmen können Ihre Bewerbungsrate signifikant steigern.</p>
 
-<p>Messen Sie die Ergebnisse: Wie viele Aufrufe hat Ihre Anzeige? Wie viele davon führen zu einer Bewerbung? Wie hoch ist die Abbruchrate im Formular? Die Stellenanzeige ist der <a href="/glossar/recruiting-funnel/">Top of Funnel im Recruiting</a>: Läuft sie schlecht, bricht der gesamte Funnel. Mit einem modernen ATS wie ShortSelect haben Sie all diese Daten im Blick und können Ihre Anzeigen iterativ verbessern.</p>
+<p>Messen Sie die Ergebnisse: Wie viele Aufrufe hat Ihre Anzeige? Wie viele davon führen zu einer Bewerbung? Wie hoch ist die Abbruchrate im Formular? Die Stellenanzeige ist der <a href="/glossar/recruiting-funnel/">Top of Funnel im Recruiting</a>: Läuft sie schlecht, bricht der gesamte Funnel. Mit einem <a href="/produkt/ats-crm/">modernen ATS</a> wie ShortSelect haben Sie all diese Daten im Blick und können Ihre Anzeigen iterativ verbessern.</p>
 
 <p>Denken Sie daran: Eine Stellenanzeige ist kein Verwaltungsakt, sie ist Ihr Pitch an potenzielle Teammitglieder. Behandeln Sie sie entsprechend.</p>
 `,
@@ -189,7 +189,7 @@ export const batch2: BlogPost[] = [
 <p>Für alles, was über die konkrete Bewerbung hinausgeht, brauchen Sie eine ausdrückliche Einwilligung. Das betrifft insbesondere:</p>
 
 <ul>
-<li>Aufnahme in einen Talent Pool für zukünftige Stellen</li>
+<li>Aufnahme in einen <a href="/produkt/talent-pools/">Talent Pool</a> für zukünftige Stellen</li>
 <li>Weitergabe der Bewerbung an andere Abteilungen oder Konzerngesellschaften</li>
 <li>Speicherung über die übliche Aufbewahrungsfrist hinaus</li>
 </ul>
@@ -224,7 +224,7 @@ export const batch2: BlogPost[] = [
 
 <h3>Automatische Löschung einrichten</h3>
 
-<p>Die Löschung muss nicht manuell erfolgen, und sollte es auch nicht. Manuelle Löschprozesse sind fehleranfällig und werden in der Praxis oft vergessen. Ein DSGVO-konformes ATS wie ShortSelect bietet automatische Löschfristen: Sie definieren einmalig den Zeitraum (z. B. 6 Monate nach letzter Statusänderung), und das System löscht die Daten automatisch, oder erinnert Sie vorab, falls eine Einwilligung zur längeren Speicherung vorliegt.</p>
+<p>Die Löschung muss nicht manuell erfolgen, und sollte es auch nicht. Manuelle Löschprozesse sind fehleranfällig und werden in der Praxis oft vergessen. Ein <a href="/produkt/compliance/">DSGVO-konformes ATS</a> wie ShortSelect bietet automatische Löschfristen: Sie definieren einmalig den Zeitraum (z. B. 6 Monate nach letzter Statusänderung), und das System löscht die Daten automatisch, oder erinnert Sie vorab, falls eine Einwilligung zur längeren Speicherung vorliegt.</p>
 
 <h3>Löschfristen-Übersicht</h3>
 
@@ -330,7 +330,7 @@ export const batch2: BlogPost[] = [
 
 <p>Kandidaten merken den Unterschied: Ein Unternehmen, das einen sauberen, transparenten Bewerbungsprozess bietet, hinterlässt einen besseren Eindruck als eines, das Lebensläufe in Shared Drives verstauben lässt und auf Auskunftsersuchen nicht reagiert.</p>
 
-<p>Nutzen Sie ein ATS, das Ihnen die Compliance-Arbeit abnimmt: automatische Löschfristen, dokumentierte Einwilligungen, granulare Zugriffskontrollen und einen Export-Button für Auskunftsersuchen. So können Sie sich auf das konzentrieren, was im Recruiting wirklich zählt, die richtigen Menschen für Ihr Team zu finden.</p>
+<p>Nutzen Sie ein <a href="/produkt/ats-crm/">ATS, das Ihnen die Compliance-Arbeit abnimmt</a>: automatische Löschfristen, dokumentierte Einwilligungen, granulare Zugriffskontrollen und einen Export-Button für Auskunftsersuchen. So können Sie sich auf das konzentrieren, was im Recruiting wirklich zählt, die richtigen Menschen für Ihr Team zu finden.</p>
 
 <p><strong>Hinweis:</strong> Dieser Artikel dient der allgemeinen Information und ersetzt keine individuelle Rechtsberatung. Bei konkreten datenschutzrechtlichen Fragen wenden Sie sich an Ihren Datenschutzbeauftragten oder einen spezialisierten Rechtsanwalt.</p>
 `,

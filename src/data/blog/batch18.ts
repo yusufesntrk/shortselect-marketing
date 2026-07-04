@@ -33,7 +33,7 @@ export const batch18: BlogPost[] = [
 
 <h3>2. Source of Hire</h3>
 
-<p>Woher kommen Ihre erfolgreichen Einstellungen? LinkedIn, Indeed, Empfehlungsprogramm, Karriereseite oder Direktansprache? Source of Hire zeigt nicht nur, welche Kanäle Bewerbungen generieren, sondern welche Kanäle tatsächlich zu Einstellungen führen. Die Differenz zwischen diesen beiden Perspektiven ist oft überraschend: Ein Kanal mit vielen Bewerbungen liefert möglicherweise kaum Einstellungen, während ein kleinerer Kanal eine deutlich höhere Konversionsrate aufweist.</p>
+<p>Woher kommen Ihre erfolgreichen Einstellungen? LinkedIn, Indeed, Empfehlungsprogramm, <a href="/produkt/karriereseite/">Karriereseite</a> oder Direktansprache? Source of Hire zeigt nicht nur, welche Kanäle Bewerbungen generieren, sondern welche Kanäle tatsächlich zu Einstellungen führen. Die Differenz zwischen diesen beiden Perspektiven ist oft überraschend: Ein Kanal mit vielen Bewerbungen liefert möglicherweise kaum Einstellungen, während ein kleinerer Kanal eine deutlich höhere Konversionsrate aufweist.</p>
 
 <h3>3. Pipeline Velocity</h3>
 
@@ -99,7 +99,7 @@ export const batch18: BlogPost[] = [
 <p>Viele Unternehmen fragen sich, ob sie ihre Recruiting-Daten in ein externes BI-Tool wie Power BI, Tableau oder Looker Studio überführen sollten. Die Antwort hängt von der Unternehmensgröße und dem Reifegrad des Reportings ab:</p>
 
 <ul>
-  <li><strong>Bis 10 Recruiter:</strong> Das Dashboard Ihres ATS reicht in der Regel völlig aus. Externe BI-Tools schaffen hier mehr Komplexität als Nutzen. Der Aufwand für Datenanbindung, Wartung und Schulung übersteigt den Mehrwert deutlich.</li>
+  <li><strong>Bis 10 Recruiter:</strong> Das <a href="/produkt/ats-crm/">Dashboard Ihres ATS</a> reicht in der Regel völlig aus. Externe BI-Tools schaffen hier mehr Komplexität als Nutzen. Der Aufwand für Datenanbindung, Wartung und Schulung übersteigt den Mehrwert deutlich.</li>
   <li><strong>10 bis 50 Recruiter:</strong> Ein BI-Tool kann sinnvoll sein, wenn Sie Recruiting-Daten mit HR-Daten (Fluktuation, Performance) oder Finanzdaten (Budget, Headcount-Planung) verknüpfen wollen. In diesem Fall liefert ein BI-Tool Zusammenhänge, die ein ATS-Dashboard allein nicht abbilden kann.</li>
   <li><strong>Über 50 Recruiter oder Multi-Länder-Setup:</strong> Hier sind BI-Tools nahezu unverzichtbar. Konsolidierte Dashboards über mehrere ATS-Instanzen, Währungen und Länder erfordern eine zentrale Datenschicht, die nur ein BI-Tool liefern kann.</li>
 </ul>
@@ -154,7 +154,7 @@ export const batch18: BlogPost[] = [
     content: `
 <h2>Warum Sie den ROI berechnen sollten</h2>
 
-<p>Recruiting-Automatisierung ist kein Selbstzweck. Jede Investition in ein ATS, in Workflow-Automatisierung oder in KI-gestützte Tools muss sich rechnen. Und genau hier liegt das Problem: Die meisten Recruiting-Teams spüren, dass Automatisierung ihnen hilft, können den Nutzen aber nicht beziffern. In Budgetgesprächen mit der Geschäftsführung reicht "wir sind schneller geworden" nicht aus.</p>
+<p>Recruiting-Automatisierung ist kein Selbstzweck. Jede Investition in ein ATS, in <a href="/produkt/automatisierung/">Workflow-Automatisierung</a> oder in KI-gestützte Tools muss sich rechnen. Und genau hier liegt das Problem: Die meisten Recruiting-Teams spüren, dass Automatisierung ihnen hilft, können den Nutzen aber nicht beziffern. In Budgetgesprächen mit der Geschäftsführung reicht "wir sind schneller geworden" nicht aus.</p>
 
 <p>Es gibt drei zentrale Gründe, warum Sie den ROI Ihrer Automatisierung kennen sollten:</p>
 
@@ -192,7 +192,7 @@ export const batch18: BlogPost[] = [
   <li><strong>Zeitersparnis:</strong> 10 Recruiter × 5 Stunden/Woche × 48 Arbeitswochen × 50 Euro Vollkostenstundensatz = <strong>120.000 Euro pro Jahr</strong></li>
   <li><strong>Qualitätsverbesserung:</strong> Bei 200 Einstellungen pro Jahr und einer Reduktion der Fehlbesetzungsrate um 3 Prozentpunkte: 6 vermiedene Fehlbesetzungen × 40.000 Euro = <strong>240.000 Euro pro Jahr</strong></li>
   <li><strong>Fluktuationsreduktion:</strong> Reduktion der Frühfluktuation um 2 Prozentpunkte bei 200 Einstellungen: 4 vermiedene Nachbesetzungen × 15.000 Euro = <strong>60.000 Euro pro Jahr</strong></li>
-  <li><strong>Kosten der Automatisierung:</strong> ATS-Lizenz + Implementierung + Schulung = ca. <strong>30.000 bis 50.000 Euro pro Jahr</strong></li>
+  <li><strong>Kosten der Automatisierung:</strong> <a href="/preise/">ATS-Lizenz</a> + Implementierung + Schulung = ca. <strong>30.000 bis 50.000 Euro pro Jahr</strong></li>
 </ul>
 
 <p><strong>Gesamtersparnis:</strong> 120.000 + 240.000 + 60.000 − 40.000 = <strong>380.000 Euro pro Jahr</strong></p>
@@ -217,7 +217,7 @@ export const batch18: BlogPost[] = [
   <li><strong>Markenkonsistenz:</strong> Automatisierte Kommunikation stellt sicher, dass jeder Kandidat dieselbe professionelle Erfahrung macht, unabhängig davon, welcher Recruiter die Stelle betreut. Das stärkt Ihre Employer Brand konsistent über alle Touchpoints hinweg.</li>
   <li><strong>Weniger Ghosting:</strong> Automatisierte Status-Updates und Follow-ups reduzieren Candidate Ghosting erheblich. Kandidaten, die regelmäßig informiert werden, brechen seltener ab, selbst wenn der Prozess länger dauert.</li>
   <li><strong>Boomerang-Kandidaten:</strong> Abgelehnte Kandidaten, die eine gute Erfahrung gemacht haben, bewerben sich später erneut oder empfehlen Ihr Unternehmen weiter. Automatisierte Absagen mit wertschätzender Kommunikation und Talent-Pool-Einladungen bauen einen langfristigen Kandidatenpool auf, der künftige Stellenbesetzungen beschleunigt.</li>
-  <li><strong>Compliance-Risikoreduktion:</strong> DSGVO-konforme Löschfristen, dokumentierte Absagegründe und nachvollziehbare Prozesse reduzieren das Risiko von AGG-Klagen und Datenschutzverstößen. Die Kosten einer einzigen Klage oder eines Datenschutzvorfalls können den ROI eines ATS allein rechtfertigen.</li>
+  <li><strong>Compliance-Risikoreduktion:</strong> <a href="/produkt/compliance/">DSGVO-konforme Löschfristen</a>, dokumentierte Absagegründe und nachvollziehbare Prozesse reduzieren das Risiko von AGG-Klagen und Datenschutzverstößen. Die Kosten einer einzigen Klage oder eines Datenschutzvorfalls können den ROI eines ATS allein rechtfertigen.</li>
   <li><strong>Hiring Manager Satisfaction:</strong> Hiring Manager, die über ein ATS-Portal den Status ihrer Stellen in Echtzeit sehen können, sind nachweislich zufriedener. Weniger Nachfragen, weniger Eskalationen und eine produktivere Zusammenarbeit zwischen Recruiting und Fachabteilungen.</li>
 </ul>
 
@@ -229,7 +229,7 @@ export const batch18: BlogPost[] = [
 
 <ul>
   <li><strong>Eingangsbestätigung:</strong> Jede Bewerbung erhält innerhalb von Minuten eine professionelle Bestätigung. Klingt trivial, wird aber von über 50 Prozent der Unternehmen nicht umgesetzt. Automatische Eingangsbestätigungen verbessern die Candidate Experience sofort und messbar.</li>
-  <li><strong>Screening:</strong> Automatisierte Vorauswahl anhand definierter Kriterien (Erfahrung, Qualifikationen, Standort) spart pro Stelle mehrere Stunden manuelles Sichten. Recruiter sehen nur noch vorab qualifizierte Kandidaten.</li>
+  <li><strong>Screening:</strong> <a href="/produkt/ki-features/">Automatisierte Vorauswahl</a> anhand definierter Kriterien (Erfahrung, Qualifikationen, Standort) spart pro Stelle mehrere Stunden manuelles Sichten. Recruiter sehen nur noch vorab qualifizierte Kandidaten.</li>
   <li><strong>Scheduling:</strong> Interview-Terminierung per Self-Service-Link statt E-Mail-Ping-Pong. Eine einzige automatisierte Terminbuchung spart durchschnittlich 30 Minuten an Koordinationsaufwand, pro Interview.</li>
   <li><strong>Follow-ups:</strong> Automatische Erinnerungen an Hiring Manager für ausstehende Bewertungen, automatische Nachfass-E-Mails an Kandidaten nach Interviews und automatische Eskalationen bei überschrittenen SLAs. Follow-ups sind der unsichtbare Motor eines schnellen Prozesses.</li>
 </ul>

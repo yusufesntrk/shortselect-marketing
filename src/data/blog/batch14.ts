@@ -15,7 +15,7 @@ export const batch14: BlogPost[] = [
     content: `
 <h2>Was ist Multiposting?</h2>
 
-<p>Multiposting bezeichnet das gleichzeitige Veröffentlichen einer Stellenanzeige auf mehreren Jobbörsen, Karriereplattformen und Social-Media-Kanälen, idealerweise aus einem einzigen System heraus. Statt jede Anzeige manuell auf Indeed, StepStone, LinkedIn und Co. einzustellen, übernimmt ein ATS oder eine Multiposting-Plattform die Verteilung automatisch.</p>
+<p>Multiposting bezeichnet das gleichzeitige Veröffentlichen einer Stellenanzeige auf mehreren Jobbörsen, Karriereplattformen und Social-Media-Kanälen, idealerweise aus einem einzigen System heraus. Statt jede Anzeige manuell auf Indeed, StepStone, LinkedIn und Co. einzustellen, übernimmt ein ATS oder eine <a href="/produkt/multiposting/">Multiposting-Plattform</a> die Verteilung automatisch.</p>
 
 <p>Der Unterschied zum manuellen Posten ist gravierend: Wer Stellenanzeigen einzeln auf jeder Plattform anlegt, verbringt pro Anzeige schnell 30 bis 60 Minuten, nur für das Einstellen. Dazu kommt die Pflege: Aktualisierungen, Verlängerungen, Deaktivierungen. Bei zehn offenen Stellen auf jeweils fünf Kanälen sind das 50 einzelne Vorgänge, die koordiniert werden müssen. Multiposting reduziert diesen Aufwand auf einen einzigen Klick.</p>
 
@@ -27,7 +27,7 @@ export const batch14: BlogPost[] = [
 
 <h3>ATS-Integration als Herzstück</h3>
 
-<p>Modernes Multiposting beginnt im Bewerbermanagementsystem (ATS). Dort erstellen Sie Ihre Stellenanzeige einmalig, mit Titel, Beschreibung, Anforderungen, Benefits und allen relevanten Metadaten. Anschließend wählen Sie die Zielkanäle aus und starten die Veröffentlichung. Das ATS übernimmt die Formatierung, den Versand und die Statusverwaltung.</p>
+<p>Modernes Multiposting beginnt im <a href="/produkt/ats-crm/">Bewerbermanagementsystem (ATS)</a>. Dort erstellen Sie Ihre Stellenanzeige einmalig, mit Titel, Beschreibung, Anforderungen, Benefits und allen relevanten Metadaten. Anschließend wählen Sie die Zielkanäle aus und starten die Veröffentlichung. Das ATS übernimmt die Formatierung, den Versand und die Statusverwaltung.</p>
 
 <h3>Technische Anbindungen</h3>
 
@@ -82,7 +82,7 @@ export const batch14: BlogPost[] = [
   <li><strong>Google for Jobs:</strong> Keine Jobbörse im klassischen Sinn, sondern eine Suchfunktion innerhalb der Google-Suche. Stellenanzeigen mit strukturierten Daten (JSON-LD) werden automatisch indexiert und prominent dargestellt. Kostenlos, aber erfordert technische Einrichtung auf Ihrer Karriereseite oder im ATS.</li>
   <li><strong>Indeed (organisch):</strong> Indeed bietet weiterhin eine kostenlose Veröffentlichung an, allerdings mit stark eingeschränkter Sichtbarkeit. Organische Anzeigen werden von Sponsored Jobs verdrängt und erreichen nur noch einen Bruchteil der Kandidaten.</li>
   <li><strong>Jobbörse der Arbeitsagentur:</strong> Komplett kostenlos und mit großer Reichweite im gewerblichen Bereich. Besonders für Ausbildungsstellen, Produktionsjobs und Einstiegspositionen eine solide Basis.</li>
-  <li><strong>Eigene Karriereseite:</strong> Technisch keine Jobbörse, aber Ihr wichtigster eigener Kanal. Einmal aufgebaut, verursacht jede weitere Anzeige keine zusätzlichen Kosten.</li>
+  <li><strong>Eigene <a href="/produkt/karriereseite/">Karriereseite</a>:</strong> Technisch keine Jobbörse, aber Ihr wichtigster eigener Kanal. Einmal aufgebaut, verursacht jede weitere Anzeige keine zusätzlichen Kosten.</li>
 </ul>
 
 <h3>Premium-Kanäle</h3>
@@ -303,11 +303,11 @@ export const batch14: BlogPost[] = [
 
 <h2>Wie ein ATS bei der Umsetzung hilft</h2>
 
-<p>Die Entgelttransparenzrichtlinie stellt neue Anforderungen an Ihre Recruiting-Infrastruktur. Ein modernes ATS kann die Umsetzung erheblich erleichtern:</p>
+<p>Die Entgelttransparenzrichtlinie stellt neue Anforderungen an Ihre Recruiting-Infrastruktur. Ein <a href="/produkt/ats-crm/">modernes ATS</a> kann die Umsetzung erheblich erleichtern:</p>
 
 <ul>
-  <li><strong>Automatische Gehaltsangabe:</strong> Gehaltsspannen werden als Pflichtfeld in der Stellenanzeige konfiguriert. Keine Veröffentlichung ohne Gehaltsangabe, Compliance by Design.</li>
-  <li><strong>Stellenanzeigen-Templates:</strong> Zentral verwaltete Vorlagen stellen sicher, dass alle Anzeigen die erforderlichen Informationen enthalten, inklusive Gehaltsspanne, Vergütungsgruppe und Einstufungskriterien.</li>
+  <li><strong>Automatische Gehaltsangabe:</strong> Gehaltsspannen werden als Pflichtfeld in der Stellenanzeige konfiguriert. Keine Veröffentlichung ohne Gehaltsangabe, <a href="/produkt/compliance/">Compliance by Design</a>.</li>
+  <li><strong><a href="/produkt/multiposting/">Stellenanzeigen-Templates</a>:</strong> Zentral verwaltete Vorlagen stellen sicher, dass alle Anzeigen die erforderlichen Informationen enthalten, inklusive Gehaltsspanne, Vergütungsgruppe und Einstufungskriterien.</li>
   <li><strong>Interview-Compliance:</strong> Interviewleitfaden-Templates können so konfiguriert werden, dass die Gehaltshistorie-Frage explizit ausgeschlossen und stattdessen die Gehaltserwartung im Rahmen des definierten Bandes besprochen wird.</li>
   <li><strong>Vergütungsdaten-Integration:</strong> Verknüpfung der Stellenanzeige mit hinterlegten Gehaltsbändern ermöglicht eine automatische Plausibilitätsprüfung: Liegt das tatsächliche Angebot innerhalb des definierten Bandes?</li>
   <li><strong>Audit-Trail und Reporting:</strong> Alle Gehaltsangebote, Verhandlungen und Entscheidungen werden dokumentiert. Im Fall einer Prüfung durch Behörden oder bei internen Auskunftsanfragen können Sie lückenlos nachweisen, wie Gehaltsentscheidungen zustande kamen.</li>

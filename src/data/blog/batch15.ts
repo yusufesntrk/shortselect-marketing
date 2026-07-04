@@ -100,7 +100,7 @@ export const batch15: BlogPost[] = [
 
 <ul>
   <li><strong>Büro:</strong> Ein Coworking-Space kostet 300 bis 500 Euro monatlich. Alternativ starten Sie aus dem Home Office (Kostenpunkt: 0 Euro).</li>
-  <li><strong>Tools und Software:</strong> ATS (ab 50 Euro/Monat), LinkedIn Recruiter Lite (ab 140 Euro/Monat), CRM-System (ab 25 Euro/Monat), Telefonie (ab 30 Euro/Monat). Gesamtkosten: 250 bis 500 Euro monatlich.</li>
+  <li><strong>Tools und Software:</strong> <a href="/preise/">ATS (ab 50 Euro/Monat)</a>, LinkedIn Recruiter Lite (ab 140 Euro/Monat), CRM-System (ab 25 Euro/Monat), Telefonie (ab 30 Euro/Monat). Gesamtkosten: 250 bis 500 Euro monatlich.</li>
   <li><strong>Marketing:</strong> Website (einmalig 1.000 bis 3.000 Euro oder selbst mit einem Baukasten), Visitenkarten, LinkedIn Premium. Monatlich 200 bis 500 Euro.</li>
   <li><strong>Versicherungen:</strong> Berufshaftpflicht (ab 300 Euro/Jahr), Rechtsschutz (ab 500 Euro/Jahr).</li>
   <li><strong>Gründungskosten:</strong> Gewerbeanmeldung (50 Euro), GmbH-Gründung (1.500 bis 2.500 Euro), UG-Gründung (500 bis 1.000 Euro).</li>
@@ -113,7 +113,7 @@ export const batch15: BlogPost[] = [
 <p>Die richtigen Werkzeuge machen den Unterschied zwischen effizientem Recruiting und Chaos. Hier ist der empfohlene Stack:</p>
 
 <ol>
-  <li><strong>ATS (Applicant Tracking System):</strong> Das Herzstück Ihrer Vermittlung. Ein ATS wie ShortSelect verwaltet Kandidaten, Jobs, Bewerbungen und den gesamten Recruiting-Prozess an einem Ort. Ohne ATS verlieren Sie spätestens bei 20 gleichzeitigen Kandidaten den Überblick.</li>
+  <li><strong>ATS (Applicant Tracking System):</strong> Das Herzstück Ihrer Vermittlung. Ein <a href="/produkt/ats-crm/">ATS wie ShortSelect</a> verwaltet Kandidaten, Jobs, Bewerbungen und den gesamten Recruiting-Prozess an einem Ort. Ohne ATS verlieren Sie spätestens bei 20 gleichzeitigen Kandidaten den Überblick.</li>
   <li><strong>LinkedIn Sales Navigator / Recruiter:</strong> Für Active Sourcing unverzichtbar. Damit finden und kontaktieren Sie passive Kandidaten direkt.</li>
   <li><strong>CRM-System:</strong> Für die Verwaltung Ihrer Kundenbeziehungen. Manche ATS-Systeme integrieren CRM-Funktionen bereits.</li>
   <li><strong>Geschäftskonto:</strong> Trennen Sie geschäftliche und private Finanzen von Tag eins. Anbieter wie Qonto oder Kontist bieten Geschäftskonten ab 9 Euro monatlich.</li>
@@ -156,13 +156,13 @@ export const batch15: BlogPost[] = [
   <li><strong>Zu wenig Rücklagen:</strong> Die ersten Monate bringen kein Einkommen. Wer nach drei Monaten nervös wird, trifft schlechte Entscheidungen.</li>
   <li><strong>Kein ATS:</strong> Excel-Listen und E-Mail-Ordner funktionieren bis zur zehnten Bewerbung. Danach wird es chaotisch und Sie verlieren Kandidaten.</li>
   <li><strong>Zu günstige Provisionen:</strong> Senken Sie nicht Ihre Preise, um Aufträge zu gewinnen. 20 Prozent statt 25 Prozent Provision klingt nach wenig Unterschied, kostet Sie aber auf ein Jahr gerechnet fünfstellige Beträge.</li>
-  <li><strong>Vernachlässigte Kandidatenpflege:</strong> Ihr wichtigstes Kapital sind gute Kandidaten, nicht Kunden. Pflegen Sie Ihre Kandidatenbeziehungen mindestens so sorgfältig wie Ihre Kundenbeziehungen.</li>
+  <li><strong>Vernachlässigte Kandidatenpflege:</strong> Ihr wichtigstes Kapital sind gute Kandidaten, nicht Kunden. Pflegen Sie Ihre <a href="/produkt/talent-pools/">Kandidatenbeziehungen</a> mindestens so sorgfältig wie Ihre Kundenbeziehungen.</li>
   <li><strong>Fehlende Online-Präsenz:</strong> Eine professionelle Website und ein gepflegtes LinkedIn-Profil sind Pflicht. Kunden googeln Sie, bevor sie Ihnen einen Auftrag geben.</li>
 </ol>
 
 <h2>Fazit: Jetzt starten oder warten?</h2>
 
-<p>Der Markt für Personalvermittlung wächst, der Fachkräftemangel verschärft sich und Unternehmen sind bereit, für gute Recruiting-Dienstleistungen zu zahlen. Die Einstiegshürden sind niedrig: Keine besondere Erlaubnis (bei reiner Vermittlung), überschaubare Startkosten und ein skalierbares Geschäftsmodell. Wer Branchenwissen, ein Netzwerk und den Willen zum Vertrieb mitbringt, hat beste Chancen. Entscheidend ist, dass Sie von Anfang an auf professionelle Tools setzen, ein ATS wie ShortSelect gibt Ihnen die Struktur, die Sie brauchen, um vom ersten Tag an professionell zu arbeiten und skalierbar zu wachsen.</p>
+<p>Der Markt für Personalvermittlung wächst, der Fachkräftemangel verschärft sich und Unternehmen sind bereit, für gute Recruiting-Dienstleistungen zu zahlen. Die Einstiegshürden sind niedrig: Keine besondere Erlaubnis (bei reiner Vermittlung), überschaubare Startkosten und ein skalierbares Geschäftsmodell. Wer Branchenwissen, ein Netzwerk und den Willen zum Vertrieb mitbringt, hat beste Chancen. Entscheidend ist, dass Sie von Anfang an auf professionelle Tools setzen, ein <a href="/fuer/personalvermittlung/">ATS wie ShortSelect</a> gibt Ihnen die Struktur, die Sie brauchen, um vom ersten Tag an professionell zu arbeiten und skalierbar zu wachsen.</p>
 `,
   },
   {
@@ -204,7 +204,7 @@ export const batch15: BlogPost[] = [
   <li><strong>Nationale Herkunft</strong></li>
 </ol>
 
-<p>Verstöße gegen das AGG können teuer werden: Betroffene können bis zu drei Monatsgehälter als Entschädigung fordern. Aber über die reine Compliance hinaus bietet das AGG einen nützlichen Rahmen, um den eigenen Recruiting-Prozess kritisch zu überprüfen. Fragen Sie sich bei jedem Schritt: Könnte dieser Prozessschritt bestimmte Gruppen systematisch benachteiligen?</p>
+<p>Verstöße gegen das AGG können teuer werden: Betroffene können bis zu drei Monatsgehälter als Entschädigung fordern. Aber über die reine <a href="/produkt/compliance/">Compliance</a> hinaus bietet das AGG einen nützlichen Rahmen, um den eigenen Recruiting-Prozess kritisch zu überprüfen. Fragen Sie sich bei jedem Schritt: Könnte dieser Prozessschritt bestimmte Gruppen systematisch benachteiligen?</p>
 
 <h3>Praktische AGG-Checkliste für Stellenanzeigen</h3>
 
@@ -247,7 +247,7 @@ export const batch15: BlogPost[] = [
 <h3>So setzen Sie Blind Hiring um</h3>
 
 <ol>
-  <li><strong>ATS konfigurieren:</strong> Moderne Bewerbermanagementsysteme wie ShortSelect bieten die Möglichkeit, identifizierende Felder im Screening-Modus auszublenden.</li>
+  <li><strong>ATS konfigurieren:</strong> Moderne <a href="/produkt/ats-crm/">Bewerbermanagementsysteme wie ShortSelect</a> bieten die Möglichkeit, identifizierende Felder im Screening-Modus auszublenden.</li>
   <li><strong>Standardisiertes Screening:</strong> Definieren Sie vorab objektive Kriterien für die Vorselektion. Jede Bewerbung wird anhand derselben Checkliste bewertet.</li>
   <li><strong>Separate Rollen:</strong> Die Person, die das Screening durchführt, muss nicht dieselbe sein, die den Kandidaten später interviewt. So bleibt die Anonymität gewahrt, bis die fachliche Eignung feststeht.</li>
 </ol>
@@ -302,7 +302,7 @@ export const batch15: BlogPost[] = [
   <li><strong>Retention Rate nach Diversitätsmerkmal:</strong> Bleiben diverse Mitarbeiter genauso lange wie andere? Niedrige Retention bei bestimmten Gruppen deutet auf Probleme in der Unternehmenskultur hin.</li>
 </ul>
 
-<p>Ein modernes ATS ermöglicht es, diese Daten automatisiert zu erheben und in übersichtlichen Dashboards darzustellen. So erkennen Sie Muster, identifizieren Schwachstellen und messen den Erfolg Ihrer Diversity-Maßnahmen objektiv.</p>
+<p>Ein modernes ATS ermöglicht es, diese Daten <a href="/produkt/automatisierung/">automatisiert zu erheben</a> und in übersichtlichen Dashboards darzustellen. So erkennen Sie Muster, identifizieren Schwachstellen und messen den Erfolg Ihrer Diversity-Maßnahmen objektiv.</p>
 
 <h2>Quick Wins: Was Sie sofort umsetzen können</h2>
 

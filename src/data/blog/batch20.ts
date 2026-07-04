@@ -112,7 +112,7 @@ export const batch20: BlogPost[] = [
   <li><strong>Manuelle Prozesse \u00FCberall:</strong> Jede E-Mail wird einzeln geschrieben. Jeder Status manuell aktualisiert. Jeder Report von Hand erstellt. Das frisst Stunden pro Tag \u2014 pro Recruiter.</li>
   <li><strong>Schlechtes Matching:</strong> Kandidaten werden per Keyword-Suche gesucht. Kein Skill-Matching, kein Scoring, kein intelligentes Ranking. Das Ergebnis: falsche Kandidaten auf falschen Stellen.</li>
   <li><strong>Zu langsam:</strong> Die Time-to-Response ist der wichtigste Faktor im Recruiting. Wer 48 Stunden braucht, um auf eine Bewerbung zu reagieren, verliert den Kandidaten an die Agentur, die in 2 Stunden reagiert hat.</li>
-  <li><strong>Kein Talent Pool:</strong> Kandidaten, die heute nicht passen, werden nicht gespeichert, nicht gepflegt, nicht reaktiviert. Jede Suche beginnt bei Null. Jedes Mal.</li>
+  <li><strong>Kein <a href="/produkt/talent-pools/">Talent Pool</a>:</strong> Kandidaten, die heute nicht passen, werden nicht gespeichert, nicht gepflegt, nicht reaktiviert. Jede Suche beginnt bei Null. Jedes Mal.</li>
 </ul>
 
 <h2>Was die L\u00F6sung kostet \u2014 und was das Problem kostet</h2>
@@ -123,7 +123,7 @@ export const batch20: BlogPost[] = [
 
 <ul>
   <li><strong>Einstiegsklasse:</strong> 50\u2013150\u20AC/Monat</li>
-  <li><strong>Mittelklasse mit KI-Matching:</strong> 150\u2013400\u20AC/Monat</li>
+  <li><strong>Mittelklasse mit <a href="/produkt/ki-features/">KI-Matching</a>:</strong> 150\u2013400\u20AC/Monat</li>
   <li><strong>Enterprise:</strong> 500\u20AC+/Monat</li>
 </ul>
 
@@ -158,7 +158,7 @@ export const batch20: BlogPost[] = [
 
 <p>Recruiting-Agenturen scheitern selten an mangelndem Talent oder fehlenden Kunden. Sie scheitern an ineffizienten Prozessen, die jeden Tag leise Geld verbrennen. 15.000\u20AC hier, 22.500\u20AC dort \u2014 am Ende des Jahres sind es sechsstellige Summen, die nie auf einer Rechnung standen.</p>
 
-<p>Das Ironische: Die L\u00F6sung kostet einen Bruchteil des Problems. Ein ATS, das zu Ihrem Workflow passt, zahlt sich nicht in Monaten zur\u00FCck \u2014 sondern in Wochen.</p>
+<p>Das Ironische: Die L\u00F6sung kostet einen Bruchteil des Problems. Ein <a href="/preise/">ATS, das zu Ihrem Workflow passt</a>, zahlt sich nicht in Monaten zur\u00FCck \u2014 sondern in Wochen.</p>
 
 <p><strong>Die Frage ist nicht, ob Sie sich ein ATS leisten k\u00F6nnen. Die Frage ist, ob Sie es sich leisten k\u00F6nnen, keins zu haben.</strong></p>
 `,
@@ -250,7 +250,7 @@ export const batch20: BlogPost[] = [
 
 <h3>Automatische Aktivit\u00E4ten-Verkn\u00FCpfung</h3>
 
-<p>Wenn ein Recruiter eine E-Mail an einen Kandidaten schickt, die einen Kunden betrifft \u2014 wird die Aktivit\u00E4t automatisch bei beiden gespeichert. Wenn ein Sales-Gespr\u00E4ch eine neue Stelle ergibt, wird sie automatisch mit dem bestehenden Talent Pool abgeglichen. Kein manuelles Verkn\u00FCpfen. Kein \"Vergessen, das einzutragen\".</p>
+<p>Wenn ein Recruiter eine E-Mail an einen Kandidaten schickt, die einen Kunden betrifft \u2014 wird die Aktivit\u00E4t automatisch bei beiden gespeichert. Wenn ein Sales-Gespr\u00E4ch eine neue Stelle ergibt, wird sie automatisch mit dem bestehenden <a href="/produkt/talent-pools/">Talent Pool</a> abgeglichen. Kein manuelles Verkn\u00FCpfen. Kein \"Vergessen, das einzutragen\".</p>
 
 <h2>Wann getrennte Systeme Sinn machen (Spoiler: fast nie)</h2>
 
@@ -272,7 +272,7 @@ export const batch20: BlogPost[] = [
   <li><strong>Doppelte Lizenzkosten:</strong> ATS-Lizenz + CRM-Lizenz. Zwei Anbieter, zwei Vertr\u00E4ge, zwei Preiserh\u00F6hungen pro Jahr.</li>
   <li><strong>Doppelte Schulung:</strong> Jeder neue Recruiter muss zwei Systeme lernen. Das verl\u00E4ngert das Onboarding um Tage.</li>
   <li><strong>Doppelter Support:</strong> Probleme? Zwei Helpdesks. Zwei Ticketsysteme. Und wenn das Problem an der Schnittstelle liegt? Dann zeigt jeder auf den anderen.</li>
-  <li><strong>Datenschutz-Risiko:</strong> Zwei Systeme = zwei Stellen, an denen DSGVO-konforme L\u00F6schung sichergestellt werden muss. Vergessen Sie einen Kandidaten im CRM zu l\u00F6schen, w\u00E4hrend er im ATS gel\u00F6scht wird? DSGVO-Versto\u00DF.</li>
+  <li><strong>Datenschutz-Risiko:</strong> Zwei Systeme = zwei Stellen, an denen <a href="/produkt/compliance/">DSGVO-konforme L\u00F6schung</a> sichergestellt werden muss. Vergessen Sie einen Kandidaten im CRM zu l\u00F6schen, w\u00E4hrend er im ATS gel\u00F6scht wird? DSGVO-Versto\u00DF.</li>
   <li><strong>Reporting-Chaos:</strong> Kennzahlen, die aus zwei Quellen kommen, sind nie konsistent. Sie vergleichen \u00C4pfel mit Birnen und merken es nicht.</li>
 </ul>
 
@@ -280,7 +280,7 @@ export const batch20: BlogPost[] = [
 
 <p>Die Frage ist nicht: \"Brauchen wir ein besseres CRM?\" oder \"Brauchen wir ein besseres ATS?\" Die Frage ist: <strong>\"Warum haben wir \u00FCberhaupt zwei Systeme?\"</strong></p>
 
-<p>Ein kombiniertes ATS+CRM ist nicht \"nice to have\". Es ist die Grundlage f\u00FCr eine Agentur, die skalieren will, ohne proportional mehr Verwaltungsaufwand zu erzeugen.</p>
+<p>Ein <a href="/produkt/ats-crm/">kombiniertes ATS+CRM</a> ist nicht \"nice to have\". Es ist die Grundlage f\u00FCr eine Agentur, die skalieren will, ohne proportional mehr Verwaltungsaufwand zu erzeugen.</p>
 
 <blockquote>
   <strong>Ihr Recruiter sollte recruiten, nicht Daten synchronisieren. Ihr Sales-Manager sollte verkaufen, nicht in zwei Systemen nach Informationen suchen. Und Sie sollten ein Dashboard haben, dem Sie vertrauen k\u00F6nnen \u2014 nicht zwei, die sich widersprechen.</strong>
@@ -343,7 +343,7 @@ export const batch20: BlogPost[] = [
   <li><strong>Bei 10 Kandidaten:</strong> Bauchgef\u00FChl funktioniert. Sie kennen jeden pers\u00F6nlich.</li>
   <li><strong>Bei 50 Kandidaten:</strong> Sie erinnern sich an die Top 10 und die Flops. Der Rest verschwimmt.</li>
   <li><strong>Bei 200 Kandidaten:</strong> Sie matchen nach dem, wer Ihnen zuletzt in Erinnerung geblieben ist. Nicht nach dem, wer am besten passt.</li>
-  <li><strong>Bei 500+ Kandidaten:</strong> Sie suchen gar nicht mehr im Talent Pool. Sie schalten lieber eine neue Anzeige \u2014 obwohl der perfekte Kandidat schon in Ihrer Datenbank sitzt.</li>
+  <li><strong>Bei 500+ Kandidaten:</strong> Sie suchen gar nicht mehr im <a href="/produkt/talent-pools/">Talent Pool</a>. Sie schalten lieber eine neue Anzeige \u2014 obwohl der perfekte Kandidat schon in Ihrer Datenbank sitzt.</li>
 </ul>
 
 <p>Bauchgef\u00FChl hat einen Namen in der Psychologie: <strong>Verf\u00FCgbarkeitsheuristik</strong>. Sie w\u00E4hlen nicht den besten Kandidaten. Sie w\u00E4hlen den, an den Sie sich am leichtesten erinnern. Und das ist selten derselbe.</p>
@@ -384,7 +384,7 @@ export const batch20: BlogPost[] = [
 
 <h3>4. KI-Ranking statt alphabetischer Liste</h3>
 
-<p>Statt eine flache Liste von \"Treffern\" auszugeben, rankt ein KI-basiertes System Kandidaten nach einem <strong>Match-Score</strong>: Kandidat A passt zu 92%, Kandidat B zu 78%, Kandidat C zu 65%. Der Recruiter beginnt beim besten Match \u2014 nicht beim Nachnamen mit A.</p>
+<p>Statt eine flache Liste von \"Treffern\" auszugeben, rankt ein <a href="/produkt/ki-features/">KI-basiertes System</a> Kandidaten nach einem <strong>Match-Score</strong>: Kandidat A passt zu 92%, Kandidat B zu 78%, Kandidat C zu 65%. Der Recruiter beginnt beim besten Match \u2014 nicht beim Nachnamen mit A.</p>
 
 <h2>Semantic Matching vs. Keyword-Matching: Ein Beispiel</h2>
 
@@ -427,7 +427,7 @@ export const batch20: BlogPost[] = [
 <ul>
   <li><strong>Skill-Tags statt Freitext:</strong> Verschlagworten Sie Kandidaten mit standardisierten Skill-Tags. Nicht \"Hat Erfahrung mit Projektmanagement-Software\", sondern: \"Jira\", \"Asana\", \"MS Project\", \"Confluence\". Tags sind durchsuchbar. Freitext ist ein Grab.</li>
   <li><strong>Gewichtete Kriterien:</strong> Definieren Sie f\u00FCr jede Stelle: Was ist ein Muss? Was ist ein Soll? Was ist ein Bonus? Ein Kandidat, der 3 von 3 Muss-Kriterien erf\u00FCllt und 1 von 5 Soll-Kriterien, ist besser als einer, der 2 von 3 Muss-Kriterien und 5 von 5 Soll-Kriterien erf\u00FCllt.</li>
-  <li><strong>Automatisches Ranking:</strong> Wenn Ihr ATS Scoring unterst\u00FCtzt \u2014 nutzen Sie es. Wenn nicht: Wechseln Sie zu einem, das es kann. Manuelles Ranking bei mehr als 20 Kandidaten ist Zeitverschwendung.</li>
+  <li><strong>Automatisches Ranking:</strong> Wenn Ihr ATS Scoring unterst\u00FCtzt \u2014 nutzen Sie es. Wenn nicht: <a href="/wechsel/">Wechseln Sie zu einem, das es kann</a>. Manuelles Ranking bei mehr als 20 Kandidaten ist Zeitverschwendung.</li>
   <li><strong>Ablehnungsgr\u00FCnde tracken:</strong> Warum wurde Kandidat X abgelehnt? \"Passt nicht\" reicht nicht. Tracken Sie den konkreten Grund. Nach 6 Monaten haben Sie Daten, die Ihnen sagen, welche Matching-Kriterien wirklich vorhersagekr\u00E4ftig sind \u2014 und welche nicht.</li>
   <li><strong>Feedback-Loop mit dem Kunden:</strong> Fragen Sie nach 3 und 6 Monaten nach: Wie performt der platzierte Kandidat? Diese R\u00FCckmeldung ist Gold wert \u2014 sie zeigt Ihnen, ob Ihr Matching wirklich funktioniert oder ob Sie nur schnell waren.</li>
 </ul>

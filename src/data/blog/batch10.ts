@@ -37,7 +37,7 @@ export const batch10: BlogPost[] = [
 
 <h3>Wie ein ATS hilft</h3>
 
-<p>Ein Bewerbermanagementsystem wie ShortSelect macht Prozessdauer sichtbar. Sie sehen auf einen Blick, wie lange ein Kandidat bereits in einer Phase steckt, erhalten automatische Erinnerungen wenn Zeitfenster \u00fcberschritten werden und k\u00f6nnen die durchschnittliche Time-to-Hire pro Stelle messen und optimieren. Automatisierte Status-Updates informieren Kandidaten proaktiv \u00fcber den Stand ihrer Bewerbung.</p>
+<p>Ein <a href="/produkt/ats-crm/">Bewerbermanagementsystem</a> wie ShortSelect macht Prozessdauer sichtbar. Sie sehen auf einen Blick, wie lange ein Kandidat bereits in einer Phase steckt, erhalten automatische Erinnerungen wenn Zeitfenster \u00fcberschritten werden und k\u00f6nnen die durchschnittliche Time-to-Hire pro Stelle messen und optimieren. Automatisierte Status-Updates informieren Kandidaten proaktiv \u00fcber den Stand ihrer Bewerbung.</p>
 
 <h2>Grund 2: Keine R\u00fcckmeldung</h2>
 
@@ -51,7 +51,7 @@ export const batch10: BlogPost[] = [
 
 <h3>Sofortma\u00dfnahme</h3>
 
-<p>Richten Sie mindestens drei automatisierte E-Mails ein: Eine Empfangsbest\u00e4tigung direkt nach Bewerbungseingang, eine Zwischeninfo nach einer Woche falls noch keine Entscheidung gefallen ist, und eine Absage-E-Mail f\u00fcr Kandidaten, die nicht weiterkommen. Diese drei E-Mails allein eliminieren das Gef\u00fchl des Ghostings f\u00fcr die gro\u00dfe Mehrheit Ihrer Bewerber.</p>
+<p>Richten Sie mindestens drei <a href="/produkt/automatisierung/">automatisierte E-Mails</a> ein: Eine Empfangsbest\u00e4tigung direkt nach Bewerbungseingang, eine Zwischeninfo nach einer Woche falls noch keine Entscheidung gefallen ist, und eine Absage-E-Mail f\u00fcr Kandidaten, die nicht weiterkommen. Diese drei E-Mails allein eliminieren das Gef\u00fchl des Ghostings f\u00fcr die gro\u00dfe Mehrheit Ihrer Bewerber.</p>
 
 <h3>Wie ein ATS hilft</h3>
 
@@ -73,7 +73,7 @@ export const batch10: BlogPost[] = [
 
 <h3>Wie ein ATS hilft</h3>
 
-<p>Moderne ATS-L\u00f6sungen bieten schlanke, mobil-optimierte Bewerbungsformulare, die mit einem Klick \u00fcber den Lebenslauf-Upload funktionieren. ShortSelect erlaubt es, Formulare individuell pro Stelle zu konfigurieren \u2014 f\u00fcr eine Praktikumsstelle reicht der Name plus E-Mail, f\u00fcr eine F\u00fchrungsposition k\u00f6nnen Sie weitere Felder hinzuf\u00fcgen. Die Daten werden automatisch im Kandidatenprofil strukturiert, ohne dass der Bewerber 20 Felder ausf\u00fcllen muss.</p>
+<p>Moderne ATS-L\u00f6sungen bieten schlanke, <a href="/produkt/karriereseite/">mobil-optimierte Bewerbungsformulare</a>, die mit einem Klick \u00fcber den Lebenslauf-Upload funktionieren. ShortSelect erlaubt es, Formulare individuell pro Stelle zu konfigurieren \u2014 f\u00fcr eine Praktikumsstelle reicht der Name plus E-Mail, f\u00fcr eine F\u00fchrungsposition k\u00f6nnen Sie weitere Felder hinzuf\u00fcgen. Die Daten werden automatisch im Kandidatenprofil strukturiert, ohne dass der Bewerber 20 Felder ausf\u00fcllen muss.</p>
 
 <h2>Grund 4: Schlechte Interview-Erfahrung</h2>
 
@@ -170,7 +170,7 @@ export const batch10: BlogPost[] = [
 
 <h3>Keine Recruiting-Software</h3>
 
-<p>68 Prozent der deutschen KMU verwalten ihre Bewerbungen noch per E-Mail und Excel. Das funktioniert bei zwei Bewerbungen pro Monat. Bei zwanzig wird es zum Chaos: Bewerbungen gehen unter, Antwortzeiten explodieren, und der \u00dcberblick geht verloren. Die Hemmschwelle, eine Software einzuf\u00fchren, ist hoch \u2014 dabei ist gerade f\u00fcr KMU ein einfaches, schlankes ATS der gr\u00f6\u00dfte Effizienz-Hebel.</p>
+<p>68 Prozent der deutschen KMU verwalten ihre Bewerbungen noch per E-Mail und Excel. Das funktioniert bei zwei Bewerbungen pro Monat. Bei zwanzig wird es zum Chaos: Bewerbungen gehen unter, Antwortzeiten explodieren, und der \u00dcberblick geht verloren. Die Hemmschwelle, eine Software einzuf\u00fchren, ist hoch \u2014 dabei ist gerade f\u00fcr KMU ein <a href="/produkt/ats-crm/">einfaches, schlankes ATS</a> der gr\u00f6\u00dfte Effizienz-Hebel.</p>
 
 <h2>Die 5 gr\u00f6\u00dften Fehler im KMU-Recruiting</h2>
 
@@ -192,7 +192,7 @@ export const batch10: BlogPost[] = [
 
 <h3>Fehler 5: Keinen Talent Pool aufbauen</h3>
 
-<p>Jede Bewerbung, die Sie erhalten, ist wertvoll \u2014 auch wenn die Person aktuell nicht passt. KMU behandeln Bewerbungen jedoch oft als Einmal-Vorgang: nicht gepasst, Absage, vergessen. Zwölf Monate sp\u00e4ter wird dieselbe Stelle wieder frei, und die Suche beginnt von vorn. Ein Talent Pool \u2014 eine einfache Sammlung interessanter Kandidaten, die Sie bei Bedarf kontaktieren k\u00f6nnen \u2014 verk\u00fcrzt Ihre Time-to-Hire bei Folgebesetzungen um bis zu 50 Prozent.</p>
+<p>Jede Bewerbung, die Sie erhalten, ist wertvoll \u2014 auch wenn die Person aktuell nicht passt. KMU behandeln Bewerbungen jedoch oft als Einmal-Vorgang: nicht gepasst, Absage, vergessen. Zwölf Monate sp\u00e4ter wird dieselbe Stelle wieder frei, und die Suche beginnt von vorn. Ein <a href="/produkt/talent-pools/">Talent Pool</a> \u2014 eine einfache Sammlung interessanter Kandidaten, die Sie bei Bedarf kontaktieren k\u00f6nnen \u2014 verk\u00fcrzt Ihre Time-to-Hire bei Folgebesetzungen um bis zu 50 Prozent.</p>
 
 <h2>Was KMU besser k\u00f6nnen als Konzerne</h2>
 
@@ -238,14 +238,14 @@ export const batch10: BlogPost[] = [
 <h3>Kan\u00e4le streuen (Budget: 0 bis 1.000 Euro)</h3>
 
 <ul>
-  <li><strong>Kostenlos:</strong> Eigene Karriereseite, Agentur f\u00fcr Arbeit, Social-Media-Posts, Google for Jobs (automatisch \u00fcber strukturierte Daten)</li>
+  <li><strong>Kostenlos:</strong> Eigene <a href="/produkt/karriereseite/">Karriereseite</a>, Agentur f\u00fcr Arbeit, Social-Media-Posts, Google for Jobs (automatisch \u00fcber strukturierte Daten)</li>
   <li><strong>G\u00fcnstig (unter 500 Euro):</strong> Regionale Jobb\u00f6rsen, Branchenportale, Hochschul-Jobb\u00f6rsen</li>
   <li><strong>Gezielt (500 bis 1.000 Euro):</strong> Eine Sponsored-Anzeige auf Indeed oder StepStone f\u00fcr besonders schwer zu besetzende Stellen</li>
 </ul>
 
 <h3>ATS einf\u00fchren (einmalig, 1 Tag Aufwand)</h3>
 
-<p>Ein Bewerbermanagementsystem ist keine Software f\u00fcr Konzerne. Es ist eine Software f\u00fcr jedes Unternehmen, das mehr als eine Stelle gleichzeitig offen hat. Ein gutes ATS f\u00fcr KMU muss drei Dinge k\u00f6nnen: Bewerbungen zentral sammeln, den Prozess-Status sichtbar machen und automatisierte E-Mails versenden. Alles andere ist Bonus. Die Einrichtung dauert bei einer L\u00f6sung wie ShortSelect weniger als einen Tag, und die Kosten liegen deutlich unter dem, was eine einzige fehlbesetzte Stelle kostet.</p>
+<p>Ein Bewerbermanagementsystem ist keine Software f\u00fcr Konzerne. Es ist eine Software f\u00fcr jedes Unternehmen, das mehr als eine Stelle gleichzeitig offen hat. Ein gutes ATS f\u00fcr KMU muss drei Dinge k\u00f6nnen: Bewerbungen zentral sammeln, den Prozess-Status sichtbar machen und automatisierte E-Mails versenden. Alles andere ist Bonus. Die Einrichtung dauert bei einer L\u00f6sung wie ShortSelect weniger als einen Tag, und <a href="/preise/">die Kosten</a> liegen deutlich unter dem, was eine einzige fehlbesetzte Stelle kostet.</p>
 
 <h3>Talent Pool aufbauen (laufend, 5 Minuten pro Bewerbung)</h3>
 

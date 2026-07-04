@@ -29,7 +29,7 @@ export const batch23: BlogPost[] = [
 
 <p>Die Zahlen sind vernichtend. Die durchschnittliche Stellenanzeige auf einer Jobborse erreicht weniger als 2 Prozent der relevanten Zielgruppe. Warum? Weil 70 Prozent der qualifizierten Fachkrafte gar nicht aktiv suchen. Sie sind in Jobs, die okay sind. Nicht fantastisch, aber okay genug, um nicht abends nach Feierabend Bewerbungen zu schreiben.</p>
 
-<p>Diese 70 Prozent, die sogenannten passiven Kandidaten, sind gleichzeitig die besten Kandidaten. Sie sind kompetent, eingearbeitet, erfahren. Sie wechseln nur, wenn ein Angebot kommt, das sie nicht ablehnen konnen. Und dieses Angebot kommt nicht uber eine Stellenanzeige mit dem Titel "Wir suchen eine/n motivierte/n Teamplayer/in (m/w/d)".</p>
+<p>Diese 70 Prozent, die sogenannten <a href="/produkt/talent-pools/">passiven Kandidaten</a>, sind gleichzeitig die besten Kandidaten. Sie sind kompetent, eingearbeitet, erfahren. Sie wechseln nur, wenn ein Angebot kommt, das sie nicht ablehnen konnen. Und dieses Angebot kommt nicht uber eine Stellenanzeige mit dem Titel "Wir suchen eine/n motivierte/n Teamplayer/in (m/w/d)".</p>
 
 <h3>Das Grundproblem der klassischen Bewerbung</h3>
 
@@ -69,7 +69,7 @@ export const batch23: BlogPost[] = [
 
 <p>Ein Berliner Fintech schickt potenziellen Entwicklern keine Jobbeschreibung, sondern ein 4-minutiges Video vom CTO, der erklart, woran das Team arbeitet und warum diese Rolle entscheidend ist. Die Response-Rate auf diese personalisierte Ansprache: 38 Prozent. Im Vergleich zu den branchentypischen 3 bis 5 Prozent bei Standard-InMails.</p>
 
-<p>Ein Munchener SaaS-Unternehmen hat sein gesamtes Karriereportal umgebaut. Statt Stellenanzeigen gibt es jetzt "Team-Profile", Seiten, auf denen sich jedes Team vorstellt, inklusive Tech Stack, aktuelle Projekte, Team-Events und sogar die Lieblings-Tools der Teammitglieder. Bewerber konnen sich nicht auf Stellen bewerben, sondern auf Teams. Sie sagen: "Ich will mit diesem Team arbeiten", und das Team entscheidet, ob es passt.</p>
+<p>Ein Munchener SaaS-Unternehmen hat sein gesamtes <a href="/produkt/karriereseite/">Karriereportal</a> umgebaut. Statt Stellenanzeigen gibt es jetzt "Team-Profile", Seiten, auf denen sich jedes Team vorstellt, inklusive Tech Stack, aktuelle Projekte, Team-Events und sogar die Lieblings-Tools der Teammitglieder. Bewerber konnen sich nicht auf Stellen bewerben, sondern auf Teams. Sie sagen: "Ich will mit diesem Team arbeiten", und das Team entscheidet, ob es passt.</p>
 
 <p>Ein Hamburger E-Commerce-Unternehmen geht noch weiter: Es verschickt an ausgewahlte Kandidaten physische "Arbeitgeber-Bewerbungen", eine Box mit dem Jahresbericht, einem handgeschriebenen Brief des Teamleads, einer Probe des Firmenkaffees und einem QR-Code, der zu einem personalisierten Video fuhrt. Die Kosten pro Box: 35 Euro. Die Conversion-Rate: 52 Prozent. Der ROI im Vergleich zu einer StepStone-Anzeige fur 1.200 Euro: astronomisch.</p>
 
@@ -132,7 +132,7 @@ export const batch23: BlogPost[] = [
 
 <h2>1. Antworten Sie einfach nie</h2>
 
-<p>Der Klassiker. Jemand nimmt sich 2 Stunden Zeit, um eine Bewerbung zu schreiben, ladt seinen Lebenslauf hoch, formuliert ein Anschreiben, und hort nie wieder von Ihnen. Laut einer CareerBuilder-Studie erhalten <strong>72 Prozent aller Bewerber</strong> nie eine Ruckmeldung auf ihre Bewerbung. Nicht einmal eine automatische Absage. Einfach, nichts.</p>
+<p>Der Klassiker. Jemand nimmt sich 2 Stunden Zeit, um eine Bewerbung zu schreiben, ladt seinen Lebenslauf hoch, formuliert ein Anschreiben, und hort nie wieder von Ihnen. Laut einer CareerBuilder-Studie erhalten <strong>72 Prozent aller Bewerber</strong> nie eine Ruckmeldung auf ihre Bewerbung. Nicht einmal eine <a href="/produkt/automatisierung/">automatische Absage</a>. Einfach, nichts.</p>
 
 <p>Die Wirkung ist verheerend. Diese Kandidaten erzahlen im Durchschnitt 9 anderen Personen von ihrer negativen Erfahrung. Bei einer Stelle mit 200 Bewerbungen sind das potenziell 1.296 Menschen, die Ihr Unternehmen als respektlos wahrnehmen. Aber hey, wer braucht schon eine Employer Brand?</p>
 
@@ -158,7 +158,7 @@ export const batch23: BlogPost[] = [
 
 <p>"Sehr geehrte/r Bewerber/in, vielen Dank fur Ihr Interesse an unserem Unternehmen. Leider mussen wir Ihnen mitteilen, dass wir uns fur eine/n andere/n Kandidat/in entschieden haben. Wir wunschen Ihnen fur Ihre berufliche Zukunft alles Gute."</p>
 
-<p>Diesen Text hat jeder schon einmal bekommen. Er kommuniziert exakt eine Sache: Sie sind uns egal. Nicht einmal den Namen haben Sie eingesetzt, obwohl Ihr ATS das mit einem Klick konnte. Kein Feedback. Kein Grund. Keine Warme. <strong>94 Prozent der Bewerber</strong> wunschen sich laut einer Talent Board-Studie konstruktives Feedback nach einer Absage. 6 Prozent bekommen es. Sechs.</p>
+<p>Diesen Text hat jeder schon einmal bekommen. Er kommuniziert exakt eine Sache: Sie sind uns egal. Nicht einmal den Namen haben Sie eingesetzt, obwohl <a href="/produkt/ats-crm/">Ihr ATS</a> das mit einem Klick konnte. Kein Feedback. Kein Grund. Keine Warme. <strong>94 Prozent der Bewerber</strong> wunschen sich laut einer Talent Board-Studie konstruktives Feedback nach einer Absage. 6 Prozent bekommen es. Sechs.</p>
 
 <h2>6. Verlangen Sie einen Roman als Bewerbung</h2>
 
@@ -302,7 +302,7 @@ export const batch23: BlogPost[] = [
 
 <h3>4. Identische Formulierungen bei mehreren Bewerbern</h3>
 
-<p>Wenn Sie 200 Bewerbungen fur eine Stelle erhalten und drei davon nahezu identisch formulieren, dass sie "die ausgeschriebene Position als hervorragende Moglichkeit betrachten, ihre Fachkenntnisse in einem zukunftsorientierten Unternehmen einzubringen", dann hat ChatGPT dreimal den gleichen Default-Text produziert. Achten Sie auf Formulierungs-Cluster. Echte Menschen schreiben nicht identisch.</p>
+<p>Wenn Sie <a href="/produkt/ats-crm/">200 Bewerbungen fur eine Stelle erhalten</a> und drei davon nahezu identisch formulieren, dass sie "die ausgeschriebene Position als hervorragende Moglichkeit betrachten, ihre Fachkenntnisse in einem zukunftsorientierten Unternehmen einzubringen", dann hat ChatGPT dreimal den gleichen Default-Text produziert. Achten Sie auf Formulierungs-Cluster. Echte Menschen schreiben nicht identisch.</p>
 
 <h3>5. Ubertrieben positive Selbstdarstellung ohne Schatten</h3>
 
@@ -340,7 +340,7 @@ export const batch23: BlogPost[] = [
   <strong>Die Frage ist nicht: "Wie erkennen wir KI-Bewerbungen?" Die Frage ist: "Warum basiert unser Auswahlverfahren auf einem Dokument, das eine KI in 30 Sekunden besser schreibt als ein Mensch in 3 Stunden?"</strong>
 </blockquote>
 
-<p>Unternehmen, die jetzt in KI-Detektoren investieren, bekampfen Symptome. Unternehmen, die ihren Auswahlprozess fundamental uberdenken, weg vom Anschreiben, hin zu Skills-Tests, Arbeitsproben und strukturierten Interviews, losen das eigentliche Problem. Und nebenbei stellen sie die besseren Leute ein.</p>
+<p>Unternehmen, die jetzt in KI-Detektoren investieren, bekampfen Symptome. Unternehmen, die ihren Auswahlprozess fundamental uberdenken, weg vom Anschreiben, hin zu Skills-Tests, Arbeitsproben und <a href="/produkt/ki-features/">strukturierten Interviews</a>, losen das eigentliche Problem. Und nebenbei stellen sie die besseren Leute ein.</p>
 
 <p>Denn am Ende geht es nicht darum, ob eine Bewerbung von einem Menschen oder einer Maschine geschrieben wurde. Es geht darum, ob die Person den Job kann. Und das finden Sie nicht in einem Anschreiben heraus, egal wer es geschrieben hat.</p>
     `,

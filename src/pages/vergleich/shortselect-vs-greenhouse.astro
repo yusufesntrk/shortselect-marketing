@@ -13,11 +13,35 @@ const comparisonData = [
   { feature: "Pipeline", ssStatus: "check" as const, ssLabel: "Kanban Drag & Drop", compStatus: "check" as const, compLabel: "Structured Hiring" },
   { feature: "Integrationen", ssStatus: "check" as const, ssLabel: "API + Webhooks", compStatus: "check" as const, compLabel: "400+ Integrationen" },
 ];
+
+const faqs = [
+  {
+    question: "Was ist der Unterschied zwischen ShortSelect und Greenhouse?",
+    answer: "Greenhouse ist der US-Marktführer mit Englisch-first-Oberfläche, US-Servern und über 400 Integrationen, ausgelegt auf internationale Enterprise-Teams. ShortSelect ist Deutsch-first, DSGVO-konform mit EU-Hosting und bietet Multi-Tenancy plus Client Portal, die Greenhouse nicht hat. Das macht ShortSelect zur besseren Wahl für Personalberatungen und Recruiting-Agenturen im DACH-Raum.",
+  },
+  {
+    question: "Für wen ist Greenhouse besser geeignet?",
+    answer: "Greenhouse passt besser für internationale Enterprises mit Recruiting in 20 und mehr Ländern, 500 und mehr Mitarbeitern, eigenem HR-Tech-Team, Englisch als Unternehmenssprache und Bedarf an hunderten Tool-Integrationen oder der Structured-Hiring-Methodik.",
+  },
+  {
+    question: "Was kostet ShortSelect im Vergleich zu Greenhouse?",
+    answer: "ShortSelect kostet im Pioneer Plan 149 € pro User/Monat für die ersten 100 Agenturen, danach 300 € pro User/Monat, mit 30 Tagen kostenlosem Test ohne Kreditkarte. Greenhouse startet bei etwa 6.000 US-Dollar pro Jahr und erfordert ein mehrwöchiges Onboarding.",
+  },
+  {
+    question: "Ist Greenhouse DSGVO-konform für deutsche Unternehmen?",
+    answer: "Greenhouse läuft auf US-Servern, DSGVO-Konformität wird über Zusatzvereinbarungen gelöst. ShortSelect hostet in der EU und ist DSGVO-konform ab Werk. Für deutsche Recruiting-Teams mit strenger Datenschutz-Pflicht ist das der einfachere und sicherere Weg.",
+  },
+  {
+    question: "Wie wechsle ich von Greenhouse zu ShortSelect?",
+    answer: "Der Umzug dauert in der Regel etwa 15 Minuten: Account erstellen, Kandidaten und Jobs per CSV oder API importieren, Team einladen und loslegen. Eine Schritt-für-Schritt-Anleitung finden Sie auf unserer Wechsel-Seite.",
+    answerHtml: 'Der Umzug dauert in der Regel etwa 15 Minuten: Account erstellen, Kandidaten und Jobs per CSV oder API importieren, Team einladen und loslegen. Eine Schritt-für-Schritt-Anleitung finden Sie auf unserer <a href="/wechsel/" class="text-primary hover:underline">Wechsel-Seite</a>.',
+  },
+];
 ---
 
 <VergleichLayout
   title="ShortSelect vs Greenhouse: DACH-ATS für 149 € pro User"
-  description="Greenhouse ab ~$6.000/Jahr, Englisch-first, US-Server. ShortSelect: Deutsch-first, DSGVO EU-nativ, Multi-Tenancy, 149 € pro User/Monat. Für DACH-Teams und Personalberatungen."
+  description="Greenhouse: US-Server, Englisch-first, ab ~6.000 $/Jahr. ShortSelect: Deutsch-first, DSGVO EU-nativ, ab 149 € pro User. Der Vergleich für DACH-Teams."
   competitorName="Greenhouse"
   heroSubline="Greenhouse ist der US-Marktführer. Aber passt ein amerikanisches Enterprise-Tool zu deutschen Recruiting-Teams?"
   heroBadge="Vergleich"
@@ -48,4 +72,5 @@ const comparisonData = [
       "Multi-Mandanten und Client Portal für Kunden",
     ]
   }}
+  faqs={faqs}
 />

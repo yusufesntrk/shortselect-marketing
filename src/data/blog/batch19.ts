@@ -17,7 +17,7 @@ export const batch19: BlogPost[] = [
 
 <p>Data-Driven Recruiting bedeutet, Personalentscheidungen systematisch auf Grundlage von Daten zu treffen, statt auf Bauchgefühl, persönliche Vorlieben oder anekdotische Erfahrungen zu vertrauen. Es geht darum, den gesamten Recruiting-Prozess messbar zu machen: Von der Stellenausschreibung über die Kandidatenauswahl bis hin zur Einstellung und dem langfristigen Erfolg eines neuen Mitarbeitenden.</p>
 
-<p>Wichtig ist die Abgrenzung: Data-Driven Recruiting ist nicht gleichbedeutend mit „wir haben ein ATS". Ein Bewerbermanagementsystem zu nutzen, bedeutet noch lange nicht, datengetrieben zu arbeiten. Viele Unternehmen sammeln Daten in ihrem ATS, ohne sie jemals auszuwerten oder in Entscheidungen einfließen zu lassen. Die Daten liegen brach, wie ein Fitnesstracker, den man nie abliest.</p>
+<p>Wichtig ist die Abgrenzung: Data-Driven Recruiting ist nicht gleichbedeutend mit „wir haben ein ATS". Ein <a href="/produkt/ats-crm/">Bewerbermanagementsystem</a> zu nutzen, bedeutet noch lange nicht, datengetrieben zu arbeiten. Viele Unternehmen sammeln Daten in ihrem ATS, ohne sie jemals auszuwerten oder in Entscheidungen einfließen zu lassen. Die Daten liegen brach, wie ein Fitnesstracker, den man nie abliest.</p>
 
 <blockquote>
   <strong>Der Unterschied:</strong> „Wir haben ein ATS" heißt, Sie speichern Daten. „Data-Driven Recruiting" heißt, Sie handeln nach Daten. Das eine ist Infrastruktur, das andere ist Kultur.
@@ -53,7 +53,7 @@ export const batch19: BlogPost[] = [
   <li><strong>ATS-Daten:</strong> Das Herzstück. Bewerbungseingänge, Pipeline-Status, Durchlaufzeiten, Ablehnungsgründe, Angebotsannahmen. Ihr ATS ist die zentrale Datendrehscheibe, wenn Sie es richtig nutzen.</li>
   <li><strong>Jobbörsen-Analytics:</strong> Klickzahlen, Impressionen, Bewerbungsraten pro Anzeige. Indeed, StepStone und LinkedIn liefern detaillierte Performance-Daten, die viele Recruiter nie anschauen.</li>
   <li><strong>LinkedIn Insights:</strong> Talent-Pool-Größen, Wettbewerbsdaten, Gehaltsvergleiche, InMail-Response-Rates. Besonders für Active Sourcing unverzichtbar.</li>
-  <li><strong>Karriereseite-Analytics:</strong> Google Analytics oder Matomo auf Ihrer Karriereseite zeigt Ihnen, welche Stellen angesehen werden, wo Besucher abspringen und welche Geräte sie nutzen. Eine mobile Absprungrate von über 60 Prozent ist ein klares Signal.</li>
+  <li><strong>Karriereseite-Analytics:</strong> Google Analytics oder Matomo auf Ihrer <a href="/produkt/karriereseite/">Karriereseite</a> zeigt Ihnen, welche Stellen angesehen werden, wo Besucher abspringen und welche Geräte sie nutzen. Eine mobile Absprungrate von über 60 Prozent ist ein klares Signal.</li>
   <li><strong>Feedback-Umfragen:</strong> Candidate Experience Surveys nach dem Bewerbungsprozess liefern qualitative Daten, die quantitative Metriken ergänzen. Warum sagen Kandidaten ab? Was hat sie beeindruckt?</li>
   <li><strong>Onboarding-Daten:</strong> Die Recruiting-Messung endet nicht mit der Einstellung. 90-Tage-Feedback, Probezeit-Bestehensquoten und frühe Fluktuationsdaten schließen den Kreis zur Quality-of-Hire.</li>
 </ul>
@@ -76,7 +76,7 @@ export const batch19: BlogPost[] = [
 
 <h2>Predictive Analytics im Recruiting</h2>
 
-<p>Predictive Analytics nutzt historische Daten, um Vorhersagen über zukünftige Ergebnisse zu treffen. Im Recruiting ergeben sich daraus mächtige Anwendungsfälle:</p>
+<p><a href="/produkt/ki-features/">Predictive Analytics</a> nutzt historische Daten, um Vorhersagen über zukünftige Ergebnisse zu treffen. Im Recruiting ergeben sich daraus mächtige Anwendungsfälle:</p>
 
 <ul>
   <li><strong>Welche Kandidaten bleiben?</strong> Durch die Analyse von Profildaten früherer Einstellungen und deren Verweildauer lassen sich Muster erkennen. Kandidaten mit bestimmten Karriereverläufen, Qualifikationskombinationen oder kulturellen Übereinstimmungen haben statistisch eine höhere Retentionswahrscheinlichkeit.</li>
@@ -116,7 +116,7 @@ export const batch19: BlogPost[] = [
 <p>Die beste Analyse ist wertlos, wenn die zugrunde liegenden Daten schlecht sind. Drei Aspekte verdienen besondere Aufmerksamkeit:</p>
 
 <ul>
-  <li><strong>DSGVO-Konformität:</strong> Kandidatendaten unterliegen strengen Datenschutzanforderungen. Löschfristen müssen eingehalten, Einwilligungen dokumentiert und Zugriffsrechte kontrolliert werden. Ein gutes ATS automatisiert diese Prozesse, aber die Verantwortung bleibt beim Unternehmen.</li>
+  <li><strong><a href="/produkt/compliance/">DSGVO-Konformität</a>:</strong> Kandidatendaten unterliegen strengen Datenschutzanforderungen. Löschfristen müssen eingehalten, Einwilligungen dokumentiert und Zugriffsrechte kontrolliert werden. Ein gutes ATS automatisiert diese Prozesse, aber die Verantwortung bleibt beim Unternehmen.</li>
   <li><strong>Datenhygiene:</strong> Pflegen Sie Ihre Daten aktiv. Kandidatenprofile sollten vollständig ausgefüllt, Ablehnungsgründe dokumentiert und Pipeline-Status aktuell gehalten werden. Jedes nicht ausgefüllte Feld ist ein blinder Fleck in Ihrer Analyse.</li>
   <li><strong>Duplikat-Bereinigung:</strong> Dieselbe Person bewirbt sich über verschiedene Kanäle oder wird von mehreren Recruitern angesprochen. Ohne Duplikat-Erkennung verfälschen Mehrfacheinträge Ihre Metriken. Moderne ATS-Systeme erkennen Duplikate automatisch anhand von E-Mail-Adressen, Telefonnummern oder Namenskombinationen.</li>
 </ul>
@@ -170,7 +170,7 @@ export const batch19: BlogPost[] = [
   <strong>Die Realität:</strong> Kandidaten googeln Sie, bevor sie Ihren Anruf annehmen. Wenn sie eine lieblose Website und ein leeres LinkedIn-Profil finden, sinkt die Antwortrate dramatisch. Ihre Online-Präsenz ist Ihr erster Pitch, noch bevor Sie ein Wort gesprochen haben.
 </blockquote>
 
-<p>Für Personalvermittlungen ist Marketing keine Nebensache, es ist der Motor für zwei zentrale Pipelines: die Kandidaten-Pipeline und die Kunden-Pipeline. Wer sichtbar ist, wird angesprochen. Wer als Thought Leader wahrgenommen wird, muss weniger kalt akquirieren. Wer eine starke Marke hat, gewinnt Pitches gegen den Wettbewerb.</p>
+<p>Für Personalvermittlungen ist Marketing keine Nebensache, es ist der Motor für zwei zentrale Pipelines: die <a href="/produkt/ats-crm/">Kandidaten-Pipeline und die Kunden-Pipeline</a>. Wer sichtbar ist, wird angesprochen. Wer als Thought Leader wahrgenommen wird, muss weniger kalt akquirieren. Wer eine starke Marke hat, gewinnt Pitches gegen den Wettbewerb.</p>
 
 <h2>Personal Brand vs. Firmenmarke</h2>
 
@@ -194,7 +194,7 @@ export const batch19: BlogPost[] = [
 
 <h3>Karriereseite mit aktuellen Stellen</h3>
 
-<p>Ihre aktuellen Vakanzen gehören prominent auf die Website. Kandidaten, die über Google oder Social Media auf Ihre Seite kommen, suchen nach konkreten Stellen. Eine gut strukturierte Karriereseite mit Filterfunktionen, Standort- und Branchenfiltern sowie einer einfachen Bewerbungsmöglichkeit ist Pflicht. Ein ATS mit integriertem Job-Widget macht das technisch einfach, die Stellen werden automatisch auf Ihrer Website angezeigt und Bewerbungen fließen direkt ins System.</p>
+<p>Ihre aktuellen Vakanzen gehören prominent auf die Website. Kandidaten, die über Google oder Social Media auf Ihre Seite kommen, suchen nach konkreten Stellen. Eine gut strukturierte Karriereseite mit Filterfunktionen, Standort- und Branchenfiltern sowie einer einfachen Bewerbungsmöglichkeit ist Pflicht. Ein <a href="/produkt/karriereseite/">ATS mit integriertem Job-Widget</a> macht das technisch einfach, die Stellen werden automatisch auf Ihrer Website angezeigt und Bewerbungen fließen direkt ins System.</p>
 
 <h3>Case Studies und Erfolgsgeschichten</h3>
 
@@ -222,7 +222,7 @@ export const batch19: BlogPost[] = [
 
 <h3>Newsletter</h3>
 
-<p>Ein monatlicher Newsletter an Ihre Kontaktdatenbank hält Sie im Gedächtnis. Kuratieren Sie die besten Inhalte des Monats: Ihren stärksten Blogbeitrag, eine Arbeitsmarkt-Statistik, eine offene Top-Position. Halten Sie den Newsletter kurz und relevant, niemand liest einen fünfseitigen Recruiting-Newsletter. Drei bis fünf Links mit kurzen Teasertexten reichen völlig aus.</p>
+<p>Ein monatlicher Newsletter an Ihre <a href="/produkt/talent-pools/">Kontaktdatenbank</a> hält Sie im Gedächtnis. Kuratieren Sie die besten Inhalte des Monats: Ihren stärksten Blogbeitrag, eine Arbeitsmarkt-Statistik, eine offene Top-Position. Halten Sie den Newsletter kurz und relevant, niemand liest einen fünfseitigen Recruiting-Newsletter. Drei bis fünf Links mit kurzen Teasertexten reichen völlig aus.</p>
 
 <h2>Social-Media-Strategie</h2>
 

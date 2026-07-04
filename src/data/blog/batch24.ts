@@ -34,7 +34,7 @@ export const batch24: BlogPost[] = [
 
 <ul>
   <li><strong>Stellenanzeigen:</strong> 500 bis 3.000 Euro pro Schaltung, je nach Plattform und Laufzeit. Bei schwer besetzbaren Positionen schnell 5.000 bis 8.000 Euro \u00FCber mehrere Kan\u00E4le.</li>
-  <li><strong>Headhunter/Personalvermittler:</strong> 15 bis 30 Prozent des Jahresgehalts. Bei 70.000 Euro Gehalt also 10.500 bis 21.000 Euro.</li>
+  <li><strong><a href="/fuer/personalvermittlung/">Headhunter/Personalvermittler</a>:</strong> 15 bis 30 Prozent des Jahresgehalts. Bei 70.000 Euro Gehalt also 10.500 bis 21.000 Euro.</li>
   <li><strong>Interne Recruiter-Zeit:</strong> Ein Recruiter verbringt im Schnitt 36 Stunden pro Besetzung \u2014 Screening, Interviews, Koordination. Bei einem Stundensatz von 45 Euro sind das 1.620 Euro.</li>
   <li><strong>Interview-Zeit der Fachbereiche:</strong> Drei bis f\u00FCnf Interviews \u00E0 1 Stunde mit Senior-Mitarbeitenden. Bei einem internen Stundensatz von 80 Euro: 240 bis 400 Euro.</li>
 </ul>
@@ -150,7 +150,7 @@ export const batch24: BlogPost[] = [
 
 <h3>KI-gest\u00FCtztes Matching</h3>
 
-<p>Moderne ATS-Systeme wie ShortSelect nutzen KI, um Kandidatenprofile gegen Stellenanforderungen abzugleichen. Das eliminiert nicht die menschliche Entscheidung, aber es filtert Bias heraus und stellt sicher, dass kein passender Kandidat \u00FCbersehen wird, weil sein Lebenslauf nicht dem Schema F entsprach.</p>
+<p>Moderne <a href="/produkt/ki-features/">ATS-Systeme wie ShortSelect nutzen KI</a>, um Kandidatenprofile gegen Stellenanforderungen abzugleichen. Das eliminiert nicht die menschliche Entscheidung, aber es filtert Bias heraus und stellt sicher, dass kein passender Kandidat \u00FCbersehen wird, weil sein Lebenslauf nicht dem Schema F entsprach.</p>
 
 <h2>Der ROI guter Einstellungsprozesse</h2>
 
@@ -158,7 +158,7 @@ export const batch24: BlogPost[] = [
 
 <p>Durch strukturierte Prozesse l\u00E4sst sich die Fehlbesetzungsrate auf 10 bis 15 Prozent senken. Das sind 2 bis 3 Fehlbesetzungen statt 6 bis 7. Ersparnis: <strong>300.000 bis 400.000 Euro pro Jahr.</strong></p>
 
-<p>Die Kosten f\u00FCr die Umstellung \u2014 ATS-Lizenz, Training, Scorecard-Entwicklung \u2014 liegen bei 20.000 bis 50.000 Euro einmalig. Der ROI ist in wenigen Monaten erreicht.</p>
+<p>Die Kosten f\u00FCr die Umstellung \u2014 <a href="/preise/">ATS-Lizenz</a>, Training, Scorecard-Entwicklung \u2014 liegen bei 20.000 bis 50.000 Euro einmalig. Der ROI ist in wenigen Monaten erreicht.</p>
 
 <blockquote>
   <strong>Die teuerste Entscheidung im Recruiting ist die falsche. Die zweitteuerste ist, nichts an Ihrem Prozess zu \u00E4ndern.</strong>
@@ -248,7 +248,7 @@ export const batch24: BlogPost[] = [
 
 <h3>KI-gest\u00FCtztes Ranking</h3>
 
-<p>Moderne ATS-Systeme nutzen KI, um Kandidatenprofile objektiv gegen Stellenanforderungen abzugleichen. Die KI hat keinen Halo-Effekt. Sie bevorzugt niemanden wegen seines Hobbys. Sie vergisst den ersten Kandidaten nicht, weil der achte gerade reingekommen ist. KI ersetzt nicht die menschliche Entscheidung \u2014 aber sie liefert eine bias-freie Vorauswahl, auf der die menschliche Entscheidung aufbauen kann.</p>
+<p>Moderne <a href="/produkt/ki-features/">ATS-Systeme nutzen KI</a>, um Kandidatenprofile objektiv gegen Stellenanforderungen abzugleichen. Die KI hat keinen Halo-Effekt. Sie bevorzugt niemanden wegen seines Hobbys. Sie vergisst den ersten Kandidaten nicht, weil der achte gerade reingekommen ist. KI ersetzt nicht die menschliche Entscheidung \u2014 aber sie liefert eine bias-freie Vorauswahl, auf der die menschliche Entscheidung aufbauen kann.</p>
 
 <h2>Wie Sie Ihr Team \u00FCberzeugen</h2>
 
@@ -274,7 +274,7 @@ export const batch24: BlogPost[] = [
 
 <h3>Schritt 3: Daten tracken</h3>
 
-<p>Messen Sie ab sofort: Wer hat eingestellt? Wie hat die Person nach 3, 6 und 12 Monaten performt? Korreliert die Scorecard-Bewertung mit der sp\u00E4teren Performance? Welcher Interviewer trifft am h\u00E4ufigsten die richtige Einsch\u00E4tzung? Erst wenn Sie messen, k\u00F6nnen Sie verbessern. Und erst wenn Sie verbessern, h\u00F6rt Recruiting auf, ein Gl\u00FCcksspiel zu sein.</p>
+<p>Messen Sie ab sofort: Wer hat eingestellt? Wie hat die Person nach 3, 6 und 12 Monaten performt? Korreliert die Scorecard-Bewertung mit der sp\u00E4teren Performance? Welcher Interviewer trifft am h\u00E4ufigsten die richtige Einsch\u00E4tzung? Erst <a href="/produkt/ats-crm/">wenn Sie messen</a>, k\u00F6nnen Sie verbessern. Und erst wenn Sie verbessern, h\u00F6rt Recruiting auf, ein Gl\u00FCcksspiel zu sein.</p>
 
 <blockquote>
   <strong>Erfahrung schl\u00E4gt nicht Daten. Daten schlagen Erfahrung. Immer.</strong>
@@ -389,7 +389,7 @@ export const batch24: BlogPost[] = [
 
 <p>Ihr Call-to-Action muss klar, dringend und niedrigschwellig sein. \u201EBewerben Sie sich jetzt mit Ihrem Lebenslauf \u2014 Anschreiben unn\u00F6tig, Antwort innerhalb von 48 Stunden\u201C ist besser als \u201EBitte senden Sie Ihre vollst\u00E4ndigen Bewerbungsunterlagen an bewerbung@firma.de\u201C.</p>
 
-<p>Jeder zus\u00E4tzliche Schritt im Bewerbungsprozess kostet Sie Kandidaten. Jedes Pflichtfeld, das nicht zwingend n\u00F6tig ist, kostet Kandidaten. Jeder Tag Wartezeit auf eine R\u00FCckmeldung kostet Kandidaten. Die besten Kandidaten haben Optionen \u2014 wenn Ihr Prozess kompliziert ist, gehen sie woanders hin.</p>
+<p>Jeder zus\u00E4tzliche Schritt im <a href="/produkt/karriereseite/">Bewerbungsprozess</a> kostet Sie Kandidaten. Jedes Pflichtfeld, das nicht zwingend n\u00F6tig ist, kostet Kandidaten. Jeder Tag Wartezeit auf eine R\u00FCckmeldung kostet Kandidaten. Die besten Kandidaten haben Optionen \u2014 wenn Ihr Prozess kompliziert ist, gehen sie woanders hin.</p>
 
 <h2>Vorher/Nachher: 3 Stellenanzeigen umgeschrieben</h2>
 
@@ -433,7 +433,7 @@ export const batch24: BlogPost[] = [
 
 <ol>
   <li><strong>Zwei Varianten erstellen:</strong> Gleiche Stelle, zwei verschiedene Titel. Oder gleicher Titel, zwei verschiedene Einleitungen. Nur EINE Variable \u00E4ndern, sonst wissen Sie nicht, was den Unterschied gemacht hat.</li>
-  <li><strong>Auf verschiedenen Plattformen schalten:</strong> Variante A auf StepStone, Variante B auf Indeed. Oder \u2014 besser \u2014 beide Varianten zeitversetzt auf derselben Plattform.</li>
+  <li><strong><a href="/produkt/multiposting/">Auf verschiedenen Plattformen schalten</a>:</strong> Variante A auf StepStone, Variante B auf Indeed. Oder \u2014 besser \u2014 beide Varianten zeitversetzt auf derselben Plattform.</li>
   <li><strong>Metriken tracken:</strong> Klickrate (wieviele sehen die Anzeige vs. klicken drauf), Bewerbungsrate (wieviele klicken vs. bewerben sich), Qualit\u00E4t (wieviele Bewerbungen sind qualifiziert).</li>
   <li><strong>Gewinner skalieren:</strong> Die Variante, die besser performt, wird Standard. Dann testen Sie die n\u00E4chste Variable. Titel optimiert? Gut, jetzt die Benefits. Benefits optimiert? Jetzt den Call-to-Action.</li>
 </ol>

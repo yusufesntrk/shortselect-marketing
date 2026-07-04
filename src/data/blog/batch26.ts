@@ -38,7 +38,7 @@ export const batch26: BlogPost[] = [
 <p>Seit ChatGPT können Kandidaten in Sekunden einen polierten, keyword-optimierten Lebenslauf generieren. Das Ergebnis: Alle Lebensläufe klingen gleich. Die individuellen Unterschiede verschwinden unter einer Schicht aus perfekt formulierten Phrasen. Recruiter bewerten zunehmend nicht die Person, sondern die Qualität des Prompts, den der Kandidat verwendet hat.</p>
 
 <blockquote>
-  <strong>Die Ironie:</strong> KI schreibt Lebensläufe, und KI-basierte ATS-Systeme filtern sie. Zwei Maschinen kommunizieren miteinander, und die menschliche Eignung spielt dabei eine Nebenrolle.
+  <strong>Die Ironie:</strong> KI schreibt Lebensläufe, und <a href="/produkt/ki-features/">KI-basierte ATS-Systeme</a> filtern sie. Zwei Maschinen kommunizieren miteinander, und die menschliche Eignung spielt dabei eine Nebenrolle.
 </blockquote>
 
 <h2>7 Alternativen die wirklich funktionieren</h2>
@@ -105,7 +105,7 @@ export const batch26: BlogPost[] = [
   <li><strong>Skills-Assessment hinzufügen:</strong> Ergänzen Sie den bestehenden Prozess um einen standardisierten Test. Vergleichen Sie die Ergebnisse mit der Lebenslauf-Bewertung. In den meisten Fällen korrelieren sie nicht, und das ist der Punkt.</li>
   <li><strong>Anonymisierung testen:</strong> Führen Sie Blind Hiring für eine Rolle als Pilotprojekt ein. Messen Sie die Diversität der Shortlist und die Qualität der Einstellungen.</li>
   <li><strong>Probearbeit anbieten:</strong> Für Rollen, in denen praktische Fähigkeiten entscheidend sind, ersetzen Sie das dritte Interview durch einen bezahlten Probearbeitstag.</li>
-  <li><strong>Daten sammeln und vergleichen:</strong> Tracken Sie, welche Methode die besten langfristigen Einstellungen produziert. Lassen Sie die Zahlen entscheiden, nicht die Gewohnheit.</li>
+  <li><strong><a href="/produkt/ats-crm/">Daten sammeln und vergleichen</a>:</strong> Tracken Sie, welche Methode die besten langfristigen Einstellungen produziert. Lassen Sie die Zahlen entscheiden, nicht die Gewohnheit.</li>
 </ol>
 
 <blockquote>
@@ -155,7 +155,7 @@ export const batch26: BlogPost[] = [
 
 <h3>1. Don't Make Me Think</h3>
 
-<p>Steve Krugs legendäres UX-Buch trägt diesen Titel aus gutem Grund: Jede Sekunde, in der ein Nutzer überlegen muss, was er als Nächstes tun soll, ist eine Sekunde zu viel. Im Recruiting bedeutet das: Ihr Bewerbungsformular sollte so intuitiv sein, dass niemand eine Anleitung braucht.</p>
+<p>Steve Krugs legendäres UX-Buch trägt diesen Titel aus gutem Grund: Jede Sekunde, in der ein Nutzer überlegen muss, was er als Nächstes tun soll, ist eine Sekunde zu viel. Im Recruiting bedeutet das: Ihr <a href="/produkt/karriereseite/">Bewerbungsformular</a> sollte so intuitiv sein, dass niemand eine Anleitung braucht.</p>
 
 <p><strong>Vorher:</strong> Ein Formular mit 23 Feldern, davon 15 Pflichtfelder. Felder wie „Referenznummer der Stelle" (die der Kandidat selbst heraussuchen muss), „Gewünschtes Eintrittsdatum" (bevor überhaupt ein Gespräch stattgefunden hat) und „Gehaltsvorstellung" (ohne dass eine Gehaltsspanne genannt wird). Dazu ein Captcha, das beim dritten Versuch immer noch nicht funktioniert.</p>
 
@@ -189,13 +189,13 @@ export const batch26: BlogPost[] = [
 
 <p><strong>Vorher:</strong> Bewerbung abgeschickt → Stille → nach sechs Wochen eine generische Absage (oder gar keine Rückmeldung).</p>
 
-<p><strong>Nachher:</strong> Bewerbung abgeschickt → sofortige Bestätigung mit Zeitrahmen → Status-Update nach einer Woche → Einladung oder transparente Absage mit Begründung → Feedback-Möglichkeit für den Kandidaten.</p>
+<p><strong>Nachher:</strong> Bewerbung abgeschickt → <a href="/produkt/automatisierung/">sofortige Bestätigung mit Zeitrahmen</a> → Status-Update nach einer Woche → Einladung oder transparente Absage mit Begründung → Feedback-Möglichkeit für den Kandidaten.</p>
 
 <h3>5. A/B Testing</h3>
 
 <p>Kein seriöser Produktmanager würde eine neue Funktion veröffentlichen, ohne sie vorher zu testen. Im Recruiting ist das anders: Stellenanzeigen werden geschrieben, veröffentlicht und nie hinterfragt. Dabei sind Stellenanzeigen nichts anderes als Landing Pages, und Landing Pages werden getestet.</p>
 
-<p>Erstellen Sie zwei Versionen derselben Stellenanzeige. Ändern Sie den Titel, die Einleitung, die Reihenfolge der Anforderungen oder den Call-to-Action. Schalten Sie beide Versionen gleichzeitig auf demselben Kanal. Messen Sie, welche Version mehr qualifizierte Bewerbungen generiert. Iterieren Sie.</p>
+<p>Erstellen Sie zwei Versionen derselben Stellenanzeige. Ändern Sie den Titel, die Einleitung, die Reihenfolge der Anforderungen oder den Call-to-Action. <a href="/produkt/multiposting/">Schalten Sie beide Versionen gleichzeitig</a> auf demselben Kanal. Messen Sie, welche Version mehr qualifizierte Bewerbungen generiert. Iterieren Sie.</p>
 
 <p>Ein konkretes Beispiel: Ein Technologieunternehmen testete zwei Versionen einer Entwickler-Stellenanzeige. Version A begann mit den Anforderungen („Sie bringen mit: 5 Jahre Erfahrung in Java..."). Version B begann mit dem Impact der Rolle („In dieser Rolle werden Sie das Backend unserer Plattform neu gestalten, die von 2 Millionen Nutzern täglich verwendet wird"). Version B generierte 34 Prozent mehr Bewerbungen, bei gleicher Qualität der Kandidaten.</p>
 
@@ -311,7 +311,7 @@ export const batch26: BlogPost[] = [
 
 <p>Zwischen Screening und Interview vergehen oft Wochen. In dieser Zeit bewerben sich die besten Kandidaten anderswo, akzeptieren andere Angebote oder verlieren schlicht das Interesse. Die Daten sind eindeutig: Für jeden Tag, den Sie nach dem Screening warten, verlieren Sie 1 bis 2 Prozent der Kandidaten an den Wettbewerb.</p>
 
-<p><strong>Fix:</strong> Maximale Reaktionszeit von drei Werktagen nach dem Screening. Automatisierte Terminvereinbarung für Interviews (Tools wie Calendly oder GoodTime). Kandidaten informieren, wie viele Schritte der Prozess hat und wie lange er dauert.</p>
+<p><strong>Fix:</strong> Maximale Reaktionszeit von drei Werktagen nach dem Screening. <a href="/produkt/automatisierung/">Automatisierte Terminvereinbarung</a> für Interviews (Tools wie Calendly oder GoodTime). Kandidaten informieren, wie viele Schritte der Prozess hat und wie lange er dauert.</p>
 
 <h3>Leck 3: Interview → Offer</h3>
 
@@ -331,7 +331,7 @@ export const batch26: BlogPost[] = [
 
 <p>Im Recruiting gibt es dasselbe Phänomen: Kandidaten, die sich beworben haben, aber nicht eingestellt wurden. Kandidaten, die im Interview waren, aber die Stelle an jemand anderen ging. Kandidaten, die ein Angebot abgelehnt haben, weil der Zeitpunkt nicht stimmte. Diese Menschen haben bereits Interesse gezeigt. Sie kennen Ihr Unternehmen. Und sie könnten für die nächste Stelle perfekt sein.</p>
 
-<p>Der Talent Pool ist Ihre Remarketing-Liste. Behandeln Sie ihn auch so:</p>
+<p>Der <a href="/produkt/talent-pools/">Talent Pool</a> ist Ihre Remarketing-Liste. Behandeln Sie ihn auch so:</p>
 
 <ul>
   <li><strong>Segmentieren:</strong> Nicht alle Kandidaten sind gleich. Unterteilen Sie nach Fachbereich, Seniorität, Grund für die Nicht-Einstellung und Interesse an zukünftigen Stellen.</li>
@@ -358,7 +358,7 @@ export const batch26: BlogPost[] = [
 
 <p>Im Marketing gelten klare Regeln für Landing Pages: Eine Seite, ein Ziel, eine Handlungsaufforderung. Keine Navigation, die ablenkt. Keine Links, die wegführen. Alles ist darauf ausgerichtet, den Besucher zur gewünschten Aktion zu bewegen.</p>
 
-<p>Ihre Karriereseite ist eine Landing Page. Ihr Ziel: Der Besucher soll sich bewerben. Aber die meisten Karriereseiten brechen jede Landing-Page-Regel, die es gibt: Zu viel Text, zu wenig Emotion. Keine klare Handlungsaufforderung. Stockfotos statt echte Mitarbeitende. Keine Social Proof Elemente (Bewertungen, Auszeichnungen, Mitarbeiterstimmen). Der Bewerben-Button ist irgendwo unten versteckt, nach drei Absätzen über die Unternehmensgeschichte.</p>
+<p>Ihre <a href="/produkt/karriereseite/">Karriereseite</a> ist eine Landing Page. Ihr Ziel: Der Besucher soll sich bewerben. Aber die meisten Karriereseiten brechen jede Landing-Page-Regel, die es gibt: Zu viel Text, zu wenig Emotion. Keine klare Handlungsaufforderung. Stockfotos statt echte Mitarbeitende. Keine Social Proof Elemente (Bewertungen, Auszeichnungen, Mitarbeiterstimmen). Der Bewerben-Button ist irgendwo unten versteckt, nach drei Absätzen über die Unternehmensgeschichte.</p>
 
 <p><strong>Die Optimierung:</strong></p>
 

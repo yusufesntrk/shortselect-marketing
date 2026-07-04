@@ -13,11 +13,35 @@ const comparisonData = [
   { feature: "Talent Pool", ssStatus: "check" as const, ssLabel: "Unbegrenzt", compStatus: "warn" as const, compLabel: "Begrenzt" },
   { feature: "API Zugang", ssStatus: "check" as const, ssLabel: "REST API", compStatus: "x" as const, compLabel: "Nicht verfügbar" },
 ];
+
+const faqs = [
+  {
+    question: "Was ist der Unterschied zwischen ShortSelect und Workwise?",
+    answer: "Workwise ist ein Hybrid aus Software und Recruiting-Dienstleistung: Workwise schaltet Anzeigen, sourct Kandidaten und berät, steuert damit aber auch Teile Ihres Prozesses. ShortSelect ist eine reine SaaS-Plattform, mit der Sie Ihre Recruiting-Prozesse selbst aufbauen und volle Kontrolle behalten, inklusive KI-Matching, Multi-Tenancy und Client Portal.",
+  },
+  {
+    question: "Für wen ist Workwise besser geeignet?",
+    answer: "Workwise passt besser, wenn Sie Recruiting komplett auslagern möchten, kein internes Recruiting-Team haben, schnelle Besetzung wichtiger ist als eigener Prozessaufbau und Budget für erfolgsbasierte Vermittlung vorhanden ist.",
+  },
+  {
+    question: "Was kostet ShortSelect im Vergleich zu Workwise?",
+    answer: "ShortSelect kostet im Pioneer Plan planbar 149 € pro User/Monat für die ersten 100 Agenturen, danach 300 € pro User/Monat, mit 30 Tagen kostenlosem Test ohne Kreditkarte. Workwise rechnet erfolgsbasiert mit 15 bis 25 Prozent des Jahresgehalts pro Vermittlung ab, bei einer einzigen Besetzung kann das ein Vielfaches kosten.",
+  },
+  {
+    question: "Hat Workwise eine API wie ShortSelect?",
+    answer: "Nein. Workwise bietet keinen API-Zugang, auch Client Portal und Multi-Tenancy fehlen. ShortSelect stellt eine REST API bereit, mit der Sie das ATS in bestehende Systeme und Workflows integrieren können.",
+  },
+  {
+    question: "Wie wechsle ich von Workwise zu ShortSelect?",
+    answer: "Der Umzug dauert in der Regel etwa 15 Minuten: Account erstellen, Kandidaten und Jobs per CSV oder API importieren, Team einladen und loslegen. Eine Schritt-für-Schritt-Anleitung finden Sie auf unserer Wechsel-Seite.",
+    answerHtml: 'Der Umzug dauert in der Regel etwa 15 Minuten: Account erstellen, Kandidaten und Jobs per CSV oder API importieren, Team einladen und loslegen. Eine Schritt-für-Schritt-Anleitung finden Sie auf unserer <a href="/wechsel/" class="text-primary hover:underline">Wechsel-Seite</a>.',
+  },
+];
 ---
 
 <VergleichLayout
   title="ShortSelect vs. Workwise - ATS Vergleich 2026"
-  description="ATS-Software oder Recruiting-Service? Workwise kombiniert Software mit Dienstleistung. Vergleich mit ShortSelect."
+  description="Workwise: Service-Hybrid mit erfolgsbasierten Gebühren. ShortSelect: pure SaaS mit KI und voller Kontrolle ab 149 € pro User. Fairer Vergleich."
   competitorName="Workwise"
   heroSubline="Workwise kombiniert Software mit Recruiting-Dienstleistung. Wir zeigen die Unterschiede."
   heroBadge="Vergleich"
@@ -48,4 +72,5 @@ const comparisonData = [
       "Kostenloser Start ohne erfolgsbasierte Gebuehren",
     ]
   }}
+  faqs={faqs}
 />

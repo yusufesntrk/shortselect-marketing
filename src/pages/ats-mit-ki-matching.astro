@@ -1,0 +1,213 @@
+---
+import MarketingLayout from '../layouts/MarketingLayout.astro';
+import CTASection from '../components/landing/CTASection.astro';
+
+const steps = [
+  { step: "1", title: "Keywords und Anforderungen festlegen", desc: "Sie definieren pro Stelle, worauf es ankommt: Skills, Erfahrung, Sprachen, Standort. Diese Kriterien sind die Grundlage der Bewertung." },
+  { step: "2", title: "KI analysiert Lebenslauf und Profil", desc: "Die KI-Engine AgentBurst liest CV, Bewerbungsdaten und Profil und gleicht sie mit den Anforderungen der Stelle ab. Das passiert im Hintergrund, ohne Klick." },
+  { step: "3", title: "Match-Score von 0 bis 100", desc: "Jeder Kandidat erhält einen Match-Score von 0 bis 100. Die Bewertung ist pro Kriterium nachvollziehbar: Sie sehen genau, welche Anforderung erfüllt ist und welche nicht." },
+  { step: "4", title: "Ranking statt Stapel", desc: "Die besten Kandidaten stehen automatisch oben. Statt jeden CV einzeln zu lesen, starten Sie direkt mit der Shortlist." },
+];
+
+const qualityChecks = [
+  { title: "Nachvollziehbarkeit", description: "Ein Score ohne Begründung ist eine Blackbox. Gutes KI-Matching zeigt pro Kriterium, warum ein Kandidat gut oder schlecht passt." },
+  { title: "Echtes Matching statt Keyword-Suche", description: "Eine Volltextsuche findet nur exakte Begriffe. KI-Matching versteht auch Synonyme, verwandte Skills und den Kontext der Berufserfahrung." },
+  { title: "Mensch entscheidet", description: "Der Score ist eine Empfehlung, keine automatische Absage. Die Entscheidung bleibt beim Recruiter, das ist auch datenschutzrechtlich der richtige Weg." },
+  { title: "DSGVO und EU-Hosting", description: "Bewerberdaten sind sensibel. Die KI sollte auf EU-Servern arbeiten und nicht auf Ihren Kundendaten trainieren." },
+  { title: "Läuft ohne Zusatzaufwand", description: "Matching, das erst manuell angestoßen werden muss, wird im Alltag vergessen. Es sollte bei jeder neuen Bewerbung selbstständig laufen." },
+];
+
+const faqs = [
+  { question: "Was ist ein ATS mit KI-Matching?", answer: "Ein ATS mit KI-Matching ist ein Bewerbermanagement-System, das eingehende Bewerbungen und Kandidatenprofile automatisch gegen die Anforderungen einer Stelle bewertet. In ShortSelect erhält jeder Kandidat einen Match-Score von 0 bis 100, mit nachvollziehbarer Bewertung pro Kriterium. So sehen Recruiter sofort, welche Kandidaten am besten passen." },
+  { question: "Wie funktioniert der Match-Score in ShortSelect?", answer: "Sie legen pro Stelle Keywords und Anforderungen fest, zum Beispiel Skills, Erfahrung oder Sprachen. Die KI-Engine AgentBurst gleicht Lebenslauf und Profil jedes Kandidaten damit ab und berechnet einen Score von 0 bis 100. Für jedes Kriterium sehen Sie, ob und wie gut es erfüllt ist." },
+  { question: "Ersetzt KI-Matching die Entscheidung des Recruiters?", answer: "Nein. Der Match-Score ist eine Empfehlung und Sortierhilfe, keine automatische Absage. Die Entscheidung über Zu- oder Absage trifft immer ein Mensch. Das entspricht auch den Anforderungen der DSGVO an Entscheidungen mit rechtlicher Wirkung." },
+  { question: "Ist KI-Matching DSGVO-konform möglich?", answer: "Ja, wenn die Software richtig gebaut ist: EU-Hosting, kein Training auf Kundendaten, nachvollziehbare Bewertungen und die finale Entscheidung beim Menschen. ShortSelect erfüllt diese Punkte, alle Daten liegen auf EU-Servern in Frankfurt." },
+  { question: "Was unterscheidet KI-Matching von einer Keyword-Suche?", answer: "Eine Keyword-Suche findet nur exakte Begriffe im Lebenslauf. KI-Matching versteht auch Synonyme, verwandte Fähigkeiten und den Kontext, etwa ob jemand eine Technologie nur erwähnt oder jahrelang damit gearbeitet hat. Das Ergebnis ist eine deutlich bessere Vorauswahl." },
+  { question: "Was kostet ein ATS mit KI-Matching?", answer: "ShortSelect kostet im Pioneer Plan 149 Euro pro User und Monat, KI-Matching, Screening und Ranking sind inklusive. Sie können 30 Tage kostenlos testen, ohne Kreditkarte." },
+];
+
+const webPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  name: "ATS mit KI-Matching: Match-Score 0 bis 100",
+  description: "Was ist ein ATS mit KI-Matching? ShortSelect bewertet Kandidaten mit Match-Score 0 bis 100, nachvollziehbar pro Kriterium. Ab 149 Euro pro User testen.",
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.shortselect.com/" },
+    { "@type": "ListItem", "position": 2, "name": "ATS mit KI Matching" }
+  ]
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((f) => ({
+    "@type": "Question",
+    name: f.question,
+    acceptedAnswer: { "@type": "Answer", text: f.answer }
+  }))
+};
+---
+
+<MarketingLayout
+  title="ATS mit KI-Matching: Match-Score 0 bis 100 | ShortSelect"
+  description="Was ist ein ATS mit KI-Matching? ShortSelect bewertet Kandidaten mit Match-Score 0 bis 100, nachvollziehbar pro Kriterium. Ab 149 Euro pro User testen."
+  jsonLd={[webPageSchema, breadcrumbSchema, faqSchema]}
+>
+  <!-- Hero -->
+  <section class="relative overflow-hidden py-20 md:py-32">
+    <div class="absolute inset-0 bg-gradient-to-br from-primary/10 via-accent/5 to-background"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,hsl(var(--primary)/0.15),transparent_50%)]"></div>
+    <div class="absolute top-20 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-float-slow"></div>
+    <div class="absolute bottom-20 right-10 w-96 h-96 bg-accent/10 rounded-full blur-3xl animate-float-slow" style="animation-delay: -3s;"></div>
+    <div class="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.03)_1px,transparent_1px)] bg-[size:60px_60px] [mask-image:radial-gradient(ellipse_at_center,black_30%,transparent_70%)]"></div>
+
+    <div class="container relative mx-auto px-4">
+      <div class="mx-auto max-w-4xl text-center space-y-8">
+        <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700 hero-badge-premium">
+          <svg class="h-4 w-4 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"/></svg>
+          KI-Matching
+        </div>
+
+        <h1 class="reveal-item opacity-0 translate-y-8 transition-all duration-700 text-4xl md:text-6xl font-display font-bold tracking-tight" style="transition-delay: 100ms;">
+          ATS mit{" "}
+          <span class="relative inline-block text-primary">KI-Matching</span>
+        </h1>
+
+        <p class="reveal-item opacity-0 translate-y-8 transition-all duration-700 text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto" style="transition-delay: 200ms;">
+          Ein ATS mit KI-Matching bewertet Bewerbungen und Kandidatenprofile automatisch gegen die Anforderungen Ihrer Stelle. In ShortSelect erhält jeder Kandidat einen Match-Score von 0 bis 100, nachvollziehbar pro Kriterium. Das Screening läuft im Hintergrund, Sie starten direkt mit der Shortlist.
+        </p>
+
+        <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700 flex flex-col sm:flex-row items-center justify-center gap-4 pt-4" style="transition-delay: 300ms;">
+          <a href="https://app.shortselect.com/signup" class="inline-flex items-center gap-2 px-8 py-3 bg-primary text-primary-foreground font-semibold rounded-lg text-base group relative overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+            <span class="relative z-10 flex items-center gap-2">
+              KI-Matching kostenlos testen
+              <svg class="h-5 w-5 transition-transform group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </span>
+          </a>
+          <a href="/produkt/ki-features/" class="inline-flex items-center gap-2 px-8 py-3 border-2 border-border font-semibold rounded-lg text-base transition-all hover:bg-muted">
+            Alle KI-Features ansehen
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Was bedeutet KI-Matching -->
+  <section class="py-16 md:py-24 bg-muted/30">
+    <div class="container mx-auto px-4">
+      <div class="max-w-3xl mx-auto">
+        <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700 text-center mb-10">
+          <h2 class="text-3xl md:text-4xl font-display font-bold tracking-tight mb-4">Was bedeutet KI-Matching in einem ATS?</h2>
+        </div>
+        <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700 space-y-4 text-muted-foreground text-lg leading-relaxed" style="transition-delay: 150ms;">
+          <p>
+            Klassische Bewerbermanagement-Systeme sammeln Bewerbungen, bewerten sie aber nicht. Recruiter lesen jeden Lebenslauf selbst und entscheiden nach Bauchgefühl und Erfahrung, wer in die nächste Runde kommt. Bei 50 oder 100 Bewerbungen pro Stelle wird genau das zum Engpass.
+          </p>
+          <p>
+            KI-Matching dreht das um: Die Software vergleicht jeden Kandidaten automatisch mit den Anforderungen der Stelle und liefert eine sortierte Liste statt eines ungelesenen Stapels. Wichtig ist dabei der Unterschied zur einfachen Keyword-Suche. Eine Suche findet nur exakte Begriffe. KI-Matching versteht auch Synonyme, verwandte Skills und den Kontext, etwa ob jemand eine Technologie nur erwähnt oder jahrelang damit gearbeitet hat.
+          </p>
+          <p>
+            Für Recruiting-Agenturen und Personalvermittlungen heißt das: weniger Zeit im Posteingang, mehr Zeit im Gespräch mit den richtigen Kandidaten.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- So funktioniert es in ShortSelect -->
+  <section class="py-16 md:py-24 relative overflow-hidden">
+    <div class="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl animate-float-slow"></div>
+    <div class="container relative mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700 text-center mb-12">
+          <span class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold bg-secondary text-secondary-foreground mb-4">So funktioniert es</span>
+          <h2 class="text-3xl md:text-4xl font-display font-bold tracking-tight mb-4">KI-Matching in ShortSelect, Schritt für Schritt</h2>
+        </div>
+
+        <div class="relative">
+          <div class="absolute left-8 top-0 bottom-0 w-0.5 bg-border hidden md:block"></div>
+          <div class="space-y-8">
+            {steps.map((step, index) => (
+              <div class="reveal-item opacity-0 translate-y-8 transition-all duration-500 flex items-start gap-6" style={`transition-delay: ${150 + index * 100}ms;`}>
+                <div class="relative z-10 flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-primary text-white font-display font-bold text-lg shadow-lg">
+                  {step.step}
+                </div>
+                <div class="pt-3">
+                  <h3 class="text-lg font-display font-bold mb-1">{step.title}</h3>
+                  <p class="text-muted-foreground">{step.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Woran gutes KI-Matching erkennen -->
+  <section class="py-16 md:py-24 bg-muted/30">
+    <div class="container mx-auto px-4">
+      <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700 text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-display font-bold tracking-tight mb-4">Woran Sie ein gutes ATS mit KI-Matching erkennen</h2>
+        <p class="text-muted-foreground text-lg max-w-2xl mx-auto">Fünf Kriterien für die Auswahl, unabhängig vom Anbieter.</p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        {qualityChecks.map((tip, index) => (
+          <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700 rounded-xl border bg-card p-6 hover:shadow-lg hover:-translate-y-1" style={`transition-delay: ${Math.min((index + 1) * 100, 500)}ms;`}>
+            <h3 class="text-lg font-display font-bold mb-2">{tip.title}</h3>
+            <p class="text-sm text-muted-foreground leading-relaxed">{tip.description}</p>
+          </div>
+        ))}
+      </div>
+
+      <p class="reveal-item opacity-0 translate-y-8 transition-all duration-700 text-center text-muted-foreground mt-10 max-w-2xl mx-auto">
+        Wie ShortSelect Datenschutz umsetzt, lesen Sie unter <a href="/produkt/compliance/" class="text-primary hover:underline">DSGVO und Compliance</a> und im Ratgeber <a href="/recruiting-crm-dsgvo/" class="text-primary hover:underline">Recruiting-CRM und DSGVO</a>. Die Preise finden Sie transparent unter <a href="/preise/" class="text-primary hover:underline">Preise</a>.
+      </p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16 md:py-24">
+    <div class="container mx-auto px-4">
+      <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700 text-center max-w-3xl mx-auto mb-12">
+        <h2 class="text-3xl md:text-4xl font-display font-bold tracking-tight">Häufige Fragen zum ATS mit KI-Matching</h2>
+      </div>
+      <div class="max-w-3xl mx-auto space-y-0 rounded-xl border bg-card overflow-hidden">
+        {faqs.map((item) => (
+          <details class="reveal-item opacity-0 translate-y-8 transition-all duration-700 border-b last:border-0 group">
+            <summary class="flex items-center justify-between w-full py-5 px-6 text-left cursor-pointer font-display font-bold text-lg list-none [&::-webkit-details-marker]:hidden">
+              {item.question}
+              <svg class="h-5 w-5 text-muted-foreground shrink-0 ml-4 transition-transform duration-300 group-open:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+            </summary>
+            <div class="px-6 pb-5 text-muted-foreground leading-relaxed">{item.answer}</div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <CTASection />
+</MarketingLayout>
+
+<script is:inline>
+(function() {
+  var items = document.querySelectorAll('.reveal-item');
+  if (!items.length) return;
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  items.forEach(function(item) { observer.observe(item); });
+})();
+</script>

@@ -118,7 +118,7 @@ export const batch3: BlogPost[] = [
   <li><strong>Content teilen:</strong> Fachartikel, Event-Einladungen, Branchen-Insights</li>
 </ul>
 
-<p>Mit einem ATS wie ShortSelect können Sie Talent Pools direkt in Ihrem Recruiting-System verwalten, Tags vergeben, Notizen hinzufügen und Erinnerungen für Follow-ups setzen.</p>
+<p>Mit einem ATS wie ShortSelect können Sie <a href="/produkt/talent-pools/">Talent Pools</a> direkt in Ihrem Recruiting-System verwalten, Tags vergeben, Notizen hinzufügen und Erinnerungen für Follow-ups setzen.</p>
 
 <h2>Tools und Automatisierung</h2>
 
@@ -129,11 +129,11 @@ export const batch3: BlogPost[] = [
   <li><strong>Sourcing-Tools:</strong> LinkedIn Recruiter, XING TalentManager, Hiretual, AmazingHiring, für die Kandidatensuche</li>
   <li><strong>E-Mail-Finder:</strong> Hunter.io, Lusha, ContactOut, für Kontaktdaten außerhalb von LinkedIn</li>
   <li><strong>Sequencing-Tools:</strong> Lemlist, Woodpecker, für automatisierte Follow-up-Sequenzen</li>
-  <li><strong>ATS-Integration:</strong> Kandidaten direkt aus dem Sourcing ins ATS überführen, Pipeline tracken</li>
+  <li><strong>ATS-Integration:</strong> Kandidaten direkt aus dem Sourcing ins <a href="/produkt/ats-crm/">ATS überführen</a>, Pipeline tracken</li>
   <li><strong>Chrome Extensions:</strong> Instant Data Scraper, Octopus CRM, für Profilnummern und Export</li>
 </ul>
 
-<p>Die Automatisierung sollte sich auf repetitive Aufgaben beschränken: Kontaktdaten finden, Follow-ups planen, Pipeline-Status aktualisieren. <strong>Die eigentliche Ansprache muss immer individuell bleiben.</strong></p>
+<p>Die <a href="/produkt/automatisierung/">Automatisierung</a> sollte sich auf repetitive Aufgaben beschränken: Kontaktdaten finden, Follow-ups planen, Pipeline-Status aktualisieren. <strong>Die eigentliche Ansprache muss immer individuell bleiben.</strong></p>
 
 <h2>Erfolg messen: Die wichtigsten KPIs</h2>
 
@@ -208,7 +208,7 @@ export const batch3: BlogPost[] = [
 <ul>
   <li>Klare, ehrliche Stellenbeschreibungen mit konkreten Aufgaben und Tech-Stack</li>
   <li>Gehaltsspanne angeben, das spart beiden Seiten Zeit</li>
-  <li>Karriereseite mit echten Team-Fotos, Mitarbeiter-Stimmen und konkreten Benefits</li>
+  <li><a href="/produkt/karriereseite/">Karriereseite</a> mit echten Team-Fotos, Mitarbeiter-Stimmen und konkreten Benefits</li>
   <li>Bewerbungsprozess transparent darstellen: Welche Schritte gibt es? Wie lange dauert es?</li>
   <li>Mobile-optimiertes Design, über 60 % der Kandidaten suchen mobil</li>
 </ul>
@@ -230,7 +230,7 @@ export const batch3: BlogPost[] = [
 <ul>
   <li>One-Click-Bewerbung via LinkedIn oder XING ermöglichen</li>
   <li>Maximal 5-7 Pflichtfelder im Bewerbungsformular</li>
-  <li>CV-Parsing: Lebenslauf hochladen, Felder werden automatisch befüllt</li>
+  <li><a href="/produkt/ki-features/">CV-Parsing</a>: Lebenslauf hochladen, Felder werden automatisch befüllt</li>
   <li>Sofortige Bestätigungs-E-Mail mit nächsten Schritten und Zeitrahmen</li>
   <li>Mobile-freundliches Formular, keine Desktop-only-Lösung</li>
 </ul>
@@ -338,7 +338,7 @@ export const batch3: BlogPost[] = [
 
 <h2>Automatisierung als Hebel</h2>
 
-<p>Viele der genannten Verbesserungen lassen sich durch Automatisierung umsetzen, ohne dass die persönliche Note verloren geht. Ein modernes ATS ist dabei der zentrale Baustein.</p>
+<p>Viele der genannten Verbesserungen lassen sich durch <a href="/produkt/automatisierung/">Automatisierung</a> umsetzen, ohne dass die persönliche Note verloren geht. Ein modernes ATS ist dabei der zentrale Baustein.</p>
 
 <h3>Was automatisiert werden sollte</h3>
 <ul>
@@ -367,7 +367,7 @@ export const batch3: BlogPost[] = [
   <li>Kanban-Board für transparentes Pipeline-Management</li>
   <li>Integrierte Interview-Planung mit Kalender-Sync</li>
   <li>Screening-Fragen zur schnellen Vorqualifizierung</li>
-  <li>Talent Pool Management für langfristige Beziehungen</li>
+  <li><a href="/produkt/talent-pools/">Talent Pool Management</a> für langfristige Beziehungen</li>
   <li>Analytics-Dashboard zur Messung der Candidate Experience KPIs</li>
 </ul>
 
