@@ -20,7 +20,7 @@ const softwareSchema = {
     priceCurrency: "EUR",
     availability: "https://schema.org/LimitedAvailability",
     priceValidUntil: "2099-12-31",
-    url: "https://www.shortselect.com/preise",
+    url: "https://www.shortselect.com/preise/",
   },
   featureList: [
     "KI-gestütztes Kandidaten-Matching",
@@ -38,16 +38,14 @@ const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
   mainEntity: [
-    { "@type": "Question", name: "Was ist im Pioneer Plan enthalten?", acceptedAnswer: { "@type": "Answer", text: "Alle Funktionen von ShortSelect: unbegrenzte Jobs und Kandidaten, AgentBurst KI-Engine für Matching, Screening, Ranking und Nurturing, Multi-Mandanten mit Client Portal, Karriereseite, Multiposting, Talent Pools, Interview Scheduling, REST API, Webhooks und Priority Support. Ein Preis pro User, keine Add-On-Fees." } },
-    { "@type": "Question", name: "Was passiert nach den 30 Tagen Trial?", acceptedAnswer: { "@type": "Answer", text: "Nach Ablauf des Trials bleibt Ihr Account erhalten und Sie wechseln in den Pioneer Plan für 149 EUR pro User und Monat. Wenn Sie nicht weitermachen möchten, wird Ihr Account ohne weitere Kosten archiviert. Wir erinnern Sie rechtzeitig vor Trial-Ende per E-Mail, damit Sie aktiv entscheiden können." } },
-    { "@type": "Question", name: "Brauche ich eine Kreditkarte für den Trial?", acceptedAnswer: { "@type": "Answer", text: "Nein. Der 30-tägige Trial ist komplett kostenlos und ohne Zahlungsdaten. Sie geben Ihre Zahlungsmethode erst an, wenn Sie nach dem Trial in den Pioneer Plan wechseln möchten." } },
-    { "@type": "Question", name: "Bleibt der Preis von 149 EUR garantiert?", acceptedAnswer: { "@type": "Answer", text: "Ja. Wer den Pioneer Plan nutzt, bezahlt diesen Preis auf Lebenszeit, solange das Abo ununterbrochen aktiv bleibt, auch wenn wir später die Standard-Preise anheben. Der Pioneer Plan ist limitiert auf die ersten 100 Recruiting-Agenturen." } },
-    { "@type": "Question", name: "Wie viele Pioneer-Plätze sind noch frei?", acceptedAnswer: { "@type": "Answer", text: "Aktuell sind noch 24 von 100 Pioneer-Plätzen frei. Der Pioneer-Preis gilt pro User und ist für aktive Pioneer-Kunden auf Lebenszeit gesichert." } },
-    { "@type": "Question", name: "Was kostet ShortSelect nach den 100 Pioneer-Plätzen?", acceptedAnswer: { "@type": "Answer", text: "Nach Vergabe der 100 Pioneer-Plätze gilt der Standard-Tarif von 300 EUR pro User und Monat. Bestehende Pioneer-Kunden behalten ihren Preis von 149 EUR pro User und Monat lebenslang, solange ihr Abo aktiv bleibt." } },
-    { "@type": "Question", name: "Kann ich jederzeit kündigen?", acceptedAnswer: { "@type": "Answer", text: "Ja. ShortSelect ist monatlich kündbar, ohne Mindestlaufzeit. Eine Kündigung erfolgt direkt im Account über das Stripe Customer Portal. Sie behalten Zugriff bis zum Ende der laufenden Abrechnungsperiode." } },
-    { "@type": "Question", name: "Werden Updates und neue Funktionen extra berechnet?", acceptedAnswer: { "@type": "Answer", text: "Nein. Alle zukünftigen Updates und neuen Funktionen sind im Pioneer Plan und im Standard-Tarif enthalten. Es gibt keine Aufpreise für Premium-Module oder neue KI-Features." } },
-    { "@type": "Question", name: "Wie sicher sind meine Daten?", acceptedAnswer: { "@type": "Answer", text: "Ihre Daten werden ausschließlich in EU-Rechenzentren gespeichert und sind durch Row-Level-Security, SSL-Verschlüsselung und tägliche Backups geschützt. ShortSelect ist vollständig DSGVO-konform und bietet Audit-Logging, RBAC und einen AVV-Vertrag." } },
-    { "@type": "Question", name: "Kann ich meine bestehenden Daten importieren?", acceptedAnswer: { "@type": "Answer", text: "Ja. ShortSelect unterstützt CSV-Import für Kandidaten, Jobs und Unternehmen. Unser Onboarding-Team hilft Ihnen beim reibungslosen Umzug von Ihrem bisherigen System, das ist im Pioneer Plan kostenfrei enthalten." } },
+    { "@type": "Question", name: "Was ist ShortSelect?", acceptedAnswer: { "@type": "Answer", text: "ShortSelect ist ein Applicant Tracking System (ATS) mit integriertem CRM für Recruiting-Agenturen, Personalvermittlungen und HR-Teams im DACH-Raum. Die KI-Engine AgentBurst übernimmt Screening, Matching, Ranking und Nurturing im Hintergrund, während du dich auf Gespräche und Placements konzentrierst." } },
+    { "@type": "Question", name: "Für wen ist ShortSelect gedacht?", acceptedAnswer: { "@type": "Answer", text: "Für Recruiting-Agenturen, Personalvermittler und Headhunter, die mehrere Mandanten parallel betreuen, sowie für HR-Teams, die ihr Recruiting professionalisieren wollen. Multi-Mandanten-Struktur, Client Portal und Sales-CRM sind dafür von Grund auf eingebaut." } },
+    { "@type": "Question", name: "Wie funktioniert das KI-Matching?", acceptedAnswer: { "@type": "Answer", text: "Die KI gleicht Fähigkeiten, Erfahrung, Standort und Sprachen deiner Kandidaten mit den Anforderungen jedes Jobs ab und vergibt einen Match-Score von 0 bis 100. Du siehst sofort, welche Kandidaten am besten passen, inklusive nachvollziehbarer Bewertung pro Kriterium." } },
+    { "@type": "Question", name: "Ist ShortSelect DSGVO-konform?", acceptedAnswer: { "@type": "Answer", text: "Ja. Deine Daten werden ausschließlich in EU-Rechenzentren gespeichert und sind durch Row-Level-Security, SSL-Verschlüsselung und tägliche Backups geschützt. Audit-Logging, rollenbasierte Zugriffe und ein AVV-Vertrag sind enthalten." } },
+    { "@type": "Question", name: "Was kostet ShortSelect?", acceptedAnswer: { "@type": "Answer", text: "Der Pioneer Plan kostet 149 EUR pro User und Monat und ist auf die ersten 100 Recruiting-Agenturen limitiert. Danach gilt der Standard-Tarif von 300 EUR pro User und Monat. Alle Details und den vollen Funktionsumfang findest du auf der Preisseite." } },
+    { "@type": "Question", name: "Kann ich ShortSelect kostenlos testen?", acceptedAnswer: { "@type": "Answer", text: "Ja. Du testest ShortSelect 30 Tage mit vollem Funktionsumfang, komplett kostenlos und ohne Kreditkarte. Nach dem Trial entscheidest du aktiv, ob du in den Pioneer Plan wechselst." } },
+    { "@type": "Question", name: "Kann ich meine bestehenden Daten importieren?", acceptedAnswer: { "@type": "Answer", text: "Ja. ShortSelect unterstützt CSV-Import für Kandidaten, Jobs und Unternehmen. Unser Onboarding-Team hilft dir beim reibungslosen Umzug von deinem bisherigen System, das ist im Pioneer Plan kostenfrei enthalten." } },
+    { "@type": "Question", name: "Was unterscheidet ShortSelect von anderen ATS?", acceptedAnswer: { "@type": "Answer", text: "Klassische ATS verwalten Daten, ShortSelect arbeitet mit: KI-Agents erledigen Screening, Matching und Nurturing im Hintergrund, statt dir nur Formulare und Filter zu geben. Wie sich das im Vergleich zu Bullhorn, Coveto und anderen Systemen schlägt, zeigen unsere ATS-Vergleiche." } },
   ],
 };
 
@@ -2113,6 +2111,7 @@ const websiteSchema = {
     color: #525252;
     line-height: 1.6;
   }
+  .fc-faq-item .answer a { color: #ef4444; text-decoration: none; font-weight: 600; border-bottom: 1px solid #ef4444; }
   .fc-faq-foot { text-align: center; margin-top: 36px; padding: 0 32px; font-size: 14px; color: #525252; }
   .fc-faq-foot a { color: #ef4444; text-decoration: none; font-weight: 700; border-bottom: 1px solid #ef4444; }
 
@@ -2888,12 +2887,12 @@ const websiteSchema = {
               <button class="nav-dd-trigger">Produkt <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
               <div class="nav-dd-panel">
                 <div class="nav-dd-card wide">
-                  <a href="/produkt/ats-crm" class="nav-dd-item"><span class="lab">ATS &amp; CRM</span><span class="desc">Bewerbermanagement-Plattform</span></a>
-                  <a href="/produkt/karriereseite" class="nav-dd-item"><span class="lab">Karriereseite</span><span class="desc">Branded Career Pages &amp; Widget</span></a>
-                  <a href="/produkt/ki-features" class="nav-dd-item"><span class="lab">KI-Features</span><span class="desc">DSGVO-konforme Enterprise-KI</span></a>
-                  <a href="/produkt/automatisierung" class="nav-dd-item"><span class="lab">Automatisierung</span><span class="desc">Workflows &amp; Auto-E-Mails</span></a>
-                  <a href="/produkt/multiposting" class="nav-dd-item"><span class="lab">Multiposting</span><span class="desc">Alle Jobbörsen, ein Klick</span></a>
-                  <a href="/produkt/compliance" class="nav-dd-item"><span class="lab">DSGVO &amp; Compliance</span><span class="desc">Datenschutz by Design</span></a>
+                  <a href="/produkt/ats-crm/" class="nav-dd-item"><span class="lab">ATS &amp; CRM</span><span class="desc">Bewerbermanagement-Plattform</span></a>
+                  <a href="/produkt/karriereseite/" class="nav-dd-item"><span class="lab">Karriereseite</span><span class="desc">Branded Career Pages &amp; Widget</span></a>
+                  <a href="/produkt/ki-features/" class="nav-dd-item"><span class="lab">KI-Features</span><span class="desc">DSGVO-konforme Enterprise-KI</span></a>
+                  <a href="/produkt/automatisierung/" class="nav-dd-item"><span class="lab">Automatisierung</span><span class="desc">Workflows &amp; Auto-E-Mails</span></a>
+                  <a href="/produkt/multiposting/" class="nav-dd-item"><span class="lab">Multiposting</span><span class="desc">Alle Jobbörsen, ein Klick</span></a>
+                  <a href="/produkt/compliance/" class="nav-dd-item"><span class="lab">DSGVO &amp; Compliance</span><span class="desc">Datenschutz by Design</span></a>
                 </div>
               </div>
             </div>
@@ -2903,12 +2902,12 @@ const websiteSchema = {
               <button class="nav-dd-trigger">Lösungen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
               <div class="nav-dd-panel">
                 <div class="nav-dd-card wide">
-                  <a href="/fuer/personalvermittlung" class="nav-dd-item"><span class="lab">Personalvermittlung</span><span class="desc">Multi-Mandanten für Agenturen</span></a>
-                  <a href="/fuer/startups" class="nav-dd-item"><span class="lab">Startups</span><span class="desc">Kostenlos starten, smart wachsen</span></a>
-                  <a href="/fuer/enterprise" class="nav-dd-item"><span class="lab">Enterprise</span><span class="desc">Skalierbar mit RBAC &amp; SSO</span></a>
-                  <a href="/branchen/it-recruiting" class="nav-dd-item"><span class="lab">IT-Recruiting</span><span class="desc">Tech-Talente finden</span></a>
-                  <a href="/branchen/finance" class="nav-dd-item"><span class="lab">Finance &amp; Banking</span><span class="desc">Diskret &amp; compliant</span></a>
-                  <a href="/branchen/healthcare" class="nav-dd-item"><span class="lab">Healthcare</span><span class="desc">Medizin &amp; Pflege</span></a>
+                  <a href="/fuer/personalvermittlung/" class="nav-dd-item"><span class="lab">Personalvermittlung</span><span class="desc">Multi-Mandanten für Agenturen</span></a>
+                  <a href="/fuer/startups/" class="nav-dd-item"><span class="lab">Startups</span><span class="desc">Kostenlos starten, smart wachsen</span></a>
+                  <a href="/fuer/enterprise/" class="nav-dd-item"><span class="lab">Enterprise</span><span class="desc">Skalierbar mit RBAC &amp; SSO</span></a>
+                  <a href="/branchen/it-recruiting/" class="nav-dd-item"><span class="lab">IT-Recruiting</span><span class="desc">Tech-Talente finden</span></a>
+                  <a href="/branchen/finance/" class="nav-dd-item"><span class="lab">Finance &amp; Banking</span><span class="desc">Diskret &amp; compliant</span></a>
+                  <a href="/branchen/healthcare/" class="nav-dd-item"><span class="lab">Healthcare</span><span class="desc">Medizin &amp; Pflege</span></a>
                 </div>
               </div>
             </div>
@@ -2918,27 +2917,27 @@ const websiteSchema = {
               <button class="nav-dd-trigger">Vergleich <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
               <div class="nav-dd-panel">
                 <div class="nav-dd-card wide">
-                  <a href="/vergleich/shortselect-vs-personio" class="nav-dd-item"><span class="lab">vs. Personio</span><span class="desc">Spezialisiertes ATS vs. HR-Suite</span></a>
-                  <a href="/vergleich/shortselect-vs-softgarden" class="nav-dd-item"><span class="lab">vs. Softgarden</span><span class="desc">Moderne KI vs. Legacy</span></a>
-                  <a href="/vergleich/shortselect-vs-bullhorn" class="nav-dd-item"><span class="lab">vs. Bullhorn</span><span class="desc">Agil vs. Enterprise-Gigant</span></a>
-                  <a href="/vergleich/shortselect-vs-greenhouse" class="nav-dd-item"><span class="lab">vs. Greenhouse</span><span class="desc">DACH vs. US-Enterprise</span></a>
-                  <a href="/vergleich/shortselect-vs-vincere" class="nav-dd-item"><span class="lab">vs. Vincere</span><span class="desc">AgentBurst vs. Access-Legacy</span></a>
-                  <a href="/vergleich/shortselect-vs-teamtailor" class="nav-dd-item"><span class="lab">vs. Teamtailor</span><span class="desc">Agenturen vs. Employer Branding</span></a>
-                  <a href="/vergleich/beste-ats-software" class="nav-dd-item"><span class="lab">Beste ATS 2026</span><span class="desc">Der große Vergleich</span></a>
+                  <a href="/vergleich/shortselect-vs-personio/" class="nav-dd-item"><span class="lab">vs. Personio</span><span class="desc">Spezialisiertes ATS vs. HR-Suite</span></a>
+                  <a href="/vergleich/shortselect-vs-softgarden/" class="nav-dd-item"><span class="lab">vs. Softgarden</span><span class="desc">Moderne KI vs. Legacy</span></a>
+                  <a href="/vergleich/shortselect-vs-bullhorn/" class="nav-dd-item"><span class="lab">vs. Bullhorn</span><span class="desc">Agil vs. Enterprise-Gigant</span></a>
+                  <a href="/vergleich/shortselect-vs-greenhouse/" class="nav-dd-item"><span class="lab">vs. Greenhouse</span><span class="desc">DACH vs. US-Enterprise</span></a>
+                  <a href="/vergleich/shortselect-vs-vincere/" class="nav-dd-item"><span class="lab">vs. Vincere</span><span class="desc">AgentBurst vs. Access-Legacy</span></a>
+                  <a href="/vergleich/shortselect-vs-teamtailor/" class="nav-dd-item"><span class="lab">vs. Teamtailor</span><span class="desc">Agenturen vs. Employer Branding</span></a>
+                  <a href="/vergleich/beste-ats-software/" class="nav-dd-item"><span class="lab">Beste ATS 2026</span><span class="desc">Der große Vergleich</span></a>
                 </div>
               </div>
             </div>
 
-            <a href="/job-selling" class="nav-link highlight">Sell the Job</a>
-            <a href="/preise" class="nav-link">Preise</a>
-            <a href="/kunden" class="nav-link">Kunden</a>
-            <a href="/blog" class="nav-link">Blog</a>
-            <a href="/ressourcen" class="nav-link">Ressourcen</a>
+            <a href="/job-selling/" class="nav-link highlight">Sell the Job</a>
+            <a href="/preise/" class="nav-link">Preise</a>
+            <a href="/kunden/" class="nav-link">Kunden</a>
+            <a href="/blog/" class="nav-link">Blog</a>
+            <a href="/ressourcen/" class="nav-link">Ressourcen</a>
           </div>
         </div>
         <div class="fc-nav-right">
           <a href="https://app.shortselect.com/login" class="nav-cta-ghost">Login</a>
-          <a href="/demo" class="nav-cta-primary">Demo buchen</a>
+          <a href="/demo/" class="nav-cta-primary">Demo buchen</a>
           <button class="fc-nav-burger" type="button" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobile-nav-overlay">
             <span></span><span></span><span></span>
           </button>
@@ -2964,12 +2963,12 @@ const websiteSchema = {
             <svg class="fc-mob-acc-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="18" height="18"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </button>
           <div class="fc-mob-acc-panel">
-            <a href="/produkt/ats-crm" class="fc-mob-link">ATS &amp; CRM</a>
-            <a href="/produkt/karriereseite" class="fc-mob-link">Karriereseite</a>
-            <a href="/produkt/ki-features" class="fc-mob-link">KI-Features</a>
-            <a href="/produkt/automatisierung" class="fc-mob-link">Automatisierung</a>
-            <a href="/produkt/multiposting" class="fc-mob-link">Multiposting</a>
-            <a href="/produkt/compliance" class="fc-mob-link">DSGVO &amp; Compliance</a>
+            <a href="/produkt/ats-crm/" class="fc-mob-link">ATS &amp; CRM</a>
+            <a href="/produkt/karriereseite/" class="fc-mob-link">Karriereseite</a>
+            <a href="/produkt/ki-features/" class="fc-mob-link">KI-Features</a>
+            <a href="/produkt/automatisierung/" class="fc-mob-link">Automatisierung</a>
+            <a href="/produkt/multiposting/" class="fc-mob-link">Multiposting</a>
+            <a href="/produkt/compliance/" class="fc-mob-link">DSGVO &amp; Compliance</a>
           </div>
         </div>
 
@@ -2979,12 +2978,12 @@ const websiteSchema = {
             <svg class="fc-mob-acc-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="18" height="18"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </button>
           <div class="fc-mob-acc-panel">
-            <a href="/fuer/personalvermittlung" class="fc-mob-link">Personalvermittlung</a>
-            <a href="/fuer/startups" class="fc-mob-link">Startups</a>
-            <a href="/fuer/enterprise" class="fc-mob-link">Enterprise</a>
-            <a href="/branchen/it-recruiting" class="fc-mob-link">IT-Recruiting</a>
-            <a href="/branchen/finance" class="fc-mob-link">Finance &amp; Banking</a>
-            <a href="/branchen/healthcare" class="fc-mob-link">Healthcare</a>
+            <a href="/fuer/personalvermittlung/" class="fc-mob-link">Personalvermittlung</a>
+            <a href="/fuer/startups/" class="fc-mob-link">Startups</a>
+            <a href="/fuer/enterprise/" class="fc-mob-link">Enterprise</a>
+            <a href="/branchen/it-recruiting/" class="fc-mob-link">IT-Recruiting</a>
+            <a href="/branchen/finance/" class="fc-mob-link">Finance &amp; Banking</a>
+            <a href="/branchen/healthcare/" class="fc-mob-link">Healthcare</a>
           </div>
         </div>
 
@@ -2994,26 +2993,26 @@ const websiteSchema = {
             <svg class="fc-mob-acc-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="18" height="18"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </button>
           <div class="fc-mob-acc-panel">
-            <a href="/vergleich/shortselect-vs-personio" class="fc-mob-link">vs. Personio</a>
-            <a href="/vergleich/shortselect-vs-softgarden" class="fc-mob-link">vs. Softgarden</a>
-            <a href="/vergleich/shortselect-vs-bullhorn" class="fc-mob-link">vs. Bullhorn</a>
-            <a href="/vergleich/shortselect-vs-greenhouse" class="fc-mob-link">vs. Greenhouse</a>
-            <a href="/vergleich/shortselect-vs-vincere" class="fc-mob-link">vs. Vincere</a>
-            <a href="/vergleich/shortselect-vs-teamtailor" class="fc-mob-link">vs. Teamtailor</a>
-            <a href="/vergleich/beste-ats-software" class="fc-mob-link">Beste ATS 2026</a>
+            <a href="/vergleich/shortselect-vs-personio/" class="fc-mob-link">vs. Personio</a>
+            <a href="/vergleich/shortselect-vs-softgarden/" class="fc-mob-link">vs. Softgarden</a>
+            <a href="/vergleich/shortselect-vs-bullhorn/" class="fc-mob-link">vs. Bullhorn</a>
+            <a href="/vergleich/shortselect-vs-greenhouse/" class="fc-mob-link">vs. Greenhouse</a>
+            <a href="/vergleich/shortselect-vs-vincere/" class="fc-mob-link">vs. Vincere</a>
+            <a href="/vergleich/shortselect-vs-teamtailor/" class="fc-mob-link">vs. Teamtailor</a>
+            <a href="/vergleich/beste-ats-software/" class="fc-mob-link">Beste ATS 2026</a>
           </div>
         </div>
 
-        <a href="/job-selling" class="fc-mob-link flat highlight">Sell the Job</a>
-        <a href="/preise" class="fc-mob-link flat">Preise</a>
-        <a href="/kunden" class="fc-mob-link flat">Kunden</a>
-        <a href="/blog" class="fc-mob-link flat">Blog</a>
-        <a href="/ressourcen" class="fc-mob-link flat">Ressourcen</a>
+        <a href="/job-selling/" class="fc-mob-link flat highlight">Sell the Job</a>
+        <a href="/preise/" class="fc-mob-link flat">Preise</a>
+        <a href="/kunden/" class="fc-mob-link flat">Kunden</a>
+        <a href="/blog/" class="fc-mob-link flat">Blog</a>
+        <a href="/ressourcen/" class="fc-mob-link flat">Ressourcen</a>
       </nav>
 
       <div class="fc-mob-nav-foot">
         <a href="https://app.shortselect.com/login" class="fc-mob-cta-ghost">Login</a>
-        <a href="/demo" class="fc-mob-cta-primary">Demo buchen</a>
+        <a href="/demo/" class="fc-mob-cta-primary">Demo buchen</a>
       </div>
     </aside>
 
@@ -3033,7 +3032,7 @@ const websiteSchema = {
         </p>
         <div class="actions">
           <a href="https://app.shortselect.com/signup?utm_source=marketing&utm_medium=cta&utm_campaign=pioneer_plan&utm_content=hero" class="fc-btn">30 Tage kostenlos starten →</a>
-          <a href="/demo" class="fc-btn fc-btn-ghost">Demo ansehen</a>
+          <a href="/demo/" class="fc-btn fc-btn-ghost">Demo ansehen</a>
         </div>
         <div class="trust">
           <div class="avatars">
@@ -3212,7 +3211,7 @@ const websiteSchema = {
           <span class="badge-prefix" style="background:rgba(239,68,68,0.2);color:#fca5a5">+7 weitere</span>
           <h4 style="color:white">Alle Agents entdecken</h4>
           <p style="color:rgba(255,255,255,0.7)">Sieben weitere Agents in der Plattform für Sourcing, Outreach, Risiko-Erkennung, Pipeline-Management und mehr.</p>
-          <a href="/produkt/ki-features" style="display:inline-block;margin-top:14px;color:#ef4444;font-size:13px;font-weight:700;border-bottom:1px solid #ef4444;padding-bottom:2px;text-decoration:none">Alle ansehen →</a>
+          <a href="/produkt/ki-features/" style="display:inline-block;margin-top:14px;color:#ef4444;font-size:13px;font-weight:700;border-bottom:1px solid #ef4444;padding-bottom:2px;text-decoration:none">Alle ansehen →</a>
         </div>
       </div>
     </section>
@@ -3521,7 +3520,7 @@ const websiteSchema = {
 
         </div>
         <div class="actions">
-          <a href="/job-selling" class="fc-btn">Sell the Job entdecken →</a>
+          <a href="/job-selling/" class="fc-btn">Sell the Job entdecken →</a>
         </div>
       </div>
     </section>
@@ -3758,7 +3757,7 @@ const websiteSchema = {
         <div class="fc-testi-card" style="background:linear-gradient(135deg,#ef4444,#f97316);color:white;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center">
           <div style="font-family:'Poppins';font-size:48px;font-weight:800;line-height:1">+200</div>
           <div style="font-size:14px;margin-top:8px;opacity:0.9">weitere Recruiting-Agenturen</div>
-          <a href="/kunden" style="margin-top:14px;background:white;color:#ef4444;padding:8px 16px;border-radius:100px;font-size:12px;font-weight:700;text-decoration:none">Alle ansehen →</a>
+          <a href="/kunden/" style="margin-top:14px;background:white;color:#ef4444;padding:8px 16px;border-radius:100px;font-size:12px;font-weight:700;text-decoration:none">Alle ansehen →</a>
         </div>
       </div>
     </section>
@@ -3821,44 +3820,36 @@ const websiteSchema = {
       </div>
       <div class="fc-faq-list reveal-stagger" data-reveal>
         <details class="fc-faq-item" open>
-          <summary>Was ist im Pioneer Plan enthalten? <span class="plus">+</span></summary>
-          <div class="answer">Alle Funktionen von ShortSelect: unbegrenzte Jobs und Kandidaten, AgentBurst KI-Engine für Matching, Screening, Ranking und Nurturing, Multi-Mandanten mit Client Portal, Karriereseite, Multiposting, Talent Pools, Interview Scheduling, REST API, Webhooks und Priority Support. Ein Preis pro User, keine Add-On-Fees.</div>
+          <summary>Was ist ShortSelect? <span class="plus">+</span></summary>
+          <div class="answer">ShortSelect ist ein Applicant Tracking System (ATS) mit integriertem CRM für Recruiting-Agenturen, Personalvermittlungen und HR-Teams im DACH-Raum. Die KI-Engine AgentBurst übernimmt Screening, Matching, Ranking und Nurturing im Hintergrund, während du dich auf Gespräche und Placements konzentrierst.</div>
         </details>
         <details class="fc-faq-item">
-          <summary>Was passiert nach den 30 Tagen Trial? <span class="plus">+</span></summary>
-          <div class="answer">Nach Ablauf des Trials bleibt dein Account erhalten und du wechselst in den Pioneer Plan für 149 € pro User und Monat. Wenn du nicht weitermachen möchtest, wird dein Account ohne weitere Kosten archiviert. Wir erinnern dich rechtzeitig vor Trial-Ende per E-Mail, damit du aktiv entscheiden kannst.</div>
+          <summary>Für wen ist ShortSelect gedacht? <span class="plus">+</span></summary>
+          <div class="answer">Für Recruiting-Agenturen, Personalvermittler und Headhunter, die mehrere Mandanten parallel betreuen, sowie für HR-Teams, die ihr Recruiting professionalisieren wollen. Multi-Mandanten-Struktur, <a href="/produkt/client-portal/">Client Portal</a> und Sales-CRM sind dafür von Grund auf eingebaut.</div>
         </details>
         <details class="fc-faq-item">
-          <summary>Brauche ich eine Kreditkarte für den Trial? <span class="plus">+</span></summary>
-          <div class="answer">Nein. Der 30-tägige Trial ist komplett kostenlos und ohne Zahlungsdaten. Du gibst deine Zahlungsmethode erst an, wenn du nach dem Trial in den Pioneer Plan wechseln möchtest.</div>
+          <summary>Wie funktioniert das KI-Matching? <span class="plus">+</span></summary>
+          <div class="answer">Die KI gleicht Fähigkeiten, Erfahrung, Standort und Sprachen deiner Kandidaten mit den Anforderungen jedes Jobs ab und vergibt einen Match-Score von 0 bis 100. Du siehst sofort, welche Kandidaten am besten passen, inklusive nachvollziehbarer Bewertung pro Kriterium. Mehr dazu unter <a href="/produkt/ki-features/">KI-Features</a>.</div>
         </details>
         <details class="fc-faq-item">
-          <summary>Bleibt der Preis von 149 € garantiert? <span class="plus">+</span></summary>
-          <div class="answer">Ja. Wer den Pioneer Plan nutzt, bezahlt diesen Preis auf Lebenszeit, solange das Abo ununterbrochen aktiv bleibt, auch wenn wir später die Standard-Preise anheben. Der Pioneer Plan ist limitiert auf die ersten 100 Recruiting-Agenturen.</div>
+          <summary>Ist ShortSelect DSGVO-konform? <span class="plus">+</span></summary>
+          <div class="answer">Ja. Deine Daten werden ausschließlich in EU-Rechenzentren gespeichert und sind durch Row-Level-Security, SSL-Verschlüsselung und tägliche Backups geschützt. Audit-Logging, rollenbasierte Zugriffe und ein AVV-Vertrag sind enthalten. Details unter <a href="/produkt/compliance/">DSGVO &amp; Compliance</a>.</div>
         </details>
         <details class="fc-faq-item">
-          <summary>Wie viele Pioneer-Plätze sind noch frei? <span class="plus">+</span></summary>
-          <div class="answer">Aktuell sind noch 24 von 100 Pioneer-Plätzen frei. Der Pioneer-Preis gilt pro User und ist für aktive Pioneer-Kunden auf Lebenszeit gesichert.</div>
+          <summary>Was kostet ShortSelect? <span class="plus">+</span></summary>
+          <div class="answer">Der Pioneer Plan kostet 149 € pro User und Monat und ist auf die ersten 100 Recruiting-Agenturen limitiert. Danach gilt der Standard-Tarif von 300 € pro User und Monat. Alle Details und den vollen Funktionsumfang findest du auf der <a href="/preise/">Preisseite</a>.</div>
         </details>
         <details class="fc-faq-item">
-          <summary>Was kostet ShortSelect nach den 100 Pioneer-Plätzen? <span class="plus">+</span></summary>
-          <div class="answer">Nach Vergabe der 100 Pioneer-Plätze gilt der Standard-Tarif von 300 € pro User und Monat. Bestehende Pioneer-Kunden behalten ihren Preis von 149 € pro User und Monat lebenslang, solange ihr Abo aktiv bleibt.</div>
-        </details>
-        <details class="fc-faq-item">
-          <summary>Kann ich jederzeit kündigen? <span class="plus">+</span></summary>
-          <div class="answer">Ja. ShortSelect ist monatlich kündbar, ohne Mindestlaufzeit. Eine Kündigung erfolgt direkt im Account über das Stripe Customer Portal. Du behältst Zugriff bis zum Ende der laufenden Abrechnungsperiode.</div>
-        </details>
-        <details class="fc-faq-item">
-          <summary>Werden Updates und neue Funktionen extra berechnet? <span class="plus">+</span></summary>
-          <div class="answer">Nein. Alle zukünftigen Updates und neuen Funktionen sind im Pioneer Plan und im Standard-Tarif enthalten. Es gibt keine Aufpreise für Premium-Module oder neue KI-Features.</div>
-        </details>
-        <details class="fc-faq-item">
-          <summary>Wie sicher sind meine Daten? <span class="plus">+</span></summary>
-          <div class="answer">Deine Daten werden ausschließlich in EU-Rechenzentren gespeichert und sind durch Row-Level-Security, SSL-Verschlüsselung und tägliche Backups geschützt. ShortSelect ist vollständig DSGVO-konform und bietet Audit-Logging, RBAC und einen AVV-Vertrag.</div>
+          <summary>Kann ich ShortSelect kostenlos testen? <span class="plus">+</span></summary>
+          <div class="answer">Ja. Du testest ShortSelect 30 Tage mit vollem Funktionsumfang, komplett kostenlos und ohne Kreditkarte. Nach dem Trial entscheidest du aktiv, ob du in den Pioneer Plan wechselst.</div>
         </details>
         <details class="fc-faq-item">
           <summary>Kann ich meine bestehenden Daten importieren? <span class="plus">+</span></summary>
-          <div class="answer">Ja. ShortSelect unterstützt CSV-Import für Kandidaten, Jobs und Unternehmen. Unser Onboarding-Team hilft dir beim reibungslosen Umzug von deinem bisherigen System, das ist im Pioneer Plan kostenfrei enthalten.</div>
+          <div class="answer">Ja. ShortSelect unterstützt CSV-Import für Kandidaten, Jobs und Unternehmen. Unser Onboarding-Team hilft dir beim reibungslosen Umzug von deinem bisherigen System, das ist im Pioneer Plan kostenfrei enthalten. Den Ablauf zeigt dir die Seite <a href="/wechsel/">Wechsel zu ShortSelect</a>.</div>
+        </details>
+        <details class="fc-faq-item">
+          <summary>Was unterscheidet ShortSelect von anderen ATS? <span class="plus">+</span></summary>
+          <div class="answer">Klassische ATS verwalten Daten, ShortSelect arbeitet mit: KI-Agents erledigen Screening, Matching und Nurturing im Hintergrund, statt dir nur Formulare und Filter zu geben. Wie sich das im Vergleich zu Bullhorn, Coveto und anderen Systemen schlägt, zeigen unsere <a href="/vergleich/">ATS-Vergleiche</a>.</div>
         </details>
       </div>
       <div class="fc-faq-foot">
@@ -3874,7 +3865,7 @@ const websiteSchema = {
         <p class="lead">30 Tage kostenlos. Keine Kreditkarte. Keine Tricks.</p>
         <div class="actions">
           <a href="https://app.shortselect.com/signup?utm_source=marketing&utm_medium=cta&utm_campaign=pioneer_plan&utm_content=cta_section" class="fc-btn">Jetzt starten →</a>
-          <a href="/kontakt" class="fc-btn fc-btn-ghost">Mit uns sprechen</a>
+          <a href="/kontakt/" class="fc-btn fc-btn-ghost">Mit uns sprechen</a>
         </div>
       </div>
     </section>
@@ -3921,13 +3912,13 @@ const websiteSchema = {
         <div>
           <h6>Produkt</h6>
           <ul>
-            <li><a href="/produkt/ats-crm">ATS &amp; CRM</a></li>
-            <li><a href="/produkt/karriereseite">Karriereseite</a></li>
-            <li><a href="/produkt/ki-features">KI-Features</a></li>
-            <li><a href="/produkt/automatisierung">Automatisierung</a></li>
-            <li><a href="/produkt/multiposting">Multiposting</a></li>
-            <li><a href="/produkt/compliance">DSGVO &amp; Compliance</a></li>
-            <li><a href="/preise">Preise</a></li>
+            <li><a href="/produkt/ats-crm/">ATS &amp; CRM</a></li>
+            <li><a href="/produkt/karriereseite/">Karriereseite</a></li>
+            <li><a href="/produkt/ki-features/">KI-Features</a></li>
+            <li><a href="/produkt/automatisierung/">Automatisierung</a></li>
+            <li><a href="/produkt/multiposting/">Multiposting</a></li>
+            <li><a href="/produkt/compliance/">DSGVO &amp; Compliance</a></li>
+            <li><a href="/preise/">Preise</a></li>
           </ul>
         </div>
 
@@ -3935,13 +3926,13 @@ const websiteSchema = {
         <div>
           <h6>Lösungen</h6>
           <ul>
-            <li><a href="/fuer/personalvermittlung">Personalvermittlung</a></li>
-            <li><a href="/fuer/startups">Startups</a></li>
-            <li><a href="/fuer/enterprise">Enterprise</a></li>
-            <li><a href="/branchen/it-recruiting">IT-Recruiting</a></li>
-            <li><a href="/branchen/finance">Finance &amp; Banking</a></li>
-            <li><a href="/branchen/healthcare">Healthcare</a></li>
-            <li><a href="/branchen/handwerk">Handwerk</a></li>
+            <li><a href="/fuer/personalvermittlung/">Personalvermittlung</a></li>
+            <li><a href="/fuer/startups/">Startups</a></li>
+            <li><a href="/fuer/enterprise/">Enterprise</a></li>
+            <li><a href="/branchen/it-recruiting/">IT-Recruiting</a></li>
+            <li><a href="/branchen/finance/">Finance &amp; Banking</a></li>
+            <li><a href="/branchen/healthcare/">Healthcare</a></li>
+            <li><a href="/branchen/handwerk/">Handwerk</a></li>
           </ul>
         </div>
 
@@ -3949,13 +3940,13 @@ const websiteSchema = {
         <div>
           <h6>Ressourcen</h6>
           <ul>
-            <li><a href="/blog">Blog</a></li>
-            <li><a href="/ressourcen">Ressourcen</a></li>
-            <li><a href="/glossar">Glossar</a></li>
-            <li><a href="/methode/smart-recruiting">Smart Recruiting</a></li>
-            <li><a href="/vergleich/beste-ats-software">ATS Vergleich</a></li>
-            <li><a href="/integrationen">Integrationen</a></li>
-            <li><a href="/demo">Demo buchen</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/ressourcen/">Ressourcen</a></li>
+            <li><a href="/glossar/">Glossar</a></li>
+            <li><a href="/methode/smart-recruiting/">Smart Recruiting</a></li>
+            <li><a href="/vergleich/beste-ats-software/">ATS Vergleich</a></li>
+            <li><a href="/integrationen/">Integrationen</a></li>
+            <li><a href="/demo/">Demo buchen</a></li>
           </ul>
         </div>
 
@@ -3963,12 +3954,12 @@ const websiteSchema = {
         <div>
           <h6>Vergleich</h6>
           <ul>
-            <li><a href="/vergleich/shortselect-vs-bullhorn">vs. Bullhorn</a></li>
-            <li><a href="/vergleich/shortselect-vs-vincere">vs. Vincere</a></li>
-            <li><a href="/vergleich/shortselect-vs-coveto">vs. Coveto</a></li>
-            <li><a href="/vergleich/shortselect-vs-teamtailor">vs. Teamtailor</a></li>
-            <li><a href="/vergleich/shortselect-vs-talent360">vs. Talent360</a></li>
-            <li><a href="/vergleich/beste-ats-software">ATS Vergleich 2026</a></li>
+            <li><a href="/vergleich/shortselect-vs-bullhorn/">vs. Bullhorn</a></li>
+            <li><a href="/vergleich/shortselect-vs-vincere/">vs. Vincere</a></li>
+            <li><a href="/vergleich/shortselect-vs-coveto/">vs. Coveto</a></li>
+            <li><a href="/vergleich/shortselect-vs-teamtailor/">vs. Teamtailor</a></li>
+            <li><a href="/vergleich/shortselect-vs-talent360/">vs. Talent360</a></li>
+            <li><a href="/vergleich/beste-ats-software/">ATS Vergleich 2026</a></li>
           </ul>
         </div>
 
@@ -3976,13 +3967,13 @@ const websiteSchema = {
         <div>
           <h6>Unternehmen</h6>
           <ul>
-            <li><a href="/ueber-uns">Über uns</a></li>
-            <li><a href="/kunden">Kunden</a></li>
-            <li><a href="/kontakt">Kontakt</a></li>
-            <li><a href="/sicherheit">Sicherheit</a></li>
-            <li><a href="/datenschutz">Datenschutz</a></li>
-            <li><a href="/impressum">Impressum</a></li>
-            <li><a href="/agb">AGB</a></li>
+            <li><a href="/ueber-uns/">Über uns</a></li>
+            <li><a href="/kunden/">Kunden</a></li>
+            <li><a href="/kontakt/">Kontakt</a></li>
+            <li><a href="/sicherheit/">Sicherheit</a></li>
+            <li><a href="/datenschutz/">Datenschutz</a></li>
+            <li><a href="/impressum/">Impressum</a></li>
+            <li><a href="/agb/">AGB</a></li>
           </ul>
         </div>
       </div>
