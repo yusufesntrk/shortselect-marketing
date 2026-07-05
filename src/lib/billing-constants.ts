@@ -7,6 +7,13 @@
 export const PRO_PRICE_MONTHLY_EUR = 199;
 /** Jahresabo: 9 x 199 = 1.791 € netto pro User/Jahr, Vorauszahlung. */
 export const PRO_PRICE_ANNUAL_EUR = 1791;
+/**
+ * Effektiver Monatspreis bei Jahresabrechnung (1.791 / 12 = 149,25 €).
+ * Anzeige-Konvention (Close-CRM-Style): Jahresplan wird als Preis pro
+ * User/Monat "bei jährlicher Abrechnung" beworben; die Jahressumme steht
+ * nur dezent im Kleingedruckten.
+ */
+export const PRO_ANNUAL_EFFECTIVE_MONTHLY_EUR = PRO_PRICE_ANNUAL_EUR / 12;
 export const PRO_ANNUAL_MONTHS_FREE = 3;
 export const PRO_MONTHLY_LOOKUP_KEY = 'shortselect_pro_monthly_v1';
 export const PRO_ANNUAL_LOOKUP_KEY = 'shortselect_pro_annual_v1';

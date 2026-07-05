@@ -10,7 +10,10 @@ import {
 
 const SIGNUP_URL = 'https://app.shortselect.com/signup?utm_source=marketing&utm_medium=cta&utm_campaign=pro_plan&utm_content=pricing_main';
 
-// 1.791 € / 12 = 149,25 € effektiver Monatspreis bei Jahreszahlung
+// 1.791 € / 12 = 149,25 € effektiver Monatspreis bei Jahreszahlung.
+// Anzeige-Konvention (Close-CRM-Style): Jahresplan wird als Monatspreis
+// "bei jährlicher Abrechnung" beworben, die Jahressumme steht nur dezent
+// im Kleingedruckten.
 const ANNUAL_EFFECTIVE_MONTHLY = (PRO_PRICE_ANNUAL_EUR / 12).toLocaleString('de-DE', {
   minimumFractionDigits: 2,
   maximumFractionDigits: 2,
@@ -181,12 +184,13 @@ const competitors = [
             </div>
             <div id="price-annual-block" class="hidden">
               <div class="flex items-baseline justify-center gap-3 mb-2 flex-wrap">
-                <span class="text-5xl md:text-6xl font-display font-bold text-foreground">{ANNUAL_PRICE_FORMATTED} €</span>
-                <span class="text-lg text-muted-foreground">pro User/Jahr</span>
+                <span class="text-5xl md:text-6xl font-display font-bold text-foreground">{ANNUAL_EFFECTIVE_MONTHLY} €</span>
+                <span class="text-lg text-muted-foreground">pro User/Monat</span>
+                <span class="text-xl line-through text-muted-foreground/60">{PRO_PRICE_MONTHLY_EUR} €</span>
               </div>
               <p class="text-sm text-muted-foreground">
-                9 statt 12 Monatsraten, entspricht {ANNUAL_EFFECTIVE_MONTHLY} € pro User/Monat.
-                <br/>Einmal jährlich im Voraus abgerechnet, netto zzgl. MwSt.
+                Bei jährlicher Abrechnung, {PRO_ANNUAL_MONTHS_FREE} Monatsraten geschenkt.
+                <br/>Pro aktivem User, netto zzgl. MwSt.
               </p>
             </div>
           </div>
@@ -218,7 +222,7 @@ const competitors = [
             30 Tage kostenlos. Keine Kreditkarte erforderlich. Setup in 5 Minuten.
           </p>
           <p id="annual-terms-note" class="hidden text-center text-xs text-muted-foreground mt-2">
-            Jahresabo: 12 Monate Laufzeit, verlängert sich um jeweils 12 Monate. Kündbar mit 6 Monaten Frist zum Laufzeitende, Details in den AGB (§ 7).
+            Abrechnung jährlich im Voraus ({ANNUAL_PRICE_FORMATTED} € pro User/Jahr). 12 Monate Laufzeit, verlängert sich um jeweils 12 Monate, kündbar mit 6 Monaten Frist zum Laufzeitende, Details in den AGB (§ 7).
           </p>
         </div>
 
