@@ -4,7 +4,7 @@ import VergleichLayout from '../../layouts/VergleichLayout.astro';
 const comparisonData = [
   { feature: "KI-Agenten", ssStatus: "check" as const, ssLabel: "AgentBurst-Agenten", compStatus: "x" as const, compLabel: "Keine" },
   { feature: "Autonomes Matching", ssStatus: "check" as const, ssLabel: "AgentBurst Match", compStatus: "warn" as const, compLabel: "Manuell auslösen" },
-  { feature: "Preistransparenz", ssStatus: "check" as const, ssLabel: "149 € pro User/Monat", compStatus: "x" as const, compLabel: "Versteckte Kosten" },
+  { feature: "Preistransparenz", ssStatus: "check" as const, ssLabel: "199 € pro User/Monat", compStatus: "x" as const, compLabel: "Versteckte Kosten" },
   { feature: "Support-Qualität", ssStatus: "check" as const, ssLabel: "Persönlicher Support", compStatus: "warn" as const, compLabel: "Rückläufig seit Access-Übernahme" },
   { feature: "Suchgeschwindigkeit", ssStatus: "check" as const, ssLabel: "Echtzeit", compStatus: "warn" as const, compLabel: "Langsam" },
   { feature: "UI/Design", ssStatus: "check" as const, ssLabel: "Modern", compStatus: "warn" as const, compLabel: "Veraltet" },
@@ -25,7 +25,7 @@ const faqs = [
   },
   {
     question: "Was kostet ShortSelect im Vergleich zu Vincere?",
-    answer: "ShortSelect kostet im Pioneer Plan 149 € pro User/Monat für die ersten 100 Agenturen, danach 300 € pro User/Monat, ohne versteckte Kosten und mit 30 Tagen kostenlosem Test ohne Kreditkarte. Bei Vincere hängt der Preis vom individuellen Vertrag ab, Nutzer berichten über versteckte Zusatzkosten.",
+    answer: "ShortSelect kostet im Pro Plan 199 € pro User/Monat oder 1.791 € pro User/Jahr (3 Monate geschenkt), ohne versteckte Kosten und mit 30 Tagen kostenlosem Test ohne Kreditkarte. Bei Vincere hängt der Preis vom individuellen Vertrag ab, Nutzer berichten über versteckte Zusatzkosten.",
   },
   {
     question: "Warum wechseln Agenturen von Vincere zu ShortSelect?",
@@ -40,13 +40,13 @@ const faqs = [
 ---
 
 <VergleichLayout
-  title="ShortSelect vs Vincere: DSGVO-ATS für 149 € pro User"
-  description="Vincere schwächelt seit der Access-Übernahme: Support, Kosten, Tempo. ShortSelect: DSGVO EU-nativ, KI-Agenten, ab 149 € pro User. Mit Wechsel-Anleitung."
+  title="ShortSelect vs Vincere: DSGVO-ATS für 199 € pro User"
+  description="Vincere schwächelt seit der Access-Übernahme: Support, Kosten, Tempo. ShortSelect: DSGVO EU-nativ, KI-Agenten, ab 199 € pro User. Mit Wechsel-Anleitung."
   competitorName="Vincere"
   heroSubline="Vincere war ein starkes ATS. bis Access Group übernahm. Seitdem: Support-Probleme, versteckte Kosten, langsame Suche. Zeit für eine Alternative mit echten KI-Agenten."
   heroBadge="Vergleich"
   ssDescription="KI-Agent-ATS mit autonomen AgentBurst-Agenten"
-  ssHighlights={["AgentBurst-Agenten arbeiten 24/7", "Transparente Preise: 149 € pro User/Monat", "Persönlicher Support ohne Wartezeiten", "Echtzeit-Suche und blitzschnelles CV Parsing"]}
+  ssHighlights={["AgentBurst-Agenten arbeiten 24/7", "Transparente Preise: 199 € pro User/Monat", "Persönlicher Support ohne Wartezeiten", "Echtzeit-Suche und blitzschnelles CV Parsing"]}
   compDescription="Recruiting-CRM nach Access-Übernahme"
   compHighlights={["Breites Feature-Set für Agenturen", "CRM + ATS in einer Plattform", "Etabliert im UK/ANZ-Markt", "Integriertes Client Portal"]}
   comparisonData={comparisonData}

@@ -3,7 +3,7 @@ import VergleichLayout from '../../layouts/VergleichLayout.astro';
 
 const comparisonData = [
   { feature: "KI-Agenten", ssStatus: "check" as const, ssLabel: "AgentBurst-Agenten", compStatus: "x" as const, compLabel: "Keine" },
-  { feature: "Preis pro User", ssStatus: "check" as const, ssLabel: "149 € pro User/Monat", compStatus: "x" as const, compLabel: "Ab £120+/User/Monat" },
+  { feature: "Preis pro User", ssStatus: "check" as const, ssLabel: "199 € pro User/Monat", compStatus: "x" as const, compLabel: "Ab £120+/User/Monat" },
   { feature: "Bewertungen", ssStatus: "check" as const, ssLabel: "4.8/5 (127+ Reviews)", compStatus: "warn" as const, compLabel: "Nur 4 Reviews" },
   { feature: "KI-Matching", ssStatus: "check" as const, ssLabel: "AgentBurst Match", compStatus: "x" as const, compLabel: "Kein KI-Matching" },
   { feature: "CV Parsing", ssStatus: "check" as const, ssLabel: "AgentBurst Parse", compStatus: "warn" as const, compLabel: "Basis" },
@@ -25,7 +25,7 @@ const faqs = [
   },
   {
     question: "Was kostet ShortSelect im Vergleich zu Ezekia?",
-    answer: "ShortSelect kostet im Pioneer Plan 149 € pro User/Monat für die ersten 100 Agenturen, danach 300 € pro User/Monat, mit 30 Tagen kostenlosem Test ohne Kreditkarte. Ezekia liegt bei über 120 £ pro User/Monat und bietet dabei weder KI-Matching noch KI-Screening.",
+    answer: "ShortSelect kostet im Pro Plan 199 € pro User/Monat oder 1.791 € pro User/Jahr (3 Monate geschenkt), mit 30 Tagen kostenlosem Test ohne Kreditkarte. Ezekia liegt bei über 120 £ pro User/Monat und bietet dabei weder KI-Matching noch KI-Screening.",
   },
   {
     question: "Bietet Ezekia KI-Matching wie ShortSelect?",
@@ -41,12 +41,12 @@ const faqs = [
 
 <VergleichLayout
   title="ShortSelect vs. Ezekia - ATS Vergleich 2026"
-  description="Ezekia: über 120 £ pro User, kein KI-Matching. ShortSelect: KI-Screening, Matching und Client Portal ab 149 € pro User. Fairer Vergleich für Headhunter."
+  description="Ezekia: über 120 £ pro User, kein KI-Matching. ShortSelect: KI-Screening, Matching und Client Portal ab 199 € pro User. Fairer Vergleich für Headhunter."
   competitorName="Ezekia"
   heroSubline="Ezekia positioniert sich als Premium-ATS für Executive Search. Aber: £120+ pro User, nur 4 öffentliche Bewertungen und kein KI-Matching. Lohnt sich das?"
   heroBadge="Vergleich"
   ssDescription="KI-Agent-ATS mit autonomen AgentBurst-Agenten"
-  ssHighlights={["AgentBurst-Agenten arbeiten autonom", "Transparente Preise: 149 € pro User/Monat", "Über 127 verifizierte Bewertungen", "Autonomes KI-Matching, Screening und Ranking"]}
+  ssHighlights={["AgentBurst-Agenten arbeiten autonom", "Transparente Preise: 199 € pro User/Monat", "Über 127 verifizierte Bewertungen", "Autonomes KI-Matching, Screening und Ranking"]}
   compDescription="Executive-Search-ATS aus UK"
   compHighlights={["Spezialisiert auf Executive Search", "Integriertes Client Portal", "DSGVO-konform", "Long-List Management"]}
   comparisonData={comparisonData}

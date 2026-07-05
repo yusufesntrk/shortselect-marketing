@@ -7,7 +7,7 @@ const comparisonData = [
   { feature: "Client Portal", ssStatus: "check" as const, ssLabel: "Integriert", compStatus: "x" as const, compLabel: "Nicht verfügbar" },
   { feature: "Multi-Tenancy", ssStatus: "check" as const, ssLabel: "Für Agenturen", compStatus: "x" as const, compLabel: "Nicht verfügbar" },
   { feature: "Pipeline", ssStatus: "check" as const, ssLabel: "Kanban", compStatus: "check" as const, compLabel: "Kanban" },
-  { feature: "Preise", ssStatus: "check" as const, ssLabel: "149 € pro User/Monat", compStatus: "warn" as const, compLabel: "Ab 199€/Monat" },
+  { feature: "Preise", ssStatus: "check" as const, ssLabel: "199 € pro User/Monat", compStatus: "warn" as const, compLabel: "Ab 199€/Monat" },
   { feature: "DSGVO", ssStatus: "check" as const, ssLabel: "Vollständig", compStatus: "check" as const, compLabel: "Vollständig" },
   { feature: "API", ssStatus: "check" as const, ssLabel: "REST + Webhooks", compStatus: "check" as const, compLabel: "REST" },
   { feature: "Screening-Fragen", ssStatus: "check" as const, ssLabel: "Vollständig", compStatus: "warn" as const, compLabel: "Begrenzt" },
@@ -25,7 +25,7 @@ const faqs = [
   },
   {
     question: "Was kostet ShortSelect im Vergleich zu Recruitee?",
-    answer: "ShortSelect kostet im Pioneer Plan 149 € pro User/Monat für die ersten 100 Agenturen, danach 300 € pro User/Monat, mit 30 Tagen kostenlosem Test ohne Kreditkarte und ohne Mindestlaufzeit. Recruitee startet ab etwa 199 € pro Monat, abhängig vom gewählten Tarif.",
+    answer: "ShortSelect kostet im Pro Plan 199 € pro User/Monat oder 1.791 € pro User/Jahr (3 Monate geschenkt), mit 30 Tagen kostenlosem Test ohne Kreditkarte und ohne Mindestlaufzeit. Recruitee startet ab etwa 199 € pro Monat, abhängig vom gewählten Tarif.",
   },
   {
     question: "Hat Recruitee KI-Matching wie ShortSelect?",
@@ -41,12 +41,12 @@ const faqs = [
 
 <VergleichLayout
   title="ShortSelect vs. Recruitee (Teamtailor) - ATS Vergleich 2026"
-  description="Recruitee passt zu kleinen Teams ohne KI-Bedarf. ShortSelect: KI-Matching, Multi-Tenancy und Client Portal ab 149 € pro User. Ehrlicher Vergleich."
+  description="Recruitee passt zu kleinen Teams ohne KI-Bedarf. ShortSelect: KI-Matching, Multi-Tenancy und Client Portal ab 199 € pro User. Ehrlicher Vergleich."
   competitorName="Recruitee"
   heroSubline="Recruitee (jetzt Teamtailor) ist beliebt bei KMUs. Wir vergleichen Features, Preise und Usability."
   heroBadge="Vergleich"
   ssDescription="KI-gestütztes ATS für Recruiter & Agenturen"
-  ssHighlights={["KI-gestütztes Kandidaten-Matching", "Multi-Mandanten für Agenturen", "Client Portal inklusive", "149 € pro User/Monat transparent", "REST API + Webhooks"]}
+  ssHighlights={["KI-gestütztes Kandidaten-Matching", "Multi-Mandanten für Agenturen", "Client Portal inklusive", "199 € pro User/Monat transparent", "REST API + Webhooks"]}
   compDescription="ATS-Plattform für kleine und mittlere Unternehmen"
   compHighlights={["Karriereseite-Builder", "Kanban-Pipeline", "Team-Kollaboration", "DSGVO-konform", "REST API"]}
   comparisonData={comparisonData}

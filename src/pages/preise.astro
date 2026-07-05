@@ -3,48 +3,86 @@ import MarketingLayout from '../layouts/MarketingLayout.astro';
 import FAQSection from '../components/landing/FAQSection.astro';
 import CTASection from '../components/landing/CTASection.astro';
 import {
-  PIONEER_PRICE_EUR,
-  PIONEER_LIMIT,
-  PIONEER_DISPLAY_AVAILABLE,
-  STANDARD_PRICE_EUR,
-  SLOT_STATUS_ENDPOINT,
+  PRO_PRICE_MONTHLY_EUR,
+  PRO_PRICE_ANNUAL_EUR,
+  PRO_ANNUAL_MONTHS_FREE,
 } from '../lib/billing-constants';
 
-const SIGNUP_URL = 'https://app.shortselect.com/signup?utm_source=marketing&utm_medium=cta&utm_campaign=pioneer_plan&utm_content=pricing_main';
+const SIGNUP_URL = 'https://app.shortselect.com/signup?utm_source=marketing&utm_medium=cta&utm_campaign=pro_plan&utm_content=pricing_main';
+
+// 1.791 € / 12 = 149,25 € effektiver Monatspreis bei Jahreszahlung
+const ANNUAL_EFFECTIVE_MONTHLY = (PRO_PRICE_ANNUAL_EUR / 12).toLocaleString('de-DE', {
+  minimumFractionDigits: 2,
+  maximumFractionDigits: 2,
+});
+const ANNUAL_PRICE_FORMATTED = PRO_PRICE_ANNUAL_EUR.toLocaleString('de-DE');
+const FIVE_USER_MONTHLY = (5 * PRO_PRICE_MONTHLY_EUR).toLocaleString('de-DE');
+const FIVE_USER_ANNUAL_MONTHLY = ((5 * PRO_PRICE_ANNUAL_EUR) / 12).toLocaleString('de-DE', {
+  maximumFractionDigits: 0,
+});
 
 const pricingSchema = {
   "@context": "https://schema.org",
   "@type": "Product",
-  name: "ShortSelect Pioneer Plan",
-  description: `ShortSelect ATS für Recruiting-Agenturen. Alle Funktionen, ein Preis pro User. Pioneer Plan: ${PIONEER_PRICE_EUR} EUR pro User und Monat für die ersten ${PIONEER_LIMIT} Agenturen, danach ${STANDARD_PRICE_EUR} EUR pro User und Monat.`,
+  name: "ShortSelect Pro Plan",
+  description: `ShortSelect ATS für Recruiting-Agenturen. Alle Funktionen, ein Preis pro User. Pro Plan: ${PRO_PRICE_MONTHLY_EUR} EUR pro User und Monat oder ${PRO_PRICE_ANNUAL_EUR} EUR pro User und Jahr (${PRO_ANNUAL_MONTHS_FREE} Monate geschenkt).`,
   brand: { "@type": "Brand", name: "ShortSelect" },
-  offers: {
-    "@type": "Offer",
-    name: "Pioneer Plan",
-    description: `Pioneer Plan: ${PIONEER_PRICE_EUR} EUR pro User und Monat, alle Funktionen inklusive. Noch ${PIONEER_DISPLAY_AVAILABLE} von ${PIONEER_LIMIT} Plätzen frei. Danach ${STANDARD_PRICE_EUR} EUR pro User und Monat.`,
-    price: `${PIONEER_PRICE_EUR}.00`,
-    priceCurrency: "EUR",
-    availability: "https://schema.org/LimitedAvailability",
-    priceValidUntil: "2099-12-31",
-    url: "https://www.shortselect.com/preise/",
-    priceSpecification: {
-      "@type": "UnitPriceSpecification",
-      price: `${PIONEER_PRICE_EUR}.00`,
+  offers: [
+    {
+      "@type": "Offer",
+      name: "Pro Plan (monatlich)",
+      description: `Pro Plan: ${PRO_PRICE_MONTHLY_EUR} EUR pro User und Monat, alle Funktionen inklusive.`,
+      price: `${PRO_PRICE_MONTHLY_EUR}.00`,
       priceCurrency: "EUR",
-      billingDuration: "P1M",
-      unitText: "MONTH",
-      referenceQuantity: {
-        "@type": "QuantitativeValue",
-        value: "1",
-        unitText: "User",
+      availability: "https://schema.org/InStock",
+      priceValidUntil: "2099-12-31",
+      url: "https://www.shortselect.com/preise/",
+      priceSpecification: {
+        "@type": "UnitPriceSpecification",
+        price: `${PRO_PRICE_MONTHLY_EUR}.00`,
+        priceCurrency: "EUR",
+        billingDuration: "P1M",
+        unitText: "MONTH",
+        referenceQuantity: {
+          "@type": "QuantitativeValue",
+          value: "1",
+          unitText: "User",
+        },
+      },
+      seller: {
+        "@type": "Organization",
+        name: "ShortSelect",
+        url: "https://www.shortselect.com",
       },
     },
-    seller: {
-      "@type": "Organization",
-      name: "ShortSelect",
-      url: "https://www.shortselect.com",
+    {
+      "@type": "Offer",
+      name: "Pro Plan (jährlich)",
+      description: `Pro Plan Jahresabo: ${PRO_PRICE_ANNUAL_EUR} EUR pro User und Jahr (9 statt 12 Monatsraten, Vorauszahlung).`,
+      price: `${PRO_PRICE_ANNUAL_EUR}.00`,
+      priceCurrency: "EUR",
+      availability: "https://schema.org/InStock",
+      priceValidUntil: "2099-12-31",
+      url: "https://www.shortselect.com/preise/",
+      priceSpecification: {
+        "@type": "UnitPriceSpecification",
+        price: `${PRO_PRICE_ANNUAL_EUR}.00`,
+        priceCurrency: "EUR",
+        billingDuration: "P1Y",
+        unitText: "YEAR",
+        referenceQuantity: {
+          "@type": "QuantitativeValue",
+          value: "1",
+          unitText: "User",
+        },
+      },
+      seller: {
+        "@type": "Organization",
+        name: "ShortSelect",
+        url: "https://www.shortselect.com",
+      },
     },
-  },
+  ],
 };
 
 const features = [
@@ -70,8 +108,8 @@ const competitors = [
 ---
 
 <MarketingLayout
-  title={`Preise, ShortSelect Pioneer Plan | ${PIONEER_PRICE_EUR} € pro User`}
-  description={`Pioneer Plan: ShortSelect für ${PIONEER_PRICE_EUR} € pro User/Monat. Alle Funktionen, ein Preis pro User. 30 Tage kostenlos testen, keine Kreditkarte.`}
+  title={`Preise, ShortSelect Pro Plan | ${PRO_PRICE_MONTHLY_EUR} € pro User`}
+  description={`Pro Plan: ShortSelect für ${PRO_PRICE_MONTHLY_EUR} € pro User/Monat oder ${ANNUAL_PRICE_FORMATTED} € pro User/Jahr (${PRO_ANNUAL_MONTHS_FREE} Monate geschenkt). 30 Tage kostenlos testen, keine Kreditkarte.`}
   jsonLd={pricingSchema}
 >
   <!-- Hero -->
@@ -80,14 +118,14 @@ const competitors = [
       <div id="pricing-hero" class="text-center max-w-3xl mx-auto opacity-0 translate-y-8 transition-all duration-700">
         <span class="inline-flex items-center gap-2 px-4 py-2 mb-6 rounded-full bg-primary/10 text-primary text-sm font-semibold">
           <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
-          <span id="pioneer-slot-pill">Noch {PIONEER_DISPLAY_AVAILABLE} von {PIONEER_LIMIT} frei</span>
+          Alle Funktionen, ein Preis pro User
         </span>
         <h1 class="text-4xl md:text-5xl lg:text-6xl font-display font-bold tracking-tight mb-4">
-          Pioneer Plan:
-          <span class="text-primary">{PIONEER_PRICE_EUR} € pro User.</span>
+          Pro Plan:
+          <span class="text-primary">{PRO_PRICE_MONTHLY_EUR} € pro User.</span>
         </h1>
         <p class="text-lg md:text-xl text-muted-foreground">
-          Ein Preis, kein Tier-Wirrwarr, alle Funktionen inklusive. Nur für die ersten {PIONEER_LIMIT} Recruiting-Agenturen.
+          Ein Preis, kein Tier-Wirrwarr, alle Funktionen inklusive. Jährliche Zahlung spart {PRO_ANNUAL_MONTHS_FREE} Monatsraten.
         </p>
       </div>
     </div>
@@ -97,47 +135,60 @@ const competitors = [
   <section class="pb-16">
     <div class="container mx-auto px-4">
       <div id="pricing-card" class="max-w-xl mx-auto opacity-0 translate-y-8 transition-all duration-700">
-        <div class="relative rounded-2xl border-2 border-primary bg-card text-card-foreground shadow-xl p-8 md:p-10">
-          <!-- Pioneer Badge mit animierter Flamme + Slot-Counter -->
-          <div class="absolute -top-4 left-1/2 -translate-x-1/2 z-10">
-            <span class="inline-flex items-center gap-1.5 bg-primary text-primary-foreground text-xs font-semibold pl-2.5 pr-4 py-1.5 rounded-full shadow-lg whitespace-nowrap">
-              <svg class="badge-flame" viewBox="0 0 24 32" width="14" height="18" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
-                <defs>
-                  <linearGradient id="bf-outer-grad" x1="50%" y1="100%" x2="50%" y2="0%">
-                    <stop offset="0%" stop-color="#FBBF24" />
-                    <stop offset="55%" stop-color="#FDE68A" />
-                    <stop offset="100%" stop-color="#FFFFFF" />
-                  </linearGradient>
-                  <linearGradient id="bf-core-grad" x1="50%" y1="100%" x2="50%" y2="0%">
-                    <stop offset="0%" stop-color="#FDE68A" />
-                    <stop offset="100%" stop-color="#FFFFFF" />
-                  </linearGradient>
-                </defs>
-                <path class="bf-outer" fill="url(#bf-outer-grad)" d="M12 31 C 4 30, 1 24, 3 17 C 4.5 13, 7 11, 8 6 C 10 9, 11 13, 12 16 C 13 12, 15 8, 17 2 C 19 7, 22 13, 23 19 C 24 26, 19 31, 12 31 Z" />
-                <path class="bf-core" fill="url(#bf-core-grad)" d="M12 28 C 7 27, 5.5 22, 7 18 C 8.5 15, 10 13, 11 10 C 12 13, 13.5 16, 14.5 19 C 16 23, 14 28, 12 28 Z" />
-              </svg>
-              <span id="pioneer-badge-text">Noch {PIONEER_DISPLAY_AVAILABLE} von {PIONEER_LIMIT} frei</span>
-            </span>
-          </div>
 
+        <!-- Monat/Jahr Toggle -->
+        <div class="flex justify-center mb-6">
+          <div class="inline-flex items-center rounded-full border border-border bg-card p-1" role="group" aria-label="Abrechnungszeitraum wählen">
+            <button
+              type="button"
+              id="interval-monthly"
+              aria-pressed="true"
+              class="px-4 py-1.5 text-sm font-medium rounded-full transition-colors bg-primary text-primary-foreground shadow"
+            >
+              Monatlich
+            </button>
+            <button
+              type="button"
+              id="interval-annual"
+              aria-pressed="false"
+              class="px-4 py-1.5 text-sm font-medium rounded-full transition-colors text-muted-foreground hover:text-foreground"
+            >
+              Jährlich <span class="text-xs">({PRO_ANNUAL_MONTHS_FREE} Monate geschenkt)</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="relative rounded-2xl border-2 border-primary bg-card text-card-foreground shadow-xl p-8 md:p-10">
           <!-- Plan Name -->
           <div class="text-center mb-6 mt-2">
-            <h2 class="text-2xl font-display font-bold mb-2">ShortSelect Pioneer</h2>
+            <h2 class="text-2xl font-display font-bold mb-2">ShortSelect Pro</h2>
             <p class="text-sm text-muted-foreground">
-              Alle Funktionen, ein Preis pro User, Lifetime-Preisgarantie
+              Alle Funktionen, ein Preis pro User
             </p>
           </div>
 
           <!-- Pricing Display -->
           <div class="text-center mb-8 pb-8 border-b border-border">
-            <div class="flex items-baseline justify-center gap-3 mb-2 flex-wrap">
-              <span class="text-5xl md:text-6xl font-display font-bold text-foreground">{PIONEER_PRICE_EUR} €</span>
-              <span class="text-lg text-muted-foreground">pro User/Monat</span>
+            <div id="price-monthly-block">
+              <div class="flex items-baseline justify-center gap-3 mb-2 flex-wrap">
+                <span class="text-5xl md:text-6xl font-display font-bold text-foreground">{PRO_PRICE_MONTHLY_EUR} €</span>
+                <span class="text-lg text-muted-foreground">pro User/Monat</span>
+              </div>
+              <p class="text-sm text-muted-foreground">
+                Pro aktivem User, alle Funktionen inklusive.
+                <br/>Monatliche Abrechnung, netto zzgl. MwSt.
+              </p>
             </div>
-            <p class="text-sm text-muted-foreground">
-              Pro User, alle Funktionen inklusive.
-              <br/>Preis ist auf Lebenszeit garantiert, solange das Abo aktiv bleibt.
-            </p>
+            <div id="price-annual-block" class="hidden">
+              <div class="flex items-baseline justify-center gap-3 mb-2 flex-wrap">
+                <span class="text-5xl md:text-6xl font-display font-bold text-foreground">{ANNUAL_PRICE_FORMATTED} €</span>
+                <span class="text-lg text-muted-foreground">pro User/Jahr</span>
+              </div>
+              <p class="text-sm text-muted-foreground">
+                9 statt 12 Monatsraten, entspricht {ANNUAL_EFFECTIVE_MONTHLY} € pro User/Monat.
+                <br/>Einmal jährlich im Voraus abgerechnet, netto zzgl. MwSt.
+              </p>
+            </div>
           </div>
 
           <!-- Feature Liste -->
@@ -164,13 +215,16 @@ const competitors = [
 
           <!-- Trust Zeile -->
           <p class="text-center text-xs text-muted-foreground mt-4">
-            30 Tage kostenlos. Keine Kreditkarte erforderlich. Setup in 5 Minuten. Jederzeit kündbar.
+            30 Tage kostenlos. Keine Kreditkarte erforderlich. Setup in 5 Minuten.
+          </p>
+          <p id="annual-terms-note" class="hidden text-center text-xs text-muted-foreground mt-2">
+            Jahresabo: 12 Monate Laufzeit, verlängert sich um jeweils 12 Monate. Kündbar mit 6 Monaten Frist zum Laufzeitende, Details in den AGB (§ 7).
           </p>
         </div>
 
-        <!-- Knappheits Subline -->
+        <!-- Subline -->
         <p class="text-center text-sm text-muted-foreground mt-6">
-          Der Pioneer-Preis von {PIONEER_PRICE_EUR} € pro User ist auf Lebenszeit gesichert, solange das Abo ununterbrochen aktiv bleibt. Danach gilt der Standard-Tarif von {STANDARD_PRICE_EUR} € pro User und Monat.
+          Abgerechnet wird pro aktivem User in deinem Team. Neue Teammitglieder werden anteilig nachberechnet, entfernte User reduzieren die nächste Rechnung.
         </p>
       </div>
     </div>
@@ -181,10 +235,10 @@ const competitors = [
     <div class="container mx-auto px-4">
       <div id="comparison-content" class="max-w-4xl mx-auto opacity-0 translate-y-8 transition-all duration-700">
         <h2 class="text-3xl md:text-4xl font-display font-bold tracking-tight text-center mb-4">
-          ShortSelect ist der günstigste transparente Einstieg
+          ShortSelect ist der transparenteste Einstieg
         </h2>
         <p class="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-          Für 5 User kostet ShortSelect 745 € pro Monat. Vergleichbare Agentur-Setups mit ATS, CRM, Automatisierung und KI liegen öffentlich höher oder sind nur auf Anfrage erhältlich.
+          Für 5 User kostet ShortSelect {FIVE_USER_MONTHLY} € pro Monat, bei jährlicher Zahlung effektiv {FIVE_USER_ANNUAL_MONTHLY} € pro Monat. Vergleichbare Agentur-Setups mit ATS, CRM, Automatisierung und KI liegen öffentlich ähnlich hoch oder sind nur auf Anfrage erhältlich.
         </p>
 
         <div class="bg-card rounded-2xl border border-border/50 shadow-card overflow-hidden">
@@ -213,14 +267,14 @@ const competitors = [
             <!-- ShortSelect -->
             <div class="p-6 md:p-8 bg-primary/5">
               <h3 class="text-sm font-semibold text-primary uppercase tracking-widest mb-4">
-                ShortSelect Pioneer Plan
+                ShortSelect Pro Plan
               </h3>
               <div class="flex items-baseline gap-2 mb-4">
-                <span class="text-4xl md:text-5xl font-display font-bold">745 €</span>
+                <span class="text-4xl md:text-5xl font-display font-bold">{FIVE_USER_MONTHLY} €</span>
                 <span class="text-lg text-muted-foreground">/Monat bei 5 Usern</span>
               </div>
               <p class="text-sm mb-4">
-                {PIONEER_PRICE_EUR} € pro User und Monat. Damit ist ShortSelect der günstigste transparente Einstieg in diesem Vergleich.
+                {PRO_PRICE_MONTHLY_EUR} € pro User und Monat, bei jährlicher Zahlung effektiv {ANNUAL_EFFECTIVE_MONTHLY} € pro User und Monat. Ein transparenter Preis, alle Funktionen inklusive.
               </p>
               <p class="text-xs text-muted-foreground">
                 Inklusive AgentBurst-KI, Multi-Mandanten, Client Portal, API, Multiposting und allen zukünftigen Updates.
@@ -255,69 +309,33 @@ const competitors = [
   })();
   </script>
 
-  <script is:inline define:vars={{ endpoint: SLOT_STATUS_ENDPOINT, totalLimit: PIONEER_LIMIT, displayAvailable: PIONEER_DISPLAY_AVAILABLE }}>
+  <script is:inline>
   (function() {
-    var pill = document.getElementById('pioneer-slot-pill');
-    var badge = document.getElementById('pioneer-badge-text');
-    if (!pill && !badge) return;
+    var monthlyBtn = document.getElementById('interval-monthly');
+    var annualBtn = document.getElementById('interval-annual');
+    var monthlyBlock = document.getElementById('price-monthly-block');
+    var annualBlock = document.getElementById('price-annual-block');
+    var termsNote = document.getElementById('annual-terms-note');
+    if (!monthlyBtn || !annualBtn || !monthlyBlock || !annualBlock) return;
 
-    function render(available, totalSlots, soldOut) {
-      var pillText, badgeText;
-      if (soldOut) {
-        pillText = 'Pioneer-Plätze ausverkauft';
-        badgeText = 'Pioneer ausverkauft';
-      } else {
-        var shownAvailable = displayAvailable;
-        pillText = 'Noch ' + shownAvailable + ' von ' + totalSlots + ' frei';
-        badgeText = 'Noch ' + shownAvailable + ' von ' + totalSlots + ' frei';
-      }
-      if (pill) pill.textContent = pillText;
-      if (badge) badge.textContent = badgeText;
+    var ACTIVE = ['bg-primary', 'text-primary-foreground', 'shadow'];
+    var INACTIVE = ['text-muted-foreground', 'hover:text-foreground'];
+
+    function setInterval(isAnnual) {
+      monthlyBlock.classList.toggle('hidden', isAnnual);
+      annualBlock.classList.toggle('hidden', !isAnnual);
+      if (termsNote) termsNote.classList.toggle('hidden', !isAnnual);
+
+      [monthlyBtn, annualBtn].forEach(function(btn) {
+        var active = (btn === annualBtn) === isAnnual;
+        btn.setAttribute('aria-pressed', active ? 'true' : 'false');
+        ACTIVE.forEach(function(c) { btn.classList.toggle(c, active); });
+        INACTIVE.forEach(function(c) { btn.classList.toggle(c, !active); });
+      });
     }
 
-    try {
-      fetch(endpoint, { method: 'GET', headers: { 'Accept': 'application/json' } })
-        .then(function(r) { return r.ok ? r.json() : null; })
-        .then(function(data) {
-          if (!data) return;
-          render(data.available, data.total || totalLimit, data.sold_out);
-        })
-        .catch(function() { /* silent fail, statischer Fallback bleibt */ });
-    } catch (e) { /* noop */ }
+    monthlyBtn.addEventListener('click', function() { setInterval(false); });
+    annualBtn.addEventListener('click', function() { setInterval(true); });
   })();
   </script>
-
-  <style is:global>
-    .badge-flame {
-      display: inline-block;
-      flex-shrink: 0;
-      filter: drop-shadow(0 0 3px rgba(254, 240, 138, 0.7));
-      overflow: visible;
-    }
-    .bf-outer {
-      transform-origin: 50% 100%;
-      transform-box: fill-box;
-      animation: bfFlicker 1.6s ease-in-out infinite;
-    }
-    .bf-core {
-      transform-origin: 50% 100%;
-      transform-box: fill-box;
-      animation: bfFlickerCore 1.2s ease-in-out infinite;
-      animation-delay: 0.25s;
-    }
-    @keyframes bfFlicker {
-      0%, 100% { transform: scale(1, 1) skewX(-2deg); opacity: 1; }
-      30% { transform: scale(1.06, 0.96) skewX(3deg); opacity: 0.95; }
-      60% { transform: scale(0.96, 1.05) skewX(-3deg); opacity: 1; }
-      80% { transform: scale(1.02, 0.98) skewX(1deg); opacity: 0.92; }
-    }
-    @keyframes bfFlickerCore {
-      0%, 100% { transform: scale(1, 1); opacity: 1; }
-      40% { transform: scale(0.92, 1.08); opacity: 0.85; }
-      70% { transform: scale(1.05, 0.94); opacity: 1; }
-    }
-    @media (prefers-reduced-motion: reduce) {
-      .bf-outer, .bf-core { animation: none; }
-    }
-  </style>
 </MarketingLayout>

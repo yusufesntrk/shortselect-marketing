@@ -3,7 +3,7 @@ import SEOHead from '../components/seo/SEOHead.astro';
 import CookieConsentBanner from '../components/legal/CookieConsentBanner.astro';
 import '../styles/global.css';
 
-const SIGNUP_URL_HERO = 'https://app.shortselect.com/signup?utm_source=marketing&utm_medium=cta&utm_campaign=pioneer_plan&utm_content=hero';
+const SIGNUP_URL_HERO = 'https://app.shortselect.com/signup?utm_source=marketing&utm_medium=cta&utm_campaign=pro_plan&utm_content=hero';
 
 const softwareSchema = {
   "@context": "https://schema.org",
@@ -15,10 +15,10 @@ const softwareSchema = {
   description: "KI-gestützte Recruiting Software mit AgentBurst-Engine, Smart Ranking und Client Portal",
   offers: {
     "@type": "Offer",
-    name: "Pioneer Plan",
-    price: "149.00",
+    name: "Pro Plan",
+    price: "199.00",
     priceCurrency: "EUR",
-    availability: "https://schema.org/LimitedAvailability",
+    availability: "https://schema.org/InStock",
     priceValidUntil: "2099-12-31",
     url: "https://www.shortselect.com/preise/",
   },
@@ -42,9 +42,9 @@ const faqSchema = {
     { "@type": "Question", name: "Für wen ist ShortSelect gedacht?", acceptedAnswer: { "@type": "Answer", text: "Für Recruiting-Agenturen, Personalvermittler und Headhunter, die mehrere Mandanten parallel betreuen, sowie für HR-Teams, die ihr Recruiting professionalisieren wollen. Multi-Mandanten-Struktur, Client Portal und Sales-CRM sind dafür von Grund auf eingebaut." } },
     { "@type": "Question", name: "Wie funktioniert das KI-Matching?", acceptedAnswer: { "@type": "Answer", text: "Die KI gleicht Fähigkeiten, Erfahrung, Standort und Sprachen deiner Kandidaten mit den Anforderungen jedes Jobs ab und vergibt einen Match-Score von 0 bis 100. Du siehst sofort, welche Kandidaten am besten passen, inklusive nachvollziehbarer Bewertung pro Kriterium." } },
     { "@type": "Question", name: "Ist ShortSelect DSGVO-konform?", acceptedAnswer: { "@type": "Answer", text: "Ja. Deine Daten werden ausschließlich in EU-Rechenzentren gespeichert und sind durch Row-Level-Security, SSL-Verschlüsselung und tägliche Backups geschützt. Audit-Logging, rollenbasierte Zugriffe und ein AVV-Vertrag sind enthalten." } },
-    { "@type": "Question", name: "Was kostet ShortSelect?", acceptedAnswer: { "@type": "Answer", text: "Der Pioneer Plan kostet 149 EUR pro User und Monat und ist auf die ersten 100 Recruiting-Agenturen limitiert. Danach gilt der Standard-Tarif von 300 EUR pro User und Monat. Alle Details und den vollen Funktionsumfang findest du auf der Preisseite." } },
-    { "@type": "Question", name: "Kann ich ShortSelect kostenlos testen?", acceptedAnswer: { "@type": "Answer", text: "Ja. Du testest ShortSelect 30 Tage mit vollem Funktionsumfang, komplett kostenlos und ohne Kreditkarte. Nach dem Trial entscheidest du aktiv, ob du in den Pioneer Plan wechselst." } },
-    { "@type": "Question", name: "Kann ich meine bestehenden Daten importieren?", acceptedAnswer: { "@type": "Answer", text: "Ja. ShortSelect unterstützt CSV-Import für Kandidaten, Jobs und Unternehmen. Unser Onboarding-Team hilft dir beim reibungslosen Umzug von deinem bisherigen System, das ist im Pioneer Plan kostenfrei enthalten." } },
+    { "@type": "Question", name: "Was kostet ShortSelect?", acceptedAnswer: { "@type": "Answer", text: "Der Pro Plan kostet 199 EUR pro User und Monat oder 1.791 EUR pro User und Jahr (3 Monate geschenkt). Ein Preis, alle Funktionen inklusive. Alle Details und den vollen Funktionsumfang findest du auf der Preisseite." } },
+    { "@type": "Question", name: "Kann ich ShortSelect kostenlos testen?", acceptedAnswer: { "@type": "Answer", text: "Ja. Du testest ShortSelect 30 Tage mit vollem Funktionsumfang, komplett kostenlos und ohne Kreditkarte. Nach dem Trial entscheidest du aktiv, ob du in den Pro Plan wechselst." } },
+    { "@type": "Question", name: "Kann ich meine bestehenden Daten importieren?", acceptedAnswer: { "@type": "Answer", text: "Ja. ShortSelect unterstützt CSV-Import für Kandidaten, Jobs und Unternehmen. Unser Onboarding-Team hilft dir beim reibungslosen Umzug von deinem bisherigen System, das ist im Pro Plan kostenfrei enthalten." } },
     { "@type": "Question", name: "Was unterscheidet ShortSelect von anderen ATS?", acceptedAnswer: { "@type": "Answer", text: "Klassische ATS verwalten Daten, ShortSelect arbeitet mit: KI-Agents erledigen Screening, Matching und Nurturing im Hintergrund, statt dir nur Formulare und Filter zu geben. Wie sich das im Vergleich zu Bullhorn, Coveto und anderen Systemen schlägt, zeigen unsere ATS-Vergleiche." } },
   ],
 };
@@ -3025,13 +3025,13 @@ const websiteSchema = {
       <div class="fc-hero-deco-star s1">★</div>
       <div class="fc-hero-deco-star s2">✦</div>
       <div class="fc-hero-inner reveal-stagger" data-reveal>
-        <div class="fc-pill" id="hero-pioneer-pill"><span class="dot"></span> <span id="hero-pioneer-pill-text">Noch 24 von 100 frei</span></div>
+        <div class="fc-pill"><span class="dot"></span> Ein Preis, alle Funktionen inklusive</div>
         <h1>Recruiting,<br>das sich anfühlt wie <span class="wavy">Magie.</span></h1>
         <p class="lead">
           ShortSelect ist die Pipeline-Software für Recruiting-Agenturen, die endlich aufhören wollen, <span class="marker">zwölf Tools</span> nebeneinander offen zu haben.
         </p>
         <div class="actions">
-          <a href="https://app.shortselect.com/signup?utm_source=marketing&utm_medium=cta&utm_campaign=pioneer_plan&utm_content=hero" class="fc-btn">30 Tage kostenlos starten →</a>
+          <a href="https://app.shortselect.com/signup?utm_source=marketing&utm_medium=cta&utm_campaign=pro_plan&utm_content=hero" class="fc-btn">30 Tage kostenlos starten →</a>
           <a href="/demo/" class="fc-btn fc-btn-ghost">Demo ansehen</a>
         </div>
         <div class="trust">
@@ -3789,25 +3789,25 @@ const websiteSchema = {
     <!-- PRICING -->
     <section class="fc-price">
       <div class="fc-price-head reveal" data-reveal>
-        <div class="fc-pill"><span class="dot"></span> Pioneer Plan</div>
-        <h2>Ein Preis. Alles drin.<br><span class="wavy">Auf Lebenszeit.</span></h2>
+        <div class="fc-pill"><span class="dot"></span> Pro Plan</div>
+        <h2>Ein Preis.<br><span class="wavy">Alles drin.</span></h2>
       </div>
       <div class="fc-price-card reveal" data-reveal>
-        <div class="sticker" id="home-pricing-sticker">⚡ Noch 24 von 100 frei</div>
-        <h3>Pioneer Plan</h3>
-        <p class="desc">Pro User. Alle Werkzeuge. Preis auf Lebenszeit garantiert für die ersten 100 Agenturen.</p>
+        <div class="sticker">Alle Funktionen inklusive</div>
+        <h3>Pro Plan</h3>
+        <p class="desc">Pro User. Alle Werkzeuge. Ein transparenter Fixpreis, keine Add-on-Kosten.</p>
         <div class="price-row">
-          <span class="new">149 €</span>
+          <span class="new">199 €</span>
           <span class="month">pro User / Monat</span>
         </div>
         <div class="features">
-          <div class="feat-row">149 € pro User</div>
+          <div class="feat-row">199 € pro User / Monat, oder 1.791 € pro User / Jahr</div>
+          <div class="feat-row">Im Jahresabo 3 Monate geschenkt</div>
           <div class="feat-row">Alle KI-Agents inklusive</div>
           <div class="feat-row">Client Portal mit eigenem Branding</div>
-          <div class="feat-row">Lifetime-Preisgarantie für Pioneer-Kunden</div>
         </div>
-        <a href="https://app.shortselect.com/signup?utm_source=marketing&utm_medium=cta&utm_campaign=pioneer_plan&utm_content=pricing" class="fc-btn">30 Tage starten →</a>
-        <div class="terms">Keine Kreditkarte · jederzeit kündbar · Preis lebenslang garantiert</div>
+        <a href="https://app.shortselect.com/signup?utm_source=marketing&utm_medium=cta&utm_campaign=pro_plan&utm_content=pricing" class="fc-btn">30 Tage starten →</a>
+        <div class="terms">Keine Kreditkarte · jederzeit kündbar · alle Funktionen inklusive</div>
       </div>
     </section>
 
@@ -3837,15 +3837,15 @@ const websiteSchema = {
         </details>
         <details class="fc-faq-item">
           <summary>Was kostet ShortSelect? <span class="plus">+</span></summary>
-          <div class="answer">Der Pioneer Plan kostet 149 € pro User und Monat und ist auf die ersten 100 Recruiting-Agenturen limitiert. Danach gilt der Standard-Tarif von 300 € pro User und Monat. Alle Details und den vollen Funktionsumfang findest du auf der <a href="/preise/">Preisseite</a>.</div>
+          <div class="answer">Der Pro Plan kostet 199 € pro User und Monat oder 1.791 € pro User und Jahr (3 Monate geschenkt). Ein Preis, alle Funktionen inklusive. Alle Details und den vollen Funktionsumfang findest du auf der <a href="/preise/">Preisseite</a>.</div>
         </details>
         <details class="fc-faq-item">
           <summary>Kann ich ShortSelect kostenlos testen? <span class="plus">+</span></summary>
-          <div class="answer">Ja. Du testest ShortSelect 30 Tage mit vollem Funktionsumfang, komplett kostenlos und ohne Kreditkarte. Nach dem Trial entscheidest du aktiv, ob du in den Pioneer Plan wechselst.</div>
+          <div class="answer">Ja. Du testest ShortSelect 30 Tage mit vollem Funktionsumfang, komplett kostenlos und ohne Kreditkarte. Nach dem Trial entscheidest du aktiv, ob du in den Pro Plan wechselst.</div>
         </details>
         <details class="fc-faq-item">
           <summary>Kann ich meine bestehenden Daten importieren? <span class="plus">+</span></summary>
-          <div class="answer">Ja. ShortSelect unterstützt CSV-Import für Kandidaten, Jobs und Unternehmen. Unser Onboarding-Team hilft dir beim reibungslosen Umzug von deinem bisherigen System, das ist im Pioneer Plan kostenfrei enthalten. Den Ablauf zeigt dir die Seite <a href="/wechsel/">Wechsel zu ShortSelect</a>.</div>
+          <div class="answer">Ja. ShortSelect unterstützt CSV-Import für Kandidaten, Jobs und Unternehmen. Unser Onboarding-Team hilft dir beim reibungslosen Umzug von deinem bisherigen System, das ist im Pro Plan kostenfrei enthalten. Den Ablauf zeigt dir die Seite <a href="/wechsel/">Wechsel zu ShortSelect</a>.</div>
         </details>
         <details class="fc-faq-item">
           <summary>Was unterscheidet ShortSelect von anderen ATS? <span class="plus">+</span></summary>
@@ -3864,7 +3864,7 @@ const websiteSchema = {
         <h2 style="margin-top:18px">Heute angemeldet.<br>Morgen <span class="wavy">im Einsatz.</span></h2>
         <p class="lead">30 Tage kostenlos. Keine Kreditkarte. Keine Tricks.</p>
         <div class="actions">
-          <a href="https://app.shortselect.com/signup?utm_source=marketing&utm_medium=cta&utm_campaign=pioneer_plan&utm_content=cta_section" class="fc-btn">Jetzt starten →</a>
+          <a href="https://app.shortselect.com/signup?utm_source=marketing&utm_medium=cta&utm_campaign=pro_plan&utm_content=cta_section" class="fc-btn">Jetzt starten →</a>
           <a href="/kontakt/" class="fc-btn fc-btn-ghost">Mit uns sprechen</a>
         </div>
       </div>
@@ -4156,34 +4156,6 @@ const websiteSchema = {
       window.dispatchEvent(new CustomEvent('cookie-consent-reopen'));
     });
   });
-
-  // ============ PIONEER SLOT COUNTER (Live-Fetch zu Edge Function) ============
-  (function() {
-    var heroPill = document.getElementById('hero-pioneer-pill-text');
-    var pricingSticker = document.getElementById('home-pricing-sticker');
-    if (!heroPill && !pricingSticker) return;
-
-    var endpoint = 'https://aztqhtluvomqnxdavjxp.supabase.co/functions/v1/get-pioneer-slot-status';
-    var displayAvailable = 24;
-
-    function render(available, total, soldOut) {
-      if (soldOut) {
-        if (heroPill) heroPill.textContent = 'Pioneer-Plätze ausverkauft';
-        if (pricingSticker) pricingSticker.textContent = '⚡ Pioneer ausverkauft';
-      } else {
-        var shownAvailable = displayAvailable;
-        if (heroPill) heroPill.textContent = 'Noch ' + shownAvailable + ' von ' + total + ' frei';
-        if (pricingSticker) pricingSticker.textContent = '⚡ Noch ' + shownAvailable + ' von ' + total + ' frei';
-      }
-    }
-
-    try {
-      fetch(endpoint, { method: 'GET', headers: { 'Accept': 'application/json' } })
-        .then(function(r) { return r.ok ? r.json() : null; })
-        .then(function(data) { if (data) render(data.available, data.total || 100, data.sold_out); })
-        .catch(function() { /* silent fail, statischer Fallback bleibt */ });
-    } catch (e) { /* noop */ }
-  })();
 
   // ============ AGENTBURST SOURCING SHOWCASE ============
   var absCard = document.getElementById('absHeroCard');
