@@ -111,8 +111,8 @@ const competitors = [
 ---
 
 <MarketingLayout
-  title={`Preise, ShortSelect Pro Plan | ${PRO_PRICE_MONTHLY_EUR} € pro User`}
-  description={`Pro Plan: ShortSelect für ${PRO_PRICE_MONTHLY_EUR} € pro User/Monat oder ${ANNUAL_PRICE_FORMATTED} € pro User/Jahr (${PRO_ANNUAL_MONTHS_FREE} Monate geschenkt). 30 Tage kostenlos testen, keine Kreditkarte.`}
+  title={`Preise, ShortSelect Pro Plan | ab ${ANNUAL_EFFECTIVE_MONTHLY} € pro User`}
+  description={`Pro Plan: ShortSelect ab ${ANNUAL_EFFECTIVE_MONTHLY} € pro User/Monat bei jährlicher Abrechnung (monatlich ${PRO_PRICE_MONTHLY_EUR} €). 30 Tage kostenlos testen, keine Kreditkarte.`}
   jsonLd={pricingSchema}
 >
   <!-- Hero -->
@@ -125,10 +125,10 @@ const competitors = [
         </span>
         <h1 class="text-4xl md:text-5xl lg:text-6xl font-display font-bold tracking-tight mb-4">
           Pro Plan:
-          <span class="text-primary">{PRO_PRICE_MONTHLY_EUR} € pro User.</span>
+          <span class="text-primary">ab {ANNUAL_EFFECTIVE_MONTHLY} € pro User.</span>
         </h1>
         <p class="text-lg md:text-xl text-muted-foreground">
-          Ein Preis, kein Tier-Wirrwarr, alle Funktionen inklusive. Jährliche Zahlung spart {PRO_ANNUAL_MONTHS_FREE} Monatsraten.
+          Ein Preis, kein Tier-Wirrwarr, alle Funktionen inklusive.
         </p>
       </div>
     </div>
@@ -139,24 +139,25 @@ const competitors = [
     <div class="container mx-auto px-4">
       <div id="pricing-card" class="max-w-xl mx-auto opacity-0 translate-y-8 transition-all duration-700">
 
-        <!-- Monat/Jahr Toggle -->
-        <div class="flex justify-center mb-6">
+        <!-- Monat/Jahr Toggle (Close-CRM-Style: Jährlich vorausgewählt) -->
+        <div class="flex flex-col items-center gap-2 mb-6">
+          <span class="text-xs font-semibold tracking-widest uppercase text-primary">Spare 25 %</span>
           <div class="inline-flex items-center rounded-full border border-border bg-card p-1" role="group" aria-label="Abrechnungszeitraum wählen">
             <button
               type="button"
               id="interval-monthly"
-              aria-pressed="true"
-              class="px-4 py-1.5 text-sm font-medium rounded-full transition-colors bg-primary text-primary-foreground shadow"
+              aria-pressed="false"
+              class="px-4 py-1.5 text-sm font-medium rounded-full transition-colors text-muted-foreground hover:text-foreground"
             >
               Monatlich
             </button>
             <button
               type="button"
               id="interval-annual"
-              aria-pressed="false"
-              class="px-4 py-1.5 text-sm font-medium rounded-full transition-colors text-muted-foreground hover:text-foreground"
+              aria-pressed="true"
+              class="px-4 py-1.5 text-sm font-medium rounded-full transition-colors bg-primary text-primary-foreground shadow"
             >
-              Jährlich <span class="text-xs">({PRO_ANNUAL_MONTHS_FREE} Monate geschenkt)</span>
+              Jährlich
             </button>
           </div>
         </div>
@@ -172,25 +173,24 @@ const competitors = [
 
           <!-- Pricing Display -->
           <div class="text-center mb-8 pb-8 border-b border-border">
-            <div id="price-monthly-block">
+            <div id="price-monthly-block" class="hidden">
               <div class="flex items-baseline justify-center gap-3 mb-2 flex-wrap">
                 <span class="text-5xl md:text-6xl font-display font-bold text-foreground">{PRO_PRICE_MONTHLY_EUR} €</span>
-                <span class="text-lg text-muted-foreground">pro User/Monat</span>
+                <span class="text-lg text-muted-foreground">pro User / Monat</span>
               </div>
               <p class="text-sm text-muted-foreground">
-                Pro aktivem User, alle Funktionen inklusive.
-                <br/>Monatliche Abrechnung, netto zzgl. MwSt.
+                (bei monatlicher Abrechnung)
+                <br/>Pro aktivem User, alle Funktionen inklusive, netto zzgl. MwSt.
               </p>
             </div>
-            <div id="price-annual-block" class="hidden">
+            <div id="price-annual-block">
               <div class="flex items-baseline justify-center gap-3 mb-2 flex-wrap">
                 <span class="text-5xl md:text-6xl font-display font-bold text-foreground">{ANNUAL_EFFECTIVE_MONTHLY} €</span>
-                <span class="text-lg text-muted-foreground">pro User/Monat</span>
-                <span class="text-xl line-through text-muted-foreground/60">{PRO_PRICE_MONTHLY_EUR} €</span>
+                <span class="text-lg text-muted-foreground">pro User / Monat</span>
               </div>
               <p class="text-sm text-muted-foreground">
-                Bei jährlicher Abrechnung, {PRO_ANNUAL_MONTHS_FREE} Monatsraten geschenkt.
-                <br/>Pro aktivem User, netto zzgl. MwSt.
+                (bei jährlicher Abrechnung)
+                <br/>Pro aktivem User, alle Funktionen inklusive, netto zzgl. MwSt.
               </p>
             </div>
           </div>
@@ -221,7 +221,7 @@ const competitors = [
           <p class="text-center text-xs text-muted-foreground mt-4">
             30 Tage kostenlos. Keine Kreditkarte erforderlich. Setup in 5 Minuten.
           </p>
-          <p id="annual-terms-note" class="hidden text-center text-xs text-muted-foreground mt-2">
+          <p id="annual-terms-note" class="text-center text-xs text-muted-foreground mt-2">
             Abrechnung jährlich im Voraus ({ANNUAL_PRICE_FORMATTED} € pro User/Jahr). 12 Monate Laufzeit, verlängert sich um jeweils 12 Monate, kündbar mit 6 Monaten Frist zum Laufzeitende, Details in den AGB (§ 7).
           </p>
         </div>
