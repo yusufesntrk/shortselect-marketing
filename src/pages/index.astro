@@ -2626,6 +2626,25 @@ const websiteSchema = {
 
   body.no-scroll { overflow: hidden; }
 
+  /* Body-level overflow safety net (alle Viewports) */
+  html, body.fc {
+    overflow-x: clip;
+    max-width: 100vw;
+  }
+  @supports not (overflow-x: clip) {
+    html, body.fc { overflow-x: hidden; }
+  }
+
+  /* === TABLET NAV (≤1080px): Desktop-Menü passt nicht mehr in die Pille → Burger === */
+  @media (max-width: 1080px) {
+    .fc-nav-menu { display: none; }
+    .fc-nav-burger { display: flex; }
+    .fc-nav-right { gap: 0; flex-shrink: 0; }
+    /* CTAs wandern ins Burger-Overlay — in der Top-Bar ausblenden */
+    .fc-nav-right .nav-cta-ghost,
+    .fc-nav-right .nav-cta-primary { display: none; }
+  }
+
   /* === MOBILE OVERRIDES (≤768px) === */
   @media (max-width: 768px) {
     /* --- Nav --- */
@@ -2638,12 +2657,6 @@ const websiteSchema = {
       box-sizing: border-box;
     }
     .fc-nav-left { gap: 8px; flex: 1; min-width: 0; }
-    .fc-nav-menu { display: none; }
-    .fc-nav-burger { display: flex; }
-    .fc-nav-right { gap: 0; flex-shrink: 0; }
-    /* On mobile, CTAs move into the hamburger overlay — hide them in the top bar */
-    .fc-nav-right .nav-cta-ghost,
-    .fc-nav-right .nav-cta-primary { display: none; }
 
     /* --- Hero --- */
     .fc-hero { padding: 60px 0 40px; overflow-x: hidden; }
@@ -2785,15 +2798,6 @@ const websiteSchema = {
     /* --- Sourcing score-stamp + other absolute positioned siblings --- */
     .abs-section, .abs-main-row, .abs-pipe-card { max-width: 100%; overflow: hidden; }
 
-    /* --- Body-level overflow safety net --- */
-    html, body.fc {
-      overflow-x: clip;
-      max-width: 100vw;
-    }
-    /* Fallback for browsers without overflow: clip support */
-    @supports not (overflow-x: clip) {
-      html, body.fc { overflow-x: hidden; }
-    }
   }
 
   /* === SMALL MOBILE OVERRIDES (≤480px) === */
