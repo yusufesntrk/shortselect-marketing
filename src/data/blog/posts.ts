@@ -30,6 +30,11 @@ import { batch26 } from "./batch26";
 import { batch27 } from "./batch27";
 import { batch28 } from "./batch28";
 import { autoPosts } from "./auto";
+import { backfill1 } from "./backfill-1";
+import { backfill2 } from "./backfill-2";
+import { backfill3 } from "./backfill-3";
+import { backfill4 } from "./backfill-4";
+import { backfill5 } from "./backfill-5";
 
 import type { BlogPost } from "./types";
 
@@ -63,4 +68,9 @@ export const blogPosts: BlogPost[] = [
   ...batch27,
   ...batch28,
   ...autoPosts,
+  ...backfill1,
+  ...backfill2,
+  ...backfill3,
+  ...backfill4,
+  ...backfill5,
 ];

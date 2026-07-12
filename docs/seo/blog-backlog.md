@@ -13,16 +13,16 @@ Dieser Backlog steuert die wiederkehrende Blog-Routine. Sie nimmt den obersten E
 
 ## Warteschlange
 
-- [todo] KI-Matching im ATS erklärt: Wie ein transparenter Match-Score von 0 bis 100 entsteht | Prompt: "ATS mit KI Matching" | Links: /ats-mit-ki-matching/, /produkt/ki-features/
-- [todo] Coveto-Alternative finden: Kriterien-Checkliste für den Wechsel | Prompt: "Coveto Alternative" | Links: /vergleich/coveto-alternative/, /wechsel/
-- [todo] Multi-Mandanten-ATS: Wie Personalberatungen mehrere Kunden sauber trennen | Links: /ats-fuer-recruiting-agenturen/, /produkt/client-portal/
-- [todo] DSGVO im Recruiting: Die wichtigsten Pflichten für Agenturen 2026 | Prompt: "Recruiting CRM DSGVO" | Links: /recruiting-crm-dsgvo/, /produkt/compliance/
-- [todo] Recruiting-Software DACH: Warum EU-Hosting für Agenturen zählt | Prompt: "Recruiting Software DACH" | Links: /recruiting-software-dach/, /sicherheit/
-- [todo] Active Sourcing mit KI: Wie Agenturen passive Kandidaten schneller finden | Links: /produkt/ki-features/, /methode/playbook/passive-kandidaten/
-- [todo] Client-Portal für Personalvermittler: Kundentransparenz als Wettbewerbsvorteil | Links: /produkt/client-portal/, /fuer/personalvermittlung/
-- [todo] Recruiting-CRM vs. ATS: Wo der Unterschied liegt und warum Agenturen beides brauchen | Links: /produkt/ats-crm/, /ats-fuer-recruiting-agenturen/
-- [todo] Time-to-Fill senken: 7 Hebel im Agentur-Recruiting | Links: /produkt/pipeline/, /produkt/automatisierung/
-- [todo] Multiposting richtig nutzen: Eine Stelle, viele Jobbörsen, ein Dashboard | Links: /produkt/multiposting/, /produkt/karriereseite/
+- [done backfill 2026-07-12] KI-Matching im ATS erklärt: Wie ein transparenter Match-Score von 0 bis 100 entsteht | Prompt: "ATS mit KI Matching" | Links: /ats-mit-ki-matching/, /produkt/ki-features/
+- [done backfill 2026-07-12] Coveto-Alternative finden: Kriterien-Checkliste für den Wechsel | Prompt: "Coveto Alternative" | Links: /vergleich/coveto-alternative/, /wechsel/
+- [done backfill 2026-07-12] Multi-Mandanten-ATS: Wie Personalberatungen mehrere Kunden sauber trennen | Links: /ats-fuer-recruiting-agenturen/, /produkt/client-portal/
+- [done backfill 2026-07-12] DSGVO im Recruiting: Die wichtigsten Pflichten für Agenturen 2026 | Prompt: "Recruiting CRM DSGVO" | Links: /recruiting-crm-dsgvo/, /produkt/compliance/
+- [done backfill 2026-07-12] Recruiting-Software DACH: Warum EU-Hosting für Agenturen zählt | Prompt: "Recruiting Software DACH" | Links: /recruiting-software-dach/, /sicherheit/
+- [done backfill 2026-07-12] Active Sourcing mit KI: Wie Agenturen passive Kandidaten schneller finden | Links: /produkt/ki-features/, /methode/playbook/passive-kandidaten/
+- [done backfill 2026-07-12] Client-Portal für Personalvermittler: Kundentransparenz als Wettbewerbsvorteil | Links: /produkt/client-portal/, /fuer/personalvermittlung/
+- [done backfill 2026-07-12] Recruiting-CRM vs. ATS: Wo der Unterschied liegt und warum Agenturen beides brauchen | Links: /produkt/ats-crm/, /ats-fuer-recruiting-agenturen/
+- [done backfill 2026-07-12] Time-to-Fill senken: 7 Hebel im Agentur-Recruiting | Links: /produkt/pipeline/, /produkt/automatisierung/
+- [done backfill 2026-07-12] Multiposting richtig nutzen: Eine Stelle, viele Jobbörsen, ein Dashboard | Links: /produkt/multiposting/, /produkt/karriereseite/
 - [todo] Kandidaten-Nurturing per E-Mail: Sequenzen, die im Agentur-Alltag funktionieren | Links: /produkt/email-integration/, /produkt/automatisierung/
 - [todo] Bullhorn-Alternative für den DACH-Markt: Worauf es ankommt | Prompt: "Bullhorn Alternative" | Links: /vergleich/shortselect-vs-bullhorn/
 - [todo] Vincere-Alternative: Vergleich für Personalberatungen | Links: /vergleich/shortselect-vs-vincere/
