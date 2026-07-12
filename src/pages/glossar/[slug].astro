@@ -177,7 +177,7 @@ const jsonLdArray = [glossarySchema, breadcrumbSchema, faqSchema, personSchema].
             <h2 class="text-2xl font-display font-bold mb-6">Verwandte Begriffe</h2>
             <div class="flex flex-wrap gap-3">
               {relatedTerms.map((term: { slug: string; title: string }) => (
-                <a href={`/glossar/${term.slug}`} class="px-4 py-2 rounded-lg border border-[hsl(var(--border))] bg-[hsl(var(--card))] hover:border-[hsl(var(--primary)/0.3)] hover:bg-[hsl(var(--primary)/0.05)] transition-all text-sm font-medium">
+                <a href={`/glossar/${term.slug}/`} class="px-4 py-2 rounded-lg border border-[hsl(var(--border))] bg-[hsl(var(--card))] hover:border-[hsl(var(--primary)/0.3)] hover:bg-[hsl(var(--primary)/0.05)] transition-all text-sm font-medium">
                   {term.title}
                 </a>
               ))}

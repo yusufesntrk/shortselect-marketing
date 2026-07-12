@@ -3,14 +3,14 @@ import VergleichLayout from '../../layouts/VergleichLayout.astro';
 
 const comparisonData = [
   { feature: "KI-Agenten", ssStatus: "check" as const, ssLabel: "AgentBurst-Agenten", compStatus: "x" as const, compLabel: "Keine" },
-  { feature: "Matching-Typ", ssStatus: "check" as const, ssLabel: "Autonomes KI-Matching", compStatus: "warn" as const, compLabel: "Regelbasiert (kein ML)" },
+  { feature: "Matching-Typ", ssStatus: "check" as const, ssLabel: "KI-Matching im Hintergrund", compStatus: "warn" as const, compLabel: "Regelbasiert (kein ML)" },
   { feature: "CV Parsing", ssStatus: "check" as const, ssLabel: "AgentBurst Parse (<2s)", compStatus: "x" as const, compLabel: "Nicht verfügbar" },
   { feature: "KI-Screening", ssStatus: "check" as const, ssLabel: "AgentBurst Screen", compStatus: "x" as const, compLabel: "Manuell" },
   { feature: "Predictive Analytics", ssStatus: "check" as const, ssLabel: "AgentBurst Predict", compStatus: "x" as const, compLabel: "Nicht verfügbar" },
   { feature: "Client Portal", ssStatus: "check" as const, ssLabel: "Integriert", compStatus: "check" as const, compLabel: "Integriert" },
   { feature: "Multiposting", ssStatus: "check" as const, ssLabel: "Wachsend", compStatus: "check" as const, compLabel: "Verfügbar" },
   { feature: "DSGVO", ssStatus: "check" as const, ssLabel: "EU-nativ", compStatus: "check" as const, compLabel: "DACH-Anbieter" },
-  { feature: "Autonomes Nurturing", ssStatus: "check" as const, ssLabel: "AgentBurst Nurture", compStatus: "warn" as const, compLabel: "Einfache Vorlagen" },
+  { feature: "KI-Nurturing", ssStatus: "check" as const, ssLabel: "AgentBurst Nurture", compStatus: "warn" as const, compLabel: "Einfache Vorlagen" },
   { feature: "Preis", ssStatus: "check" as const, ssLabel: "199 € pro User/Monat", compStatus: "warn" as const, compLabel: "Ab 250€/Monat/Standort" },
 ];
 
@@ -64,7 +64,7 @@ const faqs = [
     title: "Wann ShortSelect besser passt",
     intro: "ShortSelect ist ideal, wenn Sie echte KI und Automatisierung wollen:",
     items: [
-      "Autonome AgentBurst-Agenten statt regelbasierter Workflows",
+      "AgentBurst-Agenten statt regelbasierter Workflows",
       "Blitzschnelles CV Parsing in unter 2 Sekunden",
       "Predictive Analytics für datengetriebene Entscheidungen",
       "Wachsendes Produkt mit aktivem Entwicklerteam",

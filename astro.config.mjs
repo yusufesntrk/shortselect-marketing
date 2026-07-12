@@ -9,7 +9,11 @@ export default defineConfig({
   trailingSlash: 'always',
   integrations: [
     react(),
-    sitemap(),
+    sitemap({
+      // noindex-Legal-Seiten aus der Sitemap ausschliessen (agb, datenschutz, impressum).
+      // 404 taucht in der Sitemap ohnehin nicht auf.
+      filter: (page) => !/\/(agb|datenschutz|impressum|legal\/subprocessors)\/?$/.test(page),
+    }),
   ],
   vite: {
     plugins: [tailwindcss()],

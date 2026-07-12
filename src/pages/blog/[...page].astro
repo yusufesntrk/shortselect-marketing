@@ -80,7 +80,7 @@ const pageTitle = page.currentPage > 1
       <!-- Posts grid -->
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
         {page.data.map((post, i) => (
-          <a class="reveal-item opacity-0 translate-y-8 transition-all duration-500" style={`transition-delay: ${Math.min(i * 50, 500)}ms;`} href={`/blog/${post.slug}`}>
+          <a class="reveal-item opacity-0 translate-y-8 transition-all duration-500" style={`transition-delay: ${Math.min(i * 50, 500)}ms;`} href={`/blog/${post.slug}/`}>
             <article class="group h-full rounded-xl border border-[hsl(var(--border))] bg-[hsl(var(--card))] hover:shadow-lg hover:border-[hsl(var(--primary)/0.2)] hover:-translate-y-1 transition-all duration-500 cursor-pointer">
               <div class="p-6 flex flex-col h-full space-y-4">
                 <!-- Category badge -->

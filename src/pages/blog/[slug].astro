@@ -45,11 +45,16 @@ const relatedPosts = blogPosts
   })
   .slice(0, 3);
 
+// dateModified: fällt auf das Veröffentlichungsdatum zurück, solange kein separates
+// Feld gepflegt ist. Kein Zugriffsfehler, da BlogPost aktuell kein dateModified kennt.
+const postDateModified = (post as { dateModified?: string }).dateModified ?? post.date;
+
 const articleSchema = {
   "@context": "https://schema.org",
   "@type": "Article",
   headline: post.title,
   datePublished: post.date,
+  dateModified: postDateModified,
   author: { "@type": "Person", name: post.author },
   publisher: {
     "@type": "Organization",
@@ -175,7 +180,7 @@ const breadcrumbSchema = {
 
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {relatedPosts.map((related, i) => (
-            <a class="reveal-item opacity-0 translate-y-8 transition-all duration-500" style={`transition-delay: ${i * 100}ms;`} href={`/blog/${related.slug}`}>
+            <a class="reveal-item opacity-0 translate-y-8 transition-all duration-500" style={`transition-delay: ${i * 100}ms;`} href={`/blog/${related.slug}/`}>
               <article class="group h-full rounded-xl border border-[hsl(var(--border))] bg-[hsl(var(--card))] hover:shadow-lg hover:border-[hsl(var(--primary)/0.2)] hover:-translate-y-1 transition-all duration-500 cursor-pointer">
                 <div class="p-6 flex flex-col h-full space-y-4">
                   <span class="self-start px-2.5 py-0.5 rounded-full border border-[hsl(var(--primary)/0.2)] text-[hsl(var(--primary))] text-xs font-medium">{related.category}</span>

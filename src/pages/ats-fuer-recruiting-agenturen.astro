@@ -1,0 +1,252 @@
+---
+import MarketingLayout from '../layouts/MarketingLayout.astro';
+import CTASection from '../components/landing/CTASection.astro';
+
+const criteria = [
+  { title: "Multi-Mandanten-Fähigkeit", description: "Eine Agentur besetzt Stellen für viele Kunden gleichzeitig. Das ATS muss Mandanten sauber trennen, damit Daten und Pipelines pro Kunde isoliert bleiben." },
+  { title: "CRM statt reines Bewerbermanagement", description: "Agenturen leben von Beziehungen zu Unternehmen. Neben Kandidaten braucht es ein Kunden-CRM mit Firmen, Ansprechpartnern und Deals an einem Ort." },
+  { title: "Schnelle Vorauswahl", description: "Wer viele Mandate parallel bearbeitet, kann nicht jeden Lebenslauf einzeln lesen. KI-gestütztes Matching und Ranking sortieren die besten Kandidaten nach oben." },
+  { title: "Transparenz für den Kunden", description: "Kunden wollen den Stand einer Suche sehen, ohne ständig nachzufragen. Ein Client-Portal zeigt Shortlists und Fortschritt, im Branding der Agentur." },
+  { title: "DSGVO und EU-Hosting", description: "Kandidatendaten sind sensibel und liegen im Auftrag des Kunden vor. EU-Hosting, Löschfristen und ein Auftragsverarbeitungsvertrag sind Pflicht, kein Extra." },
+];
+
+const steps = [
+  { step: "1", title: "Mandate und Kunden anlegen", desc: "Sie hinterlegen Ihre Kunden als Firmen im CRM und ordnen jeder Stelle den passenden Mandanten zu. Daten bleiben pro Kunde getrennt." },
+  { step: "2", title: "Stellen ausschreiben und Kandidaten sammeln", desc: "Bewerbungen, Sourcing-Treffer und importierte Profile laufen pro Stelle in einer Pipeline zusammen, statt sich über Postfächer und Tabellen zu verteilen." },
+  { step: "3", title: "KI bewertet und sortiert", desc: "Jeder Kandidat erhält einen Match-Score, nachvollziehbar pro Kriterium. Sie starten mit einer Shortlist statt mit einem ungelesenen Stapel." },
+  { step: "4", title: "Kunde sieht die Shortlist im Portal", desc: "Über das Client-Portal teilen Sie den Fortschritt und die besten Kandidaten mit dem Kunden, im Branding Ihrer Agentur." },
+];
+
+const faqs = [
+  { question: "Was ist ein ATS für Recruiting-Agenturen?", answer: "Ein ATS für Recruiting-Agenturen ist ein Bewerbermanagement-System, das auf die Arbeit von Personalvermittlern und Headhuntern zugeschnitten ist. Anders als ein internes HR-Tool muss es viele Kunden und Mandate parallel verwalten, Daten pro Mandant trennen, ein Kunden-CRM mitbringen und den Fortschritt für den Auftraggeber transparent machen. ShortSelect verbindet ATS, CRM, KI-Matching und ein Client-Portal in einer Plattform." },
+  { question: "Was unterscheidet ein Agentur-ATS von einem internen HR-System?", answer: "Ein internes System bildet die Stellen eines einzigen Unternehmens ab. Eine Agentur arbeitet für viele Kunden zugleich, oft an denselben Rollen. Ein Agentur-ATS braucht deshalb echte Mandantentrennung, ein CRM für Firmen und Ansprechpartner sowie einen Weg, Kunden ohne Vollzugriff auf die Plattform einzubinden. Genau dafür gibt es in ShortSelect das Client-Portal." },
+  { question: "Kann ich mehrere Kunden getrennt verwalten?", answer: "Ja. In ShortSelect legen Sie Ihre Kunden als Firmen an und ordnen jede Stelle einem Mandanten zu. Kandidaten, Pipelines und Auswertungen bleiben pro Kunde getrennt, sodass keine Daten zwischen Mandaten vermischt werden." },
+  { question: "Wie hilft KI-Matching einer Agentur konkret?", answer: "Bei vielen parallelen Mandaten ist Zeit der Engpass. KI-Matching bewertet eingehende Bewerbungen und Profile automatisch gegen die Anforderungen der jeweiligen Stelle und liefert einen Match-Score von 0 bis 100. So sehen Sie sofort, welche Kandidaten passen, ohne jeden Lebenslauf einzeln zu lesen. Details dazu auf der Seite ATS mit KI-Matching." },
+  { question: "Ist ShortSelect DSGVO-konform für Agenturen?", answer: "Ja. Alle Daten liegen auf EU-Servern in Frankfurt, es gibt automatische Löschfristen pro Mandant und einen Auftragsverarbeitungsvertrag. Als Agentur sind Sie Verantwortlicher im Auftrag Ihres Kunden, ShortSelect ist Auftragsverarbeiter. Wie das rechtlich sauber funktioniert, erklärt die Seite Recruiting-CRM und DSGVO." },
+  { question: "Was kostet ein ATS für Recruiting-Agenturen?", answer: "ShortSelect kostet im Pro Plan 199 Euro pro User und Monat oder 1.791 Euro pro User und Jahr (3 Monate geschenkt). ATS, CRM, KI-Matching und Client-Portal sind inklusive. Sie können 30 Tage kostenlos testen, ohne Kreditkarte." },
+];
+
+const webPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  name: "ATS für Recruiting-Agenturen: Multi-Mandant, CRM und KI",
+  description: "Was ein ATS für Recruiting-Agenturen können muss: Multi-Mandanten, CRM, KI-Matching, Client-Portal und DSGVO. So deckt ShortSelect es ab, 199 Euro pro User.",
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.shortselect.com/" },
+    { "@type": "ListItem", "position": 2, "name": "ATS für Recruiting-Agenturen" }
+  ]
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((f) => ({
+    "@type": "Question",
+    name: f.question,
+    acceptedAnswer: { "@type": "Answer", text: f.answer }
+  }))
+};
+---
+
+<MarketingLayout
+  title="Bestes ATS für Recruiting-Agenturen | ShortSelect"
+  description="Was ein ATS für Recruiting-Agenturen können muss: Multi-Mandanten, CRM, KI-Matching, Client-Portal und DSGVO. So deckt ShortSelect es ab, 199 Euro pro User."
+  jsonLd={[webPageSchema, breadcrumbSchema, faqSchema]}
+>
+  <!-- Hero -->
+  <section class="relative overflow-hidden py-20 md:py-32">
+    <div class="absolute inset-0 bg-gradient-to-br from-primary/10 via-accent/5 to-background"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,hsl(var(--primary)/0.15),transparent_50%)]"></div>
+    <div class="absolute top-20 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-float-slow"></div>
+    <div class="absolute bottom-20 right-10 w-96 h-96 bg-accent/10 rounded-full blur-3xl animate-float-slow" style="animation-delay: -3s;"></div>
+    <div class="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.03)_1px,transparent_1px)] bg-[size:60px_60px] [mask-image:radial-gradient(ellipse_at_center,black_30%,transparent_70%)]"></div>
+
+    <div class="container relative mx-auto px-4">
+      <div class="mx-auto max-w-4xl text-center space-y-8">
+        <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700 hero-badge-premium">
+          <svg class="h-4 w-4 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          Für Recruiting-Agenturen
+        </div>
+
+        <h1 class="reveal-item opacity-0 translate-y-8 transition-all duration-700 text-4xl md:text-6xl font-display font-bold tracking-tight" style="transition-delay: 100ms;">
+          ATS für{" "}
+          <span class="relative inline-block text-primary">Recruiting-Agenturen</span>
+        </h1>
+
+        <p class="reveal-item opacity-0 translate-y-8 transition-all duration-700 text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto" style="transition-delay: 200ms;">
+          Ein ATS für Recruiting-Agenturen muss mehr können als reines Bewerbermanagement: viele Kunden und Mandate parallel verwalten, Daten sauber trennen, ein CRM für Firmen mitbringen und den Fortschritt für den Auftraggeber transparent machen. ShortSelect verbindet ATS, CRM, KI-Matching und ein Client-Portal in einer Plattform.
+        </p>
+
+        <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700 flex flex-col sm:flex-row items-center justify-center gap-4 pt-4" style="transition-delay: 300ms;">
+          <a href="https://app.shortselect.com/signup" class="inline-flex items-center gap-2 px-8 py-3 bg-primary text-primary-foreground font-semibold rounded-lg text-base group relative overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+            <span class="relative z-10 flex items-center gap-2">
+              30 Tage kostenlos testen
+              <svg class="h-5 w-5 transition-transform group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </span>
+          </a>
+          <a href="/produkt/ats-crm/" class="inline-flex items-center gap-2 px-8 py-3 border-2 border-border font-semibold rounded-lg text-base transition-all hover:bg-muted">
+            ATS und CRM ansehen
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Was macht es aus -->
+  <section class="py-16 md:py-24 bg-muted/30">
+    <div class="container mx-auto px-4">
+      <div class="max-w-3xl mx-auto">
+        <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700 text-center mb-10">
+          <h2 class="text-3xl md:text-4xl font-display font-bold tracking-tight mb-4">Was macht ein ATS für Recruiting-Agenturen aus?</h2>
+        </div>
+        <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700 space-y-4 text-muted-foreground text-lg leading-relaxed" style="transition-delay: 150ms;">
+          <p>
+            Die meisten Bewerbermanagement-Systeme sind für interne HR-Abteilungen gebaut. Sie bilden die Stellen eines einzigen Unternehmens ab. Eine Recruiting-Agentur arbeitet anders: Sie besetzt gleichzeitig Mandate für viele Kunden, oft ähnliche Rollen, und jeder Kunde erwartet Diskretion und einen sauberen Überblick über seine Suche.
+          </p>
+          <p>
+            Deshalb braucht ein Agentur-ATS drei Dinge, die interne Tools selten sauber lösen: echte Mandantentrennung, ein Kunden-CRM für Firmen und Ansprechpartner sowie einen Weg, den Kunden einzubinden, ohne ihm Vollzugriff auf die Plattform zu geben. Kommt viel Volumen dazu, wird außerdem schnelle Vorauswahl zum entscheidenden Faktor.
+          </p>
+          <p>
+            ShortSelect ist genau für diesen Fall gebaut: eine Plattform, in der ATS, CRM, KI-gestützte Bewertung und ein kundenfreundliches Portal zusammenspielen, statt in getrennten Tools zu leben.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Auswahlkriterien -->
+  <section class="py-16 md:py-24">
+    <div class="container mx-auto px-4">
+      <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700 text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-display font-bold tracking-tight mb-4">Fünf Kriterien für das beste ATS für Recruiting-Agenturen</h2>
+        <p class="text-muted-foreground text-lg max-w-2xl mx-auto">Woran Sie erkennen, ob eine Software wirklich zum Agentur-Alltag passt.</p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        {criteria.map((tip, index) => (
+          <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700 rounded-xl border bg-card p-6 hover:shadow-lg hover:-translate-y-1" style={`transition-delay: ${Math.min((index + 1) * 100, 500)}ms;`}>
+            <h3 class="text-lg font-display font-bold mb-2">{tip.title}</h3>
+            <p class="text-sm text-muted-foreground leading-relaxed">{tip.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Multi-Mandant und Client-Portal -->
+  <section class="py-16 md:py-24 bg-muted/30">
+    <div class="container mx-auto px-4">
+      <div class="max-w-3xl mx-auto">
+        <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700 mb-6">
+          <h2 class="text-3xl md:text-4xl font-display font-bold tracking-tight mb-4">Multi-Mandanten und Client-Portal</h2>
+        </div>
+        <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700 space-y-4 text-muted-foreground text-lg leading-relaxed" style="transition-delay: 150ms;">
+          <p>
+            In ShortSelect legen Sie Ihre Kunden als Firmen im CRM an und ordnen jede Stelle einem Mandanten zu. Kandidaten, Pipelines und Auswertungen bleiben pro Kunde getrennt, sodass nichts zwischen Mandaten vermischt wird. Das ist die Grundlage für sauberes Arbeiten mit sensiblen Kandidatendaten.
+          </p>
+          <p>
+            Für die Zusammenarbeit mit dem Kunden gibt es das <a href="/produkt/client-portal/" class="text-primary hover:underline">Client-Portal</a>. Dort sieht Ihr Auftraggeber den Fortschritt einer Suche und die vorgeschlagenen Kandidaten, im Branding Ihrer Agentur und ohne Vollzugriff auf Ihr System. So sparen Sie sich Status-Mails und wirken gleichzeitig professioneller. Wie ATS und Kunden-CRM ineinandergreifen, zeigt die Seite <a href="/produkt/ats-crm/" class="text-primary hover:underline">ATS und CRM</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- So läuft es ab -->
+  <section class="py-16 md:py-24 relative overflow-hidden">
+    <div class="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl animate-float-slow"></div>
+    <div class="container relative mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700 text-center mb-12">
+          <span class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold bg-secondary text-secondary-foreground mb-4">So funktioniert es</span>
+          <h2 class="text-3xl md:text-4xl font-display font-bold tracking-tight mb-4">Ein Mandat in ShortSelect, Schritt für Schritt</h2>
+        </div>
+
+        <div class="relative">
+          <div class="absolute left-8 top-0 bottom-0 w-0.5 bg-border hidden md:block"></div>
+          <div class="space-y-8">
+            {steps.map((step, index) => (
+              <div class="reveal-item opacity-0 translate-y-8 transition-all duration-500 flex items-start gap-6" style={`transition-delay: ${150 + index * 100}ms;`}>
+                <div class="relative z-10 flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-primary text-white font-display font-bold text-lg shadow-lg">
+                  {step.step}
+                </div>
+                <div class="pt-3">
+                  <h3 class="text-lg font-display font-bold mb-1">{step.title}</h3>
+                  <p class="text-muted-foreground">{step.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KI-Matching und DSGVO -->
+  <section class="py-16 md:py-24 bg-muted/30">
+    <div class="container mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700 rounded-xl border bg-card p-6 md:p-8">
+          <h2 class="text-2xl font-display font-bold mb-4">KI-Matching für viele Mandate</h2>
+          <p class="text-muted-foreground leading-relaxed">
+            Bei parallelen Suchen ist Zeit der Engpass. Das KI-Matching bewertet Bewerbungen und Profile automatisch gegen die Anforderungen der Stelle und vergibt einen Match-Score von 0 bis 100, nachvollziehbar pro Kriterium. Sie starten mit einer Shortlist statt mit einem Stapel. Mehr dazu auf <a href="/ats-mit-ki-matching/" class="text-primary hover:underline">ATS mit KI-Matching</a> und unter <a href="/produkt/ki-features/" class="text-primary hover:underline">KI-Features</a>.
+          </p>
+        </div>
+        <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700 rounded-xl border bg-card p-6 md:p-8" style="transition-delay: 150ms;">
+          <h2 class="text-2xl font-display font-bold mb-4">DSGVO für die Auftragsverarbeitung</h2>
+          <p class="text-muted-foreground leading-relaxed">
+            Als Agentur verarbeiten Sie Kandidatendaten im Auftrag Ihrer Kunden. ShortSelect hostet alle Daten auf EU-Servern in Frankfurt, bietet Löschfristen pro Mandant und einen Auftragsverarbeitungsvertrag. Wie Sie das rechtlich sauber aufsetzen, lesen Sie unter <a href="/recruiting-crm-dsgvo/" class="text-primary hover:underline">Recruiting-CRM und DSGVO</a>.
+          </p>
+        </div>
+      </div>
+
+      <p class="reveal-item opacity-0 translate-y-8 transition-all duration-700 text-center text-muted-foreground mt-10 max-w-2xl mx-auto">
+        Preise finden Sie transparent unter <a href="/preise/" class="text-primary hover:underline">Preise</a>. Wie ShortSelect im direkten Vergleich abschneidet, sehen Sie in unseren <a href="/vergleich/" class="text-primary hover:underline">Vergleichen</a>.
+      </p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16 md:py-24">
+    <div class="container mx-auto px-4">
+      <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700 text-center max-w-3xl mx-auto mb-12">
+        <h2 class="text-3xl md:text-4xl font-display font-bold tracking-tight">Häufige Fragen zum ATS für Recruiting-Agenturen</h2>
+      </div>
+      <div class="max-w-3xl mx-auto space-y-0 rounded-xl border bg-card overflow-hidden">
+        {faqs.map((item) => (
+          <details class="reveal-item opacity-0 translate-y-8 transition-all duration-700 border-b last:border-0 group">
+            <summary class="flex items-center justify-between w-full py-5 px-6 text-left cursor-pointer font-display font-bold text-lg list-none [&::-webkit-details-marker]:hidden">
+              {item.question}
+              <svg class="h-5 w-5 text-muted-foreground shrink-0 ml-4 transition-transform duration-300 group-open:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+            </summary>
+            <div class="px-6 pb-5 text-muted-foreground leading-relaxed">{item.answer}</div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <CTASection />
+</MarketingLayout>
+
+<script is:inline>
+(function() {
+  var items = document.querySelectorAll('.reveal-item');
+  if (!items.length) return;
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  items.forEach(function(item) { observer.observe(item); });
+})();
+</script>

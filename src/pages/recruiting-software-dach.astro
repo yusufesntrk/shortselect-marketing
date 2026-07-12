@@ -1,0 +1,225 @@
+---
+import MarketingLayout from '../layouts/MarketingLayout.astro';
+import CTASection from '../components/landing/CTASection.astro';
+
+const criteria = [
+  { title: "Hosting in der EU", description: "Kandidatendaten sind besonders sensibel. Recruiting-Software für den DACH-Raum sollte auf EU-Servern laufen, damit riskante Drittlandtransfers gar nicht erst nötig sind." },
+  { title: "DSGVO ab Werk", description: "Löschfristen, Einwilligungsmanagement und ein Auftragsverarbeitungsvertrag gehören zum Standard, nicht in ein teures Zusatzpaket." },
+  { title: "Deutschsprachiger Support", description: "Wer im DACH-Raum arbeitet, will Ansprechpartner, die deutsch sprechen und die rechtliche Lage vor Ort kennen. Zeitzone und Sprache sollten passen." },
+  { title: "Deutsche Oberfläche und Rechtsbegriffe", description: "Abschlüsse, Vertragsarten und Formulierungen unterscheiden sich pro Land. Eine saubere deutschsprachige Oberfläche mit korrekten Begriffen spart Nacharbeit." },
+  { title: "KI, die nachvollziehbar bleibt", description: "KI-Bewertung ist ein Vorteil, solange der Mensch entscheidet und jede Bewertung begründet ist. Das entspricht auch den DSGVO-Anforderungen." },
+];
+
+const steps = [
+  { step: "1", title: "Daten bleiben in der EU", desc: "Alle ShortSelect-Daten liegen auf EU-Servern in Frankfurt. Verschlüsselung, Mandantentrennung und ein Audit-Trail sind Standard, kein Aufpreis." },
+  { step: "2", title: "DSGVO-Grundlagen sind gesetzt", desc: "Löschfristen pro Mandant, Einwilligungsmanagement und ein Auftragsverarbeitungsvertrag sind eingebaut, damit Sie rechtssicher starten." },
+  { step: "3", title: "KI unterstützt, der Mensch entscheidet", desc: "Das KI-Matching liefert einen nachvollziehbaren Match-Score. Die Entscheidung über Zu- oder Absage bleibt immer bei Ihnen." },
+  { step: "4", title: "Support auf Deutsch", desc: "Bei Fragen erreichen Sie deutschsprachigen Support in Ihrer Zeitzone, ohne Umweg über ein Übersee-Team." },
+];
+
+const faqs = [
+  { question: "Was ist die beste Recruiting-Software für den DACH-Raum?", answer: "Die beste Recruiting-Software für Deutschland, Österreich und die Schweiz vereint drei Dinge: Hosting in der EU, eingebaute DSGVO-Funktionen wie Löschfristen und einen Auftragsverarbeitungsvertrag sowie deutschsprachigen Support. ShortSelect erfüllt alle drei Punkte und ergänzt sie um KI-gestütztes Matching, das nachvollziehbar bleibt und bei dem der Mensch entscheidet." },
+  { question: "Warum ist EU-Hosting bei Recruiting-Software wichtig?", answer: "Bewerberdaten gehören zu den sensibelsten personenbezogenen Daten. Liegt die Software auf Servern außerhalb der EU, sind zusätzliche rechtliche Garantien für den Datentransfer nötig. EU-Hosting vermeidet dieses Risiko von vornherein. ShortSelect hostet alle Daten in Frankfurt." },
+  { question: "Ist ShortSelect DSGVO-konform?", answer: "Ja. ShortSelect bringt Löschfristen pro Mandant, Einwilligungsmanagement, einen Auftragsverarbeitungsvertrag und einen lückenlosen Audit-Trail mit. Wie die fünf zentralen DSGVO-Anforderungen an ein Recruiting-CRM aussehen und wie ShortSelect sie abdeckt, erklärt die Seite Recruiting-CRM und DSGVO." },
+  { question: "Gibt es deutschsprachigen Support?", answer: "Ja. ShortSelect wird aus Deutschland betrieben, die Oberfläche ist deutschsprachig und der Support antwortet in Ihrer Zeitzone auf Deutsch. Das ist für Teams im DACH-Raum ein spürbarer Unterschied zu internationalen Anbietern." },
+  { question: "Eignet sich die Software auch für Österreich und die Schweiz?", answer: "Ja. Die DSGVO gilt in Deutschland und Österreich unmittelbar, die Schweiz hat mit dem revidierten DSG ein vergleichbares Schutzniveau. EU-Hosting, deutschsprachige Bedienung und nachvollziehbare KI passen für den gesamten DACH-Raum." },
+  { question: "Was kostet Recruiting-Software von ShortSelect?", answer: "ShortSelect kostet im Pro Plan 199 Euro pro User und Monat oder 1.791 Euro pro User und Jahr (3 Monate geschenkt). ATS, CRM, KI-Matching und alle Compliance-Funktionen sind inklusive. Sie können 30 Tage kostenlos testen, ohne Kreditkarte." },
+];
+
+const webPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  name: "Recruiting-Software DACH: EU-Hosting und DSGVO",
+  description: "Recruiting-Software für den DACH-Raum mit EU-Hosting in Frankfurt, DSGVO ab Werk, deutschsprachigem Support und nachvollziehbarer KI. ShortSelect ab 199 Euro pro User.",
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.shortselect.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Recruiting-Software DACH" }
+  ]
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((f) => ({
+    "@type": "Question",
+    name: f.question,
+    acceptedAnswer: { "@type": "Answer", text: f.answer }
+  }))
+};
+---
+
+<MarketingLayout
+  title="Recruiting-Software DACH: EU-Hosting und DSGVO | ShortSelect"
+  description="Recruiting-Software für den DACH-Raum mit EU-Hosting in Frankfurt, DSGVO ab Werk, deutschsprachigem Support und nachvollziehbarer KI. ShortSelect ab 199 Euro pro User."
+  jsonLd={[webPageSchema, breadcrumbSchema, faqSchema]}
+>
+  <!-- Hero -->
+  <section class="relative overflow-hidden py-20 md:py-32">
+    <div class="absolute inset-0 bg-gradient-to-br from-primary/10 via-accent/5 to-background"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,hsl(var(--primary)/0.15),transparent_50%)]"></div>
+    <div class="absolute top-20 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-float-slow"></div>
+    <div class="absolute bottom-20 right-10 w-96 h-96 bg-accent/10 rounded-full blur-3xl animate-float-slow" style="animation-delay: -3s;"></div>
+    <div class="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.03)_1px,transparent_1px)] bg-[size:60px_60px] [mask-image:radial-gradient(ellipse_at_center,black_30%,transparent_70%)]"></div>
+
+    <div class="container relative mx-auto px-4">
+      <div class="mx-auto max-w-4xl text-center space-y-8">
+        <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700 hero-badge-premium">
+          <svg class="h-4 w-4 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          DACH und DSGVO
+        </div>
+
+        <h1 class="reveal-item opacity-0 translate-y-8 transition-all duration-700 text-4xl md:text-6xl font-display font-bold tracking-tight" style="transition-delay: 100ms;">
+          Recruiting-Software für den{" "}
+          <span class="relative inline-block text-primary">DACH-Raum</span>
+        </h1>
+
+        <p class="reveal-item opacity-0 translate-y-8 transition-all duration-700 text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto" style="transition-delay: 200ms;">
+          Recruiting-Software für Deutschland, Österreich und die Schweiz braucht drei Dinge: Hosting in der EU, DSGVO ab Werk und deutschsprachigen Support. ShortSelect erfüllt alle drei, hostet alle Daten in Frankfurt und ergänzt sie um KI-gestütztes Matching, das nachvollziehbar bleibt.
+        </p>
+
+        <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700 flex flex-col sm:flex-row items-center justify-center gap-4 pt-4" style="transition-delay: 300ms;">
+          <a href="https://app.shortselect.com/signup" class="inline-flex items-center gap-2 px-8 py-3 bg-primary text-primary-foreground font-semibold rounded-lg text-base group relative overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+            <span class="relative z-10 flex items-center gap-2">
+              30 Tage kostenlos testen
+              <svg class="h-5 w-5 transition-transform group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </span>
+          </a>
+          <a href="/produkt/compliance/" class="inline-flex items-center gap-2 px-8 py-3 border-2 border-border font-semibold rounded-lg text-base transition-all hover:bg-muted">
+            DSGVO und Compliance ansehen
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Worauf achten -->
+  <section class="py-16 md:py-24 bg-muted/30">
+    <div class="container mx-auto px-4">
+      <div class="max-w-3xl mx-auto">
+        <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700 text-center mb-10">
+          <h2 class="text-3xl md:text-4xl font-display font-bold tracking-tight mb-4">Worauf kommt es bei Recruiting-Software im DACH-Raum an?</h2>
+        </div>
+        <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700 space-y-4 text-muted-foreground text-lg leading-relaxed" style="transition-delay: 150ms;">
+          <p>
+            Im DACH-Raum entscheidet nicht nur der Funktionsumfang, sondern auch, wo und wie eine Software Daten verarbeitet. Bewerberdaten sind besonders sensibel, und die DSGVO stellt klare Anforderungen an Speicherung, Löschung und Weitergabe. Eine Recruiting-Software, die außerhalb der EU hostet, bringt zusätzliche rechtliche Hürden mit.
+          </p>
+          <p>
+            Dazu kommt der Alltag: Teams in Deutschland, Österreich und der Schweiz wollen eine deutschsprachige Oberfläche mit den richtigen Rechtsbegriffen und Support-Ansprechpartner, die ihre Sprache und Zeitzone teilen. Internationale Tools decken das oft nur mit Abstrichen ab.
+          </p>
+          <p>
+            ShortSelect ist von Grund auf für diesen Markt gebaut: EU-Hosting in Frankfurt, DSGVO-Funktionen ab Werk und deutschsprachiger Support, kombiniert mit moderner KI-Unterstützung.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Auswahlkriterien -->
+  <section class="py-16 md:py-24">
+    <div class="container mx-auto px-4">
+      <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700 text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-display font-bold tracking-tight mb-4">Fünf Kriterien für Recruiting-Software in Deutschland und DACH</h2>
+        <p class="text-muted-foreground text-lg max-w-2xl mx-auto">Was eine Lösung für den DACH-Raum wirklich mitbringen sollte.</p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        {criteria.map((tip, index) => (
+          <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700 rounded-xl border bg-card p-6 hover:shadow-lg hover:-translate-y-1" style={`transition-delay: ${Math.min((index + 1) * 100, 500)}ms;`}>
+            <h3 class="text-lg font-display font-bold mb-2">{tip.title}</h3>
+            <p class="text-sm text-muted-foreground leading-relaxed">{tip.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- So setzt ShortSelect es um -->
+  <section class="py-16 md:py-24 bg-muted/30 relative overflow-hidden">
+    <div class="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl animate-float-slow"></div>
+    <div class="container relative mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700 text-center mb-12">
+          <span class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold bg-secondary text-secondary-foreground mb-4">So funktioniert es</span>
+          <h2 class="text-3xl md:text-4xl font-display font-bold tracking-tight mb-4">So setzt ShortSelect DACH-Anforderungen um</h2>
+        </div>
+
+        <div class="relative">
+          <div class="absolute left-8 top-0 bottom-0 w-0.5 bg-border hidden md:block"></div>
+          <div class="space-y-8">
+            {steps.map((step, index) => (
+              <div class="reveal-item opacity-0 translate-y-8 transition-all duration-500 flex items-start gap-6" style={`transition-delay: ${150 + index * 100}ms;`}>
+                <div class="relative z-10 flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-primary text-white font-display font-bold text-lg shadow-lg">
+                  {step.step}
+                </div>
+                <div class="pt-3">
+                  <h3 class="text-lg font-display font-bold mb-1">{step.title}</h3>
+                  <p class="text-muted-foreground">{step.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <p class="reveal-item opacity-0 translate-y-8 transition-all duration-700 text-center text-muted-foreground mt-12 max-w-2xl mx-auto">
+          Wie DSGVO und Recruiting-CRM zusammenpassen, lesen Sie unter <a href="/recruiting-crm-dsgvo/" class="text-primary hover:underline">Recruiting-CRM und DSGVO</a>. Wie das KI-Matching bewertet, zeigt <a href="/ats-mit-ki-matching/" class="text-primary hover:underline">ATS mit KI-Matching</a>. Für Personalvermittler gibt es die Seite <a href="/ats-fuer-recruiting-agenturen/" class="text-primary hover:underline">ATS für Recruiting-Agenturen</a>.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Preise Hinweis -->
+  <section class="py-16 md:py-24">
+    <div class="container mx-auto px-4">
+      <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700 max-w-3xl mx-auto text-center space-y-6">
+        <h2 class="text-3xl md:text-4xl font-display font-bold tracking-tight">Transparent, ohne Wechselkurs-Überraschung</h2>
+        <p class="text-lg text-muted-foreground">
+          ShortSelect kostet 199 € pro User und Monat oder 1.791 € pro User und Jahr (3 Monate geschenkt), abgerechnet in Euro. Alle Funktionen inklusive, ohne verstecktes Compliance-Paket. Die Details finden Sie unter <a href="/preise/" class="text-primary hover:underline">Preise</a>, den direkten Anbietervergleich unter <a href="/vergleich/" class="text-primary hover:underline">Vergleiche</a>.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16 md:py-24 bg-muted/30">
+    <div class="container mx-auto px-4">
+      <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700 text-center max-w-3xl mx-auto mb-12">
+        <h2 class="text-3xl md:text-4xl font-display font-bold tracking-tight">Häufige Fragen zu Recruiting-Software im DACH-Raum</h2>
+      </div>
+      <div class="max-w-3xl mx-auto space-y-0 rounded-xl border bg-card overflow-hidden">
+        {faqs.map((item) => (
+          <details class="reveal-item opacity-0 translate-y-8 transition-all duration-700 border-b last:border-0 group">
+            <summary class="flex items-center justify-between w-full py-5 px-6 text-left cursor-pointer font-display font-bold text-lg list-none [&::-webkit-details-marker]:hidden">
+              {item.question}
+              <svg class="h-5 w-5 text-muted-foreground shrink-0 ml-4 transition-transform duration-300 group-open:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+            </summary>
+            <div class="px-6 pb-5 text-muted-foreground leading-relaxed">{item.answer}</div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <CTASection />
+</MarketingLayout>
+
+<script is:inline>
+(function() {
+  var items = document.querySelectorAll('.reveal-item');
+  if (!items.length) return;
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  items.forEach(function(item) { observer.observe(item); });
+})();
+</script>

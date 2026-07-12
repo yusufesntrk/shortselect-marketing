@@ -31,8 +31,6 @@ export const PIONEER_PRICE_EUR = 149;
 export const PIONEER_COMPARE_AT_EUR = 300;
 /** @deprecated */
 export const PIONEER_LIMIT = 100;
-/** @deprecated Slot-Counter wird nicht mehr beworben. */
-export const PIONEER_DISPLAY_AVAILABLE = 24;
 /** @deprecated */
 export const PIONEER_LOOKUP_KEY = 'shortselect_pioneer_monthly_v1';
 

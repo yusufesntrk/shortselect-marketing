@@ -13,9 +13,9 @@ const caseStudies = [
     person: "Yasar Senturk",
     role: "Geschäftsführer",
     results: [
-      { metric: "40%", label: "schnellere Besetzung" },
-      { metric: "3x", label: "mehr Placements/Monat" },
-      { metric: "12h", label: "Zeitersparnis/Woche" },
+      "Schnellere Besetzung offener Stellen",
+      "Mehr Placements pro Monat",
+      "Spürbare Zeitersparnis pro Woche",
     ],
   },
   {
@@ -28,9 +28,9 @@ const caseStudies = [
     person: "Bahadir Battal",
     role: "Gründer",
     results: [
-      { metric: "60%", label: "weniger Admin-Aufwand" },
-      { metric: "2x", label: "schnelleres Feedback" },
-      { metric: "100%", label: "Kundenzufriedenheit" },
+      "Weniger Admin-Aufwand im Alltag",
+      "Schnelleres Feedback an Kunden",
+      "Reibungslose Zusammenarbeit im Client Portal",
     ],
   },
   {
@@ -43,9 +43,9 @@ const caseStudies = [
     person: "Alireza Nikjou",
     role: "Geschäftsführer",
     results: [
-      { metric: "80%", label: "schnellere Vorauswahl" },
-      { metric: "45%", label: "höhere Match-Quote" },
-      { metric: "5h", label: "Zeitersparnis/Woche" },
+      "Schnellere Vorauswahl durch KI",
+      "Passendere Matches je Stelle",
+      "Spürbare Zeitersparnis pro Woche",
     ],
   },
   {
@@ -58,9 +58,9 @@ const caseStudies = [
     person: "Nordin Begdouri",
     role: "Geschäftsführer",
     results: [
-      { metric: "200%", label: "mehr Bewerbungen" },
-      { metric: "1 Tag", label: "Setup-Zeit" },
-      { metric: "0 EUR", label: "Startkosten" },
+      "Mehr Bewerbungen über die Karriereseite",
+      "Setup an einem einzigen Tag",
+      "Ohne Startkosten losgelegt",
     ],
   },
 ];
@@ -68,7 +68,7 @@ const caseStudies = [
 
 <MarketingLayout
   title="Kunden & Erfolgsgeschichten – Wer nutzt ShortSelect | ShortSelect"
-  description="Erfahren Sie, wie Recruiting-Agenturen und HR-Teams mit ShortSelect ihre Besetzungszeit halbieren und mehr Placements erzielen."
+  description="Erfahren Sie, wie Recruiting-Agenturen und HR-Teams mit ShortSelect ihre Besetzungszeit verkürzen und mehr Placements erzielen."
 >
   <!-- Hero -->
   <section class="relative overflow-hidden py-28 md:py-40 bg-gradient-to-br from-[hsl(var(--primary))] via-[hsl(var(--primary)/0.95)] to-[hsl(var(--accent))] text-white">
@@ -90,24 +90,12 @@ const caseStudies = [
     <div class="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-[hsl(var(--background))] to-transparent"></div>
   </section>
 
-  <!-- Stats -->
-  <section class="py-16 md:py-20 relative overflow-hidden">
-    <div class="container mx-auto px-4">
-      <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto text-center">
-        <div><div class="text-3xl md:text-4xl font-display font-bold text-[hsl(var(--primary))]">43+</div><p class="text-sm text-[hsl(var(--muted-foreground))] mt-1">Teams</p></div>
-        <div><div class="text-3xl md:text-4xl font-display font-bold text-[hsl(var(--primary))]">50%</div><p class="text-sm text-[hsl(var(--muted-foreground))] mt-1">schnellere Besetzung</p></div>
-        <div><div class="text-3xl md:text-4xl font-display font-bold text-[hsl(var(--primary))]">12h</div><p class="text-sm text-[hsl(var(--muted-foreground))] mt-1">Zeitersparnis/Woche</p></div>
-        <div><div class="text-3xl md:text-4xl font-display font-bold text-[hsl(var(--primary))]">4.8</div><p class="text-sm text-[hsl(var(--muted-foreground))] mt-1">Bewertung</p></div>
-      </div>
-    </div>
-  </section>
-
   <!-- Case Studies -->
   <section class="py-20 md:py-28 bg-[hsl(var(--muted)/0.3)] relative overflow-hidden">
     <div class="container mx-auto px-4">
       <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700 text-center max-w-3xl mx-auto mb-16">
         <h2 class="text-3xl md:text-4xl font-display font-bold tracking-tight mb-4">Erfolgsgeschichten</h2>
-        <p class="text-lg text-[hsl(var(--muted-foreground))]">Echte Ergebnisse, echte Teams.</p>
+        <p class="text-lg text-[hsl(var(--muted-foreground))]">So arbeiten Teams mit ShortSelect.</p>
       </div>
 
       <div class="space-y-8 max-w-4xl mx-auto">
@@ -126,14 +114,14 @@ const caseStudies = [
                   "{cs.quote}"
                 </blockquote>
                 <p class="text-sm font-medium">{cs.person}, {cs.role}</p>
-                <div class="grid grid-cols-3 gap-4 pt-4 border-t border-[hsl(var(--border)/0.5)]">
+                <ul class="grid sm:grid-cols-3 gap-3 pt-4 border-t border-[hsl(var(--border)/0.5)]">
                   {cs.results.map((r) => (
-                    <div class="text-center">
-                      <div class="text-xl font-display font-bold text-[hsl(var(--primary))]">{r.metric}</div>
-                      <p class="text-xs text-[hsl(var(--muted-foreground))]">{r.label}</p>
-                    </div>
+                    <li class="flex items-start gap-2 text-sm text-[hsl(var(--muted-foreground))]">
+                      <svg class="h-4 w-4 text-[hsl(var(--primary))] mt-0.5 shrink-0" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                      <span>{r}</span>
+                    </li>
                   ))}
-                </div>
+                </ul>
               </div>
             </div>
           </div>
