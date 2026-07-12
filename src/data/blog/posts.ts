@@ -29,6 +29,7 @@ import { batch25 } from "./batch25";
 import { batch26 } from "./batch26";
 import { batch27 } from "./batch27";
 import { batch28 } from "./batch28";
+import { autoPosts } from "./auto";
 
 import type { BlogPost } from "./types";
 
@@ -61,4 +62,5 @@ export const blogPosts: BlogPost[] = [
   ...batch26,
   ...batch27,
   ...batch28,
+  ...autoPosts,
 ];
