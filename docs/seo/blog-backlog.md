@@ -24,7 +24,7 @@ Dieser Backlog steuert die wiederkehrende Blog-Routine. Sie nimmt den obersten E
 - [done backfill 2026-07-12] Time-to-Fill senken: 7 Hebel im Agentur-Recruiting | Links: /produkt/pipeline/, /produkt/automatisierung/
 - [done backfill 2026-07-12] Multiposting richtig nutzen: Eine Stelle, viele Jobbörsen, ein Dashboard | Links: /produkt/multiposting/, /produkt/karriereseite/
 - [done: kandidaten-nurturing-email-sequenzen 2026-07-13] Kandidaten-Nurturing per E-Mail: Sequenzen, die im Agentur-Alltag funktionieren | Links: /produkt/email-integration/, /produkt/automatisierung/
-- [todo] Bullhorn-Alternative für den DACH-Markt: Worauf es ankommt | Prompt: "Bullhorn Alternative" | Links: /vergleich/shortselect-vs-bullhorn/
+- [done: bullhorn-alternative-dach-markt 2026-07-16] Bullhorn-Alternative für den DACH-Markt: Worauf es ankommt | Prompt: "Bullhorn Alternative" | Links: /vergleich/shortselect-vs-bullhorn/
 - [todo] Vincere-Alternative: Vergleich für Personalberatungen | Links: /vergleich/shortselect-vs-vincere/
 - [todo] Talent Pools aufbauen: Aus Absagen wiederkehrende Platzierungen machen | Links: /produkt/talent-pools/
 - [todo] Karriereseite für Agenturen: Vom Job-Widget zur Bewerber-Maschine | Links: /produkt/karriereseite/, /integrationen/
