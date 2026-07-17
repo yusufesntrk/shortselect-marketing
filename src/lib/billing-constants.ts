@@ -21,7 +21,7 @@ export const PRO_ANNUAL_LOOKUP_KEY = 'shortselect_pro_annual_v1';
 export const ANNUAL_NOTICE_MONTHS = 6;
 export const ANNUAL_TERM_MONTHS = 12;
 
-export const TRIAL_DAYS = 30;
+export const TRIAL_DAYS = 14;
 
 // === PIONEER PLAN (DEPRECATED, Neuverkauf geschlossen 2026-07 mit AGB v1.3) ===
 // NICHT loeschen: wird in AGB §4b (Bestandsschutz-Klauseln) referenziert.

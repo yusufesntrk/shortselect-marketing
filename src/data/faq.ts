@@ -8,12 +8,12 @@ export const faqs = [
     answer: "Der Pro Plan kostet 199 EUR pro User und Monat. Bei jährlicher Zahlung sind es 1.791 EUR pro User und Jahr, das entspricht drei geschenkten Monaten. Ein Preis pro User, alle Funktionen inklusive, keine Aufpreise für einzelne Module.",
   },
   {
-    question: "Was passiert nach den 30 Tagen Trial?",
+    question: "Was passiert nach den 14 Tagen Trial?",
     answer: "Nach Ablauf des Trials bleibt Ihr Account erhalten und Sie wechseln in den Pro Plan für 199 EUR pro User und Monat, wahlweise jährlich für 1.791 EUR pro User und Jahr. Wenn Sie nicht weitermachen möchten, wird Ihr Account ohne weitere Kosten archiviert. Wir erinnern Sie rechtzeitig vor Trial-Ende per E-Mail, damit Sie aktiv entscheiden können.",
   },
   {
     question: "Brauche ich eine Kreditkarte für den Trial?",
-    answer: "Nein. Der 30-tägige Trial ist komplett kostenlos und ohne Zahlungsdaten. Sie geben Ihre Zahlungsmethode erst an, wenn Sie nach dem Trial in den Pro Plan wechseln möchten.",
+    answer: "Nein. Der 14-tägige Trial ist komplett kostenlos und ohne Zahlungsdaten. Sie geben Ihre Zahlungsmethode erst an, wenn Sie nach dem Trial in den Pro Plan wechseln möchten.",
   },
   {
     question: "Kann ich jederzeit kündigen?",
