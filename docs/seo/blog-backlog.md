@@ -25,7 +25,7 @@ Dieser Backlog steuert die wiederkehrende Blog-Routine. Sie nimmt den obersten E
 - [done backfill 2026-07-12] Multiposting richtig nutzen: Eine Stelle, viele Jobbörsen, ein Dashboard | Links: /produkt/multiposting/, /produkt/karriereseite/
 - [done: kandidaten-nurturing-email-sequenzen 2026-07-13] Kandidaten-Nurturing per E-Mail: Sequenzen, die im Agentur-Alltag funktionieren | Links: /produkt/email-integration/, /produkt/automatisierung/
 - [done: bullhorn-alternative-dach-markt 2026-07-16] Bullhorn-Alternative für den DACH-Markt: Worauf es ankommt | Prompt: "Bullhorn Alternative" | Links: /vergleich/shortselect-vs-bullhorn/
-- [todo] Vincere-Alternative: Vergleich für Personalberatungen | Links: /vergleich/shortselect-vs-vincere/
+- [done: vincere-alternative-personalberatungen-vergleich 2026-07-19] Vincere-Alternative: Vergleich für Personalberatungen | Links: /vergleich/shortselect-vs-vincere/
 - [todo] Talent Pools aufbauen: Aus Absagen wiederkehrende Platzierungen machen | Links: /produkt/talent-pools/
 - [todo] Karriereseite für Agenturen: Vom Job-Widget zur Bewerber-Maschine | Links: /produkt/karriereseite/, /integrationen/
 - [todo] Interview-Scheduling ohne Mail-Ping-Pong | Links: /produkt/interviews/
