@@ -1,6 +1,7 @@
 ---
 import SEOHead from '../components/seo/SEOHead.astro';
 import CookieConsentBanner from '../components/legal/CookieConsentBanner.astro';
+import { PRO_PRICE_MONTHLY_EUR, TRIAL_DAYS } from '../lib/billing-constants';
 import '../styles/global.css';
 
 const SIGNUP_URL_HERO = 'https://app.shortselect.com/signup?utm_source=marketing&utm_medium=cta&utm_campaign=pro_plan&utm_content=hero';
@@ -14,13 +15,13 @@ const softwareSchema = {
   operatingSystem: "Web Browser",
   description: "KI-gestützte Recruiting Software mit AgentBurst-Engine, Smart Ranking und Client Portal",
   image: ["https://www.shortselect.com/og-image.png"],
+  // KEIN availability/priceValidUntil: Shop-Signale ziehen die Seite in Googles
+  // Merchant-Listings-Prüfung (GSC-Fehlermail-Schleife). Preis aus billing-constants.
   offers: {
     "@type": "Offer",
     name: "Pro Plan",
-    price: "199.00",
+    price: `${PRO_PRICE_MONTHLY_EUR}.00`,
     priceCurrency: "EUR",
-    availability: "https://schema.org/InStock",
-    priceValidUntil: "2099-12-31",
     url: "https://www.shortselect.com/preise/",
   },
   featureList: [
@@ -44,7 +45,7 @@ const faqSchema = {
     { "@type": "Question", name: "Wie funktioniert das KI-Matching?", acceptedAnswer: { "@type": "Answer", text: "Die KI gleicht Fähigkeiten, Erfahrung, Standort und Sprachen deiner Kandidaten mit den Anforderungen jedes Jobs ab und vergibt einen Match-Score von 0 bis 100. Du siehst sofort, welche Kandidaten am besten passen, inklusive nachvollziehbarer Bewertung pro Kriterium." } },
     { "@type": "Question", name: "Ist ShortSelect DSGVO-konform?", acceptedAnswer: { "@type": "Answer", text: "Ja. Deine Daten werden ausschließlich in EU-Rechenzentren gespeichert und sind durch Row-Level-Security, SSL-Verschlüsselung und tägliche Backups geschützt. Audit-Logging, rollenbasierte Zugriffe und ein AVV-Vertrag sind enthalten." } },
     { "@type": "Question", name: "Was kostet ShortSelect?", acceptedAnswer: { "@type": "Answer", text: "Der Pro Plan kostet 199 EUR pro User und Monat oder 1.791 EUR pro User und Jahr (3 Monate geschenkt). Ein Preis, alle Funktionen inklusive. Alle Details und den vollen Funktionsumfang findest du auf der Preisseite." } },
-    { "@type": "Question", name: "Kann ich ShortSelect kostenlos testen?", acceptedAnswer: { "@type": "Answer", text: "Ja. Du testest ShortSelect 30 Tage mit vollem Funktionsumfang, komplett kostenlos und ohne Kreditkarte. Nach dem Trial entscheidest du aktiv, ob du in den Pro Plan wechselst." } },
+    { "@type": "Question", name: "Kann ich ShortSelect kostenlos testen?", acceptedAnswer: { "@type": "Answer", text: `Ja. Du testest ShortSelect ${TRIAL_DAYS} Tage mit vollem Funktionsumfang, komplett kostenlos und ohne Kreditkarte. Nach dem Trial entscheidest du aktiv, ob du in den Pro Plan wechselst.` } },
     { "@type": "Question", name: "Kann ich meine bestehenden Daten importieren?", acceptedAnswer: { "@type": "Answer", text: "Ja. ShortSelect unterstützt CSV-Import für Kandidaten, Jobs und Unternehmen. Unser Onboarding-Team hilft dir beim reibungslosen Umzug von deinem bisherigen System, das ist im Pro Plan kostenfrei enthalten." } },
     { "@type": "Question", name: "Was unterscheidet ShortSelect von anderen ATS?", acceptedAnswer: { "@type": "Answer", text: "Klassische ATS verwalten Daten, ShortSelect arbeitet mit: KI-Agents erledigen Screening, Matching und Nurturing im Hintergrund, statt dir nur Formulare und Filter zu geben. Wie sich das im Vergleich zu Bullhorn, Coveto und anderen Systemen schlägt, zeigen unsere ATS-Vergleiche." } },
   ],
@@ -3810,7 +3811,7 @@ const websiteSchema = {
           <div class="feat-row">Alle KI-Agents inklusive</div>
           <div class="feat-row">Client Portal mit eigenem Branding</div>
         </div>
-        <a href="https://app.shortselect.com/signup?utm_source=marketing&utm_medium=cta&utm_campaign=pro_plan&utm_content=pricing" class="fc-btn">30 Tage starten →</a>
+        <a href="https://app.shortselect.com/signup?utm_source=marketing&utm_medium=cta&utm_campaign=pro_plan&utm_content=pricing" class="fc-btn">{TRIAL_DAYS} Tage starten →</a>
         <div class="terms">Keine Kreditkarte · jederzeit kündbar · alle Funktionen inklusive</div>
       </div>
     </section>
@@ -3845,7 +3846,7 @@ const websiteSchema = {
         </details>
         <details class="fc-faq-item">
           <summary>Kann ich ShortSelect kostenlos testen? <span class="plus">+</span></summary>
-          <div class="answer">Ja. Du testest ShortSelect 30 Tage mit vollem Funktionsumfang, komplett kostenlos und ohne Kreditkarte. Nach dem Trial entscheidest du aktiv, ob du in den Pro Plan wechselst.</div>
+          <div class="answer">Ja. Du testest ShortSelect {TRIAL_DAYS} Tage mit vollem Funktionsumfang, komplett kostenlos und ohne Kreditkarte. Nach dem Trial entscheidest du aktiv, ob du in den Pro Plan wechselst.</div>
         </details>
         <details class="fc-faq-item">
           <summary>Kann ich meine bestehenden Daten importieren? <span class="plus">+</span></summary>

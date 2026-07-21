@@ -24,13 +24,19 @@ const FIVE_USER_ANNUAL_MONTHLY = ((5 * PRO_PRICE_ANNUAL_EUR) / 12).toLocaleStrin
   maximumFractionDigits: 0,
 });
 
+// WICHTIG: KEIN "@type": "Product" und KEIN availability/priceValidUntil verwenden!
+// Product + Shop-Signale stufen die Seite bei Google als Merchant Listing ein und
+// erzeugen endlose GSC-Fehlermails (shippingDetails, hasMerchantReturnPolicy, ...),
+// die ein SaaS nie erfüllen kann. SoftwareApplication ist der korrekte Typ.
 const pricingSchema = {
   "@context": "https://schema.org",
-  "@type": "Product",
-  name: "ShortSelect Pro Plan",
+  "@type": "SoftwareApplication",
+  name: "ShortSelect",
+  applicationCategory: "BusinessApplication",
+  applicationSubCategory: "Applicant Tracking System",
+  operatingSystem: "Web Browser",
   description: `ShortSelect ATS für Recruiting-Agenturen. Alle Funktionen, ein Preis pro User. Pro Plan: ${PRO_PRICE_MONTHLY_EUR} EUR pro User und Monat oder ${PRO_PRICE_ANNUAL_EUR} EUR pro User und Jahr (${PRO_ANNUAL_MONTHS_FREE} Monate geschenkt).`,
   image: ["https://www.shortselect.com/og-image.png"],
-  brand: { "@type": "Brand", name: "ShortSelect" },
   offers: [
     {
       "@type": "Offer",
@@ -38,8 +44,6 @@ const pricingSchema = {
       description: `Pro Plan: ${PRO_PRICE_MONTHLY_EUR} EUR pro User und Monat, alle Funktionen inklusive.`,
       price: `${PRO_PRICE_MONTHLY_EUR}.00`,
       priceCurrency: "EUR",
-      availability: "https://schema.org/InStock",
-      priceValidUntil: "2099-12-31",
       url: "https://www.shortselect.com/preise/",
       priceSpecification: {
         "@type": "UnitPriceSpecification",
@@ -65,8 +69,6 @@ const pricingSchema = {
       description: `Pro Plan Jahresabo: ${PRO_PRICE_ANNUAL_EUR} EUR pro User und Jahr (9 statt 12 Monatsraten, Vorauszahlung).`,
       price: `${PRO_PRICE_ANNUAL_EUR}.00`,
       priceCurrency: "EUR",
-      availability: "https://schema.org/InStock",
-      priceValidUntil: "2099-12-31",
       url: "https://www.shortselect.com/preise/",
       priceSpecification: {
         "@type": "UnitPriceSpecification",
