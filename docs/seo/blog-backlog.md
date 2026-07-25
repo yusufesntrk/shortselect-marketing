@@ -27,7 +27,7 @@ Dieser Backlog steuert die wiederkehrende Blog-Routine. Sie nimmt den obersten E
 - [done: bullhorn-alternative-dach-markt 2026-07-16] Bullhorn-Alternative für den DACH-Markt: Worauf es ankommt | Prompt: "Bullhorn Alternative" | Links: /vergleich/shortselect-vs-bullhorn/
 - [done: vincere-alternative-personalberatungen-vergleich 2026-07-19] Vincere-Alternative: Vergleich für Personalberatungen | Links: /vergleich/shortselect-vs-vincere/
 - [done: talent-pools-aus-absagen-platzierungen 2026-07-22] Talent Pools aufbauen: Aus Absagen wiederkehrende Platzierungen machen | Links: /produkt/talent-pools/
-- [todo] Karriereseite für Agenturen: Vom Job-Widget zur Bewerber-Maschine | Links: /produkt/karriereseite/, /integrationen/
+- [done: karriereseite-agenturen-bewerber-maschine 2026-07-25] Karriereseite für Agenturen: Vom Job-Widget zur Bewerber-Maschine | Links: /produkt/karriereseite/, /integrationen/
 - [todo] Interview-Scheduling ohne Mail-Ping-Pong | Links: /produkt/interviews/
 - [todo] Recruiting-Analytics: Die 6 Kennzahlen, die Agenturen steuern sollten | Links: /produkt/analytics/
 - [todo] IT-Recruiting 2026: Was Personalberatungen bei Tech-Rollen brauchen | Links: /branchen/it-recruiting/, /produkt/ki-features/
