@@ -1,169 +1,331 @@
 ---
 import MarketingLayout from '../layouts/MarketingLayout.astro';
+
+// Fassungsbezeichnung: privacy-v2026-07-27
+// Inhaltlich deckungsgleich mit der App-Fassung in
+// project-spark/src/lib/platform-privacy.ts (PLATFORM_PRIVACY_POLICY_TEXT).
+// Bei Aenderungen IMMER beide Dateien gemeinsam pflegen.
+//
+// DEPLOY-SPERRE (Stand 27.07.2026): Abschnitt 6 sagt zu, dass Merkmale nach
+// § 1 AGG und insbesondere das Lebensalter kein Bewertungs- oder Filterkriterium
+// sind. Im App-Repo trifft das auf dem Rechtstext-Branch noch nicht zu
+// (supabase/functions/_shared/sourcing-quality-gate.ts:92 und 239 bis 243,
+// gespeist über qa-review-profiles/index.ts:821). Fix liegt als Commit 8370af0e
+// auf einem anderen Branch. Bis der drin ist, darf diese Fassung nicht live.
+//
+// [ZU KLÄREN] Telefonnummer des Verantwortlichen (Art. 13 Abs. 1 lit. a DSGVO)
+// [ZU KLÄREN] Sitz und Übermittlungsgrundlage der Dienstleister für Websuche,
+//             Seitenabruf, Kontaktdatenanreicherung, Telefonie und Erstansprache
+// [ZU KLÄREN] Aufbewahrungsfrist für Gesprächsaufzeichnungen
+// [ZU KLÄREN] Abschnitt 11 behauptet, mit allen Auftragsverarbeitern bestünden
+//             Verträge nach Art. 28 DSGVO. Aus dem Code nicht prüfbar, der
+//             Verantwortliche muss den Vertragsstand je Dienstleister bestätigen.
+//
+// ABHÄNGIGKEIT Schriftarten (erledigt am 27.07.2026): Abschnitt 4 sagt jetzt
+// "von unseren eigenen Servern", weil public/fonts/ existiert und SEOHead.astro
+// keine Schrift mehr von einem Drittanbieter lädt. Wird das je rückgängig
+// gemacht, muss der Absatz zurück auf Offenlegung der Übermittlung.
+// ABHÄNGIGKEIT Cookie-Hinweis: Auf der Marketing-Site entfernt, in der App noch
+// aktiv. Abschnitt 13 ist deshalb konditional formuliert und in beiden
+// Fassungen wortgleich.
+// ABHÄNGIGKEIT Zählpixel: Abschnitt 4 und 13 beschreiben das einwilligungs-
+// gebundene Zählpixel aus JobFunnel.tsx. Fällt die Einwilligungsbindung weg,
+// ist der Text sofort unrichtig.
+const VERSION_LABEL = 'privacy-v2026-07-27';
+const VERSION_DATE = '27. Juli 2026';
 ---
 
 <MarketingLayout
   title="Datenschutzerklärung | ShortSelect"
   description="Datenschutzerklärung von ShortSelect. Informationen zur Verarbeitung personenbezogener Daten gemäß DSGVO."
-  noindex={true}
 >
   <section class="pt-32 pb-20 md:pb-28">
     <div class="container mx-auto px-4 max-w-3xl">
-      <h1 class="text-3xl font-display font-bold mb-2">Datenschutzerklärung für ShortSelect Plattform- und Website-Nutzer</h1>
-      <p class="text-sm text-muted-foreground mb-8">Version 2.1 · Stand: 10. Mai 2026</p>
+      <h1 class="text-3xl font-display font-bold mb-2">Datenschutzerklärung für Website und Plattform</h1>
+      <p class="text-sm text-muted-foreground mb-8">Fassung {VERSION_LABEL}, Stand: {VERSION_DATE}</p>
 
       <div class="prose-legal space-y-6">
-        <p>Diese Datenschutzerklärung informiert darüber, wie wir personenbezogene Daten verarbeiten, wenn Sie die Website shortselect.com, die App app.shortselect.com, ein ShortSelect-Konto, den Login-Bereich, Einladungslinks oder das Client-Portal nutzen.</p>
-        <p>Datenschutzhinweise für Bewerbungen über Karriere- oder Bewerbungsformulare eines Kunden werden gesondert auf der jeweiligen tenantbezogenen Datenschutzerklärung bereitgestellt.</p>
+        <p>Diese Datenschutzerklärung gilt für unsere Website www.shortselect.com, für die Anwendung app.shortselect.com und für die zugehörige Schnittstelle api.shortselect.com. Sie beschreibt, welche personenbezogenen Daten wir verarbeiten, zu welchem Zweck, auf welcher Rechtsgrundlage und welche Rechte Sie haben.</p>
 
         <section>
-          <h2 class="text-xl font-semibold mb-2">1. Verantwortlicher</h2>
-          <p>Verantwortlich für die Verarbeitung im Zusammenhang mit ShortSelect-Accounts, Website und Plattformzugang ist:</p>
+          <h2 class="text-xl font-semibold mb-2">1. Geltungsbereich und unsere Rolle</h2>
+          <p>Wir verarbeiten personenbezogene Daten in unterschiedlichen Rollen. Die folgende Übersicht zeigt, welche Abschnitte für Sie gelten.</p>
+          <div class="overflow-x-auto">
+            <table class="w-full text-sm border border-muted-foreground/20">
+              <thead class="bg-muted/40">
+                <tr>
+                  <th class="text-left p-2 border-b border-muted-foreground/20">Sie sind</th>
+                  <th class="text-left p-2 border-b border-muted-foreground/20">Unsere Rolle</th>
+                  <th class="text-left p-2 border-b border-muted-foreground/20">Abschnitt</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td class="p-2 border-b border-muted-foreground/10 align-top">Besucherin oder Besucher unserer Website</td><td class="p-2 border-b border-muted-foreground/10 align-top">Verantwortlicher</td><td class="p-2 border-b border-muted-foreground/10 align-top">4</td></tr>
+                <tr><td class="p-2 border-b border-muted-foreground/10 align-top">Nutzerin oder Nutzer der Plattform: Kontoinhaber, eingeladene Teammitglieder, Nutzer der Kundenportale</td><td class="p-2 border-b border-muted-foreground/10 align-top">Verantwortlicher</td><td class="p-2 border-b border-muted-foreground/10 align-top">5 bis 8</td></tr>
+                <tr><td class="p-2 border-b border-muted-foreground/10 align-top">Bewerberin, Bewerber oder Kontakt, deren Daten ein Kundenunternehmen in die Plattform einstellt</td><td class="p-2 border-b border-muted-foreground/10 align-top">Auftragsverarbeiter, verantwortlich ist das Kundenunternehmen</td><td class="p-2 border-b border-muted-foreground/10 align-top">9</td></tr>
+                <tr><td class="p-2 align-top">Person, deren berufliches Profil wir selbst aus öffentlich zugänglichen Quellen beschaffen</td><td class="p-2 align-top">Verantwortlicher</td><td class="p-2 align-top">10</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>Die Abschnitte 11 bis 19 gelten für alle genannten Personengruppen.</p>
+          <p><strong>Vertragspartner und betroffene Person sind nicht dasselbe.</strong> Unser Angebot richtet sich ausschließlich an Unternehmerinnen und Unternehmer im Sinne von § 14 BGB. Vertragspartner ist das buchende Unternehmen. Betroffene Personen sind stets die natürlichen Personen, deren Daten verarbeitet werden, also auch eingeladene Teammitglieder und Ansprechpartner, die den Vertrag nicht selbst geschlossen haben. Ihnen stehen sämtliche Rechte aus dieser Erklärung persönlich zu, ohne Umweg über ihren Arbeitgeber. Ist der Vertragspartner ein Einzelunternehmen oder eine freiberuflich tätige Person, fallen beide Rollen zusammen.</p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-semibold mb-2">2. Verantwortlicher und Ansprechstelle für den Datenschutz</h2>
+          <p>Verantwortlicher im Sinne von Art. 4 Nr. 7 DSGVO ist:</p>
           <p>
             Yusuf Esentürk<br />
+            Einzelunternehmer, tätig unter der Geschäftsbezeichnung LeyalTech<br />
             Burdastraße 18<br />
             77656 Offenburg<br />
             Deutschland<br />
             E-Mail: <a href="mailto:hello@shortselect.com" class="text-[hsl(var(--primary))] hover:underline">hello@shortselect.com</a>
           </p>
-          <p>Wir handeln unter dem Geschäftsnamen "LeyalTech" und vertreiben die Plattform unter der Marke "ShortSelect". Eine gesetzliche Pflicht zur Bestellung eines Datenschutzbeauftragten besteht aktuell nicht.</p>
+          <p>Ein Handelsregistereintrag besteht nicht, ein Rechtsformzusatz wird nicht geführt. ShortSelect ist die Produktmarke, unter der wir unsere Software anbieten. AgentBurst bezeichnet die in ShortSelect enthaltenen Verfahren der künstlichen Intelligenz.</p>
+          <p>Anfragen zum Datenschutz und zur Ausübung Ihrer Rechte richten Sie bitte an <a href="mailto:hello@shortselect.com" class="text-[hsl(var(--primary))] hover:underline">hello@shortselect.com</a>. Sobald ein Datenschutzbeauftragter benannt ist, veröffentlichen wir dessen Kontaktdaten an dieser Stelle.</p>
         </section>
 
         <section>
-          <h2 class="text-xl font-semibold mb-2">2. Aufsichtsbehörde</h2>
-          <p>Sie haben das Recht, sich bei einer Datenschutz-Aufsichtsbehörde zu beschweren. Zuständig für unseren Sitz ist:</p>
+          <h2 class="text-xl font-semibold mb-2">3. Zuständige Aufsichtsbehörde</h2>
           <p>
             Der Landesbeauftragte für den Datenschutz und die Informationsfreiheit Baden-Württemberg<br />
-            Königstraße 10a, 70173 Stuttgart<br />
+            Heilbronner Straße 35, 70191 Stuttgart<br />
+            Postanschrift: Postfach 10 29 32, 70025 Stuttgart<br />
+            Telefon: 0711 615541-0<br />
+            E-Mail: <a href="mailto:poststelle@lfdi.bwl.de" class="text-[hsl(var(--primary))] hover:underline">poststelle@lfdi.bwl.de</a><br />
             Web: <a href="https://www.baden-wuerttemberg.datenschutz.de" target="_blank" rel="noopener" class="text-[hsl(var(--primary))] hover:underline">baden-wuerttemberg.datenschutz.de</a>
           </p>
+          <p>Die Zuständigkeit richtet sich nach unserer Niederlassung in Offenburg. Unabhängig davon können Sie sich nach Art. 77 Abs. 1 DSGVO auch an die Aufsichtsbehörde Ihres Aufenthaltsorts oder Ihres Arbeitsplatzes wenden.</p>
         </section>
 
         <section>
-          <h2 class="text-xl font-semibold mb-2">3. Welche Daten wir verarbeiten</h2>
-          <p>Bei Besuch der Website, Registrierung, Login, Einladungen und Nutzung der Plattform verarbeiten wir insbesondere:</p>
-          <ul class="list-disc pl-6">
-            <li><strong>Stammdaten:</strong> Name, E-Mail-Adresse, Unternehmen, Rolle, Tenant-Zuordnung, Telefonnummer (sofern angegeben)</li>
-            <li><strong>Authentifizierungs- und Sicherheitsdaten:</strong> Passwort-Hash, MFA-Token, Session-IDs, Login-Zeitstempel</li>
-            <li><strong>Technische Protokolldaten:</strong> IP-Adresse, User-Agent, Aufrufzeitpunkt, aufgerufene Funktion (Server-Log)</li>
-            <li><strong>Einwilligungs- und Akzeptanz-Audit:</strong> Versionen akzeptierter AGB / Datenschutzerklärung / AVV, Zeitpunkt, Text-Snapshot, IP-Adresse</li>
-            <li><strong>Zahlungs- und Abrechnungsdaten:</strong> Tarif, Rechnungsadresse, Steuer-ID/USt-IdNr., Zahlungsverlauf, Trial-Start- und Trial-Endzeitpunkt, Subscription-Status (trialing/active/past_due/paused/canceled), Stripe-Customer-ID, Rechnungs-PDF-URLs. Die vollständigen Kartendaten verarbeiten wir <strong>nicht</strong>; diese werden ausschließlich von Stripe als unserem Zahlungsdienstleister gespeichert und verarbeitet (PCI-DSS Level 1).</li>
-            <li><strong>Checkout-Metadaten:</strong> IP-Adresse, User-Agent und Zeitpunkt zum Zeitpunkt der Stripe-Checkout-Session zur Betrugsprävention. Diese Daten werden gemeinsam mit Stripe verarbeitet (gemeinsame Verantwortlichkeit nach Art. 26 DSGVO im engen Rahmen der Zahlungsabwicklung).</li>
-            <li><strong>Nutzungsdaten:</strong> Aktivitätshistorie für Audit, Sicherheit und Produktverbesserung</li>
-            <li><strong>Kommunikationsdaten:</strong> Inhalt von Support-Anfragen, gesendete und empfangene E-Mails über die Plattform</li>
-          </ul>
-        </section>
-
-        <section>
-          <h2 class="text-xl font-semibold mb-2">4. Zwecke und Rechtsgrundlagen</h2>
-          <p>Wir verarbeiten personenbezogene Daten, um Nutzerkonten bereitzustellen, Logins abzusichern, Einladungen zu verwalten, den SaaS-Vertrag zu erfüllen, Missbrauch zu verhindern, Support zu leisten und gesetzliche Nachweispflichten zu erfüllen. Rechtsgrundlagen sind je nach Verarbeitung:</p>
-          <ul class="list-disc pl-6">
-            <li>Art. 6 Abs. 1 lit. b DSGVO (Vertrag und vorvertragliche Maßnahmen): für Bereitstellung des Accounts, Abrechnung, Support</li>
-            <li>Art. 6 Abs. 1 lit. c DSGVO (rechtliche Pflichten): für Aufbewahrung von Rechnungen, steuerliche Pflichten, Audit-Pflichten gemäß DSGVO Art. 28 / 32</li>
-            <li>Art. 6 Abs. 1 lit. f DSGVO (berechtigte Interessen): für Sicherheit, Missbrauchsabwehr, Server-Logging, Produktverbesserung über aggregierte/anonymisierte Statistiken</li>
-            <li>Art. 6 Abs. 1 lit. a DSGVO (Einwilligung): für optionale Funktionen wie KI-Telefon-/Video-Interview, soweit Sie aktiv zustimmen</li>
-          </ul>
-        </section>
-
-        <section>
-          <h2 class="text-xl font-semibold mb-2">5. AGB- und Datenschutzhinweis-Nachweise</h2>
-          <p>Bei Registrierung, Annahme einer Einladung oder Akzeptanz einer neuen Version dieser Datenschutzerklärung speichern wir einen Audit-Nachweis. Dazu gehören Versionsnummer, Link auf den jeweils geltenden Text, Text-Snapshot, Zeitpunkt sowie, soweit serverseitig verfügbar, IP-Adresse und User-Agent. Diese Nachweise dienen der Erfüllung unserer Rechenschaftspflicht nach Art. 5 Abs. 2 DSGVO und werden mindestens für die Dauer des Vertragsverhältnisses und 3 Jahre darüber hinaus aufbewahrt.</p>
-        </section>
-
-        <section>
-          <h2 class="text-xl font-semibold mb-2">6. Empfänger und Auftragsverarbeiter</h2>
-          <p>Für Betrieb, Hosting, Authentifizierung, E-Mail-Versand, Sicherheit und KI-Funktionen setzen wir sorgfältig ausgewählte Dienstleister ein, mit denen Verträge zur Auftragsverarbeitung nach Art. 28 DSGVO geschlossen sind:</p>
+          <h2 class="text-xl font-semibold mb-2">4. Besuch der Website</h2>
           <div class="overflow-x-auto">
             <table class="w-full text-sm border border-muted-foreground/20">
               <thead class="bg-muted/40">
                 <tr>
-                  <th class="text-left p-2 border-b border-muted-foreground/20">Auftragsverarbeiter</th>
-                  <th class="text-left p-2 border-b border-muted-foreground/20">Sitz</th>
+                  <th class="text-left p-2 border-b border-muted-foreground/20">Verarbeitung</th>
+                  <th class="text-left p-2 border-b border-muted-foreground/20">Daten</th>
                   <th class="text-left p-2 border-b border-muted-foreground/20">Zweck</th>
-                  <th class="text-left p-2 border-b border-muted-foreground/20">Drittlandtransfer</th>
+                  <th class="text-left p-2 border-b border-muted-foreground/20">Rechtsgrundlage und berechtigtes Interesse</th>
+                  <th class="text-left p-2 border-b border-muted-foreground/20">Speicherdauer</th>
                 </tr>
               </thead>
               <tbody>
-                <tr><td class="p-2 border-b border-muted-foreground/10 align-top">Supabase Inc.</td><td class="p-2 border-b border-muted-foreground/10 align-top">EU (Frankfurt)</td><td class="p-2 border-b border-muted-foreground/10 align-top">Datenbank, Authentifizierung, Storage, Edge Functions</td><td class="p-2 border-b border-muted-foreground/10 align-top">Nein (EU)</td></tr>
-                <tr><td class="p-2 border-b border-muted-foreground/10 align-top">Hetzner Online GmbH</td><td class="p-2 border-b border-muted-foreground/10 align-top">DE (Falkenstein)</td><td class="p-2 border-b border-muted-foreground/10 align-top">Server für PDF-Generierung, Workflow-Automation, WebRTC, Bot-Orchestrierung</td><td class="p-2 border-b border-muted-foreground/10 align-top">Nein (EU)</td></tr>
-                <tr><td class="p-2 border-b border-muted-foreground/10 align-top">Cloudflare Inc.</td><td class="p-2 border-b border-muted-foreground/10 align-top">US / global</td><td class="p-2 border-b border-muted-foreground/10 align-top">Hosting Marketing-Site und App-Frontend, CDN, Bot-Schutz</td><td class="p-2 border-b border-muted-foreground/10 align-top">USA, DPF + SCC</td></tr>
-                <tr><td class="p-2 border-b border-muted-foreground/10 align-top">Resend (Ra Resende Inc.)</td><td class="p-2 border-b border-muted-foreground/10 align-top">USA</td><td class="p-2 border-b border-muted-foreground/10 align-top">Transaktionale E-Mails (Login-Bestätigung, Einladungen, Rechnungen)</td><td class="p-2 border-b border-muted-foreground/10 align-top">USA, DPF + SCC</td></tr>
-                <tr><td class="p-2 border-b border-muted-foreground/10 align-top">Stripe Payments Europe Ltd. / Stripe Inc.</td><td class="p-2 border-b border-muted-foreground/10 align-top">IE / USA</td><td class="p-2 border-b border-muted-foreground/10 align-top">Zahlungsabwicklung, Subscription-Management, Rechnungsstellung, Steuer-Berechnung (Stripe Tax), Customer Portal</td><td class="p-2 border-b border-muted-foreground/10 align-top">USA, DPF + SCC; <a href="https://stripe.com/de/legal/dpa" target="_blank" rel="noopener" class="text-[hsl(var(--primary))] hover:underline">Stripe-AVV (DPA)</a></td></tr>
-                <tr><td class="p-2 border-b border-muted-foreground/10 align-top">Anthropic PBC</td><td class="p-2 border-b border-muted-foreground/10 align-top">USA</td><td class="p-2 border-b border-muted-foreground/10 align-top">KI-Verarbeitung Lebenslauf-Analyse, Matching, Screening, AI-Interview</td><td class="p-2 border-b border-muted-foreground/10 align-top">USA, DPF + SCC</td></tr>
-                <tr><td class="p-2 border-b border-muted-foreground/10 align-top">OpenAI</td><td class="p-2 border-b border-muted-foreground/10 align-top">USA</td><td class="p-2 border-b border-muted-foreground/10 align-top">KI-Sprachmodelle</td><td class="p-2 border-b border-muted-foreground/10 align-top">USA, DPF + SCC</td></tr>
-                <tr><td class="p-2 border-b border-muted-foreground/10 align-top">Deepgram Inc.</td><td class="p-2 border-b border-muted-foreground/10 align-top">USA</td><td class="p-2 border-b border-muted-foreground/10 align-top">Speech-to-Text bei AI-Interview</td><td class="p-2 border-b border-muted-foreground/10 align-top">USA, SCC + TIA</td></tr>
-                <tr><td class="p-2 border-b border-muted-foreground/10 align-top">ElevenLabs Inc.</td><td class="p-2 border-b border-muted-foreground/10 align-top">USA</td><td class="p-2 border-b border-muted-foreground/10 align-top">Text-to-Speech bei AI-Interview</td><td class="p-2 border-b border-muted-foreground/10 align-top">USA, DPF + SCC</td></tr>
-                <tr><td class="p-2 border-b border-muted-foreground/10 align-top">Google LLC</td><td class="p-2 border-b border-muted-foreground/10 align-top">USA / IE</td><td class="p-2 border-b border-muted-foreground/10 align-top">Calendar- und Gmail-OAuth-Integration auf Wunsch des Kunden</td><td class="p-2 border-b border-muted-foreground/10 align-top">USA, DPF + SCC</td></tr>
-                <tr><td class="p-2 border-b border-muted-foreground/10 align-top">Microsoft Corp.</td><td class="p-2 border-b border-muted-foreground/10 align-top">USA / IE</td><td class="p-2 border-b border-muted-foreground/10 align-top">Outlook-OAuth-Integration auf Wunsch des Kunden</td><td class="p-2 border-b border-muted-foreground/10 align-top">USA, DPF + SCC</td></tr>
-                <tr><td class="p-2 border-b border-muted-foreground/10 align-top">Zoom Video Communications</td><td class="p-2 border-b border-muted-foreground/10 align-top">USA</td><td class="p-2 border-b border-muted-foreground/10 align-top">Video-Termin-Integration auf Wunsch des Kunden</td><td class="p-2 border-b border-muted-foreground/10 align-top">USA, DPF + SCC</td></tr>
-                <tr><td class="p-2 border-b border-muted-foreground/10 align-top">LinkedIn Corp.</td><td class="p-2 border-b border-muted-foreground/10 align-top">USA / IE</td><td class="p-2 border-b border-muted-foreground/10 align-top">Provider-API für Sourcing-Funktionen</td><td class="p-2 border-b border-muted-foreground/10 align-top">USA, DPF (über Microsoft) + SCC</td></tr>
-                <tr><td class="p-2 border-b border-muted-foreground/10 align-top">Meta Platforms Ireland Ltd.</td><td class="p-2 border-b border-muted-foreground/10 align-top">IE / USA</td><td class="p-2 border-b border-muted-foreground/10 align-top">Lead-Ads, Marketing-API auf Wunsch des Kunden</td><td class="p-2 border-b border-muted-foreground/10 align-top">USA, DPF + SCC</td></tr>
-                <tr><td class="p-2 border-b border-muted-foreground/10 align-top">Indeed</td><td class="p-2 border-b border-muted-foreground/10 align-top">USA</td><td class="p-2 border-b border-muted-foreground/10 align-top">Apply-Integration auf Wunsch des Kunden</td><td class="p-2 border-b border-muted-foreground/10 align-top">USA, SCC + TIA</td></tr>
-                <tr><td class="p-2 border-b border-muted-foreground/10 align-top">Stepstone</td><td class="p-2 border-b border-muted-foreground/10 align-top">DE</td><td class="p-2 border-b border-muted-foreground/10 align-top">Push und Quality-Signals</td><td class="p-2 border-b border-muted-foreground/10 align-top">Nein (EU)</td></tr>
-                <tr><td class="p-2 align-top">Whapi (WhatsApp-Provider)</td><td class="p-2 align-top">IL / USA</td><td class="p-2 align-top">WhatsApp-Chat-Integration auf Wunsch des Kunden</td><td class="p-2 align-top">Drittland, SCC</td></tr>
+                <tr>
+                  <td class="p-2 border-b border-muted-foreground/10 align-top">Server-Protokolldaten</td>
+                  <td class="p-2 border-b border-muted-foreground/10 align-top">IP-Adresse, Zeitpunkt, aufgerufene Adresse, Statuscode, übertragene Datenmenge, zuvor besuchte Seite, Browser und Betriebssystem</td>
+                  <td class="p-2 border-b border-muted-foreground/10 align-top">Auslieferung der Website, technische Verfügbarkeit, Erkennung und Abwehr von Angriffen, Fehleranalyse</td>
+                  <td class="p-2 border-b border-muted-foreground/10 align-top">Art. 6 Abs. 1 lit. f DSGVO. Interesse am zuverlässigen und sicheren Betrieb. Ohne IP-Adresse ist keine Auslieferung möglich. Die Daten werden nicht zu Nutzerprofilen zusammengeführt.</td>
+                  <td class="p-2 border-b border-muted-foreground/10 align-top">Löschung nach den Vorgaben unseres Hosting-Dienstleisters, längstens 30 Tage; bei einem Sicherheitsvorfall bis zu dessen Aufklärung</td>
+                </tr>
+                <tr>
+                  <td class="p-2 border-b border-muted-foreground/10 align-top">Auslieferung über ein Content Delivery Network, Abwehr automatisierter Zugriffe, Cookie <code>__cf_bm</code></td>
+                  <td class="p-2 border-b border-muted-foreground/10 align-top">Verbindungsdaten, IP-Adresse</td>
+                  <td class="p-2 border-b border-muted-foreground/10 align-top">Schnelle Auslieferung, Abwehr von Überlastungsangriffen und missbräuchlichen automatisierten Zugriffen</td>
+                  <td class="p-2 border-b border-muted-foreground/10 align-top">Art. 6 Abs. 1 lit. f DSGVO. Interesse am Schutz vor Missbrauch. Für das Cookie § 25 Abs. 2 Nr. 2 TDDDG, da für die Bereitstellung unbedingt erforderlich.</td>
+                  <td class="p-2 border-b border-muted-foreground/10 align-top">Cookie 30 Minuten</td>
+                </tr>
+                <tr>
+                  <td class="p-2 align-top">Kontaktaufnahme per E-Mail</td>
+                  <td class="p-2 align-top">Name, E-Mail-Adresse, Inhalt der Nachricht, technische Kopfdaten</td>
+                  <td class="p-2 align-top">Bearbeitung und Beantwortung Ihrer Anfrage, bei Vertragsbezug Anbahnung und Abwicklung des Vertrags</td>
+                  <td class="p-2 align-top">Art. 6 Abs. 1 lit. b DSGVO, soweit Sie selbst Vertragspartner sind oder werden, sonst Art. 6 Abs. 1 lit. f DSGVO. Interesse an der sachgerechten Beantwortung selbst veranlasster Anfragen.</td>
+                  <td class="p-2 align-top">Bis zur Erledigung, danach 6 Monate zur Zuordnung von Anschlussfragen</td>
+                </tr>
               </tbody>
             </table>
           </div>
-          <p>Eine jeweils tagesaktuelle Liste der Unterauftragsverarbeiter finden Sie unter <a href="/legal/subprocessors/" class="text-[hsl(var(--primary))] hover:underline">shortselect.com/legal/subprocessors</a>.</p>
+          <p><strong>Schriftarten.</strong> Alle Schriftarten werden von unseren eigenen Servern ausgeliefert. Dabei wird keine Verbindung zu Dritten aufgebaut und keine IP-Adresse an Dritte übertragen. Das gilt auch für die Anwendung sowie für die Karriereseiten und Kundenportale unserer Kunden, einschließlich der dort vom Kunden auswählbaren Schriftart.</p>
+          <p><strong>Keine Webanalyse, kein Tracking ohne Ihre Einwilligung.</strong> Für eigene Zwecke setzen wir auf der Website und in der Anwendung keine Webanalyse-Werkzeuge, keine Zählpixel, keinen Tag-Manager und keine Werbe- oder Social-Media-Pixel ein. Eine geräteübergreifende Wiedererkennung oder Profilbildung zu Werbezwecken findet nicht statt.</p>
+          <p><strong>Erfolgsmessung in Stellenanzeigen unserer Kunden.</strong> Für die Auswertung ihrer Stellenanzeigen können unsere Kunden eine Erfolgsmessung aktivieren. Rufen Sie eine solche Anzeige oder das zugehörige Bewerbungsformular auf, wird ein Zählpixel eines sozialen Netzwerks geladen und es werden Ereignisdaten an dessen Anbieter übermittelt, etwa der Aufruf der Anzeige und der Eingang einer Bewerbung. Das geschieht ausschließlich, wenn Sie zuvor ausdrücklich eingewilligt haben. Ohne Ihre Einwilligung wird das Zählpixel nicht geladen. Rechtsgrundlage ist Ihre Einwilligung nach Art. 6 Abs. 1 lit. a DSGVO, für den Zugriff auf Ihr Endgerät § 25 Abs. 1 TDDDG. Sie können die Einwilligung jederzeit mit Wirkung für die Zukunft widerrufen, Art. 7 Abs. 3 DSGVO. Verantwortlich für diese Erfolgsmessung ist das jeweilige Kundenunternehmen, siehe Abschnitt 9.</p>
+          <p><strong>Erforderlichkeit.</strong> Ohne Ihre E-Mail-Adresse können wir eine Anfrage nicht beantworten. Weitere Angaben sind freiwillig.</p>
         </section>
 
         <section>
-          <h2 class="text-xl font-semibold mb-2">6a. Zahlungsabwicklung über Stripe</h2>
-          <p>Für die Abwicklung kostenpflichtiger Tarife setzen wir Stripe Payments Europe Ltd. (Vertragspartner für EU-Kunden) bzw. Stripe Inc. (technische Verarbeitung in den USA) ein. Bei Aktivierung eines Tarifs werden Sie auf eine von Stripe gehostete Zahlungsseite weitergeleitet. Stripe verarbeitet dabei eigenverantwortlich Kartendaten und Bankverbindungen; ShortSelect erhält von Stripe ausschließlich nicht-sensible Metadaten (Stripe-Customer-ID, Subscription-Status, Rechnungsnummer, Rechnungs-PDF-URL).</p>
-          <p>Stripe stellt Rechnungen im Auftrag der LeyalTech (Yusuf Esentürk e.K.) aus. Die Rechnung enthält auf Wunsch Ihre Steuer-ID/USt-IdNr.; bei B2B-Kunden innerhalb der EU wird automatisch das Reverse-Charge-Verfahren angewandt (Stripe Tax).</p>
-          <p>Eine Kopie des AVV mit Stripe ist abrufbar unter <a href="https://stripe.com/de/legal/dpa" target="_blank" rel="noopener" class="text-[hsl(var(--primary))] hover:underline">stripe.com/de/legal/dpa</a>. Stripes eigene Datenschutzerklärung finden Sie unter <a href="https://stripe.com/de/privacy" target="_blank" rel="noopener" class="text-[hsl(var(--primary))] hover:underline">stripe.com/de/privacy</a>.</p>
-          <p>Während der kostenfreien Testphase ist die Eingabe einer Zahlungsmethode <strong>nicht</strong> erforderlich. Erst beim Hinterlegen einer Karte oder beim Wechsel auf einen kostenpflichtigen Tarif werden Zahlungsdaten an Stripe übermittelt.</p>
+          <h2 class="text-xl font-semibold mb-2">5. Nutzung der Plattform</h2>
+          <div class="overflow-x-auto">
+            <table class="w-full text-sm border border-muted-foreground/20">
+              <thead class="bg-muted/40">
+                <tr>
+                  <th class="text-left p-2 border-b border-muted-foreground/20">Verarbeitung</th>
+                  <th class="text-left p-2 border-b border-muted-foreground/20">Daten</th>
+                  <th class="text-left p-2 border-b border-muted-foreground/20">Zweck</th>
+                  <th class="text-left p-2 border-b border-muted-foreground/20">Rechtsgrundlage und berechtigtes Interesse</th>
+                  <th class="text-left p-2 border-b border-muted-foreground/20">Speicherdauer</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="p-2 border-b border-muted-foreground/10 align-top">Registrierung, Einladung, Kontoführung</td>
+                  <td class="p-2 border-b border-muted-foreground/10 align-top">Vorname, Nachname, E-Mail-Adresse, Unternehmen, Rolle, Mandantenzuordnung, Sprache, Zeitzone sowie Telefonnummer und Profilbild, sofern angegeben</td>
+                  <td class="p-2 border-b border-muted-foreground/10 align-top">Anlage und Verwaltung Ihres Zugangs, Zuordnung zum Unternehmen, Vergabe von Berechtigungen, Kommunikation zum Vertrag</td>
+                  <td class="p-2 border-b border-muted-foreground/10 align-top">Art. 6 Abs. 1 lit. b DSGVO, wenn Sie selbst Vertragspartner sind. Bei eingeladenen Teammitgliedern Art. 6 Abs. 1 lit. f DSGVO. Interesse an der Bereitstellung des vom Arbeitgeber beauftragten Zugangs, verarbeitet werden nur die dafür erforderlichen beruflichen Angaben.</td>
+                  <td class="p-2 border-b border-muted-foreground/10 align-top">Für die Dauer des Vertragsverhältnisses. Nach Vertragsende Löschung, soweit keine gesetzliche Aufbewahrungspflicht besteht.</td>
+                </tr>
+                <tr>
+                  <td class="p-2 border-b border-muted-foreground/10 align-top">Anmeldung, Sitzungsverwaltung, Passwortzurücksetzung</td>
+                  <td class="p-2 border-b border-muted-foreground/10 align-top">Passwort-Hash, Sitzungs- und Aktualisierungstoken, Anmeldezeitpunkte, IP-Adresse, Browserkennung, Token für die Zurücksetzung</td>
+                  <td class="p-2 border-b border-muted-foreground/10 align-top">Authentifizierung, Aufrechterhaltung der Sitzung, Wiederherstellung des Zugangs, Erkennung unberechtigter Zugriffe</td>
+                  <td class="p-2 border-b border-muted-foreground/10 align-top">Art. 6 Abs. 1 lit. b DSGVO, sonst Art. 6 Abs. 1 lit. f DSGVO. Für die sicherheitsbezogene Auswertung Art. 6 Abs. 1 lit. f DSGVO. Interesse am Schutz der gespeicherten Bewerber- und Kundendaten vor unbefugtem Zugriff.</td>
+                  <td class="p-2 border-b border-muted-foreground/10 align-top">Sitzungsdaten bis zur Abmeldung oder zum Ablauf der Sitzung, Token für die Zurücksetzung längstens 24 Stunden</td>
+                </tr>
+                <tr>
+                  <td class="p-2 border-b border-muted-foreground/10 align-top">Schutz vor automatisierten Anmeldeversuchen auf den Anmelde- und Registrierungsseiten</td>
+                  <td class="p-2 border-b border-muted-foreground/10 align-top">IP-Adresse, Browserkennung, Geräte- und Bildschirmeigenschaften, Eingabe- und Bewegungsmuster auf der Seite</td>
+                  <td class="p-2 border-b border-muted-foreground/10 align-top">Abwehr automatisierter Anmeldeversuche, Verhinderung der massenhaften Anlage von Konten, Schutz vor dem Ausprobieren erbeuteter Zugangsdaten</td>
+                  <td class="p-2 border-b border-muted-foreground/10 align-top">Art. 6 Abs. 1 lit. f DSGVO. Interesse am Schutz der Konten und der darin gespeicherten Bewerberdaten. Der Einsatz erfolgt nur auf diesen Seiten, es werden keine seitenübergreifenden Profile gebildet. Endgerätezugriff nach § 25 Abs. 2 Nr. 2 TDDDG einwilligungsfrei.</td>
+                  <td class="p-2 border-b border-muted-foreground/10 align-top">Speicherung durch den Dienstleister nach dessen Vorgaben</td>
+                </tr>
+                <tr>
+                  <td class="p-2 border-b border-muted-foreground/10 align-top">Nachweis der Annahme von AGB, Datenschutzerklärung und Auftragsverarbeitungsvertrag</td>
+                  <td class="p-2 border-b border-muted-foreground/10 align-top">Fassungsbezeichnung und Adresse des Dokuments, Kopie des angezeigten Zustimmungstextes, Zeitpunkt und Anlass sowie, soweit serverseitig verfügbar, IP-Adresse und Browserkennung</td>
+                  <td class="p-2 border-b border-muted-foreground/10 align-top">Nachweis, welche Fassung wann angenommen wurde</td>
+                  <td class="p-2 border-b border-muted-foreground/10 align-top">Art. 6 Abs. 1 lit. c DSGVO in Verbindung mit Art. 5 Abs. 2 und Art. 7 Abs. 1 DSGVO, ergänzend Art. 6 Abs. 1 lit. f DSGVO. Interesse an der Erfüllung der Rechenschaftspflicht.</td>
+                  <td class="p-2 border-b border-muted-foreground/10 align-top">Vertragsdauer und 3 Jahre, entsprechend der regelmäßigen Verjährungsfrist</td>
+                </tr>
+                <tr>
+                  <td class="p-2 border-b border-muted-foreground/10 align-top">Abrechnung und Zahlungsabwicklung</td>
+                  <td class="p-2 border-b border-muted-foreground/10 align-top">Tarif, Anzahl der Arbeitsplätze, Rechnungsanschrift, Umsatzsteuer-Identifikationsnummer, Zahlungsverlauf, Beginn und Ende der Testphase, Abonnementstatus, Kundenkennung beim Zahlungsdienstleister, Adressen der Rechnungsdokumente sowie beim Start eines Bezahlvorgangs IP-Adresse, Browserkennung und Zeitpunkt</td>
+                  <td class="p-2 border-b border-muted-foreground/10 align-top">Vertragsabwicklung, Rechnungsstellung, Steuerberechnung, Erkennung missbräuchlicher Bezahlvorgänge, Erfüllung handels- und steuerrechtlicher Pflichten</td>
+                  <td class="p-2 border-b border-muted-foreground/10 align-top">Art. 6 Abs. 1 lit. b DSGVO, Art. 6 Abs. 1 lit. c DSGVO in Verbindung mit § 147 AO und § 257 HGB, für die Missbrauchserkennung Art. 6 Abs. 1 lit. f DSGVO. Interesse an der Verhinderung von Zahlungsbetrug und missbräuchlicher Mehrfachnutzung der Testphase.</td>
+                  <td class="p-2 border-b border-muted-foreground/10 align-top">Siehe Abschnitt 14</td>
+                </tr>
+                <tr>
+                  <td class="p-2 border-b border-muted-foreground/10 align-top">Nutzungs- und Sicherheitsprotokolle innerhalb der Plattform</td>
+                  <td class="p-2 border-b border-muted-foreground/10 align-top">Zeitpunkt und Art der Aktion, handelndes Konto, betroffener Datensatz, bei sicherheitsrelevanten Vorgängen IP-Adresse und Browserkennung</td>
+                  <td class="p-2 border-b border-muted-foreground/10 align-top">Nachvollziehbarkeit von Änderungen, Erkennung und Aufklärung unberechtigter Zugriffe, Fehleranalyse, Erfüllung der Pflichten nach Art. 32 DSGVO</td>
+                  <td class="p-2 border-b border-muted-foreground/10 align-top">Art. 6 Abs. 1 lit. f DSGVO. Interesse an der Sicherheit der Plattform und an der Nachweisbarkeit von Zugriffen auf besonders schutzwürdige Bewerberdaten. Eine Leistungs- oder Verhaltenskontrolle einzelner Beschäftigter durch uns findet nicht statt.</td>
+                  <td class="p-2 border-b border-muted-foreground/10 align-top">Sicherheitsbezogene Serverprotokolle längstens 90 Tage, fachliche Aktivitätseinträge für die Dauer des zugehörigen Datensatzes</td>
+                </tr>
+                <tr>
+                  <td class="p-2 align-top">Systemnachrichten und Produkthinweise</td>
+                  <td class="p-2 align-top">E-Mail-Adresse, Name, Empfangs- und Zustellstatus</td>
+                  <td class="p-2 align-top">Vertragsbezogene Nachrichten wie Anmeldebestätigungen, Einladungen, Rechnungen und Hinweise zum Ablauf der Testphase, Sicherheits- und Wartungshinweise sowie Hinweise auf neue Funktionen</td>
+                  <td class="p-2 align-top">Art. 6 Abs. 1 lit. b DSGVO für vertragsbezogene Nachrichten, sonst und für Hinweise auf neue Funktionen Art. 6 Abs. 1 lit. f DSGVO. Interesse an der Information über das genutzte Produkt, geringe Frequenz, jederzeit abbestellbar. Für Werbung zu anderen Leistungen holen wir eine Einwilligung ein.</td>
+                  <td class="p-2 align-top">Bis zur Abmeldung oder zum Widerspruch</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p><strong>Erforderlichkeit.</strong> Ohne Name und E-Mail-Adresse kann kein Konto angelegt werden. Telefonnummer, Profilbild und Zeitzone sind freiwillig. Für einen kostenpflichtigen Tarif sind Rechnungsanschrift und Zahlungsmittel erforderlich, während der kostenfreien Testphase nicht.</p>
+          <p><strong>Zahlungsdienstleister.</strong> Vollständige Zahlungsmittelangaben verarbeiten wir nicht. Karten- und Bankdaten geben Sie ausschließlich auf einer Seite ein, die Stripe betreibt. Stripe Payments Europe Ltd., Irland, und Stripe, Inc., USA, verarbeiten diese Angaben als eigene Verantwortliche nach eigener Datenschutzerklärung, abrufbar unter <a href="https://stripe.com/de/privacy" target="_blank" rel="noopener" class="text-[hsl(var(--primary))] hover:underline">stripe.com/de/privacy</a>. Für die in unserem Auftrag erbrachte Abonnementverwaltung und Rechnungsstellung besteht ein Auftragsverarbeitungsvertrag, abrufbar unter <a href="https://stripe.com/de/legal/dpa" target="_blank" rel="noopener" class="text-[hsl(var(--primary))] hover:underline">stripe.com/de/legal/dpa</a>. Rechnungen werden im Namen und für Rechnung von Yusuf Esentürk ausgestellt. Bei Unternehmen innerhalb der EU wird das Reverse-Charge-Verfahren angewandt.</p>
+          <p><strong>Produktverbesserung.</strong> Zur Weiterentwicklung der Plattform werten wir ausschließlich zusammengefasste und anonymisierte Nutzungszahlen aus, die keinen Rückschluss auf einzelne Personen zulassen. Daten, die unsere Kunden in die Plattform einstellen, verwenden wir nicht zum Training allgemeiner KI-Modelle.</p>
         </section>
 
         <section>
-          <h2 class="text-xl font-semibold mb-2">7. Internationale Datenübermittlung</h2>
-          <p>Einige unserer Auftragsverarbeiter haben ihren Sitz in den USA oder anderen Drittländern. Übermittlungen erfolgen ausschließlich an Empfänger, die unter dem <strong>EU-US Data Privacy Framework (DPF)</strong> zertifiziert sind (Angemessenheitsbeschluss der EU-Kommission vom 10.07.2023, C(2023) 4745) und damit ein der DSGVO entsprechendes Schutzniveau gewährleisten.</p>
-          <p>Zusätzlich haben wir mit allen US-Auftragsverarbeitern die EU-Standardvertragsklauseln (Modul 2, Beschluss (EU) 2021/914) als Backup vereinbart und ein Transfer Impact Assessment (TIA) durchgeführt. Die Standardvertragsklauseln und das TIA sind auf Anfrage einsehbar.</p>
-          <p>Die jeweils aktuelle Liste der DPF-zertifizierten Unternehmen finden Sie unter <a href="https://www.dataprivacyframework.gov/list" target="_blank" rel="noopener" class="text-[hsl(var(--primary))] hover:underline">dataprivacyframework.gov/list</a>.</p>
+          <h2 class="text-xl font-semibold mb-2">6. Künstliche Intelligenz in der Plattform</h2>
+          <p>Die Plattform enthält Verfahren der künstlichen Intelligenz, die wir unter der Bezeichnung AgentBurst zusammenfassen. Sie werten Bewerbungsunterlagen aus und strukturieren sie, schätzen die fachliche Passung zu einer Stelle ein, bewerten Screening-Antworten und Gesprächsinhalte, erzeugen Texte und Zusammenfassungen, recherchieren und prüfen Kandidatenprofile in öffentlich zugänglichen Quellen und wandeln Sprache in Text um oder geben Text als Sprache aus. Eingesetzt werden dafür Anbieter von Sprachmodellen sowie Dienstleister für Spracherkennung und Sprachsynthese, siehe Abschnitt 11.</p>
+          <p><strong>Rechtsgrundlage.</strong> Wenden wir diese Verfahren im Auftrag eines Kundenunternehmens auf dessen Daten an, richtet sich die Rechtsgrundlage nach der Festlegung dieses Unternehmens. Setzen wir sie im Rahmen unserer eigenen Recherche ein, stützen wir uns auf Art. 6 Abs. 1 lit. f DSGVO, siehe Abschnitt 10.</p>
+          <p><strong>Logik und Faktoren.</strong> Bewertet wird anhand der Anforderungen und Schlüsselbegriffe, die das verantwortliche Unternehmen für die jeweilige Stelle hinterlegt hat. In die Bewertung fließen ein: Angaben aus Lebenslauf und Bewerbungsunterlagen, Berufserfahrung, Ausbildung, Zertifikate, Sprachkenntnisse, Fähigkeiten, Ortsangaben und Entfernungen, Antworten auf Screening-Fragen sowie Inhalte eines KI-gestützten Interviews. Zu jedem Ergebnis halten wir die maßgeblichen Faktoren fest, nicht nur einen Zahlenwert. Merkmale nach § 1 AGG, insbesondere Alter, Geschlecht, Herkunft, Religion, Behinderung und sexuelle Identität, werden nicht als Bewertungs- oder Filterkriterium verwendet. Das Lebensalter fließt in keine Bewertung ein.</p>
+          <p><strong>Automatisierte Entscheidungen, Art. 13 Abs. 2 lit. f DSGVO.</strong> Die Verfahren erzeugen Bewertungen, Rangfolgen, Empfehlungen und Vorschläge. Anhand vorab festgelegter Mindestanforderungen kann zusätzlich gekennzeichnet werden, dass eine Anforderung nicht erfüllt ist. Eine solche Kennzeichnung ist eine Empfehlung und führt nicht selbsttätig zu einer Absage. Über Einladung, Absage und Einstellung entscheidet eine natürliche Person beim verantwortlichen Unternehmen. Vor jeder Mitteilung an Sie muss eine natürliche Person den Vorgang geprüft haben.</p>
+          <p><strong>Ihre Rechte bei diesen Verfahren.</strong> Sie haben Anspruch auf Information über die eingesetzte Logik, auf das Eingreifen einer natürlichen Person, auf Darlegung Ihres Standpunkts und auf Anfechtung des Ergebnisses. Auf Verlangen erläutern wir Ihnen, welche Faktoren zu dem Sie betreffenden Ergebnis geführt haben. Betrifft die Bewertung Daten, die wir im Auftrag eines Kundenunternehmens verarbeiten, richten Sie diese Anliegen an dieses Unternehmen. Wir unterstützen es dabei.</p>
+          <p><strong>Einordnung nach der KI-Verordnung.</strong> Die bewertenden Verfahren zur Auswahl von Bewerbern sind ein Hochrisiko-KI-System nach Anhang III Nr. 4 der Verordnung (EU) 2024/1689. Anbieter im Sinne dieser Verordnung sind wir, Betreiber ist das Kundenunternehmen. Verfahren zur Erkennung von Emotionen und zur biometrischen Identifizierung setzen wir nicht ein.</p>
         </section>
 
         <section>
-          <h2 class="text-xl font-semibold mb-2">8. Bewerberdaten und Kunden-Tenants</h2>
-          <p>Wenn unsere Kunden, Recruiting-Agenturen und Personalvermittler, ShortSelect zur Verwaltung von Bewerbungen nutzen, verarbeiten wir Bewerberdaten ausschließlich als Auftragsverarbeiter des jeweiligen Kunden im Sinne von Art. 28 DSGVO. Verantwortlicher im Sinne der DSGVO ist insoweit der Kunde, nicht ShortSelect. Für diese Verarbeitung gelten die separaten Datenschutzhinweise des jeweiligen Kunden und der zwischen Kunde und uns geschlossene Auftragsverarbeitungsvertrag.</p>
-          <p>Wenn Sie sich auf eine ausgeschriebene Stelle bewerben, gelten die Datenschutzhinweise des jeweiligen Kunden auf der Karriereseite. Bewerberdaten werden grundsätzlich spätestens 6 Monate nach Abschluss des Bewerbungsverfahrens gelöscht (siehe Abschnitt 12).</p>
+          <h2 class="text-xl font-semibold mb-2">7. KI-gestütztes Interview</h2>
+          <p>Die Teilnahme an einem KI-gestützten Interview ist freiwillig. Sie sprechen dabei mit einem KI-System und nicht mit einem Menschen, die Stimme wird künstlich erzeugt. Vor Beginn werden Sie darauf hingewiesen und müssen ausdrücklich zustimmen. Lehnen Sie ab, entstehen Ihnen daraus keine Nachteile im Verfahren. Sie können das Gespräch jederzeit abbrechen.</p>
+          <p><strong>Ablauf und Daten.</strong> Das Gespräch findet in Ihrem Browser über eine verschlüsselte Echtzeitverbindung statt, die wir auf eigenen Servern in Deutschland betreiben. Ihre gesprochenen Antworten werden während des Gesprächs in Text umgewandelt und inhaltlich ausgewertet. Gespeichert werden das Wortprotokoll, die inhaltliche Bewertung, Beginn, Ende und Dauer, die gewählte Sprache sowie Zeitpunkt, Art und IP-Adresse Ihrer Einwilligung. Die Nutzung der Kamera ist optional und für das Gespräch nicht erforderlich.</p>
+          <p><strong>Rechtsgrundlage und Widerruf.</strong> Art. 6 Abs. 1 lit. a DSGVO. Sie können Ihre Einwilligung jederzeit mit Wirkung für die Zukunft widerrufen, Art. 7 Abs. 3 DSGVO. Die Auswertung wird dann sofort beendet. Die Rechtmäßigkeit der bis dahin erfolgten Verarbeitung bleibt unberührt. Auf Verlangen löschen wir das Wortprotokoll.</p>
+          <p><strong>Was wir nicht tun.</strong> Wir verwenden Ihre Stimme nicht zur biometrischen Identifizierung, nicht zur Erkennung von Emotionen oder Persönlichkeitsmerkmalen und nicht zur Nachbildung Ihrer Stimme. Die Auswertung bezieht sich ausschließlich auf den Inhalt Ihrer Antworten.</p>
+          <p><strong>Empfänger und Speicherdauer.</strong> Spracherkennung, Sprachsynthese und Gesprächsführung erfolgen durch Dienstleister nach Abschnitt 11. Wortprotokoll und Bewertung werden wie die übrigen Bewerbungsdaten gespeichert, regelmäßig längstens 6 Monate nach Abschluss des Verfahrens, sofern Sie keiner längeren Speicherung zugestimmt haben.</p>
         </section>
 
         <section>
-          <h2 class="text-xl font-semibold mb-2">9. Datenquelle bei Sourcing-Import</h2>
-          <p>Soweit unsere Kunden Kandidatenprofile aus öffentlich zugänglichen Quellen importieren (insbesondere LinkedIn, Xing, Stepstone, Indeed sowie öffentlich indexierte Profilseiten via Google), sind diese Quellen für die Erhebung der personenbezogenen Daten maßgeblich. Sie haben in diesem Fall ein Recht auf Auskunft über die Datenherkunft gemäß Art. 14 Abs. 2 lit. f DSGVO. Anfragen richten Sie bitte an den jeweiligen Verantwortlichen (Recruiting-Agentur oder Personalvermittler).</p>
+          <h2 class="text-xl font-semibold mb-2">8. Telefonie und Gesprächsaufzeichnung</h2>
+          <p>Die Plattform enthält eine Telefoniefunktion, mit der unsere Kunden aus der Anwendung heraus telefonieren können. Auf Veranlassung des Kunden können Gespräche aufgezeichnet, gespeichert, in Text umgewandelt und ausgewertet werden.</p>
+          <p><strong>Daten:</strong> Rufnummern der Beteiligten, Zeitpunkt, Dauer und Status des Gesprächs, Verbindungsqualitätsdaten sowie, auf Veranlassung des Kunden, die Aufzeichnung, das daraus erzeugte Wortprotokoll mit Sprecherzuordnung und eine inhaltliche Auswertung.</p>
+          <p><strong>Rolle und Rechtsgrundlage:</strong> Ob und wann aufgezeichnet wird, entscheidet das Kundenunternehmen. Insoweit sind wir Auftragsverarbeiter und verantwortlich ist das Kundenunternehmen. Für die reine Gesprächsvermittlung ist Rechtsgrundlage im Verhältnis zum Kunden Art. 6 Abs. 1 lit. b DSGVO. Für die Aufzeichnung ist die Einwilligung aller Gesprächsteilnehmer nach Art. 6 Abs. 1 lit. a DSGVO erforderlich. Das Aufnehmen des nicht öffentlich gesprochenen Wortes ohne Einwilligung ist nach § 201 StGB strafbar. Das verantwortliche Kundenunternehmen hat sicherzustellen, dass vor Beginn der Aufzeichnung ein Hinweis erfolgt und die Einwilligung eingeholt und dokumentiert wird.</p>
+          <p><strong>Empfänger und Speicherdauer:</strong> Gesprächsvermittlung und Aufzeichnung erfolgen über einen Dienstleister für Telefonie, die Umwandlung in Text über einen Anbieter von Sprachmodellen, siehe Abschnitt 11. Die Speicherdauer legt das Kundenunternehmen fest.</p>
         </section>
 
         <section>
-          <h2 class="text-xl font-semibold mb-2">10. Automatisierte Entscheidungen und KI-Einsatz</h2>
-          <p>Wir setzen KI-gestützte Verfahren zur Unterstützung des Bewerbungsprozesses ein:</p>
+          <h2 class="text-xl font-semibold mb-2">9. Daten, die unsere Kunden in die Plattform einstellen</h2>
+          <p>Stellt ein Kundenunternehmen Bewerbungsunterlagen, Kandidatenprofile, Bewertungen, Notizen, Termine, Nachrichten oder Daten seiner eigenen Auftraggeber in die Plattform ein, verarbeiten wir diese weisungsgebunden im Auftrag dieses Unternehmens, Art. 28 DSGVO. Verantwortlicher ist das Kundenunternehmen. Es legt Zwecke, Rechtsgrundlagen und Speicherfristen fest und informiert die betroffenen Personen. Bewerbungsdaten werden nach Festlegung des Kundenunternehmens gespeichert, regelmäßig längstens 6 Monate nach Abschluss des Verfahrens.</p>
+          <p>Bewerben Sie sich über eine Karriereseite, ein Bewerbungsformular, ein eingebettetes Stellenmodul oder ein Kundenportal eines unserer Kunden, gelten die Datenschutzhinweise dieses Unternehmens. Anliegen zu diesen Daten richten Sie bitte an das jeweilige Kundenunternehmen. Erreichen uns solche Anliegen unmittelbar, leiten wir sie unverzüglich weiter und unterstützen das Unternehmen bei der Beantwortung.</p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-semibold mb-2">10. Kandidatendaten, für die wir selbst verantwortlich sind</h2>
+          <p>Für einen abgegrenzten Teil der Kandidatenverarbeitung sind wir nicht Auftragsverarbeiter, sondern Verantwortlicher nach Art. 4 Nr. 7 DSGVO, weil wir über Zweck und Mittel selbst entscheiden. Betroffen sind:</p>
           <ul class="list-disc pl-6">
-            <li>Anthropic Claude für Lebenslauf-Analyse und Matching-Bewertung</li>
-            <li>OpenAI für ergänzende Sprachverarbeitung</li>
-            <li>Deepgram für Speech-to-Text bei Telefon-/Video-Interviews</li>
-            <li>ElevenLabs für Text-to-Speech bei Telefon-/Video-Interviews</li>
+            <li>ein von uns betriebener, mandantenübergreifender Zwischenspeicher, in dem wir aus öffentlich zugänglichen Quellen abgerufene Profildaten für alle Kundenunternehmen gemeinsam vorhalten, um wiederholte Abrufe zu vermeiden,</li>
+            <li>die Übermittlung von Namen, Profiladressen und Suchanfragen an unsere Dienstleister für Websuche, Seitenabruf und Kontaktdatenanreicherung,</li>
+            <li>die Auswertung öffentlich zugänglicher Quellen durch Sprachmodelle zur Vorauswahl und Qualitätsprüfung.</li>
           </ul>
-          <p>Diese KI-Verfahren liefern lediglich <strong>Vorschläge</strong>, die jeder Bewerbung zugewiesen werden. Die finale Entscheidung über Einladung, Absage oder Einstellung trifft ausschließlich der menschliche Recruiter unseres Kunden. Es findet <strong>keine ausschließlich automatisierte Entscheidung</strong> im Sinne von Art. 22 DSGVO statt.</p>
-          <p>Sie haben das Recht:</p>
+          <p><strong>Datenkategorien:</strong> Name, öffentlich zugängliches Profilbild, Berufsbezeichnung, aktueller Arbeitgeber, Position, Ort, öffentlich zugängliche Kurzbeschreibung, Berufserfahrung, Ausbildung, Zertifikate, Sprachkenntnisse, Fähigkeiten sowie geschäftliche Kontaktdaten, soweit ermittelt.</p>
+          <p><strong>Herkunft der Daten, Art. 14 Abs. 2 lit. f DSGVO:</strong> öffentlich zugängliche Berufsnetzwerke, öffentlich zugängliche Unternehmens- und Teamseiten, öffentliche Verzeichnisse, öffentlich zugängliche Auftritte in sozialen Netzwerken, Suchmaschinenergebnisse sowie Dienstleister zur Ermittlung geschäftlicher Kontaktdaten.</p>
+          <p><strong>Zweck:</strong> Auffinden und Vorauswahl von Personen, die für offene Stellen unserer Kundenunternehmen in Betracht kommen, und Bereitstellung dieser Vorauswahl an das jeweilige Kundenunternehmen.</p>
+          <p><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. f DSGVO. Unser berechtigtes Interesse und das Interesse unserer Kundenunternehmen besteht in der Besetzung offener Stellen und der wirtschaftlichen Erbringung von Personalvermittlungsleistungen. Bei der Abwägung berücksichtigen wir, dass ausschließlich Angaben verarbeitet werden, die die betroffene Person selbst oder ihr Arbeitgeber im beruflichen Zusammenhang öffentlich zugänglich gemacht hat, dass sich die Verarbeitung auf die berufliche Sphäre beschränkt, dass besondere Kategorien personenbezogener Daten nach Art. 9 DSGVO nicht gezielt verarbeitet werden, dass das Lebensalter nicht bewertet wird und dass die Zwischenspeicherung befristet ist. Personen, die einer Ansprache widersprochen haben, werden dauerhaft ausgeschlossen.</p>
+          <p><strong>Speicherdauer:</strong> Der Zwischenspeicher ist auf 30 Tage ab dem Abruf befristet, danach werden die Daten nicht mehr verwendet. Wird ein Profil von einem Kundenunternehmen übernommen, richtet sich die weitere Speicherung nach der Festlegung dieses Unternehmens. Sperrvermerke aus einem Widerspruch bewahren wir dauerhaft auf, damit der Widerspruch dauerhaft beachtet werden kann.</p>
+          <p><strong>Information der betroffenen Personen, Art. 14 Abs. 3 DSGVO:</strong> Wir informieren Sie spätestens mit der ersten Kontaktaufnahme, jedenfalls innerhalb eines Monats nach der Erhebung. Verfügen wir über keine Kontaktdaten, tritt diese Erklärung an die Stelle der Einzelbenachrichtigung.</p>
+          <p><strong>Widerspruch:</strong> Sie können dieser Verarbeitung jederzeit nach Art. 21 Abs. 1 DSGVO widersprechen, siehe Abschnitt 16. Bei einem Widerspruch entfernen wir Ihre Daten aus dem Zwischenspeicher und nehmen Sie dauerhaft von der weiteren Erfassung aus.</p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-semibold mb-2">11. Empfänger</h2>
+          <p>Wir nennen die Empfänger nach Kategorien, Art. 13 Abs. 1 lit. e DSGVO. Die namentliche Liste unserer Auftragsverarbeiter mit Firmierung, Sitz und Übermittlungsgrundlage finden Sie unter <a href="/legal/subprocessors/" class="text-[hsl(var(--primary))] hover:underline">shortselect.com/legal/subprocessors</a>. Mit allen Auftragsverarbeitern bestehen Verträge nach Art. 28 DSGVO. Auf Anfrage nennen wir Ihnen die Namen der Empfänger, die Sie betreffende Daten erhalten haben.</p>
+          <div class="overflow-x-auto">
+            <table class="w-full text-sm border border-muted-foreground/20">
+              <thead class="bg-muted/40">
+                <tr>
+                  <th class="text-left p-2 border-b border-muted-foreground/20">Kategorie</th>
+                  <th class="text-left p-2 border-b border-muted-foreground/20">Zweck</th>
+                  <th class="text-left p-2 border-b border-muted-foreground/20">Sitz</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td class="p-2 border-b border-muted-foreground/10 align-top">Anbieter für Datenbank, Authentifizierung, Dateispeicher und Anwendungsfunktionen</td><td class="p-2 border-b border-muted-foreground/10 align-top">Betrieb der Plattform</td><td class="p-2 border-b border-muted-foreground/10 align-top">EU</td></tr>
+                <tr><td class="p-2 border-b border-muted-foreground/10 align-top">Serveranbieter für unsere eigenbetriebenen Dienste</td><td class="p-2 border-b border-muted-foreground/10 align-top">Dokumenterzeugung, Ablaufsteuerung, Echtzeitverbindung und Gesprächsführung im KI-Interview</td><td class="p-2 border-b border-muted-foreground/10 align-top">Deutschland</td></tr>
+                <tr><td class="p-2 border-b border-muted-foreground/10 align-top">Anbieter für Auslieferung, Netzwerkschutz und Abwehr automatisierter Zugriffe</td><td class="p-2 border-b border-muted-foreground/10 align-top">Bereitstellung von Website und Anwendung, Schutz der Anmeldeseiten, Weiterleitung eingehender E-Mails, Verwaltung und Namensauflösung eigener Domänen unserer Kunden</td><td class="p-2 border-b border-muted-foreground/10 align-top">USA</td></tr>
+                <tr><td class="p-2 border-b border-muted-foreground/10 align-top">Zahlungsdienstleister: Stripe Payments Europe Ltd. und Stripe, Inc.</td><td class="p-2 border-b border-muted-foreground/10 align-top">Zahlungsabwicklung, Abonnements, Rechnungen, Steuerberechnung</td><td class="p-2 border-b border-muted-foreground/10 align-top">Irland und USA</td></tr>
+                <tr><td class="p-2 border-b border-muted-foreground/10 align-top">Anbieter für den Versand von E-Mails</td><td class="p-2 border-b border-muted-foreground/10 align-top">Anmelde-, Einladungs-, Rechnungs- und Benachrichtigungsnachrichten</td><td class="p-2 border-b border-muted-foreground/10 align-top">USA, Versandinfrastruktur in Irland</td></tr>
+                <tr><td class="p-2 border-b border-muted-foreground/10 align-top">Anbieter von Sprachmodellen</td><td class="p-2 border-b border-muted-foreground/10 align-top">Auswertung, Bewertung, Qualitätsprüfung, Textgenerierung, Gesprächsführung im KI-Interview, Umwandlung von Telefonaten in Text</td><td class="p-2 border-b border-muted-foreground/10 align-top">USA</td></tr>
+                <tr><td class="p-2 border-b border-muted-foreground/10 align-top">Dienstleister für Spracherkennung</td><td class="p-2 border-b border-muted-foreground/10 align-top">Umwandlung Ihrer Antworten im KI-Interview in Text</td><td class="p-2 border-b border-muted-foreground/10 align-top">USA</td></tr>
+                <tr><td class="p-2 border-b border-muted-foreground/10 align-top">Dienstleister für Sprachsynthese</td><td class="p-2 border-b border-muted-foreground/10 align-top">Sprachausgabe im KI-Interview</td><td class="p-2 border-b border-muted-foreground/10 align-top">USA</td></tr>
+                <tr><td class="p-2 border-b border-muted-foreground/10 align-top">Dienstleister für Telefonie mit Gesprächsaufzeichnung</td><td class="p-2 border-b border-muted-foreground/10 align-top">Gesprächsvermittlung, Rufnummernverwaltung, Aufzeichnung auf Veranlassung des Kunden</td><td class="p-2 border-b border-muted-foreground/10 align-top">USA</td></tr>
+                <tr><td class="p-2 border-b border-muted-foreground/10 align-top">Dienstleister für Websuche</td><td class="p-2 border-b border-muted-foreground/10 align-top">Auffinden und Überprüfen öffentlich zugänglicher Profil- und Unternehmensinformationen</td><td class="p-2 border-b border-muted-foreground/10 align-top">Drittland</td></tr>
+                <tr><td class="p-2 border-b border-muted-foreground/10 align-top">Dienstleister für den Abruf öffentlich zugänglicher Webseiten</td><td class="p-2 border-b border-muted-foreground/10 align-top">Abruf öffentlich zugänglicher Profil- und Teamseiten</td><td class="p-2 border-b border-muted-foreground/10 align-top">Drittland</td></tr>
+                <tr><td class="p-2 border-b border-muted-foreground/10 align-top">Dienstleister für die automatisierte Datenerhebung aus sozialen Netzwerken</td><td class="p-2 border-b border-muted-foreground/10 align-top">Auswertung öffentlich zugänglicher Unternehmensauftritte</td><td class="p-2 border-b border-muted-foreground/10 align-top">Drittland</td></tr>
+                <tr><td class="p-2 border-b border-muted-foreground/10 align-top">Dienstleister zur Kontaktdatenanreicherung</td><td class="p-2 border-b border-muted-foreground/10 align-top">Ermittlung geschäftlicher E-Mail-Adressen und Telefonnummern</td><td class="p-2 border-b border-muted-foreground/10 align-top">Drittland</td></tr>
+                <tr><td class="p-2 border-b border-muted-foreground/10 align-top">Dienstleister für den Versand von Erstansprache-Nachrichten</td><td class="p-2 border-b border-muted-foreground/10 align-top">Versand und Verwaltung von Erstkontakt-Nachrichten im Auftrag des Kunden</td><td class="p-2 border-b border-muted-foreground/10 align-top">USA</td></tr>
+                <tr><td class="p-2 border-b border-muted-foreground/10 align-top">Anbieter von Postfach-, Kalender- und Videokonferenzdiensten</td><td class="p-2 border-b border-muted-foreground/10 align-top">Anbindung auf ausdrücklichen Wunsch des Kunden</td><td class="p-2 border-b border-muted-foreground/10 align-top">USA und Irland</td></tr>
+                <tr><td class="p-2 border-b border-muted-foreground/10 align-top">Anbieter von Werbeplattformen</td><td class="p-2 border-b border-muted-foreground/10 align-top">Anbindung von Kampagnen und Lead-Formularen auf ausdrücklichen Wunsch des Kunden, Erfolgsmessung von Stellenanzeigen über ein Zählpixel nach Ihrer Einwilligung, siehe Abschnitt 4</td><td class="p-2 border-b border-muted-foreground/10 align-top">Irland und USA</td></tr>
+                <tr><td class="p-2 align-top">Anbieter für eingebettete Videos</td><td class="p-2 align-top">Wiedergabe von Videos, die ein Kundenunternehmen in ein Kundenportal einbindet. Bereits das Vorschaubild wird beim Aufruf der Seite vom Anbieter geladen, dabei wird Ihre IP-Adresse dorthin übertragen.</td><td class="p-2 align-top">USA</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>Daneben können Behörden und Gerichte Empfänger sein, soweit wir gesetzlich zur Auskunft verpflichtet sind, sowie Steuerberatung und Rechtsberatung im Rahmen ihrer Beauftragung.</p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-semibold mb-2">12. Übermittlung in Drittländer</h2>
+          <p>Ein Teil der genannten Empfänger hat seinen Sitz in den Vereinigten Staaten oder in anderen Drittländern. Wir stützen diese Übermittlungen auf folgende Grundlagen:</p>
           <ul class="list-disc pl-6">
-            <li>auf Information über die eingesetzte Logik (Art. 13 Abs. 2 lit. f DSGVO)</li>
-            <li>auf menschliche Überprüfung jeder vorgeschlagenen Entscheidung</li>
-            <li>auf Darlegung Ihres Standpunkts und Anfechtung der vorgeschlagenen Entscheidung</li>
-            <li>auf Auskunft, welche Datenpunkte in den KI-Score eingeflossen sind</li>
+            <li>Für Empfänger, die unter dem EU-US Data Privacy Framework zertifiziert sind: auf den Angemessenheitsbeschluss der Europäischen Kommission vom 10.07.2023, C(2023) 4745, Art. 45 Abs. 3 DSGVO.</li>
+            <li>Ergänzend und für alle übrigen Empfänger in Drittländern: auf die Standardvertragsklauseln der Europäischen Kommission, Durchführungsbeschluss (EU) 2021/914, Art. 46 Abs. 2 lit. c DSGVO, verbunden mit einer Bewertung der Rechtslage im Empfängerland und zusätzlichen Schutzmaßnahmen wie Verschlüsselung während der Übertragung und Beschränkung der übermittelten Datenfelder.</li>
           </ul>
-          <p>Unser KI-System fällt unter den EU AI Act (Verordnung (EU) 2024/1689) als Hochrisiko-System nach Anhang III Nr. 4 (Bewerberauswahl). Die Anbieter-Pflichten aus Art. 9–15 KI-VO erfüllen wir ab dem 02.08.2026.</p>
+          <p>Gegen den Angemessenheitsbeschluss ist ein Rechtsmittel beim Gerichtshof der Europäischen Union anhängig, Rechtssache C-703/25 P. Das Gericht der Europäischen Union hat die Klage in erster Instanz am 03.09.2025 abgewiesen, Rechtssache T-553/23. Der Beschluss ist bis zu einer anderslautenden Entscheidung wirksam.</p>
+          <p>Trotz dieser Garantien lässt sich nicht vollständig ausschließen, dass Behörden in Drittländern auf Grundlage dortiger Vorschriften Zugriff auf übermittelte Daten nehmen und dass Rechtsbehelfe dort nicht in gleichem Umfang zur Verfügung stehen wie in der Europäischen Union.</p>
+          <p>Welche Empfänger unter dem Data Privacy Framework zertifiziert sind, können Sie unter <a href="https://www.dataprivacyframework.gov/list" target="_blank" rel="noopener" class="text-[hsl(var(--primary))] hover:underline">dataprivacyframework.gov/list</a> prüfen. Die Standardvertragsklauseln sind Bestandteil der Auftragsverarbeitungsbedingungen der jeweiligen Anbieter und dort öffentlich abrufbar. Auf Anfrage an hello@shortselect.com nennen wir Ihnen die für einen bestimmten Empfänger einschlägige Fundstelle.</p>
         </section>
 
         <section>
-          <h2 class="text-xl font-semibold mb-2">11. Voice-Daten und KI-Interview</h2>
-          <p>Im Rahmen unseres optionalen KI-gestützten Telefon- oder Video-Interviews nehmen wir mit Ihrer ausdrücklichen Einwilligung (Art. 6 Abs. 1 lit. a, Art. 7 DSGVO) Audio-Daten auf, die in Echtzeit transkribiert (Deepgram) und vom KI-System ausgewertet werden.</p>
-          <p><strong>Wir verwenden Ihre Stimme nicht zur biometrischen Identifizierung, nicht zur Emotionserkennung und nicht zum Voice-Cloning.</strong> Die Audio-Verarbeitung dient ausschließlich der Transkription Ihrer Antworten und der inhaltlichen Bewertung im Rahmen des Bewerbungsverfahrens.</p>
-          <p>Audio-Daten werden 30 Tage nach dem Interview automatisch gelöscht. Das Transkript bleibt im Bewerberprofil bis zur Löschung gemäß § 15 Abs. 4 AGG (max. 6 Monate nach Verfahrensabschluss).</p>
-          <p>Sie können die Einwilligung jederzeit widerrufen (§ 7 Abs. 3 DSGVO i.V.m. § 26 BDSG); die Auswertung wird dann sofort beendet, ohne dass dies negative Folgen für Ihre Bewerbung hat.</p>
+          <h2 class="text-xl font-semibold mb-2">13. Cookies und Zugriff auf Ihr Endgerät</h2>
+          <p>Folgende Technologien sind für den Betrieb unbedingt erforderlich:</p>
+          <ul class="list-disc pl-6">
+            <li>Sitzungsdaten der Anmeldung im lokalen Speicher Ihres Browsers, bis zur Abmeldung</li>
+            <li>das Cookie <code>__cf_bm</code> zur Unterscheidung menschlicher von automatisierten Zugriffen, Laufzeit 30 Minuten</li>
+            <li>der Schutz vor automatisierten Anmeldeversuchen auf den Anmelde- und Registrierungsseiten, siehe Abschnitt 5</li>
+          </ul>
+          <p>Diese Technologien sind nach § 25 Abs. 2 Nr. 2 TDDDG einwilligungsfrei, weil sie für den von Ihnen gewünschten Dienst unbedingt erforderlich sind.</p>
+          <p>Nicht erforderlich und deshalb nur mit Ihrer Einwilligung nach § 25 Abs. 1 TDDDG ist das Zählpixel zur Erfolgsmessung von Stellenanzeigen, siehe Abschnitt 4. Es setzt die Cookies <code>_fbp</code> und <code>_fbc</code> des Anbieters. Ohne Ihre Einwilligung wird es nicht geladen, und Sie können die Einwilligung jederzeit mit Wirkung für die Zukunft widerrufen. Weitere Werkzeuge zur Reichweitenmessung, zur Werbung oder zur geräteübergreifenden Wiedererkennung setzen wir nicht ein. Sollten wir das künftig tun, holen wir vorher Ihre Einwilligung nach § 25 Abs. 1 TDDDG in Verbindung mit Art. 6 Abs. 1 lit. a DSGVO ein.</p>
         </section>
 
         <section>
-          <h2 class="text-xl font-semibold mb-2">12. Speicherdauer</h2>
-          <p>Wir speichern personenbezogene Daten nur so lange, wie sie für die genannten Zwecke erforderlich sind oder gesetzliche Aufbewahrungs- und Nachweispflichten bestehen.</p>
+          <h2 class="text-xl font-semibold mb-2">14. Speicherdauer im Überblick</h2>
           <div class="overflow-x-auto">
             <table class="w-full text-sm border border-muted-foreground/20">
               <thead class="bg-muted/40">
@@ -173,58 +335,60 @@ import MarketingLayout from '../layouts/MarketingLayout.astro';
                 </tr>
               </thead>
               <tbody>
-                <tr><td class="p-2 border-b border-muted-foreground/10 align-top">Account-Stammdaten (Recruiter / Plattform-Nutzer)</td><td class="p-2 border-b border-muted-foreground/10 align-top">Dauer des Vertrages + 3 Jahre für Audit; Löschung 90 Tage nach Vertragsende</td></tr>
-                <tr><td class="p-2 border-b border-muted-foreground/10 align-top">Authentifizierungs-/Session-Daten</td><td class="p-2 border-b border-muted-foreground/10 align-top">Bis zum Logout, Server-Log max. 90 Tage</td></tr>
-                <tr><td class="p-2 border-b border-muted-foreground/10 align-top">Akzeptanz-Audit AGB / Datenschutz / AVV</td><td class="p-2 border-b border-muted-foreground/10 align-top">Dauer des Vertrages + 3 Jahre</td></tr>
-                <tr><td class="p-2 border-b border-muted-foreground/10 align-top">Rechnungs- und Abrechnungsdaten (inkl. Stripe-Customer-ID, Rechnungsnummern, Belege)</td><td class="p-2 border-b border-muted-foreground/10 align-top">10 Jahre nach Ende des Geschäftsjahres (§ 147 AO, § 257 HGB)</td></tr>
-                <tr><td class="p-2 border-b border-muted-foreground/10 align-top">Subscription-Status (Trial-/Subscription-/Cancellation-Verlauf)</td><td class="p-2 border-b border-muted-foreground/10 align-top">Dauer des Vertrages + 90 Tage nach letztem aktiven Status (Reaktivierungs-Fenster); danach Anonymisierung mit Beibehalten der buchhalterischen Einträge</td></tr>
-                <tr><td class="p-2 border-b border-muted-foreground/10 align-top">Stripe-Webhook-Events (Idempotenz-Log)</td><td class="p-2 border-b border-muted-foreground/10 align-top">180 Tage</td></tr>
-                <tr><td class="p-2 border-b border-muted-foreground/10 align-top">Bewerberdaten (vom Kunden verarbeitet)</td><td class="p-2 border-b border-muted-foreground/10 align-top">Spätestens 6 Monate nach Abschluss des Bewerbungsverfahrens (§ 15 Abs. 4 AGG, § 61b ArbGG); längere Aufbewahrung nur mit ausdrücklicher Einwilligung des Bewerbers</td></tr>
-                <tr><td class="p-2 border-b border-muted-foreground/10 align-top">Audio-Aufnahmen aus AI-Interviews</td><td class="p-2 border-b border-muted-foreground/10 align-top">30 Tage</td></tr>
-                <tr><td class="p-2 border-b border-muted-foreground/10 align-top">Transkripte aus AI-Interviews</td><td class="p-2 border-b border-muted-foreground/10 align-top">Wie Bewerberdaten (max. 6 Monate)</td></tr>
-                <tr><td class="p-2 align-top">Server-Logs zu Sicherheits- und Missbrauchszwecken</td><td class="p-2 align-top">Maximal 90 Tage</td></tr>
+                <tr><td class="p-2 border-b border-muted-foreground/10 align-top">Server-Protokolldaten der Website</td><td class="p-2 border-b border-muted-foreground/10 align-top">Löschung nach den Vorgaben des Hosting-Dienstleisters, längstens 30 Tage</td></tr>
+                <tr><td class="p-2 border-b border-muted-foreground/10 align-top">Cookie <code>__cf_bm</code></td><td class="p-2 border-b border-muted-foreground/10 align-top">30 Minuten</td></tr>
+                <tr><td class="p-2 border-b border-muted-foreground/10 align-top">E-Mail-Korrespondenz ohne Vertragsbezug</td><td class="p-2 border-b border-muted-foreground/10 align-top">Bis zur Erledigung, danach 6 Monate</td></tr>
+                <tr><td class="p-2 border-b border-muted-foreground/10 align-top">Kontostammdaten der Plattform-Nutzer</td><td class="p-2 border-b border-muted-foreground/10 align-top">Vertragsdauer, danach Löschung, soweit keine Aufbewahrungspflicht besteht</td></tr>
+                <tr><td class="p-2 border-b border-muted-foreground/10 align-top">Anmelde- und Sitzungsdaten</td><td class="p-2 border-b border-muted-foreground/10 align-top">Bis zur Abmeldung, Token für die Passwortzurücksetzung längstens 24 Stunden</td></tr>
+                <tr><td class="p-2 border-b border-muted-foreground/10 align-top">Sicherheitsbezogene Serverprotokolle der Plattform</td><td class="p-2 border-b border-muted-foreground/10 align-top">Längstens 90 Tage</td></tr>
+                <tr><td class="p-2 border-b border-muted-foreground/10 align-top">Nachweise über die Annahme von AGB, Datenschutzerklärung und Auftragsverarbeitungsvertrag</td><td class="p-2 border-b border-muted-foreground/10 align-top">Vertragsdauer und 3 Jahre</td></tr>
+                <tr><td class="p-2 border-b border-muted-foreground/10 align-top">Buchungsbelege einschließlich Rechnungen</td><td class="p-2 border-b border-muted-foreground/10 align-top">8 Jahre nach Ende des Kalenderjahres, § 147 Abs. 3 Satz 1 AO, § 257 Abs. 4 HGB in der seit 01.01.2025 geltenden Fassung</td></tr>
+                <tr><td class="p-2 border-b border-muted-foreground/10 align-top">Jahresabschlüsse, Handelsbücher, Inventare</td><td class="p-2 border-b border-muted-foreground/10 align-top">10 Jahre nach Ende des Kalenderjahres</td></tr>
+                <tr><td class="p-2 border-b border-muted-foreground/10 align-top">Handels- und Geschäftsbriefe</td><td class="p-2 border-b border-muted-foreground/10 align-top">6 Jahre nach Ende des Kalenderjahres</td></tr>
+                <tr><td class="p-2 border-b border-muted-foreground/10 align-top">Abonnementstatus</td><td class="p-2 border-b border-muted-foreground/10 align-top">Vertragsdauer und 90 Tage, danach Anonymisierung unter Beibehaltung der buchhalterischen Einträge</td></tr>
+                <tr><td class="p-2 border-b border-muted-foreground/10 align-top">Protokolle der Zahlungsereignisse</td><td class="p-2 border-b border-muted-foreground/10 align-top">180 Tage</td></tr>
+                <tr><td class="p-2 border-b border-muted-foreground/10 align-top">Wortprotokolle und Bewertungen aus dem KI-Interview</td><td class="p-2 border-b border-muted-foreground/10 align-top">Wie die übrigen Bewerbungsdaten, regelmäßig längstens 6 Monate nach Abschluss des Verfahrens</td></tr>
+                <tr><td class="p-2 border-b border-muted-foreground/10 align-top">Aufzeichnungen und Wortprotokolle von Telefonaten</td><td class="p-2 border-b border-muted-foreground/10 align-top">Nach Festlegung des Kundenunternehmens</td></tr>
+                <tr><td class="p-2 border-b border-muted-foreground/10 align-top">Zwischenspeicher öffentlich abgerufener Profildaten</td><td class="p-2 border-b border-muted-foreground/10 align-top">30 Tage ab Abruf</td></tr>
+                <tr><td class="p-2 align-top">Bewerbungsdaten in der Verantwortung unserer Kunden</td><td class="p-2 align-top">Nach Festlegung des Kunden, regelmäßig längstens 6 Monate nach Abschluss des Verfahrens</td></tr>
               </tbody>
             </table>
           </div>
+          <p>Läuft eine steuerliche Festsetzungsfrist noch, verlängert sich die Aufbewahrung entsprechend, § 147 Abs. 3 Satz 5 AO.</p>
         </section>
 
         <section>
-          <h2 class="text-xl font-semibold mb-2">13. Cookies und ähnliche Technologien (§ 25 TDDDG)</h2>
-          <p>Wir verwenden auf unserer Website und in der App ausschließlich technisch notwendige Cookies, die für den Betrieb erforderlich sind:</p>
-          <ul class="list-disc pl-6">
-            <li>Login-Session-Cookies (Supabase Auth)</li>
-            <li>CSRF-Schutz-Tokens</li>
-            <li>Bot-Mitigation durch Cloudflare (z.B. <code>__cf_bm</code>)</li>
-          </ul>
-          <p>Diese Cookies erfordern nach § 25 Abs. 2 Nr. 2 TDDDG keine Einwilligung. Tracking-, Marketing- oder Analyse-Cookies setzen wir nicht ein. Sollten wir in Zukunft solche Cookies einsetzen, holen wir Ihre Einwilligung gemäß § 25 Abs. 1 TDDDG i.V.m. Art. 6 Abs. 1 lit. a DSGVO ein, bevor diese gesetzt werden.</p>
+          <h2 class="text-xl font-semibold mb-2">15. Ihre Rechte</h2>
+          <p>Sie haben das Recht auf Auskunft nach Art. 15 DSGVO, auf Berichtigung nach Art. 16 DSGVO, auf Löschung nach Art. 17 DSGVO, auf Einschränkung der Verarbeitung nach Art. 18 DSGVO, auf Datenübertragbarkeit nach Art. 20 DSGVO, auf Widerspruch nach Art. 21 DSGVO, siehe den gesonderten Abschnitt 16, auf Widerruf einer erteilten Einwilligung mit Wirkung für die Zukunft nach Art. 7 Abs. 3 DSGVO sowie auf Beschwerde bei einer Aufsichtsbehörde nach Art. 77 DSGVO.</p>
+          <p>Diese Rechte stehen Ihnen als natürlicher Person persönlich zu, auch dann, wenn Sie die Plattform ausschließlich beruflich nutzen und Ihr Arbeitgeber unser Vertragspartner ist. Sie müssen Ihr Anliegen nicht über Ihren Arbeitgeber stellen. Betrifft Ihr Anliegen Daten, die wir im Auftrag eines Kundenunternehmens verarbeiten, richten Sie es bitte an dieses Unternehmen, siehe Abschnitt 9.</p>
+          <p>Zur Ausübung genügt eine formlose Nachricht an <a href="mailto:hello@shortselect.com" class="text-[hsl(var(--primary))] hover:underline">hello@shortselect.com</a>. Wir antworten innerhalb eines Monats nach Eingang, Art. 12 Abs. 3 DSGVO.</p>
+        </section>
+
+        <section class="border-2 border-[hsl(var(--primary))] rounded-lg p-5">
+          <h2 class="text-xl font-semibold mb-2">16. Ihr Widerspruchsrecht nach Art. 21 DSGVO</h2>
+          <p><strong>Sie haben das Recht, aus Gründen, die sich aus Ihrer besonderen Situation ergeben, jederzeit gegen die Verarbeitung Sie betreffender personenbezogener Daten Widerspruch einzulegen, die auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO erfolgt.</strong></p>
+          <p><strong>Das betrifft insbesondere die Server-Protokolldaten und den Schutz vor automatisierten Zugriffen nach Abschnitt 4, die Bearbeitung von Anfragen nach Abschnitt 4, die Verwaltung eingeladener Zugänge, die sicherheitsbezogene Auswertung von Anmeldedaten, den Nachweis angenommener Dokumente, die Erkennung missbräuchlicher Bezahlvorgänge, die Nutzungs- und Sicherheitsprotokolle und die Hinweise auf neue Funktionen nach Abschnitt 5 sowie die Beschaffung und Verarbeitung von Kandidatendaten aus öffentlich zugänglichen Quellen nach Abschnitt 10.</strong></p>
+          <p><strong>Nach einem Widerspruch verarbeiten wir die betroffenen Daten nicht mehr, es sei denn, wir können zwingende schutzwürdige Gründe für die Verarbeitung nachweisen, die Ihre Interessen, Rechte und Freiheiten überwiegen, oder die Verarbeitung dient der Geltendmachung, Ausübung oder Verteidigung von Rechtsansprüchen.</strong></p>
+          <p><strong>Werden Ihre Daten verarbeitet, um Direktwerbung zu betreiben, haben Sie das Recht, jederzeit und ohne Angabe von Gründen Widerspruch einzulegen. Nach einem solchen Widerspruch verarbeiten wir Ihre Daten für diesen Zweck nicht mehr.</strong></p>
+          <p><strong>Für den Widerspruch genügt eine Nachricht an <a href="mailto:hello@shortselect.com" class="text-[hsl(var(--primary))] hover:underline">hello@shortselect.com</a>. Eine bestimmte Form ist nicht erforderlich.</strong></p>
         </section>
 
         <section>
-          <h2 class="text-xl font-semibold mb-2">14. Ihre Rechte</h2>
-          <p>Sie haben nach Maßgabe der DSGVO insbesondere folgende Rechte:</p>
-          <ul class="list-disc pl-6">
-            <li><strong>Auskunft</strong> über die zu Ihrer Person gespeicherten Daten (Art. 15)</li>
-            <li><strong>Berichtigung</strong> unrichtiger Daten (Art. 16)</li>
-            <li><strong>Löschung</strong> Ihrer Daten (Art. 17)</li>
-            <li><strong>Einschränkung</strong> der Verarbeitung (Art. 18)</li>
-            <li><strong>Datenübertragbarkeit</strong> (Art. 20): Sie erhalten die Sie betreffenden personenbezogenen Daten, die Sie uns bereitgestellt haben, in einem strukturierten, gängigen und maschinenlesbaren Format (JSON oder CSV), soweit die Verarbeitung auf Ihrer Einwilligung oder einem Vertrag mit uns beruht und automatisiert erfolgt. Bewerberdaten, die wir im Auftrag unserer Kunden verarbeiten, sind direkt an die jeweilige Recruiting-Agentur als Verantwortlichen zu richten. Wir unterstützen die Agentur bei der Erfüllung Ihres Anspruchs.</li>
-            <li><strong>Widerspruch</strong> gegen bestimmte Verarbeitungen (Art. 21)</li>
-            <li><strong>Widerruf</strong> einer erteilten Einwilligung mit Wirkung für die Zukunft (Art. 7 Abs. 3)</li>
-            <li><strong>Beschwerde</strong> bei einer Datenschutz-Aufsichtsbehörde (Art. 77, siehe Abschnitt 2)</li>
-          </ul>
+          <h2 class="text-xl font-semibold mb-2">17. Datensicherheit</h2>
+          <p>Wir sichern die Übertragung mit anerkannten Verschlüsselungsverfahren ab und speichern Daten verschlüsselt. Der Zugriff innerhalb der Plattform ist mandantenweise getrennt und über Berechtigungen auf Datenbankebene abgesichert. Weitere technische und organisatorische Maßnahmen nach Art. 32 DSGVO sind im Auftragsverarbeitungsvertrag beschrieben.</p>
         </section>
 
         <section>
-          <h2 class="text-xl font-semibold mb-2">15. Anpassung dieser Datenschutzerklärung</h2>
-          <p>Wir aktualisieren diese Datenschutzerklärung, sofern Änderungen an unseren Verarbeitungen, neue rechtliche Vorgaben oder neue Sub-Prozessoren dies erfordern. Bei wesentlichen Änderungen, die Pflichten oder Rechte der Betroffenen berühren, informieren wir Sie mindestens 30 Tage vor Wirksamwerden in Textform und bitten Sie bei Ihrem nächsten Login um erneute Kenntnisnahme. Diese Kenntnisnahme wird zu Audit-Zwecken protokolliert.</p>
+          <h2 class="text-xl font-semibold mb-2">18. Änderungen dieser Datenschutzerklärung</h2>
+          <p>Wir passen diese Erklärung an, wenn sich unsere Verarbeitungen, die eingesetzten Dienstleister oder die rechtlichen Vorgaben ändern. Es gilt jeweils die hier abrufbare Fassung. Bei wesentlichen Änderungen informieren wir angemeldete Nutzer mindestens 30 Tage vor Wirksamwerden in Textform und bitten bei der nächsten Anmeldung um Kenntnisnahme. Diese Kenntnisnahme wird zu Nachweiszwecken protokolliert. Frühere Fassungen halten wir vor und stellen sie auf Anfrage zur Verfügung.</p>
         </section>
 
         <section>
-          <h2 class="text-xl font-semibold mb-2">16. Kontakt</h2>
-          <p>Bei Fragen zum Datenschutz oder zur Geltendmachung Ihrer Rechte erreichen Sie uns unter <a href="mailto:hello@shortselect.com" class="text-[hsl(var(--primary))] hover:underline">hello@shortselect.com</a>.</p>
+          <h2 class="text-xl font-semibold mb-2">19. Kontakt</h2>
+          <p>Bei Fragen zum Datenschutz und zur Ausübung Ihrer Rechte erreichen Sie uns unter <a href="mailto:hello@shortselect.com" class="text-[hsl(var(--primary))] hover:underline">hello@shortselect.com</a> oder unter der in Abschnitt 2 genannten Anschrift.</p>
         </section>
 
-        <p class="text-sm text-muted-foreground mt-8">Stand: 10. Mai 2026 · Version 2.1 · Rückfragen: hello@shortselect.com</p>
+        <p class="text-sm text-muted-foreground mt-8">Fassung {VERSION_LABEL}, Stand: {VERSION_DATE}. Vorherige Fassung: Version 2.1 vom 10. Mai 2026.</p>
       </div>
     </div>
   </section>

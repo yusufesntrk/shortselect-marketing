@@ -2,36 +2,321 @@
 import MarketingLayout from '../../layouts/MarketingLayout.astro';
 
 // Unterauftragsverarbeiter (Sub-Prozessoren) von ShortSelect.
-// Diese Liste spiegelt die in der Datenschutzerklärung (Abschnitt 6) genannten
-// Auftragsverarbeiter wider. Keine erfundenen Anbieter, nur real eingesetzte Dienste.
-const subprocessors = [
-  { name: "Supabase Inc.", purpose: "Datenbank, Authentifizierung, Storage, Edge Functions", region: "EU (Frankfurt)", privacy: "https://supabase.com/privacy" },
-  { name: "Hetzner Online GmbH", purpose: "Server für PDF-Generierung, Workflow-Automation, WebRTC, Bot-Orchestrierung", region: "Deutschland (Falkenstein)", privacy: "https://www.hetzner.com/rechtliches/datenschutz" },
-  { name: "Cloudflare Inc.", purpose: "Hosting Marketing-Site und App-Frontend, CDN, Bot-Schutz", region: "USA / global (DPF + SCC)", privacy: "https://www.cloudflare.com/privacypolicy/" },
-  { name: "Resend (Ra Resende Inc.)", purpose: "Transaktionale E-Mails (Login-Bestätigung, Einladungen, Rechnungen)", region: "USA (DPF + SCC)", privacy: "https://resend.com/legal/privacy-policy" },
-  { name: "Stripe Payments Europe Ltd. / Stripe Inc.", purpose: "Zahlungsabwicklung, Subscription-Management, Rechnungsstellung, Steuer-Berechnung, Customer Portal", region: "Irland / USA (DPF + SCC)", privacy: "https://stripe.com/privacy" },
-  { name: "Anthropic PBC", purpose: "KI-Verarbeitung: Lebenslauf-Analyse, Matching, Screening, AI-Interview", region: "USA (DPF + SCC)", privacy: "https://www.anthropic.com/legal/privacy" },
-  { name: "OpenAI", purpose: "KI-Sprachmodelle", region: "USA (DPF + SCC)", privacy: "https://openai.com/policies/privacy-policy/" },
-  { name: "Deepgram Inc.", purpose: "Speech-to-Text beim AI-Interview", region: "USA (SCC + TIA)", privacy: "https://deepgram.com/privacy" },
-  { name: "ElevenLabs Inc.", purpose: "Text-to-Speech beim AI-Interview", region: "USA (DPF + SCC)", privacy: "https://elevenlabs.io/privacy-policy" },
-  { name: "Google LLC", purpose: "Calendar- und Gmail-OAuth-Integration auf Wunsch des Kunden", region: "USA / Irland (DPF + SCC)", privacy: "https://policies.google.com/privacy" },
-  { name: "Microsoft Corp.", purpose: "Outlook-OAuth-Integration auf Wunsch des Kunden", region: "USA / Irland (DPF + SCC)", privacy: "https://privacy.microsoft.com/privacystatement" },
-  { name: "Zoom Video Communications", purpose: "Video-Termin-Integration auf Wunsch des Kunden", region: "USA (DPF + SCC)", privacy: "https://www.zoom.com/en/trust/privacy/" },
-  { name: "LinkedIn Corp.", purpose: "Provider-API für Sourcing-Funktionen", region: "USA / Irland (DPF über Microsoft + SCC)", privacy: "https://www.linkedin.com/legal/privacy-policy" },
-  { name: "Meta Platforms Ireland Ltd.", purpose: "Lead-Ads, Marketing-API auf Wunsch des Kunden", region: "Irland / USA (DPF + SCC)", privacy: "https://www.facebook.com/privacy/policy/" },
-  { name: "Indeed", purpose: "Apply-Integration auf Wunsch des Kunden", region: "USA (SCC + TIA)", privacy: "https://www.indeed.com/legal/privacy" },
-  { name: "Stepstone", purpose: "Push und Quality-Signals", region: "Deutschland", privacy: "https://www.stepstone.de/ueber-stepstone/datenschutz/" },
-  { name: "Whapi (WhatsApp-Provider)", purpose: "WhatsApp-Chat-Integration auf Wunsch des Kunden", region: "Israel / USA (SCC)", privacy: "https://whapi.cloud/" },
+// Diese Liste ist Bestandteil des Auftragsverarbeitungsvertrags (Anlage 3,
+// Version avv-v2026-07-27) und muss mit src/content/avv/avv-v2.md im App-Repo
+// deckungsgleich bleiben. Nur real eingesetzte Dienste, gegen den Code verifiziert.
+
+const STAND = '27. Juli 2026';
+
+type SubprocessorRow = {
+  name: string;
+  seat: string;
+  purpose: string;
+  data: string;
+  place: string;
+  basis: string;
+  privacy: string | null;
+};
+
+type SubprocessorGroup = {
+  title: string;
+  note?: string;
+  rows: SubprocessorRow[];
+};
+
+const groups: SubprocessorGroup[] = [
+  {
+    title: 'Infrastruktur und Betrieb',
+    rows: [
+      {
+        name: 'Supabase, Inc.',
+        seat: 'Vereinigte Staaten',
+        purpose: 'Datenbank, Anmeldeverwaltung, Dateiablage, serverseitige Funktionen',
+        data: 'alle Plattformdaten einschließlich besonderer Kategorien',
+        place: 'Frankfurt am Main, Verwaltungszugriff aus den Vereinigten Staaten möglich',
+        basis: 'Standardvertragsklauseln, Data Privacy Framework',
+        privacy: 'https://supabase.com/privacy',
+      },
+      {
+        name: 'Amazon Web Services EMEA SARL',
+        seat: 'Luxemburg',
+        purpose: 'Rechenzentrumsinfrastruktur unterhalb von Supabase',
+        data: 'alle Plattformdaten, kein eigener inhaltlicher Zugriff',
+        place: 'Frankfurt am Main',
+        basis: 'Verarbeitung im Europäischen Wirtschaftsraum',
+        privacy: 'https://aws.amazon.com/de/privacy/',
+      },
+      {
+        name: 'Hetzner Online GmbH',
+        seat: 'Gunzenhausen, Deutschland',
+        purpose: 'Server für Dokumentenerzeugung, Ablaufsteuerung, Echtzeitkommunikation und Sprachdialog',
+        data: 'Dokumenten-, Sprach- und Ablaufdaten',
+        place: 'Falkenstein und Gunzenhausen, Deutschland',
+        basis: 'Verarbeitung im Europäischen Wirtschaftsraum',
+        privacy: 'https://www.hetzner.com/rechtliches/datenschutz',
+      },
+      {
+        name: 'Cloudflare, Inc.',
+        seat: 'San Francisco, Vereinigte Staaten',
+        purpose: 'Auslieferung der Anwendung, Namensauflösung, Abwehr von Angriffen, Bot-Prüfung bei der Anmeldung',
+        data: 'Verbindungsdaten, IP-Adressen, im Transit sämtliche Anfrageinhalte',
+        place: 'globales Netz',
+        basis: 'Standardvertragsklauseln, Data Privacy Framework',
+        privacy: 'https://www.cloudflare.com/privacypolicy/',
+      },
+    ],
+  },
+  {
+    title: 'Kommunikation',
+    rows: [
+      {
+        name: 'Ra Resende, Inc. (Resend)',
+        seat: 'Vereinigte Staaten',
+        purpose: 'Versand transaktionaler E-Mails',
+        data: 'Empfängeradresse, Betreff, Inhalt, Anhänge',
+        place: 'Vereinigte Staaten',
+        basis: 'Standardvertragsklauseln, Data Privacy Framework',
+        privacy: 'https://resend.com/legal/privacy-policy',
+      },
+      {
+        name: 'Twilio Inc.',
+        seat: 'San Francisco, Vereinigte Staaten',
+        purpose: 'Telefonie über die Plattform, Rufnummernverwaltung, Aufzeichnung von Telefongesprächen',
+        data: 'Telefonnummern, Verbindungsdaten, Audioaufzeichnungen, Teilnehmermetadaten',
+        place: 'Vereinigte Staaten',
+        basis: 'Standardvertragsklauseln, Data Privacy Framework',
+        privacy: 'https://www.twilio.com/en-us/legal/privacy',
+      },
+      {
+        name: 'Google Ireland Limited und Google LLC',
+        seat: 'Dublin, Irland',
+        purpose: 'Anbindung von Postfach und Kalender auf Wunsch des Kunden',
+        data: 'E-Mail-Inhalte, Anhänge, Termindaten',
+        place: 'Irland und Vereinigte Staaten',
+        basis: 'Standardvertragsklauseln, Data Privacy Framework',
+        privacy: 'https://policies.google.com/privacy',
+      },
+      {
+        name: 'Microsoft Ireland Operations Limited',
+        seat: 'Dublin, Irland',
+        purpose: 'Anbindung von Postfach, Kalender und Besprechungen auf Wunsch des Kunden',
+        data: 'E-Mail- und Termindaten',
+        place: 'Irland und Vereinigte Staaten',
+        basis: 'Standardvertragsklauseln, Data Privacy Framework',
+        privacy: 'https://privacy.microsoft.com/privacystatement',
+      },
+      {
+        name: 'Zoom Communications, Inc.',
+        seat: 'San Jose, Vereinigte Staaten',
+        purpose: 'Videotermine auf Wunsch des Kunden',
+        data: 'Teilnehmerdaten, Termindaten',
+        place: 'Vereinigte Staaten',
+        basis: 'Standardvertragsklauseln, Data Privacy Framework',
+        privacy: 'https://www.zoom.com/en/trust/privacy/',
+      },
+    ],
+  },
+  {
+    title: 'Systeme künstlicher Intelligenz',
+    rows: [
+      {
+        name: 'Anthropic PBC',
+        seat: 'San Francisco, Vereinigte Staaten',
+        purpose: 'Auswertung von Profilen, Abgleich mit Stellenanforderungen, Qualitätsprüfung, Gesprächsführung im KI-Interview',
+        data: 'Lebenslaufinhalte, Profildaten, Interviewinhalte',
+        place: 'Vereinigte Staaten',
+        basis: 'Standardvertragsklauseln, Data Privacy Framework',
+        privacy: 'https://www.anthropic.com/legal/privacy',
+      },
+      {
+        name: 'OpenAI Ireland Limited und OpenAI, L.L.C.',
+        seat: 'Dublin, Irland',
+        purpose: 'Zusammenfassungen, Extraktion und Vektorbildung sowie Transkription und Sprecherzuordnung von Telefonaufzeichnungen',
+        data: 'Lebenslaufinhalte, Audioaufzeichnungen, Transkripte',
+        place: 'Irland und Vereinigte Staaten',
+        basis: 'Standardvertragsklauseln, Data Privacy Framework',
+        privacy: 'https://openai.com/policies/privacy-policy/',
+      },
+      {
+        name: 'Deepgram, Inc.',
+        seat: 'Vereinigte Staaten',
+        purpose: 'Spracherkennung im KI-Interview',
+        data: 'Sprachaufzeichnungen, Transkripte',
+        place: 'Vereinigte Staaten',
+        basis: 'Standardvertragsklauseln',
+        privacy: 'https://deepgram.com/privacy',
+      },
+      {
+        name: 'ElevenLabs Inc.',
+        seat: 'New York, Vereinigte Staaten',
+        purpose: 'Sprachausgabe im KI-Interview',
+        data: 'ausgehender Text',
+        place: 'Vereinigte Staaten',
+        basis: 'Standardvertragsklauseln, Data Privacy Framework',
+        privacy: 'https://elevenlabs.io/privacy-policy',
+      },
+      {
+        name: 'Google Ireland Limited und Google LLC',
+        seat: 'Dublin, Irland',
+        purpose: 'Sprachmodell zur Auswertung von Unternehmenswebseiten und Personenverzeichnissen',
+        data: 'Namen, Funktionen, Kontaktangaben von Beschäftigten dritter Unternehmen',
+        place: 'Irland und Vereinigte Staaten',
+        basis: 'Standardvertragsklauseln, Data Privacy Framework',
+        privacy: 'https://policies.google.com/privacy',
+      },
+    ],
+  },
+  {
+    title: 'Recherche, Direktansprache und Anreicherung',
+    rows: [
+      {
+        name: 'Apify Technologies s.r.o.',
+        seat: 'Prag, Tschechien',
+        purpose: 'Erhebung öffentlich zugänglicher Profil- und Interaktionsdaten aus sozialen Netzwerken',
+        data: 'Namen, Profilkennungen, öffentliche Profilinhalte, Interaktionsdaten',
+        place: 'Tschechien',
+        basis: 'Verarbeitung im Europäischen Wirtschaftsraum',
+        privacy: 'https://apify.com/privacy-policy',
+      },
+      {
+        name: 'Exa Labs, Inc.',
+        seat: 'San Francisco, Vereinigte Staaten',
+        purpose: 'Semantische Websuche zur Verifikation und Anreicherung von Kandidatenprofilen',
+        data: 'Name, Arbeitgeber, Ort und Fachgebiet als Suchanfrage, Suchergebnisse mit Personenbezug',
+        place: 'Vereinigte Staaten',
+        basis: 'Standardvertragsklauseln',
+        privacy: 'https://exa.ai/privacy-policy',
+      },
+      {
+        name: 'Dienstleister zur Kontaktdatenanreicherung',
+        seat: '[ZU KLÄREN: Sitzland]',
+        purpose: 'Ermittlung dienstlicher und privater Kontaktdaten zu Kandidaten',
+        data: 'Name, Arbeitgeber, Netzwerkkennung, als Ergebnis E-Mail-Adressen und Telefonnummern',
+        place: '[ZU KLÄREN]',
+        basis: '[ZU KLÄREN]',
+        privacy: null,
+      },
+      {
+        name: 'LinkedIn Ireland Unlimited Company',
+        seat: 'Dublin, Irland',
+        purpose: 'Abruf öffentlicher Profildaten und Profilbilder für die Direktansprache',
+        data: 'Profildaten, Profilbilder',
+        place: 'Irland und Vereinigte Staaten',
+        basis: 'Standardvertragsklauseln, Data Privacy Framework',
+        privacy: 'https://www.linkedin.com/legal/privacy-policy',
+      },
+    ],
+  },
+  {
+    title: 'Stellenanzeigen und Personalmarketing',
+    rows: [
+      {
+        name: 'Meta Platforms Ireland Limited',
+        seat: 'Dublin, Irland',
+        purpose: 'Schaltung von Stellenanzeigen und Bewerbungsformularen sowie Messung von Seitenaufrufen und Bewerbungen im Bewerbungstrichter über ein Zählpixel, jeweils auf Wunsch des Kunden',
+        data: 'Kontaktdaten, Angaben aus Bewerbungsformularen, IP-Adresse, Browserkennung und Ereignisdaten der Besucher des Bewerbungstrichters',
+        place: 'Irland und Vereinigte Staaten',
+        basis: 'Standardvertragsklauseln, Data Privacy Framework',
+        privacy: 'https://www.facebook.com/privacy/policy/',
+      },
+      {
+        name: 'Indeed Ireland Operations Limited',
+        seat: 'Dublin, Irland',
+        purpose: 'Anbindung des Bewerbungsprozesses auf Wunsch des Kunden',
+        data: 'Bewerbungsdaten',
+        place: 'Irland und Vereinigte Staaten',
+        basis: 'Standardvertragsklauseln, Data Privacy Framework',
+        privacy: 'https://de.indeed.com/legal/privacy',
+      },
+      {
+        name: 'StepStone GmbH',
+        seat: 'Düsseldorf, Deutschland',
+        purpose: 'Veröffentlichung von Stellenanzeigen und Rückmeldung von Qualitätssignalen',
+        data: 'Stellendaten, Bewerbungssignale',
+        place: 'Deutschland',
+        basis: 'Verarbeitung im Europäischen Wirtschaftsraum',
+        privacy: 'https://www.stepstone.de/ueber-stepstone/datenschutz/',
+      },
+    ],
+  },
+  {
+    title: 'Eingebettete Videoinhalte',
+    note: 'Diese Anbieter erhalten keine Bewerbungsinhalte. Sie erhalten die Verbindungsdaten der Personen, die eine Ansicht mit einem eingebetteten Video aufrufen, weil das Video unmittelbar von deren Servern geladen wird. Bindet der Kunde kein Video ein, findet keine Übermittlung statt. Schriftarten liefern wir ausschließlich von unseren eigenen Servern aus, an einen Schriftartendienst werden keine Daten übermittelt. Die genauen Firmierungen der Videoanbieter tragen wir nach.',
+    rows: [
+      {
+        name: 'Google LLC (YouTube)',
+        seat: 'Vereinigte Staaten',
+        purpose: 'Wiedergabe eingebetteter Videos und Vorschaubilder, wenn der Kunde ein Video einbindet',
+        data: 'IP-Adresse, Browserkennung, aufgerufenes Video',
+        place: 'globales Netz',
+        basis: 'Standardvertragsklauseln, Data Privacy Framework',
+        privacy: 'https://policies.google.com/privacy',
+      },
+      {
+        name: 'Vimeo',
+        seat: 'Vereinigte Staaten',
+        purpose: 'Wiedergabe eingebetteter Videos, wenn der Kunde ein Video einbindet',
+        data: 'IP-Adresse, Browserkennung, aufgerufenes Video',
+        place: 'Vereinigte Staaten',
+        basis: 'Standardvertragsklauseln',
+        privacy: 'https://vimeo.com/privacy',
+      },
+      {
+        name: 'Loom',
+        seat: 'Vereinigte Staaten',
+        purpose: 'Wiedergabe eingebetteter Videos, wenn der Kunde ein Video einbindet',
+        data: 'IP-Adresse, Browserkennung, aufgerufenes Video',
+        place: 'Vereinigte Staaten',
+        basis: 'Standardvertragsklauseln',
+        privacy: 'https://www.loom.com/privacy',
+      },
+    ],
+  },
+  {
+    title: 'Zahlungsabwicklung',
+    rows: [
+      {
+        name: 'Stripe Payments Europe, Limited',
+        seat: 'Dublin, Irland',
+        purpose: 'Zahlungsabwicklung und Abonnementverwaltung. Betrifft ausschließlich Daten unserer Kunden, keine Bewerberdaten.',
+        data: 'Firmierung, Ansprechpartner, Rechnungs- und Zahlungsdaten',
+        place: 'Irland und Vereinigte Staaten',
+        basis: 'Standardvertragsklauseln, Data Privacy Framework',
+        privacy: 'https://stripe.com/privacy',
+      },
+    ],
+  },
+];
+
+const inactive = [
+  {
+    name: 'Whapi',
+    purpose: 'Nachrichtenversand über einen Kurznachrichtendienst',
+    status: 'technisch vorbereitet, im Produktivbetrieb nicht aktiv',
+  },
+];
+
+const history = [
+  {
+    version: 'avv-v2026-07-27',
+    date: '27.07.2026',
+    change:
+      'Aufnahme von Twilio Inc., Apify Technologies s.r.o., Exa Labs, Inc., einem Dienstleister zur Kontaktdatenanreicherung und Amazon Web Services EMEA SARL. Aufnahme von Google als Anbieter eines Sprachmodells sowie der Anbieter eingebetteter Videoinhalte. Erweiterung des Zwecks von OpenAI um Transkription und Vektorbildung und des Zwecks von Meta um das Zählpixel im Bewerbungstrichter. Ergänzung von Sitz, Datenkategorien, Ort der Verarbeitung und Übermittlungsgrundlage je Anbieter. Whapi als vorbereitet, aber nicht aktiv gekennzeichnet.',
+  },
+  {
+    version: '1',
+    date: '12.07.2026',
+    change: 'Erste veröffentlichte Fassung',
+  },
 ];
 ---
 
 <MarketingLayout
   title="Unterauftragsverarbeiter | ShortSelect"
-  description="Liste der Unterauftragsverarbeiter (Sub-Prozessoren), die ShortSelect zur Bereitstellung der Plattform einsetzt, mit Zweck, Verarbeitungsregion und Datenschutz-Link."
-  noindex={true}
+  description="Liste der Unterauftragsverarbeiter, die ShortSelect zur Bereitstellung der Plattform einsetzt, mit Sitz, Zweck, Datenkategorien, Ort der Verarbeitung und Übermittlungsgrundlage."
 >
   <section class="pt-32 pb-20 md:pb-28">
-    <div class="container mx-auto px-4 max-w-4xl">
+    <div class="container mx-auto px-4 max-w-6xl">
       <nav class="flex items-center gap-1.5 text-sm text-muted-foreground mb-6">
         <a href="/datenschutz/" class="hover:text-foreground transition-colors">Datenschutz</a>
         <svg class="h-3.5 w-3.5" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
@@ -39,35 +324,112 @@ const subprocessors = [
       </nav>
 
       <h1 class="text-3xl font-display font-bold mb-2">Unterauftragsverarbeiter</h1>
-      <p class="text-sm text-muted-foreground mb-8">Stand: 12. Juli 2026</p>
+      <p class="text-sm text-muted-foreground mb-8">Letzte Aktualisierung: {STAND}</p>
 
       <div class="prose-legal space-y-6">
         <p>
-          Für den Betrieb von ShortSelect setzen wir sorgfältig ausgewählte Dienstleister als Unterauftragsverarbeiter (Sub-Prozessoren) im Sinne von Art. 28 DSGVO ein. Mit allen hier genannten Anbietern bestehen Verträge zur Auftragsverarbeitung. Bei Übermittlungen in Drittländer stützen wir uns auf das EU-US Data Privacy Framework (DPF), auf EU-Standardvertragsklauseln (SCC) sowie, wo erforderlich, auf ein Transfer Impact Assessment (TIA).
+          Für den Betrieb von ShortSelect setzen wir Dienstleister als Unterauftragsverarbeiter im Sinne von Art. 28 der Datenschutz-Grundverordnung ein. Diese Übersicht entspricht Anlage 3 des Auftragsverarbeitungsvertrags (Version avv-v2026-07-27) und benennt alle Anbieter, die im Auftrag unserer Kunden personenbezogene Daten verarbeiten.
         </p>
         <p>
-          Diese Übersicht ergänzt Abschnitt 6 unserer <a href="/datenschutz/" class="text-[hsl(var(--primary))] hover:underline">Datenschutzerklärung</a>. Nicht jeder Dienst wird für jeden Kunden aktiv; Integrationen wie Kalender, E-Mail, Video oder WhatsApp werden nur auf ausdrücklichen Wunsch des jeweiligen Kunden verbunden.
+          <strong>Verträge nach Art. 28 DSGVO:</strong> Wir setzen Unterauftragsverarbeiter nur auf der Grundlage eines Vertrags nach Art. 28 der Datenschutz-Grundverordnung ein. Die Einholung und Ablage der Vertragsunterlagen ist für einen Teil der hier genannten Anbieter noch nicht abgeschlossen. Wir holen das nach und legen Kunden die Unterlagen auf Anforderung vor.
+        </p>
+        <p>
+          <strong>Änderungen:</strong> Wir informieren unsere Kunden mindestens 30 Kalendertage vor der Hinzuziehung eines neuen oder dem Austausch eines bestehenden Unterauftragsverarbeiters in Textform. Kunden können der Änderung innerhalb von 30 Kalendertagen aus datenschutzrechtlichen Gründen begründet widersprechen. Die Einzelheiten regelt § 7 des Auftragsverarbeitungsvertrags.
+        </p>
+        <p>
+          <strong>Übermittlung in Drittländer:</strong> Übermittlungen an Empfänger außerhalb des Europäischen Wirtschaftsraums stützen wir auf die Standardvertragsklauseln der Europäischen Kommission (Durchführungsbeschluss (EU) 2021/914) in Verbindung mit einer Bewertung der Rechtslage im Empfängerland. Die Spalte Übermittlungsgrundlage nennt die für den jeweiligen Anbieter maßgebliche Grundlage. Eine zusätzliche Zertifizierung nach dem EU-US Data Privacy Framework tritt daneben und ersetzt die Standardvertragsklauseln nicht. Die Dokumentation legen wir Kunden auf Anforderung vor.
+        </p>
+        <p>
+          <strong>Keine Verwendung zu Trainingszwecken:</strong> Personenbezogene Daten unserer Kunden verwenden wir nicht zum Training, zur Weiterentwicklung oder zur Verbesserung von Modellen künstlicher Intelligenz. Die eingesetzten Anbieter verpflichten wir vertraglich zu demselben Verbot.
+        </p>
+        <p>
+          Nicht jeder Dienst wird für jeden Kunden aktiv. Integrationen wie Kalender, Postfach, Video, Stellenbörsen und Werbekonten werden nur auf ausdrücklichen Wunsch des jeweiligen Kunden verbunden.
         </p>
 
+        {groups.map((group) => (
+          <div class="space-y-3">
+            <h2 class="text-xl font-semibold pt-4">{group.title}</h2>
+            {group.note && <p>{group.note}</p>}
+            <div class="overflow-x-auto">
+              <table class="w-full text-sm border border-muted-foreground/20 min-w-[52rem]">
+                <thead class="bg-muted/40">
+                  <tr>
+                    <th class="text-left p-2 border-b border-muted-foreground/20">Anbieter</th>
+                    <th class="text-left p-2 border-b border-muted-foreground/20">Sitz</th>
+                    <th class="text-left p-2 border-b border-muted-foreground/20">Zweck</th>
+                    <th class="text-left p-2 border-b border-muted-foreground/20">Datenkategorien</th>
+                    <th class="text-left p-2 border-b border-muted-foreground/20">Ort der Verarbeitung</th>
+                    <th class="text-left p-2 border-b border-muted-foreground/20">Übermittlungsgrundlage</th>
+                    <th class="text-left p-2 border-b border-muted-foreground/20">Datenschutz</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {group.rows.map((sub) => (
+                    <tr>
+                      <td class="p-2 border-b border-muted-foreground/10 align-top font-medium">{sub.name}</td>
+                      <td class="p-2 border-b border-muted-foreground/10 align-top">{sub.seat}</td>
+                      <td class="p-2 border-b border-muted-foreground/10 align-top">{sub.purpose}</td>
+                      <td class="p-2 border-b border-muted-foreground/10 align-top">{sub.data}</td>
+                      <td class="p-2 border-b border-muted-foreground/10 align-top">{sub.place}</td>
+                      <td class="p-2 border-b border-muted-foreground/10 align-top">{sub.basis}</td>
+                      <td class="p-2 border-b border-muted-foreground/10 align-top">
+                        {sub.privacy ? (
+                          <a href={sub.privacy} target="_blank" rel="noopener" class="text-[hsl(var(--primary))] hover:underline">Datenschutz</a>
+                        ) : (
+                          <span class="text-muted-foreground">auf Anfrage</span>
+                        )}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        ))}
+
+        <h2 class="text-xl font-semibold pt-4">Hinweis zum Dienstleister für Kontaktdatenanreicherung</h2>
+        <p>
+          Diesen Anbieter führen wir mit Zweck, Datenkategorien und Übermittlungsgrundlage, jedoch ohne Firmierung. Die vollständige Firmierung teilen wir unseren Kunden auf Anforderung in Textform mit. Kunden dürfen die Angabe zur Erfüllung ihrer Informationspflichten nach Art. 13 und 14 der Datenschutz-Grundverordnung verwenden. Anfragen richten Sie an <a href="mailto:hello@shortselect.com" class="text-[hsl(var(--primary))] hover:underline">hello@shortselect.com</a>.
+        </p>
+
+        <h2 class="text-xl font-semibold pt-4">Vorbereitete, derzeit nicht aktive Anbindungen</h2>
         <div class="overflow-x-auto">
           <table class="w-full text-sm border border-muted-foreground/20">
             <thead class="bg-muted/40">
               <tr>
                 <th class="text-left p-2 border-b border-muted-foreground/20">Anbieter</th>
                 <th class="text-left p-2 border-b border-muted-foreground/20">Zweck</th>
-                <th class="text-left p-2 border-b border-muted-foreground/20">Ort/Region der Verarbeitung</th>
-                <th class="text-left p-2 border-b border-muted-foreground/20">Datenschutz</th>
+                <th class="text-left p-2 border-b border-muted-foreground/20">Status</th>
               </tr>
             </thead>
             <tbody>
-              {subprocessors.map((sub) => (
+              {inactive.map((item) => (
                 <tr>
-                  <td class="p-2 border-b border-muted-foreground/10 align-top font-medium">{sub.name}</td>
-                  <td class="p-2 border-b border-muted-foreground/10 align-top">{sub.purpose}</td>
-                  <td class="p-2 border-b border-muted-foreground/10 align-top">{sub.region}</td>
-                  <td class="p-2 border-b border-muted-foreground/10 align-top">
-                    <a href={sub.privacy} target="_blank" rel="noopener" class="text-[hsl(var(--primary))] hover:underline">Datenschutz</a>
-                  </td>
+                  <td class="p-2 border-b border-muted-foreground/10 align-top font-medium">{item.name}</td>
+                  <td class="p-2 border-b border-muted-foreground/10 align-top">{item.purpose}</td>
+                  <td class="p-2 border-b border-muted-foreground/10 align-top">{item.status}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        <h2 class="text-xl font-semibold pt-4">Änderungshistorie</h2>
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm border border-muted-foreground/20">
+            <thead class="bg-muted/40">
+              <tr>
+                <th class="text-left p-2 border-b border-muted-foreground/20">Fassung</th>
+                <th class="text-left p-2 border-b border-muted-foreground/20">Datum</th>
+                <th class="text-left p-2 border-b border-muted-foreground/20">Änderung</th>
+              </tr>
+            </thead>
+            <tbody>
+              {history.map((entry) => (
+                <tr>
+                  <td class="p-2 border-b border-muted-foreground/10 align-top font-medium">{entry.version}</td>
+                  <td class="p-2 border-b border-muted-foreground/10 align-top whitespace-nowrap">{entry.date}</td>
+                  <td class="p-2 border-b border-muted-foreground/10 align-top">{entry.change}</td>
                 </tr>
               ))}
             </tbody>
@@ -75,9 +437,17 @@ const subprocessors = [
         </div>
 
         <p>
-          Wir aktualisieren diese Liste, wenn wir einen neuen Unterauftragsverarbeiter hinzufügen oder einen bestehenden ersetzen. Bei wesentlichen Änderungen informieren wir betroffene Kunden im Rahmen des Auftragsverarbeitungsvertrags. Fragen zur Auftragsverarbeitung richten Sie bitte an <a href="mailto:hello@shortselect.com" class="text-[hsl(var(--primary))] hover:underline">hello@shortselect.com</a>.
+          Diese Übersicht ergänzt unsere <a href="/datenschutz/" class="text-[hsl(var(--primary))] hover:underline">Datenschutzerklärung</a>. Fragen zur Auftragsverarbeitung richten Sie bitte an <a href="mailto:hello@shortselect.com" class="text-[hsl(var(--primary))] hover:underline">hello@shortselect.com</a>.
         </p>
       </div>
     </div>
   </section>
 </MarketingLayout>
+
+<style>
+  .prose-legal p {
+    color: hsl(var(--muted-foreground));
+    line-height: 1.75;
+    margin-bottom: 0.75rem;
+  }
+</style>

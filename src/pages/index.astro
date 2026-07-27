@@ -1,6 +1,5 @@
 ---
 import SEOHead from '../components/seo/SEOHead.astro';
-import CookieConsentBanner from '../components/legal/CookieConsentBanner.astro';
 import { PRO_PRICE_MONTHLY_EUR, TRIAL_DAYS } from '../lib/billing-constants';
 import '../styles/global.css';
 
@@ -3984,15 +3983,10 @@ const websiteSchema = {
       </div>
 
       <div class="bottom">
-        <span>© 2026 ShortSelect &middot; LeyalTech UG &middot; Alle Rechte vorbehalten.</span>
-        <span>
-          <button type="button" data-cookie-reopen style="background:none;border:none;color:inherit;cursor:pointer;font:inherit;padding:0;text-decoration:none;">Cookie-Einstellungen</button>
-        </span>
+        <span>© 2026 ShortSelect, LeyalTech (Yusuf Esentürk). Alle Rechte vorbehalten.</span>
       </div>
     </footer>
 
-
-  <CookieConsentBanner />
 
   <script is:inline>
 (function() {
@@ -4154,13 +4148,6 @@ const websiteSchema = {
     tickPipe();
     setInterval(tickPipe, 1500);
   }
-
-  // Cookie banner reopen trigger
-  document.querySelectorAll('[data-cookie-reopen]').forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      window.dispatchEvent(new CustomEvent('cookie-consent-reopen'));
-    });
-  });
 
   // ============ AGENTBURST SOURCING SHOWCASE ============
   var absCard = document.getElementById('absHeroCard');
