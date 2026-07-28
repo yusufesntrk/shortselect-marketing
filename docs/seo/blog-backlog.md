@@ -28,7 +28,7 @@ Dieser Backlog steuert die wiederkehrende Blog-Routine. Sie nimmt den obersten E
 - [done: vincere-alternative-personalberatungen-vergleich 2026-07-19] Vincere-Alternative: Vergleich für Personalberatungen | Links: /vergleich/shortselect-vs-vincere/
 - [done: talent-pools-aus-absagen-platzierungen 2026-07-22] Talent Pools aufbauen: Aus Absagen wiederkehrende Platzierungen machen | Links: /produkt/talent-pools/
 - [done: karriereseite-agenturen-bewerber-maschine 2026-07-25] Karriereseite für Agenturen: Vom Job-Widget zur Bewerber-Maschine | Links: /produkt/karriereseite/, /integrationen/
-- [todo] Interview-Scheduling ohne Mail-Ping-Pong | Links: /produkt/interviews/
+- [done: interview-scheduling-ohne-mail-ping-pong 2026-07-28] Interview-Scheduling ohne Mail-Ping-Pong | Links: /produkt/interviews/
 - [todo] Recruiting-Analytics: Die 6 Kennzahlen, die Agenturen steuern sollten | Links: /produkt/analytics/
 - [todo] IT-Recruiting 2026: Was Personalberatungen bei Tech-Rollen brauchen | Links: /branchen/it-recruiting/, /produkt/ki-features/
 - [todo] Healthcare-Recruiting: Compliance und Geschwindigkeit vereinen | Links: /branchen/healthcare/, /produkt/compliance/
