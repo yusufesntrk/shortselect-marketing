@@ -1,0 +1,453 @@
+---
+import MarketingLayout from '../../layouts/MarketingLayout.astro';
+
+// Informationspflicht nach Art. 14 DSGVO fuer Profildaten, die wir aus
+// oeffentlich zugaenglichen Quellen erheben, ohne dass die betroffene Person
+// uns die Daten selbst gegeben hat.
+//
+// Diese Seite IST die Erfuellung der Pflicht, nicht ihr Ersatz. Art. 14 Abs. 5
+// lit. b DSGVO nimmt die Einzelbenachrichtigung zurueck, wenn sie unmoeglich
+// ist oder unverhaeltnismaessigen Aufwand erfordert, und verlangt dann
+// ausdruecklich "die Bereitstellung dieser Informationen fuer die
+// Oeffentlichkeit". Zu 99,9 Prozent der gespeicherten Profile liegt uns keine
+// E-Mail-Adresse vor, eine Einzelbenachrichtigung ist dort schlicht unmoeglich.
+//
+// Bewusst indexierbar: eine Transparenzseite, die Suchmaschinen nicht finden,
+// erfuellt den Zweck der Vorschrift nicht.
+//
+// Inhaltlich abgestimmt mit Abschnitt 10 der Datenschutzerklaerung
+// (src/pages/datenschutz.astro) und deren App-Fassung in
+// project-spark/src/lib/platform-privacy.ts. Fristen NIE nur hier aendern.
+
+const STAND = '30. Juli 2026';
+const OBJECTION_ENDPOINT = 'https://api.shortselect.com/functions/v1/sourcing-objection';
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: 'Wie ShortSelect Kandidatenprofile aus öffentlichen Quellen verarbeitet',
+  description:
+    'Informationen nach Art. 14 DSGVO zur Erhebung von Profildaten aus öffentlich zugänglichen Quellen, einschließlich Quellen, Zwecken, Rechtsgrundlage, Speicherdauer und Widerspruchsmöglichkeit.',
+  url: 'https://www.shortselect.com/datenschutz/aktive-ansprache',
+  inLanguage: 'de-DE',
+  isPartOf: { '@id': 'https://www.shortselect.com/#website' },
+};
+---
+
+<MarketingLayout
+  title="Ihre Daten in unserer Kandidatensuche | ShortSelect"
+  description="Informationen nach Art. 14 DSGVO: welche Daten wir aus öffentlich zugänglichen Quellen erheben, wozu, auf welcher Rechtsgrundlage, wie lange wir sie speichern und wie Sie widersprechen."
+  canonical="https://www.shortselect.com/datenschutz/aktive-ansprache"
+  jsonLd={jsonLd}
+>
+  <section class="pt-32 pb-20 md:pb-28">
+    <div class="container mx-auto px-4 max-w-3xl">
+      <h1 class="text-3xl font-display font-bold mb-2">Ihre Daten in unserer Kandidatensuche</h1>
+      <p class="text-sm text-muted-foreground mb-8">
+        Informationen nach Art. 14 DSGVO, Stand: {STAND}
+      </p>
+
+      <div class="prose-legal space-y-6">
+        <div class="border-2 border-[hsl(var(--primary))] rounded-lg p-5">
+          <p class="!mb-2">
+            <strong>Kurz gesagt:</strong> ShortSelect ist eine Software, mit der Personalvermittler
+            und Unternehmen Stellen besetzen. Ein Teil davon ist die Suche nach Fachkräften in
+            öffentlich zugänglichen Quellen im Internet. Dabei kann es sein, dass wir auch Angaben
+            zu Ihnen gespeichert haben, ohne dass Sie sich jemals bei uns beworben haben.
+          </p>
+          <p class="!mb-0">
+            Diese Seite sagt Ihnen, woher diese Angaben stammen, wozu wir sie nutzen, wie lange wir
+            sie speichern und wie Sie der Speicherung mit zwei Klicks widersprechen können.
+          </p>
+        </div>
+
+        <section>
+          <h2 class="text-xl font-semibold mb-2">1. Wer für die Verarbeitung verantwortlich ist</h2>
+          <p>
+            Yusuf Esentürk, Burdastraße 18, 77656 Offenburg, Deutschland,
+            <a href="mailto:datenschutz@shortselect.com" class="text-[hsl(var(--primary))] hover:underline">datenschutz@shortselect.com</a>.
+            Wir handeln unter dem Geschäftsnamen LeyalTech und vertreiben die Plattform unter der
+            Marke ShortSelect.
+          </p>
+          <p>
+            Für die hier beschriebene Suche und Vorauswahl sind wir Verantwortlicher nach
+            Art. 4 Nr. 7 DSGVO, weil wir über die Quellen, die Auswertungsverfahren und die
+            Speicherdauer selbst entscheiden. Sobald ein Unternehmen ein Profil in seine eigene
+            Bewerberverwaltung übernimmt, ist zusätzlich dieses Unternehmen Verantwortlicher für
+            die weitere Verarbeitung. Wenn Sie wissen möchten, welches Unternehmen das in Ihrem Fall
+            ist, teilen wir Ihnen das auf Anfrage mit.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-semibold mb-2">2. Woher die Daten stammen</h2>
+          <p>
+            Wir erheben die Angaben nicht bei Ihnen, sondern aus allgemein zugänglichen Quellen.
+            Angaben nach Art. 14 Abs. 2 lit. f DSGVO. Es handelt sich um folgende Kategorien von
+            Quellen:
+          </p>
+          <ul class="list-disc pl-6">
+            <li>öffentlich zugängliche berufliche Netzwerke, insbesondere LinkedIn und Xing</li>
+            <li>öffentlich zugängliche Internetseiten von Unternehmen, insbesondere Team-, Über-uns- und Kontaktseiten</li>
+            <li>öffentlich zugängliche Branchen- und Mitgliederverzeichnisse</li>
+            <li>Ergebnisseiten von Suchmaschinen und darauf verlinkte, frei abrufbare Seiten</li>
+            <li>Dienstleister, die geschäftliche Kontaktdaten aus öffentlich zugänglichen Beständen ermitteln</li>
+          </ul>
+          <p>
+            Wir umgehen keine Zugangsbeschränkungen, keine Anmeldeschranken und keine technischen
+            Sperren. Verarbeitet wird ausschließlich, was ohne Anmeldung frei abrufbar ist.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-semibold mb-2">3. Welche Daten wir verarbeiten</h2>
+          <p>
+            Die Verarbeitung beschränkt sich auf die berufliche Sphäre. Im Einzelnen:
+          </p>
+          <ul class="list-disc pl-6">
+            <li>Name</li>
+            <li>öffentlich zugängliches Profilbild</li>
+            <li>Berufsbezeichnung, aktuelle Position, aktueller Arbeitgeber</li>
+            <li>Ort oder Region der beruflichen Tätigkeit</li>
+            <li>öffentlich zugängliche Kurzbeschreibung des beruflichen Profils</li>
+            <li>beruflicher Werdegang, Ausbildung, Zertifikate, Sprachkenntnisse, Fähigkeiten</li>
+            <li>Adresse des öffentlichen Profils, von dem die Angaben stammen</li>
+            <li>geschäftliche Kontaktdaten, soweit sie öffentlich zugänglich ermittelt wurden</li>
+          </ul>
+          <p>
+            Besondere Kategorien personenbezogener Daten nach Art. 9 DSGVO verarbeiten wir nicht
+            gezielt. Ihr Lebensalter ist weder Bewertungs- noch Filterkriterium. Merkmale nach
+            § 1 des Allgemeinen Gleichbehandlungsgesetzes fließen in die Vorauswahl nicht ein.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-semibold mb-2">4. Wozu wir die Daten verarbeiten</h2>
+          <ul class="list-disc pl-6">
+            <li>Auffinden von Personen, deren beruflicher Hintergrund zu einer konkreten offenen Stelle passen könnte</li>
+            <li>Vorauswahl und Qualitätsprüfung dieser Treffer, auch unter Einsatz von Sprachmodellen</li>
+            <li>Bereitstellung der Vorauswahl an das Unternehmen, das die Stelle besetzen will</li>
+            <li>Vermeidung wiederholter Abrufe derselben öffentlichen Quelle</li>
+            <li>Dauerhafte Beachtung eines eingelegten Widerspruchs</li>
+          </ul>
+          <p>
+            Eine für Sie rechtlich bindende Entscheidung wird dabei nicht ausschließlich
+            automatisiert getroffen. Über eine Kontaktaufnahme und über jeden weiteren Schritt
+            entscheidet ein Mensch.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-semibold mb-2">5. Rechtsgrundlage</h2>
+          <p>
+            Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO, also unser berechtigtes Interesse und
+            das berechtigte Interesse der Unternehmen, für die wir suchen. Dieses Interesse besteht
+            in der Besetzung offener Stellen und in der wirtschaftlichen Erbringung von
+            Personalvermittlungsleistungen.
+          </p>
+          <p>
+            In die Abwägung mit Ihren Interessen haben wir eingestellt, dass ausschließlich Angaben
+            verarbeitet werden, die Sie selbst oder Ihr Arbeitgeber im beruflichen Zusammenhang
+            öffentlich zugänglich gemacht haben, dass sich die Verarbeitung auf die berufliche
+            Sphäre beschränkt, dass keine besonderen Datenkategorien und keine Merkmale nach § 1 AGG
+            bewertet werden, dass die Speicherung befristet ist und dass Sie jederzeit formlos und
+            ohne Angabe von Gründen widersprechen können.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-semibold mb-2">6. Wie lange wir speichern</h2>
+          <div class="overflow-x-auto">
+            <table class="w-full text-sm border border-muted-foreground/20">
+              <thead class="bg-muted/40">
+                <tr>
+                  <th class="text-left p-2 border-b border-muted-foreground/20">Was</th>
+                  <th class="text-left p-2 border-b border-muted-foreground/20">Wie lange</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="p-2 border-b border-muted-foreground/10 align-top">Zwischenspeicher der abgerufenen Profildaten</td>
+                  <td class="p-2 border-b border-muted-foreground/10 align-top">30 Tage ab dem Abruf, danach Löschung</td>
+                </tr>
+                <tr>
+                  <td class="p-2 border-b border-muted-foreground/10 align-top">Profil in der Vorauswahl eines Unternehmens, ohne dass es übernommen wurde</td>
+                  <td class="p-2 border-b border-muted-foreground/10 align-top">180 Tage ab der Erhebung, danach Löschung</td>
+                </tr>
+                <tr>
+                  <td class="p-2 border-b border-muted-foreground/10 align-top">Profil, das ein Unternehmen in seine Bewerberverwaltung übernommen hat</td>
+                  <td class="p-2 border-b border-muted-foreground/10 align-top">Nach Festlegung dieses Unternehmens, regelmäßig längstens 6 Monate nach Abschluss des Verfahrens</td>
+                </tr>
+                <tr>
+                  <td class="p-2 align-top">Sperrvermerk aus einem Widerspruch</td>
+                  <td class="p-2 align-top">Dauerhaft, damit der Widerspruch dauerhaft beachtet werden kann</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p>
+            Die Löschung der abgelaufenen Einträge läuft täglich und selbsttätig, sie hängt nicht an
+            einer manuellen Prüfung. Jeder Löschvorgang wird protokolliert.
+          </p>
+          <p>
+            Der Sperrvermerk enthält bewusst nur, was zur Beachtung Ihres Widerspruchs nötig ist,
+            also Ihren Namen und, sofern Sie ihn angegeben haben, die Adresse Ihres öffentlichen
+            Profils. Ohne diesen Vermerk könnten wir Sie bei einer späteren Suche nicht
+            wiedererkennen und Ihr Widerspruch liefe ins Leere.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-semibold mb-2">7. Warum Sie von uns keine Nachricht bekommen haben</h2>
+          <p>
+            Art. 14 DSGVO verlangt im Grundsatz, dass wir Sie einzeln informieren, wenn wir Daten
+            über Sie aus fremder Quelle erheben. Zu nahezu allen gespeicherten Profilen liegt uns
+            jedoch überhaupt keine Kontaktmöglichkeit vor, weil wir nur den beruflichen
+            Öffentlichkeitsauftritt auswerten und keine privaten Kontaktdaten ermitteln. Eine
+            Einzelbenachrichtigung ist dort nicht möglich.
+          </p>
+          <p>
+            Für diesen Fall sieht Art. 14 Abs. 5 lit. b DSGVO ausdrücklich vor, dass die
+            Einzelbenachrichtigung entfällt und der Verantwortliche stattdessen geeignete Maßnahmen
+            trifft, einschließlich der Bereitstellung der Informationen für die Öffentlichkeit.
+            Genau das ist diese Seite.
+          </p>
+          <p>
+            Sobald wir Sie tatsächlich ansprechen, erhalten Sie die Informationen spätestens mit
+            dieser ersten Kontaktaufnahme, Art. 14 Abs. 3 lit. c DSGVO. Wenn Sie nie von uns hören,
+            werden Sie von uns auch nicht angeschrieben, um Ihnen mitzuteilen, dass wir Sie einmal
+            gefunden haben.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-semibold mb-2">8. Wer die Daten erhält</h2>
+          <p>
+            Empfänger ist zum einen das Unternehmen, für dessen offene Stelle Sie in die Vorauswahl
+            gelangt sind. Zum anderen setzen wir Dienstleister für Betrieb, Speicherung, Websuche,
+            Seitenabruf, Ermittlung geschäftlicher Kontaktdaten und Auswertung durch Sprachmodelle
+            ein. Mit allen bestehen Verträge nach Art. 28 DSGVO. Die vollständige Liste finden Sie
+            unter <a href="/legal/subprocessors" class="text-[hsl(var(--primary))] hover:underline">Unterauftragsverarbeiter</a>.
+          </p>
+          <p>
+            Ihre Daten werden nicht zum Training oder zur Weiterentwicklung von Modellen künstlicher
+            Intelligenz verwendet. Die eingesetzten Anbieter sind vertraglich zu demselben Verbot
+            verpflichtet. Übermittlungen außerhalb des Europäischen Wirtschaftsraums stützen wir auf
+            die Standardvertragsklauseln der Europäischen Kommission.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-semibold mb-2">9. Ihre Rechte</h2>
+          <ul class="list-disc pl-6">
+            <li><strong>Auskunft</strong> darüber, ob und welche Daten wir zu Ihnen gespeichert haben, Art. 15 DSGVO</li>
+            <li><strong>Berichtigung</strong> unrichtiger Angaben, Art. 16 DSGVO</li>
+            <li><strong>Löschung</strong> Ihrer Daten, Art. 17 DSGVO</li>
+            <li><strong>Einschränkung</strong> der Verarbeitung, Art. 18 DSGVO</li>
+            <li><strong>Datenübertragbarkeit</strong>, Art. 20 DSGVO</li>
+            <li><strong>Widerspruch</strong> gegen die Verarbeitung, Art. 21 DSGVO, siehe Abschnitt 10</li>
+            <li><strong>Beschwerde</strong> bei einer Aufsichtsbehörde, Art. 77 DSGVO</li>
+          </ul>
+          <p>
+            Für uns zuständig ist der Landesbeauftragte für den Datenschutz und die
+            Informationsfreiheit Baden-Württemberg, Königstraße 10a, 70173 Stuttgart,
+            <a href="https://www.baden-wuerttemberg.datenschutz.de" target="_blank" rel="noopener" class="text-[hsl(var(--primary))] hover:underline">baden-wuerttemberg.datenschutz.de</a>.
+            Sie können sich auch an die Aufsichtsbehörde Ihres Wohnorts wenden.
+          </p>
+          <p>
+            Wir beantworten Anfragen unverzüglich, spätestens innerhalb eines Monats nach Eingang,
+            Art. 12 Abs. 3 DSGVO. Die Ausübung Ihrer Rechte ist für Sie kostenlos.
+          </p>
+        </section>
+
+        <section id="widerspruch" class="border-2 border-[hsl(var(--primary))] rounded-lg p-5 scroll-mt-28">
+          <h2 class="text-xl font-semibold mb-2">10. Widerspruch einlegen</h2>
+          <p>
+            <strong>
+              Sie haben das Recht, aus Gründen, die sich aus Ihrer besonderen Situation ergeben,
+              jederzeit gegen diese Verarbeitung Widerspruch einzulegen, Art. 21 Abs. 1 DSGVO.
+              Richtet sich die Verarbeitung auf Direktansprache, können Sie ohne Angabe von Gründen
+              widersprechen.
+            </strong>
+          </p>
+          <p>
+            Nach einem Widerspruch löschen wir alle zu Ihnen gespeicherten Suchergebnisse und
+            schließen Sie dauerhaft von künftigen Suchläufen aus. Das gilt für alle Unternehmen,
+            die ShortSelect einsetzen, nicht nur für dasjenige, das Sie gefunden hat.
+          </p>
+          <p>
+            Sie können den Widerspruch formlos an
+            <a href="mailto:datenschutz@shortselect.com" class="text-[hsl(var(--primary))] hover:underline">datenschutz@shortselect.com</a>
+            richten. Schneller geht es über dieses Formular, das die Sperre unmittelbar auslöst:
+          </p>
+
+          <form id="objection-form" class="mt-5 space-y-4" novalidate>
+            <div>
+              <label for="obj-name" class="block text-sm font-medium mb-1">
+                Ihr vollständiger Name <span aria-hidden="true">*</span>
+              </label>
+              <input
+                type="text" id="obj-name" name="full_name" required autocomplete="name"
+                placeholder="Vorname Nachname"
+                class="w-full rounded-md border border-muted-foreground/30 bg-background px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[hsl(var(--primary))]"
+              />
+              <p class="text-xs text-muted-foreground mt-1">Bitte genau so, wie er in Ihrem öffentlichen Profil steht.</p>
+            </div>
+
+            <div>
+              <label for="obj-url" class="block text-sm font-medium mb-1">Link zu Ihrem öffentlichen Profil</label>
+              <input
+                type="url" id="obj-url" name="profile_url" inputmode="url"
+                placeholder="https://www.linkedin.com/in/..."
+                class="w-full rounded-md border border-muted-foreground/30 bg-background px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[hsl(var(--primary))]"
+              />
+              <p class="text-xs text-muted-foreground mt-1">
+                Freiwillig, hilft uns aber, Sie eindeutig zuzuordnen und Verwechslungen mit
+                Namensgleichen auszuschließen.
+              </p>
+            </div>
+
+            <div>
+              <label for="obj-email" class="block text-sm font-medium mb-1">
+                Ihre E-Mail-Adresse <span aria-hidden="true">*</span>
+              </label>
+              <input
+                type="email" id="obj-email" name="email" required autocomplete="email"
+                placeholder="name@beispiel.de"
+                class="w-full rounded-md border border-muted-foreground/30 bg-background px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[hsl(var(--primary))]"
+              />
+              <p class="text-xs text-muted-foreground mt-1">
+                Wir senden einen einmaligen Bestätigungslink an diese Adresse. Erst der Klick darauf
+                löst die Sperre aus. Das verhindert, dass jemand in Ihrem Namen widerspricht. Die
+                Adresse wird ausschließlich zur Bearbeitung und zum Nachweis Ihres Widerspruchs
+                gespeichert und nicht für Werbung genutzt.
+              </p>
+            </div>
+
+            <div>
+              <label for="obj-message" class="block text-sm font-medium mb-1">Nachricht</label>
+              <textarea
+                id="obj-message" name="message" rows="3"
+                placeholder="Optional, zum Beispiel Gründe aus Ihrer besonderen Situation"
+                class="w-full rounded-md border border-muted-foreground/30 bg-background px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[hsl(var(--primary))]"
+              ></textarea>
+            </div>
+
+            <div aria-hidden="true" class="hidden">
+              <label for="obj-website">Bitte nicht ausfüllen</label>
+              <input type="text" id="obj-website" name="website" tabindex="-1" autocomplete="off" />
+            </div>
+
+            <button
+              type="submit" id="obj-submit"
+              class="w-full sm:w-auto rounded-md bg-[hsl(var(--primary))] px-6 py-3 text-sm font-semibold text-white transition hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-60"
+            >
+              Widerspruch absenden
+            </button>
+
+            <p id="obj-status" role="status" aria-live="polite" class="text-sm"></p>
+          </form>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-semibold mb-2">11. Änderungen dieser Informationen</h2>
+          <p>
+            Wir passen diese Seite an, wenn sich die Quellen, die Zwecke, die Speicherdauern oder
+            die rechtlichen Vorgaben ändern. Es gilt jeweils die hier abrufbare Fassung. Die
+            allgemeine <a href="/datenschutz" class="text-[hsl(var(--primary))] hover:underline">Datenschutzerklärung</a>
+            gilt daneben fort, diese Seite führt deren Abschnitt 10 nur aus.
+          </p>
+        </section>
+      </div>
+    </div>
+  </section>
+</MarketingLayout>
+
+<script is:inline define:vars={{ OBJECTION_ENDPOINT }}>
+  (function () {
+    var form = document.getElementById('objection-form');
+    if (!form) return;
+    var statusEl = document.getElementById('obj-status');
+    var submitBtn = document.getElementById('obj-submit');
+
+    function setStatus(text, tone) {
+      statusEl.textContent = text;
+      statusEl.style.color =
+        tone === 'error' ? 'hsl(var(--primary))' : tone === 'ok' ? '#15803d' : '';
+    }
+
+    form.addEventListener('submit', function (event) {
+      event.preventDefault();
+
+      var name = document.getElementById('obj-name').value.trim();
+      var email = document.getElementById('obj-email').value.trim();
+      var url = document.getElementById('obj-url').value.trim();
+
+      if (name.split(/\s+/).length < 2) {
+        setStatus('Bitte geben Sie Ihren Vor- und Nachnamen an.', 'error');
+        return;
+      }
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        setStatus('Bitte geben Sie eine gültige E-Mail-Adresse an.', 'error');
+        return;
+      }
+
+      submitBtn.disabled = true;
+      setStatus('Wird gesendet...', '');
+
+      fetch(OBJECTION_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          full_name: name,
+          email: email,
+          profile_url: url,
+          message: document.getElementById('obj-message').value.trim(),
+          website: document.getElementById('obj-website').value,
+        }),
+      })
+        .then(function (res) {
+          return res.json().then(function (data) {
+            return { ok: res.ok, data: data };
+          });
+        })
+        .then(function (result) {
+          if (!result.ok) {
+            submitBtn.disabled = false;
+            setStatus(
+              (result.data && result.data.error) ||
+                'Das hat leider nicht geklappt. Bitte schreiben Sie an datenschutz@shortselect.com.',
+              'error'
+            );
+            return;
+          }
+          form.reset();
+          setStatus(
+            'Vielen Dank. Wir haben Ihnen einen Bestätigungslink an ' +
+              email +
+              ' gesendet. Bitte klicken Sie darauf, dann wird der Widerspruch sofort wirksam. Schauen Sie notfalls im Spam-Ordner nach.',
+            'ok'
+          );
+        })
+        .catch(function () {
+          submitBtn.disabled = false;
+          setStatus(
+            'Die Verbindung ist fehlgeschlagen. Bitte versuchen Sie es erneut oder schreiben Sie an datenschutz@shortselect.com.',
+            'error'
+          );
+        });
+    });
+  })();
+</script>
+
+<style>
+  .prose-legal p {
+    color: hsl(var(--muted-foreground));
+    line-height: 1.75;
+    margin-bottom: 0.75rem;
+  }
+  .prose-legal li {
+    color: hsl(var(--muted-foreground));
+    line-height: 1.75;
+  }
+</style>

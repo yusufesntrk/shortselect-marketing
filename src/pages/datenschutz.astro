@@ -1,17 +1,24 @@
 ---
 import MarketingLayout from '../layouts/MarketingLayout.astro';
 
-// Fassungsbezeichnung: privacy-v2026-07-27
+// Fassungsbezeichnung: privacy-v2026-07-30
 // Inhaltlich deckungsgleich mit der App-Fassung in
 // project-spark/src/lib/platform-privacy.ts (PLATFORM_PRIVACY_POLICY_TEXT).
 // Bei Aenderungen IMMER beide Dateien gemeinsam pflegen.
 //
-// DEPLOY-SPERRE (Stand 27.07.2026): Abschnitt 6 sagt zu, dass Merkmale nach
-// § 1 AGG und insbesondere das Lebensalter kein Bewertungs- oder Filterkriterium
-// sind. Im App-Repo trifft das auf dem Rechtstext-Branch noch nicht zu
-// (supabase/functions/_shared/sourcing-quality-gate.ts:92 und 239 bis 243,
-// gespeist über qa-review-profiles/index.ts:821). Fix liegt als Commit 8370af0e
-// auf einem anderen Branch. Bis der drin ist, darf diese Fassung nicht live.
+// DEPLOY-SPERRE (Stand 27.07.2026, ERLEDIGT am 30.07.2026): Abschnitt 6 sagt zu,
+// dass Merkmale nach § 1 AGG und insbesondere das Lebensalter kein Bewertungs-
+// oder Filterkriterium sind. Der Fix ist in main, sourcing-quality-gate.ts
+// haelt in Zeile 27 ausdruecklich fest, dass das Alter nicht mehr geprueft wird.
+//
+// ABHAENGIGKEIT Speicherfristen Abschnitt 10 (seit 30.07.2026): Die dort
+// genannten 30 und 180 Tage sind keine Absichtserklaerung, sondern werden von
+// zwei taeglichen Datenbank-Jobs durchgesetzt (sourcing-cache-retention und
+// sourcing-queue-retention, Migrationen 20260730120000 und 20260730122000 im
+// App-Repo). Die 180 Tage stehen konfigurierbar in sourcing_retention_settings.
+// Wer die Frist dort aendert, muss diesen Text, die App-Fassung und
+// /datenschutz/aktive-ansprache mitziehen, sonst sagt die Erklaerung etwas
+// anderes als die Anlage tut.
 //
 // [ZU KLÄREN] Telefonnummer des Verantwortlichen (Art. 13 Abs. 1 lit. a DSGVO)
 // [ZU KLÄREN] Sitz und Übermittlungsgrundlage der Dienstleister für Websuche,
@@ -31,8 +38,8 @@ import MarketingLayout from '../layouts/MarketingLayout.astro';
 // ABHÄNGIGKEIT Zählpixel: Abschnitt 4 und 13 beschreiben das einwilligungs-
 // gebundene Zählpixel aus JobFunnel.tsx. Fällt die Einwilligungsbindung weg,
 // ist der Text sofort unrichtig.
-const VERSION_LABEL = 'privacy-v2026-07-27';
-const VERSION_DATE = '27. Juli 2026';
+const VERSION_LABEL = 'privacy-v2026-07-30';
+const VERSION_DATE = '30. Juli 2026';
 ---
 
 <MarketingLayout
@@ -259,8 +266,8 @@ const VERSION_DATE = '27. Juli 2026';
           <p><strong>Herkunft der Daten, Art. 14 Abs. 2 lit. f DSGVO:</strong> öffentlich zugängliche Berufsnetzwerke, öffentlich zugängliche Unternehmens- und Teamseiten, öffentliche Verzeichnisse, öffentlich zugängliche Auftritte in sozialen Netzwerken, Suchmaschinenergebnisse sowie Dienstleister zur Ermittlung geschäftlicher Kontaktdaten.</p>
           <p><strong>Zweck:</strong> Auffinden und Vorauswahl von Personen, die für offene Stellen unserer Kundenunternehmen in Betracht kommen, und Bereitstellung dieser Vorauswahl an das jeweilige Kundenunternehmen.</p>
           <p><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. f DSGVO. Unser berechtigtes Interesse und das Interesse unserer Kundenunternehmen besteht in der Besetzung offener Stellen und der wirtschaftlichen Erbringung von Personalvermittlungsleistungen. Bei der Abwägung berücksichtigen wir, dass ausschließlich Angaben verarbeitet werden, die die betroffene Person selbst oder ihr Arbeitgeber im beruflichen Zusammenhang öffentlich zugänglich gemacht hat, dass sich die Verarbeitung auf die berufliche Sphäre beschränkt, dass besondere Kategorien personenbezogener Daten nach Art. 9 DSGVO nicht gezielt verarbeitet werden, dass das Lebensalter nicht bewertet wird und dass die Zwischenspeicherung befristet ist. Personen, die einer Ansprache widersprochen haben, werden dauerhaft ausgeschlossen.</p>
-          <p><strong>Speicherdauer:</strong> Der Zwischenspeicher ist auf 30 Tage ab dem Abruf befristet, danach werden die Daten nicht mehr verwendet. Wird ein Profil von einem Kundenunternehmen übernommen, richtet sich die weitere Speicherung nach der Festlegung dieses Unternehmens. Sperrvermerke aus einem Widerspruch bewahren wir dauerhaft auf, damit der Widerspruch dauerhaft beachtet werden kann.</p>
-          <p><strong>Information der betroffenen Personen, Art. 14 Abs. 3 DSGVO:</strong> Wir informieren Sie spätestens mit der ersten Kontaktaufnahme, jedenfalls innerhalb eines Monats nach der Erhebung. Verfügen wir über keine Kontaktdaten, tritt diese Erklärung an die Stelle der Einzelbenachrichtigung.</p>
+          <p><strong>Speicherdauer:</strong> Der Zwischenspeicher ist auf 30 Tage ab dem Abruf befristet. Nach Ablauf werden die Daten nicht mehr verwendet und gelöscht. Ein Profil, das in die Vorauswahl für eine konkrete Stelle gelangt, ohne dass das Kundenunternehmen es übernimmt, löschen wir 180 Tage nach der Erhebung. Beide Fristen setzen wir durch tägliche, selbsttätige Löschläufe durch und protokollieren jeden Vorgang. Wird ein Profil von einem Kundenunternehmen übernommen, richtet sich die weitere Speicherung nach der Festlegung dieses Unternehmens. Sperrvermerke aus einem Widerspruch bewahren wir dauerhaft auf, damit der Widerspruch dauerhaft beachtet werden kann.</p>
+          <p><strong>Information der betroffenen Personen, Art. 14 Abs. 3 DSGVO:</strong> Wir informieren Sie spätestens mit der ersten Kontaktaufnahme, jedenfalls innerhalb eines Monats nach der Erhebung. Verfügen wir über keine Kontaktdaten, ist eine Einzelbenachrichtigung nicht möglich. In diesem Fall treten nach Art. 14 Abs. 5 lit. b DSGVO diese Erklärung und die öffentlich abrufbare Seite <a href="/datenschutz/aktive-ansprache" class="text-[hsl(var(--primary))] hover:underline">Ihre Daten in unserer Kandidatensuche</a> an die Stelle der Einzelbenachrichtigung. Dort finden Sie alle Angaben nach Art. 14 DSGVO im Zusammenhang und ein Formular, mit dem Sie unmittelbar widersprechen können.</p>
           <p><strong>Widerspruch:</strong> Sie können dieser Verarbeitung jederzeit nach Art. 21 Abs. 1 DSGVO widersprechen, siehe Abschnitt 16. Bei einem Widerspruch entfernen wir Ihre Daten aus dem Zwischenspeicher und nehmen Sie dauerhaft von der weiteren Erfassung aus.</p>
         </section>
 
@@ -349,7 +356,8 @@ const VERSION_DATE = '27. Juli 2026';
                 <tr><td class="p-2 border-b border-muted-foreground/10 align-top">Protokolle der Zahlungsereignisse</td><td class="p-2 border-b border-muted-foreground/10 align-top">180 Tage</td></tr>
                 <tr><td class="p-2 border-b border-muted-foreground/10 align-top">Wortprotokolle und Bewertungen aus dem KI-Interview</td><td class="p-2 border-b border-muted-foreground/10 align-top">Wie die übrigen Bewerbungsdaten, regelmäßig längstens 6 Monate nach Abschluss des Verfahrens</td></tr>
                 <tr><td class="p-2 border-b border-muted-foreground/10 align-top">Aufzeichnungen und Wortprotokolle von Telefonaten</td><td class="p-2 border-b border-muted-foreground/10 align-top">Nach Festlegung des Kundenunternehmens</td></tr>
-                <tr><td class="p-2 border-b border-muted-foreground/10 align-top">Zwischenspeicher öffentlich abgerufener Profildaten</td><td class="p-2 border-b border-muted-foreground/10 align-top">30 Tage ab Abruf</td></tr>
+                <tr><td class="p-2 border-b border-muted-foreground/10 align-top">Zwischenspeicher öffentlich abgerufener Profildaten</td><td class="p-2 border-b border-muted-foreground/10 align-top">30 Tage ab Abruf, danach Löschung</td></tr>
+                <tr><td class="p-2 border-b border-muted-foreground/10 align-top">Nicht übernommene Profile in der Vorauswahl für eine Stelle</td><td class="p-2 border-b border-muted-foreground/10 align-top">180 Tage ab Erhebung, danach Löschung</td></tr>
                 <tr><td class="p-2 align-top">Bewerbungsdaten in der Verantwortung unserer Kunden</td><td class="p-2 align-top">Nach Festlegung des Kunden, regelmäßig längstens 6 Monate nach Abschluss des Verfahrens</td></tr>
               </tbody>
             </table>
@@ -371,6 +379,7 @@ const VERSION_DATE = '27. Juli 2026';
           <p><strong>Nach einem Widerspruch verarbeiten wir die betroffenen Daten nicht mehr, es sei denn, wir können zwingende schutzwürdige Gründe für die Verarbeitung nachweisen, die Ihre Interessen, Rechte und Freiheiten überwiegen, oder die Verarbeitung dient der Geltendmachung, Ausübung oder Verteidigung von Rechtsansprüchen.</strong></p>
           <p><strong>Werden Ihre Daten verarbeitet, um Direktwerbung zu betreiben, haben Sie das Recht, jederzeit und ohne Angabe von Gründen Widerspruch einzulegen. Nach einem solchen Widerspruch verarbeiten wir Ihre Daten für diesen Zweck nicht mehr.</strong></p>
           <p><strong>Für den Widerspruch genügt eine Nachricht an <a href="mailto:hello@shortselect.com" class="text-[hsl(var(--primary))] hover:underline">hello@shortselect.com</a>. Eine bestimmte Form ist nicht erforderlich.</strong></p>
+          <p><strong>Richtet sich Ihr Widerspruch gegen die Verarbeitung von Kandidatendaten aus öffentlich zugänglichen Quellen nach Abschnitt 10, können Sie ihn auf der Seite <a href="/datenschutz/aktive-ansprache#widerspruch" class="text-[hsl(var(--primary))] hover:underline">Ihre Daten in unserer Kandidatensuche</a> unmittelbar erklären. Der Widerspruch wird dort nach Bestätigung über die von Ihnen angegebene E-Mail-Adresse sofort wirksam.</strong></p>
         </section>
 
         <section>
@@ -388,7 +397,7 @@ const VERSION_DATE = '27. Juli 2026';
           <p>Bei Fragen zum Datenschutz und zur Ausübung Ihrer Rechte erreichen Sie uns unter <a href="mailto:hello@shortselect.com" class="text-[hsl(var(--primary))] hover:underline">hello@shortselect.com</a> oder unter der in Abschnitt 2 genannten Anschrift.</p>
         </section>
 
-        <p class="text-sm text-muted-foreground mt-8">Fassung {VERSION_LABEL}, Stand: {VERSION_DATE}. Vorherige Fassung: Version 2.1 vom 10. Mai 2026.</p>
+        <p class="text-sm text-muted-foreground mt-8">Fassung {VERSION_LABEL}, Stand: {VERSION_DATE}. Vorherige Fassung: privacy-v2026-07-27 vom 27. Juli 2026.</p>
       </div>
     </div>
   </section>
