@@ -448,4 +448,67 @@ export const autoPosts: BlogPost[] = [
 <p>Ja, jede weitere Interviewrunde laesst sich als eigener Schritt in der Pipeline anlegen und ueber denselben Mechanismus terminieren, sodass auch bei mehreren aufeinanderfolgenden Gespraechen keine manuelle Koordination zwischen den Runden noetig ist.</p>
 `,
   },
+  {
+    slug: "recruiting-analytics-6-kennzahlen-agenturen",
+    title: "Recruiting-Analytics: Die 6 Kennzahlen, die Agenturen steuern sollten",
+    seoTitle: "Recruiting-Analytics: 6 KPIs | ShortSelect",
+    date: "2026-07-31",
+    author: "ShortSelect Team",
+    authorRole: "Redaktion",
+    category: "Praxis-Guides",
+    tags: ["Recruiting-Analytics", "KPI", "Recruiting-Agentur", "Dashboard", "Time-to-Fill", "Reporting"],
+    excerpt:
+      "Sechs Kennzahlen reichen aus, um eine Personalberatung zu steuern: von Time-to-Fill bis Wiederbeauftragungsquote. Dieser Leitfaden zeigt, worauf es bei jeder einzelnen ankommt."
+    ,
+    seoDescription:
+      "Recruiting-Analytics fuer Personalberatungen: Diese 6 Kennzahlen zeigen, ob Mandate schnell und profitabel laufen, und wo im Prozess Zeit verloren geht."
+    ,
+    readTime: "8 Min.",
+    content: `
+<p>Sechs Kennzahlen reichen aus, um eine Personalberatung wirklich zu steuern: Time-to-Fill, Time-to-First-Interview, Pipeline-Conversion-Rate je Stufe, Quelle der erfolgreichen Platzierungen, Recruiter-Auslastung und Wiederbeauftragungsquote. Wer diese sechs Zahlen laufend im Blick hat, erkennt Engpaesse, bevor ein Kunde sie anspricht, und trifft Entscheidungen ueber Sourcing-Kanaele oder Teamgroesse auf Basis von Daten statt Bauchgefuehl.</p>
+
+<h2>Warum reicht Bauchgefuehl allein nicht mehr aus?</h2>
+<p>In einer kleinen Agentur laesst sich der Status jedes Mandats noch im Kopf behalten. Sobald mehrere Recruiter parallel an mehreren Kunden arbeiten, verliert diese Uebersicht schnell an Verlaesslichkeit. Ein Mandat wirkt gefuehlt gut, weil zuletzt ein Kandidat praesentiert wurde, obwohl die Pipeline dahinter laengst duenn ist. Ein anderes Mandat gilt als schwierig, obwohl die eigentliche Ursache ein einzelner langsamer Prozessschritt ist, der sich beheben liesse. Recruiting-Analytics ersetzt diese Einschaetzung durch nachvollziehbare Zahlen, die sich pro Mandat, pro Kunde und pro Recruiter auswerten lassen, und die genau zeigen, wo im Prozess Zeit verloren geht, statt nur ein diffuses Gefuehl von Verzoegerung zu liefern.</p>
+<p>Der zweite Grund ist die Kundenbeziehung selbst. Auftraggeber fragen zunehmend nach belastbaren Zahlen statt nach einem Erfahrungsbericht: Wie lange dauert die Besetzung im Schnitt, wie viele Kandidaten wurden praesentiert, bevor einer eingestellt wurde. Eine Agentur, die diese Fragen aus einem <a href="/produkt/analytics/">Analytics-Dashboard</a> heraus beantworten kann, wirkt professioneller als eine, die erst im Kalender oder in einer Excel-Tabelle nachschauen muss.</p>
+
+<h2>1. Time-to-Fill: Wie lange dauert eine Besetzung wirklich?</h2>
+<p>Time-to-Fill misst die Zeit zwischen Mandatsstart und Vertragsunterschrift des Kandidaten. Diese Kennzahl ist der klassische Ausgangspunkt jeder Recruiting-Analyse, weil sie direkt mit der Zufriedenheit des Auftraggebers zusammenhaengt. Wichtig ist die Auswertung nach Mandatstyp, denn eine Fuehrungsposition braucht strukturell laenger als eine operative Rolle, und ein Durchschnittswert ueber alle Mandate hinweg verschleiert diesen Unterschied eher, als dass er ihn erklaert. Sinnvoller ist eine Aufschluesselung nach Rollenkategorie oder Branche, damit sich ein realistischer Zielkorridor pro Mandatstyp bilden laesst, an dem sich einzelne laufende Prozesse messen lassen.</p>
+
+<h2>2. Time-to-First-Interview: Wie schnell reagiert die Agentur auf gute Kandidaten?</h2>
+<p>Diese Kennzahl misst die Zeit zwischen erstem Kontakt mit einem Kandidaten und dem ersten Interviewtermin. Sie ist oft aussagekraeftiger als Time-to-Fill, weil sie einen Prozessabschnitt isoliert, den die Agentur fast vollstaendig selbst kontrolliert, waehrend die finale Entscheidung beim Kunden liegt. Zieht sich dieser erste Schritt ueber mehrere Tage, ist das meist ein Zeichen fuer Koordinationsaufwand statt fuer inhaltliche Schwierigkeiten. Ein automatisiertes <a href="/produkt/pipeline/">Pipeline</a>-Management mit direkter Terminfindung verkuerzt genau diesen Abschnitt, ohne dass die Qualitaet der Vorauswahl darunter leidet.</p>
+
+<h2>3. Pipeline-Conversion-Rate je Stufe: Wo genau geht die Pipeline eng?</h2>
+<p>Eine Pipeline hat mehrere Stufen: Erstkontakt, Vorauswahl, Kundenpraesentation, Interview, Angebot, Vertragsunterschrift. Die Conversion-Rate zwischen zwei benachbarten Stufen zeigt, an welcher Stelle die meisten Kandidaten aus dem Prozess fallen. Faellt die Quote zwischen Kundenpraesentation und Interview auffaellig ab, deutet das auf ein Matching-Problem hin, die vorgeschlagenen Profile passen offenbar nicht zur Erwartung des Kunden. Faellt sie erst zwischen Interview und Angebot, liegt die Ursache eher beim Prozess oder Tempo des Auftraggebers selbst. Ohne diese stufenweise Betrachtung lassen sich beide Ursachen leicht verwechseln, und die Agentur optimiert am falschen Ende des Prozesses.</p>
+
+<h2>4. Quelle der erfolgreichen Platzierungen: Welcher Kanal liefert wirklich?</h2>
+<p>Nicht jeder Sourcing-Kanal, der viele Bewerbungen bringt, bringt auch viele Platzierungen. Die Auswertung nach Quelle, eigene Karriereseite, Jobboerse, Active Sourcing, Empfehlung oder Talent-Pool, zeigt, welcher Kanal tatsaechlich zu unterschriebenen Vertraegen fuehrt und nicht nur zu einem vollen Postfach. Fuer Agenturen, die Budget fuer Multiposting oder bezahlte Anzeigen einsetzen, ist diese Zahl entscheidend fuer die Frage, wo das naechste Budget sinnvoll investiert wird. Ein Kanal mit vielen Bewerbungen, aber kaum erfolgreichen Platzierungen, verdient weniger Budget als ein leiserer Kanal mit hoher Trefferquote.</p>
+
+<h2>5. Recruiter-Auslastung: Wie viele Mandate traegt ein Recruiter wirklich?</h2>
+<p>Die Zahl der parallel laufenden Mandate pro Recruiter entscheidet massgeblich ueber Qualitaet und Tempo. Zu viele gleichzeitige Mandate fuehren dazu, dass jedes einzelne langsamer voranschreitet, weil Aufmerksamkeit und Zeit sich duenn verteilen. Zu wenige Mandate pro Kopf bedeuten dagegen ungenutzte Kapazitaet, die sich in den Fixkosten der Agentur niederschlaegt. Diese Kennzahl ist besonders wertvoll fuer Teamleitung und Kapazitaetsplanung: Sie zeigt, ob ein neues Mandat noch an einen bestehenden Recruiter vergeben werden kann oder ob eine Erweiterung des Teams ansteht, bevor die Auslastung zulasten der laufenden Kunden geht.</p>
+
+<h2>6. Wiederbeauftragungsquote: Wie viele Kunden kommen aus eigenem Antrieb zurueck?</h2>
+<p>Der Anteil an Auftraggebern, die nach einer erfolgreichen Platzierung ein weiteres Mandat vergeben, ist eine der aussagekraeftigsten Kennzahlen ueberhaupt, weil sie Prozessqualitaet, Ergebnis und Kundenbeziehung in einer Zahl zusammenfuehrt. Eine niedrige Quote trotz guter Time-to-Fill-Werte deutet meist auf ein Problem in der Zusammenarbeit hin, etwa fehlende Transparenz waehrend des Prozesses. Ein <a href="/produkt/client-portal/">Client-Portal</a>, das dem Kunden laufend Einblick in Status und Fortschritt gibt, wirkt sich hier oft staerker auf die Wiederbeauftragung aus als eine minimal kuerzere Time-to-Fill.</p>
+
+<h2>Wie baut eine Agentur ein Analytics-Dashboard auf, das taeglich genutzt wird?</h2>
+<p>Ein Dashboard, das niemand oeffnet, ist wertlos, egal wie viele Kennzahlen es zeigt. Drei Prinzipien erhoehen die Wahrscheinlichkeit, dass Zahlen tatsaechlich im Alltag genutzt werden. Erstens: wenige Kennzahlen pro Rolle statt einer einzigen ueberladenen Ansicht fuer alle. Ein Recruiter braucht andere Zahlen im Blick als die Geschaeftsfuehrung. Zweitens: Echtzeit-Daten direkt aus der Pipeline statt eines woechentlichen Exports, der schon beim Oeffnen veraltet ist. Drittens: Vergleichbarkeit ueber Zeit, damit eine einzelne Zahl nicht isoliert betrachtet wird, sondern im Kontext der letzten Wochen oder Monate steht. Ein <a href="/produkt/analytics/">Analytics-Dashboard</a>, das direkt an die Pipeline-Daten des ATS angebunden ist, erfuellt alle drei Punkte automatisch, weil keine manuelle Uebertragung in eine separate Tabelle noetig ist.</p>
+<p>Sinnvoll ist zudem ein fester Rhythmus fuer die Auswertung: ein kurzer woechentlicher Blick im Team auf die wichtigsten Abweichungen, statt einer aufwendigen Monatsauswertung, die Probleme erst mit deutlicher Verzoegerung sichtbar macht. Je kuerzer der Abstand zwischen einer auffaelligen Zahl und der Reaktion darauf, desto weniger Zeit geht in laufenden Mandaten verloren.</p>
+
+<h2>Welche Fehler passieren beim Aufbau von Recruiting-Analytics am haeufigsten?</h2>
+<p>Der haeufigste Fehler ist, zu viele Kennzahlen gleichzeitig einzufuehren, sodass am Ende niemand mehr weiss, welche davon wirklich handlungsrelevant ist. Der zweite Fehler ist die Vermischung von Kennzahlen aus unterschiedlichen Quellen, etwa Bewerberzahlen aus einer Jobboerse und Pipeline-Daten aus dem ATS, ohne dass beide Systeme sauber verbunden sind. Das fuehrt zu Zahlen, die sich nicht wirklich vergleichen lassen. Der dritte Fehler ist fehlende Verbindlichkeit: Zahlen werden zwar erhoben, aber nie in konkrete Entscheidungen uebersetzt, etwa in eine Anpassung des Sourcing-Budgets oder eine Umverteilung von Mandaten im Team. Ein Dashboard entfaltet seinen Wert erst, wenn eine auffaellige Zahl automatisch die Frage nach der naechsten Massnahme ausloest.</p>
+
+<h2>Wie haengen Recruiting-Analytics und Automatisierung zusammen?</h2>
+<p>Analytics zeigt, wo im Prozess Zeit verloren geht. Automatisierung ist oft die direkte Antwort darauf. Zeigt die Auswertung etwa eine lange Time-to-First-Interview, ist automatisiertes Interview-Scheduling ein naheliegender Hebel. Zeigt sie eine niedrige Conversion-Rate zwischen Erstkontakt und Vorauswahl, lohnt sich ein Blick auf <a href="/produkt/automatisierung/">Recruiting-Automatisierung</a> bei Follow-ups und Statusmeldungen. Die Kennzahl allein loest kein Problem, sie zeigt nur, wo sich eine Investition in Prozessverbesserung am meisten auszahlt. Fuer Agenturen, die ihre <a href="/ats-fuer-recruiting-agenturen/">ATS-Wahl</a> ohnehin ueberdenken, lohnt sich deshalb ein System, das Analytics und Automatisierung nicht als getrennte Werkzeuge behandelt, sondern beides aus denselben Pipeline-Daten speist.</p>
+
+<h2>Fazit: Sechs Zahlen reichen, wenn sie konsequent genutzt werden</h2>
+<p>Recruiting-Analytics fuer Personalberatungen braucht keine hundert Kennzahlen, sondern sechs, die konsequent beobachtet und in Entscheidungen uebersetzt werden: Time-to-Fill, Time-to-First-Interview, Pipeline-Conversion-Rate je Stufe, Quelle der erfolgreichen Platzierungen, Recruiter-Auslastung und Wiederbeauftragungsquote. Wer diese sechs Werte laufend im Blick hat, erkennt Engpaesse fruehzeitig und kann Kunden mit belastbaren Zahlen begegnen statt mit einem Gefuehl. Ein <a href="/produkt/analytics/">Analytics-Dashboard</a> direkt im ATS ist Teil des <a href="/preise/">Pro Plans fuer 199 Euro pro User und Monat</a> (oder 1.791 Euro pro Jahr, drei Monate geschenkt).</p>
+
+<h2>Haeufige Fragen</h2>
+<h3>Welche Recruiting-Kennzahl sollte eine kleine Agentur zuerst einfuehren?</h3>
+<p>Time-to-Fill ist der einfachste Einstieg, weil sie sich direkt aus Mandatsstart und Vertragsunterschrift ableiten laesst und unmittelbar mit der Kundenzufriedenheit zusammenhaengt. Von dort aus laesst sich die Analyse schrittweise um weitere Kennzahlen erweitern.</p>
+<h3>Wie oft sollten Recruiting-Kennzahlen ausgewertet werden?</h3>
+<p>Ein woechentlicher Blick im Team reicht in der Regel aus, um Abweichungen fruehzeitig zu erkennen, ohne die Auswertung selbst zur Zeitfalle werden zu lassen. Bei akuten Problemen in einem einzelnen Mandat lohnt sich ein taeglicher Blick auf die betroffene Pipeline.</p>
+<h3>Brauchen Personalberatungen dafuer ein separates Analytics-Tool?</h3>
+<p>Nicht zwingend. Wenn das ATS Pipeline-Daten und Analytics aus derselben Quelle speist, entfaellt der manuelle Export in eine separate Tabelle, und die Zahlen sind automatisch aktuell, sobald sich der Status eines Kandidaten aendert.</p>
+`,
+  },
 ];
