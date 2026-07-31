@@ -23,6 +23,21 @@ export const ANNUAL_TERM_MONTHS = 12;
 
 export const TRIAL_DAYS = 14;
 
+// === ENTHALTENE MONATS-CREDITS ===
+// Diese Zahlen sind reine Anzeige-Kopien. Wahrheit steht in der Datenbank des
+// App-Projekts (aztqhtluvomqnxdavjxp):
+//   stripe_plan_mapping.runs_per_seat         -> Sourcing
+//   stripe_plan_mapping.enrichments_per_seat  -> Anreicherung
+// Gegenprobe vor jeder Aenderung hier:
+//   SELECT stripe_lookup_key, runs_per_seat, enrichments_per_seat
+//     FROM stripe_plan_mapping WHERE is_active;
+/** AI-Sourcing-Credits pro User und Monat bei monatlicher Abrechnung. */
+export const SOURCING_CREDITS_PER_SEAT_MONTHLY = 5;
+/** AI-Sourcing-Credits pro User und Monat bei jaehrlicher Abrechnung. */
+export const SOURCING_CREDITS_PER_SEAT_ANNUAL = 10;
+/** Anreicherungs-Credits fuer Kontaktdaten, pro User und Monat, in beiden Intervallen gleich. */
+export const ENRICHMENT_CREDITS_PER_SEAT = 50;
+
 // === PIONEER PLAN (DEPRECATED, Neuverkauf geschlossen 2026-07 mit AGB v1.3) ===
 // NICHT loeschen: wird in AGB §4b (Bestandsschutz-Klauseln) referenziert.
 /** @deprecated Pro Plan hat Pioneer ersetzt (Neukunden). Nur fuer Legacy-Copy. */

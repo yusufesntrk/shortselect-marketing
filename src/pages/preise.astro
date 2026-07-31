@@ -6,6 +6,9 @@ import {
   PRO_PRICE_MONTHLY_EUR,
   PRO_PRICE_ANNUAL_EUR,
   PRO_ANNUAL_MONTHS_FREE,
+  SOURCING_CREDITS_PER_SEAT_MONTHLY,
+  SOURCING_CREDITS_PER_SEAT_ANNUAL,
+  ENRICHMENT_CREDITS_PER_SEAT,
 } from '../lib/billing-constants';
 
 const SIGNUP_URL = 'https://app.shortselect.com/signup?utm_source=marketing&utm_medium=cta&utm_campaign=pro_plan&utm_content=pricing_main';
@@ -35,13 +38,13 @@ const pricingSchema = {
   applicationCategory: "BusinessApplication",
   applicationSubCategory: "Applicant Tracking System",
   operatingSystem: "Web Browser",
-  description: `ShortSelect ATS für Recruiting-Agenturen. Alle Funktionen, ein Preis pro User. Pro Plan: ${PRO_PRICE_MONTHLY_EUR} EUR pro User und Monat oder ${PRO_PRICE_ANNUAL_EUR} EUR pro User und Jahr (${PRO_ANNUAL_MONTHS_FREE} Monate geschenkt).`,
+  description: `ShortSelect ATS für Recruiting-Agenturen. Alle Funktionen, ein Preis pro User. Pro Plan: ${PRO_PRICE_MONTHLY_EUR} EUR pro User und Monat oder ${PRO_PRICE_ANNUAL_EUR} EUR pro User und Jahr (${PRO_ANNUAL_MONTHS_FREE} Monate geschenkt). Inklusive AI-Sourcing-Credits (${SOURCING_CREDITS_PER_SEAT_MONTHLY} monatlich, ${SOURCING_CREDITS_PER_SEAT_ANNUAL} jährlich) und ${ENRICHMENT_CREDITS_PER_SEAT} Anreicherungs-Credits pro User und Monat.`,
   image: ["https://www.shortselect.com/og-image.png"],
   offers: [
     {
       "@type": "Offer",
       name: "Pro Plan (monatlich)",
-      description: `Pro Plan: ${PRO_PRICE_MONTHLY_EUR} EUR pro User und Monat, alle Funktionen inklusive.`,
+      description: `Pro Plan: ${PRO_PRICE_MONTHLY_EUR} EUR pro User und Monat, alle Funktionen inklusive. Enthalten sind ${SOURCING_CREDITS_PER_SEAT_MONTHLY} AI-Sourcing-Credits und ${ENRICHMENT_CREDITS_PER_SEAT} Anreicherungs-Credits pro User und Monat.`,
       price: `${PRO_PRICE_MONTHLY_EUR}.00`,
       priceCurrency: "EUR",
       url: "https://www.shortselect.com/preise/",
@@ -66,7 +69,7 @@ const pricingSchema = {
     {
       "@type": "Offer",
       name: "Pro Plan (jährlich)",
-      description: `Pro Plan Jahresabo: ${PRO_PRICE_ANNUAL_EUR} EUR pro User und Jahr (9 statt 12 Monatsraten, Vorauszahlung).`,
+      description: `Pro Plan Jahresabo: ${PRO_PRICE_ANNUAL_EUR} EUR pro User und Jahr (9 statt 12 Monatsraten, Vorauszahlung). Enthalten sind ${SOURCING_CREDITS_PER_SEAT_ANNUAL} AI-Sourcing-Credits und ${ENRICHMENT_CREDITS_PER_SEAT} Anreicherungs-Credits pro User und Monat.`,
       price: `${PRO_PRICE_ANNUAL_EUR}.00`,
       priceCurrency: "EUR",
       url: "https://www.shortselect.com/preise/",
@@ -94,6 +97,7 @@ const pricingSchema = {
 const features = [
   "Unbegrenzte Jobs, Kandidaten und Pipelines",
   "Ein Preis pro User, alle Funktionen inklusive",
+  `${ENRICHMENT_CREDITS_PER_SEAT} Anreicherungs-Credits pro User und Monat für Kontaktdaten`,
   "AgentBurst KI-Engine: Matching, Screening, Ranking, Nurturing",
   "Multi-Mandanten mit Whitelabel-Client-Portal",
   "Karriereseite, Embeddable Widget, Multiposting",
@@ -185,6 +189,10 @@ const competitors = [
                 (bei monatlicher Abrechnung)
                 <br/>Pro aktivem User, alle Funktionen inklusive, netto zzgl. MwSt.
               </p>
+              <p class="mt-4 inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-semibold">
+                <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                {SOURCING_CREDITS_PER_SEAT_MONTHLY} AI-Sourcing-Credits pro User / Monat
+              </p>
             </div>
             <div id="price-annual-block">
               <div class="flex items-baseline justify-center gap-3 mb-2 flex-wrap">
@@ -194,6 +202,10 @@ const competitors = [
               <p class="text-sm text-muted-foreground">
                 (bei jährlicher Abrechnung)
                 <br/>Pro aktivem User, alle Funktionen inklusive, netto zzgl. MwSt.
+              </p>
+              <p class="mt-4 inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-semibold">
+                <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                {SOURCING_CREDITS_PER_SEAT_ANNUAL} AI-Sourcing-Credits pro User / Monat, doppelt so viele
               </p>
             </div>
           </div>
@@ -226,6 +238,28 @@ const competitors = [
           </p>
           <p id="annual-terms-note" class="text-center text-xs text-muted-foreground/70 mt-2">
             Jahresabo: 12 Monate Laufzeit, kündbar mit 6 Monaten Frist zum Laufzeitende (AGB § 7).
+          </p>
+        </div>
+
+        <!-- Credits erklaert -->
+        <div class="mt-8 rounded-xl border border-border bg-muted/30 p-6">
+          <h3 class="font-display font-semibold mb-4">Was ist ein Credit?</h3>
+          <dl class="space-y-4 text-sm">
+            <div>
+              <dt class="font-semibold mb-1">AI-Sourcing-Credit</dt>
+              <dd class="text-muted-foreground">
+                Ein Credit ist ein kompletter Sourcing-Lauf für eine Stelle: die KI sucht passende Profile, prüft sie und legt die Treffer als Vorschläge in deine Pipeline. Bei monatlicher Abrechnung sind {SOURCING_CREDITS_PER_SEAT_MONTHLY} Läufe pro User und Monat enthalten, bei jährlicher {SOURCING_CREDITS_PER_SEAT_ANNUAL}.
+              </dd>
+            </div>
+            <div>
+              <dt class="font-semibold mb-1">Anreicherungs-Credit</dt>
+              <dd class="text-muted-foreground">
+                Ein Credit ist eine gefundene Kontaktangabe zu einem Kandidaten oder CRM-Kontakt, also eine E-Mail-Adresse oder eine Telefonnummer. Findet die Anreicherung nichts, kostet der Versuch auch nichts. {ENRICHMENT_CREDITS_PER_SEAT} Credits pro User und Monat, in beiden Abrechnungsarten gleich.
+              </dd>
+            </div>
+          </dl>
+          <p class="text-xs text-muted-foreground mt-4">
+            Beide Kontingente sind ein gemeinsamer Topf für das ganze Team: bei fünf Usern also fünfmal so viele Credits, egal wer sie einsetzt. Nicht verbrauchte Credits verfallen am Ende der Abrechnungsperiode. Wer für die Anreicherung einen eigenen Anbieter-Zugang hinterlegt, rechnet dort direkt ab und hat kein Kontingent bei uns.
           </p>
         </div>
 
