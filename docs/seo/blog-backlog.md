@@ -30,7 +30,7 @@ Dieser Backlog steuert die wiederkehrende Blog-Routine. Sie nimmt den obersten E
 - [done: karriereseite-agenturen-bewerber-maschine 2026-07-25] Karriereseite für Agenturen: Vom Job-Widget zur Bewerber-Maschine | Links: /produkt/karriereseite/, /integrationen/
 - [done: interview-scheduling-ohne-mail-ping-pong 2026-07-28] Interview-Scheduling ohne Mail-Ping-Pong | Links: /produkt/interviews/
 - [done: recruiting-analytics-6-kennzahlen-agenturen 2026-07-31] Recruiting-Analytics: Die 6 Kennzahlen, die Agenturen steuern sollten | Links: /produkt/analytics/
-- [todo] IT-Recruiting 2026: Was Personalberatungen bei Tech-Rollen brauchen | Links: /branchen/it-recruiting/, /produkt/ki-features/
+- [done: it-recruiting-2026-personalberatungen-tech-rollen 2026-08-01] IT-Recruiting 2026: Was Personalberatungen bei Tech-Rollen brauchen | Links: /branchen/it-recruiting/, /produkt/ki-features/
 - [todo] Healthcare-Recruiting: Compliance und Geschwindigkeit vereinen | Links: /branchen/healthcare/, /produkt/compliance/
 - [todo] Handwerk-Recruiting: Kandidaten dort abholen, wo sie sind | Links: /branchen/handwerk/, /produkt/multiposting/
 - [todo] Vom Excel-Chaos zum ATS: Migrations-Leitfaden für kleine Agenturen | Links: /wechsel/, /produkt/ats-crm/
