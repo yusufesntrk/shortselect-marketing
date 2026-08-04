@@ -2402,7 +2402,7 @@ const websiteSchema = {
 
   /* Confetti */
   .abs-confetti { position: absolute; top: -10px; right: -10px; width: 120px; height: 120px; pointer-events: none; opacity: 0; }
-  .abs-hero-card.scored.match-card .abs-confetti { animation: abs-confetti 0.8s ease-out 0.2s; }
+  .abs-hero-card.scored.abs-match-card .abs-confetti { animation: abs-confetti 0.8s ease-out 0.2s; }
   @keyframes abs-confetti {
     0% { opacity: 0; transform: scale(0.3); } 40% { opacity: 1; } 100% { opacity: 0; transform: scale(1.8); }
   }
@@ -4190,7 +4190,7 @@ const websiteSchema = {
     var absIdx = 0;
 
     function absClearCardClasses() {
-      absCard.classList.remove('spawning','idle','scanning','scored','filing','rejecting','strike','match-card','miss-card');
+      absCard.classList.remove('spawning','idle','scanning','scored','filing','rejecting','strike','abs-match-card','abs-miss-card');
       absCard.style.opacity = '0';
       absCard.style.removeProperty('transform');
     }
@@ -4307,7 +4307,7 @@ const websiteSchema = {
         absCard.classList.remove('scanning');
         absEls.stamp.classList.add(p.match ? 'match' : 'miss');
         absEls.stampLbl.textContent = p.match ? 'Match' : 'Pass';
-        absCard.classList.add('scored', p.match ? 'match-card' : 'miss-card');
+        absCard.classList.add('scored', p.match ? 'abs-match-card' : 'abs-miss-card');
         absAnimateScore(p.score, 400);
       }, 4500);
 
