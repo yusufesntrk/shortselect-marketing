@@ -9,6 +9,9 @@ import {
   SOURCING_CREDITS_PER_SEAT_MONTHLY,
   SOURCING_CREDITS_PER_SEAT_ANNUAL,
   ENRICHMENT_CREDITS_PER_SEAT,
+  CREDIT_PACK_SIZE,
+  CREDIT_PACK_PRICE_EUR,
+  CREDIT_PACK_PRICE_LABEL,
 } from '../lib/billing-constants';
 
 const SIGNUP_URL = 'https://app.shortselect.com/signup?utm_source=marketing&utm_medium=cta&utm_campaign=pro_plan&utm_content=pricing_main';
@@ -38,8 +41,13 @@ const pricingSchema = {
   applicationCategory: "BusinessApplication",
   applicationSubCategory: "Applicant Tracking System",
   operatingSystem: "Web Browser",
-  description: `ShortSelect ATS für Recruiting-Agenturen. Alle Funktionen, ein Preis pro User. Pro Plan: ${PRO_PRICE_MONTHLY_EUR} EUR pro User und Monat oder ${PRO_PRICE_ANNUAL_EUR} EUR pro User und Jahr (${PRO_ANNUAL_MONTHS_FREE} Monate geschenkt). Inklusive AI-Sourcing-Credits (${SOURCING_CREDITS_PER_SEAT_MONTHLY} monatlich, ${SOURCING_CREDITS_PER_SEAT_ANNUAL} jährlich) und ${ENRICHMENT_CREDITS_PER_SEAT} Anreicherungs-Credits pro User und Monat.`,
+  description: `ShortSelect ATS für Recruiting-Agenturen. Alle Funktionen, ein Preis pro User. Pro Plan: ${PRO_PRICE_MONTHLY_EUR} EUR pro User und Monat oder ${PRO_PRICE_ANNUAL_EUR} EUR pro User und Jahr (${PRO_ANNUAL_MONTHS_FREE} Monate geschenkt). Inklusive ${SOURCING_CREDITS_PER_SEAT_MONTHLY} AI-Sourcing-Credits und ${ENRICHMENT_CREDITS_PER_SEAT} Anreicherungs-Credits pro User und Monat. Weitere Sourcing-Credits im Paket: ${CREDIT_PACK_SIZE} für ${CREDIT_PACK_PRICE_LABEL} EUR netto.`,
   image: ["https://www.shortselect.com/og-image.png"],
+  // Das Nachkauf-Paket (149,99 EUR netto) steht BEWUSST nur in den
+  // Beschreibungstexten und nicht als eigener Offer: Google waehlt fuer Rich
+  // Results den niedrigsten Offer-Preis, die Preisseite wuerde dann mit
+  // "ab 149,99 EUR" ausgespielt. Das waere der Preis eines Verbrauchspakets,
+  // nicht des Tarifs, und damit irrefuehrend.
   offers: [
     {
       "@type": "Offer",
@@ -69,7 +77,7 @@ const pricingSchema = {
     {
       "@type": "Offer",
       name: "Pro Plan (jährlich)",
-      description: `Pro Plan Jahresabo: ${PRO_PRICE_ANNUAL_EUR} EUR pro User und Jahr (9 statt 12 Monatsraten, Vorauszahlung). Enthalten sind ${SOURCING_CREDITS_PER_SEAT_ANNUAL} AI-Sourcing-Credits und ${ENRICHMENT_CREDITS_PER_SEAT} Anreicherungs-Credits pro User und Monat.`,
+      description: `Pro Plan Jahresabo: ${PRO_PRICE_ANNUAL_EUR} EUR pro User und Jahr (9 statt 12 Monatsraten, Vorauszahlung). Enthalten sind ${SOURCING_CREDITS_PER_SEAT_ANNUAL} AI-Sourcing-Credits und ${ENRICHMENT_CREDITS_PER_SEAT} Anreicherungs-Credits pro User und Monat, genau wie bei monatlicher Abrechnung. Der Vorteil des Jahresabos liegt im Preis.`,
       price: `${PRO_PRICE_ANNUAL_EUR}.00`,
       priceCurrency: "EUR",
       url: "https://www.shortselect.com/preise/",
@@ -205,7 +213,7 @@ const competitors = [
               </p>
               <p class="mt-4 inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-semibold">
                 <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
-                {SOURCING_CREDITS_PER_SEAT_ANNUAL} AI-Sourcing-Credits pro User / Monat, doppelt so viele
+                {SOURCING_CREDITS_PER_SEAT_ANNUAL} AI-Sourcing-Credits pro User / Monat
               </p>
             </div>
           </div>
@@ -248,7 +256,7 @@ const competitors = [
             <div>
               <dt class="font-semibold mb-1">AI-Sourcing-Credit</dt>
               <dd class="text-muted-foreground">
-                Ein Credit ist ein kompletter Sourcing-Lauf für eine Stelle: die KI sucht passende Profile, prüft sie und legt die Treffer als Vorschläge in deine Pipeline. Bei monatlicher Abrechnung sind {SOURCING_CREDITS_PER_SEAT_MONTHLY} Läufe pro User und Monat enthalten, bei jährlicher {SOURCING_CREDITS_PER_SEAT_ANNUAL}.
+                Ein Credit ist ein kompletter Sourcing-Lauf für eine Stelle: die KI sucht passende Profile, prüft sie und legt die Treffer als Vorschläge in deine Pipeline. {SOURCING_CREDITS_PER_SEAT_MONTHLY} Läufe pro User und Monat sind enthalten, in beiden Abrechnungsarten gleich. Reicht das nicht, kaufst du weitere Credits im Paket nach: {CREDIT_PACK_SIZE} Credits für {CREDIT_PACK_PRICE_LABEL} € netto. Nachgekaufte Credits verfallen nicht.
               </dd>
             </div>
             <div>
@@ -259,7 +267,7 @@ const competitors = [
             </div>
           </dl>
           <p class="text-xs text-muted-foreground mt-4">
-            Beide Kontingente sind ein gemeinsamer Topf für das ganze Team: bei fünf Usern also fünfmal so viele Credits, egal wer sie einsetzt. Nicht verbrauchte Credits verfallen am Ende der Abrechnungsperiode. Wer für die Anreicherung einen eigenen Anbieter-Zugang hinterlegt, rechnet dort direkt ab und hat kein Kontingent bei uns.
+            Beide Kontingente sind ein gemeinsamer Topf für das ganze Team: bei fünf Usern also fünfmal so viele Credits, egal wer sie einsetzt. Nicht verbrauchte Credits aus dem Kontingent verfallen am Ende der Abrechnungsperiode. Nachgekaufte Sourcing-Credits verfallen dagegen nicht und werden erst eingesetzt, wenn das Kontingent der laufenden Periode aufgebraucht ist. Wer für die Anreicherung einen eigenen Anbieter-Zugang hinterlegt, rechnet dort direkt ab und hat kein Kontingent bei uns.
           </p>
         </div>
 

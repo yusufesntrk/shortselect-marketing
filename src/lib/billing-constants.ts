@@ -31,12 +31,26 @@ export const TRIAL_DAYS = 14;
 // Gegenprobe vor jeder Aenderung hier:
 //   SELECT stripe_lookup_key, runs_per_seat, enrichments_per_seat
 //     FROM stripe_plan_mapping WHERE is_active;
-/** AI-Sourcing-Credits pro User und Monat bei monatlicher Abrechnung. */
+/**
+ * AI-Sourcing-Credits pro User und Monat. Seit 2026-08-09 in BEIDEN
+ * Abrechnungsarten gleich (vorher jaehrlich 10). Das Jahresabo unterscheidet
+ * sich nur noch im Preis, nicht mehr im Kontingent.
+ */
 export const SOURCING_CREDITS_PER_SEAT_MONTHLY = 5;
-/** AI-Sourcing-Credits pro User und Monat bei jaehrlicher Abrechnung. */
-export const SOURCING_CREDITS_PER_SEAT_ANNUAL = 10;
+/** Identisch zum Monatswert, siehe oben. Bewusst als eigene Konstante behalten,
+ *  damit eine kuenftige Differenzierung nur eine Zahl kostet. */
+export const SOURCING_CREDITS_PER_SEAT_ANNUAL = 5;
 /** Anreicherungs-Credits fuer Kontaktdaten, pro User und Monat, in beiden Intervallen gleich. */
 export const ENRICHMENT_CREDITS_PER_SEAT = 50;
+
+// === NACHKAUF: AI-SOURCING-CREDITS ===
+// Twin von CREDIT_PACK_* in ~/shortselect/project-spark/src/lib/billing-constants.ts
+/** Credits pro Nachkauf-Paket. */
+export const CREDIT_PACK_SIZE = 5;
+/** Netto-Preis pro Paket in Euro (Stripe-Preis ist tax_behavior=exclusive). */
+export const CREDIT_PACK_PRICE_EUR = 149.99;
+/** Anzeige-Form fuer die Preisseite. Deutsches Dezimalkomma. */
+export const CREDIT_PACK_PRICE_LABEL = "149,99";
 
 // === PIONEER PLAN (DEPRECATED, Neuverkauf geschlossen 2026-07 mit AGB v1.3) ===
 // NICHT loeschen: wird in AGB §4b (Bestandsschutz-Klauseln) referenziert.
