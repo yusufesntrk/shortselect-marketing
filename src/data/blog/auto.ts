@@ -692,4 +692,69 @@ export const autoPosts: BlogPost[] = [
 <p>Ja. Gerade weil gute Handwerkskandidaten am Markt knapp sind, lohnt es sich, Kontakte aus früheren Ausschreibungen strukturiert zu speichern und bei einem neuen, ähnlichen Mandat direkt wieder anzusprechen, statt jedes Mal komplett neu zu suchen.</p>
 `,
   },
+  {
+    slug: "excel-chaos-zum-ats-migrationsleitfaden",
+    title: "Vom Excel-Chaos zum ATS: Migrations-Leitfaden für kleine Agenturen",
+    seoTitle: "Vom Excel zum ATS: Migrations-Leitfaden | ShortSelect",
+    date: "2026-08-10",
+    author: "ShortSelect Team",
+    authorRole: "Redaktion",
+    category: "Praxis-Guides",
+    tags: ["Excel-Migration", "ATS-Einführung", "Recruiting-Agentur", "Datenmigration", "Bewerbermanagement", "Wechsel"],
+    excerpt:
+      "Der Wechsel von Excel-Tabellen zu einem ATS gelingt kleinen Agenturen mit einer klaren Reihenfolge: Bestandsaufnahme, Datenbereinigung, Import, Pilotmandat und erst danach der volle Umstieg. Dieser Leitfaden zeigt jeden Schritt.",
+    seoDescription:
+      "Excel zu ATS migrieren: Leitfaden für kleine Agenturen mit Datenbereinigung, Import, Pilotphase, typischen Fehlern und realistischem Zeitrahmen.",
+    readTime: "9 Min.",
+    content: `
+<p>Der Wechsel von Excel-Tabellen zu einem ATS gelingt kleinen Agenturen am zuverlässigsten in fünf Schritten: Bestandsaufnahme der vorhandenen Daten, Bereinigung vor dem Export, strukturierter Import in das neue System, ein Pilotmandat zur Probe und erst danach die vollständige Umstellung des Teams. Wer diese Reihenfolge einhält, verliert keine Kandidatendaten und hält den Betrieb während des Wechsels am Laufen. Dieser Leitfaden geht jeden Schritt einzeln durch, inklusive der Fehler, die den Umstieg in der Praxis am häufigsten verzögern.</p>
+
+<h2>Warum reicht Excel für eine wachsende Agentur irgendwann nicht mehr?</h2>
+<p>Für die ersten Mandate funktioniert eine Excel-Tabelle erstaunlich gut: eine Spalte pro Kandidat, eine Zeile pro Status, fertig. Das Problem entsteht mit dem Wachstum. Ab einer gewissen Zahl paralleler Mandate wird die Tabelle unübersichtlich, mehrere Recruiter bearbeiten dieselbe Datei und überschreiben sich gegenseitig, und die Suche nach einem bestimmten Kandidaten aus einem früheren Mandat dauert länger als eine komplette Neuansprache. Hinzu kommt das Datenschutzproblem: Eine Excel-Datei, die per E-Mail zwischen Recruitern und teilweise sogar an Kunden verschickt wird, lässt sich kaum kontrolliert löschen oder nachvollziehbar berechtigen. Wer wachsen will, stößt an genau diese Grenze, nicht an fehlender Motivation im Team.</p>
+
+<h2>Welche Daten müssen vor dem Wechsel erfasst werden?</h2>
+<p>Bevor überhaupt ein neues System zur Debatte steht, lohnt sich eine ehrliche Bestandsaufnahme dessen, was tatsächlich in den bestehenden Tabellen liegt. Typischerweise sind das vier Kategorien: aktive Kandidaten in laufenden Mandaten, der Talent-Pool aus früheren Bewerbungen und Absagen, Kundenkontakte und offene Mandate sowie die Kommunikationshistorie, sofern sie überhaupt irgendwo strukturiert vorliegt und nicht nur in einzelnen E-Mail-Postfächern verstreut ist. Wichtig ist, diese Bestandsaufnahme vor der Softwareauswahl zu machen, nicht danach. Nur so lässt sich später prüfen, ob ein <a href="/produkt/ats-crm/">ATS mit integriertem CRM</a> die vorhandenen Datenfelder überhaupt sinnvoll abbilden kann.</p>
+
+<h2>Wie läuft die Migration von Excel zu einem ATS konkret ab?</h2>
+<p>Der eigentliche Wechsel lässt sich in fünf Phasen unterteilen. Jede Phase hat ein eigenes Ziel, und das Überspringen einer Phase ist meist der Grund, warum Migrationen später doch länger dauern als geplant.</p>
+
+<h3>Schritt 1: Datenbereinigung vor dem Export</h3>
+<p>Excel-Tabellen sammeln über Jahre Dubletten, veraltete Statusfelder und inkonsistente Schreibweisen an, etwa wenn ein Kandidatenstatus einmal Absage und einmal Kandidat abgesagt heißt. Vor dem Export lohnt sich ein Durchgang, der Duplikate zusammenführt, klar veraltete Einträge markiert und Statusfelder auf eine einheitliche Bezeichnung bringt. Diese Bereinigung dauert bei den meisten kleinen Agenturen ein bis zwei Arbeitstage, spart im neuen System aber Wochen an nachträglichem Aufräumen.</p>
+
+<h3>Schritt 2: Export und Feldmapping</h3>
+<p>Die bereinigten Daten werden als CSV exportiert und den Feldern des neuen Systems zugeordnet: Name, Kontaktdaten, aktueller Status, zugehöriges Mandat, Notizen. Die meisten modernen ATS-Systeme bieten dafür einen geführten Importprozess, bei dem Excel-Spalten per Dropdown den passenden Feldern zugewiesen werden, ohne dass jemand technisches Vorwissen braucht. Wichtig ist hier vor allem Sorgfalt bei Freitextfeldern, weil dort in Excel oft mehrere Informationen in einer Zelle stehen, die im neuen System getrennte Felder werden sollten.</p>
+
+<h3>Schritt 3: Pilotmandat statt Komplettumstieg</h3>
+<p>Der größte Fehler beim Wechsel ist der Versuch, alles auf einmal umzustellen. Deutlich verlässlicher ist ein Pilotmandat: Ein bis zwei laufende Mandate werden probeweise im neuen System geführt, während der Rest des Teams noch in Excel arbeitet. So zeigt sich innerhalb weniger Tage, ob die <a href="/produkt/pipeline/">Pipeline-Struktur</a> zum eigenen Prozess passt und ob wichtige Felder aus der alten Tabelle im neuen System überhaupt sinnvoll wiederzufinden sind, bevor das gesamte Team betroffen ist.</p>
+
+<h3>Schritt 4: Team-Schulung parallel zum Pilotmandat</h3>
+<p>Während das Pilotmandat läuft, lohnt sich eine kurze, praxisnahe Einweisung für den Rest des Teams, statt einer einzelnen langen Schulung am Starttag. Recruiter merken sich neue Abläufe besser, wenn sie mit konkreten, eigenen Kandidatenfällen arbeiten, statt mit einer generischen Demo-Umgebung. Wer die Schulung erst nach dem Pilotmandat startet, hat zu diesem Zeitpunkt bereits Antworten auf die häufigsten Fragen aus der eigenen Praxis, was die Einführung im gesamten Team beschleunigt.</p>
+
+<h3>Schritt 5: Vollständiger Umzug und Excel-Archivierung</h3>
+<p>Läuft das Pilotmandat reibungslos, folgt der Umzug der restlichen aktiven Mandate und des Talent-Pools. Die alten Excel-Dateien sollten dabei nicht sofort gelöscht, sondern für eine Übergangszeit read-only archiviert werden, für den Fall, dass ein Datenfeld übersehen wurde. Nach wenigen Wochen im neuen System zeigt sich zuverlässig, ob noch etwas aus der alten Tabelle fehlt.</p>
+
+<h2>Welche Fehler passieren beim Wechsel von Excel zu einem ATS am häufigsten?</h2>
+<p>Der häufigste Fehler ist der bereits erwähnte Komplettumstieg ohne Pilotphase, der das gesamte Team gleichzeitig überfordert. Der zweite Fehler ist eine übersprungene Datenbereinigung: Werden Dubletten und inkonsistente Statusfelder unbereinigt importiert, entstehen im neuen System dieselben Probleme, nur an einem anderen Ort. Der dritte Fehler ist fehlende Verantwortlichkeit, wenn niemand im Team klar benannt ist, der die Migration begleitet und bei Rückfragen ansprechbar ist. Der vierte Fehler betrifft die Kommunikation nach außen: Kunden, die über ein Client-Portal eingebunden sind, sollten frühzeitig über den Wechsel informiert werden, damit sie nicht plötzlich einen neuen Zugang ohne Erklärung erhalten.</p>
+
+<h2>Wie lange dauert eine realistische Umstellung?</h2>
+<p>Für eine kleine Agentur mit überschaubarem Datenbestand liegt der reine technische Teil, Bereinigung, Export und Import, meist bei wenigen Tagen. Das Pilotmandat läuft sinnvollerweise zwei bis drei Wochen, damit genug reale Fälle durchlaufen, um Schwachstellen zu erkennen. Der vollständige Umzug inklusive Team-Schulung dauert insgesamt häufig vier bis sechs Wochen von der ersten Bestandsaufnahme bis zur vollständigen Ablösung der Excel-Tabellen. Agenturen, die diesen Zeitrahmen unterschreiten wollen, überspringen meist die Pilotphase und riskieren damit spätere Nacharbeit.</p>
+
+<h2>Lohnt sich der Wechsel finanziell für eine kleine Agentur?</h2>
+<p>Die Rechnung ist selten kompliziert, sobald man die versteckten Kosten von Excel mitzählt: Zeit für manuelle Statuspflege, doppelte Ansprache derselben Kandidaten aus Unwissenheit über frühere Kontakte, und verlorene Talent-Pool-Kontakte, die schlicht in einer alten Datei versanden. Ein <a href="/ats-fuer-recruiting-agenturen/">ATS für Recruiting-Agenturen</a> mit klarer Preisstruktur macht diese Kosten sichtbar und meist niedriger als der bisherige Zeitaufwand. ShortSelect bietet dafür den <a href="/preise/">Pro Plan für 199 Euro pro User und Monat</a>, alternativ für 1.791 Euro pro Jahr mit drei geschenkten Monaten, mit Migration, Pipeline, Automatisierung und Multiposting im selben Preis.</p>
+
+<h2>Was kann ein ATS, das eine Excel-Tabelle grundsätzlich nicht kann?</h2>
+<p>Der Unterschied zeigt sich nicht am ersten Tag, sondern im Alltag mit mehreren parallelen Mandaten. Eine Excel-Tabelle kennt keine automatischen Erinnerungen, keine Kandidatenkommunikation aus demselben Profil heraus und keinen Überblick darüber, wer aus dem Talent-Pool für ein neues Mandat passt. <a href="/produkt/automatisierung/">Automatisierung</a> übernimmt wiederkehrende Aufgaben wie Statusmeldungen an Kandidaten, während eine strukturierte Pipeline jederzeit zeigt, wo ein Mandat gerade steht, ohne dass jemand eine Tabellenzelle manuell aktualisieren muss. Genau diese Lücke ist der eigentliche Grund für den Wechsel, nicht die Optik einer modernen Oberfläche.</p>
+
+<h2>Fazit: Migration ist ein Prozess, kein Ereignis</h2>
+<p>Der Wechsel von Excel zu einem ATS gelingt kleinen Agenturen dann am besten, wenn er als schrittweiser Prozess behandelt wird und nicht als einmaliger Schnitt am Monatsanfang. Bestandsaufnahme, Bereinigung, Pilotmandat und erst danach der vollständige Umzug halten das Risiko klein und den laufenden Betrieb stabil. Eine ausführliche Anleitung zu den einzelnen Schritten und typischen Fallstricken bei der Datenübernahme liefert die <a href="/wechsel/">Wechsel-Seite</a>.</p>
+
+<h2>Häufige Fragen</h2>
+<h3>Wie lange dauert der Wechsel von Excel zu einem ATS für eine kleine Agentur?</h3>
+<p>Der technische Teil, also Bereinigung, Export und Import, dauert meist wenige Tage. Mit Pilotmandat und Team-Schulung liegt der gesamte Prozess bei den meisten kleinen Agenturen zwischen vier und sechs Wochen.</p>
+<h3>Gehen bei der Migration von Excel Daten verloren?</h3>
+<p>Bei sorgfältiger Bereinigung vor dem Export und einem geführten Feldmapping nicht. Die alten Excel-Dateien sollten zusätzlich für eine Übergangszeit archiviert bleiben, statt sie sofort zu löschen, für den Fall, dass ein Datenfeld im ersten Anlauf übersehen wurde.</p>
+<h3>Muss das gesamte Team gleichzeitig auf das neue System umsteigen?</h3>
+<p>Nein, und das ist sogar der empfohlene Weg. Ein Pilotmandat mit ein bis zwei laufenden Fällen zeigt innerhalb weniger Wochen, ob die neue Struktur passt, bevor das gesamte Team und alle Mandate umgestellt werden.</p>
+`,
+  },
 ];
