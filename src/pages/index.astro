@@ -100,13 +100,6 @@ const websiteSchema = {
   .fc h2 { font-size: 44px; line-height: 1.02; }
   .fc h3 { font-size: 24px; }
 
-  .fc-pill {
-    display: inline-flex; align-items: center; gap: 8px;
-    padding: 6px 14px; border-radius: 100px;
-    background: #ffe4e1; color: #c92a2a;
-    font-size: 12px; font-weight: 700;
-  }
-  .fc-pill .dot { width: 6px; height: 6px; background: #ef4444; border-radius: 50%; animation: pulse 1.6s infinite; }
   @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.4;transform:scale(1.4)} }
 
   .wavy { position: relative; display: inline-block; color: #ef4444; }
@@ -2698,12 +2691,10 @@ const websiteSchema = {
       box-sizing: border-box;
     }
     .fc-hero .trust { justify-content: center; flex-wrap: wrap; }
-    .fc-pill { align-self: center; }
     .fc-hero-glow { display: none; }
     .fc-hero::before { width: 100%; height: 600px; }
     .fc-hero-deco-dot { opacity: 0.3; }
     .fc-hero-deco-star { opacity: 0.4; font-size: 16px; }
-    .fc-pill { font-size: 12px; padding: 6px 12px; }
 
     /* --- "So funktioniert's" Cards --- */
     .fc-how-head { padding: 0 20px; max-width: 100%; }
@@ -2849,7 +2840,7 @@ const websiteSchema = {
   @media (prefers-reduced-motion: reduce) {
     .abs-hero-card, .abs-hero-card *, .abs-plat, .abs-plat *, .abs-pipe-card, .abs-pipe-card *,
     .abs-crit, .abs-score-stamp, .abs-confetti, .abs-reject-x line, .abs-scan-beam,
-    .fc-hero-deco-dot, .fc-hero-deco-star, .fc-pill .dot,
+    .fc-hero-deco-dot, .fc-hero-deco-star,
     .fc-trusted-track, .stj-field,
     .fc-mob-nav, .fc-mob-acc-panel, .fc-mob-acc-caret {
       animation-duration: 0.01s !important;
@@ -3031,7 +3022,6 @@ const websiteSchema = {
       <div class="fc-hero-deco-star s1">★</div>
       <div class="fc-hero-deco-star s2">✦</div>
       <div class="fc-hero-inner reveal-stagger" data-reveal>
-        <div class="fc-pill"><span class="dot"></span> Ein Preis, alle Funktionen inklusive</div>
         <h1>Das KI-native ATS für<br>Recruiting-Agenturen</h1>
         <p class="hero-magie">Recruiting, das über Nacht <span class="wavy">weiterarbeitet.</span></p>
         <p class="lead">
@@ -3053,7 +3043,6 @@ const websiteSchema = {
     <!-- HOW IT WORKS with mini-Lottie animations per card -->
     <section class="fc-how">
       <div class="fc-how-head reveal" data-reveal>
-        <div class="fc-pill" style="background:#fef3c7;color:#d97706"><span class="dot" style="background:#d97706"></span> Funktionsweise</div>
         <h2>Drei Schritte zum<br>vollen <span class="wavy">Funnel.</span></h2>
         <p class="lead">Was bei Coveto und Bullhorn ein Kanban-Board mit zehn Tools drumherum ist, ist bei uns eine einzige Pipeline.</p>
       </div>
@@ -3116,7 +3105,6 @@ const websiteSchema = {
     <!-- AI FEATURES (5 AgentBurst Agents) -->
     <section class="fc-ai">
       <div class="fc-ai-head reveal" data-reveal>
-        <div class="fc-pill"><span class="dot"></span> AgentBurst Agents</div>
         <h2>Weniger Klicks,<br><span class="wavy">mehr Placements.</span></h2>
         <p class="lead">AgentBurst-Agents arbeiten rund um die Uhr im Hintergrund, damit du dich auf das konzentrierst was zählt: Beziehungen aufbauen.</p>
       </div>
@@ -3226,7 +3214,6 @@ const websiteSchema = {
     <!-- AGENTBURST SOURCING SHOWCASE (Hero Spotlight Animation) -->
     <section class="fc-abs">
       <div class="abs-head reveal" data-reveal>
-        <div class="fc-pill"><span class="dot"></span> AgentBurst Sourcing</div>
         <h2>KI findet, prüft,<br><span class="accent">füllt deine Pipeline.</span></h2>
         <p class="lead">Definiere einmal das Wunschprofil. AgentBurst sourct parallel auf LinkedIn, Xing, Indeed und Stepstone, prüft jeden Kandidaten gegen deine Kriterien und schiebt nur die Top-Matches in deine Pipeline. 24/7. Ohne Klick.</p>
       </div>
@@ -3346,7 +3333,6 @@ const websiteSchema = {
     <!-- BENTO FEATURES with constant animations -->
     <section class="fc-feat">
       <div class="fc-feat-head reveal" data-reveal>
-        <div class="fc-pill"><span class="dot"></span> Die ganze Plattform</div>
         <h2>Sechs Module.<br>Eine <span class="wavy">Pipeline.</span></h2>
         <p style="margin-top:18px;font-size:17px;color:#525252;max-width:540px;margin-left:auto;margin-right:auto">Alles was deine Agentur täglich braucht, eng integriert in einer Plattform.</p>
       </div>
@@ -3535,7 +3521,6 @@ const websiteSchema = {
     <!-- AGENTS VS FEATURES -->
     <section class="fc-avf">
       <div class="fc-avf-head reveal" data-reveal>
-        <div class="fc-pill"><span class="dot"></span> Der Unterschied</div>
         <h2>KI-Features vs. <span class="wavy">KI-Agents.</span></h2>
         <p class="lead">Andere Tools warten auf deinen Klick. ShortSelect arbeitet, während du schläfst.</p>
       </div>
@@ -3629,7 +3614,6 @@ const websiteSchema = {
     <!-- STATS with animated bars -->
     <section class="fc-stats">
       <div class="fc-stats-head reveal" data-reveal>
-        <div class="fc-pill" style="background:rgba(239,68,68,0.2);color:#fca5a5"><span class="dot"></span> Wirkung</div>
         <h2>Was sich für dein Team <span class="wavy">ändert.</span></h2>
       </div>
       <div class="fc-stats-grid reveal-stagger" data-reveal>
@@ -3654,7 +3638,6 @@ const websiteSchema = {
     <!-- TESTIMONIALS -->
     <section class="fc-testi">
       <div class="fc-testi-head reveal" data-reveal>
-        <div class="fc-pill"><span class="dot"></span> Stimmen</div>
         <h2>Was unsere Kunden<br><span class="wavy">über uns sagen.</span></h2>
         <p class="lead">Recruiting-Teams, die mit ShortSelect arbeiten.</p>
       </div>
@@ -3793,7 +3776,6 @@ const websiteSchema = {
     <!-- PRICING -->
     <section class="fc-price">
       <div class="fc-price-head reveal" data-reveal>
-        <div class="fc-pill"><span class="dot"></span> Pro Plan</div>
         <h2>Ein Preis.<br><span class="wavy">Alles drin.</span></h2>
       </div>
       <div class="fc-price-card reveal" data-reveal>
@@ -3818,7 +3800,6 @@ const websiteSchema = {
     <!-- FAQ -->
     <section class="fc-faq">
       <div class="fc-faq-head reveal" data-reveal>
-        <div class="fc-pill" style="background:#dbeafe;color:#2563eb"><span class="dot" style="background:#2563eb"></span> Fragen &amp; Antworten</div>
         <h2>Häufig gestellte<br><span class="wavy">Fragen.</span></h2>
         <p class="lead">Hier findest du Antworten auf die wichtigsten Fragen zu ShortSelect.</p>
       </div>
@@ -3864,8 +3845,7 @@ const websiteSchema = {
     <!-- CLOSING -->
     <section class="fc-close">
       <div class="fc-close-inner reveal" data-reveal>
-        <div class="fc-pill" style="background:rgba(239,68,68,0.2);color:#fca5a5"><span class="dot"></span> Bereit?</div>
-        <h2 style="margin-top:18px">Heute angemeldet.<br>Morgen <span class="wavy">im Einsatz.</span></h2>
+        <h2>Heute angemeldet.<br>Morgen <span class="wavy">im Einsatz.</span></h2>
         <p class="lead">14 Tage kostenlos. Keine Kreditkarte. Keine Tricks.</p>
         <div class="actions">
           <a href="https://app.shortselect.com/signup?utm_source=marketing&utm_medium=cta&utm_campaign=pro_plan&utm_content=cta_section" class="fc-btn">Jetzt starten →</a>
