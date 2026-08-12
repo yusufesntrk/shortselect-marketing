@@ -10,7 +10,7 @@ export const testimonials = [
     name: "Rüdiger Bruns",
     company: "AMONOVA GmbH",
     role: "Geschäftsführer",
-    quote: "Das Client Portal ist ein absoluter Gamechanger. Unsere Kunden sehen den Status ihrer Positionen in Echtzeit – das schafft ein ganz neues Level an Vertrauen.",
+    quote: "Unsere Kunden sehen den Status ihrer Positionen jederzeit selbst im Client Portal. Das erspart uns die ständigen Status-Mails und schafft Vertrauen.",
     image: "/testimonials/ruediger-bruns.webp",
   },
   {
@@ -38,7 +38,7 @@ export const testimonials = [
     name: "Alireza Nikjou",
     company: "Experiton UG",
     role: "Geschäftsführer",
-    quote: "Seit wir ShortSelect nutzen, läuft unser gesamter Bewerbungsprozess auf Autopilot. Das Screening und die automatisierten Workflows haben unsere Effizienz verdreifacht.",
+    quote: "Seit wir ShortSelect nutzen, läuft unser Bewerbungsprozess weitgehend im Hintergrund. Screening und automatisierte Workflows nehmen uns die Handarbeit ab, an der wir vorher hängen geblieben sind.",
     image: "/testimonials/alireza-nikjou.webp",
   },
   {
@@ -52,14 +52,14 @@ export const testimonials = [
     name: "Hasim Pacal",
     company: "Kerkhoff Experts GmbH",
     role: "Geschäftsführer",
-    quote: "ShortSelect hat unsere Expertenvermittlung auf ein neues Level gebracht. Wir platzieren doppelt so viele Interim Manager im Einkauf und Supply Chain, weil die Pipelines sauber laufen und nichts mehr liegen bleibt.",
+    quote: "Mit ShortSelect laufen unsere Pipelines sauber durch. Dadurch platzieren wir spürbar mehr Interim Manager im Einkauf und Supply Chain, weil nichts mehr liegen bleibt.",
     image: "/testimonials/hasim-pacal.webp",
   },
   {
     name: "Ekrem Topcan",
     company: "Hohenfeld Search",
     role: "Geschäftsführer",
-    quote: "Das ATS von ShortSelect hat unser Fulfillment um 80% entlastet. Endlich können wir skalieren, ohne im operativen Chaos zu versinken. Automatisierte Workflows und Pipelines, die einfach funktionieren.",
+    quote: "Das ATS von ShortSelect hat unser Fulfillment massiv entlastet. Endlich können wir skalieren, ohne im operativen Chaos zu versinken. Automatisierte Workflows und Pipelines, die einfach funktionieren.",
     image: "/testimonials/ekrem-topcan.webp",
   },
 ];
