@@ -757,4 +757,72 @@ export const autoPosts: BlogPost[] = [
 <p>Nein, und das ist sogar der empfohlene Weg. Ein Pilotmandat mit ein bis zwei laufenden Fällen zeigt innerhalb weniger Wochen, ob die neue Struktur passt, bevor das gesamte Team und alle Mandate umgestellt werden.</p>
 `,
   },
+  {
+    slug: "ki-im-screening-agenten-und-mensch",
+    title: "KI im Screening: Was Agenten übernehmen und wo der Mensch entscheidet",
+    seoTitle: "KI im Screening: Agenten vs. Mensch | ShortSelect",
+    date: "2026-08-13",
+    author: "ShortSelect Team",
+    authorRole: "Redaktion",
+    category: "KI & Automatisierung",
+    tags: ["KI-Screening", "KI-Matching", "Recruiting-Agentur", "ATS", "Automatisierung", "DSGVO"],
+    excerpt:
+      "Ein KI-Agent sichtet und bewertet Bewerbungen, die finale Entscheidung über Einladung oder Absage bleibt beim Recruiter. Wo genau diese Grenze verläuft und wie ein guter Workflow zwischen KI und Mensch aussieht.",
+    seoDescription:
+      "KI im Screening: Was Agenten bei der Bewerbervorauswahl übernehmen, wo Recruiter entscheiden müssen, und wie ein transparenter Match-Score dabei hilft.",
+    readTime: "8 Min.",
+    content: `
+<p>Ein KI-Agent übernimmt beim Screening das Sichten, Vorsortieren und Bewerten großer Bewerbermengen anhand klar definierter Kriterien, die endgültige Entscheidung über Einladung, Absage oder Vorstellung beim Kunden bleibt aber beim Recruiter. Diese Aufteilung ist keine Formalität, sondern eine bewusste Grenze: Software liefert Daten und einen nachvollziehbaren Score, ein Mensch bewertet Kontext, Motivation und die Passung zum Team, die sich aus einem Lebenslauf allein nicht ablesen lässt.</p>
+
+<h2>Was genau macht ein KI-Agent beim Screening?</h2>
+<p>Ein KI-Agent liest eingehende Bewerbungen, gleicht Qualifikationen, Erfahrung und Anforderungsprofil ab und sortiert die Kandidaten nach Passgenauigkeit. Dazu gehört das Erkennen von Schlüsselqualifikationen im Lebenslauf, der Abgleich mit den Muss- und Kann-Kriterien einer Stelle sowie das Markieren von Lücken oder Auffälligkeiten, die ein Recruiter sich sonst manuell zusammensuchen müsste. Bei hohem Bewerbungsaufkommen, etwa bei populären Ausschreibungen mit mehreren hundert Eingängen, reduziert das die Zeit bis zur ersten sinnvollen Vorauswahl erheblich. Der Agent arbeitet dabei im Hintergrund weiter, während der Recruiter sich um Gespräche und Kundenkontakt kümmert.</p>
+
+<h2>Wo endet die Aufgabe der KI und wo beginnt die Entscheidung des Menschen?</h2>
+<p>Die Grenze liegt dort, wo aus einer Bewertung eine Konsequenz für eine reale Person wird. Ein Algorithmus kann eine Übereinstimmung zwischen Anforderungsprofil und Lebenslauf berechnen, er kann aber nicht beurteilen, ob ein Karriereknick durch eine Erziehungszeit erklärbar ist, ob ein unkonventioneller Werdegang für eine bestimmte Kundenkultur genau richtig passt oder ob ein Kandidat im Gespräch überzeugt, obwohl das Profil auf dem Papier nur mittelmäßig wirkt. Deshalb sollte jede finale Absage, jede Einladung zum Gespräch und jede Entscheidung, die dem Auftraggeber präsentiert wird, von einem Menschen getroffen und verantwortet werden. Die KI liefert die Vorauswahl und die Begründung dazu, nicht das letzte Wort.</p>
+
+<h2>Wie funktioniert ein transparenter Match-Score beim KI-Screening?</h2>
+<p>Ein guter Match-Score ist keine Blackbox-Zahl, sondern eine nachvollziehbare Aufschlüsselung: Welche Kriterien wurden erfüllt, welche nicht, und wie stark wiegt jedes einzelne für die konkrete Stelle. Ein <a href="/ats-mit-ki-matching/">ATS mit KI-Matching</a> zeigt diese Aufschlüsselung offen, sodass ein Recruiter dem Kunden erklären kann, warum ein Kandidat auf Platz eins der Shortlist steht, statt nur eine Zahl ohne Kontext zu präsentieren. Diese Transparenz ist auch die Grundlage dafür, dass Recruiter dem Score vertrauen können: Wer sieht, wie eine Bewertung zustande kommt, kann sie im Zweifel auch korrigieren, wenn ein Kriterium für diesen einen Fall falsch gewichtet wurde.</p>
+
+<h2>Welche Aufgaben sollten Recruiter beim Screening nie an KI abgeben?</h2>
+<p>Drei Bereiche gehören in menschliche Hand. Erstens die finale Entscheidung über Ablehnung oder Einladung, weil sie unmittelbare Konsequenzen für die betroffene Person hat. Zweitens die Bewertung von Softskills und kultureller Passung, die sich aus einem Gespräch ergibt und die kein Dokument vollständig abbildet. Drittens die Kommunikation heikler Entscheidungen, etwa eine Absage nach einem bereits geführten Gespräch, die immer persönlich und nicht automatisiert erfolgen sollte. Ein KI-Agent kann all diese Schritte vorbereiten und beschleunigen, die Verantwortung dafür trägt am Ende die Agentur, nicht die Software.</p>
+
+<h2>Wie verändert KI-Screening den Alltag von Personalberatungen?</h2>
+<p>Der spürbarste Effekt ist Zeit. Wo Recruiter früher Stunden mit dem Durchklicken von Profilen verbrachten, übernimmt ein Agent die erste Sichtung und liefert eine sortierte, begründete Liste. Das verschiebt die Arbeitszeit weg vom reinen Sichten hin zu Gesprächen, Kundenkontakt und der Betreuung mehrerer Mandate gleichzeitig, was gerade für kleine Teams mit vielen parallelen Auftraggebern entscheidend ist. Die <a href="/produkt/ki-features/">KI-Features im ATS</a> decken dabei nicht nur das Screening ab, sondern auch angrenzende Aufgaben wie das Vorformulieren von Rückmeldungen oder das Erkennen passender Kandidaten aus dem bestehenden Talent-Pool für ein neues Mandat.</p>
+
+<h2>Welche Risiken birgt KI-Screening ohne menschliche Kontrolle?</h2>
+<p>Ohne eine klare menschliche Kontrollinstanz drohen zwei Probleme. Das erste ist eine schleichende Verzerrung: Ein Modell, das ausschließlich auf historischen Einstellungsdaten trainiert wurde, kann bestehende Muster ungeprüft fortschreiben, statt sie zu hinterfragen. Das zweite ist ein Datenschutzproblem, wenn automatisierte Bewertungen ohne dokumentierte Kriterien und ohne Möglichkeit zur Überprüfung getroffen werden. Ein <a href="/recruiting-crm-dsgvo/">DSGVO-konformes Recruiting-CRM</a> dokumentiert deshalb, welche Kriterien in eine Bewertung einfließen, und stellt sicher, dass Kandidaten auf Anfrage nachvollziehen können, wie ihre Bewerbung eingeordnet wurde. Diese Nachvollziehbarkeit ist kein Bonus, sondern eine rechtliche Voraussetzung für automatisierte Vorauswahl.</p>
+
+<h2>Wie lässt sich KI-Screening in eine bestehende Pipeline integrieren?</h2>
+<p>Am reibungslosesten funktioniert die Integration, wenn der KI-Score direkt in die gewohnte Kandidatenansicht einfließt, statt als separates Tool nebenher zu laufen. In einer strukturierten <a href="/produkt/pipeline/">Pipeline</a> sieht der Recruiter auf einen Blick, in welcher Phase sich ein Kandidat befindet und welchen Match-Score der Agent für die konkrete Stelle berechnet hat. Änderungen am Anforderungsprofil, etwa wenn ein Kunde eine Anforderung nachträglich anpasst, sollten sich automatisch auf die Bewertung aller bereits gesichteten Kandidaten auswirken, ohne dass jemand die Liste manuell neu durchgeht. Genau diese Verzahnung von Bewertung und Prozess unterscheidet ein durchdachtes System von einer isolierten KI-Spielerei.</p>
+
+<h2>Wie sieht ein guter Workflow zwischen KI-Agent und Recruiter konkret aus?</h2>
+<p>In der Praxis lässt sich die Zusammenarbeit in drei Schritte gliedern, die sich in fast jedem Mandat wiederholen.</p>
+
+<h3>Schritt 1: Der Agent sortiert und begründet</h3>
+<p>Sobald Bewerbungen eingehen, gleicht der Agent sie mit dem Anforderungsprofil ab und ordnet die Kandidaten nach Match-Score. Jede Einstufung ist mit den zugrunde liegenden Kriterien hinterlegt, sodass der Recruiter nicht raten muss, warum ein Profil weit oben oder weit unten steht.</p>
+
+<h3>Schritt 2: Der Recruiter prüft die Spitzengruppe</h3>
+<p>Statt jede einzelne Bewerbung von vorne zu lesen, startet der Recruiter mit der vorsortierten Spitzengruppe und verschafft sich dort ein eigenes Bild. Hier fließt Erfahrung ein, die kein Score abbilden kann: Wie klingt ein Anschreiben, passt der Werdegang zur Erzählung im Lebenslauf, gibt es Rückfragen, die vor einem Gespräch geklärt werden sollten.</p>
+
+<h3>Schritt 3: Der Mensch entscheidet und kommuniziert</h3>
+<p>Erst nach dieser Prüfung fällt die Entscheidung über Einladung, Rückfrage oder Absage, und genau diese Entscheidung wird auch persönlich kommuniziert. Der Agent kann eine Rückmeldung vorformulieren, verschickt wird sie aber erst, nachdem ein Mensch sie freigegeben hat. Diese drei Schritte sorgen dafür, dass Geschwindigkeit und Sorgfalt sich nicht gegenseitig ausschließen, sondern ergänzen.</p>
+
+<h2>Was kostet KI-gestütztes Screening für eine Agentur?</h2>
+<p>Für Agenturen, die planbare Kosten statt versteckter Zusatzgebühren pro Funktion suchen, bietet ShortSelect den <a href="/preise/">Pro Plan für 199 Euro pro User und Monat</a> an, alternativ für 1.791 Euro pro Jahr mit drei geschenkten Monaten. KI-Matching und Screening-Unterstützung sind darin enthalten, nicht als separates Zusatzmodul. Das macht die Rechnung für eine Agentur einfacher: Der Zeitgewinn durch schnelleres Screening steht einem festen, kalkulierbaren Preis gegenüber, nicht einer wachsenden Zahl an Einzelgebühren.</p>
+
+<h2>Fazit: Geschwindigkeit von der KI, Verantwortung vom Menschen</h2>
+<p>KI im Screening funktioniert am besten als Werkzeug, das Recruitern Zeit zurückgibt, nicht als Ersatz für ihre Entscheidung. Ein Agent sichtet, sortiert und begründet, ein Mensch entscheidet, spricht und verantwortet. Agenturen, die diese Aufteilung klar ziehen, gewinnen Geschwindigkeit, ohne Vertrauen bei Kandidaten oder Auftraggebern zu riskieren. Wer wissen will, wie ein komplettes <a href="/ats-fuer-recruiting-agenturen/">ATS für Recruiting-Agenturen</a> KI-Screening mit dem restlichen Mandatsalltag verbindet, findet dort einen Überblick über alle Bausteine.</p>
+
+<h2>Häufige Fragen</h2>
+
+<h3>Ersetzt KI-Screening den Recruiter komplett?</h3>
+<p>Nein. Ein KI-Agent übernimmt die erste Sichtung und Vorsortierung großer Bewerbermengen, die finale Entscheidung über Einladung oder Absage sowie die Bewertung von Softskills bleibt beim Recruiter.</p>
+
+<h3>Wie erkennt man, ob ein Match-Score vertrauenswürdig ist?</h3>
+<p>Ein vertrauenswürdiger Score zeigt offen, welche Kriterien wie stark gewichtet wurden, statt nur eine einzelne Zahl ohne Erklärung auszugeben. Nur so kann ein Recruiter die Bewertung im Einzelfall nachvollziehen und bei Bedarf korrigieren.</p>
+
+<h3>Ist automatisiertes Screening DSGVO-konform?</h3>
+<p>Es kann es sein, wenn die verwendeten Kriterien dokumentiert sind und Kandidaten auf Anfrage nachvollziehen können, wie ihre Bewerbung bewertet wurde. Entscheidend ist, dass am Ende immer ein Mensch die finale Entscheidung trifft und verantwortet.</p>
+`,
+  },
 ];

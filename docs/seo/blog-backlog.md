@@ -34,7 +34,7 @@ Dieser Backlog steuert die wiederkehrende Blog-Routine. Sie nimmt den obersten E
 - [done: healthcare-recruiting-compliance-geschwindigkeit 2026-08-04] Healthcare-Recruiting: Compliance und Geschwindigkeit vereinen | Links: /branchen/healthcare/, /produkt/compliance/
 - [done: handwerk-recruiting-kandidaten-dort-abholen 2026-08-07] Handwerk-Recruiting: Kandidaten dort abholen, wo sie sind | Links: /branchen/handwerk/, /produkt/multiposting/
 - [done: excel-chaos-zum-ats-migrationsleitfaden 2026-08-10] Vom Excel-Chaos zum ATS: Migrations-Leitfaden für kleine Agenturen | Links: /wechsel/, /produkt/ats-crm/
-- [todo] KI im Screening: Was Agenten übernehmen und wo der Mensch entscheidet | Links: /produkt/ki-features/, /ats-mit-ki-matching/
+- [done: ki-im-screening-agenten-und-mensch 2026-08-13] KI im Screening: Was Agenten übernehmen und wo der Mensch entscheidet | Links: /produkt/ki-features/, /ats-mit-ki-matching/
 - [todo] Personio als ATS für Agenturen: Wo die Grenzen liegen | Links: /vergleich/shortselect-vs-personio/
 - [todo] softgarden-Vergleich: Agentur-Perspektive | Links: /vergleich/shortselect-vs-softgarden/
 - [todo] Recruiting-Automatisierung: 10 Workflows, die Zeit sparen | Links: /produkt/automatisierung/
