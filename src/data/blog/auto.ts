@@ -825,4 +825,73 @@ export const autoPosts: BlogPost[] = [
 <p>Es kann es sein, wenn die verwendeten Kriterien dokumentiert sind und Kandidaten auf Anfrage nachvollziehen können, wie ihre Bewerbung bewertet wurde. Entscheidend ist, dass am Ende immer ein Mensch die finale Entscheidung trifft und verantwortet.</p>
 `,
   },
+  {
+    slug: "personio-als-ats-fuer-agenturen-grenzen",
+    title: "Personio als ATS für Agenturen: Wo die Grenzen liegen",
+    seoTitle: "Personio als ATS für Agenturen: Grenzen | ShortSelect",
+    date: "2026-08-16",
+    author: "ShortSelect Team",
+    authorRole: "Redaktion",
+    category: "Praxis-Guides",
+    tags: ["Personio", "ATS Vergleich", "Recruiting-Agentur", "Multi-Mandanten", "KI-Matching"],
+    excerpt:
+      "Personio ist eine HR-Suite mit Lohnabrechnung und ATS-Modul, gebaut für Inhouse-Teams. Für Recruiting-Agenturen mit mehreren Mandanten fehlen zentrale Bausteine wie Client-Portal und KI-Matching.",
+    seoDescription:
+      "Personio als ATS für Recruiting-Agenturen: Wo Single-Tenant, fehlendes Client-Portal und ATS als Zusatzmodul im Agentur-Alltag an Grenzen stoßen.",
+    readTime: "8 Min.",
+    content: `
+<p>Personio ist als HR-Suite für interne Personalabteilungen gebaut, mit Lohnabrechnung, Zeiterfassung und Abwesenheitsmanagement im Zentrum und dem Bewerbermanagement als Zusatzmodul. Für Recruiting-Agenturen und Personalberatungen, die mehrere Kundenmandate parallel und mit getrennten Daten betreuen, reicht dieses Modul in der Praxis oft nicht: Es fehlt an Multi-Mandanten-Fähigkeit, an einem Client-Portal für die Kundenkommunikation und an KI-Matching, das eine Shortlist gegenüber dem Auftraggeber belastbar begründet.</p>
+
+<h2>Wofür wurde Personio ursprünglich gebaut?</h2>
+<p>Personio ist eine All-in-One-HR-Software für Unternehmen, die ihre eigenen Mitarbeitenden verwalten: Onboarding, Lohnabrechnung, Zeiterfassung, Abwesenheiten und Performance Reviews laufen in einem System zusammen. Das Bewerbermanagement ist dort ein Baustein unter vielen, gedacht für die eigenen offenen Stellen eines einzelnen Unternehmens. Diese Ausrichtung erklärt auch, warum Personio in vielen internen HR-Abteilungen gut funktioniert: Ein Unternehmen hat eine Belegschaft, einen Rechtsträger und einen zusammenhängenden Datenbestand, für den ein Single-Tenant-System genau richtig dimensioniert ist.</p>
+
+<h2>Warum stößt Personio als ATS für Recruiting-Agenturen an Grenzen?</h2>
+<p>Eine Personalberatung arbeitet strukturell anders als eine interne HR-Abteilung. Sie besetzt nicht die eigenen Stellen, sondern die ihrer Kunden, oft zehn oder mehr Mandate gleichzeitig, mit eigenen Ansprechpartnern, eigenen Anforderungsprofilen und dem Anspruch, jedem Auftraggeber einen klaren Überblick über den Stand seiner Kandidaten zu geben. Genau an dieser Stelle zeigen sich die Grenzen eines HR-Suite-Moduls, das für interne Prozesse entwickelt wurde.</p>
+
+<h3>Keine echte Multi-Mandanten-Fähigkeit</h3>
+<p>Personio ist als Single-Tenant-System konzipiert: eine Instanz für ein Unternehmen. Eine Agentur, die für mehrere Kunden gleichzeitig rekrutiert, muss Mandate und Kandidatendaten dann behelfsmäßig über Ordnerstrukturen, Tags oder mehrere Zugänge trennen, statt eine saubere, systemseitige Trennung zu haben. Ein <a href="/ats-fuer-recruiting-agenturen/">ATS für Recruiting-Agenturen</a> denkt diese Trennung von Anfang an mit, sodass Kandidaten, Jobs und Kommunikation pro Mandant getrennt bleiben, ohne dass Recruiter selbst für Ordnung sorgen müssen.</p>
+
+<h3>Kein Client-Portal für Kundentransparenz</h3>
+<p>Auftraggeber einer Personalberatung wollen den Status ihres Mandats sehen, ohne bei jeder Rückfrage eine E-Mail zu schreiben. Personio bietet dafür keinen kontrollierten Kundenzugang. Ein <a href="/produkt/client-portal/">Client-Portal</a> gibt dem Kunden einen eigenen, eingeschränkten Blick auf die Shortlist und den Bearbeitungsstand, was in der Praxis PDF-Listen und lange Statusmails erspart und die Zusammenarbeit für beide Seiten nachvollziehbarer macht.</p>
+
+<h3>Kein KI-Matching für die Kandidatenbewertung</h3>
+<p>Bei hoher Bewerbungszahl entscheidet die Geschwindigkeit der Vorauswahl über die Reaktionszeit gegenüber dem Kunden. Personio bietet kein KI-gestütztes Matching, mit dem Kandidaten automatisch gegen ein Anforderungsprofil bewertet werden. Ein <a href="/ats-mit-ki-matching/">ATS mit KI-Matching</a> liefert stattdessen einen nachvollziehbaren Score je Kriterium, den ein Recruiter gegenüber dem Auftraggeber begründen kann, statt jede Bewerbung einzeln von Hand zu sichten.</p>
+
+<h3>ATS als Zusatzmodul, nicht als Kernprodukt</h3>
+<p>Weil das Bewerbermanagement in Personio ein Modul neben Lohnabrechnung und Zeiterfassung ist, richtet sich die Weiterentwicklung dieses Bereichs an den Bedürfnissen interner HR-Teams aus, nicht an denen von Agenturen mit mehreren Kunden. Funktionen wie Talent-Pools über Mandate hinweg, agenturspezifisches Reporting oder ein auf Vermittlung statt auf interne Einstellung zugeschnittener Pipeline-Aufbau stehen dort nicht im Zentrum der Roadmap.</p>
+
+<h2>Wie wirken sich diese Grenzen im Recruiting-Alltag konkret aus?</h2>
+<p>In der Theorie klingen fehlende Multi-Tenancy oder ein fehlendes Client-Portal nach Details. Im Alltag summieren sie sich zu spürbarem Mehraufwand. Ein Recruiter, der für fünf Kunden gleichzeitig Kandidaten sichtet, muss ohne saubere Mandanten-Trennung selbst darauf achten, dass keine Profile oder Notizen zwischen Mandaten vermischt werden, etwa wenn zwei Kunden ähnliche Positionen ausschreiben. Fehlt ein Client-Portal, landet der aktuelle Bearbeitungsstand stattdessen in wiederkehrenden Statusmails oder Telefonaten, die Zeit kosten und sich schwer nachhalten lassen, wenn mehrere Kollegen an einem Mandat arbeiten. Und ohne KI-Matching bleibt die erste Sichtung großer Bewerbungsmengen eine rein manuelle Aufgabe, die bei stark nachgefragten Stellen schnell mehrere Stunden pro Woche bindet, die an anderer Stelle im Mandat fehlen.</p>
+
+<p>Diese Reibungspunkte fallen einzelnen Recruitern zunächst kaum auf, weil sie sich an behelfsmäßige Lösungen gewöhnen: eigene Excel-Listen neben Personio, individuelle Ordnerstrukturen pro Kunde, manuell verschickte Statusupdates. Erst wenn die Zahl paralleler Mandate wächst, wird der Aufwand sichtbar, und genau an diesem Punkt lohnt sich die Frage, ob ein auf Agenturen zugeschnittenes System die Arbeit nicht von Grund auf einfacher macht, statt behelfsmäßige Workarounds weiter auszubauen.</p>
+
+<h2>Für wen ist Personio trotzdem die richtige Wahl?</h2>
+<p>Für ein Unternehmen, das eine vollständige interne HR-Verwaltung sucht, kann Personio weiterhin die passende Lösung sein: Lohnabrechnung, Zeiterfassung, Abwesenheitsmanagement und Performance Reviews in einem System zu bündeln, spart Schnittstellen und reduziert die Zahl der Tools im HR-Alltag. Wer nur gelegentlich eine eigene Stelle ausschreibt und keine Mandate für Dritte betreut, stößt an die beschriebenen Grenzen in der Regel gar nicht.</p>
+
+<h2>Was kostet Personio im Vergleich zu einem spezialisierten ATS?</h2>
+<p>Personio startet nach eigenen Angaben bei etwa 200 Euro im Monat, der genaue Betrag hängt von gebuchten Modulen und Mitarbeiterzahl ab, und das Bewerbermanagement ist dabei meist eines von mehreren kostenpflichtigen Bausteinen. ShortSelect als spezialisiertes Recruiting-ATS kostet im Pro Plan 199 Euro pro User und Monat, alternativ 1.791 Euro pro Jahr mit drei geschenkten Monaten, mit Multi-Mandanten-Fähigkeit, Client-Portal und KI-Matching bereits im Preis enthalten statt als Zusatzmodul.</p>
+
+<h2>Wie unterscheidet sich der Wechsel von Personio zu einem Agentur-ATS?</h2>
+<p>Der Wechsel betrifft in der Regel nur das Bewerbermanagement, nicht die interne HR-Verwaltung, die viele Agenturen ohnehin über andere Wege abwickeln. Kandidaten, offene Mandate und Kontakte lassen sich per CSV oder API in ein neues System übertragen, ohne dass Lohnabrechnung oder Zeiterfassung davon berührt sind. Eine Schritt-für-Schritt-Anleitung für die Datenübernahme und die ersten Tage im neuen System liefert die <a href="/wechsel/">Wechsel-Seite</a>.</p>
+
+<p>In der Praxis läuft der Wechsel meist parallel zum laufenden Betrieb: Ein neues Mandat startet direkt im neuen System, während bestehende Mandate schrittweise nachziehen, sobald die zugehörigen Kandidatendaten übertragen sind. Personio bleibt währenddessen für die interne HR-Verwaltung unverändert im Einsatz, weil beide Systeme unterschiedliche Aufgaben abdecken und sich nicht gegenseitig ersetzen. Wichtig ist vor allem, dass Kandidatennotizen, bisherige Kommunikation und der Status jedes Mandats vollständig mitwandern, damit kein Recruiter nach dem Wechsel wieder bei null anfangen muss.</p>
+
+<h2>Checkliste: Wann lohnt sich der Wechsel von Personio als ATS?</h2>
+<p>Vier Fragen zeigen recht zuverlässig, ob die Grenzen von Personio im eigenen Alltag bereits spürbar sind: Verwaltet das Team Kandidaten und Jobs für mehrere externe Kunden gleichzeitig. Fragen Auftraggeber regelmäßig nach dem aktuellen Stand ihrer Mandate, statt das im System selbst einsehen zu können. Verbringen Recruiter viel Zeit mit manueller Sichtung großer Bewerbungsmengen, ohne unterstützenden Match-Score. Und wächst die Zahl der parallelen Mandate schneller, als sich mit Ordnerstrukturen und Tags noch sinnvoll trennen lässt. Wer mindestens zwei dieser Fragen mit Ja beantwortet, sollte ein spezialisiertes ATS ernsthaft prüfen, statt die Einschränkungen weiter mit manuellem Aufwand auszugleichen.</p>
+
+<h2>Fazit: Zwei unterschiedliche Werkzeuge für zwei unterschiedliche Aufgaben</h2>
+<p>Personio ist eine solide Wahl für Unternehmen, die eine geschlossene interne HR-Suite suchen. Für Recruiting-Agenturen, die für mehrere Kunden gleichzeitig arbeiten und Transparenz sowie Geschwindigkeit als Wettbewerbsvorteil brauchen, fehlen dem ATS-Modul die zentralen Bausteine Multi-Mandanten-Fähigkeit, Client-Portal und KI-Matching. Ein detaillierter Funktions- und Preisvergleich beider Systeme steht auf der <a href="/vergleich/shortselect-vs-personio/">Vergleichsseite ShortSelect gegen Personio</a>.</p>
+
+<h2>Häufige Fragen</h2>
+
+<h3>Kann man Personio als vollwertiges ATS für eine Recruiting-Agentur nutzen?</h3>
+<p>Technisch lässt sich damit arbeiten, in der Praxis fehlen aber zentrale Agentur-Funktionen wie Multi-Mandanten-Trennung, ein Client-Portal für Kunden und KI-Matching. Für Agenturen mit mehreren parallelen Mandaten ist ein spezialisiertes ATS meist die passendere Wahl.</p>
+
+<h3>Was kostet Personio im Vergleich zu ShortSelect?</h3>
+<p>Personio startet bei etwa 200 Euro im Monat, abhängig von Modulen und Mitarbeiterzahl. ShortSelect kostet im Pro Plan 199 Euro pro User und Monat oder 1.791 Euro pro Jahr mit drei geschenkten Monaten, mit Client-Portal und KI-Matching bereits enthalten.</p>
+
+<h3>Lässt sich Personio parallel zu einem spezialisierten ATS nutzen?</h3>
+<p>Ja, das ist in der Praxis üblich: Personio bleibt für die interne HR-Verwaltung wie Lohnabrechnung und Zeiterfassung im Einsatz, während das Recruiting für externe Mandate über ein spezialisiertes ATS läuft.</p>
+`,
+  },
 ];
