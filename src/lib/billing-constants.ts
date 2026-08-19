@@ -35,6 +35,14 @@ export const TRIAL_DAYS = 14;
  * AI-Sourcing-Credits pro User und Monat. Seit 2026-08-09 in BEIDEN
  * Abrechnungsarten gleich (vorher jaehrlich 10). Das Jahresabo unterscheidet
  * sich nur noch im Preis, nicht mehr im Kontingent.
+ *
+ * "pro Monat" stimmt fuer das Jahresabo erst seit 2026-08-20 (Phase 64,
+ * Migration 20260820100000). Davor war die Kredit-Periode die Stripe-Periode,
+ * ein Jahreskunde haette diese 5 Credits also einmal fuer zwoelf Monate
+ * bekommen. Die Zahl hier war schon richtig, die Software nicht.
+ *
+ * Ungenutzte Credits verfallen seit 2026-08-20 nicht mehr, sie wandern in den
+ * Folgemonat. Wahrheit bleibt die Datenbank des App-Projekts.
  */
 export const SOURCING_CREDITS_PER_SEAT_MONTHLY = 5;
 /** Identisch zum Monatswert, siehe oben. Bewusst als eigene Konstante behalten,
