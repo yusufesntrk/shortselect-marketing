@@ -894,4 +894,71 @@ export const autoPosts: BlogPost[] = [
 <p>Ja, das ist in der Praxis üblich: Personio bleibt für die interne HR-Verwaltung wie Lohnabrechnung und Zeiterfassung im Einsatz, während das Recruiting für externe Mandate über ein spezialisiertes ATS läuft.</p>
 `,
   },
+  {
+    slug: "softgarden-vergleich-agentur-perspektive",
+    title: "Softgarden aus Agentur-Sicht: Wo das ATS an Grenzen stößt",
+    seoTitle: "Softgarden aus Agentur-Sicht im Test | ShortSelect",
+    date: "2026-08-19",
+    author: "ShortSelect Team",
+    authorRole: "Redaktion",
+    category: "Praxis-Guides",
+    tags: ["Softgarden", "ATS Vergleich", "Recruiting-Agentur", "Multi-Mandanten", "KI-Matching", "Client-Portal"],
+    excerpt:
+      "Softgarden ist ein solides ATS für den Mittelstand, gebaut für interne Stellenbesetzung. Für Recruiting-Agenturen mit mehreren Mandaten fehlen Multi-Mandanten-Fähigkeit, Client-Portal und KI-Matching.",
+    seoDescription:
+      "Softgarden für Agenturen im Test: Wo Multi-Mandanten-Fähigkeit, Client-Portal und KI-Matching fehlen und wann sich ein Wechsel lohnt.",
+    readTime: "8 Min.",
+    content: `
+<p>Softgarden ist ein etabliertes ATS für den deutschen Mittelstand mit solider Kanban-Pipeline, Karriereseiten-Baukasten und Standard-Analytics, aber ohne Multi-Mandanten-Fähigkeit, ohne Client-Portal und ohne KI-Matching. Genau diese drei Bausteine entscheiden im Alltag einer Recruiting-Agentur mit mehreren parallelen Kundenmandaten oft darüber, wie viel manuelle Arbeit neben dem eigentlichen Recruiting anfällt. Für ein einzelnes Unternehmen mit eigenen offenen Stellen kann Softgarden vollkommen ausreichen, für eine Personalberatung mit zehn oder mehr Mandaten wird die fehlende Trennung schnell zum Engpass.</p>
+
+<h2>Für wen wurde Softgarden ursprünglich entwickelt?</h2>
+<p>Softgarden richtet sich an mittelständische und größere Unternehmen, die ihre eigenen offenen Stellen intern besetzen. Kanban-Board für die Kandidaten-Pipeline, ein Baukasten für Karriereseiten und ein Analytics-Modul für Recruiting-Kennzahlen bilden den Kern des Produkts. Diese Ausrichtung erklärt, warum Softgarden bei internen HR-Teams gut funktioniert: Ein Unternehmen hat einen zusammenhängenden Kandidatenpool und eine einzige Marke, für die ein Single-Tenant-System genau richtig dimensioniert ist. Eine Personalberatung arbeitet strukturell anders, sie besetzt nicht die eigenen Stellen, sondern die ihrer Kunden, mit getrennten Anforderungsprofilen, getrennten Ansprechpartnern und dem Anspruch, jedem Auftraggeber jederzeit einen klaren Stand zu geben.</p>
+
+<h2>Wo liegen die drei größten Lücken für Agenturen?</h2>
+<p>Drei Bausteine fehlen bei Softgarden, die für den Agentur-Alltag mit mehreren Kunden gleichzeitig kaum verzichtbar sind.</p>
+
+<h3>Fehlende Multi-Mandanten-Fähigkeit</h3>
+<p>Softgarden trennt Kandidaten und Jobs nicht systemseitig nach Kundenmandat. Eine Agentur, die für fünf oder mehr Auftraggeber gleichzeitig rekrutiert, muss diese Trennung behelfsmäßig über Tags oder eigene Ordnerstrukturen nachbilden, statt sich auf eine saubere, eingebaute Mandantentrennung zu verlassen. Ein <a href="/ats-fuer-recruiting-agenturen/">ATS für Recruiting-Agenturen</a> denkt diese Trennung von Anfang an mit, sodass Kandidaten, Anforderungsprofile und Kommunikation pro Mandant getrennt bleiben, ohne dass Recruiter selbst für Ordnung sorgen müssen.</p>
+
+<h3>Kein Client-Portal für Kundentransparenz</h3>
+<p>Auftraggeber einer Personalberatung wollen den Status ihres Mandats sehen, ohne bei jeder Rückfrage anzurufen oder eine E-Mail zu schreiben. Softgarden bietet dafür keinen eigenen, eingeschränkten Kundenzugang. Ein <a href="/produkt/client-portal/">Client-Portal</a> gibt dem Auftraggeber einen kontrollierten Blick auf die Shortlist und den Bearbeitungsstand, was wiederkehrende Statusmails und manuell verschickte PDF-Listen erspart.</p>
+
+<h3>Kein KI-Matching für die Kandidatenbewertung</h3>
+<p>Bei hoher Bewerbungszahl entscheidet die Geschwindigkeit der Vorauswahl über die Reaktionszeit gegenüber dem Kunden. Softgarden bietet kein KI-gestütztes Matching, das Kandidaten automatisch gegen ein Anforderungsprofil bewertet. Ein <a href="/ats-mit-ki-matching/">ATS mit KI-Matching</a> liefert stattdessen einen nachvollziehbaren Score je Kriterium, den ein Recruiter gegenüber dem Auftraggeber begründen kann, statt jede Bewerbung einzeln von Hand zu sichten.</p>
+
+<h2>Wie wirkt sich das im Alltag einer Agentur konkret aus?</h2>
+<p>In der Theorie klingen fehlende Mandantentrennung oder ein fehlendes Client-Portal nach Details, im Alltag summieren sie sich zu spürbarem Mehraufwand. Ein Recruiter, der für mehrere Kunden gleichzeitig ähnliche Positionen besetzt, muss ohne systemseitige Trennung selbst darauf achten, dass Profile und Notizen nicht zwischen Mandaten vermischt werden. Fehlt ein Client-Portal, landet der aktuelle Bearbeitungsstand stattdessen in wiederkehrenden Telefonaten oder Statusmails, die Zeit kosten und sich schwer nachhalten lassen, sobald mehrere Kollegen an einem Mandat arbeiten. Und ohne KI-Matching bleibt die erste Sichtung großer Bewerbungsmengen eine rein manuelle Aufgabe, die bei stark nachgefragten Stellen schnell mehrere Stunden pro Woche bindet, die an anderer Stelle im Mandat fehlen.</p>
+
+<p>Ein typisches Beispiel: Eine Personalberatung betreut gleichzeitig eine Vertriebsposition für Kunde A und eine sehr ähnliche Vertriebsposition für Kunde B. Ohne Mandantentrennung landen beide Ausschreibungen in derselben Ansicht, und ein Recruiter muss beim Sichten jedes einzelnen Kandidaten erst gedanklich zuordnen, welches Profil zu welchem Kunden gehört, bevor überhaupt inhaltlich bewertet werden kann. Bei zwei Mandaten ist das noch machbar, bei acht oder zehn parallelen Mandaten kostet allein diese Zuordnung spürbar Zeit, die an anderer Stelle im Tagesgeschäft fehlt.</p>
+
+<h2>Welche Rolle spielen Talent-Pools und Reporting für Agenturen?</h2>
+<p>Neben den drei zentralen Lücken zeigt sich der Unterschied zwischen internem und agenturtauglichem ATS auch bei zwei weiteren Aspekten: Talent-Pools und Kunden-Reporting. Eine Agentur trifft in der Praxis häufig auf Kandidaten, die für ein aktuelles Mandat nicht passen, für ein künftiges Mandat aber genau richtig wären. Ohne mandantenübergreifende Talent-Pools verschwinden diese Profile oft ungenutzt in der Ablage, statt bei einer neuen passenden Position wieder aufzutauchen. Beim Reporting gegenüber Auftraggebern kommt hinzu, dass ein Mittelstands-ATS wie Softgarden Kennzahlen meist unternehmensweit ausweist, während eine Agentur pro Kunde nachvollziehbar berichten muss, wie viele Kandidaten gesichtet, eingeladen und platziert wurden. Beide Punkte lassen sich mit Zusatzaufwand umgehen, sie zeigen aber erneut, dass ein für interne HR-Teams gebautes System an anderer Stelle optimiert ist als ein System, das von Grund auf für die Zusammenarbeit mit mehreren externen Auftraggebern gedacht wurde.</p>
+
+<h2>Was kostet Softgarden im Vergleich zu einem spezialisierten Agentur-ATS?</h2>
+<p>Softgarden nennt seine Preise nur auf Anfrage, die tatsächlichen Kosten hängen also vom individuellen Angebot und der Unternehmensgröße ab, was den Preisvergleich für eine Agentur im Vorfeld erschwert. ShortSelect kostet im <a href="/preise/">Pro Plan 199 Euro pro User und Monat</a>, alternativ 1.791 Euro pro Jahr mit drei geschenkten Monaten, mit Multi-Mandanten-Fähigkeit, Client-Portal und KI-Matching bereits im Preis enthalten statt als Zusatzverhandlung.</p>
+
+<h2>Wann ist Softgarden trotzdem die richtige Wahl?</h2>
+<p>Für ein Unternehmen, das ausschließlich eigene Stellen besetzt, keine Mandantentrennung braucht und mit einem etablierten, standardisierten ATS ohne KI-Features gut zurechtkommt, bleibt Softgarden eine solide Option. Wer bereits in das Softgarden-Ökosystem investiert hat und die Recruiting-Prozesse einfach gehalten sind, hat oft wenig Grund für einen Wechsel. Erst wenn mehrere Kundenmandate gleichzeitig laufen und Auftraggeber regelmäßig nach dem Status fragen, zeigen sich die Grenzen des Systems im Alltag.</p>
+
+<h2>Wie läuft der Wechsel von Softgarden zu einem Agentur-ATS ab?</h2>
+<p>Der Wechsel betrifft in der Regel nur das Bewerbermanagement und die zugehörigen Kandidatendaten. Kandidaten, offene Mandate und Kontakte lassen sich per CSV oder API in ein neues System übertragen, meist innerhalb weniger Tage. In der Praxis läuft der Umzug oft parallel zum laufenden Betrieb: Ein neues Mandat startet direkt im neuen System, während bestehende Mandate schrittweise nachziehen, sobald die zugehörigen Daten übertragen sind. Eine ausführliche Schritt-für-Schritt-Anleitung zur Datenübernahme liefert die <a href="/wechsel/">Wechsel-Seite</a>.</p>
+
+<h2>Checkliste: Braucht Ihre Agentur mehr als Softgarden bietet?</h2>
+<p>Vier Fragen zeigen recht zuverlässig, ob die Grenzen von Softgarden im eigenen Alltag bereits spürbar sind: Verwaltet das Team Kandidaten und Jobs für mehrere externe Kunden gleichzeitig. Fragen Auftraggeber regelmäßig nach dem aktuellen Stand ihrer Mandate, statt das im System selbst einsehen zu können. Verbringen Recruiter viel Zeit mit manueller Sichtung großer Bewerbungsmengen, ohne unterstützenden Match-Score. Und wächst die Zahl der parallelen Mandate schneller, als sich mit Tags und Ordnerstrukturen noch sinnvoll trennen lässt. Wer mindestens zwei dieser Fragen mit Ja beantwortet, sollte ein spezialisiertes ATS ernsthaft prüfen, statt die Einschränkungen weiter mit manuellem Aufwand auszugleichen.</p>
+
+<h2>Fazit: Zwei Systeme für zwei unterschiedliche Ausgangslagen</h2>
+<p>Softgarden ist eine solide Wahl für Unternehmen, die ihre eigenen Stellen intern besetzen und ein etabliertes, standardisiertes ATS ohne KI-Features suchen. Für Recruiting-Agenturen, die mehrere Kundenmandate parallel betreuen und Transparenz sowie Geschwindigkeit als Wettbewerbsvorteil brauchen, fehlen die zentralen Bausteine Multi-Mandanten-Fähigkeit, Client-Portal und KI-Matching. Ein detaillierter Funktions- und Preisvergleich beider Systeme steht auf der <a href="/vergleich/shortselect-vs-softgarden/">Vergleichsseite ShortSelect gegen Softgarden</a>.</p>
+
+<h2>Häufige Fragen</h2>
+
+<h3>Ist Softgarden für Recruiting-Agenturen geeignet?</h3>
+<p>Softgarden lässt sich technisch auch von Agenturen nutzen, es fehlen aber zentrale Funktionen wie Multi-Mandanten-Trennung, ein Client-Portal für Kunden und KI-Matching. Für Agenturen mit mehreren parallelen Mandaten ist ein spezialisiertes ATS meist die passendere Wahl.</p>
+
+<h3>Was kostet Softgarden im Vergleich zu ShortSelect?</h3>
+<p>Softgarden nennt Preise nur auf Anfrage, abhängig vom individuellen Angebot. ShortSelect kostet im Pro Plan 199 Euro pro User und Monat oder 1.791 Euro pro Jahr mit drei geschenkten Monaten, mit Client-Portal und KI-Matching bereits enthalten.</p>
+
+<h3>Hat Softgarden ein Client-Portal für Kunden?</h3>
+<p>Nein, Softgarden bietet keinen eigenen, eingeschränkten Zugang für Auftraggeber. Der Status eines Mandats muss deshalb meist über Telefon oder E-Mail kommuniziert werden, statt dass der Kunde ihn selbst einsehen kann.</p>
+`,
+  },
 ];

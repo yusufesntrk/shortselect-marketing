@@ -36,7 +36,7 @@ Dieser Backlog steuert die wiederkehrende Blog-Routine. Sie nimmt den obersten E
 - [done: excel-chaos-zum-ats-migrationsleitfaden 2026-08-10] Vom Excel-Chaos zum ATS: Migrations-Leitfaden für kleine Agenturen | Links: /wechsel/, /produkt/ats-crm/
 - [done: ki-im-screening-agenten-und-mensch 2026-08-13] KI im Screening: Was Agenten übernehmen und wo der Mensch entscheidet | Links: /produkt/ki-features/, /ats-mit-ki-matching/
 - [done: personio-als-ats-fuer-agenturen-grenzen 2026-08-16] Personio als ATS für Agenturen: Wo die Grenzen liegen | Links: /vergleich/shortselect-vs-personio/
-- [todo] softgarden-Vergleich: Agentur-Perspektive | Links: /vergleich/shortselect-vs-softgarden/
+- [done: softgarden-vergleich-agentur-perspektive 2026-08-19] softgarden-Vergleich: Agentur-Perspektive | Links: /vergleich/shortselect-vs-softgarden/
 - [todo] Recruiting-Automatisierung: 10 Workflows, die Zeit sparen | Links: /produkt/automatisierung/
 - [todo] Candidate Experience als Ranking-Faktor für Agenturen | Links: /methode/, /produkt/karriereseite/
 - [todo] Job-Multiposting-Kosten senken ohne Reichweitenverlust | Links: /produkt/multiposting/, /preise/
