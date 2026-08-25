@@ -38,7 +38,7 @@ Dieser Backlog steuert die wiederkehrende Blog-Routine. Sie nimmt den obersten E
 - [done: personio-als-ats-fuer-agenturen-grenzen 2026-08-16] Personio als ATS für Agenturen: Wo die Grenzen liegen | Links: /vergleich/shortselect-vs-personio/
 - [done: softgarden-vergleich-agentur-perspektive 2026-08-19] softgarden-Vergleich: Agentur-Perspektive | Links: /vergleich/shortselect-vs-softgarden/
 - [done: recruiting-automatisierung-workflows-zeit-sparen 2026-08-22] Recruiting-Automatisierung: 10 Workflows, die Zeit sparen | Links: /produkt/automatisierung/
-- [todo] Candidate Experience als Ranking-Faktor für Agenturen | Links: /methode/, /produkt/karriereseite/
+- [done: candidate-experience-ranking-faktor-agenturen 2026-08-25] Candidate Experience als Ranking-Faktor für Agenturen | Links: /methode/, /produkt/karriereseite/
 - [todo] Job-Multiposting-Kosten senken ohne Reichweitenverlust | Links: /produkt/multiposting/, /preise/
 - [todo] API und Integrationen: Wie ein ATS ins Agentur-Toolset passt | Links: /produkt/api/, /integrationen/
 - [todo] Datenschutzkonforme Kandidaten-Kommunikation per WhatsApp und E-Mail | Links: /produkt/compliance/, /produkt/email-integration/
