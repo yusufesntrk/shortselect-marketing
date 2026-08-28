@@ -39,7 +39,7 @@ Dieser Backlog steuert die wiederkehrende Blog-Routine. Sie nimmt den obersten E
 - [done: softgarden-vergleich-agentur-perspektive 2026-08-19] softgarden-Vergleich: Agentur-Perspektive | Links: /vergleich/shortselect-vs-softgarden/
 - [done: recruiting-automatisierung-workflows-zeit-sparen 2026-08-22] Recruiting-Automatisierung: 10 Workflows, die Zeit sparen | Links: /produkt/automatisierung/
 - [done: candidate-experience-ranking-faktor-agenturen 2026-08-25] Candidate Experience als Ranking-Faktor für Agenturen | Links: /methode/, /produkt/karriereseite/
-- [todo] Job-Multiposting-Kosten senken ohne Reichweitenverlust | Links: /produkt/multiposting/, /preise/
+- [done: job-multiposting-kosten-senken-ohne-reichweitenverlust 2026-08-28] Job-Multiposting-Kosten senken ohne Reichweitenverlust | Links: /produkt/multiposting/, /preise/
 - [todo] API und Integrationen: Wie ein ATS ins Agentur-Toolset passt | Links: /produkt/api/, /integrationen/
 - [todo] Datenschutzkonforme Kandidaten-Kommunikation per WhatsApp und E-Mail | Links: /produkt/compliance/, /produkt/email-integration/
 - [todo] Reporting für Kunden: Was Auftraggeber von ihrer Personalberatung erwarten | Links: /produkt/client-portal/, /produkt/analytics/
