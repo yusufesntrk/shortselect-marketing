@@ -1235,4 +1235,63 @@ export const autoPosts: BlogPost[] = [
 <p>Über klar abgegrenzte API-Keys je Verbindung, dokumentierte Auftragsverarbeitung mit jedem angebundenen Drittsystem und eine regelmäßige Überprüfung, welche Integrationen tatsächlich noch aktiv genutzt werden. Nicht mehr benötigte Verbindungen sollten deaktiviert werden, statt unbegrenzt weiterzulaufen.</p>
 `,
   },
+  {
+    slug: "datenschutzkonforme-kandidaten-kommunikation-whatsapp-email",
+    title: "Datenschutzkonforme Kandidaten-Kommunikation per WhatsApp und E-Mail",
+    seoTitle: "DSGVO-konforme WhatsApp-Kommunikation | ShortSelect",
+    date: "2026-09-01",
+    author: "ShortSelect Team",
+    authorRole: "Redaktion",
+    category: "DSGVO & Compliance",
+    tags: ["DSGVO", "WhatsApp", "E-Mail", "Kandidatenkommunikation", "Compliance", "Recruiting-Agentur"],
+    excerpt:
+      "WhatsApp-Nachrichten an Kandidaten sind datenschutzkonform möglich, wenn Einwilligung, Business Platform und Löschfristen stimmen. Eine praktische Einordnung für Agenturen.",
+    seoDescription:
+      "Wie Recruiting-Agenturen Kandidaten datenschutzkonform per WhatsApp und E-Mail erreichen: Rechtsgrundlage, Business Platform und Löschfristen.",
+    readTime: "8 Min.",
+    content: `
+<p>Kandidaten-Kommunikation per WhatsApp ist für Recruiting-Agenturen dann datenschutzkonform, wenn drei Voraussetzungen erfüllt sind: eine dokumentierte Einwilligung des Kandidaten, der Einsatz der WhatsApp Business Platform anstelle der privaten App, und klar festgelegte Löschfristen für die ausgetauschten Nachrichten. Fehlt eine dieser drei Voraussetzungen, wird aus einem eigentlich hilfreichen Kanal schnell ein Compliance-Risiko, das im Streitfall auf die gesamte Agentur zurückfällt, nicht nur auf den einzelnen Recruiter, der die Nachricht verschickt hat.</p>
+
+<h2>Welche Rechtsgrundlage brauchen Agenturen für Kandidaten-Kommunikation?</h2>
+<p>Nach der DSGVO braucht jede Verarbeitung personenbezogener Daten eine Rechtsgrundlage nach Artikel 6. Für die laufende Kommunikation mit einem Kandidaten, der sich aktiv beworben hat, lässt sich diese meist auf die Vertragsanbahnung stützen: Der Austausch von Terminen, Rückfragen und Statusupdates dient unmittelbar der Bewerbung selbst. Sobald eine Agentur jedoch Kandidaten anspricht, die sich nicht beworben haben, etwa im Active Sourcing, oder Nachrichten versendet, die über die konkrete Bewerbung hinausgehen, etwa allgemeine Stellenangebote per WhatsApp-Newsletter, wird in aller Regel eine gesonderte Einwilligung nötig. Diese Unterscheidung entscheidet darüber, ob eine Nachricht ohne weiteres verschickt werden darf oder vorher ein dokumentiertes Opt-in vorliegen muss.</p>
+
+<h2>Warum ist die private WhatsApp-App für Agenturen ein Risiko?</h2>
+<p>Viele Recruiter greifen aus Gewohnheit zur privaten WhatsApp-App auf dem eigenen oder dienstlichen Smartphone. Datenschutzrechtlich ist das problematisch, weil die App beim ersten Start standardmäßig das gesamte Adressbuch des Geräts an die Server des Anbieters überträgt, einschließlich der Telefonnummern aller gespeicherten Kandidaten, die dieser Übermittlung nie zugestimmt haben. Zusätzlich liegen Chatverläufe dann auf dem persönlichen Gerät eines einzelnen Mitarbeiters, nicht in einem zentralen, für die Agentur kontrollierbaren System. Verlässt der Mitarbeiter die Agentur oder wechselt das Gerät, gehen die Nachrichtenverläufe faktisch mit ihm, was weder Auskunftsersuchen nach Artikel 15 DSGVO noch eine geordnete Übergabe an Kollegen sinnvoll ermöglicht.</p>
+
+<h3>Was ändert die WhatsApp Business Platform daran?</h3>
+<p>Die WhatsApp Business Platform, die über zertifizierte Business Solution Provider angebunden wird, funktioniert technisch anders als die App: Es findet kein automatischer Adressbuchabgleich statt, Nachrichten laufen über eine dokumentierte Schnittstelle, und die Konversationen lassen sich in ein zentrales System wie ein ATS einbinden statt auf einem einzelnen Firmenhandy zu verbleiben. Für den produktiven Einsatz braucht es zusätzlich einen Auftragsverarbeitungsvertrag mit dem eingesetzten Provider, der die Übermittlung an Server außerhalb der EU regelt, etwa über Standardvertragsklauseln.</p>
+
+<h2>Welche Einwilligung brauchen Kandidaten für WhatsApp-Nachrichten?</h2>
+<p>Eine wirksame Einwilligung muss freiwillig, informiert und für den konkreten Zweck erteilt worden sein. In der Praxis bedeutet das: Der Kandidat gibt seine Telefonnummer aktiv für den Kontakt per WhatsApp frei, etwa über ein Feld im Bewerbungsformular auf der Karriereseite, statt dass die Agentur eine Nummer aus dem Lebenslauf einfach in einen bestehenden Kommunikationskanal überträgt. Wichtig ist außerdem, dass diese Einwilligung dokumentiert und im Zweifel nachweisbar bleibt, etwa mit Zeitstempel und dem genauen Wortlaut, dem der Kandidat zugestimmt hat. Ein ATS mit eingebauter <a href="/produkt/compliance/">Compliance-Verwaltung</a> hält diesen Nachweis automatisch am Kandidatenprofil fest, statt dass Einwilligungen in E-Mail-Postfächern oder Notizzetteln verstreut sind.</p>
+
+<h2>Wie lange dürfen Agenturen Kommunikationsdaten von Kandidaten speichern?</h2>
+<p>Eine pauschale Frist gibt die DSGVO nicht vor, verlangt aber, dass Daten nicht länger gespeichert werden, als für den jeweiligen Zweck erforderlich ist. Für laufende Bewerbungsprozesse ist die Speicherung der Kommunikation naheliegend zweckgebunden. Nach Abschluss eines Verfahrens, sei es durch Absage oder Einstellung, sollte eine Agentur eine feste Löschfrist definieren und dokumentieren, etwa sechs Monate für abgelehnte Bewerbungen, sofern keine gesonderte Einwilligung für einen Talent Pool vorliegen. Ohne eine solche Regel häufen sich Chatverläufe und E-Mails über Jahre hinweg an, ohne dass die Agentur im Ernstfall belegen könnte, warum diese Daten noch vorgehalten werden.</p>
+
+<h2>Wie lässt sich E-Mail-Kommunikation DSGVO-konform gestalten?</h2>
+<p>Bei E-Mails gelten im Kern dieselben Prinzipien wie bei WhatsApp, mit einem zusätzlichen Punkt: Bewerbungsbezogene E-Mails aus einem laufenden Verfahren fallen üblicherweise unter die Vertragsanbahnung und brauchen keine gesonderte Werbeeinwilligung. Sobald eine Agentur jedoch einen Newsletter mit allgemeinen Stellenangeboten an frühere Bewerber verschickt, wird daraus Direktwerbung, für die grundsätzlich eine Einwilligung oder zumindest ein klar dokumentiertes berechtigtes Interesse mit funktionierender Abmeldemöglichkeit erforderlich ist. Eine zentrale <a href="/produkt/email-integration/">E-Mail-Integration</a> im ATS hilft dabei, diese beiden Kommunikationsarten technisch zu trennen: Statusupdates zu einer konkreten Bewerbung laufen über einen anderen Pfad als werbliche Serienmails, wodurch sich Einwilligungen gezielt nur dort einholen lassen, wo sie tatsächlich gebraucht werden.</p>
+
+<h2>Wie unterstützt ein zentrales System die konforme Kommunikation?</h2>
+<p>Ohne zentrales System verteilt sich die Kandidaten-Kommunikation typischerweise über private WhatsApp-Chats, mehrere persönliche E-Mail-Postfächer und gelegentlich SMS, wobei jeder Kanal eigene Aufbewahrungsregeln und Zugriffsrechte bräuchte. Ein <a href="/ats-fuer-recruiting-agenturen/">ATS für Recruiting-Agenturen</a>, das WhatsApp Business Platform und E-Mail an einer Stelle bündelt, macht Einwilligungen, Löschfristen und Zugriffsrechte an einem einzigen Ort verwaltbar. Kommt ein Auskunftsersuchen eines Kandidaten herein, lässt sich der komplette Kommunikationsverlauf aus einem System exportieren, statt ihn mühsam aus mehreren privaten Postfächern und Handys zusammenzusuchen. Ergänzend sorgt <a href="/produkt/automatisierung/">automatisierte Kommunikation</a> dafür, dass wiederkehrende Nachrichten wie Terminbestätigungen nach einem festen, geprüften Muster verschickt werden, statt dass jeder Recruiter eigene, unterschiedlich formulierte Varianten schreibt.</p>
+
+<h2>Welche Fehler passieren Agenturen in der Praxis am häufigsten?</h2>
+<p>Drei Muster tauchen immer wieder auf. Erstens wird die private WhatsApp-App weiterverwendet, weil sie schneller eingerichtet ist als eine Business-Lösung, obwohl der Adressbuchabgleich damit ungelöst bleibt. Zweitens werden Telefonnummern aus Lebensläufen ohne gesonderte Einwilligung in bestehende Kontaktlisten übernommen, sobald ein Kandidat für eine andere Stelle interessant erscheint. Drittens fehlt eine dokumentierte Löschroutine, sodass Chatverläufe und E-Mails abgelehnter Kandidaten unbegrenzt liegen bleiben. Jeder dieser drei Punkte lässt sich mit klaren internen Regeln und einem System, das diese Regeln technisch durchsetzt, deutlich reduzieren.</p>
+
+<h2>Was kostet DSGVO-konforme Kommunikation im ATS?</h2>
+<p>Compliance-Verwaltung und E-Mail-Integration sind im <a href="/preise/">Pro Plan von ShortSelect für 199 Euro pro User und Monat</a> enthalten, alternativ für 1.791 Euro pro Jahr mit drei geschenkten Monaten. Im Vergleich zu den Kosten, die ein einzelner begründeter Auskunftsanspruch oder eine Beschwerde bei der Aufsichtsbehörde auslösen kann, ist das eine überschaubare Investition. Für Agenturen, die WhatsApp und E-Mail bislang über getrennte, private Kanäle abwickeln, lohnt sich zusätzlich ein Blick auf ein <a href="/recruiting-crm-dsgvo/">Recruiting-CRM mit DSGVO-Fokus</a>, das Kommunikation und Kandidatendaten von Beginn an in einem konformen Rahmen zusammenführt.</p>
+
+<h2>Checkliste: WhatsApp und E-Mail datenschutzkonform einsetzen</h2>
+<p>Fünf Fragen zeigen zuverlässig, wo bei einer Agentur noch Lücken bestehen: Läuft WhatsApp-Kommunikation über die Business Platform statt über die private App auf einem persönlichen Smartphone. Liegt für jede Telefonnummer, die für WhatsApp genutzt wird, eine dokumentierte, zweckgebundene Einwilligung vor. Gibt es eine festgelegte und tatsächlich angewendete Löschfrist für Kommunikationsdaten abgelehnter Kandidaten. Sind Statusupdates zu einer konkreten Bewerbung technisch von werblichen Serienmails getrennt. Und lässt sich der vollständige Kommunikationsverlauf eines Kandidaten bei einem Auskunftsersuchen aus einem einzigen System heraus bereitstellen, ohne mehrere private Postfächer durchsuchen zu müssen.</p>
+
+<h2>Häufige Fragen</h2>
+
+<h3>Darf eine Agentur Kandidaten ohne vorherige Einwilligung per WhatsApp anschreiben?</h3>
+<p>Nur, wenn der Kandidat sich aktiv beworben hat und die Nachricht sich unmittelbar auf diese Bewerbung bezieht, etwa eine Terminbestätigung. Für Ansprachen außerhalb einer laufenden Bewerbung, etwa im Active Sourcing oder für allgemeine Stellenangebote, ist eine gesonderte Einwilligung erforderlich.</p>
+
+<h3>Reicht die normale WhatsApp-App für den professionellen Einsatz aus?</h3>
+<p>Datenschutzrechtlich ist das riskant, weil die App standardmäßig das gesamte Adressbuch des Geräts überträgt und Chatverläufe auf einem einzelnen persönlichen Gerät statt in einem zentralen System liegen. Für den professionellen Einsatz eignet sich die WhatsApp Business Platform über einen zertifizierten Provider deutlich besser.</p>
+
+<h3>Wie lange dürfen WhatsApp-Chats mit abgelehnten Kandidaten aufbewahrt werden?</h3>
+<p>Es gibt keine gesetzlich fixierte Frist, aber die Daten dürfen nicht länger als für den Zweck erforderlich gespeichert werden. Agenturen sollten eine eigene, dokumentierte Löschfrist festlegen, etwa sechs Monate nach Verfahrensabschluss, sofern kein Talent Pool mit gesonderter Einwilligung besteht.</p>
+`,
+  },
 ];
