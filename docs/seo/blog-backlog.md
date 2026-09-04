@@ -42,4 +42,4 @@ Dieser Backlog steuert die wiederkehrende Blog-Routine. Sie nimmt den obersten E
 - [done: job-multiposting-kosten-senken-ohne-reichweitenverlust 2026-08-28] Job-Multiposting-Kosten senken ohne Reichweitenverlust | Links: /produkt/multiposting/, /preise/
 - [done: ats-api-integrationen-agentur-toolset 2026-08-31] API und Integrationen: Wie ein ATS ins Agentur-Toolset passt | Links: /produkt/api/, /integrationen/
 - [done: datenschutzkonforme-kandidaten-kommunikation-whatsapp-email 2026-09-01] Datenschutzkonforme Kandidaten-Kommunikation per WhatsApp und E-Mail | Links: /produkt/compliance/, /produkt/email-integration/
-- [todo] Reporting für Kunden: Was Auftraggeber von ihrer Personalberatung erwarten | Links: /produkt/client-portal/, /produkt/analytics/
+- [done: kunden-reporting-personalberatung-erwartungen 2026-09-04] Reporting für Kunden: Was Auftraggeber von ihrer Personalberatung erwarten | Links: /produkt/client-portal/, /produkt/analytics/

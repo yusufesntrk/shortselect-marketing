@@ -1294,4 +1294,72 @@ export const autoPosts: BlogPost[] = [
 <p>Es gibt keine gesetzlich fixierte Frist, aber die Daten dürfen nicht länger als für den Zweck erforderlich gespeichert werden. Agenturen sollten eine eigene, dokumentierte Löschfrist festlegen, etwa sechs Monate nach Verfahrensabschluss, sofern kein Talent Pool mit gesonderter Einwilligung besteht.</p>
 `,
   },
+  {
+    slug: "kunden-reporting-personalberatung-erwartungen",
+    title: "Reporting für Kunden: Was Auftraggeber von ihrer Personalberatung erwarten",
+    seoTitle: "Kunden-Reporting für Personalberatungen | ShortSelect",
+    date: "2026-09-04",
+    author: "ShortSelect Team",
+    authorRole: "Redaktion",
+    category: "Praxis-Guides",
+    tags: ["Kunden-Reporting", "Personalberatung", "Client-Portal", "Recruiting-Agentur", "Analytics", "Transparenz"],
+    excerpt:
+      "Auftraggeber erwarten von ihrer Personalberatung vor allem Nachvollziehbarkeit: aktuelle Pipeline-Zahlen statt Wochen-Updates per E-Mail. Wie ein strukturiertes Kunden-Reporting das leistet.",
+    seoDescription:
+      "Was Auftraggeber von ihrer Personalberatung an Reporting erwarten: Kennzahlen, Aktualität, Transparenz und wie ein Client-Portal das im Agentur-Alltag löst.",
+    readTime: "8 Min.",
+    content: `
+<p>Auftraggeber erwarten von ihrer Personalberatung in erster Linie ein Reporting, das jederzeit einsehbar ist und den tatsächlichen Stand der Pipeline zeigt, statt punktueller Updates per E-Mail oder Telefon. Im Kern geht es dabei um drei Dinge: Nachvollziehbarkeit, welche Kandidaten in welcher Phase stehen, Aktualität der gezeigten Zahlen, und eine Darstellung, die ohne Rückfrage beim zuständigen Recruiter verständlich ist. Agenturen, die das liefern, verschaffen sich einen Vertrauensvorschuss, der bei der Mandatsverlängerung oft mehr wiegt als der reine Besetzungserfolg allein.</p>
+
+<h2>Warum ist Kunden-Reporting für Personalberatungen ein eigenes Thema?</h2>
+<p>Ein Mandat läuft für den Auftraggeber selten sichtbar ab. Während die Personalberatung täglich mit Kandidaten, Absagen und Terminen arbeitet, sieht der Kunde in der Regel nur das, was ihm aktiv mitgeteilt wird. Bleibt diese Kommunikation unregelmäßig oder unstrukturiert, entsteht schnell der Eindruck, es passiere wenig, selbst wenn im Hintergrund intensiv gesucht wird. Ein strukturiertes Reporting schließt diese Lücke, weil es dem Auftraggeber erlaubt, den Fortschritt selbst einzuschätzen, statt sich vollständig auf mündliche Zusicherungen zu verlassen. Das reduziert Rückfragen und schafft zugleich eine belastbare Grundlage, wenn ein Mandat länger dauert als ursprünglich erwartet.</p>
+
+<h2>Welche Kennzahlen wollen Auftraggeber tatsächlich sehen?</h2>
+<p>Nicht jede intern erhobene Kennzahl ist für einen Kunden relevant. In der Praxis bewähren sich vier Angaben, die ein Reporting typischerweise abdecken sollte.</p>
+
+<h3>Anzahl und Status der Kandidaten je Phase</h3>
+<p>Wie viele Kandidaten wurden bisher gesichtet, wie viele befinden sich im Interviewprozess, wie viele haben abgesagt oder wurden abgelehnt. Diese einfache Aufschlüsselung nach Pipeline-Phasen beantwortet die häufigste Kundenfrage direkt: Tut sich etwas bei meiner Stelle.</p>
+
+<h3>Time-to-Fill und Zwischenstände</h3>
+<p>Auftraggeber vergleichen die bisherige Laufzeit eines Mandats fast automatisch mit ihrer eigenen Erwartung. Ein Reporting, das die verstrichene Zeit seit Mandatsstart neben typischen Vergleichswerten für die jeweilige Position zeigt, ordnet diese Erwartung realistisch ein, statt sie unkommentiert zu lassen.</p>
+
+<h3>Herkunft der Kandidaten</h3>
+<p>Wurde ein Kandidat über eine Jobbörse gefunden, über Active Sourcing angesprochen oder kam er über eine Empfehlung. Für Auftraggeber, die selbst über Recruiting-Budgets entscheiden, ist diese Information ein Beleg dafür, dass die Agentur mehr als nur eingehende Bewerbungen filtert.</p>
+
+<h3>Nächste geplante Schritte</h3>
+<p>Ein reines Zahlen-Dashboard beantwortet nicht, was als Nächstes passiert. Ergänzende Angaben wie ein anstehender Interviewtermin oder eine geplante Zwischenpräsentation von Kandidaten geben dem Auftraggeber eine klare Erwartung, wann er wieder etwas hört.</p>
+
+<h2>Wie oft sollte ein Reporting aktualisiert werden?</h2>
+<p>Ein wöchentlicher Rhythmus für aktiv versendete Zusammenfassungen hat sich bei den meisten Mandaten als praktikabel erwiesen, weil er häufig genug ist, um Fortschritt sichtbar zu machen, ohne den Recruiter mit täglichen Updates zu belasten. Entscheidender als die Frequenz der aktiv versendeten Nachricht ist jedoch, ob der Auftraggeber bei Bedarf jederzeit selbst nachsehen kann, statt auf den nächsten geplanten Termin warten zu müssen. Ein Kunde, der eine dringende Rückfrage hat, sollte nicht bis zum wöchentlichen Update warten müssen, nur weil kein direkter Einblick besteht.</p>
+
+<h2>Manuelles Reporting oder ein eigenes Kunden-Portal: Was passt besser?</h2>
+<p>Manuell erstellte Reports, etwa als Excel-Export oder handgeschriebene E-Mail-Zusammenfassung, funktionieren bei einzelnen Mandaten noch gut, werden aber mit steigender Kundenzahl schnell zum Zeitfresser. Jede Aktualisierung bedeutet erneuten manuellen Aufwand, und Fehler durch veraltete oder falsch übertragene Zahlen häufen sich, je mehr Mandate parallel laufen. Ein <a href="/produkt/client-portal/">Client-Portal</a>, das Auftraggebern direkten, aber kontrollierten Zugriff auf ihre eigene Pipeline gibt, verschiebt diesen Aufwand von einer wiederkehrenden manuellen Aufgabe zu einer einmaligen Einrichtung: Die Zahlen aktualisieren sich automatisch mit jedem Statuswechsel im ATS, ohne dass ein Recruiter aktiv einen neuen Bericht zusammenstellen muss.</p>
+
+<h2>Welche Fehler machen Agenturen beim Kunden-Reporting häufig?</h2>
+<p>Drei Muster tauchen in der Praxis wiederholt auf. Erstens wird ausschließlich auf Zuruf berichtet, sodass ein Auftraggeber nur dann etwas hört, wenn der Recruiter selbst daran denkt, was bei mehreren parallelen Mandaten leicht untergeht. Zweitens zeigen Reports nur die Erfolge, etwa neue Kandidaten, aber nicht die Absagen oder Verzögerungen, wodurch der Eindruck entsteht, Probleme würden verschwiegen, sobald der Auftraggeber sie anderweitig erfährt. Drittens bleibt unklar, wer beim Kunden welche Berechtigung für welche Information hat, etwa wenn mehrere Ansprechpartner auf Kundenseite unterschiedliche Detailtiefe sehen sollen. Ein strukturiertes System mit klar definierten Zugriffsrechten verhindert, dass diese drei Punkte vom Zufall einzelner Recruiter abhängen.</p>
+
+<h2>Wie lässt sich Reporting mit Analytics-Daten verbinden?</h2>
+<p>Reines Pipeline-Reporting zeigt den Stand eines einzelnen Mandats. Für Auftraggeber mit mehreren laufenden oder wiederkehrenden Mandaten wird zusätzlich interessant, wie sich Kennzahlen über die Zeit entwickeln, etwa die durchschnittliche Time-to-Fill über die letzten Mandate oder die Qualität der eingereichten Kandidaten gemessen an der Annahmequote. Eine <a href="/produkt/analytics/">Analytics-Funktion</a> im ATS, die diese Trends automatisch aus den vorhandenen Pipeline-Daten ableitet, erlaubt es einer Agentur, nicht nur den aktuellen Stand, sondern auch die eigene Leistung über mehrere Mandate hinweg belastbar zu belegen, statt sich bei jedem neuen Mandat wieder von vorn beweisen zu müssen.</p>
+
+<h2>Wie sieht gutes Kunden-Reporting in der Praxis aus?</h2>
+<p>Ein Beispiel verdeutlicht den Unterschied. Eine Personalberatung besetzt für einen Auftraggeber gleichzeitig drei Positionen. Bislang erhielt der Kunde für jede Stelle eine separate E-Mail mit dem aktuellen Stand, oft zu unterschiedlichen Zeitpunkten und in unterschiedlicher Ausführlichkeit, je nachdem, welcher Recruiter gerade zuständig war. Nach der Umstellung auf ein zentrales Kunden-Portal sieht derselbe Auftraggeber alle drei Mandate auf einen Blick, mit demselben Kennzahlen-Set für jede Stelle. Rückfragen zum Stand einzelner Positionen gehen seither spürbar seltener ein, weil der Kunde die Antwort selbst im Portal findet, bevor er überhaupt danach fragen müsste.</p>
+
+<h2>Was kostet ein Client-Portal mit Kunden-Reporting?</h2>
+<p>Client-Portal und Analytics sind im <a href="/preise/">Pro Plan von ShortSelect für 199 Euro pro User und Monat</a> enthalten, alternativ für 1.791 Euro pro Jahr mit drei geschenkten Monaten. Für eine Agentur mit mehreren parallelen Mandaten steht dem vor allem die eingesparte Zeit für manuell erstellte Reports gegenüber, zusätzlich zum kaum messbaren, aber spürbaren Effekt auf die Kundenbindung. Wer aktuell noch Reports einzeln aus Tabellen zusammenstellt, findet einen umfassenderen Einstieg im Überblick zu einem <a href="/ats-fuer-recruiting-agenturen/">ATS für Recruiting-Agenturen</a>, das Pipeline, Kunden-Zugriff und Auswertung in einem System zusammenführt.</p>
+
+<h2>Checkliste: Ist das eigene Kunden-Reporting auftraggebergerecht?</h2>
+<p>Fünf Fragen helfen bei der Einschätzung: Kann ein Auftraggeber den aktuellen Stand seines Mandats jederzeit selbst einsehen, ohne aktiv nachfragen zu müssen. Zeigt das Reporting auch Absagen und Verzögerungen, nicht nur neue Kandidaten. Ist für jeden Ansprechpartner auf Kundenseite klar geregelt, welche Informationen er sehen darf. Lässt sich die bisherige Time-to-Fill mit vergleichbaren früheren Mandaten gegenüberstellen. Und aktualisieren sich die gezeigten Zahlen automatisch mit dem tatsächlichen Pipeline-Stand, statt auf einem manuell erstellten und damit potenziell veralteten Export zu beruhen.</p>
+
+<h2>Häufige Fragen</h2>
+
+<h3>Wie oft erwarten Auftraggeber ein aktives Update von ihrer Personalberatung?</h3>
+<p>Ein wöchentlicher Rhythmus für aktiv versendete Zusammenfassungen ist bei den meisten Mandaten üblich und ausreichend. Wichtiger als die Frequenz ist jedoch, ob der Auftraggeber zusätzlich jederzeit selbst nachsehen kann, statt ausschließlich auf den nächsten Termin warten zu müssen.</p>
+
+<h3>Sollten Auftraggeber direkten Zugriff auf die Recruiting-Pipeline erhalten?</h3>
+<p>Ein kontrollierter Zugriff über ein eigenes Client-Portal mit begrenzten Rechten hat sich bewährt, weil er Rückfragen reduziert und Transparenz schafft, ohne dass interne Recruiter-Notizen oder vertrauliche Kandidatendetails offengelegt werden müssen.</p>
+
+<h3>Welche Kennzahl ist für Auftraggeber am wichtigsten?</h3>
+<p>Die Aufschlüsselung der Kandidaten nach Pipeline-Phase gilt in der Praxis als wichtigste Einzelangabe, weil sie die häufigste Kundenfrage direkt beantwortet: wie viel Bewegung aktuell in der Suche steckt.</p>
+`,
+  },
 ];
