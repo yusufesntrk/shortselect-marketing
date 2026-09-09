@@ -9,6 +9,7 @@ import {
   SOURCING_CREDITS_PER_SEAT_MONTHLY,
   SOURCING_CREDITS_PER_SEAT_ANNUAL,
   ENRICHMENT_CREDITS_PER_SEAT,
+  TRIAL_SOURCING_CREDITS,
   CREDIT_PACK_SIZE,
   CREDIT_PACK_PRICE_EUR,
   CREDIT_PACK_PRICE_LABEL,
@@ -242,7 +243,7 @@ const competitors = [
 
           <!-- Trust Zeile -->
           <p class="text-center text-xs text-muted-foreground mt-4">
-            14 Tage kostenlos. Keine Kreditkarte erforderlich. Setup in 5 Minuten.
+            14 Tage kostenlos mit {TRIAL_SOURCING_CREDITS} AI-Sourcing-Läufen für das ganze Team. Keine Kreditkarte erforderlich. Setup in 5 Minuten.
           </p>
           <p id="annual-terms-note" class="text-center text-xs text-muted-foreground/70 mt-2">
             Jahresabo: 12 Monate Laufzeit, kündbar mit 6 Monaten Frist zum Laufzeitende (AGB § 7).
@@ -305,7 +306,7 @@ const competitors = [
             <div>
               <dt class="font-semibold mb-1">AI-Sourcing-Credit</dt>
               <dd class="text-muted-foreground">
-                Ein Credit ist ein kompletter Sourcing-Lauf für eine Stelle: die KI sucht passende Profile, prüft sie und legt die Treffer als Vorschläge in deine Pipeline. Findet ein Lauf nichts, kostet er auch nichts. {SOURCING_CREDITS_PER_SEAT_MONTHLY} Läufe pro User und Monat sind enthalten, in beiden Abrechnungsarten gleich. Reicht das nicht, kaufst du weitere Credits im Paket nach: {CREDIT_PACK_SIZE} Credits für {CREDIT_PACK_PRICE_LABEL} € netto. Nachgekaufte Credits verfallen nicht.
+                Ein Credit ist ein kompletter Sourcing-Lauf für eine Stelle: die KI sucht passende Profile, prüft sie und legt die Treffer als Vorschläge in deine Pipeline. Findet ein Lauf nichts, kostet er auch nichts. {SOURCING_CREDITS_PER_SEAT_MONTHLY} Läufe pro User und Monat sind enthalten, in beiden Abrechnungsarten gleich. In der kostenlosen Testphase sind {TRIAL_SOURCING_CREDITS} Läufe für das ganze Team enthalten, unabhängig von der Zahl der User. Reicht das nicht, kaufst du weitere Credits im Paket nach: {CREDIT_PACK_SIZE} Credits für {CREDIT_PACK_PRICE_LABEL} € netto. Nachgekaufte Credits verfallen nicht.
               </dd>
             </div>
             <div>

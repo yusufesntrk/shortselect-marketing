@@ -51,6 +51,17 @@ export const SOURCING_CREDITS_PER_SEAT_ANNUAL = 5;
 /** Anreicherungs-Credits fuer Kontaktdaten, pro User und Monat, in beiden Intervallen gleich. */
 export const ENRICHMENT_CREDITS_PER_SEAT = 50;
 
+// === TESTPHASE ===
+/**
+ * AI-Sourcing-Laeufe in der kostenlosen Testphase, JE ORGANISATION und nicht
+ * je User (Entscheidung Yusuf 09.09.2026, gilt fuer Registrierungen ab diesem
+ * Tag). Wahrheit ist `trial_sourcing_credits()` in der Datenbank des
+ * App-Projekts (Migration 20260909200000); die App liest den Wert live ueber
+ * get_my_sourcing_run_usage (Feld trial_credits). Diese Konstante ist reine
+ * Anzeige-Kopie fuer die Preisseite.
+ */
+export const TRIAL_SOURCING_CREDITS = 2;
+
 // === NACHKAUF: AI-SOURCING-CREDITS ===
 // Twin von CREDIT_PACK_* in ~/shortselect/project-spark/src/lib/billing-constants.ts
 /** Credits pro Nachkauf-Paket. */
