@@ -27,10 +27,16 @@ export const TRIAL_DAYS = 14;
 // Diese Zahlen sind reine Anzeige-Kopien. Wahrheit steht in der Datenbank des
 // App-Projekts (aztqhtluvomqnxdavjxp):
 //   stripe_plan_mapping.runs_per_seat         -> Sourcing
-//   stripe_plan_mapping.enrichments_per_seat  -> Anreicherung
 // Gegenprobe vor jeder Aenderung hier:
 //   SELECT stripe_lookup_key, runs_per_seat, enrichments_per_seat
 //     FROM stripe_plan_mapping WHERE is_active;
+//
+// ANREICHERUNG: seit 12.09.2026 gibt es KEIN enthaltenes Kontingent mehr
+// (App-Repo, FEATURES.md Phase 110, Migration 20260912103000). Die Anreicherung
+// von Kontaktdaten setzt einen eigenen Anbieter-Zugang des Kunden voraus und
+// wird dort direkt abgerechnet. Die frueher hier stehende Konstante
+// ENRICHMENT_CREDITS_PER_SEAT ist deshalb entfernt und NICHT auf 0 gesetzt:
+// eine 0 haette „0 Anreicherungs-Credits" in die SEO-Beschreibung geschrieben.
 /**
  * AI-Sourcing-Credits pro User und Monat. Seit 2026-08-09 in BEIDEN
  * Abrechnungsarten gleich (vorher jaehrlich 10). Das Jahresabo unterscheidet
@@ -48,8 +54,6 @@ export const SOURCING_CREDITS_PER_SEAT_MONTHLY = 5;
 /** Identisch zum Monatswert, siehe oben. Bewusst als eigene Konstante behalten,
  *  damit eine kuenftige Differenzierung nur eine Zahl kostet. */
 export const SOURCING_CREDITS_PER_SEAT_ANNUAL = 5;
-/** Anreicherungs-Credits fuer Kontaktdaten, pro User und Monat, in beiden Intervallen gleich. */
-export const ENRICHMENT_CREDITS_PER_SEAT = 50;
 
 // === TESTPHASE ===
 /**

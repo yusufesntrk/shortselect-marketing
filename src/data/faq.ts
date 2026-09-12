@@ -1,7 +1,7 @@
 export const faqs = [
   {
     question: "Was ist im Pro Plan enthalten?",
-    answer: "Alle Funktionen von ShortSelect: unbegrenzte Jobs und Kandidaten, AgentBurst KI-Engine für Matching, Screening, Ranking und Nurturing, Multi-Mandanten mit Client Portal, Karriereseite, Multiposting, Talent Pools, Interview Scheduling, REST API, Webhooks und Priority Support. Ein Preis pro User, keine Add-On-Fees. Dazu kommen monatliche Credits pro User: 5 AI-Sourcing-Läufe bei monatlicher Abrechnung, 10 bei jährlicher, und in beiden Fällen 50 Anreicherungen von Kontaktdaten.",
+    answer: "Alle Funktionen von ShortSelect: unbegrenzte Jobs und Kandidaten, AgentBurst KI-Engine für Matching, Screening, Ranking und Nurturing, Multi-Mandanten mit Client Portal, Karriereseite, Multiposting, Talent Pools, Interview Scheduling, REST API, Webhooks und Priority Support. Ein Preis pro User, keine Add-On-Fees. Dazu kommen 5 AI-Sourcing-Läufe pro User und Monat, in beiden Abrechnungsarten gleich. Die Anreicherung von Kontaktdaten läuft über deinen eigenen Anbieter-Zugang und wird dort direkt abgerechnet.",
   },
   {
     question: "Was kostet ShortSelect?",
