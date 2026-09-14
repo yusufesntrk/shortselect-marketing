@@ -36,6 +36,18 @@ import { backfill3 } from "./backfill-3";
 import { backfill4 } from "./backfill-4";
 import { backfill5 } from "./backfill-5";
 
+
+// SEO-OFFENSIVE-START
+import { seo01 } from "./seo-01";
+import { seo02 } from "./seo-02";
+import { seo03 } from "./seo-03";
+import { seo04 } from "./seo-04";
+import { seo05 } from "./seo-05";
+import { seo06 } from "./seo-06";
+import { seo07 } from "./seo-07";
+import { seo08 } from "./seo-08";
+// SEO-OFFENSIVE-ENDE
+
 import type { BlogPost } from "./types";
 
 export const blogPosts: BlogPost[] = [
@@ -73,4 +85,14 @@ export const blogPosts: BlogPost[] = [
   ...backfill3,
   ...backfill4,
   ...backfill5,
+  ...seo01,
+  ...seo02,
+  ...seo01,
+  ...seo02,
+  ...seo03,
+  ...seo04,
+  ...seo05,
+  ...seo06,
+  ...seo07,
+  ...seo08,
 ];
