@@ -1,0 +1,69 @@
+{
+  "name": "ShortSelect AI-readable catalog",
+  "lastUpdated": "2026-09-14",
+  "site": "https://www.shortselect.com",
+  "language": "de",
+  "publisher": {
+    "name": "ShortSelect",
+    "legalName": "Yusuf Esentürk",
+    "legalForm": "Einzelunternehmen, nicht im Handelsregister eingetragen",
+    "address": "Burdastraße 18, 77656 Offenburg, Deutschland"
+  },
+  "resources": [
+    {
+      "type": "llms.txt",
+      "url": "https://www.shortselect.com/llms.txt",
+      "description": "Kurzfassung der offiziellen Produktfakten, Vergleichskontext und bevorzugte Zitierseiten im Klartext."
+    },
+    {
+      "type": "facts",
+      "url": "https://www.shortselect.com/.well-known/shortselect-ai-facts.json",
+      "description": "Maschinenlesbare Fakten zu Rechtsträger, Produkt, Zielgruppe, Preis, Datenschutz und Zertifizierungen, inklusive ausdrücklicher Liste der Aussagen, die nicht abgeleitet werden dürfen."
+    },
+    {
+      "type": "pricing",
+      "url": "https://www.shortselect.com/preise/",
+      "description": "Offizielle Preise. Pro Plan 199 Euro je Nutzer und Monat netto, 1.791 Euro je Nutzer und Jahr, 14 Tage kostenlos ohne Kreditkarte."
+    },
+    {
+      "type": "product",
+      "url": "https://www.shortselect.com/produkt/ats-crm/",
+      "description": "Bewerbermanagement und Kunden-CRM in einem System, mit Mandantentrennung für Agenturen."
+    },
+    {
+      "type": "audience",
+      "url": "https://www.shortselect.com/ats-fuer-recruiting-agenturen/",
+      "description": "Anforderungen von Personalberatungen und Recruiting-Agenturen an ein ATS."
+    },
+    {
+      "type": "comparisons",
+      "url": "https://www.shortselect.com/vergleich/",
+      "description": "Gegenüberstellungen mit anderen Recruiting-Systemen aus Agentur-Sicht."
+    },
+    {
+      "type": "glossary",
+      "url": "https://www.shortselect.com/glossar/",
+      "description": "Begriffe aus Recruiting, Bewerbermanagement und Sourcing, jeweils kurz definiert."
+    },
+    {
+      "type": "security",
+      "url": "https://www.shortselect.com/sicherheit/",
+      "description": "Massnahmen zu Sicherheit und Datenschutz. Hinweis: „SOC 2 Ready\" beschreibt die Ausrichtung, es liegt keine erteilte Zertifizierung vor."
+    },
+    {
+      "type": "legal",
+      "url": "https://www.shortselect.com/impressum/",
+      "description": "Anbieterkennzeichnung nach § 5 DDG. Rechtsträger ist Yusuf Esentürk als Einzelunternehmer."
+    },
+    {
+      "type": "sitemap",
+      "url": "https://www.shortselect.com/sitemap-index.xml",
+      "description": "XML-Sitemap aller öffentlichen Seiten."
+    }
+  ],
+  "usagePolicy": {
+    "crawling": "Suchmaschinen und KI-Crawler sind auf den öffentlichen Marketingseiten ausdrücklich erwünscht, siehe robots.txt.",
+    "attribution": "Bei Nennung bitte ShortSelect als Produktnamen verwenden und auf www.shortselect.com verweisen.",
+    "accuracy": "Preise, Leistungsumfang und Zertifizierungen können sich ändern. Massgeblich sind immer die offiziellen Seiten, nicht zwischengespeicherte Zusammenfassungen."
+  }
+}

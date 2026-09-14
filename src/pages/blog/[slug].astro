@@ -25,7 +25,9 @@ const truncateSeoText = (value: string, maxLength: number) => {
   return `${trimmed.slice(0, lastSpace > 42 ? lastSpace : maxLength - 1)}…`;
 };
 
-const seoTitleBase = post.seoTitle ?? truncateSeoText(post.title, 49);
+// Viele gepflegte seoTitle tragen die Marke bereits am Ende. Ohne diesen Schnitt
+// steht sie doppelt im Title-Tag ("... | ShortSelect | ShortSelect").
+const seoTitleBase = (post.seoTitle ?? truncateSeoText(post.title, 49)).replace(/\s*\|\s*ShortSelect\s*$/i, "");
 const seoTitle = `${seoTitleBase} | ShortSelect`;
 const seoDescriptionBase = post.seoDescription ?? post.excerpt;
 const seoDescription = truncateSeoText(
@@ -64,7 +66,58 @@ const articleSchema = {
   description: seoDescription,
   articleSection: post.category,
   keywords: post.tags.join(", "),
+  // Nur Selektoren, die im Markup wirklich vorkommen: die Ueberschrift der Seite
+  // und die Abschnitts-Ueberschriften im Beitragstext.
+  speakable: {
+    "@type": "SpeakableSpecification",
+    cssSelector: ["h1", ".prose-content h2"],
+  },
 };
+
+// Der FAQ-Block steht im Beitrag als <h2>Häufige Fragen</h2> gefolgt von
+// <h3>Frage</h3><p>Antwort</p>. Bis Phase SEO-09/2026 wurde er nur sichtbar
+// ausgegeben und nicht ausgezeichnet, damit war er fuer KI-Antworten unsichtbar.
+const stripTags = (value: string) =>
+  value
+    .replace(/<[^>]+>/g, " ")
+    .replace(/&amp;/g, "&")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&quot;/g, '"')
+    .replace(/&#0?39;|&apos;|&#x27;/gi, "'")
+    .replace(/&nbsp;|&#160;/gi, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+
+function extractFaq(html: string) {
+  const start = html.search(/<h2[^>]*>\s*(Häufige Fragen|Haeufige Fragen|FAQ)\s*<\/h2>/i);
+  if (start === -1) return [];
+  const rest = html.slice(start);
+  const eintraege: { frage: string; antwort: string }[] = [];
+  const re = /<h3[^>]*>([\s\S]*?)<\/h3>\s*((?:<p[^>]*>[\s\S]*?<\/p>\s*)+)/gi;
+  let m: RegExpExecArray | null;
+  while ((m = re.exec(rest)) !== null) {
+    const frage = stripTags(m[1]);
+    const antwort = stripTags(m[2]);
+    if (frage && antwort && frage.length < 300) eintraege.push({ frage, antwort });
+    if (eintraege.length >= 8) break;
+  }
+  return eintraege;
+}
+
+const faqEintraege = extractFaq(post.content);
+
+const faqSchema = faqEintraege.length
+  ? {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: faqEintraege.map((e) => ({
+        "@type": "Question",
+        name: e.frage,
+        acceptedAnswer: { "@type": "Answer", text: e.antwort },
+      })),
+    }
+  : null;
 
 const breadcrumbSchema = {
   "@context": "https://schema.org",
@@ -81,7 +134,7 @@ const breadcrumbSchema = {
   title={seoTitle}
   description={seoDescription}
   ogType="article"
-  jsonLd={[articleSchema, breadcrumbSchema]}
+  jsonLd={faqSchema ? [articleSchema, breadcrumbSchema, faqSchema] : [articleSchema, breadcrumbSchema]}
 >
   <!-- Hero / Article Header -->
   <section class="relative overflow-hidden py-20 md:py-28">

@@ -3,6 +3,11 @@ Allow: /
 Disallow: /dashboard/
 Disallow: /client/
 Disallow: /auth
+# Maschinenlesbare Faktendateien fuer KI-Suchen. Nichts davon ist gesperrt,
+# die Zeilen stehen ausdruecklich hier, damit die Freigabe sichtbar ist.
+Allow: /.well-known/ai-catalog.json
+Allow: /.well-known/shortselect-ai-facts.json
+Allow: /llms.txt
 
 # Search and AI bots are explicitly allowed to crawl public marketing pages.
 # Repeat private disallows in every explicit group because robots rules are not inherited.
