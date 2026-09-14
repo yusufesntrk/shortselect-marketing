@@ -37,6 +37,8 @@ import { backfill4 } from "./backfill-4";
 import { backfill5 } from "./backfill-5";
 
 
+
+
 // SEO-OFFENSIVE-START
 import { seo01 } from "./seo-01";
 import { seo02 } from "./seo-02";
@@ -46,6 +48,22 @@ import { seo05 } from "./seo-05";
 import { seo06 } from "./seo-06";
 import { seo07 } from "./seo-07";
 import { seo08 } from "./seo-08";
+import { seo09 } from "./seo-09";
+import { seo10 } from "./seo-10";
+import { seo11 } from "./seo-11";
+import { seo12 } from "./seo-12";
+import { seo13 } from "./seo-13";
+import { seo14 } from "./seo-14";
+import { seo15 } from "./seo-15";
+import { seo16 } from "./seo-16";
+import { seo17 } from "./seo-17";
+import { seo18 } from "./seo-18";
+import { seo19 } from "./seo-19";
+import { seo20 } from "./seo-20";
+import { seo21 } from "./seo-21";
+import { seo22 } from "./seo-22";
+import { seo23 } from "./seo-23";
+import { seo24 } from "./seo-24";
 // SEO-OFFENSIVE-ENDE
 
 import type { BlogPost } from "./types";
@@ -95,4 +113,52 @@ export const blogPosts: BlogPost[] = [
   ...seo06,
   ...seo07,
   ...seo08,
+  ...seo01,
+  ...seo02,
+  ...seo03,
+  ...seo04,
+  ...seo05,
+  ...seo06,
+  ...seo07,
+  ...seo08,
+  ...seo09,
+  ...seo10,
+  ...seo11,
+  ...seo12,
+  ...seo13,
+  ...seo14,
+  ...seo15,
+  ...seo16,
+  ...seo17,
+  ...seo18,
+  ...seo19,
+  ...seo20,
+  ...seo21,
+  ...seo22,
+  ...seo23,
+  ...seo24,
+  ...seo01,
+  ...seo02,
+  ...seo03,
+  ...seo04,
+  ...seo05,
+  ...seo06,
+  ...seo07,
+  ...seo08,
+  ...seo09,
+  ...seo10,
+  ...seo11,
+  ...seo12,
+  ...seo13,
+  ...seo14,
+  ...seo15,
+  ...seo16,
+  ...seo17,
+  ...seo18,
+  ...seo19,
+  ...seo20,
+  ...seo21,
+  ...seo22,
+  ...seo23,
+  ...seo24,
 ];
