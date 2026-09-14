@@ -4,7 +4,33 @@ Stand 14.09.2026. Grundlage ist die Wettbewerbs-Erhebung in
 `docs/seo/wettbewerb-blogs/` (33 Anbieter, 17.927 Beiträge) plus eine gezielte
 technische Zerlegung von yena.ai und ein Live-Abgleich gegen shortselect.com.
 
-**Dieser Plan ist dokumentiert, nicht umgesetzt.** Umsetzung startet erst auf Zuruf.
+**Umsetzungsstand 15.09.2026:** Wellen 0 (Marketing-Teil), 1 und 2 sind live.
+Welle 2b (Englisch), Welle 3 (Seitentypen) und Welle 5 (Messung) stehen aus.
+Welle 4 (Off-Page) bleibt auf Wunsch zurückgestellt. Der App-Teil von Welle 0
+liegt fertig und getestet auf dem Branch `seo-phase-114-karrieredomains` im
+App-Repo, siehe unten.
+
+| Was | Stand | Nachweis |
+|---|---|---|
+| FAQPage-Schema in allen Beiträgen | live | Commit b8dbb32, Deployment d1e62cc5 |
+| SpeakableSpecification | live | dito |
+| Doppelte Marke im Title behoben | live | dito, 31 Bestandsbeiträge mitrepariert |
+| `.well-known/shortselect-ai-facts.json` | live | HTTP 200, `certifications.held` leer |
+| `.well-known/ai-catalog.json` | live | HTTP 200 |
+| llms.txt mit Vergleichskontext und Negativliste | live | HTTP 200 |
+| robots.txt gibt die Faktendateien frei | live | in der Sterngruppe |
+| 927 neue Fachbeiträge | live | Commit 5a124c5, Deployment c1ee534a |
+| Sitemap 190 auf 1.305 URLs | live | `sitemap-0.xml` |
+| App-Hülle und Karrieredomains auf noindex | **offen** | Branch `seo-phase-114-karrieredomains`, Commit f9c73062 |
+
+**Warum der App-Teil nicht auf main liegt:** Das lokale App-Repo war zum
+Zeitpunkt der Umsetzung mehr als 60 Commits hinter `origin/main` (Meetings-
+Aufzeichnung, Mail-History, Apple-Integration, Phase 115), und `FEATURES.md`
+sowie `PRD.md` waren dort geändert, während sie lokal uncommittete Änderungen
+trugen. Diese Kollision aufzulösen ist eine Entscheidung des Betreibers, nicht
+eine der Umsetzung. Der Commit ist deshalb als eigener Branch gesichert. Die
+vier geänderten Dateien wurden stromaufwärts nicht angefasst, ein Merge ist
+also konfliktfrei.
 
 ## Entschieden am 14.09.2026
 
