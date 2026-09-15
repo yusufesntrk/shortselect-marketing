@@ -1,4 +1,6 @@
 ---
+import { TRIAL_CTA_LABEL, signupUrl } from '../../lib/cta';
+import TrialCtaNote from '../ui/TrialCtaNote.astro';
 // Navigation data
 const produktLinks = [
   { href: '/produkt/ats-crm/', label: 'ATS & CRM', desc: 'Bewerbermanagement-Plattform' },
@@ -38,7 +40,7 @@ const simpleLinks = [
   { href: '/preise/', label: 'Preise' },
   { href: '/kunden/', label: 'Kunden' },
   { href: '/blog/', label: 'Blog' },
-  { href: '/ressourcen/', label: 'Ressourcen' },
+  { href: '/ressourcen/', label: 'Ressourcen', hideLg: true },
 ];
 ---
 
@@ -53,7 +55,7 @@ const simpleLinks = [
     <div class="hidden lg:flex items-center gap-1">
       <!-- Produkt Dropdown -->
       <div class="nav-dropdown group relative">
-        <button class="flex items-center gap-1 px-3 py-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors">
+        <button class="flex items-center gap-1 px-2 xl:px-3 py-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors">
           Produkt
           <svg class="h-4 w-4 transition-transform group-hover:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
         </button>
@@ -71,7 +73,7 @@ const simpleLinks = [
 
       <!-- Lösungen Dropdown -->
       <div class="nav-dropdown group relative">
-        <button class="flex items-center gap-1 px-3 py-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors">
+        <button class="flex items-center gap-1 px-2 xl:px-3 py-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors">
           Lösungen
           <svg class="h-4 w-4 transition-transform group-hover:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
         </button>
@@ -89,7 +91,7 @@ const simpleLinks = [
 
       <!-- Vergleich Dropdown -->
       <div class="nav-dropdown group relative">
-        <button class="flex items-center gap-1 px-3 py-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors">
+        <button class="flex items-center gap-1 px-2 xl:px-3 py-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors">
           Vergleich
           <svg class="h-4 w-4 transition-transform group-hover:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
         </button>
@@ -107,7 +109,7 @@ const simpleLinks = [
 
       <!-- Simple Links -->
       {simpleLinks.map((link) => (
-        <a href={link.href} class={link.highlight ? "inline-flex items-center gap-1.5 px-3 py-1.5 text-sm font-semibold text-primary border border-primary/30 rounded-full hover:bg-primary/5 transition-colors" : "px-3 py-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"}>
+        <a href={link.href} class={link.highlight ? "inline-flex items-center gap-1.5 px-3 py-1.5 text-sm font-semibold text-primary border border-primary/30 rounded-full hover:bg-primary/5 transition-colors" : `${link.hideLg ? 'hidden xl:block ' : ''}px-2 xl:px-3 py-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors`}>
           {link.highlight && <span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse shrink-0"></span>}
           {link.label}
         </a>
@@ -115,12 +117,15 @@ const simpleLinks = [
     </div>
 
     <!-- Desktop CTAs -->
-    <div class="hidden lg:flex items-center gap-3">
-      <a href="https://app.shortselect.com/login" class="px-4 py-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors">
+    <div class="hidden lg:flex items-center gap-2">
+      <a href="https://app.shortselect.com/login" class="px-2 xl:px-3 py-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors">
         Login
       </a>
-      <a href="/demo/" class="px-5 py-2.5 bg-primary text-primary-foreground text-sm font-semibold rounded-lg hover:bg-primary/90 transition-colors shadow-sm">
-        Demo buchen
+      <a href="/demo/" class="hidden xl:block px-3 py-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors">
+        Demo
+      </a>
+      <a href={signupUrl('nav')} class="px-4 xl:px-5 py-2.5 bg-primary text-primary-foreground text-sm font-semibold rounded-lg hover:bg-primary/90 transition-colors shadow-sm whitespace-nowrap">
+        {TRIAL_CTA_LABEL}
       </a>
     </div>
 
@@ -154,7 +159,9 @@ const simpleLinks = [
       {simpleLinks.map((link) => <a href={link.href} class={link.highlight ? "flex items-center gap-1.5 py-2 text-sm font-semibold text-primary" : "block py-2 text-sm font-medium"}>{link.highlight && <span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse shrink-0"></span>}{link.label}</a>)}
       <div class="pt-4 border-t border-border/50 space-y-2">
         <a href="https://app.shortselect.com/login" class="block py-2 text-sm font-medium text-center">Login</a>
-        <a href="/demo/" class="block py-2.5 bg-primary text-primary-foreground text-sm font-semibold rounded-lg text-center">Demo buchen</a>
+        <a href="/demo/" class="block py-2 text-sm font-medium text-center">Demo buchen</a>
+        <a href={signupUrl('nav_mobile')} class="block py-2.5 bg-primary text-primary-foreground text-sm font-semibold rounded-lg text-center">{TRIAL_CTA_LABEL}</a>
+        <TrialCtaNote class="pt-1" />
       </div>
     </div>
   </div>

@@ -1,6 +1,7 @@
 ---
 import SEOHead from '../components/seo/SEOHead.astro';
 import { PRO_PRICE_MONTHLY_EUR, TRIAL_DAYS } from '../lib/billing-constants';
+import { TRIAL_CTA_LABEL, TRIAL_CTA_NOTE, signupUrl } from '../lib/cta';
 import '../styles/global.css';
 
 const SIGNUP_URL_HERO = 'https://app.shortselect.com/signup?utm_source=marketing&utm_medium=cta&utm_campaign=pro_plan&utm_content=hero';
@@ -111,6 +112,7 @@ const websiteSchema = {
 
   .fc-btn { display: inline-flex; align-items: center; gap: 10px; padding: 16px 28px; background: #ef4444; color: white; font-weight: 700; font-size: 15px; border-radius: 14px; text-decoration: none; box-shadow: 0 6px 0 #b91c1c, 0 12px 24px rgba(239,68,68,0.25); border: none; cursor: pointer; }
   .fc-btn-ghost { background: white; color: #0a0a0e; box-shadow: 0 6px 0 #e5e5e3, 0 12px 24px rgba(0,0,0,0.05); }
+  .fc-cta-note { margin-top: 14px; font-size: 14px; font-weight: 700; text-align: center; }
 
   /* Reveal-on-scroll base — override global [data-reveal] to use our .in class */
   .no-js [data-reveal],
@@ -2588,6 +2590,7 @@ const websiteSchema = {
 
   .fc-mob-nav-foot {
     display: flex;
+    flex-wrap: wrap;
     gap: 10px;
     padding: 16px 20px;
     border-top: 1px solid rgba(0,0,0,0.06);
@@ -2614,10 +2617,12 @@ const websiteSchema = {
     background: transparent;
   }
   .fc-mob-cta-primary {
+    flex-basis: 100%;
     background: #ef4444;
     color: white;
     box-shadow: 0 4px 0 #b91c1c;
   }
+  .fc-mob-cta-note { flex-basis: 100%; text-align: center; font-size: 13px; font-weight: 700; color: #0a0a0e; }
 
   body.no-scroll { overflow: hidden; }
 
@@ -2628,6 +2633,16 @@ const websiteSchema = {
   }
   @supports not (overflow-x: clip) {
     html, body.fc { overflow-x: hidden; }
+  }
+
+  /* === SCHMALER DESKTOP (1081 bis 1279px): Demo-Link und Ressourcen nur im Overlay/Footer, Menü enger, kein Umbruch === */
+  .fc-nav-menu .nav-link, .nav-cta-ghost, .nav-cta-primary { white-space: nowrap; }
+  @media (max-width: 1279px) {
+    .fc-nav-inner { gap: 10px; }
+    .fc-nav-left { gap: 10px; }
+    .fc-nav-menu .nav-link { padding-left: 9px; padding-right: 9px; }
+    .fc-nav-menu .nav-link[href="/ressourcen/"],
+    .fc-nav-right .nav-cta-ghost[href="/demo/"] { display: none; }
   }
 
   /* === TABLET NAV (≤1080px): Desktop-Menü passt nicht mehr in die Pille → Burger === */
@@ -2934,7 +2949,8 @@ const websiteSchema = {
         </div>
         <div class="fc-nav-right">
           <a href="https://app.shortselect.com/login" class="nav-cta-ghost">Login</a>
-          <a href="/demo/" class="nav-cta-primary">Demo buchen</a>
+          <a href="/demo/" class="nav-cta-ghost">Demo</a>
+          <a href={signupUrl('nav')} class="nav-cta-primary">{TRIAL_CTA_LABEL}</a>
           <button class="fc-nav-burger" type="button" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobile-nav-overlay">
             <span></span><span></span><span></span>
           </button>
@@ -3009,7 +3025,9 @@ const websiteSchema = {
 
       <div class="fc-mob-nav-foot">
         <a href="https://app.shortselect.com/login" class="fc-mob-cta-ghost">Login</a>
-        <a href="/demo/" class="fc-mob-cta-primary">Demo buchen</a>
+        <a href="/demo/" class="fc-mob-cta-ghost">Demo buchen</a>
+        <a href={signupUrl('nav_mobile')} class="fc-mob-cta-primary">{TRIAL_CTA_LABEL}</a>
+        <div class="fc-mob-cta-note">{TRIAL_CTA_NOTE}</div>
       </div>
     </aside>
 
@@ -3028,9 +3046,10 @@ const websiteSchema = {
           ShortSelect ist die Pipeline-Software für Recruiting-Agenturen, die endlich aufhören wollen, <span class="marker">zwölf Tools</span> nebeneinander offen zu haben.
         </p>
         <div class="actions">
-          <a href="https://app.shortselect.com/signup?utm_source=marketing&utm_medium=cta&utm_campaign=pro_plan&utm_content=hero" class="fc-btn">14 Tage kostenlos starten →</a>
+          <a href="https://app.shortselect.com/signup?utm_source=marketing&utm_medium=cta&utm_campaign=pro_plan&utm_content=hero" class="fc-btn">{TRIAL_CTA_LABEL} →</a>
           <a href="/demo/" class="fc-btn fc-btn-ghost">Demo ansehen</a>
         </div>
+        <div class="fc-cta-note">{TRIAL_CTA_NOTE}</div>
         <div class="trust">
           <div class="avatars">
             <div class="av">M</div><div class="av">A</div><div class="av">L</div><div class="av">S</div><div class="av">+</div>
@@ -3792,8 +3811,9 @@ const websiteSchema = {
           <div class="feat-row">Alle KI-Agents inklusive</div>
           <div class="feat-row">Client Portal mit eigenem Branding</div>
         </div>
-        <a href="https://app.shortselect.com/signup?utm_source=marketing&utm_medium=cta&utm_campaign=pro_plan&utm_content=pricing" class="fc-btn">{TRIAL_DAYS} Tage starten →</a>
-        <div class="terms">Keine Kreditkarte · jederzeit kündbar · alle Funktionen inklusive</div>
+        <a href="https://app.shortselect.com/signup?utm_source=marketing&utm_medium=cta&utm_campaign=pro_plan&utm_content=pricing" class="fc-btn">{TRIAL_CTA_LABEL} →</a>
+        <div class="fc-cta-note">{TRIAL_CTA_NOTE}</div>
+        <div class="terms">Jederzeit kündbar, alle Funktionen inklusive</div>
       </div>
     </section>
 
@@ -3846,11 +3866,12 @@ const websiteSchema = {
     <section class="fc-close">
       <div class="fc-close-inner reveal" data-reveal>
         <h2>Heute angemeldet.<br>Morgen <span class="wavy">im Einsatz.</span></h2>
-        <p class="lead">14 Tage kostenlos. Keine Kreditkarte. Keine Tricks.</p>
+        <p class="lead">{TRIAL_DAYS} Tage voller Funktionsumfang. Keine Tricks.</p>
         <div class="actions">
-          <a href="https://app.shortselect.com/signup?utm_source=marketing&utm_medium=cta&utm_campaign=pro_plan&utm_content=cta_section" class="fc-btn">Jetzt starten →</a>
+          <a href="https://app.shortselect.com/signup?utm_source=marketing&utm_medium=cta&utm_campaign=pro_plan&utm_content=cta_section" class="fc-btn">{TRIAL_CTA_LABEL} →</a>
           <a href="/kontakt/" class="fc-btn fc-btn-ghost">Mit uns sprechen</a>
         </div>
+        <div class="fc-cta-note">{TRIAL_CTA_NOTE}</div>
       </div>
     </section>
 

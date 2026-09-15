@@ -1,4 +1,6 @@
 ---
+import { TRIAL_CTA_LABEL } from '../lib/cta';
+import TrialCtaNote from '../components/ui/TrialCtaNote.astro';
 import MarketingLayout from '../layouts/MarketingLayout.astro';
 import CTASection from '../components/landing/CTASection.astro';
 
@@ -82,16 +84,17 @@ const faqSchema = {
           Ein ATS für Recruiting-Agenturen muss mehr können als reines Bewerbermanagement: viele Kunden und Mandate parallel verwalten, Daten sauber trennen, ein CRM für Firmen mitbringen und den Fortschritt für den Auftraggeber transparent machen. ShortSelect verbindet ATS, CRM, KI-Matching und ein Client-Portal in einer Plattform.
         </p>
 
-        <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700 flex flex-col sm:flex-row items-center justify-center gap-4 pt-4" style="transition-delay: 300ms;">
+        <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700 flex flex-col sm:flex-row items-center justify-center gap-4 pt-4 flex-wrap" style="transition-delay: 300ms;">
           <a href="https://app.shortselect.com/signup" class="inline-flex items-center gap-2 px-8 py-3 bg-primary text-primary-foreground font-semibold rounded-lg text-base group relative overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
             <span class="relative z-10 flex items-center gap-2">
-              14 Tage kostenlos testen
+              {TRIAL_CTA_LABEL}
               <svg class="h-5 w-5 transition-transform group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
             </span>
           </a>
           <a href="/produkt/ats-crm/" class="inline-flex items-center gap-2 px-8 py-3 border-2 border-border font-semibold rounded-lg text-base transition-all hover:bg-muted">
             ATS und CRM ansehen
           </a>
+          <TrialCtaNote />
         </div>
       </div>
     </div>

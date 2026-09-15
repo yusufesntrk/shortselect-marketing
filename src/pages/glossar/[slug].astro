@@ -1,4 +1,6 @@
 ---
+import { TRIAL_CTA_LABEL } from '../../lib/cta';
+import TrialCtaNote from '../../components/ui/TrialCtaNote.astro';
 import MarketingLayout from '../../layouts/MarketingLayout.astro';
 import CTASection from '../../components/landing/CTASection.astro';
 import { glossaryData, allTermTitles } from '../../data/glossary';
@@ -166,9 +168,10 @@ const jsonLdArray = [glossarySchema, breadcrumbSchema, faqSchema, personSchema].
           <h2 class="text-2xl font-display font-bold mb-4">So hilft ShortSelect</h2>
           <p class="text-[hsl(var(--muted-foreground))] leading-relaxed">{entry.howShortSelectHelps}</p>
           <a href="https://app.shortselect.com/signup" class="inline-flex items-center gap-2 mt-6 px-6 py-3 bg-[hsl(var(--primary))] text-white font-semibold rounded-lg text-sm hover:opacity-90 transition-opacity">
-            Jetzt kostenlos testen
+            {TRIAL_CTA_LABEL}
             <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
           </a>
+          <TrialCtaNote align="left" class="mt-3" />
         </div>
 
         <!-- Related Terms -->

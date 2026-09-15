@@ -1,0 +1,26 @@
+---
+/**
+ * Fetter Hinweis „Keine Kreditkarte notwendig." unter jedem Trial-Button.
+ * Der Text kommt aus lib/cta.ts, damit er nur an einer Stelle gepflegt wird.
+ *
+ * Steht der Hinweis in einer Button-Zeile (flex-row), braucht die Zeile
+ * `flex-wrap`: der Hinweis nimmt dann mit `w-full` eine eigene Zeile unter
+ * den Buttons und blendet mit ihnen zusammen ein.
+ */
+import { TRIAL_CTA_NOTE } from '../../lib/cta';
+
+interface Props {
+  /** 'dark' auf roten oder dunklen Flächen (weiße Schrift). */
+  tone?: 'light' | 'dark';
+  align?: 'center' | 'left';
+  class?: string;
+}
+
+const { tone = 'light', align = 'center', class: className = '' } = Astro.props;
+---
+<p class:list={[
+  'w-full text-sm font-bold',
+  align === 'left' ? 'text-left' : 'text-center',
+  tone === 'dark' ? 'text-white' : 'text-foreground',
+  className,
+]}>{TRIAL_CTA_NOTE}</p>

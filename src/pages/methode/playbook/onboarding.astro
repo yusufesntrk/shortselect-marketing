@@ -1,4 +1,6 @@
 ---
+import { TRIAL_CTA_LABEL } from '../../../lib/cta';
+import TrialCtaNote from '../../../components/ui/TrialCtaNote.astro';
 import MarketingLayout from '../../../layouts/MarketingLayout.astro';
 import CTASection from '../../../components/landing/CTASection.astro';
 
@@ -62,14 +64,15 @@ const stats = [
           Playbook: Vom Angebot zum <span class="text-primary">ersten Arbeitstag</span>.
         </h1>
         <p class="reveal-item opacity-0 translate-y-8 transition-all duration-500 text-lg text-muted-foreground max-w-2xl mx-auto" style="transition-delay: 200ms;">33% der Neuen kündigen in den ersten 6 Monaten. Ein strukturierter Onboarding-Prozess verhindert das.</p>
-        <div class="reveal-item opacity-0 translate-y-8 transition-all duration-500 flex flex-col sm:flex-row gap-4 justify-center" style="transition-delay: 300ms;">
+        <div class="reveal-item opacity-0 translate-y-8 transition-all duration-500 flex flex-col sm:flex-row gap-4 justify-center flex-wrap" style="transition-delay: 300ms;">
           <a href="https://app.shortselect.com/signup" class="inline-flex items-center gap-2 px-8 py-3 bg-primary text-primary-foreground font-semibold rounded-lg text-base group relative overflow-hidden shadow-lg hover:shadow-xl transition-all hover:scale-105">
             <span class="relative z-10 flex items-center gap-2">
               <svg class="h-5 w-5 animate-pulse" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/></svg>
-              Jetzt starten
+              {TRIAL_CTA_LABEL}
               <svg class="h-5 w-5 transition-transform group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
             </span>
           </a>
+          <TrialCtaNote />
         </div>
       </div>
     </div>

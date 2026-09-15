@@ -1,4 +1,6 @@
 ---
+import { TRIAL_CTA_LABEL } from '../lib/cta';
+import TrialCtaNote from '../components/ui/TrialCtaNote.astro';
 import MarketingLayout from '../layouts/MarketingLayout.astro';
 import FAQSection from '../components/landing/FAQSection.astro';
 import CTASection from '../components/landing/CTASection.astro';
@@ -237,12 +239,13 @@ const competitors = [
             href={SIGNUP_URL}
             class="block w-full text-center py-4 px-6 rounded-lg bg-primary text-primary-foreground font-semibold text-lg hover:bg-primary/90 shadow-md hover:shadow-xl transition-all duration-300"
           >
-            14 Tage kostenlos starten
+            {TRIAL_CTA_LABEL}
           </a>
+          <TrialCtaNote class="mt-4" />
 
           <!-- Trust Zeile -->
-          <p class="text-center text-xs text-muted-foreground mt-4">
-            14 Tage kostenlos mit {TRIAL_SOURCING_CREDITS} AI-Sourcing-Läufen für das ganze Team. Keine Kreditkarte erforderlich. Setup in 5 Minuten.
+          <p class="text-center text-xs text-muted-foreground mt-2">
+            14 Tage kostenlos mit {TRIAL_SOURCING_CREDITS} AI-Sourcing-Läufen für das ganze Team. Setup in 5 Minuten.
           </p>
           <p id="annual-terms-note" class="text-center text-xs text-muted-foreground/70 mt-2">
             Jahresabo: 12 Monate Laufzeit, kündbar mit 6 Monaten Frist zum Laufzeitende (AGB § 7).

@@ -1,4 +1,6 @@
 ---
+import { TRIAL_CTA_LABEL } from '../../lib/cta';
+import TrialCtaNote from '../../components/ui/TrialCtaNote.astro';
 import MarketingLayout from '../../layouts/MarketingLayout.astro';
 import CTASection from '../../components/landing/CTASection.astro';
 
@@ -39,13 +41,14 @@ const securityFeatures = ["DSGVO-konform", "EU-Server (Frankfurt)", "Row Level S
           Für Geschäftsführer: Recruiting als <span class="text-primary">Wettbewerbsvorteil</span>.
         </h1>
         <p class="reveal-item opacity-0 translate-y-8 transition-all duration-700 text-lg md:text-xl text-[hsl(var(--muted-foreground))] max-w-2xl mx-auto" style="transition-delay: 200ms;">Reduzieren Sie die Time-to-Hire, senken Sie Kosten und gewinnen Sie den War for Talent.</p>
-        <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700 flex flex-col sm:flex-row items-center justify-center gap-4 pt-4" style="transition-delay: 300ms;">
+        <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700 flex flex-col sm:flex-row items-center justify-center gap-4 pt-4 flex-wrap" style="transition-delay: 300ms;">
           <a href="https://app.shortselect.com/signup" class="inline-flex items-center gap-2 px-8 py-3 bg-primary text-white font-semibold rounded-lg text-base group shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
             <svg class="h-5 w-5 animate-pulse" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/></svg>
-            Demo vereinbaren
+            {TRIAL_CTA_LABEL}
             <svg class="h-5 w-5 transition-transform group-hover:translate-x-1" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
           </a>
           <a href="#roi" class="inline-flex items-center px-8 py-3 border border-[hsl(var(--border))] font-semibold rounded-lg text-base transition-all duration-300 hover:border-primary/50 hover:text-primary">ROI ansehen</a>
+          <TrialCtaNote />
         </div>
       </div>
     </div>
