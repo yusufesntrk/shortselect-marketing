@@ -78,6 +78,14 @@ function MetricValue({ metric }: { metric: TestimonialMetric }) {
   );
 }
 
+function LinkedInIcon({ className = "" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" className={className}>
+      <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z" />
+    </svg>
+  );
+}
+
 const getInitials = (name: string) =>
   name
     .split(" ")
@@ -149,9 +157,34 @@ export default function TestimonialsSwiper() {
                     &ldquo;{t.quote}&rdquo;
                   </blockquote>
 
-                  <div className="mb-6 pb-6 border-b border-border/50">
-                    <p className="font-display font-bold text-foreground">{t.name}</p>
-                    <p className="text-sm text-muted-foreground">{t.role}</p>
+                  <div className="mb-6 pb-6 border-b border-border/50 flex items-center justify-between gap-3">
+                    <div className="min-w-0">
+                      {t.linkedin ? (
+                        <a
+                          href={t.linkedin}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="font-display font-bold text-foreground hover:text-primary transition-colors"
+                        >
+                          {t.name}
+                        </a>
+                      ) : (
+                        <p className="font-display font-bold text-foreground">{t.name}</p>
+                      )}
+                      <p className="text-sm text-muted-foreground">{t.role}</p>
+                    </div>
+                    {t.linkedin && (
+                      <a
+                        href={t.linkedin}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`LinkedIn-Profil von ${t.name}`}
+                        title="LinkedIn-Profil"
+                        className="flex-shrink-0 w-9 h-9 rounded-full border border-border bg-card text-muted-foreground hover:text-[#0A66C2] hover:border-[#0A66C2]/40 hover:bg-[#0A66C2]/5 flex items-center justify-center transition-colors"
+                      >
+                        <LinkedInIcon className="w-4 h-4" />
+                      </a>
+                    )}
                   </div>
 
                   {/* Kennzahl */}
