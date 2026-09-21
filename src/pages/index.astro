@@ -1,5 +1,6 @@
 ---
 import SEOHead from '../components/seo/SEOHead.astro';
+import TestimonialsSwiper from '../components/interactive/TestimonialsSwiper';
 import { PRO_PRICE_MONTHLY_EUR, TRIAL_DAYS } from '../lib/billing-constants';
 import { TRIAL_CTA_LABEL, TRIAL_CTA_NOTE, signupUrl } from '../lib/cta';
 import '../styles/global.css';
@@ -2000,62 +2001,16 @@ const websiteSchema = {
   .fc-testi-head { text-align: center; max-width: 720px; margin: 0 auto 60px; padding: 0 32px; }
   .fc-testi-head h2 { margin-top: 18px; }
   .fc-testi-head .lead { margin-top: 18px; font-size: 17px; color: #525252; }
-  .fc-testi-grid {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 32px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+  .fc-testi-swiper { margin-top: 8px; }
+  .fc-testi-more { text-align: center; margin-top: 28px; padding: 0 32px; }
+  .fc-testi-more a {
+    display: inline-flex; align-items: center; gap: 6px;
+    border: 1px solid #e4e4e7; background: white; color: #0a0a0e;
+    padding: 10px 20px; border-radius: 100px;
+    font-size: 13px; font-weight: 700; text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
   }
-  .fc-testi-card {
-    background: white;
-    border: 1px solid #f4f4f5;
-    border-radius: 20px;
-    padding: 28px;
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-    transition: transform 0.3s, box-shadow 0.3s;
-  }
-  .fc-testi-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.06);
-  }
-  .fc-testi-card .stars { color: #facc15; font-size: 14px; letter-spacing: 1px; }
-  .fc-testi-card blockquote {
-    margin: 0;
-    font-size: 14px;
-    line-height: 1.55;
-    color: #0a0a0e;
-    font-weight: 500;
-    font-family: 'Poppins';
-    flex: 1;
-  }
-  .fc-testi-card .who {
-    display: flex; align-items: center; gap: 12px;
-    padding-top: 16px;
-    border-top: 1px solid #f4f4f5;
-  }
-  .fc-testi-card .av {
-    width: 40px; height: 40px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, #ef4444, #f97316);
-    color: white;
-    font-weight: 800;
-    font-size: 14px;
-    display: flex; align-items: center; justify-content: center;
-    flex-shrink: 0;
-  }
-  .fc-testi-card .av-img {
-    width: 40px; height: 40px;
-    border-radius: 50%;
-    object-fit: cover;
-    object-position: top;
-    flex-shrink: 0;
-  }
-  .fc-testi-card .name { font-weight: 700; font-size: 13px; }
-  .fc-testi-card .role { font-size: 11px; color: #71717a; }
+  .fc-testi-more a:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(0,0,0,0.08); }
 
   /* === FAQ === */
   .fc-faq { padding: 100px 0; background: white; }
@@ -2785,12 +2740,7 @@ const websiteSchema = {
     /* --- Testimonials --- */
     .fc-testi-head { padding: 0 20px; margin-bottom: 40px; max-width: 100%; }
     .fc-testi-head h2 { font-size: 32px; }
-    .fc-testi-grid {
-      grid-template-columns: 1fr;
-      padding: 0 20px;
-      gap: 16px;
-      max-width: 100%;
-    }
+    .fc-testi-more { padding: 0 20px; }
 
     /* --- FAQ --- */
     .fc-faq { padding: 60px 0; }
@@ -3660,111 +3610,11 @@ const websiteSchema = {
         <h2>Was unsere Kunden<br><span class="wavy">über uns sagen.</span></h2>
         <p class="lead">Recruiting-Teams, die mit ShortSelect arbeiten.</p>
       </div>
-      <div class="fc-testi-grid reveal-stagger" data-reveal>
-        <div class="fc-testi-card">
-          <div class="stars">★★★★★</div>
-          <blockquote>"Mit ShortSelect behalten wir den Überblick über alle Kandidaten auf einen Blick. Das AI-Matching spart uns täglich Stunden an manueller Arbeit."</blockquote>
-          <div class="who">
-            <div class="av">YS</div>
-            <div>
-              <div class="name">Yasar Sentürk</div>
-              <div class="role">Geschäftsführer · searched GmbH</div>
-            </div>
-          </div>
-        </div>
-        <div class="fc-testi-card">
-          <div class="stars">★★★★★</div>
-          <blockquote>"Unsere Kunden sehen den Status ihrer Positionen jederzeit selbst im Client Portal. Das erspart uns die ständigen Status-Mails und schafft Vertrauen."</blockquote>
-          <div class="who">
-            <div class="av" style="background:linear-gradient(135deg,#f97316,#facc15)">RB</div>
-            <div>
-              <div class="name">Rüdiger Bruns</div>
-              <div class="role">Geschäftsführer · AMONOVA GmbH</div>
-            </div>
-          </div>
-        </div>
-        <div class="fc-testi-card">
-          <div class="stars">★★★★★</div>
-          <blockquote>"Mit ShortSelect haben wir endlich alles an einem Ort. Wir brauchen keine zusätzlichen Tools mehr und steuern unseren gesamten Recruiting-Prozess zentral in einem System."</blockquote>
-          <div class="who">
-            <img src="/testimonials/sinan-tarti.jpg" alt="Sinan Tarti" class="av-img" loading="lazy" decoding="async" width="40" height="40" />
-            <div>
-              <div class="name">Sinan Tarti</div>
-              <div class="role">Manager Digital Process Automation · PolyTALENT GmbH</div>
-            </div>
-          </div>
-        </div>
-        <div class="fc-testi-card">
-          <div class="stars">★★★★★</div>
-          <blockquote>"Die Vermittlungszeit hat sich seit ShortSelect drastisch reduziert. Automatisiertes Kandidaten-Matching und strukturierte Pipelines machen den Unterschied."</blockquote>
-          <div class="who">
-            <div class="av" style="background:linear-gradient(135deg,#14b8a6,#0a0a0e)">TW</div>
-            <div>
-              <div class="name">Dr. Thomas Wendel</div>
-              <div class="role">Geschäftsführer · tw.con. GmbH</div>
-            </div>
-          </div>
-        </div>
-        <div class="fc-testi-card">
-          <div class="stars">★★★★★</div>
-          <blockquote>"ShortSelect hat unsere gesamte Recruiting-Pipeline transparent gemacht. Kein Kandidat geht mehr verloren und unsere Abschlussrate ist deutlich gestiegen."</blockquote>
-          <div class="who">
-            <div class="av" style="background:linear-gradient(135deg,#a855f7,#ef4444)">BB</div>
-            <div>
-              <div class="name">Bahadir Battal</div>
-              <div class="role">Gründer · VeraPartners Leadership</div>
-            </div>
-          </div>
-        </div>
-        <div class="fc-testi-card">
-          <div class="stars">★★★★★</div>
-          <blockquote>"Seit wir ShortSelect nutzen, läuft unser Bewerbungsprozess weitgehend im Hintergrund. Screening und automatisierte Workflows nehmen uns die Handarbeit ab, an der wir vorher hängen geblieben sind."</blockquote>
-          <div class="who">
-            <div class="av" style="background:linear-gradient(135deg,#ef4444,#a855f7)">AN</div>
-            <div>
-              <div class="name">Alireza Nikjou</div>
-              <div class="role">Geschäftsführer · Experiton UG</div>
-            </div>
-          </div>
-        </div>
-        <div class="fc-testi-card">
-          <div class="stars">★★★★★</div>
-          <blockquote>"Recruiting mit ShortSelect fühlt sich an wie Cheaten. Das ATS denkt mit, priorisiert automatisch und hält unser Team immer auf dem neuesten Stand."</blockquote>
-          <div class="who">
-            <div class="av" style="background:linear-gradient(135deg,#14b8a6,#facc15)">NB</div>
-            <div>
-              <div class="name">Nordin Begdouri</div>
-              <div class="role">Geschäftsführer · SalesWorx</div>
-            </div>
-          </div>
-        </div>
-        <div class="fc-testi-card">
-          <div class="stars">★★★★★</div>
-          <blockquote>"Mit ShortSelect laufen unsere Pipelines sauber durch. Dadurch platzieren wir spürbar mehr Interim Manager im Einkauf als vorher."</blockquote>
-          <div class="who">
-            <div class="av" style="background:linear-gradient(135deg,#0a0a0e,#ef4444)">HP</div>
-            <div>
-              <div class="name">Hasim Pacal</div>
-              <div class="role">Geschäftsführer · Kerkhoff Experts</div>
-            </div>
-          </div>
-        </div>
-        <div class="fc-testi-card">
-          <div class="stars">★★★★★</div>
-          <blockquote>"Das ATS von ShortSelect hat unser Fulfillment massiv entlastet. Endlich können wir skalieren, ohne im operativen Chaos zu versinken."</blockquote>
-          <div class="who">
-            <div class="av" style="background:linear-gradient(135deg,#f97316,#a855f7)">ET</div>
-            <div>
-              <div class="name">Ekrem Topcan</div>
-              <div class="role">Geschäftsführer · Hohenfeld Search</div>
-            </div>
-          </div>
-        </div>
-        <div class="fc-testi-card" style="background:linear-gradient(135deg,#ef4444,#f97316);color:white;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center">
-          <div style="font-family:'Poppins';font-size:26px;font-weight:800;line-height:1.15">Mehr<br>Kundenstimmen</div>
-          <div style="font-size:14px;margin-top:8px;opacity:0.9">von Recruiting-Agenturen</div>
-          <a href="/kunden/" style="margin-top:14px;background:white;color:#ef4444;padding:8px 16px;border-radius:100px;font-size:12px;font-weight:700;text-decoration:none">Alle ansehen →</a>
-        </div>
+      <div class="fc-testi-swiper reveal" data-reveal>
+        <TestimonialsSwiper client:visible />
+      </div>
+      <div class="fc-testi-more reveal" data-reveal>
+        <a href="/kunden/">Alle Kundenstimmen ansehen &rarr;</a>
       </div>
     </section>
 
