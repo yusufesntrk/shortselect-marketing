@@ -22,6 +22,8 @@ export type Testimonial = {
   role: string;
   quote: string;
   image?: string;
+  /** object-position fuer das Kartenfoto, Standard "top". */
+  imagePosition?: string;
   /** Oeffentliches LinkedIn-Profil, per Profiltext gegen die Firma verifiziert (21.09.2026). */
   linkedin?: string;
   metric: TestimonialMetric;
@@ -29,6 +31,25 @@ export type Testimonial = {
 };
 
 export const testimonials: Testimonial[] = [
+  {
+    name: "Johannes Dalampiras",
+    company: "Sourcing Evangelist",
+    role: "Active Sourcing Trainer",
+    quote: "Ich mache Active Sourcing seit vielen Jahren. ShortSelect hat mir trotzdem Profile geliefert, die ich mit meinen eigenen Suchen auf LinkedIn nie gesehen hätte.",
+    image: "/testimonials/johannes-dalampiras.webp",
+    imagePosition: "center",
+    linkedin: "https://www.linkedin.com/in/active-sourcing-expert",
+    metric: {
+      label: "AI Sourcing",
+      value: "Neue Profile",
+      description: "die LinkedIn so nie angezeigt hat",
+      direction: "up",
+    },
+    results: [
+      "Neue Profile per AI Sourcing, die die LinkedIn-Suche nie angezeigt hat",
+      "Ergänzt das eigene Active Sourcing, statt es zu ersetzen",
+    ],
+  },
   {
     name: "Dr. Thomas Wendel",
     company: "tw.con. GmbH",

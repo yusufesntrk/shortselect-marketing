@@ -127,7 +127,8 @@ export default function TestimonialsSwiper() {
                       alt={t.name}
                       loading="lazy"
                       decoding="async"
-                      className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      style={{ objectPosition: t.imagePosition ?? "top" }}
                       onError={(e) => {
                         const target = e.currentTarget;
                         target.style.display = "none";
