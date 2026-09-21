@@ -104,6 +104,24 @@ export const testimonials: Testimonial[] = [
     ],
   },
   {
+    name: "Saskia Behr",
+    company: "InterJob GmbH",
+    role: "Senior Consultant & Prokuristin",
+    quote: "ShortSelect findet uns Profile in der Finanz- und Versicherungsbranche, die wir über die klassische LinkedIn-Suche nie gesehen hätten. Gerade bei spezialisierten Rollen ist das Gold wert.",
+    image: "/testimonials/saskia-behr.webp",
+    linkedin: "https://www.linkedin.com/in/saskia-behr-bb0470154",
+    metric: {
+      label: "AI Sourcing",
+      value: "Neue Profile",
+      description: "die LinkedIn so nie angezeigt hat",
+      direction: "up",
+    },
+    results: [
+      "Neue Profile aus Finanz und Versicherung, die sie nicht kannte",
+      "Neue Profile per AI Sourcing, die die LinkedIn-Suche nie angezeigt hat",
+    ],
+  },
+  {
     name: "Yasar Sentürk",
     company: "searched GmbH",
     role: "Geschäftsführer",
