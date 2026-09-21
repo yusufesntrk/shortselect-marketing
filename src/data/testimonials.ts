@@ -34,7 +34,7 @@ export const testimonials: Testimonial[] = [
   {
     name: "Johannes Dalampiras",
     company: "Sourcing Evangelist",
-    role: "Active Sourcing Trainer",
+    role: "Active Sourcing Trainer & Speaker",
     quote: "Ich mache Active Sourcing seit vielen Jahren. ShortSelect hat mir trotzdem Profile geliefert, die ich mit meinen eigenen Suchen auf LinkedIn nie gesehen hätte.",
     image: "/testimonials/johannes-dalampiras.webp",
     imagePosition: "center",
@@ -47,7 +47,7 @@ export const testimonials: Testimonial[] = [
     },
     results: [
       "Neue Profile per AI Sourcing, die die LinkedIn-Suche nie angezeigt hat",
-      "Ergänzt das eigene Active Sourcing, statt es zu ersetzen",
+      "Speaker bei XING und beim Verband deutscher Personalvermittler",
     ],
   },
   {
