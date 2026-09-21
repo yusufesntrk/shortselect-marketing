@@ -50,6 +50,24 @@ export const testimonials: Testimonial[] = [
     ],
   },
   {
+    name: "Carolin Bark",
+    company: "Bark recruiting+",
+    role: "Geschäftsführerin",
+    quote: "ShortSelect hat uns neue Profile speziell in der Messtechnik gefunden, die wir vorher nicht kannten. Genau die Kandidaten, die uns die LinkedIn-Suche so nie angezeigt hat.",
+    image: "/testimonials/carolin-bark.webp",
+    linkedin: "https://www.linkedin.com/in/carolin-bark",
+    metric: {
+      label: "AI Sourcing",
+      value: "Neue Profile",
+      description: "die LinkedIn so nie angezeigt hat",
+      direction: "up",
+    },
+    results: [
+      "Neue Profile speziell in der Messtechnik, die sie vorher nicht kannte",
+      "Neue Profile per AI Sourcing, die die LinkedIn-Suche nie angezeigt hat",
+    ],
+  },
+  {
     name: "Ekrem Topcan",
     company: "Hohenfeld Search",
     role: "Geschäftsführer",
