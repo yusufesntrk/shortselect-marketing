@@ -1,15 +1,15 @@
 export const faqs = [
   {
     question: "Was ist im Pro Plan enthalten?",
-    answer: "Alle Funktionen von ShortSelect: unbegrenzte Jobs und Kandidaten, AgentBurst KI-Engine für Matching, Screening, Ranking und Nurturing, Multi-Mandanten mit Client Portal, Karriereseite, Multiposting, Talent Pools, Interview Scheduling, REST API, Webhooks und Priority Support. Ein Preis pro User, keine Add-On-Fees. Dazu kommen 5 AI-Sourcing-Läufe pro User und Monat, in beiden Abrechnungsarten gleich. Die Anreicherung von Kontaktdaten läuft über deinen eigenen Anbieter-Zugang und wird dort direkt abgerechnet.",
+    answer: "Alle Funktionen von ShortSelect: unbegrenzte Jobs und Kandidaten, AgentBurst KI-Engine für Matching, Screening, Ranking und Nurturing, Multi-Mandanten mit Client Portal, Karriereseite, Multiposting, Talent Pools, Interview Scheduling, REST API, Webhooks und Priority Support. Ein Preis pro User, keine Add-On-Fees. Dazu kommen 5 AI-Sourcing-Läufe pro User je Abrechnungszeitraum von 4 Wochen, in beiden Abrechnungsarten gleich. Die Anreicherung von Kontaktdaten läuft über deinen eigenen Anbieter-Zugang und wird dort direkt abgerechnet.",
   },
   {
     question: "Was kostet ShortSelect?",
-    answer: "Der Pro Plan kostet 199 EUR pro User und Monat. Bei jährlicher Zahlung sind es 1.791 EUR pro User und Jahr, das entspricht drei geschenkten Monaten. Ein Preis pro User, alle Funktionen inklusive, keine Aufpreise für einzelne Module.",
+    answer: "Der Pro Plan kostet 199 EUR pro User je Abrechnungszeitraum von 4 Wochen, also 13 Zeiträume im Jahr. Bei jährlicher Zahlung sind es 1.791 EUR pro User und Jahr, das entspricht neun statt dreizehn Zeiträumen, vier sind geschenkt. Ein Preis pro User, alle Funktionen inklusive, keine Aufpreise für einzelne Module.",
   },
   {
     question: "Was passiert nach den 14 Tagen Trial?",
-    answer: "Nach Ablauf des Trials bleibt Ihr Account erhalten und Sie wechseln in den Pro Plan für 199 EUR pro User und Monat, wahlweise jährlich für 1.791 EUR pro User und Jahr. Wenn Sie nicht weitermachen möchten, wird Ihr Account ohne weitere Kosten archiviert. Wir erinnern Sie rechtzeitig vor Trial-Ende per E-Mail, damit Sie aktiv entscheiden können.",
+    answer: "Nach Ablauf des Trials bleibt Ihr Account erhalten und Sie wechseln in den Pro Plan für 199 EUR pro User je 4 Wochen, wahlweise jährlich für 1.791 EUR pro User und Jahr. Wenn Sie nicht weitermachen möchten, wird Ihr Account ohne weitere Kosten archiviert. Wir erinnern Sie rechtzeitig vor Trial-Ende per E-Mail, damit Sie aktiv entscheiden können.",
   },
   {
     question: "Brauche ich eine Kreditkarte für den Trial?",
@@ -17,7 +17,7 @@ export const faqs = [
   },
   {
     question: "Kann ich jederzeit kündigen?",
-    answer: "Der Monatstarif ist monatlich kündbar, ohne Mindestlaufzeit. Beim Jahrestarif gilt die vereinbarte Vertragslaufzeit. Eine Kündigung erfolgt direkt im Account über das Stripe Customer Portal. Sie behalten Zugriff bis zum Ende der laufenden Abrechnungsperiode.",
+    answer: "Der 4-Wochen-Tarif ist zum Ende jedes Abrechnungszeitraums kündbar, mit 14 Tagen Frist. Beim Jahrestarif gilt die Vertragslaufzeit von 12 Monaten, kündbar mit 3 Monaten Frist zum Laufzeitende. Eine Kündigung erfolgt direkt im Account über das Stripe Customer Portal. Sie behalten Zugriff bis zum Ende der laufenden Abrechnungsperiode.",
   },
   {
     question: "Werden Updates und neue Funktionen extra berechnet?",

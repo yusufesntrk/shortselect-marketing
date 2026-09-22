@@ -17,8 +17,23 @@ export const PRO_ANNUAL_EFFECTIVE_MONTHLY_EUR = PRO_PRICE_ANNUAL_EUR / 12;
 export const PRO_ANNUAL_MONTHS_FREE = 3;
 export const PRO_MONTHLY_LOOKUP_KEY = 'shortselect_pro_monthly_v1';
 export const PRO_ANNUAL_LOOKUP_KEY = 'shortselect_pro_annual_v1';
+/**
+ * Phase 130 (App-Repo, 22.09.2026): der Pro Plan wird je Abrechnungszeitraum
+ * von vier Wochen (28 Tage) abgerechnet, dreizehn Zeitraeume im Jahr. Der
+ * Monatspreis ist fuer Neuverkauf geschlossen. Zwilling der App-Konstanten.
+ */
+export const PRO_4WEEKLY_LOOKUP_KEY = 'shortselect_pro_4weekly_v1';
+export const PRO_CYCLE_DAYS = 28;
+export const PRO_CYCLES_PER_YEAR = 13;
+/** 199 EUR netto pro User je Abrechnungszeitraum von vier Wochen. */
+export const PRO_PRICE_PER_CYCLE_EUR = 199;
+/** Jahresabo 1.791 EUR = neun Zeitraeume; effektiv 137,77 EUR je vier Wochen. */
+export const PRO_ANNUAL_EFFECTIVE_PER_CYCLE_EUR = PRO_PRICE_ANNUAL_EUR / PRO_CYCLES_PER_YEAR;
+/** Vier von dreizehn Zeitraeumen geschenkt (1.791 = 9 x 199). */
+export const PRO_ANNUAL_CYCLES_FREE = PRO_CYCLES_PER_YEAR - 9;
 /** Jahresabo: Kuendigungsfrist in Monaten zum Ende der Vertragslaufzeit (AGB §7). */
-export const ANNUAL_NOTICE_MONTHS = 6;
+/** AGB v1.6 § 24 Abs. 2 b: drei Monate zum Ende der zwoelfmonatigen Mindestlaufzeit (Entscheidung Yusuf 22.09.2026; v1.5 nannte zwei, der Code stand auf sechs). */
+export const ANNUAL_NOTICE_MONTHS = 3;
 export const ANNUAL_TERM_MONTHS = 12;
 
 export const TRIAL_DAYS = 14;

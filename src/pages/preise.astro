@@ -18,17 +18,18 @@ import {
 
 const SIGNUP_URL = 'https://app.shortselect.com/signup?utm_source=marketing&utm_medium=cta&utm_campaign=pro_plan&utm_content=pricing_main';
 
-// 1.791 € / 12 = 149,25 € effektiver Monatspreis bei Jahreszahlung.
-// Anzeige-Konvention (Close-CRM-Style): Jahresplan wird als Monatspreis
+// 1.791 € / 13 = 137,77 € effektiver Preis je vier Wochen bei Jahreszahlung
+// (Phase 130: Abrechnungszeitraum vier Wochen, dreizehn im Jahr).
+// Anzeige-Konvention (Close-CRM-Style): Jahresplan wird als Zykluspreis
 // "bei jährlicher Abrechnung" beworben, die Jahressumme steht nur dezent
 // im Kleingedruckten.
-const ANNUAL_EFFECTIVE_MONTHLY = (PRO_PRICE_ANNUAL_EUR / 12).toLocaleString('de-DE', {
+const ANNUAL_EFFECTIVE_MONTHLY = (PRO_PRICE_ANNUAL_EUR / 13).toLocaleString('de-DE', {
   minimumFractionDigits: 2,
   maximumFractionDigits: 2,
 });
 const ANNUAL_PRICE_FORMATTED = PRO_PRICE_ANNUAL_EUR.toLocaleString('de-DE');
 const FIVE_USER_MONTHLY = (5 * PRO_PRICE_MONTHLY_EUR).toLocaleString('de-DE');
-const FIVE_USER_ANNUAL_MONTHLY = ((5 * PRO_PRICE_ANNUAL_EUR) / 12).toLocaleString('de-DE', {
+const FIVE_USER_ANNUAL_MONTHLY = ((5 * PRO_PRICE_ANNUAL_EUR) / 13).toLocaleString('de-DE', {
   maximumFractionDigits: 0,
 });
 
@@ -43,7 +44,7 @@ const pricingSchema = {
   applicationCategory: "BusinessApplication",
   applicationSubCategory: "Applicant Tracking System",
   operatingSystem: "Web Browser",
-  description: `ShortSelect ATS für Recruiting-Agenturen. Alle Funktionen, ein Preis pro User. Pro Plan: ${PRO_PRICE_MONTHLY_EUR} EUR pro User und Monat oder ${PRO_PRICE_ANNUAL_EUR} EUR pro User und Jahr (${PRO_ANNUAL_MONTHS_FREE} Monate geschenkt). Inklusive ${SOURCING_CREDITS_PER_SEAT_MONTHLY} AI-Sourcing-Credits pro User und Monat. Weitere Sourcing-Credits im Paket: ${CREDIT_PACK_SIZE} für ${CREDIT_PACK_PRICE_LABEL} EUR netto.`,
+  description: `ShortSelect ATS für Recruiting-Agenturen. Alle Funktionen, ein Preis pro User. Pro Plan: ${PRO_PRICE_MONTHLY_EUR} EUR pro User je 4 Wochen oder ${PRO_PRICE_ANNUAL_EUR} EUR pro User und Jahr (vier von dreizehn Abrechnungszeiträumen geschenkt). Inklusive ${SOURCING_CREDITS_PER_SEAT_MONTHLY} AI-Sourcing-Credits pro User je 4 Wochen. Weitere Sourcing-Credits im Paket: ${CREDIT_PACK_SIZE} für ${CREDIT_PACK_PRICE_LABEL} EUR netto.`,
   image: ["https://www.shortselect.com/og-image.png"],
   // Das Nachkauf-Paket (149,99 EUR netto) steht BEWUSST nur in den
   // Beschreibungstexten und nicht als eigener Offer: Google waehlt fuer Rich
@@ -54,7 +55,7 @@ const pricingSchema = {
     {
       "@type": "Offer",
       name: "Pro Plan (monatlich)",
-      description: `Pro Plan: ${PRO_PRICE_MONTHLY_EUR} EUR pro User und Monat, alle Funktionen inklusive. Enthalten sind ${SOURCING_CREDITS_PER_SEAT_MONTHLY} AI-Sourcing-Credits pro User und Monat.`,
+      description: `Pro Plan: ${PRO_PRICE_MONTHLY_EUR} EUR pro User je 4 Wochen, alle Funktionen inklusive. Enthalten sind ${SOURCING_CREDITS_PER_SEAT_MONTHLY} AI-Sourcing-Credits pro User je 4 Wochen.`,
       price: `${PRO_PRICE_MONTHLY_EUR}.00`,
       priceCurrency: "EUR",
       url: "https://www.shortselect.com/preise/",
@@ -79,7 +80,7 @@ const pricingSchema = {
     {
       "@type": "Offer",
       name: "Pro Plan (jährlich)",
-      description: `Pro Plan Jahresabo: ${PRO_PRICE_ANNUAL_EUR} EUR pro User und Jahr (9 statt 12 Monatsraten, Vorauszahlung). Enthalten sind ${SOURCING_CREDITS_PER_SEAT_ANNUAL} AI-Sourcing-Credits pro User und Monat, genau wie bei monatlicher Abrechnung. Der Vorteil des Jahresabos liegt im Preis.`,
+      description: `Pro Plan Jahresabo: ${PRO_PRICE_ANNUAL_EUR} EUR pro User und Jahr (9 statt 13 Abrechnungszeiträume, Vorauszahlung). Enthalten sind ${SOURCING_CREDITS_PER_SEAT_ANNUAL} AI-Sourcing-Credits pro User je 4 Wochen, genau wie bei Abrechnung alle 4 Wochen. Der Vorteil des Jahresabos liegt im Preis.`,
       price: `${PRO_PRICE_ANNUAL_EUR}.00`,
       priceCurrency: "EUR",
       url: "https://www.shortselect.com/preise/",
@@ -129,7 +130,7 @@ const competitors = [
 
 <MarketingLayout
   title={`Preise, ShortSelect Pro Plan | ab ${ANNUAL_EFFECTIVE_MONTHLY} € pro User`}
-  description={`Pro Plan: ShortSelect ab ${ANNUAL_EFFECTIVE_MONTHLY} € pro User/Monat bei jährlicher Abrechnung (monatlich ${PRO_PRICE_MONTHLY_EUR} €). 14 Tage kostenlos testen, keine Kreditkarte.`}
+  description={`Pro Plan: ShortSelect ab ${ANNUAL_EFFECTIVE_MONTHLY} € pro User je 4 Wochen bei jährlicher Abrechnung (alle 4 Wochen ${PRO_PRICE_MONTHLY_EUR} €). 14 Tage kostenlos testen, keine Kreditkarte.`}
   jsonLd={pricingSchema}
 >
   <!-- Hero -->
@@ -156,9 +157,9 @@ const competitors = [
     <div class="container mx-auto px-4">
       <div id="pricing-card" class="max-w-xl mx-auto opacity-0 translate-y-8 transition-all duration-700">
 
-        <!-- Monat/Jahr Toggle (Close-CRM-Style: Jährlich vorausgewählt) -->
+        <!-- 4-Wochen/Jahr Toggle (Close-CRM-Style: Jährlich vorausgewählt) -->
         <div class="flex flex-col items-center gap-2 mb-6">
-          <span class="text-xs font-semibold tracking-widest uppercase text-primary">Spare 25 %</span>
+          <span class="text-xs font-semibold tracking-widest uppercase text-primary">Spare 31 %</span>
           <div class="inline-flex items-center rounded-full border border-border bg-card p-1" role="group" aria-label="Abrechnungszeitraum wählen">
             <button
               type="button"
@@ -166,7 +167,7 @@ const competitors = [
               aria-pressed="false"
               class="px-4 py-1.5 text-sm font-medium rounded-full transition-colors text-muted-foreground hover:text-foreground"
             >
-              Monatlich
+              Alle 4 Wochen
             </button>
             <button
               type="button"
@@ -193,21 +194,21 @@ const competitors = [
             <div id="price-monthly-block" class="hidden">
               <div class="flex items-baseline justify-center gap-3 mb-2 flex-wrap">
                 <span class="text-5xl md:text-6xl font-display font-bold text-foreground">{PRO_PRICE_MONTHLY_EUR} €</span>
-                <span class="text-lg text-muted-foreground">pro User / Monat</span>
+                <span class="text-lg text-muted-foreground">pro User je 4 Wochen</span>
               </div>
               <p class="text-sm text-muted-foreground">
-                (bei monatlicher Abrechnung)
+                (bei Abrechnung alle 4 Wochen)
                 <br/>Pro aktivem User, alle Funktionen inklusive, netto zzgl. MwSt.
               </p>
               <p class="mt-4 inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-semibold">
                 <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
-                {SOURCING_CREDITS_PER_SEAT_MONTHLY} AI-Sourcing-Credits pro User / Monat
+                {SOURCING_CREDITS_PER_SEAT_MONTHLY} AI-Sourcing-Credits pro User je 4 Wochen
               </p>
             </div>
             <div id="price-annual-block">
               <div class="flex items-baseline justify-center gap-3 mb-2 flex-wrap">
                 <span class="text-5xl md:text-6xl font-display font-bold text-foreground">{ANNUAL_EFFECTIVE_MONTHLY} €</span>
-                <span class="text-lg text-muted-foreground">pro User / Monat</span>
+                <span class="text-lg text-muted-foreground">pro User je 4 Wochen</span>
               </div>
               <p class="text-sm text-muted-foreground">
                 (bei jährlicher Abrechnung)
@@ -215,7 +216,7 @@ const competitors = [
               </p>
               <p class="mt-4 inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-semibold">
                 <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
-                {SOURCING_CREDITS_PER_SEAT_ANNUAL} AI-Sourcing-Credits pro User / Monat
+                {SOURCING_CREDITS_PER_SEAT_ANNUAL} AI-Sourcing-Credits pro User je 4 Wochen
               </p>
             </div>
           </div>
@@ -248,7 +249,7 @@ const competitors = [
             14 Tage kostenlos mit {TRIAL_SOURCING_CREDITS} AI-Sourcing-Läufen für das ganze Team. Setup in 5 Minuten.
           </p>
           <p id="annual-terms-note" class="text-center text-xs text-muted-foreground/70 mt-2">
-            Jahresabo: 12 Monate Laufzeit, kündbar mit 6 Monaten Frist zum Laufzeitende (AGB § 7).
+            Jahresabo: 12 Monate Laufzeit, kündbar mit 3 Monaten Frist zum Laufzeitende (AGB § 24).
           </p>
         </div>
 
@@ -308,7 +309,7 @@ const competitors = [
             <div>
               <dt class="font-semibold mb-1">AI-Sourcing-Credit</dt>
               <dd class="text-muted-foreground">
-                Ein Credit ist ein kompletter Sourcing-Lauf für eine Stelle: die KI sucht passende Profile, prüft sie und legt die Treffer als Vorschläge in deine Pipeline. Findet ein Lauf nichts, kostet er auch nichts. {SOURCING_CREDITS_PER_SEAT_MONTHLY} Läufe pro User und Monat sind enthalten, in beiden Abrechnungsarten gleich. In der kostenlosen Testphase sind {TRIAL_SOURCING_CREDITS} Läufe für das ganze Team enthalten, unabhängig von der Zahl der User. Reicht das nicht, kaufst du weitere Credits im Paket nach: {CREDIT_PACK_SIZE} Credits für {CREDIT_PACK_PRICE_LABEL} € netto. Nachgekaufte Credits verfallen nicht.
+                Ein Credit ist ein kompletter Sourcing-Lauf für eine Stelle: die KI sucht passende Profile, prüft sie und legt die Treffer als Vorschläge in deine Pipeline. Findet ein Lauf nichts, kostet er auch nichts. {SOURCING_CREDITS_PER_SEAT_MONTHLY} Läufe pro User je Abrechnungszeitraum von 4 Wochen sind enthalten, in beiden Abrechnungsarten gleich. In der kostenlosen Testphase sind {TRIAL_SOURCING_CREDITS} Läufe für das ganze Team enthalten, unabhängig von der Zahl der User. Reicht das nicht, kaufst du weitere Credits im Paket nach: {CREDIT_PACK_SIZE} Credits für {CREDIT_PACK_PRICE_LABEL} € netto. Nachgekaufte Credits verfallen nicht.
               </dd>
             </div>
             <div>
@@ -319,7 +320,7 @@ const competitors = [
             </div>
           </dl>
           <p class="text-xs text-muted-foreground mt-4">
-Das Sourcing-Kontingent ist ein gemeinsamer Topf für das ganze Team: bei fünf Usern also fünfmal so viele Credits, egal wer sie einsetzt. Es steht in beiden Abrechnungsarten monatlich bereit, beim Jahresabo also zwölfmal im Vertragsjahr. Nicht verbrauchte Credits verfallen nicht, sie wandern in den Folgemonat. Nachgekaufte Sourcing-Credits verfallen ebenfalls nicht und werden erst eingesetzt, wenn das Kontingent des laufenden Monats aufgebraucht ist.
+Das Sourcing-Kontingent ist ein gemeinsamer Topf für das ganze Team: bei fünf Usern also fünfmal so viele Credits, egal wer sie einsetzt. Es steht in beiden Abrechnungsarten alle 4 Wochen bereit, beim Jahresabo also dreizehnmal im Vertragsjahr. Nicht verbrauchte Credits verfallen nicht, sie wandern in den nächsten Abrechnungszeitraum. Nachgekaufte Sourcing-Credits verfallen ebenfalls nicht und werden erst eingesetzt, wenn das Kontingent des laufenden Zeitraums aufgebraucht ist.
           </p>
         </div>
 
@@ -339,7 +340,7 @@ Das Sourcing-Kontingent ist ein gemeinsamer Topf für das ganze Team: bei fünf 
           ShortSelect ist der transparenteste Einstieg
         </h2>
         <p class="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-          Für 5 User kostet ShortSelect {FIVE_USER_MONTHLY} € pro Monat, bei jährlicher Zahlung effektiv {FIVE_USER_ANNUAL_MONTHLY} € pro Monat. Vergleichbare Agentur-Setups mit ATS, CRM, Automatisierung und KI liegen öffentlich ähnlich hoch oder sind nur auf Anfrage erhältlich.
+          Für 5 User kostet ShortSelect {FIVE_USER_MONTHLY} € je 4 Wochen, bei jährlicher Zahlung effektiv {FIVE_USER_ANNUAL_MONTHLY} € je 4 Wochen. Vergleichbare Agentur-Setups mit ATS, CRM, Automatisierung und KI liegen öffentlich ähnlich hoch oder sind nur auf Anfrage erhältlich.
         </p>
 
         <div class="bg-card rounded-2xl border border-border/50 shadow-card overflow-hidden">
@@ -372,10 +373,10 @@ Das Sourcing-Kontingent ist ein gemeinsamer Topf für das ganze Team: bei fünf 
               </h3>
               <div class="flex items-baseline gap-2 mb-4">
                 <span class="text-4xl md:text-5xl font-display font-bold">{FIVE_USER_MONTHLY} €</span>
-                <span class="text-lg text-muted-foreground">/Monat bei 5 Usern</span>
+                <span class="text-lg text-muted-foreground">je 4 Wochen bei 5 Usern</span>
               </div>
               <p class="text-sm mb-4">
-                {PRO_PRICE_MONTHLY_EUR} € pro User und Monat, bei jährlicher Zahlung effektiv {ANNUAL_EFFECTIVE_MONTHLY} € pro User und Monat. Ein transparenter Preis, alle Funktionen inklusive.
+                {PRO_PRICE_MONTHLY_EUR} € pro User je 4 Wochen, bei jährlicher Zahlung effektiv {ANNUAL_EFFECTIVE_MONTHLY} € pro User je 4 Wochen. Ein transparenter Preis, alle Funktionen inklusive.
               </p>
               <p class="text-xs text-muted-foreground">
                 Inklusive AgentBurst-KI, Multi-Mandanten, Client Portal, API, Multiposting und allen zukünftigen Updates.
