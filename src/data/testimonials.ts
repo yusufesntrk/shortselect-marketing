@@ -50,6 +50,25 @@ export const testimonials: Testimonial[] = [
     ],
   },
   {
+    name: "Johannes Dalampiras",
+    company: "Sourcing Evangelist",
+    role: "Active Sourcing Trainer & Speaker",
+    quote: "Ich mache Active Sourcing seit vielen Jahren. ShortSelect hat mir trotzdem Profile geliefert, die ich mit meinen eigenen Suchen auf LinkedIn nie gesehen hätte.",
+    image: "/testimonials/johannes-dalampiras.webp",
+    imagePosition: "center",
+    linkedin: "https://www.linkedin.com/in/active-sourcing-expert",
+    metric: {
+      label: "AI Sourcing",
+      value: "Neue Profile",
+      description: "die LinkedIn so nie angezeigt hat",
+      direction: "up",
+    },
+    results: [
+      "Neue Profile per AI Sourcing, die die LinkedIn-Suche nie angezeigt hat",
+      "Speaker bei XING und beim Verband deutscher Personalvermittler",
+    ],
+  },
+  {
     name: "Daniel Schröder",
     company: "Dashing Consulting GmbH",
     role: "Business Relationship Director",
@@ -118,25 +137,6 @@ export const testimonials: Testimonial[] = [
     results: [
       "Neue Profile per AI Sourcing, die die LinkedIn-Suche nie angezeigt hat",
       "80 % weniger Fulfillment-Aufwand durch ATS-Automatisierung",
-    ],
-  },
-  {
-    name: "Johannes Dalampiras",
-    company: "Sourcing Evangelist",
-    role: "Active Sourcing Trainer & Speaker",
-    quote: "Ich mache Active Sourcing seit vielen Jahren. ShortSelect hat mir trotzdem Profile geliefert, die ich mit meinen eigenen Suchen auf LinkedIn nie gesehen hätte.",
-    image: "/testimonials/johannes-dalampiras.webp",
-    imagePosition: "center",
-    linkedin: "https://www.linkedin.com/in/active-sourcing-expert",
-    metric: {
-      label: "AI Sourcing",
-      value: "Neue Profile",
-      description: "die LinkedIn so nie angezeigt hat",
-      direction: "up",
-    },
-    results: [
-      "Neue Profile per AI Sourcing, die die LinkedIn-Suche nie angezeigt hat",
-      "Speaker bei XING und beim Verband deutscher Personalvermittler",
     ],
   },
   {
