@@ -32,13 +32,12 @@ export type Testimonial = {
 
 export const testimonials: Testimonial[] = [
   {
-    name: "Johannes Dalampiras",
-    company: "Sourcing Evangelist",
-    role: "Active Sourcing Trainer & Speaker",
-    quote: "Ich mache Active Sourcing seit vielen Jahren. ShortSelect hat mir trotzdem Profile geliefert, die ich mit meinen eigenen Suchen auf LinkedIn nie gesehen hätte.",
-    image: "/testimonials/johannes-dalampiras.webp",
-    imagePosition: "center",
-    linkedin: "https://www.linkedin.com/in/active-sourcing-expert",
+    name: "Carolin Bark",
+    company: "Bark recruiting+",
+    role: "Geschäftsführerin",
+    quote: "ShortSelect hat uns neue Profile speziell in der Messtechnik gefunden, die wir vorher nicht kannten. Genau die Kandidaten, die uns die LinkedIn-Suche so nie angezeigt hat.",
+    image: "/testimonials/carolin-bark.webp",
+    linkedin: "https://www.linkedin.com/in/carolin-bark",
     metric: {
       label: "AI Sourcing",
       value: "Neue Profile",
@@ -46,8 +45,8 @@ export const testimonials: Testimonial[] = [
       direction: "up",
     },
     results: [
+      "Neue Profile speziell in der Messtechnik, die sie vorher nicht kannte",
       "Neue Profile per AI Sourcing, die die LinkedIn-Suche nie angezeigt hat",
-      "Speaker bei XING und beim Verband deutscher Personalvermittler",
     ],
   },
   {
@@ -86,32 +85,12 @@ export const testimonials: Testimonial[] = [
     ],
   },
   {
-    name: "Dr. Thomas Wendel",
-    company: "tw.con. GmbH",
-    role: "Geschäftsführer",
-    quote: "Die Vermittlungszeit hat sich seit ShortSelect drastisch reduziert. Automatisiertes Kandidaten-Matching und strukturierte Pipelines machen den Unterschied.",
-    image: "/testimonials/thomas-wendel.webp",
-    linkedin: "https://www.linkedin.com/in/dr-thomas-wendel-652b871",
-    metric: {
-      label: "Time-to-Hire",
-      value: 40,
-      prefix: "-",
-      suffix: "%",
-      description: "schneller besetzt",
-      direction: "down",
-    },
-    results: [
-      "Time-to-Hire seit ShortSelect reduziert",
-      "Automatisiertes Kandidaten-Matching und strukturierte Pipelines",
-    ],
-  },
-  {
-    name: "Carolin Bark",
-    company: "Bark recruiting+",
-    role: "Geschäftsführerin",
-    quote: "ShortSelect hat uns neue Profile speziell in der Messtechnik gefunden, die wir vorher nicht kannten. Genau die Kandidaten, die uns die LinkedIn-Suche so nie angezeigt hat.",
-    image: "/testimonials/carolin-bark.webp",
-    linkedin: "https://www.linkedin.com/in/carolin-bark",
+    name: "Saskia Behr",
+    company: "InterJob GmbH",
+    role: "Senior Consultant & Prokuristin",
+    quote: "ShortSelect findet uns Profile in der Finanz- und Versicherungsbranche, die wir über die klassische LinkedIn-Suche nie gesehen hätten. Gerade bei spezialisierten Rollen ist das Gold wert.",
+    image: "/testimonials/saskia-behr.webp",
+    linkedin: "https://www.linkedin.com/in/saskia-behr-bb0470154",
     metric: {
       label: "AI Sourcing",
       value: "Neue Profile",
@@ -119,7 +98,7 @@ export const testimonials: Testimonial[] = [
       direction: "up",
     },
     results: [
-      "Neue Profile speziell in der Messtechnik, die sie vorher nicht kannte",
+      "Neue Profile aus Finanz und Versicherung, die sie nicht kannte",
       "Neue Profile per AI Sourcing, die die LinkedIn-Suche nie angezeigt hat",
     ],
   },
@@ -142,6 +121,45 @@ export const testimonials: Testimonial[] = [
     ],
   },
   {
+    name: "Johannes Dalampiras",
+    company: "Sourcing Evangelist",
+    role: "Active Sourcing Trainer & Speaker",
+    quote: "Ich mache Active Sourcing seit vielen Jahren. ShortSelect hat mir trotzdem Profile geliefert, die ich mit meinen eigenen Suchen auf LinkedIn nie gesehen hätte.",
+    image: "/testimonials/johannes-dalampiras.webp",
+    imagePosition: "center",
+    linkedin: "https://www.linkedin.com/in/active-sourcing-expert",
+    metric: {
+      label: "AI Sourcing",
+      value: "Neue Profile",
+      description: "die LinkedIn so nie angezeigt hat",
+      direction: "up",
+    },
+    results: [
+      "Neue Profile per AI Sourcing, die die LinkedIn-Suche nie angezeigt hat",
+      "Speaker bei XING und beim Verband deutscher Personalvermittler",
+    ],
+  },
+  {
+    name: "Dr. Thomas Wendel",
+    company: "tw.con. GmbH",
+    role: "Geschäftsführer",
+    quote: "Die Vermittlungszeit hat sich seit ShortSelect drastisch reduziert. Automatisiertes Kandidaten-Matching und strukturierte Pipelines machen den Unterschied.",
+    image: "/testimonials/thomas-wendel.webp",
+    linkedin: "https://www.linkedin.com/in/dr-thomas-wendel-652b871",
+    metric: {
+      label: "Time-to-Hire",
+      value: 40,
+      prefix: "-",
+      suffix: "%",
+      description: "schneller besetzt",
+      direction: "down",
+    },
+    results: [
+      "Time-to-Hire seit ShortSelect reduziert",
+      "Automatisiertes Kandidaten-Matching und strukturierte Pipelines",
+    ],
+  },
+  {
     name: "Sinan Tarti",
     company: "PolyTALENT GmbH",
     role: "Manager Digital Process Automation",
@@ -157,24 +175,6 @@ export const testimonials: Testimonial[] = [
     results: [
       "Time-to-Hire seit ShortSelect reduziert",
       "Tool-Stack um 70 % konsolidiert, alles in einem System",
-    ],
-  },
-  {
-    name: "Saskia Behr",
-    company: "InterJob GmbH",
-    role: "Senior Consultant & Prokuristin",
-    quote: "ShortSelect findet uns Profile in der Finanz- und Versicherungsbranche, die wir über die klassische LinkedIn-Suche nie gesehen hätten. Gerade bei spezialisierten Rollen ist das Gold wert.",
-    image: "/testimonials/saskia-behr.webp",
-    linkedin: "https://www.linkedin.com/in/saskia-behr-bb0470154",
-    metric: {
-      label: "AI Sourcing",
-      value: "Neue Profile",
-      description: "die LinkedIn so nie angezeigt hat",
-      direction: "up",
-    },
-    results: [
-      "Neue Profile aus Finanz und Versicherung, die sie nicht kannte",
-      "Neue Profile per AI Sourcing, die die LinkedIn-Suche nie angezeigt hat",
     ],
   },
   {
