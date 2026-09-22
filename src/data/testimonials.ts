@@ -55,7 +55,6 @@ export const testimonials: Testimonial[] = [
     role: "Active Sourcing Trainer & Speaker",
     quote: "Ich mache Active Sourcing seit vielen Jahren. ShortSelect hat mir trotzdem Profile geliefert, die ich mit meinen eigenen Suchen auf LinkedIn nie gesehen hätte.",
     image: "/testimonials/johannes-dalampiras.webp",
-    imagePosition: "center",
     linkedin: "https://www.linkedin.com/in/active-sourcing-expert",
     metric: {
       label: "AI Sourcing",
