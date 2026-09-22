@@ -51,6 +51,41 @@ export const testimonials: Testimonial[] = [
     ],
   },
   {
+    name: "Daniel Schröder",
+    company: "Dashing Consulting GmbH",
+    role: "Business Relationship Director",
+    quote: "Das CRM in ShortSelect ist für uns der eigentliche Gewinn. Kunden, Aufträge und Rechnungen laufen in einem System, wir schreiben die Rechnung direkt aus dem CRM statt in einem zweiten Tool.",
+    image: "/testimonials/daniel-schroeder.webp",
+    metric: {
+      label: "Time-to-Hire",
+      value: "Reduziert",
+      description: "seit ShortSelect",
+      direction: "down",
+    },
+    results: [
+      "Rechnungen direkt aus dem CRM, kein zweites Tool",
+      "Time-to-Hire seit ShortSelect reduziert",
+    ],
+  },
+  {
+    name: "Melissa Schröder",
+    company: "Dashing Consulting GmbH",
+    role: "Geschäftsführerin",
+    quote: "Aus dem AI Sourcing kommen deutlich bessere Kandidaten als aus dem LinkedIn Recruiter. Zehn Leute habe ich direkt aus einer Suche übernommen, im Recruiter hätte ich die drei- bis vierfache Zeit gebraucht.",
+    image: "/testimonials/melissa-schroeder.webp",
+    linkedin: "https://www.linkedin.com/in/melissa-schroeder-dc",
+    metric: {
+      label: "AI Sourcing",
+      value: "Neue Profile",
+      description: "die LinkedIn so nie angezeigt hat",
+      direction: "up",
+    },
+    results: [
+      "Bessere Kandidaten als aus dem LinkedIn Recruiter",
+      "Neue Profile per AI Sourcing, die die LinkedIn-Suche nie angezeigt hat",
+    ],
+  },
+  {
     name: "Dr. Thomas Wendel",
     company: "tw.con. GmbH",
     role: "Geschäftsführer",
