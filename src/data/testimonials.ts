@@ -74,6 +74,7 @@ export const testimonials: Testimonial[] = [
     role: "Business Relationship Director",
     quote: "Das CRM in ShortSelect ist für uns der eigentliche Gewinn. Kunden, Aufträge und Rechnungen laufen in einem System, wir schreiben die Rechnung direkt aus dem CRM statt in einem zweiten Tool.",
     image: "/testimonials/daniel-schroeder.webp",
+    linkedin: "https://www.linkedin.com/in/daniel-schroeder-dc",
     metric: {
       label: "Time-to-Hire",
       value: "Reduziert",
