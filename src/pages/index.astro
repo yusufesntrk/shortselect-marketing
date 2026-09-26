@@ -1,6 +1,7 @@
 ---
 import SEOHead from '../components/seo/SEOHead.astro';
 import TestimonialsSwiper from '../components/interactive/TestimonialsSwiper';
+import MetaPixelConsent from '../components/consent/MetaPixelConsent.astro';
 import { PRO_PRICE_MONTHLY_EUR, TRIAL_DAYS } from '../lib/billing-constants';
 import { TRIAL_CTA_LABEL, TRIAL_CTA_NOTE, signupUrl } from '../lib/cta';
 import '../styles/global.css';
@@ -3823,7 +3824,7 @@ const websiteSchema = {
             <li><a href="/kunden/">Kunden</a></li>
             <li><a href="/kontakt/">Kontakt</a></li>
             <li><a href="/sicherheit/">Sicherheit</a></li>
-            <li><a href="/datenschutz/">Datenschutz</a></li>
+            <li><a href="/datenschutz/">Datenschutz</a><a href="/datenschutz/#cookies" data-consent-open>Cookie-Einstellungen</a></li>
             <!-- Diese Seite hat einen eigenen Footer, LandingFooter.astro wird
                  hier nicht verwendet. Der Link muss deshalb doppelt gepflegt
                  werden. Er gehoert zur Erfuellung von Art. 14 Abs. 5 lit. b
@@ -4260,5 +4261,6 @@ const websiteSchema = {
     });
   })();
   </script>
+<MetaPixelConsent />
 </body>
 </html>
