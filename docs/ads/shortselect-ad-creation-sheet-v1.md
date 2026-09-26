@@ -168,7 +168,7 @@ Google-Trends-Gegenprobe vor dem Launch: „KI Sourcing", „Active Sourcing Too
 
 ## 6. Die Ads
 
-Gemeinsame Regeln: Erste Zeile ist der Filter (Avatar, Situation, Qualifier). Ein Gedanke je Ad. Der Klick führt auf www.shortselect.com, Handlung: 14 Tage kostenlos testen (zwei echte Sourcing-Läufe je Organisation, keine Kreditkarte). Letzte Zeile bittet um genau das. Du-Ansprache, Yusufs Stimme: kurz, ehrlich, „ehrlich gesagt", ohne Werbedeutsch. Keine Gedankenstriche, echte Umlaute. Vor Launch: Preis, Trial-Umfang und Kündigungsfrist gegen Preisseite und AGB prüfen, Namensnennungen freigeben lassen (Glowatzki, Dashing wegen NDA-Thema, Nik).
+Gemeinsame Regeln: Erste Zeile ist der Filter (Avatar, Situation, Qualifier). Ein Gedanke je Ad. Das Angebot ist immer die Selbstregistrierung: 14 Tage kostenlos testen mit zwei echten Sourcing-Läufen je Organisation, keine Kreditkarte. Keine individuelle Liste, die Yusuf liefert, kein Lead-Formular, kein Demo-Termin als Bedingung (Entscheidung Yusuf 26.09.2026). Der Klick führt direkt auf app.shortselect.com/signup, CTA-Button „Registrieren“. Letzte Zeile bittet um genau das. Du-Ansprache, Yusufs Stimme: kurz, ehrlich, „ehrlich gesagt", ohne Werbedeutsch. Keine Gedankenstriche, echte Umlaute. Vor Launch: Preis, Trial-Umfang und Kündigungsfrist gegen Preisseite und AGB prüfen, Namensnennungen freigeben lassen (Glowatzki, Dashing wegen NDA-Thema, Nik).
 
 ### Ad 1: Seite 38 (Angle A1, Hook-Vorlage „Wenn du [Avatar] bist und schon [Umstand]")
 
@@ -268,9 +268,9 @@ Und für den Ernstfall: Das System kann als Whitelabel auf deine Organisation ü
 
 Die Frage ist nicht, wie groß der Anbieter ist. Die Frage ist, ob du deine Daten jederzeit rausbekommst und wie schnell sich etwas bewegt, wenn du es brauchst.
 
-Wenn du die Antworten im Detail sehen willst, buch 20 Minuten mit mir. Klick auf „Mehr dazu".
+Der Trial kostet dich nichts, keine Karte, zwei echte Mandate. Und jede Frage dazu beantworte ich dir selbst. Klick auf „Registrieren".
 
-**CTA-Button:** Mehr dazu (Ziel: Demo-Buchung, nicht Trial)
+**CTA-Button:** Registrieren (auch das Retargeting endet im Trial, nicht im Demo-Termin, Entscheidung 26.09.2026)
 **Hinweis:** Alle vier Zusagen sind Aussagen aus den Calls. Vor Launch als Text auf einer Kontinuitätsseite festschreiben (Kapitel 9), sonst verspricht die Ad mehr als die Website.
 
 ### Ad 6: Workarounds, die du nicht mehr spürst (Angle A5, erst nach A1 und A2)
@@ -330,7 +330,7 @@ Lade ein echtes Mandat hoch, 14 Tage kostenlos. Wenn nichts Neues dabei ist, wei
 
 ## 8. Kongruenz: alles nach dem Klick ist Messaging
 
-**Die Linie auf einer Seite:** Ad (Seite 38) → www.shortselect.com → „14 Tage kostenlos testen" → Signup mit AGB, Datenschutz, AVV → Onboarding mit Demo-Daten → erstes Mandat anlegen (Stellenbeschreibung, Keywords, Umkreis) → 60 bis 90 Minuten warten → Benachrichtigung → Swipe oder Liste → Ansprache auf LinkedIn → nach 14 Tagen Paywall.
+**Die Linie auf einer Seite:** Ad (Seite 38) → app.shortselect.com/signup (direkt, seit 26.09.) → Signup mit AGB, Datenschutz, AVV → Onboarding mit Demo-Daten → erstes Mandat anlegen (Stellenbeschreibung, Keywords, Umkreis) → 60 bis 90 Minuten warten → Benachrichtigung → Swipe oder Liste → Ansprache auf LinkedIn → nach 14 Tagen Paywall.
 
 **Bruchstellen, die heute sichtbar sind:**
 1. **Hero vs. Ad.** Die Ads verkaufen ein Sourcing-Ergebnis („Profile, die LinkedIn nicht zeigt"). Der Hero der Startseite sagt „Das KI-native ATS für Recruiting-Agenturen", also die Kategorie. Für A1 und A2 gehört eine eigene Landingpage her, die mit demselben Satz beginnt wie die Ad, den Mechanismus zeigt (Sprosse 4), die zwölf Kundenstimmen darunter (seit 21.09. zweite Sektion, thematisch passend) und die FAQ aus Kapitel 2.5. Bis dahin: Hero-Unterzeile auf die Sourcing-Aussage ziehen.
