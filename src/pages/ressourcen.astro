@@ -1,4 +1,5 @@
 ---
+import PageIntro from '../components/marketing/PageIntro.astro';
 import MarketingLayout from '../layouts/MarketingLayout.astro';
 import CTASection from '../components/landing/CTASection.astro';
 
@@ -51,36 +52,21 @@ const categories = [
   description="Playbooks, Smart Recruiting Methode, Vergleiche und Glossar. Alles was Sie brauchen, um Ihr Recruiting auf das nächste Level zu bringen."
 >
   <!-- Hero -->
-  <section class="relative overflow-hidden py-20 md:py-32">
-    <div class="absolute inset-0 bg-gradient-to-br from-[hsl(var(--primary)/0.1)] via-[hsl(var(--accent)/0.05)] to-[hsl(var(--background))]"></div>
-    <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,hsl(var(--primary)/0.15),transparent_50%)]"></div>
-    <div class="absolute top-20 left-10 w-72 h-72 bg-[hsl(var(--primary)/0.1)] rounded-full blur-3xl animate-float-slow"></div>
-    <div class="absolute bottom-20 right-10 w-96 h-96 bg-[hsl(var(--accent)/0.1)] rounded-full blur-3xl animate-float-slow" style="animation-delay: -3s;"></div>
-    <div class="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.03)_1px,transparent_1px)] bg-[size:60px_60px] [mask-image:radial-gradient(ellipse_at_center,black_30%,transparent_70%)]"></div>
-
-    <div class="container relative mx-auto px-4">
-      <div class="mx-auto max-w-4xl text-center space-y-8">
-        <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[hsl(var(--primary)/0.1)] border border-[hsl(var(--primary)/0.2)]">
-          <svg class="h-4 w-4 text-[hsl(var(--primary))]" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 6 4 14"/><path d="M12 6v14"/><path d="M8 8v12"/><path d="M4 4v16"/></svg>
-          <span class="text-sm font-medium">Ressourcen</span>
-        </div>
-        <h1 class="reveal-item opacity-0 translate-y-8 transition-all duration-500 text-4xl md:text-6xl lg:text-7xl font-display font-bold tracking-tight" style="transition-delay: 100ms;">
-          Ressourcen für modernes <span class="text-[hsl(var(--primary))]">Recruiting</span>
-        </h1>
-        <p class="reveal-item opacity-0 translate-y-8 transition-all duration-500 text-lg md:text-xl text-[hsl(var(--muted-foreground))] max-w-2xl mx-auto" style="transition-delay: 200ms;">
-          Playbooks, Guides und Best Practices -- alles was Sie brauchen, um Ihr Recruiting auf das nächste Level zu bringen.
-        </p>
-      </div>
-    </div>
-    <div class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[hsl(var(--background))] to-transparent"></div>
-  </section>
+  <PageIntro
+    description="Playbooks, Guides und Best Practices, alles was Sie brauchen, um Ihr Recruiting auf das nächste Level zu bringen."
+  >
+    <Fragment slot="title">Ressourcen für modernes <em>Recruiting</em></Fragment>
+    <nav slot="aside" class="index-sheet" aria-label="Ressourcen">
+      <ul>{categories.map((category, i) => <li><a href={`#ressource-${i}`}>{category.title}<span aria-hidden="true">↘</span></a></li>)}</ul>
+    </nav>
+  </PageIntro>
 
   <!-- Categories Grid -->
-  <section class="py-20 md:py-28 relative overflow-hidden">
+  <section class="story-section py-20 md:py-28 relative overflow-hidden">
     <div class="container mx-auto px-4">
       <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
         {categories.map((cat, i) => (
-          <div class="reveal-item opacity-0 translate-y-8 transition-all duration-500 rounded-xl border border-[hsl(var(--border))] bg-[hsl(var(--card))] p-8 space-y-6" style={`transition-delay: ${i * 100}ms;`}>
+          <div id={`ressource-${i}`} class="sheet-card reveal-item opacity-0 translate-y-8 transition-all duration-500 rounded-xl border border-[hsl(var(--border))] bg-[hsl(var(--card))] p-8 space-y-6" style={`transition-delay: ${i * 100}ms;`}>
             <div>
               <h3 class="text-xl font-display font-bold">{cat.title}</h3>
               <p class="text-sm text-[hsl(var(--muted-foreground))] mt-2">{cat.description}</p>
@@ -102,17 +88,17 @@ const categories = [
   </section>
 
   <!-- Blog + Glossar Highlights -->
-  <section class="py-20 md:py-28 bg-[hsl(var(--muted)/0.3)]">
+  <section class="story-section py-20 md:py-28 bg-[hsl(var(--muted)/0.3)]">
     <div class="container mx-auto px-4">
       <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700 text-center max-w-3xl mx-auto mb-16">
         <h2 class="text-3xl md:text-4xl font-display font-bold tracking-tight mb-4">Mehr entdecken</h2>
       </div>
       <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-        <a href="/blog/" class="reveal-item opacity-0 translate-y-8 transition-all duration-700 rounded-xl border border-[hsl(var(--border))] bg-[hsl(var(--card))] p-8 hover:shadow-lg hover:border-[hsl(var(--primary)/0.2)] transition-all group">
+        <a href="/blog/" class="sheet-card reveal-item opacity-0 translate-y-8 transition-all duration-700 rounded-xl border border-[hsl(var(--border))] bg-[hsl(var(--card))] p-8 hover:shadow-lg hover:border-[hsl(var(--primary)/0.2)] transition-all group">
           <h3 class="text-xl font-display font-bold group-hover:text-[hsl(var(--primary))] transition-colors">Blog</h3>
           <p class="text-sm text-[hsl(var(--muted-foreground))] mt-2">Recruiting-Wissen, Praxis-Guides und Trends -- von unserem Team für Ihres.</p>
         </a>
-        <a href="/glossar/" class="reveal-item opacity-0 translate-y-8 transition-all duration-500 rounded-xl border border-[hsl(var(--border))] bg-[hsl(var(--card))] p-8 hover:shadow-lg hover:border-[hsl(var(--primary)/0.2)] transition-all group" style="transition-delay: 100ms;">
+        <a href="/glossar/" class="sheet-card reveal-item opacity-0 translate-y-8 transition-all duration-500 rounded-xl border border-[hsl(var(--border))] bg-[hsl(var(--card))] p-8 hover:shadow-lg hover:border-[hsl(var(--primary)/0.2)] transition-all group" style="transition-delay: 100ms;">
           <h3 class="text-xl font-display font-bold group-hover:text-[hsl(var(--primary))] transition-colors">Glossar</h3>
           <p class="text-sm text-[hsl(var(--muted-foreground))] mt-2">Die wichtigsten HR-Begriffe von ATS bis Quality of Hire, einfach erklärt.</p>
         </a>

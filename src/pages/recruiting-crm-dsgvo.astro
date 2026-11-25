@@ -1,6 +1,8 @@
 ---
 import { TRIAL_CTA_LABEL } from '../lib/cta';
 import TrialCtaNote from '../components/ui/TrialCtaNote.astro';
+import PageIntro from '../components/marketing/PageIntro.astro';
+import SectionIndex from '../components/marketing/SectionIndex.astro';
 import MarketingLayout from '../layouts/MarketingLayout.astro';
 import CTASection from '../components/landing/CTASection.astro';
 
@@ -74,58 +76,35 @@ const faqSchema = {
   jsonLd={[webPageSchema, breadcrumbSchema, faqSchema]}
 >
   <!-- Hero -->
-  <section class="relative overflow-hidden py-20 md:py-32">
-    <div class="absolute inset-0 bg-gradient-to-br from-primary/10 via-accent/5 to-background"></div>
-    <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,hsl(var(--primary)/0.15),transparent_50%)]"></div>
-    <div class="absolute top-20 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-float-slow"></div>
-    <div class="absolute bottom-20 right-10 w-96 h-96 bg-accent/10 rounded-full blur-3xl animate-float-slow" style="animation-delay: -3s;"></div>
-    <div class="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.03)_1px,transparent_1px)] bg-[size:60px_60px] [mask-image:radial-gradient(ellipse_at_center,black_30%,transparent_70%)]"></div>
-
-    <div class="container relative mx-auto px-4">
-      <div class="mx-auto max-w-4xl text-center space-y-8">
-        <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700 hero-badge-premium">
-          <svg class="h-4 w-4 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>
-          Datenschutz
-        </div>
-
-        <h1 class="reveal-item opacity-0 translate-y-8 transition-all duration-700 text-4xl md:text-6xl font-display font-bold tracking-tight" style="transition-delay: 100ms;">
-          Recruiting-CRM und{" "}
-          <span class="relative inline-block text-primary">DSGVO</span>
-        </h1>
-
-        <p class="reveal-item opacity-0 translate-y-8 transition-all duration-700 text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto" style="transition-delay: 200ms;">
-          Ein DSGVO-konformes Recruiting-CRM muss fünf Kern-Anforderungen erfüllen: dokumentierte Einwilligung, automatische Löschfristen, einen Auftragsverarbeitungsvertrag (AVV), sichere Verarbeitung mit EU-Hosting und die Umsetzung von Betroffenenrechten wie dem Auskunftsrecht. Diese Seite erklärt jede Anforderung und zeigt, wie ShortSelect sie abdeckt.
-        </p>
-
-        <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700 flex flex-col sm:flex-row items-center justify-center gap-4 pt-4 flex-wrap" style="transition-delay: 300ms;">
-          <a href="https://app.shortselect.com/signup" class="inline-flex items-center gap-2 px-8 py-3 bg-primary text-primary-foreground font-semibold rounded-lg text-base group relative overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-            <span class="relative z-10 flex items-center gap-2">
-              {TRIAL_CTA_LABEL}
-              <svg class="h-5 w-5 transition-transform group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-            </span>
-          </a>
-          <a href="/produkt/compliance/" class="inline-flex items-center gap-2 px-8 py-3 border-2 border-border font-semibold rounded-lg text-base transition-all hover:bg-muted">
-            Compliance-Features ansehen
-          </a>
-          <TrialCtaNote />
-        </div>
-      </div>
+  <PageIntro label="Datenschutz"
+    description="Ein DSGVO-konformes Recruiting-CRM muss fünf Kern-Anforderungen erfüllen: dokumentierte Einwilligung, automatische Löschfristen, einen Auftragsverarbeitungsvertrag (AVV), sichere Verarbeitung mit EU-Hosting und die Umsetzung von Betroffenenrechten wie dem Auskunftsrecht. Diese Seite erklärt jede Anforderung und zeigt, wie ShortSelect sie abdeckt."
+  >
+    <Fragment slot="title">Recruiting-CRM und <em>DSGVO</em></Fragment>
+    <SectionIndex slot="aside" links={[
+      { href: "#fuenf-anforderungen", label: "Fünf Anforderungen" },
+      { href: "#datenschutz-im-vertrieb", label: "Datenschutz im Vertrieb" },
+      { href: "#haeufige-fragen", label: "Häufige Fragen" },
+    ]} />
+    <div class="intro-actions">
+      <a href="https://app.shortselect.com/signup" class="paper-button">{TRIAL_CTA_LABEL} <span aria-hidden="true">→</span></a>
+      <a href="/produkt/compliance/" class="paper-button paper-button--light">Compliance-Features ansehen</a>
+      <TrialCtaNote align="left" />
     </div>
-  </section>
+  </PageIntro>
 
   <!-- 5 Anforderungen -->
-  <section class="py-16 md:py-24 bg-muted/30">
+  <section class="story-section py-16 md:py-24 bg-muted/30">
     <div class="container mx-auto px-4">
       <div class="max-w-4xl mx-auto">
         <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700 text-center mb-12">
           <span class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold bg-secondary text-secondary-foreground mb-4">Anforderungen</span>
-          <h2 class="text-3xl md:text-4xl font-display font-bold tracking-tight mb-4">Die 5 DSGVO-Anforderungen an ein Recruiting-CRM</h2>
+          <h2 id="fuenf-anforderungen" class="text-3xl md:text-4xl font-display font-bold tracking-tight mb-4">Die 5 DSGVO-Anforderungen an ein Recruiting-CRM</h2>
           <p class="text-muted-foreground text-lg">Was rechtlich gefordert ist und wie ShortSelect es umsetzt.</p>
         </div>
 
         <div class="space-y-6">
           {requirements.map((req, index) => (
-            <div class="reveal-item opacity-0 translate-y-8 transition-all duration-500 rounded-xl border bg-card p-6 md:p-8" style={`transition-delay: ${Math.min((index + 1) * 100, 400)}ms;`}>
+            <div class="sheet-card reveal-item opacity-0 translate-y-8 transition-all duration-500 rounded-xl border bg-card p-6 md:p-8" style={`transition-delay: ${Math.min((index + 1) * 100, 400)}ms;`}>
               <h3 class="text-xl md:text-2xl font-display font-bold mb-4">{req.title}</h3>
               <p class="text-muted-foreground leading-relaxed mb-4">{req.legal}</p>
               <div class="flex items-start gap-3 rounded-lg bg-green-500/5 border border-green-500/10 p-4">
@@ -144,10 +123,10 @@ const faqSchema = {
   </section>
 
   <!-- Kandidaten überzeugen -->
-  <section class="py-16 md:py-24">
+  <section class="story-section py-16 md:py-24">
     <div class="container mx-auto px-4">
       <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700 max-w-3xl mx-auto text-center space-y-6">
-        <h2 class="text-3xl md:text-4xl font-display font-bold tracking-tight">DSGVO ist kein Bremsklotz, sondern ein Verkaufsargument</h2>
+        <h2 id="datenschutz-im-vertrieb" class="text-3xl md:text-4xl font-display font-bold tracking-tight">DSGVO ist kein Bremsklotz, sondern ein Verkaufsargument</h2>
         <p class="text-lg text-muted-foreground">
           Recruiting-Agenturen arbeiten im Auftrag ihrer Kunden mit hochsensiblen Daten. Wer im Pitch belegen kann, dass Kandidatendaten auf EU-Servern liegen, automatisch gelöscht werden und jede Verarbeitung protokolliert ist, gewinnt Vertrauen. Alle technischen Details finden Sie unter <a href="/produkt/compliance/" class="text-primary hover:underline">DSGVO und Compliance</a>. Und wenn Sie wissen wollen, wie DSGVO-konforme KI-Bewertung funktioniert, lesen Sie <a href="/ats-mit-ki-matching/" class="text-primary hover:underline">ATS mit KI-Matching</a>.
         </p>
@@ -159,12 +138,12 @@ const faqSchema = {
   </section>
 
   <!-- FAQ -->
-  <section class="py-16 md:py-24 bg-muted/30">
+  <section class="story-section py-16 md:py-24 bg-muted/30">
     <div class="container mx-auto px-4">
       <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700 text-center max-w-3xl mx-auto mb-12">
-        <h2 class="text-3xl md:text-4xl font-display font-bold tracking-tight">Häufige Fragen zu Recruiting-CRM und DSGVO</h2>
+        <h2 id="haeufige-fragen" class="text-3xl md:text-4xl font-display font-bold tracking-tight">Häufige Fragen zu Recruiting-CRM und DSGVO</h2>
       </div>
-      <div class="max-w-3xl mx-auto space-y-0 rounded-xl border bg-card overflow-hidden">
+      <div class="sheet-card max-w-3xl mx-auto space-y-0 rounded-xl border bg-card overflow-hidden">
         {faqs.map((item) => (
           <details class="reveal-item opacity-0 translate-y-8 transition-all duration-700 border-b last:border-0 group">
             <summary class="flex items-center justify-between w-full py-5 px-6 text-left cursor-pointer font-display font-bold text-lg list-none [&::-webkit-details-marker]:hidden">

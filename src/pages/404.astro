@@ -1,4 +1,5 @@
 ---
+import PageIntro from '../components/marketing/PageIntro.astro';
 import MarketingLayout from '../layouts/MarketingLayout.astro';
 ---
 
@@ -7,21 +8,8 @@ import MarketingLayout from '../layouts/MarketingLayout.astro';
   description="Die angeforderte Seite existiert nicht. Zurück zur Startseite von ShortSelect."
   noindex={true}
 >
-  <section class="pt-32 pb-20 min-h-[60vh] flex items-center">
-    <div class="container mx-auto px-4 text-center">
-      <p class="text-7xl font-bold text-[hsl(var(--primary))] mb-6">404</p>
-      <h1 class="text-3xl md:text-4xl font-bold tracking-tight mb-4">
-        Seite nicht gefunden
-      </h1>
-      <p class="text-lg text-[hsl(var(--muted-foreground))] max-w-lg mx-auto mb-8">
-        Die Seite, die Sie suchen, existiert nicht oder wurde verschoben.
-      </p>
-      <a
-        href="/"
-        class="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-[hsl(var(--primary))] text-white font-medium hover:opacity-90 transition-opacity"
-      >
-        Zur Startseite
-      </a>
-    </div>
-  </section>
+  <PageIntro label="404" description="Die Seite, die Sie suchen, existiert nicht oder wurde verschoben.">
+    <Fragment slot="title">Seite <em>nicht gefunden</em></Fragment>
+    <div class="intro-actions"><a class="paper-button" href="/">Zur Startseite <span aria-hidden="true">→</span></a></div>
+  </PageIntro>
 </MarketingLayout>

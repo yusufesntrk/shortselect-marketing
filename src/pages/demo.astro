@@ -1,6 +1,7 @@
 ---
 import { TRIAL_CTA_LABEL } from '../lib/cta';
 import TrialCtaNote from '../components/ui/TrialCtaNote.astro';
+import PageIntro from '../components/marketing/PageIntro.astro';
 import MarketingLayout from '../layouts/MarketingLayout.astro';
 import CTASection from '../components/landing/CTASection.astro';
 
@@ -24,22 +25,8 @@ const faqs = [
   description="Sehen Sie ShortSelect in Aktion. 15 Minuten Demo, keine Verpflichtung. Oder starten Sie sofort mit der kostenlosen 14-Tage-Testversion."
 >
   <!-- Hero (Split) -->
-  <section class="relative py-20 md:py-32 overflow-hidden">
-    <div class="absolute inset-0 overflow-hidden pointer-events-none">
-      <div class="absolute top-20 left-10 w-64 h-64 bg-[hsl(var(--primary)/0.05)] rounded-full blur-3xl animate-float-slow"></div>
-      <div class="absolute bottom-10 right-20 w-80 h-80 bg-[hsl(var(--accent)/0.05)] rounded-full blur-3xl animate-float-slow" style="animation-delay: -3s;"></div>
-    </div>
-
-    <div class="container relative mx-auto px-4">
-      <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-        <!-- Left: Text -->
-        <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700 space-y-6">
-          <h1 class="text-4xl md:text-5xl lg:text-6xl font-display font-bold tracking-tight leading-tight">
-            Sehen Sie ShortSelect <span class="text-[hsl(var(--primary))]">in Aktion</span>.
-          </h1>
-          <p class="text-lg md:text-xl text-[hsl(var(--muted-foreground))] max-w-lg">
-            15 Minuten. Keine Verpflichtung. Alle Fragen beantwortet.
-          </p>
+  <PageIntro description="15 Minuten. Keine Verpflichtung. Alle Fragen beantwortet.">
+    <Fragment slot="title">Sehen Sie ShortSelect <em>in Aktion</em>.</Fragment>
           <div class="flex flex-wrap gap-4 pt-2">
             <div class="flex items-center gap-2 text-sm text-[hsl(var(--muted-foreground))]">
               <svg class="h-4 w-4 text-[hsl(var(--primary))]" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
@@ -54,11 +41,7 @@ const faqs = [
               Keine Kreditkarte
             </div>
           </div>
-        </div>
-
-        <!-- Right: CTA Card -->
-        <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700" style="transition-delay: 200ms;">
-          <div class="rounded-xl border-2 border-[hsl(var(--primary)/0.2)] shadow-xl bg-[hsl(var(--card))] overflow-hidden">
+          <div slot="aside" class="demo-ticket">
             <div class="p-8 space-y-6">
               <div class="space-y-2">
                 <h2 class="text-2xl font-display font-bold">Kostenlos starten</h2>
@@ -80,13 +63,10 @@ const faqs = [
               <TrialCtaNote class="mt-3" />
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  </PageIntro>
 
   <!-- Steps -->
-  <section class="py-20 md:py-28 bg-[hsl(var(--muted)/0.3)]">
+  <section class="story-section py-20 md:py-28 bg-[hsl(var(--muted)/0.3)]">
     <div class="container mx-auto px-4">
       <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700 text-center mb-16">
         <h2 class="text-3xl md:text-4xl font-display font-bold tracking-tight mb-4">So einfach geht's</h2>
@@ -104,12 +84,12 @@ const faqs = [
   </section>
 
   <!-- FAQ -->
-  <section class="py-20 md:py-28">
+  <section class="story-section py-20 md:py-28">
     <div class="container mx-auto px-4">
       <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700 text-center max-w-3xl mx-auto mb-16">
         <h2 class="text-3xl md:text-4xl font-display font-bold tracking-tight mb-4">Häufige Fragen</h2>
       </div>
-      <div class="max-w-2xl mx-auto space-y-0 rounded-xl border border-[hsl(var(--border))] bg-[hsl(var(--card))] overflow-hidden">
+      <div class="sheet-card max-w-2xl mx-auto space-y-0 rounded-xl border border-[hsl(var(--border))] bg-[hsl(var(--card))] overflow-hidden">
         {faqs.map((item) => (
           <details class="reveal-item opacity-0 translate-y-8 transition-all duration-500 border-b border-[hsl(var(--border)/0.5)] last:border-0 group">
             <summary class="flex items-center justify-between w-full py-5 px-6 text-left cursor-pointer font-display font-bold text-lg">

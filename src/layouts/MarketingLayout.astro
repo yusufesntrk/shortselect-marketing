@@ -4,6 +4,7 @@ import LandingNav from '../components/nav/LandingNav.astro';
 import LandingFooter from '../components/footer/LandingFooter.astro';
 import MetaPixelConsent from '../components/consent/MetaPixelConsent.astro';
 import '../styles/global.css';
+import '../styles/subpages.css';
 
 interface Props {
   title: string;
@@ -59,9 +60,10 @@ const websiteSchema = {
       ? [orgSchema, websiteSchema, ...(Array.isArray(props.jsonLd) ? props.jsonLd : [props.jsonLd])]
       : [orgSchema, websiteSchema]} />
   </head>
-  <body class="min-h-screen bg-background text-foreground antialiased">
+  <body class="marketing-page min-h-screen bg-background text-foreground antialiased">
+    <a class="skip-link" href="#inhalt">Zum Inhalt</a>
     <LandingNav />
-    <main>
+    <main id="inhalt">
       <slot />
     </main>
     <LandingFooter />

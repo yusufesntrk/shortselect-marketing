@@ -1,6 +1,7 @@
 ---
 import { TRIAL_CTA_LABEL } from '../lib/cta';
 import TrialCtaNote from '../components/ui/TrialCtaNote.astro';
+import PageIntro from '../components/marketing/PageIntro.astro';
 import MarketingLayout from '../layouts/MarketingLayout.astro';
 
 const jsonLd = {
@@ -18,71 +19,16 @@ const jsonLd = {
   jsonLd={jsonLd}
 >
 
-  <!-- ═══════════════════════════════════════════════════════════════════
-       SECTION 1: CINEMATIC HERO — Dark, full-screen, provocative
-       ═══════════════════════════════════════════════════════════════════ -->
-  <section id="js-hero" class="relative min-h-screen flex items-center justify-center bg-gray-950 text-white overflow-hidden">
-    <!-- Subtle radial glow -->
-    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,hsl(0_72%_50%/0.12),transparent_70%)]"></div>
-    <!-- Fine grid pattern -->
-    <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.04)_1px,transparent_1px)] bg-[size:32px_32px] opacity-30"></div>
-    <!-- Floating glow orbs -->
-    <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/8 rounded-full blur-3xl animate-float-slow"></div>
-    <div class="absolute bottom-1/4 right-1/4 w-80 h-80 bg-accent/6 rounded-full blur-3xl animate-float-slow" style="animation-delay: -3s;"></div>
-
-    <div class="container relative mx-auto px-4 text-center space-y-10">
-      <!-- Badge -->
-      <div id="js-hero-badge" class="opacity-0 -translate-y-4 transition-all duration-700">
-        <span class="hero-badge-premium !bg-white/10 !text-white/90">
-          <span class="w-2 h-2 rounded-full bg-primary animate-pulse relative z-10"></span>
-          Die Ära von Post & Pray ist vorbei
-        </span>
-      </div>
-
-      <!-- Headline -->
-      <h1 class="space-y-2">
-        <span id="js-hero-line1" class="block text-4xl md:text-6xl lg:text-7xl font-display font-extrabold tracking-tight leading-[1.1] opacity-0 translate-y-8 transition-all duration-700" style="transition-delay: 150ms;">
-          Hören Sie auf, Stellen zu posten.
-        </span>
-        <span id="js-hero-line2" class="block text-4xl md:text-6xl lg:text-7xl font-display font-extrabold tracking-tight leading-[1.1] text-primary opacity-0 translate-y-8 transition-all duration-700 relative inline-block" style="transition-delay: 300ms;">
-          Fangen Sie an, Jobs zu verkaufen.
-          <svg class="absolute -bottom-3 left-0 w-full" viewBox="0 0 580 12" fill="none">
-            <path id="js-hero-underline" d="M2 10C145 4 435 4 578 10" stroke="hsl(0 72% 50%)" stroke-width="4" stroke-linecap="round" style="stroke-dasharray: 580; stroke-dashoffset: 580; transition: stroke-dashoffset 1.2s ease-out;" />
-          </svg>
-        </span>
-      </h1>
-
-      <!-- Animated Counter -->
-      <div id="js-hero-counter" class="opacity-0 scale-95 transition-all duration-800" style="transition-delay: 600ms;">
-        <div class="relative inline-block">
-          <span class="text-6xl md:text-8xl lg:text-9xl font-display font-extrabold tabular-nums js-counter" data-target="147000">0</span>
-          <span class="text-5xl md:text-7xl lg:text-8xl font-display font-extrabold text-white/70">+</span>
-          <div class="absolute inset-0 blur-3xl bg-primary/20 -z-10 scale-150 animate-pulse"></div>
-        </div>
-        <p class="text-lg md:text-xl text-white/50 mt-4 max-w-xl mx-auto">
-          unbesetzte Stellen allein in Deutschland, jetzt gerade.
-        </p>
-      </div>
-
-      <!-- Subline -->
-      <p id="js-hero-sub" class="text-lg md:text-xl text-white/40 max-w-2xl mx-auto opacity-0 translate-y-8 transition-all duration-700" style="transition-delay: 900ms;">
-        Während Sie hier lesen, verlieren Unternehmen die besten Kandidaten. Nicht weil es keine gibt. Sondern weil Recruiting noch immer wie 2005 funktioniert.
-      </p>
-
-      <!-- Scroll CTA -->
-      <div id="js-hero-scroll" class="opacity-0 transition-opacity duration-1000" style="transition-delay: 1300ms;">
-        <a href="#js-problem" class="inline-flex flex-col items-center gap-2 text-white/30 hover:text-white/60 transition-colors duration-300">
-          <span class="text-sm font-medium tracking-wide uppercase">Die Wahrheit erfahren</span>
-          <svg class="w-5 h-5 animate-bounce" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="m6 9 6 6 6-6"/>
-          </svg>
-        </a>
-      </div>
+  <PageIntro label="Die Ära von Post &amp; Pray ist vorbei"
+    description="Während Sie hier lesen, verlieren Unternehmen die besten Kandidaten. Nicht weil es keine gibt. Sondern weil Recruiting noch immer wie 2005 funktioniert."
+  >
+    <Fragment slot="title">Hören Sie auf, Stellen zu posten. <em>Fangen Sie an, Jobs zu verkaufen.</em></Fragment>
+    <div class="intro-actions"><a class="paper-button paper-button--light" href="#js-problem">Die Wahrheit erfahren <span aria-hidden="true">↓</span></a></div>
+    <div slot="aside" class="vacancy-note">
+      <strong><span class="js-counter" data-target="147000">147.000</span>+</strong>
+      <p>unbesetzte Stellen allein in Deutschland, jetzt gerade.</p>
     </div>
-
-    <!-- Bottom fade to next section -->
-    <div class="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-gray-900 to-transparent"></div>
-  </section>
+  </PageIntro>
 
 
   <!-- ═══════════════════════════════════════════════════════════════════
@@ -695,28 +641,10 @@ const jsonLd = {
   // ═══════════════════════════════════════════════════════
   // SECTION 1: HERO — Mount immediately on page load
   // ═══════════════════════════════════════════════════════
-  requestAnimationFrame(function() {
-    reveal(document.getElementById('js-hero-badge'));
-    reveal(document.getElementById('js-hero-line1'));
-    reveal(document.getElementById('js-hero-line2'));
-    reveal(document.getElementById('js-hero-counter'));
-    reveal(document.getElementById('js-hero-sub'));
-    revealOpacity(document.getElementById('js-hero-scroll'));
-
-    // SVG underline draws after headline appears
-    var underline = document.getElementById('js-hero-underline');
-    if (underline) {
-      setTimeout(function() { underline.style.strokeDashoffset = '0'; }, 800);
-    }
-
-    // Counter starts after delay
-    var counterEl = document.querySelector('.js-counter');
-    if (counterEl) {
-      setTimeout(function() {
-        animateCounter(counterEl, 147000, 3000);
-      }, 900);
-    }
-  });
+  var counterEl = document.querySelector('.js-counter');
+  if (counterEl && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    animateCounter(counterEl, Number(counterEl.dataset.target), 1600);
+  }
 
   // ═══════════════════════════════════════════════════════
   // SECTION 2: PROBLEM — Scroll reveal

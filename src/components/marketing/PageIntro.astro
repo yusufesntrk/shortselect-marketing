@@ -1,0 +1,23 @@
+---
+interface Props {
+  label?: string;
+  description?: string;
+  editorial?: boolean;
+}
+
+const { label, description, editorial } = Astro.props;
+const split = Astro.slots.has('aside');
+---
+
+<header class:list={['page-intro', { 'page-intro--split': split, 'page-intro--article': editorial }]}>
+  <div class="intro-inner">
+    <div class="intro-copy">
+      <slot name="breadcrumb" />
+      {label && <p class="paper-label">{label}</p>}
+      <h1><slot name="title" /></h1>
+      {description && <p class="intro-lead">{description}</p>}
+      <slot />
+    </div>
+    {split && <div class="intro-aside"><slot name="aside" /></div>}
+  </div>
+</header>

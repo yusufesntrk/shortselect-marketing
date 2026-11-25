@@ -1,6 +1,8 @@
 ---
 import { TRIAL_CTA_LABEL } from '../lib/cta';
 import TrialCtaNote from '../components/ui/TrialCtaNote.astro';
+import PageIntro from '../components/marketing/PageIntro.astro';
+import SectionIndex from '../components/marketing/SectionIndex.astro';
 import MarketingLayout from '../layouts/MarketingLayout.astro';
 import CTASection from '../components/landing/CTASection.astro';
 
@@ -61,51 +63,28 @@ const faqSchema = {
   jsonLd={[webPageSchema, breadcrumbSchema, faqSchema]}
 >
   <!-- Hero -->
-  <section class="relative overflow-hidden py-20 md:py-32">
-    <div class="absolute inset-0 bg-gradient-to-br from-primary/10 via-accent/5 to-background"></div>
-    <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,hsl(var(--primary)/0.15),transparent_50%)]"></div>
-    <div class="absolute top-20 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-float-slow"></div>
-    <div class="absolute bottom-20 right-10 w-96 h-96 bg-accent/10 rounded-full blur-3xl animate-float-slow" style="animation-delay: -3s;"></div>
-    <div class="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.03)_1px,transparent_1px)] bg-[size:60px_60px] [mask-image:radial-gradient(ellipse_at_center,black_30%,transparent_70%)]"></div>
-
-    <div class="container relative mx-auto px-4">
-      <div class="mx-auto max-w-4xl text-center space-y-8">
-        <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700 hero-badge-premium">
-          <svg class="h-4 w-4 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"/></svg>
-          KI-Matching
-        </div>
-
-        <h1 class="reveal-item opacity-0 translate-y-8 transition-all duration-700 text-4xl md:text-6xl font-display font-bold tracking-tight" style="transition-delay: 100ms;">
-          ATS mit{" "}
-          <span class="relative inline-block text-primary">KI-Matching</span>
-        </h1>
-
-        <p class="reveal-item opacity-0 translate-y-8 transition-all duration-700 text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto" style="transition-delay: 200ms;">
-          Ein ATS mit KI-Matching bewertet Bewerbungen und Kandidatenprofile automatisch gegen die Anforderungen Ihrer Stelle. In ShortSelect erhält jeder Kandidat einen Match-Score von 0 bis 100, nachvollziehbar pro Kriterium. Das Screening läuft im Hintergrund, Sie starten direkt mit der Shortlist.
-        </p>
-
-        <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700 flex flex-col sm:flex-row items-center justify-center gap-4 pt-4 flex-wrap" style="transition-delay: 300ms;">
-          <a href="https://app.shortselect.com/signup" class="inline-flex items-center gap-2 px-8 py-3 bg-primary text-primary-foreground font-semibold rounded-lg text-base group relative overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-            <span class="relative z-10 flex items-center gap-2">
-              {TRIAL_CTA_LABEL}
-              <svg class="h-5 w-5 transition-transform group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-            </span>
-          </a>
-          <a href="/produkt/ki-features/" class="inline-flex items-center gap-2 px-8 py-3 border-2 border-border font-semibold rounded-lg text-base transition-all hover:bg-muted">
-            Alle KI-Features ansehen
-          </a>
-          <TrialCtaNote />
-        </div>
-      </div>
+  <PageIntro label="KI-Matching"
+    description="Ein ATS mit KI-Matching bewertet Bewerbungen und Kandidatenprofile automatisch gegen die Anforderungen Ihrer Stelle. In ShortSelect erhält jeder Kandidat einen Match-Score von 0 bis 100, nachvollziehbar pro Kriterium. Das Screening läuft im Hintergrund, Sie starten direkt mit der Shortlist."
+  >
+    <Fragment slot="title">ATS mit <em>KI-Matching</em></Fragment>
+    <SectionIndex slot="aside" links={[
+      { href: "#was-ist-ki-matching", label: "Was ist KI-Matching?" },
+      { href: "#so-entsteht-die-shortlist", label: "So entsteht die Shortlist" },
+      { href: "#auswahlkriterien", label: "Auswahlkriterien" },
+    ]} />
+    <div class="intro-actions">
+      <a href="https://app.shortselect.com/signup" class="paper-button">{TRIAL_CTA_LABEL} <span aria-hidden="true">→</span></a>
+      <a href="/produkt/ki-features/" class="paper-button paper-button--light">Alle KI-Features ansehen</a>
+      <TrialCtaNote align="left" />
     </div>
-  </section>
+  </PageIntro>
 
   <!-- Was bedeutet KI-Matching -->
-  <section class="py-16 md:py-24 bg-muted/30">
+  <section class="story-section py-16 md:py-24 bg-muted/30">
     <div class="container mx-auto px-4">
       <div class="max-w-3xl mx-auto">
         <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700 text-center mb-10">
-          <h2 class="text-3xl md:text-4xl font-display font-bold tracking-tight mb-4">Was bedeutet KI-Matching in einem ATS?</h2>
+          <h2 id="was-ist-ki-matching" class="text-3xl md:text-4xl font-display font-bold tracking-tight mb-4">Was bedeutet KI-Matching in einem ATS?</h2>
         </div>
         <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700 space-y-4 text-muted-foreground text-lg leading-relaxed" style="transition-delay: 150ms;">
           <p>
@@ -123,13 +102,13 @@ const faqSchema = {
   </section>
 
   <!-- So funktioniert es in ShortSelect -->
-  <section class="py-16 md:py-24 relative overflow-hidden">
+  <section class="story-section py-16 md:py-24 relative overflow-hidden">
     <div class="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl animate-float-slow"></div>
     <div class="container relative mx-auto px-4">
       <div class="max-w-4xl mx-auto">
         <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700 text-center mb-12">
           <span class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold bg-secondary text-secondary-foreground mb-4">So funktioniert es</span>
-          <h2 class="text-3xl md:text-4xl font-display font-bold tracking-tight mb-4">KI-Matching in ShortSelect, Schritt für Schritt</h2>
+          <h2 id="so-entsteht-die-shortlist" class="text-3xl md:text-4xl font-display font-bold tracking-tight mb-4">KI-Matching in ShortSelect, Schritt für Schritt</h2>
         </div>
 
         <div class="relative">
@@ -153,16 +132,16 @@ const faqSchema = {
   </section>
 
   <!-- Woran gutes KI-Matching erkennen -->
-  <section class="py-16 md:py-24 bg-muted/30">
+  <section class="story-section py-16 md:py-24 bg-muted/30">
     <div class="container mx-auto px-4">
       <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700 text-center mb-12">
-        <h2 class="text-3xl md:text-4xl font-display font-bold tracking-tight mb-4">Woran Sie ein gutes ATS mit KI-Matching erkennen</h2>
+        <h2 id="auswahlkriterien" class="text-3xl md:text-4xl font-display font-bold tracking-tight mb-4">Woran Sie ein gutes ATS mit KI-Matching erkennen</h2>
         <p class="text-muted-foreground text-lg max-w-2xl mx-auto">Fünf Kriterien für die Auswahl, unabhängig vom Anbieter.</p>
       </div>
 
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
         {qualityChecks.map((tip, index) => (
-          <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700 rounded-xl border bg-card p-6 hover:shadow-lg hover:-translate-y-1" style={`transition-delay: ${Math.min((index + 1) * 100, 500)}ms;`}>
+          <div class="sheet-card reveal-item opacity-0 translate-y-8 transition-all duration-700 rounded-xl border bg-card p-6 hover:shadow-lg hover:-translate-y-1" style={`transition-delay: ${Math.min((index + 1) * 100, 500)}ms;`}>
             <h3 class="text-lg font-display font-bold mb-2">{tip.title}</h3>
             <p class="text-sm text-muted-foreground leading-relaxed">{tip.description}</p>
           </div>
@@ -176,12 +155,12 @@ const faqSchema = {
   </section>
 
   <!-- FAQ -->
-  <section class="py-16 md:py-24">
+  <section class="story-section py-16 md:py-24">
     <div class="container mx-auto px-4">
       <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700 text-center max-w-3xl mx-auto mb-12">
         <h2 class="text-3xl md:text-4xl font-display font-bold tracking-tight">Häufige Fragen zum ATS mit KI-Matching</h2>
       </div>
-      <div class="max-w-3xl mx-auto space-y-0 rounded-xl border bg-card overflow-hidden">
+      <div class="sheet-card max-w-3xl mx-auto space-y-0 rounded-xl border bg-card overflow-hidden">
         {faqs.map((item) => (
           <details class="reveal-item opacity-0 translate-y-8 transition-all duration-700 border-b last:border-0 group">
             <summary class="flex items-center justify-between w-full py-5 px-6 text-left cursor-pointer font-display font-bold text-lg list-none [&::-webkit-details-marker]:hidden">

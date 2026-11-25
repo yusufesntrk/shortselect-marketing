@@ -1,4 +1,6 @@
 ---
+import PageIntro from '../components/marketing/PageIntro.astro';
+import SectionIndex from '../components/marketing/SectionIndex.astro';
 import MarketingLayout from '../layouts/MarketingLayout.astro';
 import CTASection from '../components/landing/CTASection.astro';
 ---
@@ -8,31 +10,19 @@ import CTASection from '../components/landing/CTASection.astro';
   description="Spezialisiert auf Recruiting-Agenturen, KI-gestützt, einfaches Onboarding, faire Preise und DSGVO-konform. 5 Gründe, warum Teams auf ShortSelect setzen."
 >
   <!-- Hero -->
-  <section class="relative overflow-hidden py-24 md:py-36">
-    <div class="absolute inset-0 bg-gradient-to-br from-[hsl(var(--primary)/0.1)] via-[hsl(var(--accent)/0.05)] to-[hsl(var(--background))]"></div>
-    <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,hsl(var(--primary)/0.15),transparent_50%)]"></div>
-    <div class="absolute top-20 left-10 w-72 h-72 bg-[hsl(var(--primary)/0.1)] rounded-full blur-3xl animate-float-slow"></div>
-    <div class="absolute bottom-20 right-10 w-96 h-96 bg-[hsl(var(--accent)/0.1)] rounded-full blur-3xl animate-float-slow" style="animation-delay: -3s;"></div>
-    <div class="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.03)_1px,transparent_1px)] bg-[size:60px_60px] [mask-image:radial-gradient(ellipse_at_center,black_30%,transparent_70%)]"></div>
-
-    <div class="container relative mx-auto px-4">
-      <div class="max-w-4xl mx-auto text-center space-y-8">
-        <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700">
-          <span class="inline-block px-3 py-1 rounded-full bg-[hsl(var(--primary)/0.1)] text-[hsl(var(--primary))] border border-[hsl(var(--primary)/0.2)] text-sm font-medium">Die bessere Wahl</span>
-        </div>
-        <h1 class="reveal-item opacity-0 translate-y-8 transition-all duration-500 text-4xl md:text-6xl lg:text-7xl font-display font-bold tracking-tight" style="transition-delay: 100ms;">
-          Warum <span class="text-[hsl(var(--primary))]">ShortSelect</span>?
-        </h1>
-        <p class="reveal-item opacity-0 translate-y-8 transition-all duration-500 text-lg md:text-xl text-[hsl(var(--muted-foreground))] max-w-2xl mx-auto" style="transition-delay: 200ms;">
-          5 Gründe, warum Teams auf ShortSelect setzen.
-        </p>
-      </div>
-    </div>
-    <div class="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-[hsl(var(--background))] to-transparent"></div>
-  </section>
+  <PageIntro label="Die bessere Wahl"
+    description="5 Gründe, warum Teams auf ShortSelect setzen."
+  >
+    <Fragment slot="title">Warum <em>ShortSelect</em>?</Fragment>
+    <SectionIndex slot="aside" links={[
+      { href: "#recruiting", label: "Recruiting" },
+      { href: "#ki-im-alltag", label: "KI im Alltag" },
+      { href: "#preise", label: "Preise" },
+    ]} />
+  </PageIntro>
 
   <!-- Reason 1: Spezialisiert -->
-  <section class="py-20 md:py-28 relative overflow-hidden">
+  <section class="story-section py-20 md:py-28 relative overflow-hidden">
     <div class="container relative mx-auto px-4">
       <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-12 items-center">
         <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700 flex justify-center">
@@ -42,7 +32,7 @@ import CTASection from '../components/landing/CTASection.astro';
         </div>
         <div class="reveal-item opacity-0 translate-y-8 transition-all duration-500 space-y-6" style="transition-delay: 100ms;">
           <span class="text-sm font-medium text-[hsl(var(--primary))] uppercase tracking-widest">Grund 1</span>
-          <h2 class="text-3xl md:text-4xl font-display font-bold tracking-tight">Spezialisiert auf Recruiting</h2>
+          <h2 id="recruiting" class="text-3xl md:text-4xl font-display font-bold tracking-tight">Spezialisiert auf Recruiting</h2>
           <p class="text-[hsl(var(--muted-foreground))] leading-relaxed">Anders als generische HR-Tools ist ShortSelect speziell für Personalvermittler und Recruiting-Teams gebaut.</p>
           <ul class="space-y-3">
             <li class="flex items-start gap-3"><svg class="h-5 w-5 text-[hsl(var(--primary))] shrink-0 mt-0.5" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span class="text-[hsl(var(--muted-foreground))]">Spezielle Pipelines für Personalvermittler und HR-Teams</span></li>
@@ -55,11 +45,11 @@ import CTASection from '../components/landing/CTASection.astro';
   </section>
 
   <!-- Reason 2: KI -->
-  <section class="py-20 md:py-28 bg-[hsl(var(--muted)/0.3)] relative overflow-hidden">
+  <section class="story-section py-20 md:py-28 bg-[hsl(var(--muted)/0.3)] relative overflow-hidden">
     <div class="container relative mx-auto px-4">
       <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700 max-w-4xl mx-auto text-center space-y-6">
         <span class="text-sm font-medium text-[hsl(var(--primary))] uppercase tracking-widest">Grund 2</span>
-        <h2 class="text-3xl md:text-4xl font-display font-bold tracking-tight">KI, die wirklich hilft</h2>
+        <h2 id="ki-im-alltag" class="text-3xl md:text-4xl font-display font-bold tracking-tight">KI, die wirklich hilft</h2>
         <p class="text-lg text-[hsl(var(--muted-foreground))] max-w-2xl mx-auto">
           Kein KI-Buzzword. ShortSelect nutzt kuenstliche Intelligenz dort, wo sie echte Zeit spart: Matching, Screening und Ranking.
         </p>
@@ -68,7 +58,7 @@ import CTASection from '../components/landing/CTASection.astro';
   </section>
 
   <!-- Reason 3: Onboarding -->
-  <section class="py-20 md:py-28 relative overflow-hidden">
+  <section class="story-section py-20 md:py-28 relative overflow-hidden">
     <div class="container relative mx-auto px-4">
       <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700 max-w-4xl mx-auto text-center space-y-6">
         <span class="text-sm font-medium text-[hsl(var(--primary))] uppercase tracking-widest">Grund 3</span>
@@ -81,11 +71,11 @@ import CTASection from '../components/landing/CTASection.astro';
   </section>
 
   <!-- Reason 4: Preise -->
-  <section class="py-20 md:py-28 bg-[hsl(var(--muted)/0.3)] relative overflow-hidden">
+  <section class="story-section py-20 md:py-28 bg-[hsl(var(--muted)/0.3)] relative overflow-hidden">
     <div class="container relative mx-auto px-4">
       <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700 max-w-4xl mx-auto text-center space-y-6">
         <span class="text-sm font-medium text-[hsl(var(--primary))] uppercase tracking-widest">Grund 4</span>
-        <h2 class="text-3xl md:text-4xl font-display font-bold tracking-tight">Faire, transparente Preise</h2>
+        <h2 id="preise" class="text-3xl md:text-4xl font-display font-bold tracking-tight">Faire, transparente Preise</h2>
         <p class="text-lg text-[hsl(var(--muted-foreground))] max-w-2xl mx-auto">
           Ein Preis, alle Funktionen. 199 EUR pro User und Monat oder 1.791 EUR pro User und Jahr (3 Monate geschenkt), keine versteckten Kosten. 14 Tage kostenlos testen.
         </p>
@@ -97,7 +87,7 @@ import CTASection from '../components/landing/CTASection.astro';
   </section>
 
   <!-- Reason 5: Sicherheit -->
-  <section class="py-20 md:py-28 relative overflow-hidden">
+  <section class="story-section py-20 md:py-28 relative overflow-hidden">
     <div class="container relative mx-auto px-4">
       <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700 max-w-4xl mx-auto text-center space-y-6">
         <span class="text-sm font-medium text-[hsl(var(--primary))] uppercase tracking-widest">Grund 5</span>

@@ -1,6 +1,7 @@
 ---
 import { TRIAL_CTA_LABEL } from '../../lib/cta';
 import TrialCtaNote from '../../components/ui/TrialCtaNote.astro';
+import PageIntro from '../../components/marketing/PageIntro.astro';
 import MarketingLayout from '../../layouts/MarketingLayout.astro';
 import CTASection from '../../components/landing/CTASection.astro';
 import { glossaryData, allTermTitles } from '../../data/glossary';
@@ -67,41 +68,17 @@ const jsonLdArray = [glossarySchema, breadcrumbSchema, faqSchema, personSchema].
   jsonLd={jsonLdArray}
 >
   <!-- Hero -->
-  <section class="relative overflow-hidden py-20 md:py-28">
-    <div class="absolute inset-0 bg-gradient-to-br from-[hsl(var(--primary)/0.1)] via-[hsl(var(--accent)/0.05)] to-[hsl(var(--background))]"></div>
-    <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,hsl(var(--primary)/0.15),transparent_50%)]"></div>
-    <div class="absolute top-20 left-10 w-72 h-72 bg-[hsl(var(--primary)/0.1)] rounded-full blur-3xl animate-float-slow"></div>
-    <div class="absolute bottom-20 right-10 w-96 h-96 bg-[hsl(var(--accent)/0.1)] rounded-full blur-3xl animate-float-slow" style="animation-delay: -3s;"></div>
-    <div class="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.03)_1px,transparent_1px)] bg-[size:60px_60px] [mask-image:radial-gradient(ellipse_at_center,black_30%,transparent_70%)]"></div>
-
-    <div class="container relative mx-auto px-4">
-      <div class="mx-auto max-w-3xl space-y-6">
-        <!-- Breadcrumb -->
-        <nav class="reveal-item opacity-0 translate-y-8 transition-all duration-700 flex items-center gap-1.5 text-sm text-[hsl(var(--muted-foreground))]">
-          <a href="/glossar/" class="hover:text-[hsl(var(--foreground))] transition-colors">Glossar</a>
-          <svg class="h-3.5 w-3.5" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
-          <span class="text-[hsl(var(--primary))]">{entry.title}</span>
-        </nav>
-
-        <h1 class="reveal-item opacity-0 translate-y-8 transition-all duration-500 text-3xl md:text-4xl lg:text-5xl font-display font-bold tracking-tight leading-tight" style="transition-delay: 100ms;">
-          {entry.title}
-        </h1>
-
-        <p class="reveal-item opacity-0 translate-y-8 transition-all duration-500 text-lg md:text-xl text-[hsl(var(--muted-foreground))] max-w-2xl" style="transition-delay: 200ms;">
-          {entry.shortDef}
-        </p>
-      </div>
-    </div>
-
-    <div class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[hsl(var(--background))] to-transparent"></div>
-  </section>
+  <PageIntro editorial description={entry.shortDef}>
+    <nav class="intro-crumb" slot="breadcrumb" aria-label="Brotkrumennavigation"><a href="/glossar/">Glossar</a> / <span>{entry.title}</span></nav>
+    <Fragment slot="title">{entry.title}</Fragment>
+  </PageIntro>
 
   <!-- Definition -->
-  <section class="py-16 md:py-20 relative overflow-hidden">
+  <section class="story-section py-16 md:py-20 relative overflow-hidden">
     <div class="container mx-auto px-4">
       <div class="max-w-3xl mx-auto space-y-16">
         {entry.heroSnippet && (
-          <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700 rounded-xl border border-[hsl(var(--border))] bg-[hsl(var(--muted)/0.3)] p-6 md:p-8">
+          <div class="sheet-card reveal-item opacity-0 translate-y-8 transition-all duration-700 rounded-xl border border-[hsl(var(--border))] bg-[hsl(var(--muted)/0.3)] p-6 md:p-8">
             <p class="text-[hsl(var(--foreground))] leading-relaxed text-lg font-medium">{entry.heroSnippet}</p>
           </div>
         )}
@@ -164,7 +141,7 @@ const jsonLdArray = [glossarySchema, breadcrumbSchema, faqSchema, personSchema].
         )}
 
         <!-- How ShortSelect Helps -->
-        <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700 rounded-xl border border-[hsl(var(--primary)/0.2)] bg-[hsl(var(--primary)/0.05)] p-8">
+        <div class="sheet-card reveal-item opacity-0 translate-y-8 transition-all duration-700 rounded-xl border border-[hsl(var(--primary)/0.2)] bg-[hsl(var(--primary)/0.05)] p-8">
           <h2 class="text-2xl font-display font-bold mb-4">So hilft ShortSelect</h2>
           <p class="text-[hsl(var(--muted-foreground))] leading-relaxed">{entry.howShortSelectHelps}</p>
           <a href="https://app.shortselect.com/signup" class="inline-flex items-center gap-2 mt-6 px-6 py-3 bg-[hsl(var(--primary))] text-white font-semibold rounded-lg text-sm hover:opacity-90 transition-opacity">

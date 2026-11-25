@@ -1,0 +1,14 @@
+---
+interface Props {
+  links: { href: string; label: string }[];
+}
+const { links } = Astro.props;
+---
+<nav class="index-sheet" aria-label="Auf dieser Seite">
+  <p>Auf dieser Seite</p>
+  <ul>
+    {links.map(({ href, label }) => (
+      <li><a href={href}>{label}<span aria-hidden="true">↘</span></a></li>
+    ))}
+  </ul>
+</nav>

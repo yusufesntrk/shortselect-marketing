@@ -28,6 +28,7 @@ const ressourcenLinks = [
   { href: '/blog/', label: 'Blog' },
   { href: '/ressourcen/', label: 'Ressourcen' },
   { href: '/glossar/', label: 'Glossar' },
+  { href: '/methode/smart-recruiting/', label: 'Smart Recruiting' },
   { href: '/methode/', label: 'Smart-Recruiting-Methode' },
   { href: '/vergleich/beste-ats-software/', label: 'ATS Vergleich' },
   { href: '/integrationen/', label: 'Integrationen' },
@@ -61,76 +62,151 @@ const unternehmenLinks = [
 ];
 
 const currentYear = new Date().getFullYear();
+
+const groups = [
+  { title: 'Produkt', links: produktLinks },
+  { title: 'Lösungen', links: loesungenLinks },
+  { title: 'Ressourcen', links: ressourcenLinks },
+  { title: 'Vergleich', links: vergleichLinks },
+  { title: 'Unternehmen', links: unternehmenLinks },
+];
 ---
 
-<footer class="bg-gray-950 text-gray-300 pt-16 pb-8">
-  <div class="container mx-auto px-4">
-    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 mb-12">
-      <!-- Logo Column -->
-      <div class="col-span-2 md:col-span-1">
-        <a href="/" class="inline-block mb-4">
-          <img src="/logo.svg" alt="ShortSelect" class="h-8 brightness-0 invert" loading="lazy" />
-        </a>
-        <p class="text-sm text-gray-400 leading-relaxed">
-          KI-gestütztes Bewerbermanagement für moderne Recruiting-Teams.
-        </p>
-        <div class="flex gap-3 mt-4">
-          <a href="https://linkedin.com/company/shortselect" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors" aria-label="LinkedIn">
-            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" /></svg>
-          </a>
-          <a href="mailto:hello@shortselect.com" class="text-gray-400 hover:text-white transition-colors" aria-label="E-Mail">
-            <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
-          </a>
+<footer class="fc-footer">
+  <div class="fc-footer-grid">
+
+    <!-- Logo Column -->
+    <div class="fc-footer-col-logo">
+      <a href="/" class="logo-foot">
+        <div class="lg-icon">
+          <svg viewBox="0 0 213 213" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="logoGradFoot" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#FF6347"/>
+                <stop offset="100%" stop-color="#FFA07A"/>
+              </linearGradient>
+            </defs>
+            <g fill="url(#logoGradFoot)">
+              <path d="M141.52,187.81c-2.87,6.61-5.6,12.87-8.3,19.14-1.37,3.18-2.92,6.06-7.07,5.96-4.33-.1-6.67-2.76-8.03-6.4-3.24-8.74-6.32-17.54-9.47-26.31-11.21-31.17-22.44-62.33-33.6-93.52-1.36-3.8-4.02-7.9-.24-11.64,3.58-3.54,7.58-1.12,11.23.19,39.64,14.22,79.26,28.53,118.89,42.79,2.57.92,4.91,2.06,6.37,4.51,2.63,4.41,1.25,8.3-4.16,10.73-13.82,6.21-27.55,12.67-41.62,18.26-7.25,2.88-11.81,7.15-14.42,14.48-2.61,7.35-6.25,14.34-9.59,21.83Z"/>
+              <path d="M99.59,53.25c9.9-9.9,19.58-19.49,29.16-29.17,2.85-2.88,5.74-4.28,8.9-.82,2.92,3.2,2.09,6.28-.83,9.17-9.57,9.46-19.09,18.96-28.61,28.48-2.35,2.35-4.85,3.75-7.84,1.27-3-2.48-3.71-5.41-.78-8.93Z"/>
+              <path d="M29.57,123.89c7.68-7.67,15.09-15.1,22.54-22.5,3.83-3.8,6.5-4.11,9.39-1.22,2.8,2.8,2.49,5.8-1.15,9.47-9.15,9.23-18.34,18.43-27.55,27.6-3.63,3.62-6.71,3.94-9.47.95-3.08-3.35-1.9-6.31,1.07-9.06,1.71-1.58,3.28-3.32,5.16-5.24Z"/>
+              <path d="M.34,78.03c1.58-2.46,3.7-2.72,5.91-2.72,13.44,0,26.89,0,40.33,0,4.14,0,6.79,1.79,6.63,6.21-.16,4.39-3.19,5.22-6.93,5.2-13.11-.07-26.23,0-39.34-.05-6.47-.02-7.66-1.54-6.6-8.65Z"/>
+              <path d="M48.68,40.75c4.34,4.4,8.38,8.59,12.49,12.73,2.74,2.77,2.92,5.63.06,8.24-2.71,2.47-5.58,2.59-8.36-.24-9.69-9.86-19.38-19.71-29.17-29.47-2.72-2.71-3.31-5.44-.63-8.26,2.83-2.99,5.75-2.65,8.65.27,5.51,5.56,11.14,11,16.98,16.73Z"/>
+              <path d="M85.45,16.38c0,10.49-.08,20.48.01,30.46.03,3.91-1.18,6.72-5.51,6.62-4.17-.1-5.72-2.99-5.69-6.77.09-13.8.27-27.6.42-41.4.04-3.76,2.03-5.41,5.7-5.29,3.51.11,5.1,1.94,5.06,5.39-.04,3.5,0,6.99.01,10.99Z"/>
+            </g>
+          </svg>
         </div>
-      </div>
-
-      <!-- Produkt -->
-      <div>
-        <h3 class="text-sm font-semibold text-white mb-4">Produkt</h3>
-        <ul class="space-y-2.5">
-          {produktLinks.map((link) => <li><a href={link.href} class="text-sm text-gray-400 hover:text-white transition-colors">{link.label}</a></li>)}
-        </ul>
-      </div>
-
-      <!-- Lösungen -->
-      <div>
-        <h3 class="text-sm font-semibold text-white mb-4">Lösungen</h3>
-        <ul class="space-y-2.5">
-          {loesungenLinks.map((link) => <li><a href={link.href} class="text-sm text-gray-400 hover:text-white transition-colors">{link.label}</a></li>)}
-        </ul>
-      </div>
-
-      <!-- Ressourcen -->
-      <div>
-        <h3 class="text-sm font-semibold text-white mb-4">Ressourcen</h3>
-        <ul class="space-y-2.5">
-          {ressourcenLinks.map((link) => <li><a href={link.href} class="text-sm text-gray-400 hover:text-white transition-colors">{link.label}</a></li>)}
-        </ul>
-      </div>
-
-      <!-- Vergleich -->
-      <div>
-        <h3 class="text-sm font-semibold text-white mb-4">Vergleich</h3>
-        <ul class="space-y-2.5">
-          {vergleichLinks.map((link) => <li><a href={link.href} class="text-sm text-gray-400 hover:text-white transition-colors">{link.label}</a></li>)}
-        </ul>
-      </div>
-
-      <!-- Unternehmen -->
-      <div>
-        <h3 class="text-sm font-semibold text-white mb-4">Unternehmen</h3>
-        <ul class="space-y-2.5">
-          {unternehmenLinks.map((link) => <li><a href={link.href} class="text-sm text-gray-400 hover:text-white transition-colors">{link.label}</a></li>)}
-          <li><button type="button" data-consent-open class="text-sm text-gray-400 hover:text-white transition-colors cursor-pointer">Cookie-Einstellungen</button></li>
-        </ul>
+        ShortSelect
+      </a>
+      <p class="lead-text">KI-gestütztes Bewerbermanagement für moderne Recruiting-Teams.</p>
+      <div class="socials">
+        <a href="https://linkedin.com/company/shortselect" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <svg fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+        <a href="mailto:hello@shortselect.com" aria-label="E-Mail">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+        </a>
       </div>
     </div>
 
-    <!-- Copyright -->
-    <div class="border-t border-gray-800 pt-6 text-center">
-      <p class="text-sm text-gray-500">
-        &copy; {currentYear} ShortSelect. Alle Rechte vorbehalten.
-      </p>
-    </div>
+    {groups.map((group) => (
+      <div>
+        <p class="footer-heading">{group.title}</p>
+        <ul>{group.links.map((link) => <li><a href={link.href}>{link.label}</a></li>)}</ul>
+      </div>
+    ))}
+  </div>
+  <div class="bottom">
+    <span>© {currentYear} ShortSelect (Yusuf Esentürk). Alle Rechte vorbehalten.</span>
+    <button type="button" data-consent-open>Cookie-Einstellungen</button>
   </div>
 </footer>
+
+<style>
+  /* === FOOTER (6 Spalten, dark) === */
+  .fc-footer { padding: 80px 0 30px; background: #050507; color: #d4d4d8; }
+  .fc-footer-grid {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 32px;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 40px;
+  }
+  .fc-footer-col-logo { padding-right: 20px; }
+  .fc-footer .lead-text { font-size: 13px; color: rgba(255,255,255,0.5); margin-top: 14px; line-height: 1.55; max-width: 220px; }
+  .fc-footer .footer-heading {
+    margin: 0 0 14px 0;
+    font-size: 13px;
+    color: white;
+    font-weight: 700;
+    font-family: 'Poppins';
+    letter-spacing: -0.005em;
+  }
+  .fc-footer ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 9px; }
+  .fc-footer ul a {
+    color: rgba(255,255,255,0.55);
+    text-decoration: none;
+    font-size: 13px;
+    transition: color 0.15s;
+  }
+  .fc-footer ul a:hover { color: white; }
+  .fc-footer .socials {
+    display: flex;
+    gap: 10px;
+    margin-top: 18px;
+  }
+  .fc-footer .socials a {
+    width: 36px; height: 36px;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.08);
+    display: flex; align-items: center; justify-content: center;
+    color: rgba(255,255,255,0.6);
+    transition: all 0.2s;
+  }
+  .fc-footer .socials a:hover {
+    background: rgba(239,68,68,0.15);
+    border-color: rgba(239,68,68,0.3);
+    color: #ef4444;
+    transform: translateY(-2px);
+  }
+  .fc-footer .socials svg { width: 18px; height: 18px; }
+  .fc-footer .logo-foot { display: flex; align-items: center; gap: 10px; font-family: 'Poppins'; font-weight: 700; font-size: 19px; letter-spacing: -0.03em; text-decoration: none; color: white; }
+  .fc-footer .logo-foot .lg-icon { width: 32px; height: 32px; flex-shrink: 0; }
+  .fc-footer .logo-foot .lg-icon svg { width: 100%; height: 100%; display: block; }
+  .fc-footer .bottom {
+    max-width: 1280px;
+    margin: 60px auto 0;
+    padding: 24px 32px 0;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    color: rgba(255,255,255,0.4);
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .fc-footer .bottom a {
+    color: rgba(255,255,255,0.4);
+    text-decoration: none;
+    transition: color 0.15s;
+    margin-left: 8px;
+  }
+  .fc-footer .bottom a:hover { color: rgba(255,255,255,0.8); }
+
+
+  .fc-footer .bottom { color: #a1a1aa; }
+  .fc-footer button { cursor: pointer; }
+  .fc-footer button:hover { color: white; }
+  @media (max-width: 960px) {
+    .fc-footer-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  }
+  @media (max-width: 600px) {
+    .fc-footer { padding: 56px 0 24px; }
+    .fc-footer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px 18px; padding-inline: 20px; }
+    .fc-footer-col-logo { grid-column: 1 / -1; }
+    .fc-footer .bottom { padding-inline: 20px; margin-top: 32px; }
+  }
+</style>

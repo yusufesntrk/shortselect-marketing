@@ -1,6 +1,5 @@
 ---
-import { TRIAL_CTA_LABEL, signupUrl } from '../../lib/cta';
-import TrialCtaNote from '../ui/TrialCtaNote.astro';
+import { TRIAL_CTA_LABEL, TRIAL_CTA_NOTE, signupUrl } from '../../lib/cta';
 // Navigation data
 const produktLinks = [
   { href: '/produkt/ats-crm/', label: 'ATS & CRM', desc: 'Bewerbermanagement-Plattform' },
@@ -41,146 +40,529 @@ const simpleLinks = [
   { href: '/blog/', label: 'Blog' },
   { href: '/ressourcen/', label: 'Ressourcen', hideLg: true },
 ];
+
+const groups = [
+  { label: 'Produkt', links: produktLinks },
+  { label: 'Lösungen', links: loesungenLinks },
+  { label: 'Vergleich', links: vergleichLinks },
+];
+const current = (href: string) => Astro.url.pathname === href ? 'page' : undefined;
 ---
 
-<nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-border/50 transition-all duration-300" id="landing-nav">
-  <div class="container mx-auto px-4 flex items-center justify-between h-16">
-    <!-- Logo -->
-    <a href="/" class="flex items-center gap-2">
-      <img src="/logo.svg" alt="ShortSelect" class="h-8" />
-    </a>
-
-    <!-- Desktop Navigation -->
-    <div class="hidden lg:flex items-center gap-1">
-      <!-- Produkt Dropdown -->
-      <div class="nav-dropdown group relative">
-        <button class="flex items-center gap-1 px-2 xl:px-3 py-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors">
-          Produkt
-          <svg class="h-4 w-4 transition-transform group-hover:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
-        </button>
-        <div class="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-          <div class="bg-white rounded-xl shadow-xl border border-border/50 p-4 min-w-[320px]">
-            {produktLinks.map((link) => (
-              <a href={link.href} class="flex flex-col gap-0.5 px-3 py-2.5 rounded-lg hover:bg-muted transition-colors">
-                <span class="text-sm font-medium text-foreground">{link.label}</span>
-                <span class="text-xs text-muted-foreground">{link.desc}</span>
-              </a>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      <!-- Lösungen Dropdown -->
-      <div class="nav-dropdown group relative">
-        <button class="flex items-center gap-1 px-2 xl:px-3 py-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors">
-          Lösungen
-          <svg class="h-4 w-4 transition-transform group-hover:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
-        </button>
-        <div class="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-          <div class="bg-white rounded-xl shadow-xl border border-border/50 p-4 min-w-[320px]">
-            {loesungenLinks.map((link) => (
-              <a href={link.href} class="flex flex-col gap-0.5 px-3 py-2.5 rounded-lg hover:bg-muted transition-colors">
-                <span class="text-sm font-medium text-foreground">{link.label}</span>
-                <span class="text-xs text-muted-foreground">{link.desc}</span>
-              </a>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      <!-- Vergleich Dropdown -->
-      <div class="nav-dropdown group relative">
-        <button class="flex items-center gap-1 px-2 xl:px-3 py-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors">
-          Vergleich
-          <svg class="h-4 w-4 transition-transform group-hover:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
-        </button>
-        <div class="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-          <div class="bg-white rounded-xl shadow-xl border border-border/50 p-4 min-w-[320px]">
-            {vergleichLinks.map((link) => (
-              <a href={link.href} class="flex flex-col gap-0.5 px-3 py-2.5 rounded-lg hover:bg-muted transition-colors">
-                <span class="text-sm font-medium text-foreground">{link.label}</span>
-                <span class="text-xs text-muted-foreground">{link.desc}</span>
-              </a>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      <!-- Simple Links -->
-      {simpleLinks.map((link) => (
-        <a href={link.href} class={link.highlight ? "inline-flex items-center gap-1.5 px-3 py-1.5 text-sm font-semibold text-primary border border-primary/30 rounded-full hover:bg-primary/5 transition-colors" : `${link.hideLg ? 'hidden xl:block ' : ''}px-2 xl:px-3 py-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors`}>
-          {link.highlight && <span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse shrink-0"></span>}
-          {link.label}
-        </a>
-      ))}
-    </div>
-
-    <!-- Desktop CTAs -->
-    <div class="hidden lg:flex items-center gap-2">
-      <a href="https://app.shortselect.com/login" class="px-2 xl:px-3 py-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors">
-        Login
-      </a>
-      <a href="/demo/" class="hidden xl:block px-3 py-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors">
-        Demo
-      </a>
-      <a href={signupUrl('nav')} class="px-4 xl:px-5 py-2.5 bg-primary text-primary-foreground text-sm font-semibold rounded-lg hover:bg-primary/90 transition-colors shadow-sm whitespace-nowrap">
-        {TRIAL_CTA_LABEL}
-      </a>
-    </div>
-
-    <!-- Mobile Menu Button -->
-    <button class="lg:hidden p-2" id="mobile-menu-btn" aria-label="Menu öffnen">
-      <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
-    </button>
+<nav class="fc-nav" aria-label="Hauptnavigation">
+  <div class="fc-nav-inner">
+    <div class="fc-nav-left">
+      <a href="/" class="fc-logo">
+  <div class="lg">
+    <svg viewBox="0 0 213 213" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#8B0000"/>
+          <stop offset="100%" stop-color="#FF6347"/>
+        </linearGradient>
+      </defs>
+      <g fill="url(#logoGrad)">
+        <path d="M141.52,187.81c-2.87,6.61-5.6,12.87-8.3,19.14-1.37,3.18-2.92,6.06-7.07,5.96-4.33-.1-6.67-2.76-8.03-6.4-3.24-8.74-6.32-17.54-9.47-26.31-11.21-31.17-22.44-62.33-33.6-93.52-1.36-3.8-4.02-7.9-.24-11.64,3.58-3.54,7.58-1.12,11.23.19,39.64,14.22,79.26,28.53,118.89,42.79,2.57.92,4.91,2.06,6.37,4.51,2.63,4.41,1.25,8.3-4.16,10.73-13.82,6.21-27.55,12.67-41.62,18.26-7.25,2.88-11.81,7.15-14.42,14.48-2.61,7.35-6.25,14.34-9.59,21.83Z"/>
+        <path d="M99.59,53.25c9.9-9.9,19.58-19.49,29.16-29.17,2.85-2.88,5.74-4.28,8.9-.82,2.92,3.2,2.09,6.28-.83,9.17-9.57,9.46-19.09,18.96-28.61,28.48-2.35,2.35-4.85,3.75-7.84,1.27-3-2.48-3.71-5.41-.78-8.93Z"/>
+        <path d="M29.57,123.89c7.68-7.67,15.09-15.1,22.54-22.5,3.83-3.8,6.5-4.11,9.39-1.22,2.8,2.8,2.49,5.8-1.15,9.47-9.15,9.23-18.34,18.43-27.55,27.6-3.63,3.62-6.71,3.94-9.47.95-3.08-3.35-1.9-6.31,1.07-9.06,1.71-1.58,3.28-3.32,5.16-5.24Z"/>
+        <path d="M.34,78.03c1.58-2.46,3.7-2.72,5.91-2.72,13.44,0,26.89,0,40.33,0,4.14,0,6.79,1.79,6.63,6.21-.16,4.39-3.19,5.22-6.93,5.2-13.11-.07-26.23,0-39.34-.05-6.47-.02-7.66-1.54-6.6-8.65Z"/>
+        <path d="M48.68,40.75c4.34,4.4,8.38,8.59,12.49,12.73,2.74,2.77,2.92,5.63.06,8.24-2.71,2.47-5.58,2.59-8.36-.24-9.69-9.86-19.38-19.71-29.17-29.47-2.72-2.71-3.31-5.44-.63-8.26,2.83-2.99,5.75-2.65,8.65.27,5.51,5.56,11.14,11,16.98,16.73Z"/>
+        <path d="M85.45,16.38c0,10.49-.08,20.48.01,30.46.03,3.91-1.18,6.72-5.51,6.62-4.17-.1-5.72-2.99-5.69-6.77.09-13.8.27-27.6.42-41.4.04-3.76,2.03-5.41,5.7-5.29,3.51.11,5.1,1.94,5.06,5.39-.04,3.5,0,6.99.01,10.99Z"/>
+      </g>
+    </svg>
   </div>
-
-  <!-- Mobile Menu -->
-  <div class="lg:hidden hidden bg-white border-t border-border/50 max-h-[80vh] overflow-y-auto" id="mobile-menu">
-    <div class="container mx-auto px-4 py-4 space-y-4">
-      <details class="group">
-        <summary class="flex items-center justify-between py-2 text-sm font-medium cursor-pointer">Produkt <svg class="h-4 w-4 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg></summary>
-        <div class="pl-4 space-y-2 mt-2">
-          {produktLinks.map((link) => <a href={link.href} class="block py-1.5 text-sm text-muted-foreground hover:text-foreground">{link.label}</a>)}
-        </div>
-      </details>
-      <details class="group">
-        <summary class="flex items-center justify-between py-2 text-sm font-medium cursor-pointer">Lösungen <svg class="h-4 w-4 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg></summary>
-        <div class="pl-4 space-y-2 mt-2">
-          {loesungenLinks.map((link) => <a href={link.href} class="block py-1.5 text-sm text-muted-foreground hover:text-foreground">{link.label}</a>)}
-        </div>
-      </details>
-      <details class="group">
-        <summary class="flex items-center justify-between py-2 text-sm font-medium cursor-pointer">Vergleich <svg class="h-4 w-4 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg></summary>
-        <div class="pl-4 space-y-2 mt-2">
-          {vergleichLinks.map((link) => <a href={link.href} class="block py-1.5 text-sm text-muted-foreground hover:text-foreground">{link.label}</a>)}
-        </div>
-      </details>
-      {simpleLinks.map((link) => <a href={link.href} class={link.highlight ? "flex items-center gap-1.5 py-2 text-sm font-semibold text-primary" : "block py-2 text-sm font-medium"}>{link.highlight && <span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse shrink-0"></span>}{link.label}</a>)}
-      <div class="pt-4 border-t border-border/50 space-y-2">
-        <a href="https://app.shortselect.com/login" class="block py-2 text-sm font-medium text-center">Login</a>
-        <a href="/demo/" class="block py-2 text-sm font-medium text-center">Demo buchen</a>
-        <a href={signupUrl('nav_mobile')} class="block py-2.5 bg-primary text-primary-foreground text-sm font-semibold rounded-lg text-center">{TRIAL_CTA_LABEL}</a>
-        <TrialCtaNote class="pt-1" />
+  <span class="text-grad">ShortSelect</span>
+</a>
+      <div class="fc-nav-menu">
+        {groups.map((group, i) => (
+          <div class="nav-dd">
+            <button type="button" class="nav-dd-trigger" aria-expanded="false" aria-controls={`nav-group-${i}`}>{group.label} <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+            <div class="nav-dd-panel" id={`nav-group-${i}`}>
+              <div class="nav-dd-card wide">
+                {group.links.map((link) => (
+                  <a class="nav-dd-item" href={link.href} aria-current={current(link.href)}>
+                    <span class="lab">{link.label}</span><span class="desc">{link.desc}</span>
+                  </a>
+                ))}
+              </div>
+            </div>
+          </div>
+        ))}
+        {simpleLinks.map((link) => <a href={link.href} aria-current={current(link.href)} class:list={['nav-link', { highlight: link.highlight }]}>{link.label}</a>)}
       </div>
+    </div>
+    <div class="fc-nav-right">
+      <a href="https://app.shortselect.com/login" class="nav-cta-ghost">Login</a>
+      <a href="/demo/" class="nav-cta-ghost">Demo</a>
+      <a href={signupUrl('nav')} class="nav-cta-primary">{TRIAL_CTA_LABEL}</a>
+      <button class="fc-nav-burger" type="button" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobile-nav-overlay">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </div>
 </nav>
 
+
+<dialog id="mobile-nav-overlay" class="fc-mob-nav" aria-label="Hauptmenü">
+  <div class="fc-mob-nav-head">
+    <a href="/" class="fc-mob-nav-logo">ShortSelect</a>
+    <button class="fc-mob-nav-close" type="button" aria-label="Menü schließen" autofocus>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="22" height="22"><path d="M18 6L6 18M6 6l12 12"/></svg>
+    </button>
+  </div>
+  <nav class="fc-mob-nav-body" aria-label="Mobile Navigation">
+    {groups.map((group) => (
+      <details class="fc-mob-acc" name="mobile-nav-group">
+        <summary class="fc-mob-acc-trigger">{group.label} <svg class="fc-mob-acc-caret" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <div>
+          {group.links.map((link) => <a href={link.href} aria-current={current(link.href)} class="fc-mob-link">{link.label}</a>)}
+        </div>
+      </details>
+    ))}
+    {simpleLinks.map((link) => <a href={link.href} aria-current={current(link.href)} class:list={['fc-mob-link', 'flat', { highlight: link.highlight }]}>{link.label}</a>)}
+  </nav>
+<div class="fc-mob-nav-foot">
+  <a href="https://app.shortselect.com/login" class="fc-mob-cta-ghost">Login</a>
+  <a href="/demo/" class="fc-mob-cta-ghost">Demo buchen</a>
+  <a href={signupUrl('nav_mobile')} class="fc-mob-cta-primary">{TRIAL_CTA_LABEL}</a>
+  <div class="fc-mob-cta-note">{TRIAL_CTA_NOTE}</div>
+</div>
+</dialog>
+
 <script>
-  const btn = document.getElementById('mobile-menu-btn');
-  const menu = document.getElementById('mobile-menu');
-  btn?.addEventListener('click', () => menu?.classList.toggle('hidden'));
+  const menu = document.querySelector<HTMLDialogElement>('#mobile-nav-overlay')!;
+  const burger = document.querySelector<HTMLButtonElement>('.fc-nav-burger')!;
+  burger.addEventListener('click', () => {
+    menu.showModal();
+    burger.setAttribute('aria-expanded', 'true');
+  });
+  menu.querySelector('.fc-mob-nav-close')!.addEventListener('click', () => menu.close());
+  menu.addEventListener('close', () => {
+    burger.setAttribute('aria-expanded', 'false');
+    menu.querySelectorAll('details[open]').forEach(group => group.removeAttribute('open'));
+  });
+  matchMedia('(min-width: 1081px)').addEventListener('change', (event) => {
+    if (event.matches && menu.open) menu.close();
+  });
+
+  const groups = document.querySelectorAll<HTMLElement>('.nav-dd');
+  function expand(selected?: HTMLElement) {
+    for (const group of groups) {
+      group.querySelector('button')!.setAttribute('aria-expanded', String(group === selected));
+    }
+  }
+  for (const group of groups) {
+    const trigger = group.querySelector('button')!;
+    group.addEventListener('pointerenter', (event) => {
+      if (event.pointerType === 'mouse') expand(group);
+    });
+    group.addEventListener('pointerleave', () => {
+      if (!group.contains(document.activeElement)) expand();
+    });
+    trigger.addEventListener('click', (event) => {
+      // A mouse hover already opens the menu. Keyboard and touch toggle it.
+      const mouseClick = event instanceof PointerEvent && event.pointerType === 'mouse';
+      expand(mouseClick || trigger.getAttribute('aria-expanded') === 'false' ? group : undefined);
+    });
+    group.addEventListener('focusout', (event) => {
+      if (!group.contains(event.relatedTarget as Node)) expand();
+    });
+    group.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') {
+        expand();
+        trigger.focus();
+      }
+    });
+  }
+  document.addEventListener('pointerdown', (event) => {
+    if (!(event.target as Element).closest('.nav-dd')) expand();
+  });
 </script>
 
 <style>
-  /* Sticky nav shrink on scroll */
-  nav.scrolled { box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1); }
-</style>
+  /* === NAV (centered floating pill) === */
+  .fc-nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 14px 24px 0;
+    background: transparent;
+    pointer-events: none;
+  }
+  .fc-nav-inner {
+    width: fit-content;
+    margin: 0 auto;
+    padding: 7px 7px 7px 18px;
+    background: rgba(255,251,246,0.85);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border: 1px solid rgba(10,10,14,0.06);
+    border-radius: 100px;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.06), 0 2px 6px rgba(0,0,0,0.04);
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    pointer-events: auto;
+  }
+  .fc-nav-left { display: flex; align-items: center; gap: 18px; }
+  .fc-nav-right { display: flex; align-items: center; gap: 4px; }
+  .fc-logo { display: flex; align-items: center; gap: 10px; font-family: 'Poppins'; font-weight: 700; font-size: 19px; letter-spacing: -0.03em; text-decoration: none; }
+  .fc-logo .lg { width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .fc-logo .lg svg { width: 100%; height: 100%; display: block; }
+  .fc-logo .text-grad {
+    background: linear-gradient(135deg, #8B0000 0%, #FF6347 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .fc-nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    font-size: 13.5px;
+    font-weight: 500;
+  }
+  .fc-nav-menu .nav-link {
+    color: #0a0a0e;
+    text-decoration: none;
+    opacity: 0.75;
+    padding: 7px 10px;
+    border-radius: 8px;
+    transition: all 0.18s;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+  }
+  .fc-nav-menu .nav-link:hover { opacity: 1; background: rgba(239,68,68,0.05); color: #ef4444; }
+  .fc-nav-menu .nav-link.highlight {
+    color: #ef4444;
+    border: 1px solid rgba(239,68,68,0.3);
+    border-radius: 100px;
+    padding: 5px 12px;
+    font-weight: 600;
+    opacity: 1;
+    margin-left: 4px;
+  }
+  .fc-nav-menu .nav-link.highlight::before {
+    content: '';
+    width: 6px; height: 6px;
+    background: #ef4444;
+    border-radius: 50%;
+    animation: nav-pulse 1.5s infinite;
+  }
+  .fc-nav-menu .nav-link.highlight:hover {
+    background: rgba(239,68,68,0.06);
+    border-color: #ef4444;
+  }
+  /* Dropdown */
+  .nav-dd { position: relative; }
+  .nav-dd-trigger {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 7px 10px;
+    border-radius: 8px;
+    font-size: 13.5px;
+    font-weight: 500;
+    color: #0a0a0e;
+    opacity: 0.75;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    transition: all 0.18s;
+  }
+  .nav-dd:has([aria-expanded="true"]) .nav-dd-trigger {
+    opacity: 1;
+    background: rgba(239,68,68,0.05);
+    color: #ef4444;
+  }
+  .nav-dd-trigger svg {
+    width: 12px;
+    height: 12px;
+    transition: transform 0.2s;
+  }
+  .nav-dd:has([aria-expanded="true"]) .nav-dd-trigger svg { transform: rotate(180deg); }
+  .nav-dd-panel {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding-top: 10px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-6px);
+    transition: opacity 0.2s ease, visibility 0.2s, transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: 200;
+  }
+  .nav-dd:has([aria-expanded="true"]) .nav-dd-panel {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+  .nav-dd-card {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 24px 60px rgba(0,0,0,0.12), 0 0 0 1px rgba(10,10,14,0.05);
+    padding: 10px;
+    min-width: 340px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+  .nav-dd-card.wide { min-width: 380px; }
+  .nav-dd-item {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding: 10px 12px;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: background 0.15s;
+  }
+  .nav-dd-item:hover { background: #fffbf6; }
+  .nav-dd-item .lab {
+    font-size: 13.5px;
+    font-weight: 600;
+    color: #0a0a0e;
+  }
+  .nav-dd-item .desc {
+    font-size: 11.5px;
+    color: #71717a;
+    line-height: 1.3;
+  }
+  .nav-dd-item:hover .lab { color: #ef4444; }
 
-<script>
-  const nav = document.getElementById('landing-nav');
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) nav?.classList.add('scrolled');
-    else nav?.classList.remove('scrolled');
-  });
-</script>
+  .nav-cta-ghost {
+    padding: 7px 12px;
+    color: #0a0a0e;
+    text-decoration: none;
+    font-size: 13.5px;
+    font-weight: 500;
+    border-radius: 100px;
+    opacity: 0.75;
+  }
+  .nav-cta-ghost:hover { opacity: 1; background: rgba(0,0,0,0.04); }
+  .nav-cta-primary {
+    padding: 8px 16px;
+    background: #ef4444;
+    color: white;
+    border-radius: 100px;
+    font-size: 13.5px;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(239,68,68,0.3);
+    transition: transform 0.15s, box-shadow 0.15s;
+  }
+  .nav-cta-primary:hover { transform: translateY(-1px); box-shadow: 0 6px 16px rgba(239,68,68,0.4); }
+
+  /* === HAMBURGER + MOBILE NAV OVERLAY (base styles, always loaded) === */
+  .fc-nav-burger {
+    display: none; /* hidden on desktop; shown via @media in later task */
+    background: transparent;
+    border: 0;
+    width: 44px;
+    height: 44px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+    padding: 0;
+    margin-left: 4px;
+  }
+  .fc-nav-burger span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: #0a0a0e;
+    border-radius: 2px;
+    transition: transform 200ms ease, opacity 200ms ease;
+  }
+
+  .fc-mob-nav:not([open]) { display: none; }
+  .fc-mob-nav {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    background: rgba(255,255,255,0.98);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    display: flex;
+    flex-direction: column;
+    transform: translateX(100%);
+    transition: transform 280ms cubic-bezier(0.32, 0.72, 0, 1);
+  }
+  .fc-mob-nav[open] { transform: translateX(0); }
+
+  .fc-mob-nav-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px;
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+    position: sticky;
+    top: 0;
+    background: rgba(255,255,255,0.98);
+    z-index: 2;
+  }
+  .fc-mob-nav-logo {
+    font-family: 'Poppins';
+    font-weight: 700;
+    font-size: 19px;
+    letter-spacing: -0.03em;
+    text-decoration: none;
+  }
+  .fc-mob-nav-close {
+    background: transparent;
+    border: 0;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #0a0a0e;
+  }
+
+  .fc-mob-nav-body {
+    flex: 1;
+    overflow-y: auto;
+    padding: 12px 0;
+  }
+  .fc-mob-acc-trigger {
+    width: 100%;
+    background: transparent;
+    border: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 24px;
+    font-size: 17px;
+    font-weight: 600;
+    color: #0a0a0e;
+    cursor: pointer;
+    font-family: inherit;
+    text-align: left;
+  }
+  .fc-mob-acc-caret {
+    transition: transform 200ms ease;
+  }
+  .fc-mob-acc[open] .fc-mob-acc-trigger .fc-mob-acc-caret {
+    transform: rotate(180deg);
+  }
+
+  .fc-mob-link {
+    display: block;
+    padding: 14px 40px;
+    font-size: 15px;
+    color: #525252;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 150ms ease;
+    min-height: 44px;
+  }
+  .fc-mob-link:hover, .fc-mob-link:focus-visible {
+    background: rgba(239,68,68,0.05);
+    color: #ef4444;
+  }
+  .fc-mob-link.flat {
+    padding: 16px 24px;
+    font-size: 17px;
+    font-weight: 600;
+    color: #0a0a0e;
+  }
+  .fc-mob-link.flat.highlight {
+    color: #ef4444;
+  }
+
+  .fc-mob-nav-foot {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 16px 20px;
+    border-top: 1px solid rgba(0,0,0,0.06);
+    position: sticky;
+    bottom: 0;
+    background: rgba(255,255,255,0.98);
+  }
+  .fc-mob-cta-ghost, .fc-mob-cta-primary {
+    flex: 1;
+    text-align: center;
+    padding: 14px 16px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 15px;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .fc-mob-cta-ghost {
+    border: 2px solid rgba(0,0,0,0.1);
+    color: #0a0a0e;
+    background: transparent;
+  }
+  .fc-mob-cta-primary {
+    flex-basis: 100%;
+    background: #ef4444;
+    color: white;
+    box-shadow: 0 4px 0 #b91c1c;
+  }
+  .fc-mob-cta-note { flex-basis: 100%; text-align: center; font-size: 13px; font-weight: 700; color: #0a0a0e; }
+
+  :global(body:has(#mobile-nav-overlay[open])) { overflow: hidden; }
+
+  /* === SCHMALER DESKTOP (1081 bis 1279px): Demo-Link und Ressourcen nur im Overlay/Footer, Menü enger, kein Umbruch === */
+  .fc-nav-menu .nav-link, .nav-cta-ghost, .nav-cta-primary { white-space: nowrap; }
+  @media (max-width: 1279px) {
+    .fc-nav-inner { gap: 10px; }
+    .fc-nav-left { gap: 10px; }
+    .fc-nav-menu .nav-link { padding-left: 9px; padding-right: 9px; }
+    .fc-nav-menu .nav-link[href="/ressourcen/"],
+    .fc-nav-right .nav-cta-ghost[href="/demo/"] { display: none; }
+  }
+
+  /* === TABLET NAV (≤1080px): Desktop-Menü passt nicht mehr in die Pille → Burger === */
+  @media (max-width: 1080px) {
+    .fc-nav-menu { display: none; }
+    .fc-nav-burger { display: flex; }
+    .fc-nav-right { gap: 0; flex-shrink: 0; }
+    /* CTAs wandern ins Burger-Overlay — in der Top-Bar ausblenden */
+    .fc-nav-right .nav-cta-ghost,
+    .fc-nav-right .nav-cta-primary { display: none; }
+  }
+
+  @media (max-width: 768px) {
+    /* --- Nav --- */
+    .fc-nav { padding: 12px 16px 0; }
+    .fc-nav-inner {
+      width: 100%;
+      max-width: 100%;
+      padding: 6px 6px 6px 14px;
+      gap: 8px;
+      box-sizing: border-box;
+    }
+    .fc-nav-left { gap: 8px; flex: 1; min-width: 0; }
+
+  }
+  @media (max-width: 480px) {
+    /* --- Nav --- */
+    .fc-nav { padding: 10px 12px 0; }
+    .fc-nav-inner { padding: 5px 5px 5px 12px; gap: 6px; }
+    .fc-logo { font-size: 17px; gap: 8px; }
+    .fc-logo .lg { width: 28px; height: 28px; }
+
+  }
+
+  @keyframes nav-pulse { 50% { opacity: .45; } }
+  .fc-mob-nav { width: 100%; height: 100dvh; max-width: none; max-height: none; margin: 0; padding: 0; border: none; }
+  .fc-mob-acc-trigger { list-style: none; }
+  .fc-mob-acc-trigger::-webkit-details-marker { display: none; }
+  .fc-mob-nav-head, .fc-mob-nav-foot { flex-shrink: 0; }
+  .fc-mob-nav-body { min-height: 0; }
+  .nav-link[aria-current="page"], .nav-dd-item[aria-current="page"], .fc-mob-link[aria-current="page"] { background: #fff1eb; color: #a72521; }
+  .fc-nav :focus-visible, .fc-mob-nav :focus-visible { outline: 3px solid #a72521; outline-offset: 2px; }
+  @media (prefers-reduced-motion: reduce) {
+    .fc-nav *, .fc-mob-nav * { animation: none !important; transition: none !important; }
+  }
+</style>
