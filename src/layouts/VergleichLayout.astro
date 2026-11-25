@@ -2,6 +2,7 @@
 import { TRIAL_CTA_LABEL } from '../lib/cta';
 import TrialCtaNote from '../components/ui/TrialCtaNote.astro';
 import MarketingLayout from './MarketingLayout.astro';
+import FeatureTable from '../components/vergleich/FeatureTable.astro';
 import CTASection from '../components/landing/CTASection.astro';
 
 interface ComparisonRow {
@@ -57,12 +58,6 @@ const migrationSteps = [
   { step: "4", title: "Loslegen", desc: "Sofort mit KI-gestütztem Recruiting starten." },
 ];
 
-function statusIcon(status: string) {
-  if (status === 'check') return { svg: '<svg class="h-5 w-5 text-green-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>', color: 'text-green-600' };
-  if (status === 'x') return { svg: '<svg class="h-5 w-5 text-red-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>', color: 'text-red-500' };
-  return { svg: '<svg class="h-5 w-5 text-yellow-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>', color: 'text-yellow-500' };
-}
-
 const webPageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
@@ -103,251 +98,117 @@ const jsonLd = faqSchema
 ---
 
 <MarketingLayout title={title} description={description} jsonLd={jsonLd}>
-  <!-- Sichtbare Breadcrumb-Navigation -->
-  <nav aria-label="Breadcrumb" class="container mx-auto px-4 pt-6">
-    <ol class="flex flex-wrap items-center gap-1.5 text-sm text-muted-foreground">
-      <li><a href="/" class="hover:text-primary transition-colors">Start</a></li>
-      <li aria-hidden="true">
-        <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
-      </li>
-      <li><a href="/vergleich/" class="hover:text-primary transition-colors">ATS-Vergleich</a></li>
-      <li aria-hidden="true">
-        <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
-      </li>
-      <li aria-current="page" class="text-foreground font-medium">ShortSelect vs. {competitorName}</li>
-    </ol>
-  </nav>
-
-  <!-- Hero Section -->
-  <section id="vergleich-hero" class="relative overflow-hidden py-20 md:py-32">
-    <div class="absolute inset-0 bg-gradient-to-br from-primary/10 via-accent/5 to-background"></div>
-    <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,hsl(var(--primary)/0.15),transparent_50%)]"></div>
-    <div class="absolute top-20 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-float-slow"></div>
-    <div class="absolute bottom-20 right-10 w-96 h-96 bg-accent/10 rounded-full blur-3xl animate-float-slow" style="animation-delay: -3s;"></div>
-    <div class="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.03)_1px,transparent_1px)] bg-[size:60px_60px] [mask-image:radial-gradient(ellipse_at_center,black_30%,transparent_70%)]"></div>
-
-    <div class="container relative mx-auto px-4">
-      <div class="mx-auto max-w-4xl text-center space-y-8">
-        <div id="vergleich-hero-badge" class="hero-badge-premium transition-all duration-700" style="opacity: 0; transform: translateY(2rem);">
-          <svg class="h-4 w-4 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></svg>
-          {heroBadge}
-        </div>
-
-        <h1 id="vergleich-hero-title" class="text-4xl md:text-6xl lg:text-7xl font-display font-bold tracking-tight transition-all duration-700" style="opacity: 0; transform: translateY(2rem);">
-          ShortSelect vs.{" "}
-          <span class="relative inline-block text-primary">
-            {competitorName}
-            <svg class="absolute -bottom-2 left-0 w-full" viewBox="0 0 300 12" fill="none">
-              <path d="M2 10C60 4 240 4 298 10" stroke="hsl(var(--primary))" stroke-width="4" stroke-linecap="round" id="vergleich-hero-underline" style="stroke-dasharray: 300; stroke-dashoffset: 300; transition: stroke-dashoffset 1s ease-out;"/>
-            </svg>
-          </span>
-        </h1>
-
-        <p id="vergleich-hero-subtitle" class="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto transition-all duration-700" style="opacity: 0; transform: translateY(2rem);">
-          {heroSubline}
-        </p>
-
-        <div id="vergleich-hero-cta" class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4 transition-all duration-700 flex-wrap" style="opacity: 0; transform: translateY(2rem);">
-          <a href="https://app.shortselect.com/signup" class="inline-flex items-center gap-2 px-8 py-3 bg-primary text-primary-foreground font-semibold rounded-lg text-base group relative overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-            <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
-            <span class="relative z-10 flex items-center gap-2">
-              <svg class="h-5 w-5 animate-pulse" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/><path d="M20 3v4"/><path d="M22 5h-4"/></svg>
-              {TRIAL_CTA_LABEL}
-              <svg class="h-5 w-5 transition-transform group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-            </span>
-          </a>
-          <TrialCtaNote />
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Quick Summary Cards -->
-  <section id="vergleich-summary" class="py-16 md:py-24 bg-muted/30">
-    <div class="container mx-auto px-4">
-      <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-        <div class="vergleich-summary-card rounded-xl border-2 border-primary/20 bg-primary/5 p-6 transition-all duration-500" style="opacity: 0; transform: translateY(3rem); transition-delay: 150ms;">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center">
-              <svg class="h-5 w-5 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+  <section class="duel-hero" id="vergleich-hero">
+    <div class="duel-width">
+      <nav aria-label="Breadcrumb" class="duel-crumbs">
+        <a href="/">Start</a><span aria-hidden="true">/</span><a href="/vergleich/">ATS-Vergleich</a>
+        <span aria-hidden="true">/</span><span aria-current="page">ShortSelect vs. {competitorName}</span>
+      </nav>
+      <div class="duel-grid">
+        <div class="duel-copy">
+          <p class="duel-label">{heroBadge}</p>
+          <h1>ShortSelect vs. <span>{competitorName}</span></h1>
+          <p class="duel-lead">{heroSubline}</p>
+          <div class="duel-actions">
+            <div>
+              <a class="duel-button" href="https://app.shortselect.com/signup">{TRIAL_CTA_LABEL} <span aria-hidden="true">→</span></a>
+              <TrialCtaNote class="mt-3" />
             </div>
-            <h3 class="text-xl font-display font-bold">ShortSelect</h3>
+            <a class="table-jump" href="#vergleich-table">Zum Feature-Vergleich <span aria-hidden="true">↓</span></a>
           </div>
-          <p class="text-base text-muted-foreground mb-4">{ssDescription}</p>
-          <ul class="space-y-3">
-            {ssHighlights.map((item) => (
-              <li class="flex items-center gap-2 text-sm">
-                <svg class="h-4 w-4 text-green-600 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-                <span>{item}</span>
-              </li>
-            ))}
-          </ul>
         </div>
 
-        <div class="vergleich-summary-card rounded-xl border p-6 transition-all duration-500" style="opacity: 0; transform: translateY(3rem); transition-delay: 250ms;">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="h-10 w-10 rounded-lg bg-muted flex items-center justify-center">
-              <svg class="h-5 w-5 text-muted-foreground" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="20" x="4" y="2" rx="2" ry="2"/><path d="M9 22v-4h6v4"/><path d="M8 6h.01"/><path d="M16 6h.01"/><path d="M12 6h.01"/><path d="M12 10h.01"/><path d="M12 14h.01"/><path d="M16 10h.01"/><path d="M16 14h.01"/><path d="M8 10h.01"/><path d="M8 14h.01"/></svg>
-            </div>
-            <h3 class="text-xl font-display font-bold">{competitorName}</h3>
-          </div>
-          <p class="text-base text-muted-foreground mb-4">{compDescription}</p>
-          <ul class="space-y-3">
-            {compHighlights.map((item) => (
-              <li class="flex items-center gap-2 text-sm">
-                <svg class="h-4 w-4 text-muted-foreground shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-                <span class="text-muted-foreground">{item}</span>
-              </li>
-            ))}
-          </ul>
+        <div class="duel-profiles" id="vergleich-summary">
+          {[
+            { name: 'ShortSelect', description: ssDescription, highlights: ssHighlights },
+            { name: competitorName, description: compDescription, highlights: compHighlights },
+          ].map(({name, description, highlights}, index) => (
+            <article class:list={['duel-profile', {'duel-brand': index === 0}]}>
+              <header>
+                {index === 0 ? <img src="/icon.svg" alt="" width="36" height="36"/> : <span class="duel-initial" aria-hidden="true">{name[0]}</span>}
+                <div><h2>{name}</h2><p>{description}</p></div>
+              </header>
+              <ul>{highlights.map(item => <li>{item}</li>)}</ul>
+            </article>
+          ))}
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Feature Comparison Table -->
-  <section id="vergleich-table" class="py-16 md:py-24">
-    <div class="container mx-auto px-4">
-      <div class="max-w-4xl mx-auto">
-        <div id="vergleich-table-header" class="text-center mb-12 transition-all duration-700" style="opacity: 0; transform: translateY(2rem);">
-          <h2 class="text-3xl md:text-4xl font-display font-bold tracking-tight mb-4">Feature-Vergleich im Detail</h2>
-          <p class="text-muted-foreground text-lg">Ein ehrlicher Blick auf die Unterschiede.</p>
-        </div>
-
-        <div class="vergleich-table-row grid grid-cols-3 gap-4 px-4 py-3 rounded-t-lg bg-muted font-semibold text-sm transition-all duration-500" style="opacity: 0; transform: translateY(2rem); transition-delay: 100ms;">
-          <span>Feature</span>
-          <span class="text-center">ShortSelect</span>
-          <span class="text-center">{competitorName}</span>
-        </div>
-
-        {comparisonData.map((row, index) => (
-          <div class="vergleich-table-row grid grid-cols-3 gap-4 px-4 py-4 border-b last:border-b-0 items-center transition-all duration-500" style={`opacity: 0; transform: translateY(2rem); transition-delay: ${Math.min((index + 2) * 100, 500)}ms;`}>
-            <span class="font-medium text-sm">{row.feature}</span>
-            <div class="flex items-center justify-center gap-2 bg-primary/5 rounded-lg py-2">
-              <Fragment set:html={statusIcon(row.ssStatus).svg} />
-              <span class="text-sm hidden sm:inline">{row.ssLabel}</span>
-            </div>
-            <div class="flex items-center justify-center gap-2 py-2">
-              <Fragment set:html={statusIcon(row.compStatus).svg} />
-              <span class="text-sm hidden sm:inline text-muted-foreground">{row.compLabel}</span>
-            </div>
-          </div>
-        ))}
+  <section id="vergleich-table" class="duel-section">
+    <div class="duel-width">
+      <div class="duel-heading">
+        <h2>Feature-Vergleich <span>im Detail.</span></h2>
+        <p>Ein ehrlicher Blick auf die Unterschiede.</p>
       </div>
+      <FeatureTable
+        label={`Feature-Vergleich von ShortSelect und ${competitorName}`}
+        columns={['ShortSelect', competitorName]}
+        rows={comparisonData.map(row => ({
+          feature: row.feature,
+          values: [
+            {status: row.ssStatus, label: row.ssLabel},
+            {status: row.compStatus, label: row.compLabel},
+          ],
+        }))}
+      />
     </div>
   </section>
 
-  <!-- When Competitor / When ShortSelect -->
-  <section id="vergleich-when" class="py-16 md:py-24 bg-muted/30">
-    <div class="container mx-auto px-4">
-      <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-12">
-        <div class="vergleich-when-card transition-all duration-500" style="opacity: 0; transform: translateY(3rem); transition-delay: 150ms;">
-          <span class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold bg-secondary text-secondary-foreground mb-4">Faire Einschätzung</span>
-          <h2 class="text-2xl md:text-3xl font-display font-bold tracking-tight mb-4">{whenCompBetter.title}</h2>
-          <p class="text-muted-foreground mb-6">{whenCompBetter.intro}</p>
-          <ul class="space-y-3">
-            {whenCompBetter.items.map((item) => (
-              <li class="flex items-start gap-2 text-sm">
-                <svg class="h-4 w-4 text-muted-foreground shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
-                <span class="text-muted-foreground">{item}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        <div class="vergleich-when-card transition-all duration-500" style="opacity: 0; transform: translateY(3rem); transition-delay: 300ms;">
-          <span class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold bg-primary/10 text-primary border-primary/20 mb-4">Empfehlung</span>
-          <h2 class="text-2xl md:text-3xl font-display font-bold tracking-tight mb-4">{whenSSBetter.title}</h2>
-          <p class="text-muted-foreground mb-6">{whenSSBetter.intro}</p>
-          <ul class="space-y-3">
-            {whenSSBetter.items.map((item) => (
-              <li class="flex items-start gap-2 text-sm">
-                <svg class="h-4 w-4 text-green-600 shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-                <span>{item}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </div>
+  <section id="vergleich-when" class="duel-section duel-decision">
+    <div class="duel-width decision-grid">
+      {[
+        { label: 'Faire Einschätzung', data: whenCompBetter },
+        { label: 'Empfehlung', data: whenSSBetter },
+      ].map(({label, data}) => (
+        <article>
+          <p class="duel-label">{label}</p>
+          <h2>{data.title}</h2>
+          <p>{data.intro}</p>
+          <ul>{data.items.map(item => <li>{item}</li>)}</ul>
+        </article>
+      ))}
     </div>
   </section>
 
-  <!-- Extra slot for page-specific content -->
   <slot />
 
-  <!-- Migration Section -->
-  <section id="vergleich-migration" class="py-16 md:py-24 relative overflow-hidden">
-    <div class="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl animate-float-slow"></div>
-    <div class="absolute bottom-0 left-0 w-48 h-48 bg-accent/5 rounded-full blur-3xl animate-float-slow" style="animation-delay: -2s;"></div>
-
-    <div class="container relative mx-auto px-4">
-      <div class="max-w-4xl mx-auto">
-        <div id="vergleich-migration-header" class="text-center mb-12 transition-all duration-700" style="opacity: 0; transform: translateY(2rem);">
-          <span class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold bg-secondary text-secondary-foreground mb-4">Einfacher Wechsel</span>
-          <h2 class="text-3xl md:text-4xl font-display font-bold tracking-tight mb-4">
-            In 15 Minuten{" "}
-            <span class="relative inline-block text-primary">umgezogen</span>
-          </h2>
-          <p class="text-muted-foreground text-lg">Der Wechsel von {competitorName} zu ShortSelect ist einfacher als gedacht.</p>
-        </div>
-
-        <div class="relative">
-          <div class="absolute left-8 top-0 bottom-0 w-0.5 bg-border hidden md:block"></div>
-
-          <div class="space-y-8">
-            {migrationSteps.map((step, index) => (
-              <div class="vergleich-migration-step flex items-start gap-6 transition-all duration-500" style={`opacity: 0; transform: translateY(3rem); transition-delay: ${150 + index * 100}ms;`}>
-                <div class="relative z-10 flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-primary text-white font-display font-bold text-lg shadow-lg">
-                  {step.step}
-                </div>
-                <div class="pt-3">
-                  <h3 class="text-lg font-display font-bold mb-1">{step.title}</h3>
-                  <p class="text-muted-foreground">{step.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        <div id="vergleich-migration-cta" class="text-center mt-12 transition-all duration-700" style="opacity: 0; transform: translateY(2rem);">
-          <a href="https://app.shortselect.com/signup" class="inline-flex items-center gap-2 px-8 py-3 bg-primary text-primary-foreground font-semibold rounded-lg text-base group transition-all duration-300 hover:scale-105">
-            {TRIAL_CTA_LABEL}
-            <svg class="h-5 w-5 transition-transform group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-          </a>
-          <TrialCtaNote class="mt-3" />
-        </div>
+  <section id="vergleich-migration" class="duel-section">
+    <div class="duel-width">
+      <div class="duel-heading">
+        <p class="duel-label">Einfacher Wechsel</p>
+        <h2>In 15 Minuten <span>umgezogen.</span></h2>
+        <p>Der Wechsel von {competitorName} zu ShortSelect ist einfacher als gedacht.</p>
+      </div>
+      <ol class="migration-track">
+        {migrationSteps.map(step => (
+          <li>
+            <span class="step" aria-hidden="true">{step.step}</span>
+            <h3>{step.title}</h3>
+            <p>{step.desc}</p>
+          </li>
+        ))}
+      </ol>
+      <div class="migration-action">
+        <a class="duel-button" href="https://app.shortselect.com/signup">{TRIAL_CTA_LABEL} <span aria-hidden="true">→</span></a>
+        <TrialCtaNote class="mt-3" />
       </div>
     </div>
   </section>
 
   {hasFaqs && (
-    <section id="vergleich-faq" class="py-16 md:py-24 bg-muted/30">
-      <div class="container mx-auto px-4">
-        <div id="vergleich-faq-header" class="text-center space-y-4 mb-12 transition-all duration-700" style="opacity: 0; transform: translateY(2rem);">
-          <h2 class="text-3xl md:text-4xl font-display font-bold tracking-tight">
-            Häufige Fragen zu{" "}
-            <span class="text-primary">ShortSelect vs. {competitorName}</span>
-          </h2>
-          <p class="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Antworten auf die wichtigsten Fragen zur Entscheidung zwischen ShortSelect und {competitorName}.
-          </p>
+    <section class="duel-section duel-faq" id="vergleich-faq">
+      <div class="duel-width faq-grid">
+        <div class="duel-heading">
+          <h2>Häufige Fragen zu <span>ShortSelect vs. {competitorName}</span></h2>
+          <p>Antworten auf die wichtigsten Fragen zur Entscheidung zwischen ShortSelect und {competitorName}.</p>
         </div>
-
-        <div class="max-w-3xl mx-auto space-y-4">
-          {faqs.map((faq, i) => (
-            <details
-              class="vergleich-faq-item group border rounded-lg px-6 bg-background transition-all duration-500 hover:border-primary/30"
-              style={`opacity: 0; transition-delay: ${i * 50}ms;`}
-            >
-              <summary class="flex items-center justify-between py-4 cursor-pointer text-left font-semibold list-none [&::-webkit-details-marker]:hidden">
-                <span>{faq.question}</span>
-                <svg class="h-5 w-5 text-muted-foreground shrink-0 ml-4 transition-transform duration-200 group-open:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="m6 9 6 6 6-6" />
-                </svg>
-              </summary>
-              <div class="pb-4 text-muted-foreground">
-                {faq.answerHtml ? <Fragment set:html={faq.answerHtml} /> : faq.answer}
-              </div>
+        <div class="duel-questions">
+          {faqs.map(faq => (
+            <details>
+              <summary>{faq.question}</summary>
+              <p>{faq.answerHtml ? <Fragment set:html={faq.answerHtml} /> : faq.answer}</p>
             </details>
           ))}
         </div>
@@ -358,143 +219,68 @@ const jsonLd = faqSchema
   <CTASection />
 </MarketingLayout>
 
-<script is:inline>
-(function() {
-  // --- Hero: above the fold, use requestAnimationFrame ---
-  var heroEls = [
-    { id: 'vergleich-hero-badge', delay: 0 },
-    { id: 'vergleich-hero-title', delay: 100 },
-    { id: 'vergleich-hero-subtitle', delay: 200 },
-    { id: 'vergleich-hero-cta', delay: 300 }
-  ];
-  requestAnimationFrame(function() {
-    heroEls.forEach(function(item) {
-      var el = document.getElementById(item.id);
-      if (el) {
-        setTimeout(function() {
-          el.style.opacity = '1';
-          el.style.transform = 'translateY(0)';
-        }, item.delay);
-      }
-    });
-    // SVG underline after title reveals
-    setTimeout(function() {
-      var underline = document.getElementById('vergleich-hero-underline');
-      if (underline) {
-        underline.style.strokeDashoffset = '0';
-      }
-    }, 600);
-  });
-
-  // --- Summary cards: IntersectionObserver ---
-  var summarySection = document.getElementById('vergleich-summary');
-  if (summarySection) {
-    var summaryCards = summarySection.querySelectorAll('.vergleich-summary-card');
-    var summaryObserver = new IntersectionObserver(function(entries) {
-      entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-          summaryCards.forEach(function(card) {
-            card.style.opacity = '1';
-            card.style.transform = 'translateY(0)';
-          });
-          summaryObserver.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.1 });
-    summaryObserver.observe(summarySection);
+<style>
+  .duel-hero { background: radial-gradient(ellipse at 80% 42%, #ffe7db, transparent 55%), #fffbf6; padding: 1.8rem 0 clamp(3.7rem, 6.4vw, 6rem); }
+  .duel-width { margin-inline: auto; width: min(72rem, calc(100% - 3rem)); }
+  .duel-crumbs { display: flex; align-items: center; flex-wrap: wrap; gap: .45rem; font-size: .8rem; color: #625850; }
+  .duel-crumbs a:hover, .table-jump:hover { color: #a72c25; text-decoration: underline; }
+  .duel-grid { display: grid; align-items: center; grid-template-columns: minmax(0,1.03fr) minmax(0,1fr); gap: clamp(2.5rem, 6vw, 6rem); padding-top: clamp(2rem, 4.5vw, 4.5rem); }
+  .duel-label { display: inline-flex; align-items: center; gap: .5rem; font-size: .85rem; font-weight: 750; color: #912f22; }
+  .duel-label::before { content: ''; width: 1.8rem; height: 3px; border-radius: 2px; background: #ef4444; }
+  .duel-copy h1 { margin-block: 1rem 1.7rem; font-size: clamp(3rem, 5.6vw, 5.6rem); font-weight: 800; line-height: 1.02; letter-spacing: -.066em; overflow-wrap: anywhere; }
+  .duel-copy h1 span { display: block; color: #c1322e; text-decoration: underline wavy #ed8c74 .04em; text-underline-offset: .11em; }
+  .duel-lead { color: #594f49; font-size: clamp(1rem, 1.45vw, 1.18rem); line-height: 1.6; max-width: 45ch; }
+  .duel-actions { display: flex; flex-wrap: wrap; align-items: baseline; gap: 1.1rem 1.4rem; margin-top: 1.8rem; }
+  .duel-button { display: inline-flex; justify-content: center; align-items: center; gap: .7rem; padding: .85rem 1.25rem; border-radius: .85rem; background: #c7312e; color: white; font-weight: 750; box-shadow: 0 4px 0 #8e201f; }
+  .duel-button:hover { background: #af2927; }
+  .table-jump { color: #3d3530; font-weight: 700; font-size: .92rem; text-decoration: underline; text-underline-offset: .25rem; }
+  .duel-profiles { display: grid; gap: .9rem; padding: .45rem; }
+  .duel-profile { padding: clamp(1.1rem, 2vw, 1.7rem); background: white; border: 1px solid #d6cfc7; border-radius: 1.35rem; box-shadow: 0 4px 0 #ded5ca; transform: rotate(1deg); }
+  .duel-profile.duel-brand { background: linear-gradient(135deg, #ffe4dc, #fff1df); border-color: #e89076; box-shadow: 0 4px 0 #e9a78d; transform: rotate(-1deg); }
+  .duel-profile header { display: flex; align-items: center; gap: .75rem; border-bottom: 1px solid #8d6f592e; padding-bottom: .75rem; }
+  .duel-profile h2 { font-size: clamp(1.2rem, 2vw, 1.6rem); line-height: 1.2; font-weight: 800; }
+  .duel-profile header p { color: #65564e; font-size: .82rem; margin-top: .15rem; }
+  .duel-profile img, .duel-initial { width: 2.35rem; height: 2.35rem; flex: none; }
+  .duel-initial { display: grid; place-items: center; background: #f1eae1; border-radius: .65rem; text-transform: uppercase; color: #634d40; font: 800 1.35rem Poppins, sans-serif; }
+  .duel-profile ul { display: grid; align-content: start; grid-template-columns: repeat(2,minmax(0,1fr)); gap: .55rem .85rem; padding-top: .85rem; font-size: .82rem; }
+  .duel-profile li, .decision-grid li { display: flex; align-items: baseline; gap: .5rem; }
+  .duel-profile li::before, .decision-grid li::before { content: ''; width: .36rem; height: .36rem; flex: none; border-radius: 50%; background: #a18d7f; transform: translateY(-.1em); }
+  .duel-brand li::before, .decision-grid article:nth-child(2) li::before { background: #d34d3a; }
+  .duel-section { padding: clamp(3.25rem, 6.5vw, 6rem) 0; background-color: white; }
+  .duel-heading { max-width: 45rem; margin-bottom: clamp(1.6rem, 3vw, 2.75rem); }
+  .duel-heading h2, .decision-grid h2 { font-size: clamp(2.05rem, 3.6vw, 3.4rem); font-weight: 800; line-height: 1.12; letter-spacing: -.053em; overflow-wrap: anywhere; }
+  .duel-heading h2 span { color: #b8362b; }
+  .duel-heading p:not(.duel-label), .decision-grid article > p:not(.duel-label) { color: #655952; margin-top: .9rem; }
+  .duel-heading .duel-label { margin-bottom: .8rem; }
+  .duel-decision { background: #fff8ef; }
+  .decision-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(2rem,5vw,5rem); }
+  .decision-grid article { padding-block: 1.25rem; border-top: 3px solid #c9bcae; }
+  .decision-grid article:nth-child(2) { border-color: #df6550; }
+  .decision-grid h2 { margin-top: .75rem; font-size: clamp(1.65rem, 2.8vw, 2.75rem); }
+  .decision-grid ul { margin-top: 1.25rem; display: grid; gap: .6rem; }
+  .migration-track { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 1.5rem; }
+  .migration-track li { padding-top: 1rem; border-top: 1px solid #dacdc1; }
+  .migration-track .step { display: grid; place-items: center; width: 2.5rem; height: 2.5rem; border-radius: .78rem; background: #ffe1d3; color: #923326; font: 800 1.25rem Poppins,sans-serif; transform: rotate(-4deg); box-shadow: 0 3px 0 #e5bca9; }
+  .migration-track h3 { font-size: 1.17rem; margin-block: 1.1rem .4rem; }
+  .migration-track p, .duel-questions p { color: #5b534f; line-height: 1.6; }
+  .migration-action { margin-top: 2.5rem; text-align: center; }
+  .duel-faq { background: #fffbf6; }
+  .faq-grid { display: grid; grid-template-columns: minmax(0,.75fr) minmax(0,1.25fr); gap: clamp(2rem,5vw,5rem); }
+  .duel-questions details { border-bottom: 1px solid #dfd4ca; }
+  .duel-questions details:first-child { border-top: 1px solid #dfd4ca; }
+  .duel-questions summary { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; cursor: pointer; padding: 1.15rem 0; font-weight: 650; }
+  .duel-questions summary::after { content: '+'; color: #b5342d; font-size: 1.2rem; }
+  .duel-questions details[open] summary::after { content: '−'; }
+  .duel-questions summary::-webkit-details-marker { display: none; }
+  .duel-questions p { padding-bottom: 1rem; }
+  @media (max-width: 49rem) {
+    .duel-width { width: min(38rem, calc(100% - 2.5rem)); }
+    .duel-grid, .decision-grid, .faq-grid { grid-template-columns: minmax(0,1fr); }
+    .duel-copy h1 { font-size: clamp(2.85rem, 10vw, 4.65rem); }
+    .migration-track { grid-template-columns: 1fr 1fr; }
+    .faq-grid { gap: 0; }
   }
-
-  // --- Comparison table: IntersectionObserver ---
-  var tableSection = document.getElementById('vergleich-table');
-  if (tableSection) {
-    var tableHeader = document.getElementById('vergleich-table-header');
-    var tableRows = tableSection.querySelectorAll('.vergleich-table-row');
-    var tableObserver = new IntersectionObserver(function(entries) {
-      entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-          if (tableHeader) {
-            tableHeader.style.opacity = '1';
-            tableHeader.style.transform = 'translateY(0)';
-          }
-          tableRows.forEach(function(row) {
-            row.style.opacity = '1';
-            row.style.transform = 'translateY(0)';
-          });
-          tableObserver.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.1 });
-    tableObserver.observe(tableSection);
+  @media (max-width: 26rem) {
+    .duel-profile ul { grid-template-columns: minmax(0,1fr); }
   }
-
-  // --- When section: IntersectionObserver ---
-  var whenSection = document.getElementById('vergleich-when');
-  if (whenSection) {
-    var whenCards = whenSection.querySelectorAll('.vergleich-when-card');
-    var whenObserver = new IntersectionObserver(function(entries) {
-      entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-          whenCards.forEach(function(card) {
-            card.style.opacity = '1';
-            card.style.transform = 'translateY(0)';
-          });
-          whenObserver.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.1 });
-    whenObserver.observe(whenSection);
-  }
-
-  // --- Migration section: IntersectionObserver ---
-  var migrationSection = document.getElementById('vergleich-migration');
-  if (migrationSection) {
-    var migrationHeader = document.getElementById('vergleich-migration-header');
-    var migrationSteps = migrationSection.querySelectorAll('.vergleich-migration-step');
-    var migrationCta = document.getElementById('vergleich-migration-cta');
-    var migrationObserver = new IntersectionObserver(function(entries) {
-      entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-          if (migrationHeader) {
-            migrationHeader.style.opacity = '1';
-            migrationHeader.style.transform = 'translateY(0)';
-          }
-          migrationSteps.forEach(function(step) {
-            step.style.opacity = '1';
-            step.style.transform = 'translateY(0)';
-          });
-          if (migrationCta) {
-            setTimeout(function() {
-              migrationCta.style.opacity = '1';
-              migrationCta.style.transform = 'translateY(0)';
-            }, 500);
-          }
-          migrationObserver.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.1 });
-    migrationObserver.observe(migrationSection);
-  }
-
-  // --- FAQ section: IntersectionObserver ---
-  var faqSection = document.getElementById('vergleich-faq');
-  if (faqSection) {
-    var faqHeader = document.getElementById('vergleich-faq-header');
-    var faqItems = faqSection.querySelectorAll('.vergleich-faq-item');
-    var faqObserver = new IntersectionObserver(function(entries) {
-      entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-          if (faqHeader) {
-            faqHeader.style.opacity = '1';
-            faqHeader.style.transform = 'translateY(0)';
-          }
-          faqItems.forEach(function(item) {
-            item.style.opacity = '1';
-          });
-          faqObserver.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.1 });
-    faqObserver.observe(faqSection);
-  }
-})();
-</script>
+</style>

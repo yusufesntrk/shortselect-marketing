@@ -1,0 +1,60 @@
+---
+import { SIGNUP_URL, TRIAL_CTA_LABEL } from '../../lib/cta';
+import TrialCtaNote from '../ui/TrialCtaNote.astro';
+
+interface Props {
+  eyebrow: string;
+  title: string;
+  emphasis: string;
+  suffix?: string;
+  description: string;
+  secondaryLink: { href: string; text: string };
+  indexHeading: string;
+  indexLinks: { href: string; text: string }[];
+}
+const { eyebrow, title, emphasis, suffix, description, secondaryLink, indexHeading, indexLinks } = Astro.props;
+---
+<section class="guide-hero">
+  <div class="guide-grid">
+    <div class="guide-copy">
+      <p class="guide-eyebrow">{eyebrow}</p>
+      <h1>{title} <span>{emphasis}</span> {suffix}</h1>
+      <p class="guide-lead">{description}</p>
+      <div class="guide-actions">
+        <div>
+          <a href={SIGNUP_URL} class="guide-signup">{TRIAL_CTA_LABEL} <span aria-hidden="true">→</span></a>
+          <TrialCtaNote class="mt-3" />
+        </div>
+        <a href={secondaryLink.href} class="guide-secondary">{secondaryLink.text}</a>
+      </div>
+    </div>
+    <nav class="guide-index" aria-label={indexHeading}>
+      <p>{indexHeading}</p>
+      <ul>
+        {indexLinks.map(link => (
+          <li><a href={link.href}>{link.text} <span aria-hidden="true">↗</span></a></li>
+        ))}
+      </ul>
+    </nav>
+  </div>
+</section>
+<style>
+  .guide-hero { padding: clamp(3rem,6vw,6rem) 0; background: radial-gradient(ellipse at 77% 41%, #ffe9db, transparent 54%), #fffbf6; }
+  .guide-grid { display: grid; grid-template-columns: minmax(0,1.55fr) minmax(0,.85fr); align-items: center; gap: clamp(2.25rem,6vw,6rem); margin-inline: auto; width: min(70rem,calc(100% - 3rem)); }
+  .guide-eyebrow { color: #8e3324; font-size: .85rem; font-weight: 750; }
+  .guide-copy h1 { margin-block: .9rem 1.4rem; font-size: clamp(2.85rem,5vw,5.05rem); line-height: 1.03; font-weight: 800; letter-spacing: -.063em; overflow-wrap: anywhere; }
+  .guide-copy h1 span { color: #b2362b; text-decoration: underline wavy #f3a98f .038em; text-underline-offset: .1em; }
+  .guide-lead { max-width: 56ch; color: #554c46; line-height: 1.6; font-size: 1.05rem; }
+  .guide-actions { margin-top: 1.8rem; display: flex; gap: 1.1rem 1.5rem; flex-wrap: wrap; align-items: baseline; }
+  .guide-signup { display: inline-flex; align-items: center; gap: .75rem; background: #c7312e; color: white; font-weight: 750; padding: .82rem 1.2rem; border-radius: .85rem; box-shadow: 0 4px 0 #8e201f; }
+  .guide-signup:hover { background: #a72925; }
+  .guide-secondary { font-weight: 650; text-decoration: underline; text-underline-offset: 4px; }
+  .guide-index { position: relative; transform: rotate(1deg); border-radius: 1.25rem; padding: clamp(1.4rem,3vw,2.25rem); background: #fff5cf; border: 1px solid #ead9a9; box-shadow: 0 5px 0 #e1cc9f, 0 22px 42px #9d704019; }
+  .guide-index::before { content: ''; position: absolute; height: 1.3rem; width: 4.5rem; top: -.6rem; right: 14%; background: #fac8a6d9; transform: rotate(6deg); }
+  .guide-index p { font: 800 clamp(1.25rem,2vw,1.65rem)/1.2 Poppins,sans-serif; letter-spacing: -.035em; margin-bottom: 1rem; }
+  .guide-index li { border-top: 1px solid #cdbd90; }
+  .guide-index a { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: .75rem .1rem; color: #44382e; font-weight: 600; }
+  .guide-index a:hover, .guide-secondary:hover { color: #9e2d24; text-decoration: underline; }
+  .guide-index a span { color: #aa4634; }
+  @media (max-width: 48rem) { .guide-grid { grid-template-columns: 1fr; width: min(38rem,calc(100% - 2.5rem)); } }
+</style>

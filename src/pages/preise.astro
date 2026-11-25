@@ -7,12 +7,11 @@ import CTASection from '../components/landing/CTASection.astro';
 import {
   PRO_PRICE_MONTHLY_EUR,
   PRO_PRICE_ANNUAL_EUR,
-  PRO_ANNUAL_MONTHS_FREE,
+  PRO_CYCLES_PER_YEAR,
   SOURCING_CREDITS_PER_SEAT_MONTHLY,
   SOURCING_CREDITS_PER_SEAT_ANNUAL,
   TRIAL_SOURCING_CREDITS,
   CREDIT_PACK_SIZE,
-  CREDIT_PACK_PRICE_EUR,
   CREDIT_PACK_PRICE_LABEL,
 } from '../lib/billing-constants';
 
@@ -23,13 +22,13 @@ const SIGNUP_URL = 'https://app.shortselect.com/signup?utm_source=marketing&utm_
 // Anzeige-Konvention (Close-CRM-Style): Jahresplan wird als Zykluspreis
 // "bei jährlicher Abrechnung" beworben, die Jahressumme steht nur dezent
 // im Kleingedruckten.
-const ANNUAL_EFFECTIVE_MONTHLY = (PRO_PRICE_ANNUAL_EUR / 13).toLocaleString('de-DE', {
+const ANNUAL_EFFECTIVE_MONTHLY = (PRO_PRICE_ANNUAL_EUR / PRO_CYCLES_PER_YEAR).toLocaleString('de-DE', {
   minimumFractionDigits: 2,
   maximumFractionDigits: 2,
 });
 const ANNUAL_PRICE_FORMATTED = PRO_PRICE_ANNUAL_EUR.toLocaleString('de-DE');
 const FIVE_USER_MONTHLY = (5 * PRO_PRICE_MONTHLY_EUR).toLocaleString('de-DE');
-const FIVE_USER_ANNUAL_MONTHLY = ((5 * PRO_PRICE_ANNUAL_EUR) / 13).toLocaleString('de-DE', {
+const FIVE_USER_ANNUAL_MONTHLY = ((5 * PRO_PRICE_ANNUAL_EUR) / PRO_CYCLES_PER_YEAR).toLocaleString('de-DE', {
   maximumFractionDigits: 0,
 });
 
@@ -133,209 +132,99 @@ const competitors = [
   description={`Pro Plan: ShortSelect ab ${ANNUAL_EFFECTIVE_MONTHLY} € pro User je 4 Wochen bei jährlicher Abrechnung (alle 4 Wochen ${PRO_PRICE_MONTHLY_EUR} €). 14 Tage kostenlos testen, keine Kreditkarte.`}
   jsonLd={pricingSchema}
 >
-  <!-- Hero -->
-  <section class="pt-32 pb-12">
-    <div class="container mx-auto px-4">
-      <div id="pricing-hero" class="text-center max-w-3xl mx-auto opacity-0 translate-y-8 transition-all duration-700">
-        <span class="inline-flex items-center gap-2 px-4 py-2 mb-6 rounded-full bg-primary/10 text-primary text-sm font-semibold">
-          <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
-          Alle Funktionen, ein Preis pro User
-        </span>
-        <h1 class="text-4xl md:text-5xl lg:text-6xl font-display font-bold tracking-tight mb-4">
-          Pro Plan:
-          <span class="text-primary">ab {ANNUAL_EFFECTIVE_MONTHLY} € pro User.</span>
-        </h1>
-        <p class="text-lg md:text-xl text-muted-foreground">
-          Ein Preis, kein Tier-Wirrwarr, alle Funktionen inklusive.
-        </p>
+  <section class="tariff-hero" aria-labelledby="pricing-hero">
+    <div class="tariff-grid">
+      <div class="tariff-intro">
+        <p class="tariff-label">Preise</p>
+        <h1 id="pricing-hero">Ein Preis.<br/><span>Alles drin.</span></h1>
+        <p class="tariff-lead">ShortSelect Pro ab <strong>{ANNUAL_EFFECTIVE_MONTHLY} €</strong> pro User je 4 Wochen bei jährlicher Abrechnung. Alle Funktionen inklusive.</p>
+        <a class="tariff-jump" href="#leistungen">Alle Leistungen ansehen <span aria-hidden="true">↓</span></a>
       </div>
+
+      <article class="tariff-ticket" id="pricing-card" aria-labelledby="tariff-name">
+        <header class="ticket-head">
+          <h2 id="tariff-name">ShortSelect Pro</h2>
+          <span class="saving-sticker" id="annual-saving">Spare 31 %</span>
+        </header>
+        <div class="ticket-switch" role="group" aria-label="Abrechnungszeitraum wählen">
+          <button type="button" id="interval-monthly" aria-controls="price-monthly-block" aria-pressed="false">Alle 4 Wochen</button>
+          <button type="button" id="interval-annual" aria-controls="price-annual-block" aria-pressed="true">Jährlich</button>
+        </div>
+        <div class="ticket-amounts" aria-live="polite" aria-atomic="true">
+          <div id="price-monthly-block" hidden>
+            <strong>{PRO_PRICE_MONTHLY_EUR} €</strong>
+            <p>pro User je 4 Wochen</p>
+            <small>Abrechnung alle 4 Wochen, netto zzgl. MwSt.</small>
+            <p class="ticket-credit">{SOURCING_CREDITS_PER_SEAT_MONTHLY} AI-Sourcing-Credits pro User je 4 Wochen</p>
+          </div>
+          <div id="price-annual-block">
+            <strong>{ANNUAL_EFFECTIVE_MONTHLY} €</strong>
+            <p>pro User je 4 Wochen</p>
+            <small>{ANNUAL_PRICE_FORMATTED} € bei jährlicher Abrechnung, netto zzgl. MwSt.</small>
+            <p class="ticket-credit">{SOURCING_CREDITS_PER_SEAT_ANNUAL} AI-Sourcing-Credits pro User je 4 Wochen</p>
+          </div>
+        </div>
+        <noscript><p>Bei Abrechnung alle 4 Wochen zahlst du {PRO_PRICE_MONTHLY_EUR} € netto je aktivem User.</p></noscript>
+        <div class="ticket-foot">
+          <a class="ticket-signup" href={SIGNUP_URL}>{TRIAL_CTA_LABEL} <span aria-hidden="true">→</span></a>
+          <TrialCtaNote />
+          <p class="ticket-trial">14 Tage kostenlos mit {TRIAL_SOURCING_CREDITS} AI-Sourcing-Läufen für das ganze Team. Setup in 5 Minuten.</p>
+          <p class="ticket-terms" id="annual-terms-note">Jahresabo: 12 Monate Laufzeit, kündbar mit 3 Monaten Frist zum Laufzeitende (AGB § 24).</p>
+        </div>
+      </article>
     </div>
   </section>
 
-  <!-- Pricing Card -->
-  <section class="pb-16">
-    <div class="container mx-auto px-4">
-      <div id="pricing-card" class="max-w-xl mx-auto opacity-0 translate-y-8 transition-all duration-700">
+  <section class="tariff-features" id="leistungen" aria-labelledby="tariff-features-title">
+    <div class="tariff-section-inner">
+      <h2 id="tariff-features-title">Alle Funktionen <span>inklusive.</span></h2>
+      <ul class="feature-checks">
+        {features.map((feature) => <li><span aria-hidden="true">✓</span>{feature}</li>)}
+      </ul>
+      <p class="feature-billing">Abgerechnet wird pro aktivem User in deinem Team. Neue Teammitglieder werden anteilig nachberechnet, entfernte User reduzieren die nächste Rechnung.</p>
+    </div>
+  </section>
 
-        <!-- 4-Wochen/Jahr Toggle (Close-CRM-Style: Jährlich vorausgewählt) -->
-        <div class="flex flex-col items-center gap-2 mb-6">
-          <span class="text-xs font-semibold tracking-widest uppercase text-primary">Spare 31 %</span>
-          <div class="inline-flex items-center rounded-full border border-border bg-card p-1" role="group" aria-label="Abrechnungszeitraum wählen">
-            <button
-              type="button"
-              id="interval-monthly"
-              aria-pressed="false"
-              class="px-4 py-1.5 text-sm font-medium rounded-full transition-colors text-muted-foreground hover:text-foreground"
-            >
-              Alle 4 Wochen
-            </button>
-            <button
-              type="button"
-              id="interval-annual"
-              aria-pressed="true"
-              class="px-4 py-1.5 text-sm font-medium rounded-full transition-colors bg-primary text-primary-foreground shadow"
-            >
-              Jährlich
-            </button>
+  <section class="tariff-credits" aria-labelledby="tariff-credits-title">
+    <div class="credits-grid tariff-section-inner">
+      <aside class="credit-pack">
+        <h2 id="tariff-credits-title">Mehr Sourcing nötig?</h2>
+        <p>Credits im Paket nachkaufen, jederzeit aus der App heraus.</p>
+        <div class="credit-pack-price"><strong>{CREDIT_PACK_PRICE_LABEL} €</strong> netto</div>
+        <p>für {CREDIT_PACK_SIZE} AI-Sourcing-Credits</p>
+        <ul>
+          <li>Verfallen nicht</li>
+          <li>Einmalzahlung, kein Abo</li>
+          <li>Erst nach dem Kontingent verbraucht</li>
+        </ul>
+      </aside>
+      <div class="credit-guide">
+        <h2>Was ist ein Credit?</h2>
+        <dl class="credit-definitions">
+          <div>
+            <dt class="font-semibold mb-1">AI-Sourcing-Credit</dt>
+            <dd class="text-muted-foreground">
+              Ein Credit ist ein kompletter Sourcing-Lauf für eine Stelle: die KI sucht passende Profile, prüft sie und legt die Treffer als Vorschläge in deine Pipeline. Findet ein Lauf nichts, kostet er auch nichts. {SOURCING_CREDITS_PER_SEAT_MONTHLY} Läufe pro User je Abrechnungszeitraum von 4 Wochen sind enthalten, in beiden Abrechnungsarten gleich. In der kostenlosen Testphase sind {TRIAL_SOURCING_CREDITS} Läufe für das ganze Team enthalten, unabhängig von der Zahl der User. Reicht das nicht, kaufst du weitere Credits im Paket nach: {CREDIT_PACK_SIZE} Credits für {CREDIT_PACK_PRICE_LABEL} € netto. Nachgekaufte Credits verfallen nicht.
+            </dd>
           </div>
-        </div>
-
-        <div class="relative rounded-2xl border-2 border-primary bg-card text-card-foreground shadow-xl p-8 md:p-10">
-          <!-- Plan Name -->
-          <div class="text-center mb-6 mt-2">
-            <h2 class="text-2xl font-display font-bold mb-2">ShortSelect Pro</h2>
-            <p class="text-sm text-muted-foreground">
-              Alle Funktionen, ein Preis pro User
-            </p>
+          <div>
+            <dt class="font-semibold mb-1">Anreicherung von Kontaktdaten</dt>
+            <dd class="text-muted-foreground">
+              Zu einem Kandidaten oder CRM-Kontakt wird die E-Mail-Adresse oder die Telefonnummer ergänzt. Dafür hinterlegst du deinen eigenen Zugang bei einem Anreicherungs-Anbieter, abgerechnet wird direkt dort zu deinen Konditionen. Es ist kein Kontingent bei uns enthalten. Mehrere Anbieter lassen sich hintereinander schalten, dann wird der Reihe nach gesucht, bis ein Treffer da ist.
+            </dd>
           </div>
-
-          <!-- Pricing Display -->
-          <div class="text-center mb-8 pb-8 border-b border-border">
-            <div id="price-monthly-block" class="hidden">
-              <div class="flex items-baseline justify-center gap-3 mb-2 flex-wrap">
-                <span class="text-5xl md:text-6xl font-display font-bold text-foreground">{PRO_PRICE_MONTHLY_EUR} €</span>
-                <span class="text-lg text-muted-foreground">pro User je 4 Wochen</span>
-              </div>
-              <p class="text-sm text-muted-foreground">
-                (bei Abrechnung alle 4 Wochen)
-                <br/>Pro aktivem User, alle Funktionen inklusive, netto zzgl. MwSt.
-              </p>
-              <p class="mt-4 inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-semibold">
-                <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
-                {SOURCING_CREDITS_PER_SEAT_MONTHLY} AI-Sourcing-Credits pro User je 4 Wochen
-              </p>
-            </div>
-            <div id="price-annual-block">
-              <div class="flex items-baseline justify-center gap-3 mb-2 flex-wrap">
-                <span class="text-5xl md:text-6xl font-display font-bold text-foreground">{ANNUAL_EFFECTIVE_MONTHLY} €</span>
-                <span class="text-lg text-muted-foreground">pro User je 4 Wochen</span>
-              </div>
-              <p class="text-sm text-muted-foreground">
-                (bei jährlicher Abrechnung)
-                <br/>Pro aktivem User, alle Funktionen inklusive, netto zzgl. MwSt.
-              </p>
-              <p class="mt-4 inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-semibold">
-                <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
-                {SOURCING_CREDITS_PER_SEAT_ANNUAL} AI-Sourcing-Credits pro User je 4 Wochen
-              </p>
-            </div>
-          </div>
-
-          <!-- Feature Liste -->
-          <ul class="space-y-3 mb-8">
-            {features.map((feature) => (
-              <li class="flex items-start gap-3">
-                <span class="flex-shrink-0 mt-0.5 h-5 w-5 rounded-full bg-primary/15 flex items-center justify-center">
-                  <svg class="h-3 w-3 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
-                  </svg>
-                </span>
-                <span class="text-sm">{feature}</span>
-              </li>
-            ))}
-          </ul>
-
-          <!-- CTA -->
-          <a
-            href={SIGNUP_URL}
-            class="block w-full text-center py-4 px-6 rounded-lg bg-primary text-primary-foreground font-semibold text-lg hover:bg-primary/90 shadow-md hover:shadow-xl transition-all duration-300"
-          >
-            {TRIAL_CTA_LABEL}
-          </a>
-          <TrialCtaNote class="mt-4" />
-
-          <!-- Trust Zeile -->
-          <p class="text-center text-xs text-muted-foreground mt-2">
-            14 Tage kostenlos mit {TRIAL_SOURCING_CREDITS} AI-Sourcing-Läufen für das ganze Team. Setup in 5 Minuten.
-          </p>
-          <p id="annual-terms-note" class="text-center text-xs text-muted-foreground/70 mt-2">
-            Jahresabo: 12 Monate Laufzeit, kündbar mit 3 Monaten Frist zum Laufzeitende (AGB § 24).
-          </p>
-        </div>
-
-        <!-- Nachkauf-Paket -->
-        <!-- Bewusst als eigener Block direkt unter der Preiskarte: vorher stand
-             der Preis nur in einem Fliesstext-Absatz im Erklaerkasten darunter
-             und war beim Ueberfliegen der Seite unsichtbar. Ein Preis, den man
-             suchen muss, ist keiner. -->
-        <div class="mt-8 rounded-xl border-2 border-primary/20 bg-background p-6">
-          <div class="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-2">
-            <div>
-              <h3 class="font-display font-semibold text-lg">Mehr Sourcing nötig?</h3>
-              <p class="text-sm text-muted-foreground mt-1">
-                Credits im Paket nachkaufen, jederzeit aus der App heraus.
-              </p>
-            </div>
-            <div class="text-right">
-              <div class="flex items-baseline gap-2 justify-end">
-                <span class="text-3xl font-display font-bold text-foreground">{CREDIT_PACK_PRICE_LABEL} €</span>
-                <span class="text-sm text-muted-foreground">netto</span>
-              </div>
-              <p class="text-sm text-muted-foreground">für {CREDIT_PACK_SIZE} AI-Sourcing-Credits</p>
-            </div>
-          </div>
-          <ul class="mt-5 grid gap-2 sm:grid-cols-3 text-sm">
-            <li class="flex items-start gap-2">
-              <span class="flex-shrink-0 mt-0.5 h-4 w-4 rounded-full bg-primary/15 flex items-center justify-center">
-                <svg class="h-2.5 w-2.5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
-                </svg>
-              </span>
-              <span class="text-muted-foreground">Verfallen nicht</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="flex-shrink-0 mt-0.5 h-4 w-4 rounded-full bg-primary/15 flex items-center justify-center">
-                <svg class="h-2.5 w-2.5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
-                </svg>
-              </span>
-              <span class="text-muted-foreground">Einmalzahlung, kein Abo</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="flex-shrink-0 mt-0.5 h-4 w-4 rounded-full bg-primary/15 flex items-center justify-center">
-                <svg class="h-2.5 w-2.5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
-                </svg>
-              </span>
-              <span class="text-muted-foreground">Erst nach dem Kontingent verbraucht</span>
-            </li>
-          </ul>
-        </div>
-
-        <!-- Credits erklaert -->
-        <div class="mt-8 rounded-xl border border-border bg-muted/30 p-6">
-          <h3 class="font-display font-semibold mb-4">Was ist ein Credit?</h3>
-          <dl class="space-y-4 text-sm">
-            <div>
-              <dt class="font-semibold mb-1">AI-Sourcing-Credit</dt>
-              <dd class="text-muted-foreground">
-                Ein Credit ist ein kompletter Sourcing-Lauf für eine Stelle: die KI sucht passende Profile, prüft sie und legt die Treffer als Vorschläge in deine Pipeline. Findet ein Lauf nichts, kostet er auch nichts. {SOURCING_CREDITS_PER_SEAT_MONTHLY} Läufe pro User je Abrechnungszeitraum von 4 Wochen sind enthalten, in beiden Abrechnungsarten gleich. In der kostenlosen Testphase sind {TRIAL_SOURCING_CREDITS} Läufe für das ganze Team enthalten, unabhängig von der Zahl der User. Reicht das nicht, kaufst du weitere Credits im Paket nach: {CREDIT_PACK_SIZE} Credits für {CREDIT_PACK_PRICE_LABEL} € netto. Nachgekaufte Credits verfallen nicht.
-              </dd>
-            </div>
-            <div>
-              <dt class="font-semibold mb-1">Anreicherung von Kontaktdaten</dt>
-              <dd class="text-muted-foreground">
-                Zu einem Kandidaten oder CRM-Kontakt wird die E-Mail-Adresse oder die Telefonnummer ergänzt. Dafür hinterlegst du deinen eigenen Zugang bei einem Anreicherungs-Anbieter, abgerechnet wird direkt dort zu deinen Konditionen. Es ist kein Kontingent bei uns enthalten. Mehrere Anbieter lassen sich hintereinander schalten, dann wird der Reihe nach gesucht, bis ein Treffer da ist.
-              </dd>
-            </div>
-          </dl>
-          <p class="text-xs text-muted-foreground mt-4">
-Das Sourcing-Kontingent ist ein gemeinsamer Topf für das ganze Team: bei fünf Usern also fünfmal so viele Credits, egal wer sie einsetzt. Es steht in beiden Abrechnungsarten alle 4 Wochen bereit, beim Jahresabo also dreizehnmal im Vertragsjahr. Nicht verbrauchte Credits verfallen nicht, sie wandern in den nächsten Abrechnungszeitraum. Nachgekaufte Sourcing-Credits verfallen ebenfalls nicht und werden erst eingesetzt, wenn das Kontingent des laufenden Zeitraums aufgebraucht ist.
-          </p>
-        </div>
-
-        <!-- Subline -->
-        <p class="text-center text-sm text-muted-foreground mt-6">
-          Abgerechnet wird pro aktivem User in deinem Team. Neue Teammitglieder werden anteilig nachberechnet, entfernte User reduzieren die nächste Rechnung.
+        </dl>
+        <p class="credit-terms">
+          Das Sourcing-Kontingent ist ein gemeinsamer Topf für das ganze Team: bei fünf Usern also fünfmal so viele Credits, egal wer sie einsetzt. Es steht in beiden Abrechnungsarten alle 4 Wochen bereit, beim Jahresabo also dreizehnmal im Vertragsjahr. Nicht verbrauchte Credits verfallen nicht, sie wandern in den nächsten Abrechnungszeitraum. Nachgekaufte Sourcing-Credits verfallen ebenfalls nicht und werden erst eingesetzt, wenn das Kontingent des laufenden Zeitraums aufgebraucht ist.
         </p>
       </div>
     </div>
   </section>
 
   <!-- Vergleichs Block -->
-  <section id="comparison" class="py-16 md:py-20 bg-muted/30">
+  <section id="comparison" class="pricing-compare">
     <div class="container mx-auto px-4">
-      <div id="comparison-content" class="max-w-4xl mx-auto opacity-0 translate-y-8 transition-all duration-700">
+      <div id="comparison-content" class="max-w-5xl mx-auto">
         <h2 class="text-3xl md:text-4xl font-display font-bold tracking-tight text-center mb-4">
           ShortSelect ist der transparenteste Einstieg
         </h2>
@@ -343,7 +232,7 @@ Das Sourcing-Kontingent ist ein gemeinsamer Topf für das ganze Team: bei fünf 
           Für 5 User kostet ShortSelect {FIVE_USER_MONTHLY} € je 4 Wochen, bei jährlicher Zahlung effektiv {FIVE_USER_ANNUAL_MONTHLY} € je 4 Wochen. Vergleichbare Agentur-Setups mit ATS, CRM, Automatisierung und KI liegen öffentlich ähnlich hoch oder sind nur auf Anfrage erhältlich.
         </p>
 
-        <div class="bg-card rounded-2xl border border-border/50 shadow-card overflow-hidden">
+        <div class="pricing-compare-sheet">
           <div class="grid grid-cols-1 md:grid-cols-2">
             <!-- Wettbewerber -->
             <div class="p-6 md:p-8 border-b md:border-b-0 md:border-r border-border/50">
@@ -371,7 +260,7 @@ Das Sourcing-Kontingent ist ein gemeinsamer Topf für das ganze Team: bei fünf 
               <h3 class="text-sm font-semibold text-primary uppercase tracking-widest mb-4">
                 ShortSelect Pro Plan
               </h3>
-              <div class="flex items-baseline gap-2 mb-4">
+              <div class="flex flex-wrap items-baseline gap-x-2 mb-4">
                 <span class="text-4xl md:text-5xl font-display font-bold">{FIVE_USER_MONTHLY} €</span>
                 <span class="text-lg text-muted-foreground">je 4 Wochen bei 5 Usern</span>
               </div>
@@ -391,53 +280,90 @@ Das Sourcing-Kontingent ist ein gemeinsamer Topf für das ganze Team: bei fünf 
   <FAQSection />
   <CTASection />
 
-  <script is:inline>
-  (function() {
-    var hero = document.getElementById('pricing-hero');
-    var card = document.getElementById('pricing-card');
-    var comparison = document.getElementById('comparison-content');
-    var items = [hero, card, comparison].filter(Boolean);
-    if (!items.length) return;
-    var observer = new IntersectionObserver(function(entries) {
-      entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-          entry.target.style.opacity = '1';
-          entry.target.style.transform = 'translateY(0)';
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.1 });
-    items.forEach(function(item) { observer.observe(item); });
-  })();
-  </script>
+  <script>
+    const monthlyButton = document.querySelector<HTMLButtonElement>('#interval-monthly')!;
+    const annualButton = document.querySelector<HTMLButtonElement>('#interval-annual')!;
+    const monthlyPrice = document.querySelector<HTMLElement>('#price-monthly-block')!;
+    const annualPrice = document.querySelector<HTMLElement>('#price-annual-block')!;
+    const annualTerms = document.querySelector<HTMLElement>('#annual-terms-note')!;
+    const saving = document.querySelector<HTMLElement>('#annual-saving')!;
 
-  <script is:inline>
-  (function() {
-    var monthlyBtn = document.getElementById('interval-monthly');
-    var annualBtn = document.getElementById('interval-annual');
-    var monthlyBlock = document.getElementById('price-monthly-block');
-    var annualBlock = document.getElementById('price-annual-block');
-    var termsNote = document.getElementById('annual-terms-note');
-    if (!monthlyBtn || !annualBtn || !monthlyBlock || !annualBlock) return;
-
-    var ACTIVE = ['bg-primary', 'text-primary-foreground', 'shadow'];
-    var INACTIVE = ['text-muted-foreground', 'hover:text-foreground'];
-
-    function setInterval(isAnnual) {
-      monthlyBlock.classList.toggle('hidden', isAnnual);
-      annualBlock.classList.toggle('hidden', !isAnnual);
-      if (termsNote) termsNote.classList.toggle('hidden', !isAnnual);
-
-      [monthlyBtn, annualBtn].forEach(function(btn) {
-        var active = (btn === annualBtn) === isAnnual;
-        btn.setAttribute('aria-pressed', active ? 'true' : 'false');
-        ACTIVE.forEach(function(c) { btn.classList.toggle(c, active); });
-        INACTIVE.forEach(function(c) { btn.classList.toggle(c, !active); });
-      });
+    function chooseAnnual(annual: boolean) {
+      annualButton.setAttribute('aria-pressed', String(annual));
+      monthlyButton.setAttribute('aria-pressed', String(!annual));
+      monthlyPrice.hidden = annual;
+      annualPrice.hidden = !annual;
+      annualTerms.hidden = !annual;
+      saving.hidden = !annual;
     }
-
-    monthlyBtn.addEventListener('click', function() { setInterval(false); });
-    annualBtn.addEventListener('click', function() { setInterval(true); });
-  })();
+    monthlyButton.addEventListener('click', () => chooseAnnual(false));
+    annualButton.addEventListener('click', () => chooseAnnual(true));
   </script>
 </MarketingLayout>
+
+<style>
+  .tariff-hero {
+    background: radial-gradient(ellipse at 74% 50%, #ffe8de 0%, transparent 58%), #fffbf6;
+    padding: clamp(2.75rem, 6vw, 6rem) 0 clamp(3.5rem, 7vw, 7rem);
+  }
+  .tariff-grid, .tariff-section-inner {
+    width: min(69rem, calc(100% - 3rem));
+    margin-inline: auto;
+  }
+  .tariff-grid { display: grid; grid-template-columns: 1fr minmax(22rem, 0.96fr); gap: clamp(2rem, 6vw, 6rem); align-items: center; }
+  .tariff-intro h1 span { color: #c3322e; text-decoration: underline wavy #ed8c74 .036em; text-underline-offset: .12em; }
+  .tariff-lead { max-width: 35ch; font-size: clamp(1.02rem, 1.6vw, 1.22rem); line-height: 1.6; color: #514842; }
+  .tariff-intro { min-width: 0; }
+  .tariff-label { display: inline-flex; align-items: center; gap: .5rem; color: #92301e; font-size: .88rem; font-weight: 750; }
+  .tariff-label::before { content: ''; width: 1.8rem; height: 3px; border-radius: 2px; background: #ef4444; }
+  .tariff-intro h1 { margin: 1.25rem 0 2rem; font-size: clamp(3.4rem, 7vw, 6.65rem); font-weight: 800; letter-spacing: -.068em; line-height: .99; }
+  .tariff-intro h1 span, .tariff-features h2 span { color: #d53332; text-decoration: underline wavy #ed7870 .045em; text-underline-offset: .12em; }
+  .tariff-lead { max-width: 22ch; font-size: clamp(1.15rem, 1.9vw, 1.5rem); line-height: 1.45; color: #534c49; }
+  .tariff-jump { display: inline-flex; margin-top: 1.25rem; align-items: center; gap: .65rem; font-weight: 700; margin-top: 1.8rem; color: #362c2a; text-decoration: underline; text-underline-offset: 4px; }
+  .tariff-jump:hover { color: #a82b27; }
+  .tariff-ticket { border-radius: 1.8rem; overflow: hidden; background: linear-gradient(140deg, #b3252b, #bc3825 70%, #af3826); color: white; box-shadow: 0 7px 0 #923123, 0 25px 48px #bf3d292d; }
+  .ticket-head, .ticket-switch, .ticket-amounts { margin-inline: clamp(1.25rem, 3.4vw, 2.65rem); }
+  .ticket-head { padding-top: clamp(1.4rem, 3.2vw, 2.4rem); display: flex; align-items: center; justify-content: space-between; gap: .75rem; }
+  .ticket-head h2 { font-size: clamp(1.3rem, 2.4vw, 1.8rem); font-weight: 800; }
+  .saving-sticker { padding: .42rem .8rem; border-radius: .6rem; transform: rotate(6deg); color: #372b0b; background: #ffda4c; font-weight: 800; font-size: .81rem; box-shadow: 0 3px 0 #d99e1d; white-space: nowrap; }
+  .ticket-switch { display: inline-flex; margin-block: 1.2rem; padding: .25rem; border-radius: 1rem; background: #771d21; }
+  .ticket-switch button { cursor: pointer; border-radius: .75rem; padding: .45rem .85rem; color: #fff; font: inherit; font-weight: 700; font-size: .88rem; }
+  .ticket-switch button[aria-pressed="true"] { background: #fffaf2; color: #542520; }
+  .ticket-switch button:focus-visible { outline: 3px solid #ffda4c; outline-offset: 2px; }
+  .ticket-amounts strong { display: block; font-family: Poppins, sans-serif; font-size: clamp(3.25rem, 5.6vw, 5.15rem); font-weight: 800; letter-spacing: -.072em; line-height: 1.12; font-variant-numeric: tabular-nums; }
+  .ticket-amounts p { font-size: 1rem; font-weight: 650; }
+  .ticket-amounts small { display: block; margin-top: .35rem; color: #fff3ed; font-size: .8rem; }
+  .ticket-amounts .ticket-credit { padding: 1.1rem 0 1.45rem; font-size: .87rem; }
+  .ticket-foot { position: relative; padding: 1.4rem clamp(1.25rem, 3.4vw, 2.65rem) 1.6rem; background: #fff3e7; color: #38271f; border-top: 2px dashed #d49173; text-align: center; }
+  .ticket-signup { display: inline-flex; width: 100%; align-items: center; justify-content: center; gap: .75rem; border-radius: .85rem; background: #342623; color: #fff; padding: .8rem .9rem; box-shadow: 0 4px 0 #171311; font-weight: 750; margin-bottom: .7rem; }
+  .ticket-signup:hover { background: #58322c; }
+  .ticket-trial, .ticket-terms { margin: .5rem auto 0; font-size: .75rem; line-height: 1.5; color: #635149; }
+  .tariff-features, .tariff-credits, .pricing-compare { padding: clamp(3rem, 6.5vw, 6rem) 0; }
+  .tariff-features { background: #fff; }
+  .tariff-features h2, .credit-guide h2 { font-size: clamp(2.1rem, 4.4vw, 3.7rem); line-height: 1.1; font-weight: 800; letter-spacing: -.055em; }
+  .feature-checks { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: clamp(1.5rem, 4vw, 4rem); margin-top: 2.25rem; }
+  .feature-checks li { display: flex; align-items: baseline; gap: .8rem; border-top: thin solid #e9e3db; padding: .8rem 0; font-size: .96rem; }
+  .feature-checks li span { display: inline-grid; place-items: center; flex: none; width: 1.45rem; height: 1.45rem; border-radius: .47rem; background: #ffe9df; color: #a63321; font-weight: 800; }
+  .feature-billing { color: #635955; max-width: 74ch; margin-top: 1.75rem; font-size: .85rem; }
+  .tariff-credits { background: #fff8ef; }
+  .credits-grid { display: grid; grid-template-columns: minmax(17rem,.78fr) 1.22fr; align-items: start; gap: clamp(2rem,6vw,5.25rem); }
+  .credit-pack { border: 1px solid #dfca93; border-radius: 1.5rem; padding: clamp(1.4rem, 3vw, 2.4rem); background: #fff0bc; box-shadow: 0 5px 0 #e4d098; }
+  .credit-pack h2 { font-size: 1.5rem; line-height: 1.15; font-weight: 800; margin-bottom: .6rem; }
+  .credit-pack p, .credit-pack li { color: #5b4b2f; }
+  .credit-pack-price { margin-top: 1.8rem; }
+  .credit-pack-price strong { font-family: Poppins, sans-serif; font-size: clamp(2.1rem,3.8vw,3.5rem); line-height: 1.05; font-weight: 800; letter-spacing: -.055em; white-space: nowrap; }
+  .credit-pack ul { border-top: 1px dashed #c0a966; margin-top: 1.4rem; padding: 1.2rem 0 0 1rem; list-style: disc; font-size: .88rem; }
+  .credit-definitions { display: grid; gap: 1rem; margin-block: 1.5rem; line-height: 1.6; }
+  .credit-terms { font-size: .87rem; line-height: 1.6; color: #625854; }
+  .pricing-compare { background: white; }
+  .pricing-compare-sheet { border-radius: 1.5rem; overflow: hidden; border: 1px solid #dfd6cd; box-shadow: 0 5px 0 #f1e8df; }
+  @media (max-width: 48rem) {
+    .tariff-grid, .credits-grid { grid-template-columns: minmax(0,1fr); }
+    .tariff-grid, .tariff-section-inner { width: min(36rem, calc(100% - 2.5rem)); }
+    .tariff-intro h1 { margin-block: .8rem 1.2rem; }
+    .tariff-lead { max-width: 28ch; }
+    .tariff-jump { margin-top: 1rem; }
+    .feature-checks { grid-template-columns: 1fr; }
+  }
+  :global(.no-js) .ticket-switch { display: none; }
+</style>

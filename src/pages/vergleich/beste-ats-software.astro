@@ -1,6 +1,8 @@
 ---
 import { TRIAL_CTA_LABEL } from '../../lib/cta';
 import TrialCtaNote from '../../components/ui/TrialCtaNote.astro';
+import FeatureTable from '../../components/vergleich/FeatureTable.astro';
+import GuideHero from '../../components/vergleich/GuideHero.astro';
 import MarketingLayout from '../../layouts/MarketingLayout.astro';
 import CTASection from '../../components/landing/CTASection.astro';
 
@@ -80,13 +82,7 @@ const comparisonGrid = [
   { feature: "API Zugang", ss: "check", personio: "check", softgarden: "check", recruitee: "check", sap: "check" },
   { feature: "DSGVO-konform", ss: "check", personio: "check", softgarden: "check", recruitee: "check", sap: "check" },
   { feature: "14-Tage-Test", ss: "check", personio: "x", softgarden: "x", recruitee: "x", sap: "x" },
-];
-
-function statusSvg(status: string) {
-  if (status === 'check') return '<svg class="h-4 w-4 text-green-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>';
-  if (status === 'x') return '<svg class="h-4 w-4 text-red-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>';
-  return '<svg class="h-4 w-4 text-yellow-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>';
-}
+] as const;
 
 const buyerTips = [
   { title: "KI-Features", description: "Prüfen Sie, ob echtes KI-Matching integriert ist oder nur Keyword-Suche. Automatisches Kandidaten-Ranking spart Stunden." },
@@ -113,47 +109,16 @@ const buyerTips = [
     </ol>
   </nav>
 
-  <!-- Hero -->
-  <section class="relative overflow-hidden py-20 md:py-32">
-    <div class="absolute inset-0 bg-gradient-to-br from-primary/10 via-accent/5 to-background"></div>
-    <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,hsl(var(--primary)/0.15),transparent_50%)]"></div>
-    <div class="absolute top-20 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-float-slow"></div>
-    <div class="absolute bottom-20 right-10 w-96 h-96 bg-accent/10 rounded-full blur-3xl animate-float-slow" style="animation-delay: -3s;"></div>
-    <div class="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.03)_1px,transparent_1px)] bg-[size:60px_60px] [mask-image:radial-gradient(ellipse_at_center,black_30%,transparent_70%)]"></div>
-
-    <div class="container relative mx-auto px-4">
-      <div class="mx-auto max-w-4xl text-center space-y-8">
-        <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700 hero-badge-premium">
-          <svg class="h-4 w-4 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
-          Aktualisiert März 2026
-        </div>
-
-        <h1 class="reveal-item opacity-0 translate-y-8 transition-all duration-700 text-4xl md:text-6xl lg:text-7xl font-display font-bold tracking-tight" style="transition-delay: 100ms;">
-          Beste ATS Software{" "}
-          <span class="relative inline-block text-primary">2026</span>{" "}
-          im Vergleich
-        </h1>
-
-        <p class="reveal-item opacity-0 translate-y-8 transition-all duration-700 text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto" style="transition-delay: 200ms;">
-          Der ehrliche Vergleich der Top Bewerbermanagement-Systeme für den DACH-Markt.
-        </p>
-
-        <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700 flex flex-col sm:flex-row items-center justify-center gap-4 pt-4 flex-wrap" style="transition-delay: 300ms;">
-          <a href="#ranking" class="inline-flex items-center gap-2 px-8 py-3 border-2 border-border font-semibold rounded-lg text-base transition-all hover:bg-muted">
-            Zum Ranking
-            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-          </a>
-          <a href="https://app.shortselect.com/signup" class="inline-flex items-center gap-2 px-8 py-3 bg-primary text-primary-foreground font-semibold rounded-lg text-base group relative overflow-hidden shadow-lg hover:shadow-xl transition-all hover:scale-105">
-            <span class="relative z-10 flex items-center gap-2">
-              <svg class="h-5 w-5 animate-pulse" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/></svg>
-              {TRIAL_CTA_LABEL}
-            </span>
-          </a>
-          <TrialCtaNote />
-        </div>
-      </div>
-    </div>
-  </section>
+  <GuideHero
+    eyebrow="Aktualisiert März 2026"
+    title="Beste ATS Software"
+    emphasis="2026"
+    suffix="im Vergleich"
+    description="Der ehrliche Vergleich der Top Bewerbermanagement-Systeme für den DACH-Markt."
+    secondaryLink={{href: '#ranking', text: 'Zum Ranking'}}
+    indexHeading="Top 5 ATS-Systeme DACH"
+    indexLinks={rankingData.map(item => ({href: `#ats-${item.rank}`, text: item.name}))}
+  />
 
   <!-- Ranking -->
   <section id="ranking" class="py-16 md:py-24 bg-muted/30">
@@ -166,7 +131,7 @@ const buyerTips = [
 
         <div class="space-y-4">
           {rankingData.map((item, index) => (
-            <div class:list={["reveal-item opacity-0 translate-y-8 transition-all duration-700 relative rounded-xl border p-5", item.recommended ? "bg-primary/5 border-primary/20 shadow-md" : "bg-background hover:bg-muted/50 transition-colors"]} style={`transition-delay: ${Math.min((index + 1) * 100, 500)}ms;`}>
+            <div id={`ats-${item.rank}`} class:list={["scroll-mt-24 reveal-item opacity-0 translate-y-8 transition-all duration-700 relative rounded-xl border p-5", item.recommended ? "bg-primary/5 border-primary/20 shadow-md" : "bg-background hover:bg-muted/50 transition-colors"]} style={`transition-delay: ${Math.min((index + 1) * 100, 500)}ms;`}>
               <div class="flex items-start gap-4">
                 <div class:list={["flex h-12 w-12 shrink-0 items-center justify-center rounded-full font-display font-bold text-lg", item.rank === 1 ? "bg-primary text-white shadow-lg" : "bg-muted text-muted-foreground"]}>
                   {item.rank}
@@ -202,29 +167,14 @@ const buyerTips = [
           <p class="text-muted-foreground text-lg">Alle 5 Systeme im direkten Vergleich.</p>
         </div>
 
-        <div class="overflow-x-auto -mx-4 px-4">
-          <div class="min-w-[700px]">
-            <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700 grid grid-cols-6 gap-2 px-4 py-3 rounded-t-lg bg-muted font-semibold text-sm">
-              <span>Feature</span>
-              <span class="text-center text-primary font-bold">ShortSelect</span>
-              <span class="text-center">Personio</span>
-              <span class="text-center">Softgarden</span>
-              <span class="text-center">Recruitee</span>
-              <span class="text-center">SAP SF</span>
-            </div>
-
-            {comparisonGrid.map((row, index) => (
-              <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700 grid grid-cols-6 gap-2 px-4 py-3 border-b last:border-b-0 items-center" style={`transition-delay: ${Math.min((index + 1) * 80, 500)}ms;`}>
-                <span class="font-medium text-sm">{row.feature}</span>
-                <div class="flex items-center justify-center bg-primary/5 rounded-lg py-1.5"><Fragment set:html={statusSvg(row.ss)} /></div>
-                <div class="flex items-center justify-center py-1.5"><Fragment set:html={statusSvg(row.personio)} /></div>
-                <div class="flex items-center justify-center py-1.5"><Fragment set:html={statusSvg(row.softgarden)} /></div>
-                <div class="flex items-center justify-center py-1.5"><Fragment set:html={statusSvg(row.recruitee)} /></div>
-                <div class="flex items-center justify-center py-1.5"><Fragment set:html={statusSvg(row.sap)} /></div>
-              </div>
-            ))}
-          </div>
-        </div>
+        <FeatureTable
+          label="Detaillierter Feature-Vergleich der fünf ATS-Systeme"
+          columns={['ShortSelect', 'Personio', 'Softgarden', 'Recruitee', 'SAP SF']}
+          rows={comparisonGrid.map(row => ({
+            feature: row.feature,
+            values: [row.ss, row.personio, row.softgarden, row.recruitee, row.sap].map(status => ({status})),
+          }))}
+        />
       </div>
     </div>
   </section>

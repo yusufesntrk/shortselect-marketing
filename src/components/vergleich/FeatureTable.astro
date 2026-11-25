@@ -1,0 +1,63 @@
+---
+type Status = 'check' | 'warn' | 'x';
+interface Cell {
+  status: Status;
+  label?: string;
+}
+interface Props {
+  columns: string[];
+  rows: { feature: string; values: Cell[] }[];
+  label: string;
+}
+const { columns, rows, label } = Astro.props;
+const descriptions: Record<Status, string> = { check: 'Ja', warn: 'Eingeschränkt', x: 'Nein' };
+const symbols: Record<Status, string> = { check: '✓', warn: '!', x: '×' };
+const wide = columns.length > 2;
+---
+<div class:list={['feature-sheet', {wide}]} tabindex={wide ? '0' : undefined} role={wide ? 'region' : undefined} aria-label={wide ? label : undefined}>
+  <table aria-label={label}>
+    <thead>
+      <tr><th scope="col">Feature</th>{columns.map((name) => <th scope="col">{name}</th>)}</tr>
+    </thead>
+    <tbody>
+      {rows.map(row => (
+        <tr>
+          <th scope="row">{row.feature}</th>
+          {row.values.map(({status, label}) => (
+            <td>
+              <span class="value">
+                <span class:list={['symbol', status]} aria-hidden="true">{symbols[status]}</span>
+                <span class:list={{'sr-only': !label}}>{label || descriptions[status]}</span>
+              </span>
+            </td>
+          ))}
+        </tr>
+      ))}
+    </tbody>
+  </table>
+</div>
+
+<style>
+  .feature-sheet { position: relative; overflow-x: auto; border: 1px solid #e3d8cc; border-radius: 1.3rem; background: white; box-shadow: 0 5px 0 #efe6dd; }
+  table { width: 100%; border-collapse: collapse; table-layout: fixed; text-align: left; font-size: .91rem; }
+  th, td { padding: 1rem clamp(.7rem, 1.8vw, 1.6rem); overflow-wrap: anywhere; hyphens: auto; vertical-align: middle; }
+  thead th { background: #332925; color: #fff; font-weight: 750; }
+  thead th:nth-child(2) { background: #a72c25; }
+  tbody th { font-weight: 650; color: #322b28; }
+  tbody td { color: #514843; }
+  tbody td:nth-child(2) { background: #fff4ec; }
+  tbody tr + tr { border-top: 1px solid #ede5dd; }
+  .value { display: inline-flex; align-items: flex-start; gap: .55rem; }
+  .symbol { flex: none; width: 1.35rem; height: 1.35rem; border-radius: 50%; display: inline-grid; place-items: center; font: 800 .85rem/1 Inter, sans-serif; }
+  .check { background: #d4f1e2; color: #146546; }
+  .warn { background: #ffedbb; color: #855003; }
+  .x { background: #f3e4df; color: #854639; }
+  .wide table { min-width: 41rem; }
+  .wide td, .wide thead th:not(:first-child) { text-align: center; }
+  @media (max-width: 38rem) {
+    th, td { padding: .8rem .55rem; }
+    table { font-size: .79rem; }
+    .value { display: flex; flex-direction: column; gap: .35rem; }
+    .wide .value { align-items: center; }
+  }
+</style>
