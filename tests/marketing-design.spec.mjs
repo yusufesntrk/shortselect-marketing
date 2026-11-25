@@ -9,8 +9,9 @@ test('choose a plan, inspect a comparison and manage consent', async ({ page, is
 
   const annual = page.getByRole('button', { name: 'Jährlich', exact: true });
   const fourWeeks = page.getByRole('button', { name: 'Alle 4 Wochen', exact: true });
-  const annualPrice = page.getByText('137,77 €', { exact: true });
-  const cyclePrice = page.getByText('199 €', { exact: true }).first();
+  const plan = page.getByRole('article', { name: 'ShortSelect Pro' });
+  const annualPrice = plan.getByText('137,77 €', { exact: true });
+  const cyclePrice = plan.getByText('199 €', { exact: true });
   await expect(annual).toHaveAttribute('aria-pressed', 'true');
   await expect(annualPrice).toBeVisible();
   await fourWeeks.click();
@@ -42,6 +43,8 @@ test('choose a plan, inspect a comparison and manage consent', async ({ page, is
     const comparisonMenu = page.getByRole('navigation', { name: 'Hauptnavigation' }).getByRole('button', { name: 'Vergleich' });
     await comparisonMenu.focus();
     await page.keyboard.press('Enter');
+    await expect(comparisonMenu).toHaveAttribute('aria-expanded', 'true');
+    await expect(page.getByRole('navigation', { name: 'Hauptnavigation' }).getByRole('link', { name: /vs. Bullhorn/i })).toBeVisible();
     await page.keyboard.press('Tab');
     await expect(page.locator(':focus')).toHaveAttribute('href', /^\/vergleich\//);
     await page.keyboard.press('Enter');
