@@ -72,7 +72,7 @@ const groups = [
 ];
 ---
 
-<footer class="fc-footer">
+<footer id="seitenmenue" class="fc-footer">
   <div class="fc-footer-grid">
 
     <!-- Logo Column -->
@@ -118,7 +118,7 @@ const groups = [
   </div>
   <div class="bottom">
     <span>© {currentYear} ShortSelect (Yusuf Esentürk). Alle Rechte vorbehalten.</span>
-    <button type="button" data-consent-open>Cookie-Einstellungen</button>
+    <a href="/datenschutz/#cookies" data-consent-open>Cookie-Einstellungen</a>
   </div>
 </footer>
 
@@ -189,7 +189,7 @@ const groups = [
     gap: 12px;
   }
   .fc-footer .bottom a {
-    color: rgba(255,255,255,0.4);
+    color: #a1a1aa;
     text-decoration: none;
     transition: color 0.15s;
     margin-left: 8px;
@@ -198,8 +198,6 @@ const groups = [
 
 
   .fc-footer .bottom { color: #a1a1aa; }
-  .fc-footer button { cursor: pointer; }
-  .fc-footer button:hover { color: white; }
   @media (max-width: 960px) {
     .fc-footer-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   }

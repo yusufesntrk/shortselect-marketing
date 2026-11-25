@@ -115,7 +115,7 @@
 .vacancy-note p { max-width: 30ch; margin-top: 1.25rem; padding-top: 1rem; border-top: 1px dashed #a48a50; }
 .issue-cover { display: grid; gap: 1rem; justify-items: start; background: #fff2d3; box-shadow: 5px 7px 0 #e6cc95; }
 .issue-cover .paper-label { color: #fff; background: #312d29; }
-.issue-cover strong { font: 750 clamp(1.25rem, 2.1vw, 1.8rem)/1.17 Poppins, sans-serif; letter-spacing: -.04em; overflow-wrap: anywhere; }
+.issue-cover strong { hyphens: auto; font: 750 clamp(1.25rem, 2.1vw, 1.8rem)/1.17 Poppins, sans-serif; letter-spacing: -.04em; overflow-wrap: anywhere; }
 .issue-cover p { color: #584e41; line-height: 1.55; }
 .issue-byline { display: flex; align-items: center; justify-content: space-between; gap: 1rem; width: 100%; padding-top: .8rem; border-top: 1px solid #d6c59e; letter-spacing: 0; }
 .issue-byline span { font-size: 1.15rem; }
