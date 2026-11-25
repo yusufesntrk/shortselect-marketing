@@ -1,3 +1,4 @@
+import { readdirSync } from 'node:fs';
 import { test, expect } from '@playwright/test';
 
 test('choose a plan, inspect a comparison and manage consent', async ({ page, isMobile }) => {
@@ -63,19 +64,13 @@ test('choose a plan, inspect a comparison and manage consent', async ({ page, is
   await cookies.getByRole('button', { name: 'Ablehnen' }).click();
 });
 
-// Every distinct family has a representative, including each editorial page type
-// and bespoke pages with their own hero. Narrow tables may scroll inside main.
-const routes = [
-  '/preise/', '/vergleich/', '/vergleich/shortselect-vs-bullhorn/',
-  '/vergleich/beste-ats-software/', '/vergleich/coveto-alternative/',
-  '/produkt/', '/produkt/ats-crm/', '/branchen/engineering/', '/integrationen/linkedin/',
-  '/fuer/enterprise/', '/methode/', '/methode/playbook/onboarding/',
-  '/blog/', '/blog/2/', '/blog/10-hebel-fuer-besseres-hiring-mit-ats-und-crm/',
-  '/glossar/', '/glossar/ats/', '/ressourcen/', '/ats-mit-ki-matching/',
-  '/demo/', '/kontakt/', '/kunden/', '/warum-shortselect/', '/ueber-uns/',
-  '/sicherheit/', '/wechsel/', '/job-selling/', '/agb/', '/impressum/',
-  '/datenschutz/', '/datenschutz/aktive-ansprache/', '/legal/subprocessors/', '/404.html',
-];
+// Include every file-backed subpage and representative outputs of the dynamic routes.
+// Wide comparison tables may scroll inside their own container.
+const routes = readdirSync(new URL('../src/pages/', import.meta.url), { recursive: true })
+  .filter(file => file.endsWith('.astro') && file !== 'index.astro' && !file.includes('['))
+  .map(file => file === '404.astro' ? '/404.html' : '/' + file.replace(/\/index\.astro$/, '/').replace(/\.astro$/, '/'))
+  .concat('/blog/', '/blog/2/', '/blog/10-hebel-fuer-besseres-hiring-mit-ats-und-crm/', '/glossar/ats/')
+  .sort();
 
 test.describe('server-rendered pages', () => {
   test.use({ javaScriptEnabled: false });
