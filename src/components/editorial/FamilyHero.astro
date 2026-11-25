@@ -1,0 +1,97 @@
+---
+import { TRIAL_CTA_LABEL } from '../../lib/cta';
+import TrialCtaNote from '../ui/TrialCtaNote.astro';
+import '../../styles/family-pages.css';
+
+interface Row {
+  title: string;
+  href?: string;
+  icon?: string;
+  iconPath?: string;
+  meta?: string;
+}
+
+interface Props {
+  id?: string;
+  kind: 'module' | 'brief' | 'connection' | 'guide' | 'directory';
+  label: string;
+  parent?: { label: string; href: string };
+  current?: string;
+  subline: string;
+  sheetTitle: string;
+  rows: Row[];
+  trial?: boolean;
+  secondary?: { label: string; href: string };
+}
+
+const { id, kind, label, parent, current = label, subline, sheetTitle, rows, trial, secondary } = Astro.props;
+---
+
+<section id={id} class:list={['family-hero', `family-hero--${kind}`]}>
+  <div class="family-hero__spread">
+    <div class="family-hero__copy">
+      {parent ? (
+        <nav class="family-hero__crumbs" aria-label="Breadcrumb">
+          <a href="/">Start</a><span aria-hidden="true">/</span>
+          <a href={parent.href}>{parent.label}</a><span aria-hidden="true">/</span>
+          <span aria-current="page">{current}</span>
+        </nav>
+      ) : <p class="family-hero__label">{label}</p>}
+      <h1><slot /></h1>
+      <p class="family-hero__lead">{subline}</p>
+      {trial && (
+        <div class="family-hero__actions">
+          <a class="family-hero__button" href="https://app.shortselect.com/signup">
+            {TRIAL_CTA_LABEL}<span aria-hidden="true">→</span>
+          </a>
+          {secondary && <a class="family-hero__button family-hero__button--light" href={secondary.href}>{secondary.label}</a>}
+          <TrialCtaNote align="left" />
+        </div>
+      )}
+    </div>
+
+    <div class="family-sheet">
+      <figure class="family-sheet__paper">
+        <figcaption class="family-sheet__head">
+          {kind === 'connection' ? (
+            <div class="family-sheet__connection">
+              <span><slot name="icon" />{label}</span><i aria-hidden="true"></i>
+              <span><img src="/icon.svg" alt="" width="22" height="22" />ShortSelect</span>
+            </div>
+          ) : (
+            <>
+              <span class="family-sheet__glyph" aria-hidden="true">
+                {Astro.slots.has('icon') ? <slot name="icon" /> : (
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 6a2 2 0 0 1 2-2h4l2 3h6a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><path d="M8 12h8m-8 4h5"/>
+                  </svg>
+                )}
+              </span>
+              <span>{sheetTitle}</span>
+            </>
+          )}
+        </figcaption>
+        <ul class="family-sheet__rows" aria-label={sheetTitle}>
+          {rows.map((row) => {
+            const Tag = row.href ? 'a' : 'div';
+            return (
+              <li>
+                <Tag href={row.href} class="family-sheet__row">
+                  {row.meta ? <span class="family-sheet__meta">{row.meta}</span> : (
+                    <span class="family-sheet__mark" aria-hidden="true">
+                      {row.icon ? <Fragment set:html={row.icon} /> : row.iconPath ? (
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><Fragment set:html={row.iconPath}/></svg>
+                      ) : <i></i>}
+                    </span>
+                  )}
+                  <span>{row.title}</span>
+                  {row.href && <span class="family-sheet__jump" aria-hidden="true">↗</span>}
+                </Tag>
+              </li>
+            );
+          })}
+        </ul>
+      </figure>
+    </div>
+  </div>
+</section>

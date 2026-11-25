@@ -1,4 +1,5 @@
 ---
+import FamilyHero from '../../components/editorial/FamilyHero.astro';
 import MarketingLayout from '../../layouts/MarketingLayout.astro';
 import CTASection from '../../components/landing/CTASection.astro';
 
@@ -46,32 +47,18 @@ const comingSoon = [
   description="ShortSelect integriert sich nahtlos: Gmail, Google Calendar, Website Widget, REST API, Webhooks und mehr."
 >
   <!-- HERO -->
-  <section class="relative overflow-hidden py-20 md:py-32">
-    <div class="absolute inset-0 bg-gradient-to-br from-primary/10 via-accent/5 to-transparent"></div>
-    <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,hsl(var(--primary)/0.15),transparent_50%)]"></div>
-    <div class="absolute top-20 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-float-slow"></div>
-    <div class="absolute bottom-20 right-10 w-96 h-96 bg-accent/10 rounded-full blur-3xl animate-float-slow" style="animation-delay: -3s;"></div>
-    <div class="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.03)_1px,transparent_1px)] bg-[size:48px_48px] [mask-image:radial-gradient(ellipse_at_center,black_30%,transparent_70%)]"></div>
-    <div class="container relative mx-auto px-4">
-      <div class="mx-auto max-w-4xl text-center space-y-8">
-        <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700 hero-badge-premium">
-          <svg class="h-4 w-4 text-primary" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg>
-          Integrationen
-        </div>
-        <h1 class="reveal-item opacity-0 translate-y-8 transition-all duration-500 text-4xl md:text-6xl lg:text-7xl font-display font-bold tracking-tight" style="transition-delay: 100ms;">
-          Verbinden Sie ShortSelect mit Ihren <span class="text-primary">Tools</span>
-        </h1>
-        <p class="reveal-item opacity-0 translate-y-8 transition-all duration-500 text-lg md:text-xl text-[hsl(var(--muted-foreground))] max-w-2xl mx-auto" style="transition-delay: 200ms;">
-          E-Mail, Kalender, Karriereseite, API, alles nahtlos integriert.
-        </p>
-      </div>
-    </div>
-    <div class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[hsl(var(--background))] to-transparent"></div>
-  </section>
+  <FamilyHero
+    kind="directory" label="Integrationen"
+    subline="E-Mail, Kalender, Karriereseite, API, alles nahtlos integriert."
+    sheetTitle="Integrationsbereiche"
+    rows={categories.map((category, i) => ({ title: category.title, href: `#bereich-${i + 1}` }))}
+  >
+    Verbinden Sie ShortSelect mit Ihren <em>Tools</em>
+  </FamilyHero>
 
   <!-- INTEGRATION CATEGORIES -->
   {categories.map((category, catIndex) => (
-    <section class={`py-16 md:py-20 ${catIndex % 2 === 1 ? 'bg-[hsl(var(--muted)/0.3)]' : ''}`}>
+    <section id={`bereich-${catIndex + 1}`} class={`py-16 md:py-20 ${catIndex % 2 === 1 ? 'bg-[hsl(var(--muted)/0.3)]' : ''}`}>
       <div class="container mx-auto px-4">
         <h2 class="reveal-item opacity-0 translate-y-8 transition-all duration-700 text-2xl md:text-3xl font-display font-bold tracking-tight mb-8">{category.title}</h2>
         <div class="grid md:grid-cols-2 gap-6 max-w-4xl">

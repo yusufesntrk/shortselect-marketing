@@ -1,4 +1,5 @@
 ---
+import FamilyHero from '../../components/editorial/FamilyHero.astro';
 import { TRIAL_CTA_LABEL } from '../../lib/cta';
 import TrialCtaNote from '../../components/ui/TrialCtaNote.astro';
 import MarketingLayout from '../../layouts/MarketingLayout.astro';
@@ -21,22 +22,14 @@ const phases = [
 
 <MarketingLayout title="Smart Recruiting Methode - ShortSelect" description="Die Smart Recruiting Methode: 4 Phasen für bessere Einstellungen. Anziehen, Auswählen, Einstellen, Binden. Ein System für moderne Teams." jsonLd={jsonLd}>
   <!-- Hero -->
-  <section class="relative overflow-hidden py-28 md:py-40 bg-gradient-to-br from-primary via-primary/95 to-accent text-white">
-    <div class="absolute inset-0 overflow-hidden">
-      <div class="absolute top-10 left-1/4 w-[500px] h-[500px] bg-white/5 rounded-full blur-3xl animate-float-slow"></div>
-      <div class="absolute bottom-10 right-1/4 w-96 h-96 bg-white/5 rounded-full blur-3xl animate-float-slow" style="animation-delay: -3s;"></div>
-    </div>
-    <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.08)_1px,transparent_1px)] bg-[size:40px_40px] opacity-30"></div>
-
-    <div class="container relative mx-auto px-4">
-      <div class="max-w-4xl mx-auto text-center space-y-8">
-        <h1 class="reveal-item opacity-0 translate-y-8 transition-all duration-700 text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-display font-bold tracking-tight leading-tight">Smart Recruiting</h1>
-        <p class="reveal-item opacity-0 translate-y-8 transition-all duration-500 text-xl md:text-2xl lg:text-3xl font-display font-bold text-white/90" style="transition-delay: 200ms;">Die Methode für moderne Teams.</p>
-        <p class="reveal-item opacity-0 translate-y-8 transition-all duration-500 text-lg md:text-xl text-white/70 max-w-2xl mx-auto" style="transition-delay: 400ms;">4 Phasen. Ein System. Bessere Einstellungen.</p>
-      </div>
-    </div>
-    <div class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent"></div>
-  </section>
+  <FamilyHero
+    kind="guide" label="Die Methode für moderne Teams."
+    subline="4 Phasen. Ein System. Bessere Einstellungen."
+    sheetTitle="Die vier Phasen"
+    rows={phases.map((phase) => ({ title: phase.title, href: phase.link, meta: String(phase.number) }))}
+  >
+    Smart <em>Recruiting</em>
+  </FamilyHero>
 
   <!-- The Problem -->
   <section class="py-20 md:py-28 relative overflow-hidden">

@@ -1,6 +1,5 @@
 ---
-import { TRIAL_CTA_LABEL } from '../../lib/cta';
-import TrialCtaNote from '../../components/ui/TrialCtaNote.astro';
+import FamilyHero from '../../components/editorial/FamilyHero.astro';
 import MarketingLayout from '../../layouts/MarketingLayout.astro';
 import CTASection from '../../components/landing/CTASection.astro';
 
@@ -25,35 +24,15 @@ const securityFeatures = ["DSGVO-konform", "EU-Server (Frankfurt)", "Row Level S
   description="Reduzieren Sie Time-to-Hire um 51%, senken Sie Kosten um 44%. Recruiting als Wettbewerbsvorteil für Ihr Unternehmen."
 >
   <!-- HERO -->
-  <section class="relative overflow-hidden py-20 md:py-32">
-    <div class="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-primary/5"></div>
-    <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_25%,hsl(var(--primary)/0.12),transparent_60%)]"></div>
-    <div class="absolute top-24 right-16 w-80 h-80 bg-primary/8 rounded-full blur-3xl animate-float-slow"></div>
-    <div class="absolute bottom-24 left-12 w-72 h-72 bg-accent/6 rounded-full blur-3xl animate-float-slow" style="animation-delay: -4s;"></div>
-    <div class="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.03)_1px,transparent_1px)] bg-[size:40px_40px] [mask-image:radial-gradient(ellipse_at_center,black_30%,transparent_70%)]"></div>
-    <div class="container relative mx-auto px-4">
-      <div class="mx-auto max-w-4xl text-center space-y-8">
-        <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700 hero-badge-premium">
-          <svg class="h-4 w-4 text-primary" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
-          Business Impact
-        </div>
-        <h1 class="reveal-item opacity-0 translate-y-8 transition-all duration-700 text-4xl md:text-6xl lg:text-7xl font-display font-bold tracking-tight" style="transition-delay: 100ms;">
-          Für Geschäftsführer: Recruiting als <span class="text-primary">Wettbewerbsvorteil</span>.
-        </h1>
-        <p class="reveal-item opacity-0 translate-y-8 transition-all duration-700 text-lg md:text-xl text-[hsl(var(--muted-foreground))] max-w-2xl mx-auto" style="transition-delay: 200ms;">Reduzieren Sie die Time-to-Hire, senken Sie Kosten und gewinnen Sie den War for Talent.</p>
-        <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700 flex flex-col sm:flex-row items-center justify-center gap-4 pt-4 flex-wrap" style="transition-delay: 300ms;">
-          <a href="https://app.shortselect.com/signup" class="inline-flex items-center gap-2 px-8 py-3 bg-primary text-white font-semibold rounded-lg text-base group shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-            <svg class="h-5 w-5 animate-pulse" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/></svg>
-            {TRIAL_CTA_LABEL}
-            <svg class="h-5 w-5 transition-transform group-hover:translate-x-1" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-          </a>
-          <a href="#roi" class="inline-flex items-center px-8 py-3 border border-[hsl(var(--border))] font-semibold rounded-lg text-base transition-all duration-300 hover:border-primary/50 hover:text-primary">ROI ansehen</a>
-          <TrialCtaNote />
-        </div>
-      </div>
-    </div>
-    <div class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[hsl(var(--background))] to-transparent"></div>
-  </section>
+  <FamilyHero
+    kind="brief" label="Business Impact"
+    subline="Reduzieren Sie die Time-to-Hire, senken Sie Kosten und gewinnen Sie den War for Talent."
+    sheetTitle="Vorteile für Geschäftsführer"
+    rows={benefits.slice(0, 3).map((benefit, i) => ({ ...benefit, href: `#vorteil-${i + 1}` }))}
+    trial secondary={{ label: 'ROI ansehen', href: '#roi' }}
+  >
+    Für Geschäftsführer: Recruiting als <em>Wettbewerbsvorteil</em>.
+  </FamilyHero>
 
   <!-- ROI -->
   <section id="roi" class="py-20 md:py-28 bg-[hsl(var(--muted)/0.3)]">
@@ -91,7 +70,7 @@ const securityFeatures = ["DSGVO-konform", "EU-Server (Frankfurt)", "Row Level S
       </div>
       <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
         {benefits.map((b, i) => (
-          <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700 group rounded-xl border border-primary/10 bg-[hsl(var(--card))] p-6 hover:shadow-lg transition-all duration-500 hover:-translate-y-1 hover:border-primary/30" style={`transition-delay: ${i * 150}ms;`}>
+          <div id={`vorteil-${i + 1}`} class="reveal-item opacity-0 translate-y-8 transition-all duration-700 group rounded-xl border border-primary/10 bg-[hsl(var(--card))] p-6 hover:shadow-lg transition-all duration-500 hover:-translate-y-1 hover:border-primary/30" style={`transition-delay: ${i * 150}ms;`}>
             <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 group-hover:scale-110 transition-all duration-300">
               <svg class="h-6 w-6 text-primary" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><Fragment set:html={b.iconPath} /></svg>
             </div>

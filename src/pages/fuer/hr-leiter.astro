@@ -1,6 +1,5 @@
 ---
-import { TRIAL_CTA_LABEL } from '../../lib/cta';
-import TrialCtaNote from '../../components/ui/TrialCtaNote.astro';
+import FamilyHero from '../../components/editorial/FamilyHero.astro';
 import MarketingLayout from '../../layouts/MarketingLayout.astro';
 import CTASection from '../../components/landing/CTASection.astro';
 
@@ -32,35 +31,15 @@ const kpis = [
   description="Dashboards, Team-Performance und Compliance für HR-Leiter. Volle Kontrolle über Ihr Recruiting, mit ShortSelect."
 >
   <!-- HERO -->
-  <section class="relative overflow-hidden py-20 md:py-32">
-    <div class="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-accent/5"></div>
-    <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_20%,hsl(var(--primary)/0.12),transparent_60%)]"></div>
-    <div class="absolute top-20 left-20 w-80 h-80 bg-primary/8 rounded-full blur-3xl animate-float-slow"></div>
-    <div class="absolute bottom-20 right-16 w-72 h-72 bg-accent/6 rounded-full blur-3xl animate-float-slow" style="animation-delay: -3s;"></div>
-    <div class="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.03)_1px,transparent_1px)] bg-[size:40px_40px] [mask-image:radial-gradient(ellipse_at_center,black_30%,transparent_70%)]"></div>
-    <div class="container relative mx-auto px-4">
-      <div class="mx-auto max-w-4xl text-center space-y-8">
-        <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700 hero-badge-premium">
-          <svg class="h-4 w-4 text-primary" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4v16"/><path d="M6 2v4"/><path d="M6 18v4"/><path d="M6 10v4"/><path d="M18 2v4"/><path d="M18 18v4"/><path d="M18 10v4"/><path d="M22 4v16"/><path d="M2 4h4"/><path d="M2 20h4"/><path d="M18 4h4"/><path d="M18 20h4"/></svg>
-          HR Leadership
-        </div>
-        <h1 class="reveal-item opacity-0 translate-y-8 transition-all duration-700 text-4xl md:text-6xl lg:text-7xl font-display font-bold tracking-tight" style="transition-delay: 100ms;">
-          Für HR-Leiter: Volle <span class="text-primary">Kontrolle</span>. Klare Zahlen.
-        </h1>
-        <p class="reveal-item opacity-0 translate-y-8 transition-all duration-700 text-lg md:text-xl text-[hsl(var(--muted-foreground))] max-w-2xl mx-auto" style="transition-delay: 200ms;">Dashboards, Team-Performance und Compliance, alles an einem Ort.</p>
-        <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700 flex flex-col sm:flex-row items-center justify-center gap-4 pt-4 flex-wrap" style="transition-delay: 300ms;">
-          <a href="https://app.shortselect.com/signup" class="inline-flex items-center gap-2 px-8 py-3 bg-primary text-white font-semibold rounded-lg text-base group shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-            <svg class="h-5 w-5 animate-pulse" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/></svg>
-            {TRIAL_CTA_LABEL}
-            <svg class="h-5 w-5 transition-transform group-hover:translate-x-1" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-          </a>
-          <a href="#dashboard" class="inline-flex items-center px-8 py-3 border border-[hsl(var(--border))] font-semibold rounded-lg text-base transition-all duration-300 hover:border-primary/50 hover:text-primary">Dashboard ansehen</a>
-          <TrialCtaNote />
-        </div>
-      </div>
-    </div>
-    <div class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[hsl(var(--background))] to-transparent"></div>
-  </section>
+  <FamilyHero
+    kind="brief" label="HR Leadership"
+    subline="Dashboards, Team-Performance und Compliance, alles an einem Ort."
+    sheetTitle="Executive Dashboard"
+    rows={kpis.slice(0, 3).map((kpi, i) => ({ title: kpi.label, meta: kpi.value, href: `#kennzahl-${i + 1}` }))}
+    trial secondary={{ label: 'Dashboard ansehen', href: '#dashboard' }}
+  >
+    Für HR-Leiter: Volle <em>Kontrolle</em>. Klare Zahlen.
+  </FamilyHero>
 
   <!-- WHAT HR LEADERS NEED -->
   <section class="py-20 md:py-28 bg-[hsl(var(--muted)/0.3)]">
@@ -103,7 +82,7 @@ const kpis = [
           </div>
           <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
             {kpis.map((kpi, i) => (
-              <div class="reveal-item opacity-0 translate-y-8 transition-all duration-700 p-4 rounded-xl bg-[hsl(var(--muted)/0.5)] border" style={`transition-delay: ${i * 100 + 200}ms;`}>
+              <div id={`kennzahl-${i + 1}`} class="reveal-item opacity-0 translate-y-8 transition-all duration-700 p-4 rounded-xl bg-[hsl(var(--muted)/0.5)] border" style={`transition-delay: ${i * 100 + 200}ms;`}>
                 <p class="text-xs text-[hsl(var(--muted-foreground))] mb-1">{kpi.label}</p>
                 <p class="text-2xl md:text-3xl font-display font-bold">{kpi.value}</p>
                 <p class="text-xs text-green-600 mt-1 flex items-center gap-1">

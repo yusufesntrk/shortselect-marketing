@@ -1,0 +1,44 @@
+---
+interface Item {
+  title: string;
+  description: string;
+  icon?: string;
+  iconPath?: string;
+  step?: string;
+}
+
+interface Props {
+  id: string;
+  title: string;
+  accent?: string;
+  label?: string;
+  intro?: string;
+  items: Item[];
+  variant?: 'features' | 'notes' | 'steps';
+}
+
+const { id, title, accent, label, intro, items, variant = 'features' } = Astro.props;
+---
+
+<section id={id} class:list={['family-section', `family-section--${variant}`]}>
+  <div class="family-section__inner">
+    <header class="family-section__head">
+      {label && <p class="family-section__label">{label}</p>}
+      <h2>{title}{accent && <> <span>{accent}</span></>}</h2>
+      {intro && <p class="family-section__intro">{intro}</p>}
+    </header>
+    <div class="family-section__grid">
+      {items.map((item, i) => (
+        <article class="family-feature" id={`${id}-${i + 1}`}>
+          <div class="family-feature__symbol" aria-hidden="true">
+            {item.step || (item.icon ? <Fragment set:html={item.icon} /> : (
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><Fragment set:html={item.iconPath} /></svg>
+            ))}
+          </div>
+          <h3>{item.title}</h3>
+          <p>{item.description}</p>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
